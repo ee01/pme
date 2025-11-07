@@ -1,0 +1,4 @@
+<span class="sc-1">&lt;!-- 实时预览调试代码，模板开发完成后删除 --&gt;</span>
+<span class="sc-1">&lt;!-- {$stylecolor = 'red'} --&gt;</span>
+<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/script.html"><span class="kw2">script</span></a> <span class="kw3">type</span><span class="sy0">=</span><span class="st0">&quot;text/javascript&quot;</span> <span class="kw3">src</span><span class="sy0">=</span><span class="st0">&quot;http://chanpin.xm12t.com.cn/js/preview.js&quot;</span> data-jsonfile<span class="sy0">=</span><span class="st0">&quot;index.json&quot;</span>&gt;&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/script.html"><span class="kw2">script</span></a>&gt;</span>
+<span class="sc-1">&lt;!-- 调试代码 End --&gt;</span>

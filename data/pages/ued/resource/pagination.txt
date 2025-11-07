@@ -1,0 +1,15 @@
+====== 翻页插件 ======
+
+
+===== 引入文件： =====
+
+<code html>
+<link type="text/css" rel="stylesheet" href="http://common.mn.sina.com.cn/public/resource/lib/pagination/pagination.css" />
+<script type="text/javascript" src="http://common.mn.sina.com.cn/public/resource/lib/pagination/jquery.pagination.js"></script>
+</code>
+
+===== DEMO =====
+
+Ajax翻页：[[http://mn.sina.com.cn/city/zt/xmbankart/index.shtml]]
+
+静态翻页：[[http://mn.sina.com.cn/city/zt/2012icbc/aticle.shtml?id=1]]

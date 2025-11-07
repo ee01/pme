@@ -1,0 +1,22 @@
+====== 新浪厦门WIKI ======
+
+===== 插件库 =====
+
+  * [[sina:cashout|jquery.cashout.js]] 登登登 水果机抽奖插件
+  * [[sina:roulette|jquery.roulette.js]] 转盘亮灯抽奖插件
+  * [[http://hunan.sina.com.cn/z/test/index.shtml|指针转动转盘抽奖]]
+
+===== 微博类 =====
+
+  * [[sina:checklogin|登录检测 及返回个人信息]]
+  * [[sina:share|分享按钮（无需加载js库）]]
+  * [[sina:follow|关注按钮（无需加载js库）]]
+  * [[sina:topic|微博热议（微博展示iframe）]]
+  * [[sina:wb|微博调用封装]]
+
+===== 其他类 =====
+
+  * [[sina:minnan|minnan.css]] 闽南共用样式，包括DFZ登陆弹窗样式、mask遮罩样式等
+  * [[sina:ip|ip]] 获取当前IP地址及区域名及网络运营商
+
+{{page>ued:resource&noheader}}

@@ -1,0 +1,281 @@
+
+<h1 class="sectionedit1" id="统一平台模板切图规范">统一平台模板切图规范</h1>
+<div class="level1">
+<div class="table sectionedit2"><table class="inline">
+	<tr class="row0">
+		
+	</tr>
+</table></div>
+<!-- EDIT2 TABLE [47-48] -->
+<p>
+ <a href="/wiki/lib/exe/fetch.php?media=ued:temple.rar" class="media mediafile mf_rar" title="ued:temple.rar (2.4 MB)">点此下载：下载最新的DEMO</a> 并查阅 <a href="/wiki/doku.php?id=ued:temple" class="wikilink1" title="ued:temple">《统一平台模板Demo与Smarty变量》</a>
+</p>
+<div class="table sectionedit3"><table class="inline">
+	<tr class="row0">
+		
+	</tr>
+</table></div>
+<!-- EDIT3 TABLE [176-177] -->
+</div>
+<!-- EDIT1 SECTION "统一平台模板切图规范" [1-178] -->
+<h2 class="sectionedit4" id="模板文件列表">模板文件列表</h2>
+<div class="level2">
+
+<p>
+必需：
+</p>
+<ul>
+<li class="level1"><div class="li"> index.html           首页</div>
+</li>
+<li class="level1"><div class="li"> index.json           首页可修改数据项</div>
+</li>
+<li class="level1"><div class="li"> list-text.html       文字列表页</div>
+</li>
+<li class="level1"><div class="li"> list-image.html      图片列表页</div>
+</li>
+<li class="level1"><div class="li"> list-imagetext.html  图文混排列表页</div>
+</li>
+<li class="level1"><div class="li"> list-page.html       栏目内容单页</div>
+</li>
+<li class="level1"><div class="li"> content-news.html    新闻内容页</div>
+</li>
+<li class="level1"><div class="li"> content-product.html 产品内容页</div>
+</li>
+</ul>
+
+<p>
+可选：
+</p>
+<ul>
+<li class="level1"><div class="li"> header.html          头部，被其他页面include</div>
+</li>
+<li class="level1"><div class="li"> footer.html          底部，被其他页面include</div>
+</li>
+<li class="level1"><div class="li"> xxxx.json            所有页面都可以拥有自己的json配置项，如header.json、list-page.json…</div>
+</li>
+</ul>
+
+</div>
+<!-- EDIT4 SECTION "模板文件列表" [179-795] -->
+<h2 class="sectionedit5" id="引入jsmarty引擎">引入jSmarty引擎</h2>
+<div class="level2">
+
+<p>
+模板开发完成后可利用PHP的<a href="/wiki/doku.php?id=ued:temple#实时预览标签语法" class="wikilink1" title="ued:temple">Smarty引擎</a>来替换模板动态数据；
+</p>
+
+<p>
+那么问题来了，如果在模板开发过程中 要如何实时预览切图效果，并且展现动态数据？
+</p>
+
+<p>
+需在每个HTML文件头部引入一句JS，来模拟PHP的Smarty引擎：
+</p>
+<pre class="code html4strict"><span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/head.html"><span class="kw2">head</span></a>&gt;</span>
+	<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/script.html"><span class="kw2">script</span></a> <span class="kw3">type</span><span class="sy0">=</span><span class="st0">&quot;text/javascript&quot;</span> <span class="kw3">src</span><span class="sy0">=</span><span class="st0">&quot;http://chanpin.xm12t.com.cn/js/preview.js&quot;</span> data-jsonfile<span class="sy0">=</span><span class="st0">&quot;index.json&quot;</span>&gt;&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/script.html"><span class="kw2">script</span></a>&gt;</span>
+	...</pre>
+
+<p>
+<code>data-jsonfile</code>指向的json文件即是此页面的动态数据源！
+</p>
+
+</div>
+<!-- EDIT5 SECTION "引入jSmarty引擎" [796-1365] -->
+<h2 class="sectionedit6" id="模板js_css引用">模板JS、CSS引用</h2>
+<div class="level2">
+
+<p>
+所有的静态文件引用都需要加入{$site_url}变量，如
+</p>
+<pre class="code html4strict">...
+	<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/link.html"><span class="kw2">link</span></a> <span class="kw3">rel</span><span class="sy0">=</span><span class="st0">&quot;stylesheet&quot;</span> <span class="kw3">rev</span><span class="sy0">=</span><span class="st0">&quot;stylesheet&quot;</span> <span class="kw3">href</span><span class="sy0">=</span><span class="st0">&quot;{$site_url}css/style_{$stylecolor}.css&quot;</span> <span class="kw3">type</span><span class="sy0">=</span><span class="st0">&quot;text/css&quot;</span> <span class="sy0">/</span>&gt;</span>
+	<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/script.html"><span class="kw2">script</span></a> <span class="kw3">type</span><span class="sy0">=</span><span class="st0">&quot;text/javascript&quot;</span> <span class="kw3">src</span><span class="sy0">=</span><span class="st0">&quot;{$site_url}js/script.js&quot;</span>&gt;&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/script.html"><span class="kw2">script</span></a>&gt;</span>
+<span class="sc2">&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/head.html"><span class="kw2">head</span></a>&gt;</span>
+<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/body.html"><span class="kw2">body</span></a>&gt;</span>
+	<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/img.html"><span class="kw2">img</span></a> <span class="kw3">src</span><span class="sy0">=</span><span class="st0">&quot;{$site_url}image/top.jpg&quot;</span> <span class="sy0">/</span>&gt;</span>
+...</pre>
+
+<p>
+<em class="u">但在CSS文件中引入图片无需使用{$site_url}</em>
+</p>
+
+<p>
+<strong><em class="u">注意：</em>html文件中不要出现如下JS运行代码：</strong>
+</p>
+<pre class="code html4strict"><span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/script.html"><span class="kw2">script</span></a> <span class="kw3">type</span><span class="sy0">=</span><span class="st0">&quot;text/javascript&quot;</span>&gt;</span>
+	...
+<span class="sc2">&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/script.html"><span class="kw2">script</span></a>&gt;</span></pre>
+
+<p>
+<em class="u">所有JS写入.js文件中引入！！</em>
+这是基本规范和要求！
+</p>
+
+</div>
+<!-- EDIT6 SECTION "模板JS、CSS引用" [1366-1996] -->
+<h3 class="sectionedit7" id="css全局公共库">CSS全局公共库</h3>
+<div class="level3">
+
+<p>
+建议引入css全局库，内附css reset与一些常用css封装：
+</p>
+<pre class="code html4strict"><span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/link.html"><span class="kw2">link</span></a> <span class="kw3">rel</span><span class="sy0">=</span><span class="st0">&quot;stylesheet&quot;</span> <span class="kw3">rev</span><span class="sy0">=</span><span class="st0">&quot;stylesheet&quot;</span> <span class="kw3">href</span><span class="sy0">=</span><span class="st0">&quot;http://chanpin.xm12t.com.cn/css/global.css&quot;</span> <span class="kw3">type</span><span class="sy0">=</span><span class="st0">&quot;text/css&quot;</span> <span class="sy0">/</span>&gt;</span></pre>
+
+<p>
+更多说明，点击这里链接《<a href="/wiki/doku.php?id=ued:resource:global" class="wikilink1" title="ued:resource:global">global.css</a>》
+</p>
+<div class="table sectionedit8"><table class="inline">
+	<tr class="row0">
+		
+	</tr>
+</table></div>
+<!-- EDIT8 TABLE [2302-2303] -->
+</div>
+<!-- EDIT7 SECTION "CSS全局公共库" [1997-2303] -->
+<h2 class="sectionedit9" id="模板中必备变量">模板中必备变量</h2>
+<div class="level2">
+
+<p>
+为保证模板功能的完整性，以下变量必须在模板中出现（点击列表可查看引用位置与方法）：
+</p>
+<ul>
+<li class="level1"><div class="li"> <a href="/wiki/doku.php?id=ued:temple#title_页面标题" class="wikilink1" title="ued:temple">{$title}</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="/wiki/doku.php?id=ued:temple#keywords_页面关键词" class="wikilink1" title="ued:temple">{$keywords}</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="/wiki/doku.php?id=ued:temple#description_页面描述" class="wikilink1" title="ued:temple">{$description}</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="/wiki/doku.php?id=ued:temple#stylecolor_网站颜色" class="wikilink1" title="ued:temple">{$stylecolor}</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="/wiki/doku.php?id=ued:temple#site_another_url_网站另一域名地址" class="wikilink1" title="ued:temple">{$site_another_url}</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="/wiki/doku.php?id=ued:temple#logo_网站logo" class="wikilink1" title="ued:temple">{$logo}</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="/wiki/doku.php?id=ued:temple#footprint_脚印" class="wikilink1" title="ued:temple">{$footprint}</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="/wiki/doku.php?id=ued:temple#headscript_头部脚本" class="wikilink1" title="ued:temple">{$headscript}</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="/wiki/doku.php?id=ued:temple#footscript_底部脚本" class="wikilink1" title="ued:temple">{$footscript}</a></div>
+</li>
+</ul>
+
+</div>
+<!-- EDIT9 SECTION "模板中必备变量" [2304-2970] -->
+<h2 class="sectionedit10" id="如何修改示例数据">如何修改示例数据</h2>
+<div class="level2">
+
+<p>
+<a href="/wiki/lib/exe/fetch.php?media=ued:temple:sample.rar" class="media mediafile mf_rar" title="ued:temple:sample.rar (2.8 MB)">点此下载：如何利用preview.js展现示例数据</a>
+</p>
+
+<p>
+模板变量中有两类变量，一类是<em class="u">系统变量</em>，另一类是<em class="u">模板变量</em>。
+</p>
+
+<p>
+两者的修改方式不同！
+</p>
+
+</div>
+<!-- EDIT10 SECTION "如何修改示例数据" [2971-3217] -->
+<h3 class="sectionedit11" id="模板变量">模板变量</h3>
+<div class="level3">
+
+<p>
+模板变量定义于<em class="u">xxx.json</em>文件。
+作用是定义一个可让客户随意修改的数据。
+</p>
+
+<p>
+如index.json文件中的变量引用方式为<code>$index.xxx</code>，详见《<a href="/wiki/doku.php?id=ued:temple#index_首页数据_自定义于indexjson" class="wikilink1" title="ued:temple">统一平台模板Demo与Smarty变量：{$index} </a>》
+</p>
+
+<p>
+修改方式则是直接修改<em class="u">xxx.json</em>文件中对应变量的<strong>value</strong>值！
+</p>
+
+</div>
+<!-- EDIT11 SECTION "模板变量" [3218-3608] -->
+<h3 class="sectionedit12" id="系统变量">系统变量</h3>
+<div class="level3">
+
+<p>
+系统变量是调用系统中的一些数据，如网站标题、导航栏目、文章数据等。
+</p>
+
+<p>
+模板开发过程中提供的示例数据比较单一。
+</p>
+
+<p>
+若想修改，使得模板更加美观，其方式如下：
+</p>
+
+</div>
+
+<h4 id="字符串变量">字符串变量</h4>
+<div class="level4">
+
+<p>
+如<code>$stylecolor</code>变量常用于添加对应颜色风格样式表：<code>&lt;link href=“{$site_url}css/style_{$stylecolor}.css” type=“text/css” /&gt;</code>
+</p>
+
+<p>
+系统默认输出<code>blue</code>，
+若想在调试的时候调试其他颜色风格的css，则可如下操作：
+</p>
+<pre class="code html4strict"><span class="sc-1">&lt;!-- 实时预览调试代码，模板开发完成后删除 --&gt;</span>
+<span class="sc-1">&lt;!-- {$stylecolor = 'red'} --&gt;</span>
+<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/script.html"><span class="kw2">script</span></a> <span class="kw3">type</span><span class="sy0">=</span><span class="st0">&quot;text/javascript&quot;</span> <span class="kw3">src</span><span class="sy0">=</span><span class="st0">&quot;http://chanpin.xm12t.com.cn/js/preview.js&quot;</span> data-jsonfile<span class="sy0">=</span><span class="st0">&quot;index.json&quot;</span>&gt;&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/script.html"><span class="kw2">script</span></a>&gt;</span>
+<span class="sc-1">&lt;!-- 调试代码 End --&gt;</span></pre>
+
+<p>
+仅需在头部加入<code>&lt;!– {$stylecolor = &#039;red&#039;} –&gt;</code>，即可将当前调试风格样式改为红色版本！
+</p>
+
+</div>
+
+<h4 id="数组变量">数组变量</h4>
+<div class="level4">
+
+<p>
+<code>$index.lastest</code>是定义御<em class="u">index.json</em>中的一个类型为<em class="u">list</em>的变量。
+将会自动输出栏目下的最新文章数据。
+</p>
+
+<p>
+<strong>单个指定修改：</strong>
+但是输出的数据全都是一样的，若我想修改成每条都不一样，可如下操作：
+</p>
+<pre class="code html4strict"><span class="sc-1">&lt;!-- 实时预览调试代码，模板开发完成后删除 --&gt;</span>
+<span class="sc-1">&lt;!-- {$index.lastest.data[&quot;0&quot;].title = '大屏大法好，第四季度智能手机出货量苹果平了三星'} --&gt;</span>
+<span class="sc-1">&lt;!-- {$index.lastest.data[&quot;0&quot;].description = '小米迅速增长的‘黄金时期’已经结束。联想/摩托罗拉和苹果迅速提升了自己在中国及全球市场的表现，他们开始蚕食小米的市场份额。而苹果...'} --&gt;</span>
+<span class="sc-1">&lt;!-- {$index.lastest.data[&quot;1&quot;].title = '三菱电机推出最新MV4800线切割放电加工机床'} --&gt;</span>
+<span class="sc-1">&lt;!-- {$index.lastest.data[&quot;1&quot;].description = 'MV4800线切割放电加工机床是三菱电机专门为加工各种大型模具、厚板型模具推出的高精度线切割放电加工机床，适用于汽车、电子以及航空、航天等各领域的中大型精密模具的加工。'} --&gt;</span>
+<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/script.html"><span class="kw2">script</span></a> <span class="kw3">type</span><span class="sy0">=</span><span class="st0">&quot;text/javascript&quot;</span> <span class="kw3">src</span><span class="sy0">=</span><span class="st0">&quot;http://chanpin.xm12t.com.cn/js/preview.js&quot;</span> data-jsonfile<span class="sy0">=</span><span class="st0">&quot;index.json&quot;</span>&gt;&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/script.html"><span class="kw2">script</span></a>&gt;</span>
+<span class="sc-1">&lt;!-- 调试代码 End --&gt;</span></pre>
+
+<p>
+<strong>批量修改：</strong>
+若想批量把示例的图片都更换成更漂亮的一张图，可如下操作：
+</p>
+<pre class="code html4strict"><span class="sc-1">&lt;!-- 实时预览调试代码，模板开发完成后删除 --&gt;</span>
+<span class="sc-1">&lt;!-- {foreach item=article from=$index.lastest.data}</span>
+<span class="sc-1">	{$article.image = 'http://imgs.meimeinice.com/imgs/3f76a397fec366ebc312cacdf41eb513.jpg!big'}</span>
+<span class="sc-1">{/foreach} --&gt;</span>
+<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/script.html"><span class="kw2">script</span></a> <span class="kw3">type</span><span class="sy0">=</span><span class="st0">&quot;text/javascript&quot;</span> <span class="kw3">src</span><span class="sy0">=</span><span class="st0">&quot;http://chanpin.xm12t.com.cn/js/preview.js&quot;</span> data-jsonfile<span class="sy0">=</span><span class="st0">&quot;index.json&quot;</span>&gt;&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/script.html"><span class="kw2">script</span></a>&gt;</span>
+		<span class="sc-1">&lt;!-- 调试代码 End --&gt;</span></pre>
+
+</div>
+<!-- EDIT12 SECTION "系统变量" [3609-6278] -->
+<h2 class="sectionedit13" id="模板开发注意事项">！！！模板开发注意事项！！！</h2>
+<div class="level2">
+<ol>
+<li class="level1"><div class="li"> 模板中不要出现任何静态的文字，如<code>2015-01-28</code>。除非是一些<code>more</code><code>确定</code>之类按钮的名称。如需使用，请在json中定义或使用系统变量，参见：<a href="/wiki/doku.php?id=ued:temple" class="wikilink1" title="ued:temple">《统一平台模板Demo与Smarty变量》</a></div>
+</li>
+<li class="level1"><div class="li"> HTML文件中请勿包含任何JS代码，将其并入.js文件中调用</div>
+</li>
+</ol>
+
+</div>
+<!-- EDIT13 SECTION "！！！模板开发注意事项！！！" [6279-] -->

@@ -1,0 +1,41 @@
+{{:zhida:百度oauth资料.docx|}}
+====== oauth ======
+官方地址：http://developer.baidu.com/wiki/index.php?title=docs/oauth
+
+===== 简单demo =====
+
+ if (!isset($_GET['code'])){
+    //获取code
+    $url = 'https://openapi.baidu.com/oauth/2.0/authorize?response_type=code&client_id=u7wpBCazLrhquiQKDmyS3pDg&redirect_uri=http://wx.dn160.com.cn/hehe/a.php';
+	Header("Location: $url"); 
+}else{
+   //获取access_token
+   $url1 = 'https://openapi.baidu.com/oauth/2.0/token?grant_type=authorization_code&code='.$_GET['code'].'&client_id=u7wpBCazLrhquiQKDmyS3pDg&client_secret=IbhZn0Y4Y6t0uNNLyQRvhCfK3C7AHWIE&redirect_uri=http://wx.dn160.com.cn/hehe/a.php';
+   $data1 = json_decode(curlGet($url1));
+    header ( 'Content-type: application/json; charset=utf-8' );
+	//当前用户信息
+	$url11 ='https://openapi.baidu.com/rest/2.0/passport/users/getLoggedInUser?access_token='.$data1->access_token;
+	$data = json_decode(curlGet($url11));
+
+
+	echo '恭喜您 '.$data->uname.' 中了一等奖';
+   
+}
+function curlGet($url, $method = 'get', $data = '')
+	{
+		$ch     = curl_init();
+		$header = "Accept-Charset: utf-8";
+		curl_setopt($ch, CURLOPT_URL, $url);
+		curl_setopt($ch, CURLOPT_CUSTOMREQUEST, strtoupper($method));
+		curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, FALSE);
+		curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, FALSE);
+		curl_setopt($curl, CURLOPT_HTTPHEADER, $header);
+		curl_setopt($ch, CURLOPT_USERAGENT, 'Mozilla/5.0 (compatible; MSIE 5.01; Windows NT 5.0)');
+		curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
+		curl_setopt($ch, CURLOPT_AUTOREFERER, 1);
+		curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+		$temp = curl_exec($ch);
+		return $temp;
+	}
+

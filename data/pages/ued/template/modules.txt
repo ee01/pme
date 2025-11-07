@@ -1,0 +1,69 @@
+====== 统一平台模板模块库 ======
+
+以下所有模块使用方法：
+
+  - 下载后解压html文件及样式放入模板开发目录
+  - 在任意页面使用[[ued:template:global#include_引入文件|include]]方法引入以下划线开头的html文件
+  - 即可！
+===== 基础模块 =====
+
+  * [[ued:template:modules:navs|导航栏，不固定个数自适宽度]]
+  * [[ued:template:modules:pagenavs|左侧栏目列表]]
+  * [[ued:template:modules:links|友情链接]]
+  * [[ued:template:modules:pagelinks|列表页翻页]]
+===== 图片类模块 =====
+
+===== 地图模块 =====
+
+在html代码中放置如下代码即可：
+
+<code html>
+{mapExt address='厦门观日路30号' width="80%" height="200px"}
+</code>
+
+参数说明：
+  * address：具体地址
+  * width：地图宽度
+  * height：地图高度
+  * scale_size：地图默认缩放大小（精度）
+
+===== 分享模块 =====
+
+在html代码中放置如下代码即可：
+
+<code html>
+{shareExt shareText=$article.content|unescape:"html"|strip_tags|truncate:140:"…" sharePic=$article.image}
+</code>
+
+参数说明：
+  * shareText：默认分享文案
+  * shareDesc：默认分享摘要
+  * shareUrl：分享页面的网址（默认当前页）
+  * sharePic：默认分享图片
+  * viewSize：分享条大小（默认16
+  * style：分享条样式：1-直接输出条状分享; 2-输出侧边分享按钮（试用首页）; 3-两者
+
+===== 关注按钮 =====
+
+<code html>
+
+<iframe src="http://widget.weibo.com/relationship/followbutton.php?uid=1242837564&btn=red&style=1&language=zh_cn" width="67" height="24" frameborder="0" scrolling="no" marginheight="0"></iframe>
+
+</code>
+
+
+**参数说明：**
+
+''uid'' 要关注的微博ID
+
+''style''
+  * 1: 简洁按钮
+  * 2: 显示粉丝数
+  * 3: 显示昵称和粉丝数
+  * 4: 展示粉丝
+
+注：''style''修改后要相应调整iframe的高宽值
+
+''btn''
+  * red: 红色
+  * light: 银色

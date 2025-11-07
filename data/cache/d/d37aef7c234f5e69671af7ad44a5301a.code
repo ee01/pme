@@ -1,0 +1,83 @@
+<span class="re1">.cashout</span> <span class="br0">&#123;</span>
+	<span class="kw1">position</span><span class="sy0">:</span> <span class="kw2">relative</span><span class="sy0">;</span>
+	<span class="kw1">width</span><span class="sy0">:</span> <span class="re3">600px</span><span class="sy0">;</span>
+	<span class="kw1">padding-top</span><span class="sy0">:</span> <span class="re3">36px</span><span class="sy0">;</span>
+	<span class="kw1">padding-left</span><span class="sy0">:</span> <span class="re3">38px</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+	<span class="re1">.cashout</span> ul<span class="re1">.cashout_main</span> <span class="br0">&#123;</span>
+		<span class="kw1">width</span><span class="sy0">:</span> <span class="re3">592px</span><span class="sy0">;</span>
+		<span class="kw1">margin</span><span class="sy0">:</span> <span class="nu0">0</span> <span class="kw2">auto</span><span class="sy0">;</span>
+	<span class="br0">&#125;</span>
+	<span class="re1">.cashout</span> ul<span class="re1">.cashout_main</span> li <span class="br0">&#123;</span>
+		<span class="kw1">position</span><span class="sy0">:</span> <span class="kw2">relative</span><span class="sy0">;</span>
+		<span class="kw1">float</span><span class="sy0">:</span> <span class="kw1">left</span><span class="sy0">;</span>
+		<span class="kw1">margin</span><span class="sy0">:</span> <span class="nu0">0</span> <span class="re3">2px</span> <span class="re3">2px</span> <span class="nu0">0</span><span class="sy0">;</span>
+		<span class="kw1">width</span><span class="sy0">:</span> <span class="re3">146px</span><span class="sy0">;</span>
+		<span class="kw1">height</span><span class="sy0">:</span> <span class="re3">119px</span><span class="sy0">;</span>
+		<span class="kw1">background</span><span class="sy0">:</span> <span class="re0">#FFF</span><span class="sy0">;</span>
+	<span class="br0">&#125;</span>
+		<span class="re1">.cashout</span> ul<span class="re1">.cashout_main</span> li img <span class="br0">&#123;</span>
+			<span class="kw1">width</span><span class="sy0">:</span> <span class="re3">146px</span><span class="sy0">;</span>
+			<span class="kw1">height</span><span class="sy0">:</span> <span class="re3">119px</span><span class="sy0">;</span>
+		<span class="br0">&#125;</span>
+		<span class="re1">.cashout</span> ul<span class="re1">.cashout_main</span> li <span class="re1">.prize_name</span> <span class="br0">&#123;</span>
+			<span class="kw1">position</span><span class="sy0">:</span> <span class="kw2">absolute</span><span class="sy0">;</span>
+			<span class="kw1">left</span><span class="sy0">:</span> <span class="nu0">0</span><span class="sy0">;</span>
+			<span class="kw1">bottom</span><span class="sy0">:</span> <span class="nu0">0</span><span class="sy0">;</span>
+			<span class="kw1">width</span><span class="sy0">:</span> <span class="re3">146px</span><span class="sy0">;</span>
+			<span class="kw1">height</span><span class="sy0">:</span> <span class="re3">24px</span><span class="sy0">;</span>
+			<span class="kw1">line-height</span><span class="sy0">:</span> <span class="re3">24px</span><span class="sy0">;</span>
+			<span class="kw1">text-align</span><span class="sy0">:</span> <span class="kw2">center</span><span class="sy0">;</span>
+			<span class="kw1">color</span><span class="sy0">:</span> <span class="re0">#FFF</span><span class="sy0">;</span>
+			<span class="kw1">background</span><span class="sy0">:</span> <span class="re0">#000</span><span class="sy0">;</span>
+			filter<span class="sy0">:</span>alpha<span class="br0">&#40;</span>opacity<span class="sy0">=</span><span class="nu0">50</span><span class="br0">&#41;</span><span class="sy0">;</span>
+			-moz-opacity<span class="sy0">:</span><span class="nu0">0.5</span><span class="sy0">;</span>
+			-khtml-opacity<span class="sy0">:</span> <span class="nu0">0.5</span><span class="sy0">;</span>
+			opacity<span class="sy0">:</span> <span class="nu0">0.5</span><span class="sy0">;</span>
+		<span class="br0">&#125;</span>
+		<span class="re1">.cashout</span> ul<span class="re1">.cashout_main</span> li <span class="re1">.prize_description</span> <span class="br0">&#123;</span>
+			<span class="kw1">position</span><span class="sy0">:</span> <span class="kw2">absolute</span><span class="sy0">;</span>
+			<span class="kw1">left</span><span class="sy0">:</span> <span class="nu0">0</span><span class="sy0">;</span>
+			<span class="kw1">top</span><span class="sy0">:</span> <span class="nu0">0</span><span class="sy0">;</span>
+			<span class="kw1">padding</span><span class="sy0">:</span> <span class="re3">10px</span> <span class="re3">20px</span><span class="sy0">;</span>
+			<span class="kw1">display</span><span class="sy0">:</span> <span class="kw2">none</span><span class="sy0">;</span>
+			<span class="kw1">width</span><span class="sy0">:</span> <span class="re3">254px</span><span class="sy0">;</span>
+			<span class="kw1">height</span><span class="sy0">:</span> <span class="re3">126px</span><span class="sy0">;</span>
+			<span class="kw1">color</span><span class="sy0">:</span> <span class="re0">#FFF</span><span class="sy0">;</span>
+			<span class="kw1">background</span><span class="sy0">:</span> <span class="re0">#000</span><span class="sy0">;</span>
+			filter<span class="sy0">:</span>alpha<span class="br0">&#40;</span>opacity<span class="sy0">=</span><span class="nu0">30</span><span class="br0">&#41;</span><span class="sy0">;</span>
+			-moz-opacity<span class="sy0">:</span><span class="nu0">0.6</span><span class="sy0">;</span>
+			-khtml-opacity<span class="sy0">:</span> <span class="nu0">0.6</span><span class="sy0">;</span>
+			opacity<span class="sy0">:</span> <span class="nu0">0.6</span><span class="sy0">;</span>
+		<span class="br0">&#125;</span>
+			<span class="re1">.cashout-content</span> ul<span class="re1">.cashout_main</span> li <span class="re1">.prize_description</span> h1<span class="sy0">,</span>
+			<span class="re1">.cashout-content</span> ul<span class="re1">.cashout_main</span> li <span class="re1">.prize_description</span> h2<span class="sy0">,</span>
+			<span class="re1">.cashout-content</span> ul<span class="re1">.cashout_main</span> li <span class="re1">.prize_description</span> h3<span class="sy0">,</span>
+			<span class="re1">.cashout-content</span> ul<span class="re1">.cashout_main</span> li <span class="re1">.prize_description</span> h4<span class="sy0">,</span>
+			<span class="re1">.cashout-content</span> ul<span class="re1">.cashout_main</span> li <span class="re1">.prize_description</span> h5 <span class="br0">&#123;</span>
+				<span class="kw1">line-height</span><span class="sy0">:</span> <span class="re3">32px</span><span class="sy0">;</span>
+				<span class="kw1">font-family</span><span class="sy0">:</span> <span class="st0">&quot;Microsoft Yahei&quot;</span><span class="sy0">;</span>
+				<span class="kw1">text-align</span><span class="sy0">:</span> <span class="kw2">center</span><span class="sy0">;</span>
+			<span class="br0">&#125;</span>
+			<span class="re1">.cashout</span> ul<span class="re1">.cashout_main</span> li <span class="re1">.prize_description</span> h1 <span class="br0">&#123;</span> <span class="kw1">font-size</span><span class="sy0">:</span> <span class="re3">24px</span><span class="sy0">;</span> <span class="br0">&#125;</span>
+			<span class="re1">.cashout</span> ul<span class="re1">.cashout_main</span> li <span class="re1">.prize_description</span> h2 <span class="br0">&#123;</span> <span class="kw1">font-size</span><span class="sy0">:</span> <span class="re3">20px</span><span class="sy0">;</span> <span class="br0">&#125;</span>
+			<span class="re1">.cashout</span> ul<span class="re1">.cashout_main</span> li <span class="re1">.prize_description</span> h3<span class="br0">&#123;</span> <span class="kw1">font-size</span><span class="sy0">:</span> <span class="re3">18px</span><span class="sy0">;</span> <span class="br0">&#125;</span>
+			<span class="re1">.cashout</span> ul<span class="re1">.cashout_main</span> li <span class="re1">.prize_description</span> h4 <span class="br0">&#123;</span> <span class="kw1">font-size</span><span class="sy0">:</span> <span class="re3">16px</span><span class="sy0">;</span> <span class="br0">&#125;</span>
+			<span class="re1">.cashout</span> ul<span class="re1">.cashout_main</span> li <span class="re1">.prize_description</span> h5 <span class="br0">&#123;</span> <span class="kw1">font-size</span><span class="sy0">:</span> <span class="re3">14px</span><span class="sy0">;</span> <span class="br0">&#125;</span>
+			<span class="re1">.cashout</span> ul<span class="re1">.cashout_main</span> li <span class="re1">.prize_description</span> p <span class="br0">&#123;</span>
+				<span class="kw1">margin-bottom</span><span class="sy0">:</span> <span class="re3">5px</span><span class="sy0">;</span>
+			<span class="br0">&#125;</span>
+	<span class="re1">.cashout</span> ul<span class="re1">.cashout_main</span> li<span class="re1">.cashout_start</span> <span class="br0">&#123;</span>
+		<span class="kw1">position</span><span class="sy0">:</span> <span class="kw2">relative</span><span class="sy0">;</span>
+		<span class="kw1">float</span><span class="sy0">:</span> <span class="kw1">left</span><span class="sy0">;</span>
+		<span class="kw1">margin</span><span class="sy0">:</span> <span class="nu0">0</span> <span class="re3">2px</span> <span class="re3">2px</span> <span class="nu0">0</span><span class="sy0">;</span>
+		<span class="kw1">width</span><span class="sy0">:</span> <span class="re3">294px</span><span class="sy0">;</span>
+		<span class="kw1">height</span><span class="sy0">:</span> <span class="re3">119px</span><span class="sy0">;</span>
+		<span class="kw1">overflow</span><span class="sy0">:</span> <span class="kw2">hidden</span><span class="sy0">;</span>
+	<span class="br0">&#125;</span>
+		<span class="re1">.cashout</span> ul<span class="re1">.cashout_main</span> li<span class="re1">.cashout_start</span> a<span class="re1">.cashout_start_btn</span> <span class="br0">&#123;</span>
+			<span class="kw1">display</span><span class="sy0">:</span> <span class="kw2">block</span><span class="sy0">;</span>
+			<span class="kw1">width</span><span class="sy0">:</span> <span class="re3">294px</span><span class="sy0">;</span>
+			<span class="kw1">height</span><span class="sy0">:</span> <span class="re3">119px</span><span class="sy0">;</span>
+			<span class="kw1">background</span><span class="sy0">:</span> <span class="kw2">url</span><span class="br0">&#40;</span><span class="co2">images/cashout_start.jpg</span><span class="br0">&#41;</span> <span class="kw2">no-repeat</span><span class="sy0">;</span>
+		<span class="br0">&#125;</span>

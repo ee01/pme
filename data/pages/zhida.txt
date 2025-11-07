@@ -1,0 +1,50 @@
+====== 直达号 ======
+
+===== 现有的资料 =====
+   * [[zhida:data|data资料]]
+
+===== 接入规范 =====
+   *[[zhida:fomat|fomat移动轻应用接入规范]]
+   *[[zhida:fomat1|fomat移动轻应用接入指南]]
+
+===== 审核流程 =====  
+   *[[zhida:qing|轻应用]]
+   *[[zhida:zhidadetaik|直达号]]
+
+===== 接口说明 =====
+
+  * [[zhida:oauth|oauth接口]]
+  * [[zhida:Blend API|Blend API]]
+
+===== 目前困境 =====
+  *[[zhida:error|error]]
+  *[[zhida:error1|error1]]
+
+===== 小发现 =====
+   *[[zhida:minfind|小发现]]
+   *[[zhida:minfind1|小发现1]]
+   *[[zhida:minfind2|小发现2]]
+   *[[zhida:minfind3|小发现3]]
+
+===== 关于后台订单管理 =====
+    *[[zhida:shixian|实现]]
+
+===== 服务商添加直达号 =====
+    *[[zhida:addzhida|直达号开通流程]]
+    *[[zhida:ordercenter|订单中心接入]]
+    *[[直达号服务组件测试流程]]
+    *[[直达号服务组件PC端显示不了的原因及方法]]
+    *[[直达号后台功能注意事项]]
+   
+
+ 
+
+
+
+
+
+
+
+===== 账号 =====
+
+[[zhida:passport|相关后台账号密码]]

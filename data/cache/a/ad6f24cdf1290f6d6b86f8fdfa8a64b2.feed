@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- generator="FeedCreator 1.7.2-ppt DokuWiki" -->
+<?xml-stylesheet href="http://pme.eexx.me/lib/exe/css.php?s=feed" type="text/css"?>
+<rdf:RDF
+    xmlns="http://purl.org/rss/1.0/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <channel rdf:about="http://pme.eexx.me/feed.php">
+        <title>百度产品部门 知识库</title>
+        <description></description>
+        <link>http://pme.eexx.me/</link>
+        <image rdf:resource="http://pme.eexx.me/lib/tpl/vector/images/favicon.ico" />
+       <dc:date>2018-07-16T14:30:31+00:00</dc:date>
+        <items>
+            <rdf:Seq>
+                <rdf:li rdf:resource="http://pme.eexx.me/doku.php?id=ued:template:includes&amp;rev=1454531070&amp;do=diff"/>
+            </rdf:Seq>
+        </items>
+    </channel>
+    <image rdf:about="http://pme.eexx.me/lib/tpl/vector/images/favicon.ico">
+        <title>百度产品部门 知识库</title>
+        <link>http://pme.eexx.me/</link>
+        <url>http://pme.eexx.me/lib/tpl/vector/images/favicon.ico</url>
+    </image>
+    <item rdf:about="http://pme.eexx.me/doku.php?id=ued:template:includes&amp;rev=1454531070&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-02-03T20:24:30+00:00</dc:date>
+        <title>ued:template:includes</title>
+        <link>http://pme.eexx.me/doku.php?id=ued:template:includes&amp;rev=1454531070&amp;do=diff</link>
+        <description>变量语法查询：_xxxx.html
+
+此页面非独立HTML页面，只是部分html代码区块。
+
+为了简化重复代码，而统一写到此文件中，再使用方式引入本文件！
+
+文件名命名规范
+
+必须以_下划线开头的文件名！</description>
+    </item>
+</rdf:RDF>

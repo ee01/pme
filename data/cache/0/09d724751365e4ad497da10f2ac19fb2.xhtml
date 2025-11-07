@@ -1,0 +1,178 @@
+
+<h1 class="sectionedit1" id="loading">Loading</h1>
+<div class="level1">
+
+</div>
+<!-- EDIT1 SECTION "Loading" [1-23] -->
+<h2 class="sectionedit2" id="数据载入loading">数据载入loading</h2>
+<div class="level2">
+
+</div>
+<!-- EDIT2 SECTION "数据载入loading" [24-56] -->
+<h3 class="sectionedit3" id="html">HTML</h3>
+<div class="level3">
+<pre class="code html4strict"><span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/ul.html"><span class="kw2">ul</span></a>&gt;</span>
+	<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/center.html"><span class="kw2">center</span></a>&gt;&lt;<a target="_blank" href="http://december.com/html/4/element/img.html"><span class="kw2">img</span></a> <span class="kw3">src</span><span class="sy0">=</span><span class="st0">&quot;http://minnan.sinaimg.cn/utils/images/loading_large.gif&quot;</span> <span class="sy0">/</span>&gt;&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/center.html"><span class="kw2">center</span></a>&gt;</span>
+<span class="sc2">&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/ul.html"><span class="kw2">ul</span></a>&gt;</span></pre>
+
+</div>
+<!-- EDIT3 SECTION "HTML" [57-192] -->
+<h3 class="sectionedit4" id="js">JS</h3>
+<div class="level3">
+<pre class="code javascript">$.<span class="me1">getJSON</span><span class="br0">&#40;</span><span class="st0">'http://...?callback=?'</span><span class="sy0">,</span> <span class="kw1">function</span><span class="br0">&#40;</span>json<span class="br0">&#41;</span> <span class="br0">&#123;</span>
+	<span class="kw1">if</span> <span class="br0">&#40;</span>json.<span class="me1">err</span> <span class="sy0">==</span> <span class="nu0">0</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+		<span class="kw1">var</span> html_data <span class="sy0">=</span> <span class="st0">''</span><span class="sy0">;</span>
+		$.<span class="me1">each</span><span class="br0">&#40;</span>json.<span class="me1">data</span><span class="sy0">,</span> <span class="kw1">function</span><span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+			html_data <span class="sy0">+=</span> <span class="co1">// ...</span>
+		<span class="br0">&#125;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+		$<span class="br0">&#40;</span><span class="st0">'ul'</span><span class="br0">&#41;</span>.<span class="me1">html</span><span class="br0">&#40;</span><span class="st0">''</span><span class="br0">&#41;</span>.<span class="me1">append</span><span class="br0">&#40;</span>html_data<span class="br0">&#41;</span><span class="sy0">;</span>
+	<span class="br0">&#125;</span>
+<span class="br0">&#125;</span><span class="br0">&#41;</span><span class="sy0">;</span></pre>
+
+</div>
+<!-- EDIT4 SECTION "JS" [193-438] -->
+<h2 class="sectionedit5" id="按钮提交loading">按钮提交loading</h2>
+<div class="level2">
+
+<p>
+参见：<a href="/pme/doku.php?id=ued:resource:mask" class="wikilink1" title="ued:resource:mask">mask(按钮)遮罩插件</a>
+</p>
+
+</div>
+<!-- EDIT5 SECTION "按钮提交loading" [439-528] -->
+<h2 class="sectionedit6" id="页面载入loading">页面载入loading</h2>
+<div class="level2">
+
+<p>
+引入文件：
+</p>
+<pre class="code html4strict"><span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/body.html"><span class="kw2">body</span></a>&gt;</span>
+&nbsp;
+<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/script.html"><span class="kw2">script</span></a> <span class="kw3">type</span><span class="sy0">=</span><span class="st0">&quot;text/javascript&quot;</span> <span class="kw3">src</span><span class="sy0">=</span><span class="st0">&quot;http://common.mn.sina.com.cn/public/resource/lib/jquery.core.js&quot;</span>&gt;&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/script.html"><span class="kw2">script</span></a>&gt;</span>
+<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/script.html"><span class="kw2">script</span></a> <span class="kw3">type</span><span class="sy0">=</span><span class="st0">&quot;text/javascript&quot;</span> <span class="kw3">src</span><span class="sy0">=</span><span class="st0">&quot;http://common.mn.sina.com.cn/public/resource/lib/jquery.loader.js&quot;</span>&gt;&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/script.html"><span class="kw2">script</span></a>&gt;&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/script.html"><span class="kw2">script</span></a>&gt;</span></pre>
+
+<p>
+注意：代码写在紧随<code>&lt;body&gt;</code>之后，可以一打开页面就显示loading界面！
+</p>
+
+</div>
+<!-- EDIT6 SECTION "页面载入loading" [529-935] -->
+<h3 class="sectionedit7" id="简易用法">简易用法</h3>
+<div class="level3">
+
+</div>
+
+<h4 id="js1">JS</h4>
+<div class="level4">
+<pre class="code javascript">$.<span class="me1">preLoadGUI</span><span class="br0">&#40;</span><span class="br0">&#123;</span>load<span class="sy0">:</span> <span class="br0">&#91;</span>
+	<span class="br0">&#91;</span><span class="st0">'images/make-title.png'</span><span class="sy0">,</span> <span class="kw2">true</span><span class="br0">&#93;</span><span class="sy0">,</span>
+	<span class="br0">&#91;</span><span class="st0">'images/flipcard-title.jpg'</span><span class="sy0">,</span> <span class="kw2">true</span><span class="br0">&#93;</span><span class="sy0">,</span>
+	<span class="br0">&#91;</span><span class="st0">'images/people-title.jpg'</span><span class="sy0">,</span> <span class="kw2">true</span><span class="br0">&#93;</span><span class="sy0">,</span>
+	<span class="br0">&#91;</span><span class="st0">'images/top.jpg'</span><span class="sy0">,</span> <span class="kw2">true</span><span class="br0">&#93;</span>
+<span class="br0">&#93;</span><span class="br0">&#125;</span><span class="br0">&#41;</span><span class="sy0">;</span></pre>
+
+</div>
+<!-- EDIT7 SECTION "简易用法" [936-1161] -->
+<h3 class="sectionedit8" id="自定义loading图">自定义Loading图</h3>
+<div class="level3">
+
+<p>
+写在<code>&lt;body&gt;</code>之后
+</p>
+
+</div>
+
+<h4 id="js2">JS</h4>
+<div class="level4">
+<pre class="code html4strict"><span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/body.html"><span class="kw2">body</span></a>&gt;</span>
+&nbsp;
+<span class="sc-1">&lt;!-- 开始 Loading... --&gt;</span>
+<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/script.html"><span class="kw2">script</span></a> <span class="kw3">type</span><span class="sy0">=</span><span class="st0">&quot;text/javascript&quot;</span> <span class="kw3">src</span><span class="sy0">=</span><span class="st0">&quot;http://common.mn.sina.com.cn/public/resource/lib/jquery.core.js&quot;</span>&gt;&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/script.html"><span class="kw2">script</span></a>&gt;</span>
+<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/script.html"><span class="kw2">script</span></a> <span class="kw3">type</span><span class="sy0">=</span><span class="st0">&quot;text/javascript&quot;</span> <span class="kw3">src</span><span class="sy0">=</span><span class="st0">&quot;http://common.mn.sina.com.cn/public/resource/lib/jquery.loader.js&quot;</span>&gt;&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/script.html"><span class="kw2">script</span></a>&gt;</span>
+<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/script.html"><span class="kw2">script</span></a> <span class="kw3">type</span><span class="sy0">=</span><span class="st0">&quot;text/javascript&quot;</span>&gt;</span>
+// 载入进度
+var loads = [
+	['images/make-title.png', true],
+	['images/flipcard-title.jpg', true],
+	['images/people-title.jpg', true],
+	['images/top.jpg', true]
+];
+$('<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/div.html"><span class="kw2">div</span></a>&gt;&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/div.html"><span class="kw2">div</span></a>&gt;</span>').attr('id', 'preLoadGUIBeta4-1').appendTo('body');	// 阻止原有Loader
+$('<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/div.html"><span class="kw2">div</span></a>&gt;&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/div.html"><span class="kw2">div</span></a>&gt;</span>').attr({'id':'preLoadGUIBeta4-1loader', 'rel':loads.length, 'loaded':0}).appendTo('body');	// 触发callbackEnd
+$('<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/div.html"><span class="kw2">div</span></a>&gt;&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/div.html"><span class="kw2">div</span></a>&gt;</span>').attr('id', 'preLoad').css({
+	width: '100%',
+	height: '100%',
+	backgroundColor: '#BBB',
+	zIndex: 99999999,
+	position: 'fixed',
+	opacity: 1,
+	left: 0,
+	top: 0
+}).appendTo('body');
+$('<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/div.html"><span class="kw2">div</span></a>&gt;&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/div.html"><span class="kw2">div</span></a>&gt;</span>').attr({'id':'preLoader', 'rel':loads.length, 'loaded':0}).appendTo('body').css({
+	left: ($(window).width() - $('#preLoader').width())/2,
+	top: ($(window).height() - $('#preLoader').height())/3
+}).append('<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/div.html"><span class="kw2">div</span></a> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;loader&quot;</span>&gt;&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/div.html"><span class="kw2">div</span></a>&gt;</span>').append('<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/div.html"><span class="kw2">div</span></a> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;loader-swf&quot;</span>&gt;&lt;<a target="_blank" href="http://december.com/html/4/element/object.html"><span class="kw2">object</span></a> <span class="kw3">width</span><span class="sy0">=</span><span class="st0">&quot;100%&quot;</span> <span class="kw3">height</span><span class="sy0">=</span><span class="st0">&quot;100%&quot;</span> <span class="kw3">classid</span><span class="sy0">=</span><span class="st0">&quot;clsid:D27CDB6E-AE6D-11cf-96B8-444553540000&quot;</span> <span class="kw3">codebase</span><span class="sy0">=</span><span class="st0">&quot;http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,29,0&quot;</span> <span class="kw3">width</span><span class="sy0">=</span><span class="st0">&quot;680&quot;</span> <span class="kw3">height</span><span class="sy0">=</span><span class="st0">&quot;150&quot;</span>&gt;</span>\n\
+													<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/param.html"><span class="kw2">param</span></a> <span class="kw3">name</span><span class="sy0">=</span><span class="st0">&quot;movie&quot;</span> <span class="kw3">value</span><span class="sy0">=</span><span class="st0">&quot;images/bubble.swf&quot;</span>&gt;</span>\n\
+													<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/param.html"><span class="kw2">param</span></a> <span class="kw3">name</span><span class="sy0">=</span><span class="st0">&quot;menu&quot;</span> <span class="kw3">value</span><span class="sy0">=</span><span class="st0">&quot;false&quot;</span>&gt;</span>\n\
+													<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/param.html"><span class="kw2">param</span></a> <span class="kw3">name</span><span class="sy0">=</span><span class="st0">&quot;quality&quot;</span> <span class="kw3">value</span><span class="sy0">=</span><span class="st0">&quot;high&quot;</span>&gt;</span>\n\
+													<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/param.html"><span class="kw2">param</span></a> <span class="kw3">name</span><span class="sy0">=</span><span class="st0">&quot;wmode&quot;</span> <span class="kw3">value</span><span class="sy0">=</span><span class="st0">&quot;transparent&quot;</span>&gt;</span>\n\
+													<span class="sc2">&lt;embed <span class="kw3">src</span><span class="sy0">=</span><span class="st0">&quot;images/bubble.swf&quot;</span> <span class="kw3">width</span><span class="sy0">=</span><span class="st0">&quot;100%&quot;</span> <span class="kw3">height</span><span class="sy0">=</span><span class="st0">&quot;100%&quot;</span> quality<span class="sy0">=</span><span class="st0">&quot;high&quot;</span> wmode<span class="sy0">=</span><span class="st0">&quot;transparent&quot;</span> pluginspage<span class="sy0">=</span><span class="st0">&quot;http://www.macromedia.com/go/getflashplayer&quot;</span> <span class="kw3">type</span><span class="sy0">=</span><span class="st0">&quot;application/x-shockwave-flash&quot;</span>&gt;&lt;<span class="sy0">/</span>embed&gt;</span>\n\
+												<span class="sc2">&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/object.html"><span class="kw2">object</span></a>&gt;&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/div.html"><span class="kw2">div</span></a>&gt;</span>');
+$.preLoadGUI({
+	load: loads,
+	callbackEach: function(item) {
+		var loaded = parseInt($('#preLoader').attr('loaded')) || 0,
+			rel = parseInt($('#preLoader').attr('rel'));
+		$('#preLoader').attr('loaded', ++loaded);
+		$('#preLoader .loader').height(loaded / rel * $('#preLoader').height());
+	},
+	callbackEnd: function() {
+		$('#preLoad, #preLoader').fadeOut();
+	}
+});
+<span class="sc2">&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/script.html"><span class="kw2">script</span></a>&gt;</span>
+<span class="sc-1">&lt;!-- 结束 Loading... --&gt;</span>
+&nbsp;
+$G{厦门站频道顶部导航共用}</pre>
+
+</div>
+
+<h4 id="css">CSS</h4>
+<div class="level4">
+<pre class="code css"><span class="re0">#preLoader</span> <span class="br0">&#123;</span>
+	<span class="kw1">position</span><span class="sy0">:</span> <span class="kw2">fixed</span><span class="sy0">;</span>
+	<span class="kw1">top</span><span class="sy0">:</span> <span class="re3">10%</span><span class="sy0">;</span>
+	<span class="kw1">left</span><span class="sy0">:</span> <span class="re3">40%</span><span class="sy0">;</span>
+	<span class="kw1">width</span><span class="sy0">:</span> <span class="re3">142px</span><span class="sy0">;</span>
+	<span class="kw1">height</span><span class="sy0">:</span> <span class="re3">500px</span><span class="sy0">;</span>
+	<span class="kw1">background</span><span class="sy0">:</span> <span class="kw2">url</span><span class="br0">&#40;</span><span class="co2">images/loader-bottle.png</span><span class="br0">&#41;</span> <span class="nu0">0</span> <span class="kw1">bottom</span> <span class="kw2">no-repeat</span><span class="sy0">;</span>
+	<span class="kw1">z-index</span><span class="sy0">:</span> <span class="nu0">999999999</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+	<span class="re0">#preLoader</span> <span class="re1">.loader</span> <span class="br0">&#123;</span>
+		<span class="kw1">position</span><span class="sy0">:</span> <span class="kw2">absolute</span><span class="sy0">;</span>
+		<span class="kw1">bottom</span><span class="sy0">:</span> <span class="nu0">0</span><span class="sy0">;</span>
+		<span class="kw1">left</span><span class="sy0">:</span> <span class="nu0">0</span><span class="sy0">;</span>
+		<span class="kw1">width</span><span class="sy0">:</span> <span class="re3">142px</span><span class="sy0">;</span>
+		<span class="kw1">height</span><span class="sy0">:</span> <span class="nu0">0</span><span class="sy0">;</span>
+		<span class="kw1">background</span><span class="sy0">:</span> <span class="kw2">url</span><span class="br0">&#40;</span><span class="co2">images/loader-bottle.png</span><span class="br0">&#41;</span> <span class="re3">-142px</span> <span class="kw1">bottom</span> <span class="kw2">no-repeat</span><span class="sy0">;</span>
+	<span class="br0">&#125;</span>
+	<span class="re0">#preLoader</span> <span class="re1">.loader-swf</span> <span class="br0">&#123;</span>
+		<span class="kw1">position</span><span class="sy0">:</span> <span class="kw2">absolute</span><span class="sy0">;</span>
+		<span class="kw1">bottom</span><span class="sy0">:</span> <span class="nu0">0</span><span class="sy0">;</span>
+		<span class="kw1">left</span><span class="sy0">:</span> <span class="nu0">0</span><span class="sy0">;</span>
+		<span class="kw1">width</span><span class="sy0">:</span> <span class="re3">142px</span><span class="sy0">;</span>
+		<span class="kw1">height</span><span class="sy0">:</span> <span class="re3">210px</span><span class="sy0">;</span>
+	<span class="br0">&#125;</span></pre>
+
+</div>
+<!-- EDIT8 SECTION "自定义Loading图" [1162-4006] -->
+<h3 class="sectionedit9" id="document">Document</h3>
+<div class="level3">
+
+<p>
+<a href="https://code.google.com/p/jquery-preloader/wiki/HowToUse" class="urlextern" target="_blank" title="https://code.google.com/p/jquery-preloader/wiki/HowToUse"  rel="nofollow">https://code.google.com/p/jquery-preloader/wiki/HowToUse</a>
+</p>
+
+</div>
+<!-- EDIT9 SECTION "Document" [4007-] -->

@@ -1,0 +1,22 @@
+<span class="sc2">&lt;footer&gt;</span>
+	<span class="sc-1">&lt;!-- 第二导航 --&gt;</span>
+	<span class="sc2">&lt;nav&gt;</span>
+		<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/ul.html"><span class="kw2">ul</span></a> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;clearfix&quot;</span>&gt;</span>
+			{foreach item=nav from=$index.second_navs}
+			<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/li.html"><span class="kw2">li</span></a> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;{if $nav.current}current{/if}&quot;</span>&gt;&lt;<a target="_blank" href="http://december.com/html/4/element/a.html"><span class="kw2">a</span></a> <span class="kw3">href</span><span class="sy0">=</span><span class="st0">&quot;{$nav.link}&quot;</span>&gt;</span>{$nav.name}<span class="sc2">&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/a.html"><span class="kw2">a</span></a>&gt;&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/li.html"><span class="kw2">li</span></a>&gt;</span>
+			{/foreach}
+		<span class="sc2">&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/ul.html"><span class="kw2">ul</span></a>&gt;</span>
+	<span class="sc2">&lt;<span class="sy0">/</span>nav&gt;</span>
+<span class="sc2">&lt;<span class="sy0">/</span>footer&gt;</span>
+<span class="sc-1">&lt;!-- 输出：</span>
+<span class="sc-1">&lt;footer&gt;</span>
+<span class="sc-1">	&lt;nav&gt;</span>
+<span class="sc-1">		&lt;ul class=&quot;clearfix&quot;&gt;</span>
+<span class="sc-1">			&lt;li&gt;&lt;a href=&quot;list-text.html&quot;&gt;新闻动态&lt;/a&gt;&lt;/li&gt;</span>
+<span class="sc-1">			&lt;li class=&quot;current&quot;&gt;&lt;a href=&quot;list-imagetext.html&quot;&gt;产品中心&lt;/a&gt;&lt;/li&gt;</span>
+<span class="sc-1">			&lt;li&gt;&lt;a href=&quot;list-text.html&quot;&gt;产品动态&lt;/a&gt;&lt;/li&gt;</span>
+<span class="sc-1">			&lt;li&gt;&lt;a href=&quot;list-page.html&quot;&gt;公司简介&lt;/a&gt;&lt;/li&gt;</span>
+<span class="sc-1">		&lt;/ul&gt;</span>
+<span class="sc-1">	&lt;/nav&gt;</span>
+<span class="sc-1">&lt;/footer&gt;</span>
+<span class="sc-1">--&gt;</span>

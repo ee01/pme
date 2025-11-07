@@ -1,0 +1,27 @@
+
+<h1 class="sectionedit1" id="跨域采用post提交数据">跨域采用POST提交数据</h1>
+<div class="level1">
+
+</div>
+<!-- EDIT1 SECTION "跨域采用POST提交数据" [1-44] -->
+<h2 class="sectionedit2" id="引入文件">引入文件：</h2>
+<div class="level2">
+<pre class="code">&lt;script src=&quot;http://common.mn.sina.com.cn/public/resource/lib/crossajax/jquery.swfobject.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;http://common.mn.sina.com.cn/public/resource/lib/crossajax/jquery.crossajax.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;</pre>
+
+</div>
+<!-- EDIT2 SECTION "引入文件：" [45-329] -->
+<h2 class="sectionedit3" id="js">JS：</h2>
+<div class="level2">
+<pre class="code">$.request(&quot;http://...&quot;, &#039;a=b&#039;, &#039;function(data){ callback(); },&#039;POST&#039;,&#039;utf-8&#039;);</pre>
+
+<p>
+OR
+</p>
+<pre class="code">$.request(&quot;http://...&quot;, {a:b}, function(data){
+	// callback function
+});
+// with POST &amp; utf-8</pre>
+
+</div>
+<!-- EDIT3 SECTION "JS：" [330-] -->

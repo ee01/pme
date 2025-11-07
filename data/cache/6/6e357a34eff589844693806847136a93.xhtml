@@ -1,0 +1,426 @@
+
+<h1 class="sectionedit1" id="ini文件的语法与使用">INI文件的语法与使用</h1>
+<div class="level1">
+
+</div>
+<!-- EDIT1 SECTION "INI文件的语法与使用" [1-43] -->
+<h2 class="sectionedit2" id="格式规范">格式规范</h2>
+<div class="level2">
+
+<p>
+符合通用ini文件格式规范！
+</p>
+
+</div>
+<!-- EDIT2 SECTION "格式规范" [44-107] -->
+<h2 class="sectionedit3" id="内容规范">内容规范</h2>
+<div class="level2">
+
+</div>
+<!-- EDIT3 SECTION "内容规范" [108-133] -->
+<h3 class="sectionedit4" id="template_模板信息部分">[Template] 模板信息部分</h3>
+<div class="level3">
+<ul>
+<li class="level1"><div class="li"> Name：模板名称 </div>
+</li>
+<li class="level1"><div class="li"> Description：模板的简短介绍</div>
+</li>
+<li class="level1"><div class="li"> URL：模板介绍的网址</div>
+</li>
+<li class="level1"><div class="li"> Version：版本号</div>
+</li>
+</ul>
+
+</div>
+<!-- EDIT4 SECTION "[Template] 模板信息部分" [134-295] -->
+<h3 class="sectionedit5" id="config_模板配置部分">[Config] 模板配置部分</h3>
+<div class="level3">
+<ul>
+<li class="level1"><div class="li"> Type：<code>PC模板</code>或者<code>手机模板</code></div>
+</li>
+<li class="level1"><div class="li"> Category：模板的行业类别（<strong>这个很重要！实时预览的示例数据源根据此项和不同</strong>）</div>
+</li>
+<li class="level1"><div class="li"> Tags：模板的标签（多个标签以英文逗号<code>,</code>隔开）</div>
+</li>
+<li class="level1"><div class="li"> StyleColors：模板可选的颜色标识符（英文逗号<code>,</code>隔开。至少1个，如果有2个以上，必须引入<a href="/doku.php?id=ued:template:index#stylecolor_网站颜色" class="wikilink1" title="ued:template:index">$stylecolor</a>变量及创建对应css文件）</div>
+</li>
+<li class="level1"><div class="li"> LogoSize：LOGO的大小：<code>200*150</code>，如果强制定义高宽值应为：<code>200*150|forcesize</code>（默认不定义，代表LOGO自适应；如模板LOGO大小定死，须定义此项）</div>
+</li>
+<li class="level1"><div class="li"> EnableNavsData：启用$navs的data输出，默认0不输出，1代表仅第一级输出data，2代表前两级输出data，以此类推..</div>
+</li>
+<li class="level1"><div class="li"> EnableNavsStarData：启用$navs的stardata输出，默认0不输出，1代表仅第一级输出stardata，2代表前两级输出stardata，以此类推..</div>
+</li>
+<li class="level1"><div class="li"> EnablePagenavsData：启用$pagenavs的data输出，默认0不输出，1代表仅第一级输出data，2代表前两级输出data，以此类推..</div>
+</li>
+<li class="level1"><div class="li"> EnablePagenavsStarData：启用$pagenavs的stardata输出，默认0不输出，1代表仅第一级输出stardata，2代表前两级输出stardata，以此类推..</div>
+</li>
+<li class="level1"><div class="li"> List1ShowtypeTotal：文字列表的showtype样式总数（仅手机模板定义）若首页无文字列表输出的对应样式，则设为0</div>
+</li>
+<li class="level1"><div class="li"> List2ShowtypeTotal：图片列表的showtype样式总数（仅手机模板定义）若首页无图片列表输出的对应样式，则设为0</div>
+</li>
+<li class="level1"><div class="li"> List3ShowtypeTotal：图文列表的showtype样式总数（仅手机模板定义）若首页无图文列表输出的对应样式，则设为0</div>
+</li>
+<li class="level1"><div class="li"> List4ShowtypeTotal：内容单页的showtype样式总数（仅手机模板定义）若首页无内容单页输出的对应样式，则设为0</div>
+</li>
+<li class="level1"><div class="li"> List5ShowtypeTotal：留言板的showtype样式总数（仅手机模板定义）若首页无内容单页输出的对应样式，则设为0</div>
+</li>
+<li class="level1"><div class="li"> List6ShowtypeTotal：外链栏目的showtype样式总数（仅手机模板定义）若首页无内容单页输出的对应样式，则设为0</div>
+</li>
+<li class="level1"><div class="li"> List7ShowtypeTotal：微信栏目的showtype样式总数（仅手机模板定义）若首页无内容单页输出的对应样式，则设为0</div>
+</li>
+<li class="level1"><div class="li"> List8ShowtypeTotal：直达号栏目的showtype样式总数（仅手机模板定义）若首页无内容单页输出的对应样式，则设为0</div>
+</li>
+<li class="level1"><div class="li"> QuickBar：自定义底部导航开发。值为<code>custom</code>完全自定义导航代码；值为<code>#AAA,#BBB,#FFF,#CCC</code>为引用系统底部导航模块</div>
+</li>
+</ul>
+
+<p>
+<em class="u">例如：</em><br/>
+
+手机模板首页只输出图文列表和图片列表的展现HTML，并且图片列表还有2种展现样式，则设置：
+</p>
+<ul>
+<li class="level1"><div class="li"> List1ShowtypeTotal=0</div>
+</li>
+<li class="level1"><div class="li"> List2ShowtypeTotal=2</div>
+</li>
+<li class="level1"><div class="li"> List3ShowtypeTotal=1</div>
+</li>
+<li class="level1"><div class="li"> List4ShowtypeTotal=0</div>
+</li>
+<li class="level1"><div class="li"> List5ShowtypeTotal=0</div>
+</li>
+<li class="level1"><div class="li"> List6ShowtypeTotal=0</div>
+</li>
+<li class="level1"><div class="li"> List7ShowtypeTotal=0</div>
+</li>
+<li class="level1"><div class="li"> List8ShowtypeTotal=0</div>
+</li>
+</ul>
+
+<p>
+<em class="u">StyleColors可填写的值：</em>
+</p>
+<ul>
+<li class="level1"><div class="li"> 灰色	grey</div>
+</li>
+<li class="level1"><div class="li"> 黑色	black</div>
+</li>
+<li class="level1"><div class="li"> 蓝色	blue</div>
+</li>
+<li class="level1"><div class="li"> 绿色	green</div>
+</li>
+<li class="level1"><div class="li"> 黄色	yellow</div>
+</li>
+<li class="level1"><div class="li"> 橘色	orange</div>
+</li>
+<li class="level1"><div class="li"> 粉色	pink</div>
+</li>
+<li class="level1"><div class="li"> 红色	red</div>
+</li>
+<li class="level1"><div class="li"> 紫色	purple</div>
+</li>
+<li class="level1"><div class="li"> 棕色	brown</div>
+</li>
+<li class="level1"><div class="li"> 多色	colorful</div>
+</li>
+</ul>
+
+<p>
+<em class="u">Category可填写的值：</em>
+</p>
+<ul>
+<li class="level1"><div class="li"> 旅游</div>
+</li>
+<li class="level1"><div class="li"> 餐饮</div>
+</li>
+<li class="level1"><div class="li"> 宠物</div>
+</li>
+<li class="level1"><div class="li"> IT科技、软件、通讯业</div>
+</li>
+<li class="level1"><div class="li"> 金属制品、工业制品、机械、电子、电工</div>
+</li>
+<li class="level1"><div class="li"> 养殖业、农牧业、种殖业</div>
+</li>
+<li class="level1"><div class="li"> 服装、鞋帽、皮具</div>
+</li>
+<li class="level1"><div class="li"> 办公、文教、乐器</div>
+</li>
+<li class="level1"><div class="li"> 房地产、房屋租赁</div>
+</li>
+<li class="level1"><div class="li"> 化工、化学、涂料</div>
+</li>
+<li class="level1"><div class="li"> 环保、生态、园艺</div>
+</li>
+<li class="level1"><div class="li"> 广告、社会服务、家政</div>
+</li>
+<li class="level1"><div class="li"> 相亲网站、婚庆、风水</div>
+</li>
+<li class="level1"><div class="li"> 塑胶制品、木制品、陶瓷制品</div>
+</li>
+<li class="level1"><div class="li"> 家电、音响、电器</div>
+</li>
+<li class="level1"><div class="li"> 家居、日用、家具</div>
+</li>
+<li class="level1"><div class="li"> 金融、证券、保险</div>
+</li>
+<li class="level1"><div class="li"> 贸易、物流、出口</div>
+</li>
+<li class="level1"><div class="li"> 美容、美发、护肤</div>
+</li>
+<li class="level1"><div class="li"> 名家个人网站、展厅</div>
+</li>
+<li class="level1"><div class="li"> 汽车、运输、汽配</div>
+</li>
+<li class="level1"><div class="li"> 摄影、冲印、玩具</div>
+</li>
+<li class="level1"><div class="li"> 食品、饮料加工</div>
+</li>
+<li class="level1"><div class="li"> 文化、娱乐休闲</div>
+</li>
+<li class="level1"><div class="li"> 五金、仪器、仪表</div>
+</li>
+<li class="level1"><div class="li"> 物业、票务、黄金</div>
+</li>
+<li class="level1"><div class="li"> 鲜花、礼品、工艺品</div>
+</li>
+<li class="level1"><div class="li"> 学校、教育、培训</div>
+</li>
+<li class="level1"><div class="li"> 医疗、药品、保健</div>
+</li>
+<li class="level1"><div class="li"> 照明、水电、能源</div>
+</li>
+<li class="level1"><div class="li"> 政府、综合性门户</div>
+</li>
+<li class="level1"><div class="li"> 钟表、眼镜、珠宝、饰品</div>
+</li>
+<li class="level1"><div class="li"> 咨询、顾问、翻译、财务</div>
+</li>
+<li class="level1"><div class="li"> 建筑、装潢、建材</div>
+</li>
+<li class="level1"><div class="li"> 印刷、包装、丝印</div>
+</li>
+<li class="level1"><div class="li"> 酒店、酒店用品</div>
+</li>
+<li class="level1"><div class="li"> 酒业、茶业</div>
+</li>
+<li class="level1"><div class="li"> 消防器材、货架、钢器材</div>
+</li>
+<li class="level1"><div class="li"> 拍卖、投资、典当</div>
+</li>
+<li class="level1"><div class="li"> …</div>
+</li>
+</ul>
+
+<p>
+<em class="u">QuickBar值说明：</em>
+</p>
+
+</div>
+<!-- EDIT6 PLUGIN_INCLUDE_START "ued:template:quickbar" [0-] --><div class="plugin_include_content plugin_include__ued:template:quickbar">
+<div class="level3">
+
+<p>
+颜色代码用英文逗号分隔：
+</p>
+<ol>
+<li class="level1"><div class="li"> 第一个为导航颜色</div>
+</li>
+<li class="level1"><div class="li"> 第二个为辅助颜色</div>
+</li>
+<li class="level1"><div class="li"> 第三个为字体颜色</div>
+</li>
+<li class="level1"><div class="li"> 第四个为图标颜色（不填则与字体颜色相同）</div>
+</li>
+</ol>
+
+<p>
+QuickBar高级参数：
+</p>
+
+<p>
+用<code>|</code>分割参数（<code>#AAA,#BBB,#FFF|tel</code>）
+</p>
+<ol>
+<li class="level1"><div class="li"> 第一个为颜色代码（同上）</div>
+</li>
+<li class="level1"><div class="li"> 第二个为模块配置（可选tel等英文逗号分隔）<br/>
+模块配置也可直接填写<code>#xxx</code>使用自定模块（每个页面上需要有id为xxx的对应标签）</div>
+</li>
+</ol>
+
+<p>
+QuickBar高级参数-模块语法：
+</p>
+<ol>
+<li class="level1"><div class="li"> 可选模块<code>#AAA,#BBB,#FFF|tel,totop</code>：<br/>
+tel 展示咨询热线（目前仅手机支持）<br/>
+totop 回到顶部（目前仅PC支持）</div>
+</li>
+<li class="level1"><div class="li"> 高级模块<code>#AAA,#BBB,#FFF|#bbs</code>：</div>
+</li>
+</ol>
+
+<p>
+在<code>_footer.html</code>加入以下代码：
+</p>
+<dl class="code">
+<dt><a href="/doku.php?do=export_code&amp;id=ued:template:config&amp;codeblock=0" title="下载片段" class="mediafile mf_html">_footer.html</a></dt>
+<dd><pre class="code html4strict"><span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/li.html"><span class="kw2">li</span></a> <span class="kw3">id</span><span class="sy0">=</span><span class="st0">&quot;bbs&quot;</span> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;quickbar_bbs&quot;</span>&gt;</span>
+	<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/a.html"><span class="kw2">a</span></a> <span class="kw3">href</span><span class="sy0">=</span><span class="st0">&quot;{$global.bbsurl}&quot;</span> <span class="kw3">target</span><span class="sy0">=</span><span class="st0">&quot;_blank&quot;</span>&gt;&lt;<a target="_blank" href="http://december.com/html/4/element/div.html"><span class="kw2">div</span></a> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;quickbar_box&quot;</span>&gt;&lt;<a target="_blank" href="http://december.com/html/4/element/span.html"><span class="kw2">span</span></a> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;icon&quot;</span>&gt;&lt;<a target="_blank" href="http://december.com/html/4/element/i.html"><span class="kw2">i</span></a> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;icon iconfont&quot;</span>&gt;</span><span class="sc1">&amp;#xe612;</span><span class="sc2">&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/i.html"><span class="kw2">i</span></a>&gt;&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/span.html"><span class="kw2">span</span></a>&gt;&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/div.html"><span class="kw2">div</span></a>&gt;&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/a.html"><span class="kw2">a</span></a>&gt;</span>
+<span class="sc2">&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/li.html"><span class="kw2">li</span></a>&gt;</span></pre>
+</dd></dl>
+
+<p>
+即可在配置文件中配置：<code>#AAA,#BBB,#FFF|#bbs</code>
+</p>
+
+</div>
+<div class="inclmeta level3">
+	<a href="/doku.php?id=ued:template:quickbar#quickbar_参数值说明" class="wikilink1 permalink" title="ued:template:quickbar#quickbar_参数值说明" rel="bookmark">QuickBar 参数值说明</a>
+	&middot; <abbr class="published" title="2016-02-29T09:58:49Z">2016/02/29 09:58</abbr>
+</div>
+<!-- EDIT7 PLUGIN_INCLUDE_END "ued:template:quickbar" [0-] --></div>
+<div class="level3">
+
+</div>
+<!-- EDIT5 SECTION "[Config] 模板配置部分" [296-4776] -->
+<h3 class="sectionedit8" id="designer_设计师信息部分">[Designer] 设计师信息部分</h3>
+<div class="level3">
+<ul>
+<li class="level1"><div class="li"> SN：PSD编号</div>
+</li>
+<li class="level1"><div class="li"> Name：设计师姓名 </div>
+</li>
+<li class="level1"><div class="li"> Hi：设计师的百度hi号</div>
+</li>
+<li class="level1"><div class="li"> Email：设计师邮箱地址</div>
+</li>
+<li class="level1"><div class="li"> QQ：设计师QQ</div>
+</li>
+<li class="level1"><div class="li"> URL：设计师个人主页</div>
+</li>
+</ul>
+
+</div>
+<!-- EDIT8 SECTION "[Designer] 设计师信息部分" [4777-4987] -->
+<h3 class="sectionedit9" id="developer_开发者信息部分">[Developer] 开发者信息部分</h3>
+<div class="level3">
+<ul>
+<li class="level1"><div class="li"> SN：模板编号</div>
+</li>
+<li class="level1"><div class="li"> Name：开发者姓名 </div>
+</li>
+<li class="level1"><div class="li"> Hi：开发者的百度hi号</div>
+</li>
+<li class="level1"><div class="li"> Email：开发者邮箱地址</div>
+</li>
+<li class="level1"><div class="li"> QQ：开发者QQ</div>
+</li>
+<li class="level1"><div class="li"> URL：开发者个人主页</div>
+</li>
+</ul>
+
+</div>
+<!-- EDIT9 SECTION "[Developer] 开发者信息部分" [4988-5202] -->
+<h3 class="sectionedit10" id="tester_测试者信息部分">[Tester] 测试者信息部分</h3>
+<div class="level3">
+<ul>
+<li class="level1"><div class="li"> Name：测试者姓名 </div>
+</li>
+<li class="level1"><div class="li"> Hi：测试者的百度hi号</div>
+</li>
+<li class="level1"><div class="li"> Email：测试者邮箱地址</div>
+</li>
+<li class="level1"><div class="li"> QQ：测试者QQ</div>
+</li>
+<li class="level1"><div class="li"> URL：测试者个人主页</div>
+</li>
+</ul>
+
+</div>
+<!-- EDIT10 SECTION "[Tester] 测试者信息部分" [5203-5392] -->
+<h3 class="sectionedit11" id="debug_调试内容">[Debug] 调试内容</h3>
+<div class="level3">
+
+<p>
+此部分可更改系统输出的变量数据。
+</p>
+
+<p>
+如：<code>stylecolor=red</code>可在调试的时候展示红色风格（修改系统变量<code>{$stylecolor}</code>为red）<br/>
+
+如果修改子元素可以<code>contact.telephone=400-820-8888</code>
+</p>
+
+<p>
+如需修改数组变量，可是用json格式：
+</p>
+<pre class="code javascript">navs<span class="sy0">=</span><span class="br0">&#91;</span><span class="br0">&#123;</span>name<span class="sy0">:</span><span class="st0">'新闻列表'</span><span class="sy0">,</span>link<span class="sy0">:</span><span class="st0">'list-text.html?id=1'</span><span class="sy0">,</span>image<span class="sy0">:</span><span class="st0">'http://p.qq181.com/cms/1210/2012100413195471481.jpg'</span><span class="sy0">,</span>current<span class="sy0">:</span><span class="nu0">0</span><span class="sy0">,</span>lastest<span class="sy0">:</span>objClone<span class="br0">&#40;</span>PREVIEW_DEMODATA.<span class="me1">list</span><span class="br0">&#41;</span><span class="sy0">,</span>childmenu<span class="sy0">:</span><span class="kw2">null</span><span class="br0">&#125;</span><span class="sy0">,</span><span class="br0">&#123;</span>name<span class="sy0">:</span><span class="st0">'产品列表'</span><span class="sy0">,</span>link<span class="sy0">:</span><span class="st0">'list-imagetext.html?id=3'</span><span class="sy0">,</span>image<span class="sy0">:</span><span class="st0">'http://p.qq181.com/cms/1210/2012100413195471481.jpg'</span><span class="sy0">,</span>current<span class="sy0">:</span><span class="nu0">0</span><span class="sy0">,</span>lastest<span class="sy0">:</span>objClone<span class="br0">&#40;</span>PREVIEW_DEMODATA.<span class="me1">list</span><span class="br0">&#41;</span><span class="sy0">,</span>childmenu<span class="sy0">:</span><span class="kw2">null</span><span class="br0">&#125;</span><span class="sy0">,</span><span class="br0">&#123;</span>name<span class="sy0">:</span><span class="st0">'最新产品'</span><span class="sy0">,</span>link<span class="sy0">:</span><span class="st0">'list-image.html?id=4'</span><span class="sy0">,</span>image<span class="sy0">:</span><span class="st0">'http://p.qq181.com/cms/1210/2012100413195471481.jpg'</span><span class="sy0">,</span>current<span class="sy0">:</span><span class="nu0">0</span><span class="sy0">,</span>lastest<span class="sy0">:</span>objClone<span class="br0">&#40;</span>PREVIEW_DEMODATA.<span class="me1">list</span><span class="br0">&#41;</span><span class="sy0">,</span>childmenu<span class="sy0">:</span><span class="kw2">null</span><span class="br0">&#125;</span><span class="sy0">,</span><span class="br0">&#123;</span>name<span class="sy0">:</span><span class="st0">'关于我们'</span><span class="sy0">,</span>link<span class="sy0">:</span><span class="st0">'list-page.html?id=7'</span><span class="sy0">,</span>image<span class="sy0">:</span><span class="st0">'http://p.qq181.com/cms/1210/2012100413195471481.jpg'</span><span class="sy0">,</span>current<span class="sy0">:</span><span class="nu0">0</span><span class="sy0">,</span>lastest<span class="sy0">:</span><span class="kw2">null</span><span class="sy0">,</span>childmenu<span class="sy0">:</span><span class="kw2">null</span><span class="br0">&#125;</span><span class="br0">&#93;</span></pre>
+
+<p>
+注意：json格式必须写于<strong>同一行</strong>！（可利用网上在线格式化工具）
+</p>
+
+</div>
+<!-- EDIT11 SECTION "[Debug] 调试内容" [5393-6499] -->
+<h2 class="sectionedit12" id="ini文件demo下载">INI文件demo下载</h2>
+<div class="level2">
+
+<p>
+点击文件名即可下载：
+</p>
+<dl class="file">
+<dt><a href="/doku.php?do=export_code&amp;id=ued:template:config&amp;codeblock=2" title="下载片段" class="mediafile mf_ini">config.ini</a></dt>
+<dd><pre class="code file ini"><span class="re0"><span class="br0">&#91;</span>Template<span class="br0">&#93;</span></span>
+<span class="re1">Name</span><span class="sy0">=</span><span class="re2">旅游行业蓝色格调模板</span>
+<span class="re1">Description</span><span class="sy0">=</span>
+<span class="re1">URL</span><span class="sy0">=</span>
+<span class="re1">Version</span><span class="sy0">=</span><span class="re2">1.0</span>
+&nbsp;
+<span class="re0"><span class="br0">&#91;</span>Config<span class="br0">&#93;</span></span>
+<span class="re1">Type</span><span class="sy0">=</span><span class="re2">PC模板</span>
+<span class="re1">Category</span><span class="sy0">=</span><span class="re2">旅游</span>
+<span class="re1">Tags</span><span class="sy0">=</span><span class="re2">蓝色,绿色,旅游行业,出游,高大上</span>
+<span class="re1">StyleColors</span><span class="sy0">=</span><span class="re2">blue,green</span>
+<span class="re1">LogoSize</span><span class="sy0">=</span><span class="re2">200*150</span>
+<span class="re1">List1ShowtypeTotal</span><span class="sy0">=</span><span class="re2">3</span>
+<span class="re1">List2ShowtypeTotal</span><span class="sy0">=</span><span class="re2">1</span>
+<span class="re1">List3ShowtypeTotal</span><span class="sy0">=</span><span class="re2">1</span>
+<span class="re1">List4ShowtypeTotal</span><span class="sy0">=</span><span class="re2">0</span>
+<span class="re1">List5ShowtypeTotal</span><span class="sy0">=</span><span class="re2">0</span>
+<span class="re1">List6ShowtypeTotal</span><span class="sy0">=</span><span class="re2">0</span>
+<span class="re1">List7ShowtypeTotal</span><span class="sy0">=</span><span class="re2">0</span>
+<span class="re1">List8ShowtypeTotal</span><span class="sy0">=</span><span class="re2">0</span>
+<span class="re1">QuickBar</span><span class="sy0">=</span><span class="sy0"><span class="re2">#AAA,#BBB,#FFF|tel</span></span>
+&nbsp;
+&nbsp;
+<span class="re0"><span class="br0">&#91;</span>Developer<span class="br0">&#93;</span></span>
+<span class="re1">SN</span><span class="sy0">=</span><span class="re2">GM001</span>
+<span class="re1">Name</span><span class="sy0">=</span><span class="re2">小懿</span>
+<span class="re1">Hi</span><span class="sy0">=</span><span class="re2">灵懿</span>
+<span class="re1">Email</span><span class="sy0">=</span><span class="re2">qiuzhaoyi@xm12t.com</span>
+<span class="re1">QQ</span><span class="sy0">=</span><span class="re2">156568451</span>
+<span class="re1">URL</span><span class="sy0">=</span><span class="re2">http://IT.eexx.me</span>
+&nbsp;
+<span class="re0"><span class="br0">&#91;</span>Designer<span class="br0">&#93;</span></span>
+<span class="re1">SN</span><span class="sy0">=</span><span class="re2">061</span>
+<span class="re1">Name</span><span class="sy0">=</span><span class="re2">李树</span>
+<span class="re1">Hi</span><span class="sy0">=</span><span class="re2">厦门美工李树</span>
+<span class="re1">Email</span><span class="sy0">=</span><span class="re2">lishu@xm12t.com</span>
+<span class="re1">QQ</span><span class="sy0">=</span>
+<span class="re1">URL</span><span class="sy0">=</span>
+&nbsp;
+<span class="re0"><span class="br0">&#91;</span>Tester<span class="br0">&#93;</span></span>
+<span class="re1">Name</span><span class="sy0">=</span><span class="re2">陈樱萍</span>
+<span class="re1">Hi</span><span class="sy0">=</span><span class="re2">飃落人间</span>
+<span class="re1">Email</span><span class="sy0">=</span><span class="re2">chenyingping@xm12t.com</span>
+<span class="re1">QQ</span><span class="sy0">=</span><span class="re2">735020977</span>
+<span class="re1">URL</span><span class="sy0">=</span>
+&nbsp;
+<span class="re0"><span class="br0">&#91;</span>Debug<span class="br0">&#93;</span></span>
+<span class="re1">stylecolor</span><span class="sy0">=</span><span class="re2">green</span></pre>
+</dd></dl>
+
+</div>
+<!-- EDIT12 SECTION "INI文件demo下载" [6500-] -->

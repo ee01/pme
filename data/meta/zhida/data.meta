@@ -1,0 +1,15 @@
+a:2:{s:7:"current";a:9:{s:4:"date";a:2:{s:7:"created";i:1418956700;s:8:"modified";i:1419840388;}s:7:"creator";s:12:"小猫小虾";s:4:"user";s:10:"xiaomaoxia";s:11:"last_change";b:0;s:11:"contributor";a:1:{s:10:"xiaomaoxia";s:12:"小猫小虾";}s:5:"title";s:12:"现有资料";s:11:"description";a:2:{s:15:"tableofcontents";a:3:{i:0;a:4:{s:3:"hid";s:12:"现有资料";s:5:"title";s:12:"现有资料";s:4:"type";s:2:"ul";s:5:"level";i:1;}i:1;a:4:{s:3:"hid";s:21:"轻应用解释文档";s:5:"title";s:23:"1.轻应用解释文档";s:4:"type";s:2:"ul";s:5:"level";i:2;}i:2;a:4:{s:3:"hid";s:21:"直达号解释文档";s:5:"title";s:23:"2.直达号解释文档";s:4:"type";s:2:"ul";s:5:"level";i:2;}}s:8:"abstract";s:554:"现有资料
+
+1.轻应用解释文档
+
+<http://developer.baidu.com/wiki/index.php?title=docs/lightapp>
+
+2.直达号解释文档
+
+<http://developer.baidu.com/wiki/index.php?title=docs/direct>
+
+3.轻应用接入一点小资料（轻应用接入文档.pdf）上传不上，请到 链接: <http://pan.baidu.com/s/1i0naY> 密码: 6osn
+
+4.直达号一点小资料（直达号接入指南.pdf）   
+
+5.一个百度的一个签名算法，觉得还可以的，针对有份报告（订单接口文档/用户在线登记预约后线上支付（v1.0.0）.docx）…";}s:8:"relation";a:2:{s:5:"media";a:5:{s:31:"zhida:直达号接入指南.pdf";b:1;s:28:"zhida:订单接口文档.rar";b:1;s:27:"zhida:login_qianbao_pay.zip";b:1;s:21:"zhida:php-sdk-1.0.rar";b:1;s:50:"zhida:api_5.3_-_轻应用文档_-_clouda_files.zip";b:1;}s:10:"firstimage";s:0:"";}s:8:"internal";a:2:{s:5:"cache";b:1;s:3:"toc";b:1;}}s:10:"persistent";a:5:{s:4:"date";a:2:{s:7:"created";i:1418956700;s:8:"modified";i:1419840388;}s:7:"creator";s:12:"小猫小虾";s:4:"user";s:10:"xiaomaoxia";s:11:"last_change";b:0;s:11:"contributor";a:1:{s:10:"xiaomaoxia";s:12:"小猫小虾";}}}

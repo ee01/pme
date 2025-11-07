@@ -1,0 +1,40 @@
+====== 服务商开通直达号流程 ======
+
+===== 1. 用开通接口添加直达号 =====
+
+请于php环境下测试：{{:zhida:baidu.zip|}}
+
+===== 2.直达号开通流程  =====
+
+
+一、材料准备
+   客户Logo  、   直达词
+   客户网址（手机站）、联系邮箱、联系电话
+   客户简介（20~200字） 
+   寻找对应的客户所属类目ID（文件可以HI上给我留言索取 
+   HI:厦门技术）
+
+二、提交访问地址
+   http://fjzhida.com/tijiao/
+
+三、界面注意事项
+{{:zhida:pasted:20150710-023855.png}}
+
+四、Logo上传方法
+  1、点击上传
+{{:zhida:pasted:20150710-023816.png}}
+  2、选择好文件并上传
+{{:zhida:pasted:20150710-022756.png}}
+  3、复制上传完的地址
+{{:zhida:pasted:20150710-022851.png}}
+  4、复制的地址粘贴到URL地址文本框里，并在前面加上http://fjzhida.com或者http://www.fjzhida.com即可
+{{:zhida:pasted:20150710-023035.png}}
+  
+五、添加直达号的服务组件
+  1、填完相关资料后点击保存
+{{:zhida:pasted:20150710-023214.png}}
+  2、复制好提交后得到的直达号ID
+{{:zhida:pasted:20150710-023301.png}}
+  3、将得到的直达号ID填进底下的代码。并加到对应手机站中。G宝盆客户可以直接在G宝盆后台添加。
+   <script type=“text/javascript” name=“baidu-tc-cerfication” data-appid=“得到的ID“
+ src="http://apps.bdimg.com/cloudaapi/lightapp.js"></script>        （注意，代码中的双引号必须用英文的）

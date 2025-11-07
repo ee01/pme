@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- generator="FeedCreator 1.7.2-ppt DokuWiki" -->
+<?xml-stylesheet href="https://eexx.me/pme/lib/exe/css.php?s=feed" type="text/css"?>
+<rdf:RDF
+    xmlns="http://purl.org/rss/1.0/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <channel rdf:about="https://eexx.me/pme/feed.php">
+        <title>百度产品部门 知识库 design</title>
+        <description></description>
+        <link>https://eexx.me/pme/</link>
+        <image rdf:resource="https://eexx.me/pme/lib/tpl/vector/images/favicon.ico" />
+       <dc:date>2019-03-27T08:22:04+08:00</dc:date>
+        <items>
+            <rdf:Seq>
+                <rdf:li rdf:resource="https://eexx.me/pme/doku.php?id=design:pageslide&amp;rev=1454531070&amp;do=diff"/>
+                <rdf:li rdf:resource="https://eexx.me/pme/doku.php?id=design:picasaforpsd&amp;rev=1454531070&amp;do=diff"/>
+            </rdf:Seq>
+        </items>
+    </channel>
+    <image rdf:about="https://eexx.me/pme/lib/tpl/vector/images/favicon.ico">
+        <title>百度产品部门 知识库</title>
+        <link>https://eexx.me/pme/</link>
+        <url>https://eexx.me/pme/lib/tpl/vector/images/favicon.ico</url>
+    </image>
+    <item rdf:about="https://eexx.me/pme/doku.php?id=design:pageslide&amp;rev=1454531070&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-02-04T04:24:30+08:00</dc:date>
+        <title>design:pageslide</title>
+        <link>https://eexx.me/pme/doku.php?id=design:pageslide&amp;rev=1454531070&amp;do=diff</link>
+        <description>手机端页面转场效果
+
+首先可以阅读以下这篇文章：
+&lt;http://www.th7.cn/web/html-css/201309/13054.shtml&gt;
+
+插件代码下载
+
+	*  jQuery版本
+	*  Zepto版本 推荐 （Zepto框架下载）</description>
+    </item>
+    <item rdf:about="https://eexx.me/pme/doku.php?id=design:picasaforpsd&amp;rev=1454531070&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-02-04T04:24:30+08:00</dc:date>
+        <title>design:picasaforpsd</title>
+        <link>https://eexx.me/pme/doku.php?id=design:picasaforpsd&amp;rev=1454531070&amp;do=diff</link>
+        <description>Picasa关联PSD美化图标版
+
+文档
+
+
+
+工具</description>
+    </item>
+</rdf:RDF>

@@ -1,0 +1,58 @@
+<span class="br0">&#123;</span>
+	<span class="st0">&quot;bottomnavs&quot;</span><span class="sy0">:</span> <span class="br0">&#123;</span>
+		<span class="st0">&quot;value&quot;</span><span class="sy0">:</span> <span class="br0">&#91;</span><span class="br0">&#123;</span>
+			<span class="st0">&quot;name&quot;</span><span class="sy0">:</span> <span class="st0">&quot;电话&quot;</span><span class="sy0">,</span>
+			<span class="st0">&quot;icon&quot;</span><span class="sy0">:</span> <span class="st0">&quot;&amp;#xe602;&quot;</span><span class="sy0">,</span>
+			<span class="st0">&quot;image&quot;</span><span class="sy0">:</span> <span class="st0">&quot;http://..../a.png&quot;</span><span class="sy0">,</span>
+			<span class="st0">&quot;data&quot;</span><span class="sy0">:</span> <span class="st0">&quot;0592-2323232&quot;</span><span class="sy0">,</span>
+			<span class="st0">&quot;type&quot;</span><span class="sy0">:</span> <span class="st0">&quot;tel&quot;</span><span class="sy0">,</span>
+			<span class="st0">&quot;enable&quot;</span><span class="sy0">:</span> <span class="nu0">1</span>
+		<span class="br0">&#125;</span><span class="sy0">,</span> <span class="br0">&#123;</span>
+			<span class="st0">&quot;name&quot;</span><span class="sy0">:</span> <span class="st0">&quot;短信&quot;</span><span class="sy0">,</span>
+			<span class="st0">&quot;icon&quot;</span><span class="sy0">:</span> <span class="st0">&quot;&amp;#xe604;&quot;</span><span class="sy0">,</span>
+			<span class="st0">&quot;image&quot;</span><span class="sy0">:</span> <span class="st0">&quot;http://..../a.png&quot;</span><span class="sy0">,</span>
+			<span class="st0">&quot;data&quot;</span><span class="sy0">:</span> <span class="st0">&quot;13489990000&quot;</span><span class="sy0">,</span>
+			<span class="st0">&quot;type&quot;</span><span class="sy0">:</span> <span class="st0">&quot;sms&quot;</span><span class="sy0">,</span>
+			<span class="st0">&quot;enable&quot;</span><span class="sy0">:</span> <span class="nu0">1</span>
+		<span class="br0">&#125;</span><span class="sy0">,</span> <span class="br0">&#123;</span>
+			<span class="st0">&quot;name&quot;</span><span class="sy0">:</span> <span class="st0">&quot;咨询&quot;</span><span class="sy0">,</span>
+			<span class="st0">&quot;icon&quot;</span><span class="sy0">:</span> <span class="st0">&quot;&amp;#xe606;&quot;</span><span class="sy0">,</span>
+			<span class="st0">&quot;image&quot;</span><span class="sy0">:</span> <span class="st0">&quot;http://..../a.png&quot;</span><span class="sy0">,</span>
+			<span class="st0">&quot;data&quot;</span><span class="sy0">:</span> <span class="st0">&quot;0000001@53kf&quot;</span><span class="sy0">,</span>
+			<span class="st0">&quot;type&quot;</span><span class="sy0">:</span> <span class="st0">&quot;im&quot;</span><span class="sy0">,</span>
+			<span class="st0">&quot;enable&quot;</span><span class="sy0">:</span> <span class="nu0">1</span>
+		<span class="br0">&#125;</span><span class="sy0">,</span> <span class="br0">&#123;</span>
+			<span class="st0">&quot;name&quot;</span><span class="sy0">:</span> <span class="st0">&quot;导航B&quot;</span><span class="sy0">,</span>
+			<span class="st0">&quot;icon&quot;</span><span class="sy0">:</span> <span class="st0">&quot;&amp;#xe607;&quot;</span><span class="sy0">,</span>
+			<span class="st0">&quot;image&quot;</span><span class="sy0">:</span> <span class="st0">&quot;http://..../a.png&quot;</span><span class="sy0">,</span>
+			<span class="st0">&quot;data&quot;</span><span class="sy0">:</span> <span class="st0">&quot;http://...&quot;</span><span class="sy0">,</span>
+			<span class="st0">&quot;childmenu&quot;</span><span class="sy0">:</span> <span class="br0">&#91;</span><span class="br0">&#123;</span>
+				<span class="st0">&quot;name&quot;</span><span class="sy0">:</span> <span class="st0">&quot;导航B1&quot;</span><span class="sy0">,</span>
+				<span class="st0">&quot;icon&quot;</span><span class="sy0">:</span> <span class="st0">&quot;&amp;#xe607;&quot;</span><span class="sy0">,</span>
+				<span class="st0">&quot;image&quot;</span><span class="sy0">:</span> <span class="st0">&quot;http://..../a.png&quot;</span><span class="sy0">,</span>
+				<span class="st0">&quot;data&quot;</span><span class="sy0">:</span> <span class="st0">&quot;http://...&quot;</span><span class="sy0">,</span>
+				<span class="st0">&quot;type&quot;</span><span class="sy0">:</span> <span class="st0">&quot;link&quot;</span><span class="sy0">,</span>
+				<span class="st0">&quot;enable&quot;</span><span class="sy0">:</span> <span class="nu0">1</span>
+			<span class="br0">&#125;</span><span class="sy0">,</span>
+			<span class="br0">&#123;</span>
+				<span class="st0">&quot;name&quot;</span><span class="sy0">:</span> <span class="st0">&quot;导航B2&quot;</span><span class="sy0">,</span>
+				<span class="st0">&quot;icon&quot;</span><span class="sy0">:</span> <span class="st0">&quot;&amp;#xe607;&quot;</span><span class="sy0">,</span>
+				<span class="st0">&quot;image&quot;</span><span class="sy0">:</span> <span class="st0">&quot;http://..../a.png&quot;</span><span class="sy0">,</span>
+				<span class="st0">&quot;data&quot;</span><span class="sy0">:</span> <span class="st0">&quot;http://...&quot;</span><span class="sy0">,</span>
+				<span class="st0">&quot;type&quot;</span><span class="sy0">:</span> <span class="st0">&quot;link&quot;</span><span class="sy0">,</span>
+				<span class="st0">&quot;enable&quot;</span><span class="sy0">:</span> <span class="nu0">1</span>
+			<span class="br0">&#125;</span><span class="br0">&#93;</span><span class="sy0">,</span>
+			<span class="st0">&quot;type&quot;</span><span class="sy0">:</span> <span class="st0">&quot;link&quot;</span><span class="sy0">,</span>
+			<span class="st0">&quot;enable&quot;</span><span class="sy0">:</span> <span class="nu0">1</span>
+		<span class="br0">&#125;</span><span class="sy0">,</span> <span class="br0">&#123;</span>
+			<span class="st0">&quot;name&quot;</span><span class="sy0">:</span> <span class="st0">&quot;分享&quot;</span><span class="sy0">,</span>
+			<span class="st0">&quot;icon&quot;</span><span class="sy0">:</span> <span class="st0">&quot;&amp;#xe600;&quot;</span><span class="sy0">,</span>
+			<span class="st0">&quot;image&quot;</span><span class="sy0">:</span> <span class="st0">&quot;http://..../a.png&quot;</span><span class="sy0">,</span>
+			<span class="st0">&quot;data&quot;</span><span class="sy0">:</span> <span class="st0">&quot;&quot;</span><span class="sy0">,</span>
+			<span class="st0">&quot;type&quot;</span><span class="sy0">:</span> <span class="st0">&quot;share&quot;</span><span class="sy0">,</span>
+			<span class="st0">&quot;enable&quot;</span><span class="sy0">:</span> <span class="nu0">1</span>
+		<span class="br0">&#125;</span><span class="br0">&#93;</span><span class="sy0">,</span>
+		<span class="st0">&quot;description&quot;</span><span class="sy0">:</span> <span class="st0">&quot;底部导航&quot;</span><span class="sy0">,</span>
+		<span class="st0">&quot;type&quot;</span><span class="sy0">:</span> <span class="st0">&quot;quickbar&quot;</span>
+	<span class="br0">&#125;</span>
+<span class="br0">&#125;</span>

@@ -1,0 +1,183 @@
+====== 转盘亮灯抽奖插件 ======
+
+跳灯翻牌式抽奖
+
+
+===== 引入脚本文件 =====
+
+
+	<script type="text/javascript" src="http://common.mn.sina.com.cn/public/resource/lib/jquery.roulette.js"></script>
+===== 基础HTML =====
+
+<code html>
+<div class="roulette">
+	<ul class="roulette_prizes">
+		<li class="prize_6" jump="1"></li>
+		<li class="prize_1" jump="2"></li>
+		<li class="prize_-1" jump="3"></li>
+		<li class="prize_2" jump="4"></li>
+		<li class="prize_5" jump="5"></li>
+		<li class="prize_7" jump="6"></li>
+		<li class="prize_4" jump="7"></li>
+		<li class="prize_3" jump="8"></li>
+	</ul>
+	<a class="roulette_start" href="javascript:;"></a>
+</div>
+</code>
+
+**注意：li标签中''class''属性的''prize_X''，''X''为数据库奖品列表的奖品ID（''row_id''）**
+
+**　　　li标签的''jump''属性是跳灯顺序，无需修改！**
+===== JS主代码 =====
+
+<file javascript cashout.js>
+
+var roulette = $(".roulette").roulette({
+	start_selector: ".roulette .roulette_start",
+	thanks_jump: 3,
+	prize_num: 8,
+	result_url: "http://common.mn.sina.com.cn/activity/jsonp/15/roulette",
+	result_data: {},
+	result_datatype: 'jsonp',
+	result_get_error: function(json) {
+		return json.err;
+	},
+	alert: typeof $.dialog !== "undefined" ? $.dialog.alert : function(msg){alert(msg);},
+	before: function() {
+		if (!checkLogin(false)) {	// 弹出登录窗口
+			return false;	// 阻止抽奖操作
+		}
+	},
+	error: function(error, msg, json) {
+		this.alert(msg);
+	},
+	callback: function(id, name, json) {
+		if (id != -1) {
+			var msg = "恭喜！！<br />您抽中了 " + name + "！<br /><br />请等待活动结束后我们官方微博的私信~";
+			this.alert(msg);
+		}else{
+			var msg = name;
+			this.alert(msg);
+		}
+	}
+});
+
+</file>
+
+**注意：开始抽奖按钮无需click额外绑定事件！**
+===== 样式参考 =====
+
+<file css cashout.css>
+
+.roulette {
+	position: relative;
+	width: 541px;
+	height: 537px;
+	margin-top: 10px;
+	background: url(images/roulette.png) no-repeat;
+}
+	.roulette .roulette_start {
+		position: absolute;
+		left: 163px;
+		top: 166px;
+		width: 213px;
+		height: 211px;
+		background: url(images/roulette_start.png) no-repeat;
+	}
+	.roulette .roulette_start:hover {
+		background-position: 0 -211px;
+	}
+	.roulette .prize_6 {
+		position: absolute;
+		left: 11px;
+		top: 91px;
+		width: 181px;
+		height: 177px;
+		background: url(images/roulette_prize_1.png) no-repeat;
+	}
+	.roulette .prize_6.current {
+		background-position: 0 -177px;
+	}
+	.roulette .prize_1 {
+		position: absolute;
+		left: 91px;
+		top: 10px;
+		width: 177px;
+		height: 184px;
+		background: url(images/roulette_prize_2.png) no-repeat;
+	}
+	.roulette .prize_1.current {
+		background-position: 0 -184px;
+	}
+	.roulette .prize_-1 {
+		position: absolute;
+		left: 274px;
+		top: 10px;
+		width: 178px;
+		height: 183px;
+		background: url(images/roulette_prize_3.png) no-repeat;
+	}
+	.roulette .prize_-1.current {
+		background-position: 0 -183px;
+	}
+	.roulette .prize_2 {
+		position: absolute;
+		left: 349px;
+		top: 91px;
+		width: 181px;
+		height: 177px;
+		background: url(images/roulette_prize_4.png) no-repeat;
+	}
+	.roulette .prize_2.current {
+		background-position: 0 -177px;
+	}
+	.roulette .prize_5 {
+		position: absolute;
+		left: 349px;
+		top: 275px;
+		width: 181px;
+		height: 177px;
+		background: url(images/roulette_prize_5.png) no-repeat;
+	}
+	.roulette .prize_5.current {
+		background-position: 0 -177px;
+	}
+	.roulette .prize_7{
+		position: absolute;
+		left: 271px;
+		top: 349px;
+		width: 178px;
+		height: 183px;
+		background: url(images/roulette_prize_6.png) no-repeat;
+	}
+	.roulette .prize_7.current {
+		background-position: 0 -183px;
+	}
+	.roulette .prize_4 {
+		position: absolute;
+		left: 91px;
+		top: 349px;
+		width: 178px;
+		height: 184px;
+		background: url(images/roulette_prize_7.png) no-repeat;
+	}
+	.roulette .prize_4.current {
+		background-position: 0 -184px;
+	}
+	.roulette .prize_3 {
+		position: absolute;
+		left: 11px;
+		top: 274px;
+		width: 181px;
+		height: 177px;
+		background: url(images/roulette_prize_8.png) no-repeat;
+	}
+	.roulette .prize_3.current {
+		background-position: 0 -177px;
+	}
+
+</file>
+
+===== 高级用法 =====
+
+可以利用li标签的id值改变 跳灯 的顺序，再重写样式，就可以实现各种闪烁乱跳~

@@ -1,0 +1,11 @@
+<span class="kw1">var</span> slidesjs <span class="sy0">=</span> $<span class="br0">&#40;</span><span class="st0">'.slidesjs'</span><span class="br0">&#41;</span>.<span class="me1">slidesjs</span><span class="br0">&#40;</span><span class="br0">&#123;</span>
+	width<span class="sy0">:</span> <span class="nu0">900</span><span class="sy0">,</span>
+	height<span class="sy0">:</span> <span class="nu0">350</span><span class="sy0">,</span>
+	play<span class="sy0">:</span> <span class="br0">&#123;</span>
+		active<span class="sy0">:</span> <span class="kw2">false</span><span class="sy0">,</span>
+		auto<span class="sy0">:</span> <span class="kw2">true</span><span class="sy0">,</span>
+		interval<span class="sy0">:</span> <span class="nu0">6000</span><span class="sy0">,</span>
+		pauseOnHover<span class="sy0">:</span> <span class="kw2">true</span><span class="sy0">,</span>
+		restartDelay<span class="sy0">:</span> <span class="nu0">2000</span>
+	<span class="br0">&#125;</span>
+<span class="br0">&#125;</span><span class="br0">&#41;</span>.<span class="me1">css</span><span class="br0">&#40;</span><span class="br0">&#123;</span>visibility<span class="sy0">:</span><span class="st0">&quot;visible&quot;</span><span class="sy0">,</span> overflow<span class="sy0">:</span><span class="st0">&quot;visible&quot;</span><span class="br0">&#125;</span><span class="br0">&#41;</span><span class="sy0">;</span>

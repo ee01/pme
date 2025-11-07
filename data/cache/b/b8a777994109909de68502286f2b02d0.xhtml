@@ -1,0 +1,854 @@
+
+<h1 class="sectionedit1" id="变量语法查询_indexhtml_pc">变量语法查询：index.html（PC）</h1>
+<div class="level1">
+
+<p>
+<span style="color:red">本页面是用于PC模板的index.html文件Smarty变量</span><br/>
+
+<span style="color:red">查阅手机模板的index.html请点击：</span><a href="/pme/doku.php?id=ued:template:mindex" class="wikilink1" title="ued:template:mindex">变量语法查询：index.html（手机）</a>
+</p>
+
+<p>
+<img src="/pme/lib/exe/fetch.php?w=700&amp;tok=422cd1&amp;media=ued:template:index-screenshot.png" class="media" alt="" width="700" />
+</p>
+
+<p>
+①②放入<a href="/pme/doku.php?id=ued:template:header" class="wikilink1" title="ued:template:header">_header.html</a>文件中，利用<a href="/pme/doku.php?id=ued:template:header#include_引入文件" class="wikilink1" title="ued:template:header">include</a>方式引入到index.html文件中；
+</p>
+<ul>
+<li class="level1"><div class="li"> ①<a href="/pme/doku.php?id=ued:template:header#logo_网站logo" class="wikilink1" title="ued:template:header">{$logo} ：网站logo</a></div>
+</li>
+<li class="level1"><div class="li"> ②<a href="/pme/doku.php?id=ued:template:header#navs_网站导航栏" class="wikilink1" title="ued:template:header">{$navs} ：网站导航栏</a></div>
+</li>
+</ul>
+
+<p>
+③需要<a href="#index_pc首页数据_自定义于indexjson文件中" title="ued:template:index ↵" class="wikilink1">index.json</a>文件配合，因为轮滚图的默认图片需要在<a href="#index_pc首页数据_自定义于indexjson文件中" title="ued:template:index ↵" class="wikilink1">index.json</a>文件中定义，并用<a href="#index_pc首页数据_自定义于indexjson文件中" title="ued:template:index ↵" class="wikilink1">{$index.xxx}</a>变量引用：
+</p>
+<ul>
+<li class="level1"><div class="li"> ③<a href="#轮滚图定义方法" title="ued:template:index ↵" class="wikilink1">轮滚图定义</a></div>
+</li>
+</ul>
+
+<p>
+④⑤⑥⑦⑧⑨⑾使用到的也是<a href="#index_pc首页数据_自定义于indexjson文件中" title="ued:template:index ↵" class="wikilink1">index.json</a>文件忠的一个类型为list的变量
+</p>
+
+<p>
+⑾仅展示了某个栏目下的几篇（重要）文章，可选择使用<a href="#文章列表定义方法" title="ued:template:index ↵" class="wikilink1">文章列表</a>中的输出<em class="u">星标文章</em>模式：<br/>
+
+只需要在<a href="#index_pc首页数据_自定义于indexjson文件中" title="ued:template:index ↵" class="wikilink1">index.json</a>文件定义一个新的<a href="#typelist" title="ued:template:index ↵" class="wikilink1">list变量</a>（假设list2）中设置<code>“star_only”: 1</code>，即可将此列表默认值设置为<em class="u">仅输出星标文章</em>！
+</p>
+<ul>
+<li class="level1"><div class="li"> ④⑤⑾<a href="#文章列表定义方法" title="ued:template:index ↵" class="wikilink1">文章列表定义</a></div>
+</li>
+<li class="level1"><div class="li"> ⑥引用列表的<a href="#typelist" title="ued:template:index ↵" class="wikilink1">{$index.list1.data[]}</a>变量说明（假设<a href="#index_pc首页数据_自定义于indexjson文件中" title="ued:template:index ↵" class="wikilink1">index.json</a>中定义的变量名为<code>list1</code>）</div>
+</li>
+<li class="level1"><div class="li"> ⑦引用列表的<a href="#typelist" title="ued:template:index ↵" class="wikilink1">{$index.list1.image}</a>变量说明（假设<a href="#index_pc首页数据_自定义于indexjson文件中" title="ued:template:index ↵" class="wikilink1">index.json</a>中定义的变量名为<code>list1</code>）</div>
+</li>
+<li class="level1"><div class="li"> ⑧引用列表的<a href="#typelist" title="ued:template:index ↵" class="wikilink1">{$index.list1.name}</a>变量说明（假设<a href="#index_pc首页数据_自定义于indexjson文件中" title="ued:template:index ↵" class="wikilink1">index.json</a>中定义的变量名为<code>list1</code>）</div>
+</li>
+<li class="level1"><div class="li"> ⑨引用列表的<a href="#typelist" title="ued:template:index ↵" class="wikilink1">{$index.list1.link}</a>变量说明（假设<a href="#index_pc首页数据_自定义于indexjson文件中" title="ued:template:index ↵" class="wikilink1">index.json</a>中定义的变量名为<code>list1</code>）</div>
+</li>
+</ul>
+
+<p>
+⑩⒀⒁中的LOGO不同于系统<a href="/pme/doku.php?id=ued:template:header#logo_网站logo" class="wikilink1" title="ued:template:header">{$logo}</a>变量，因为<a href="/pme/doku.php?id=ued:template:header#logo_网站logo" class="wikilink1" title="ued:template:header">{$logo}</a>已用于网站顶部大LOGO图，所以此处2号小LOGO可以在<a href="#index_pc首页数据_自定义于indexjson文件中" title="ued:template:index ↵" class="wikilink1">index.json</a>文件中新定义个<a href="/pme/doku.php?id=ued:template:json#typeimage" class="wikilink1" title="ued:template:json">类型为image</a>格式的变量，以引用
+</p>
+<ul>
+<li class="level1"><div class="li"> ⑩<a href="/pme/doku.php?id=ued:template:json#typeimage" class="wikilink1" title="ued:template:json">index.json中type:image的变量</a></div>
+</li>
+<li class="level1"><div class="li"> ⒀<a href="/pme/doku.php?id=ued:template:json#typeimage" class="wikilink1" title="ued:template:json">{$index.qrcode.image}</a>变量说明（假设<a href="/pme/doku.php?id=ued:template:json" class="wikilink1" title="ued:template:json">index.json</a>中定义的变量名为<code>qrcode</code>）</div>
+</li>
+<li class="level1"><div class="li"> ⒁<a href="/pme/doku.php?id=ued:template:json#typeimage" class="wikilink1" title="ued:template:json">{$index.qrcode.title}</a>变量说明（假设<a href="/pme/doku.php?id=ued:template:json" class="wikilink1" title="ued:template:json">index.json</a>中定义的变量名为<code>qrcode</code>）</div>
+</li>
+</ul>
+
+<p>
+⒂版权信息可放入<a href="/pme/doku.php?id=ued:template:footer" class="wikilink1" title="ued:template:footer">变量语法查询：_footer.html</a>文件中，利用<a href="/pme/doku.php?id=ued:template:footer#include_引入文件" class="wikilink1" title="ued:template:footer">include</a>方式引入到index.html文件中；
+</p>
+<ul>
+<li class="level1"><div class="li"> ⒂<a href="/pme/doku.php?id=ued:template:footer#footprint_底部版权" class="wikilink1" title="ued:template:footer">{$footprint} ：底部版权</a></div>
+</li>
+</ul>
+
+<p>
+以下是详细变量与语法查询：
+</p>
+
+</div>
+<!-- EDIT2 PLUGIN_INCLUDE_START "ued:template:global" [0-] --><div class="plugin_include_content plugin_include__ued:template:global">
+
+<h2 class="sectionedit4" id="title_页面标题">{$title} ：页面标题</h2>
+<div class="level2">
+<pre class="code html4strict"><span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/head.html"><span class="kw2">head</span></a>&gt;</span>
+	<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/title.html"><span class="kw2">title</span></a>&gt;</span>{$title}<span class="sc2">&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/title.html"><span class="kw2">title</span></a>&gt;</span>
+...</pre>
+
+</div>
+<!-- EDIT4 SECTION "{$title} ：页面标题" [1542-1636] --><div class="inclmeta level2">
+	<a href="/pme/doku.php?id=ued:template:global#title_页面标题" class="wikilink1 permalink" title="ued:template:global#title_页面标题" rel="bookmark">{$title} ：页面标题</a>
+	&middot; <abbr class="published" title="2016-08-04T03:00:40Z">2016/08/04 03:00</abbr>
+</div>
+<!-- EDIT3 PLUGIN_INCLUDE_END "ued:template:global" [0-] --></div>
+<div class="level1">
+
+</div>
+<!-- EDIT5 PLUGIN_INCLUDE_START "ued:template:global" [0-] --><div class="plugin_include_content plugin_include__ued:template:global">
+
+<h2 class="sectionedit7" id="keywords_页面关键词">{$keywords} ：页面关键词</h2>
+<div class="level2">
+<pre class="code html4strict"><span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/meta.html"><span class="kw2">meta</span></a> <span class="kw3">name</span><span class="sy0">=</span><span class="st0">&quot;keywords&quot;</span> <span class="kw3">content</span><span class="sy0">=</span><span class="st0">&quot;{$keywords}&quot;</span> <span class="sy0">/</span>&gt;</span></pre>
+
+</div>
+<!-- EDIT7 SECTION "{$keywords} ：页面关键词" [1636-1746] --><div class="inclmeta level2">
+	<a href="/pme/doku.php?id=ued:template:global#keywords_页面关键词" class="wikilink1 permalink" title="ued:template:global#keywords_页面关键词" rel="bookmark">{$keywords} ：页面关键词</a>
+	&middot; <abbr class="published" title="2016-08-04T03:00:40Z">2016/08/04 03:00</abbr>
+</div>
+<!-- EDIT6 PLUGIN_INCLUDE_END "ued:template:global" [0-] --></div>
+<div class="level1">
+
+</div>
+<!-- EDIT8 PLUGIN_INCLUDE_START "ued:template:global" [0-] --><div class="plugin_include_content plugin_include__ued:template:global">
+
+<h2 class="sectionedit10" id="description_页面描述">{$description} ：页面描述</h2>
+<div class="level2">
+<pre class="code html4strict"> <span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/meta.html"><span class="kw2">meta</span></a> <span class="kw3">name</span><span class="sy0">=</span><span class="st0">&quot;description&quot;</span> <span class="kw3">content</span><span class="sy0">=</span><span class="st0">&quot;{$description}&quot;</span> <span class="sy0">/</span>&gt;</span></pre>
+
+</div>
+<!-- EDIT10 SECTION "{$description} ：页面描述" [1746-1863] --><div class="inclmeta level2">
+	<a href="/pme/doku.php?id=ued:template:global#description_页面描述" class="wikilink1 permalink" title="ued:template:global#description_页面描述" rel="bookmark">{$description} ：页面描述</a>
+	&middot; <abbr class="published" title="2016-08-04T03:00:40Z">2016/08/04 03:00</abbr>
+</div>
+<!-- EDIT9 PLUGIN_INCLUDE_END "ued:template:global" [0-] --></div>
+<div class="level1">
+
+</div>
+<!-- EDIT11 PLUGIN_INCLUDE_START "ued:template:global" [0-] --><div class="plugin_include_content plugin_include__ued:template:global">
+
+<h2 class="sectionedit13" id="site_url_网站资源域名地址">{$site_url} ：网站资源域名地址</h2>
+<div class="level2">
+
+<p>
+用于JS、CSS引用路径，如：
+</p>
+<pre class="code html4strict">...
+	<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/link.html"><span class="kw2">link</span></a> <span class="kw3">rel</span><span class="sy0">=</span><span class="st0">&quot;stylesheet&quot;</span> <span class="kw3">rev</span><span class="sy0">=</span><span class="st0">&quot;stylesheet&quot;</span> <span class="kw3">href</span><span class="sy0">=</span><span class="st0">&quot;{$site_url}css/style_{$stylecolor}.css&quot;</span> <span class="kw3">type</span><span class="sy0">=</span><span class="st0">&quot;text/css&quot;</span> <span class="sy0">/</span>&gt;</span>
+	<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/script.html"><span class="kw2">script</span></a> <span class="kw3">type</span><span class="sy0">=</span><span class="st0">&quot;text/javascript&quot;</span> <span class="kw3">src</span><span class="sy0">=</span><span class="st0">&quot;{$site_url}js/script.js&quot;</span>&gt;&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/script.html"><span class="kw2">script</span></a>&gt;</span>
+<span class="sc2">&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/head.html"><span class="kw2">head</span></a>&gt;</span>
+...</pre>
+
+</div>
+<!-- EDIT13 SECTION "{$site_url} ：网站资源域名地址" [350-652] --><div class="inclmeta level2">
+	<a href="/pme/doku.php?id=ued:template:global#site_url_网站资源域名地址" class="wikilink1 permalink" title="ued:template:global#site_url_网站资源域名地址" rel="bookmark">{$site_url} ：网站资源域名地址</a>
+	&middot; <abbr class="published" title="2016-08-04T03:00:40Z">2016/08/04 03:00</abbr>
+</div>
+<!-- EDIT12 PLUGIN_INCLUDE_END "ued:template:global" [0-] --></div>
+<div class="level1">
+
+</div>
+<!-- EDIT14 PLUGIN_INCLUDE_START "ued:template:global" [0-] --><div class="plugin_include_content plugin_include__ued:template:global">
+
+<h2 class="sectionedit16" id="site_another_url_网站另一域名地址">{$site_another_url} ：网站另一域名地址</h2>
+<div class="level2">
+
+<p>
+<em class="u">当前是手机模版时，该变量表示PC域名；<br/>
+
+当前是PC模版时，表示手机域名。</em>
+</p>
+
+<p>
+<strong>每个模板index.html中head内必备的代码！</strong>
+</p>
+
+<p>
+<strong>PC模板：</strong>
+</p>
+<pre class="code html4strict"><span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/head.html"><span class="kw2">head</span></a>&gt;</span>
+	<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/script.html"><span class="kw2">script</span></a> <span class="kw3">type</span><span class="sy0">=</span><span class="st0">&quot;text/javascript&quot;</span>&gt;</span>
+	// 识别为手机客户端，自动跳转手机页面
+	{if $site_another_url}
+		if (!!navigator.userAgent.match(/AppleWebKit.*Mobile.*/)) {
+			location.href = '{$site_another_url}';
+		}
+	{/if}
+	<span class="sc2">&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/script.html"><span class="kw2">script</span></a>&gt;</span>
+...</pre>
+
+<p>
+如果是手机模板将加入的代码中双感叹号<code>!!</code>改为单个感叹号<code>!</code>即可。
+</p>
+
+<p>
+<strong>手机模板：</strong>
+</p>
+<pre class="code html4strict"><span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/head.html"><span class="kw2">head</span></a>&gt;</span>
+	<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/script.html"><span class="kw2">script</span></a> <span class="kw3">type</span><span class="sy0">=</span><span class="st0">&quot;text/javascript&quot;</span>&gt;</span>
+	// 识别为电脑客户端，自动跳转PC页面
+	{if $site_another_url}
+		if (!navigator.userAgent.match(/AppleWebKit.*Mobile.*/)) {
+			location.href = '{$site_another_url}';
+		}
+	{/if}
+	<span class="sc2">&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/script.html"><span class="kw2">script</span></a>&gt;</span>
+...</pre>
+
+</div>
+<!-- EDIT16 SECTION "{$site_another_url} ：网站另一域名地址" [652-1542] --><div class="inclmeta level2">
+	<a href="/pme/doku.php?id=ued:template:global#site_another_url_网站另一域名地址" class="wikilink1 permalink" title="ued:template:global#site_another_url_网站另一域名地址" rel="bookmark">{$site_another_url} ：网站另一域名地址</a>
+	&middot; <abbr class="published" title="2016-08-04T03:00:40Z">2016/08/04 03:00</abbr>
+</div>
+<!-- EDIT15 PLUGIN_INCLUDE_END "ued:template:global" [0-] --></div>
+<div class="level1">
+
+</div>
+<!-- EDIT17 PLUGIN_INCLUDE_START "ued:template:global" [0-] --><div class="plugin_include_content plugin_include__ued:template:global">
+
+<h2 class="sectionedit19" id="favicon_网站图标">{$favicon} ：网站图标</h2>
+<div class="level2">
+<pre class="code html4strict"> <span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/link.html"><span class="kw2">link</span></a> <span class="kw3">rel</span><span class="sy0">=</span><span class="st0">&quot;shortcut icon&quot;</span> <span class="kw3">href</span><span class="sy0">=</span><span class="st0">&quot;{$favicon}&quot;</span> <span class="kw3">type</span><span class="sy0">=</span><span class="st0">&quot;image/x-icon&quot;</span> <span class="sy0">/</span>&gt;</span></pre>
+
+</div>
+<!-- EDIT19 SECTION "{$favicon} ：网站图标" [1863-1990] --><div class="inclmeta level2">
+	<a href="/pme/doku.php?id=ued:template:global#favicon_网站图标" class="wikilink1 permalink" title="ued:template:global#favicon_网站图标" rel="bookmark">{$favicon} ：网站图标</a>
+	&middot; <abbr class="published" title="2016-08-04T03:00:40Z">2016/08/04 03:00</abbr>
+</div>
+<!-- EDIT18 PLUGIN_INCLUDE_END "ued:template:global" [0-] --></div>
+<div class="level1">
+
+</div>
+<!-- EDIT20 PLUGIN_INCLUDE_START "ued:template:global" [0-] --><div class="plugin_include_content plugin_include__ued:template:global">
+
+<h2 class="sectionedit22" id="stylecolor_网站颜色">{$stylecolor} ：网站颜色</h2>
+<div class="level2">
+
+<p>
+引用的风格颜色css文件。
+</p>
+<pre class="code html4strict"> ...
+ <span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/link.html"><span class="kw2">link</span></a> <span class="kw3">rel</span><span class="sy0">=</span><span class="st0">&quot;stylesheet&quot;</span> <span class="kw3">rev</span><span class="sy0">=</span><span class="st0">&quot;stylesheet&quot;</span> <span class="kw3">href</span><span class="sy0">=</span><span class="st0">&quot;{$site_url}css/style_{$stylecolor}.css&quot;</span> <span class="kw3">type</span><span class="sy0">=</span><span class="st0">&quot;text/css&quot;</span> <span class="sy0">/</span>&gt;</span>
+<span class="sc2">&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/head.html"><span class="kw2">head</span></a>&gt;</span></pre>
+
+<p>
+如果有2个及以上颜色风格，需引入此变量并创建对应css文件，且必须在config.ini文件中做好对应<a href="/pme/doku.php?id=ued:template:config#config_模板配置部分" class="wikilink1" title="ued:template:config">StyleColors</a>配置。
+</p>
+
+</div>
+<!-- EDIT22 SECTION "{$stylecolor} ：网站颜色" [1990-2402] --><div class="inclmeta level2">
+	<a href="/pme/doku.php?id=ued:template:global#stylecolor_网站颜色" class="wikilink1 permalink" title="ued:template:global#stylecolor_网站颜色" rel="bookmark">{$stylecolor} ：网站颜色</a>
+	&middot; <abbr class="published" title="2016-08-04T03:00:40Z">2016/08/04 03:00</abbr>
+</div>
+<!-- EDIT21 PLUGIN_INCLUDE_END "ued:template:global" [0-] --></div>
+<div class="level1">
+
+</div>
+<!-- EDIT23 PLUGIN_INCLUDE_START "ued:template:global" [0-] --><div class="plugin_include_content plugin_include__ued:template:global">
+
+<h2 class="sectionedit25" id="headscript_头部脚本">{$headscript} ：头部脚本</h2>
+<div class="level2">
+
+<p>
+<em class="u">仅首页面运行的脚本，多用于身份识别（直达号、百度站长等）</em>
+</p>
+
+<p>
+放置于index.html的head内尾部
+</p>
+<pre class="code html4strict">	...
+	{$headscript}
+<span class="sc2">&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/head.html"><span class="kw2">head</span></a>&gt;</span></pre>
+
+</div>
+<!-- EDIT25 SECTION "{$headscript} ：头部脚本" [3076-3292] --><div class="inclmeta level2">
+	<a href="/pme/doku.php?id=ued:template:global#headscript_头部脚本" class="wikilink1 permalink" title="ued:template:global#headscript_头部脚本" rel="bookmark">{$headscript} ：头部脚本</a>
+	&middot; <abbr class="published" title="2016-08-04T03:00:40Z">2016/08/04 03:00</abbr>
+</div>
+<!-- EDIT24 PLUGIN_INCLUDE_END "ued:template:global" [0-] --></div>
+<div class="level1">
+
+</div>
+<!-- EDIT26 PLUGIN_INCLUDE_START "ued:template:global" [0-] --><div class="plugin_include_content plugin_include__ued:template:global">
+
+<h2 class="sectionedit28" id="contact_联系方式">{$contact} ：联系方式</h2>
+<div class="level2">
+<ul>
+<li class="level1"><div class="li"> {$contact.company} 企业名称</div>
+</li>
+<li class="level1"><div class="li"> {$contact.name} 联系人</div>
+</li>
+<li class="level1"><div class="li"> {$contact.mobile} 手机</div>
+</li>
+<li class="level1"><div class="li"> {$contact.telephone} 固话/热线</div>
+</li>
+<li class="level1"><div class="li"> {$contact.fax} 传真</div>
+</li>
+<li class="level1"><div class="li"> {$contact.mail} 邮箱</div>
+</li>
+<li class="level1"><div class="li"> {$contact.qq} QQ</div>
+</li>
+<li class="level1"><div class="li"> {$contact.address} 公司地址</div>
+</li>
+</ul>
+
+<p>
+实际示例：
+</p>
+<pre class="code html4strict"><span class="sc2">&lt;header&gt;</span>
+	<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/div.html"><span class="kw2">div</span></a> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;fr&quot;</span>&gt;</span>24小时热线：{$contact.telephone}<span class="sc2">&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/div.html"><span class="kw2">div</span></a>&gt;</span>
+<span class="sc2">&lt;<span class="sy0">/</span>header&gt;</span>
+...
+<span class="sc2">&lt;footer&gt;</span>
+	<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/a.html"><span class="kw2">a</span></a> <span class="kw3">href</span><span class="sy0">=</span><span class="st0">&quot;mailto:{$contact.mail}&quot;</span>&gt;</span>邮件反馈<span class="sc2">&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/a.html"><span class="kw2">a</span></a>&gt;</span>
+<span class="sc2">&lt;<span class="sy0">/</span>footer&gt;</span></pre>
+
+</div>
+<!-- EDIT28 SECTION "{$contact} ：联系方式" [6956-7429] --><div class="inclmeta level2">
+	<a href="/pme/doku.php?id=ued:template:global#contact_联系方式" class="wikilink1 permalink" title="ued:template:global#contact_联系方式" rel="bookmark">{$contact} ：联系方式</a>
+	&middot; <abbr class="published" title="2016-08-04T03:00:40Z">2016/08/04 03:00</abbr>
+</div>
+<!-- EDIT27 PLUGIN_INCLUDE_END "ued:template:global" [0-] --></div>
+<div class="level1">
+
+</div>
+<!-- EDIT1 SECTION "变量语法查询：index.html（PC）" [1-3918] -->
+<h2 class="sectionedit29" id="index_pc首页数据_自定义于indexjson文件中">{$index} ：PC首页数据（自定义于index.json文件中）</h2>
+<div class="level2">
+
+<p>
+<span style="color:red">请先查阅：</span><a href="/pme/doku.php?id=ued:template:json" class="wikilink1" title="ued:template:json">JSON文件的语法规范</a><br/>
+
+<span style="color:red">手机的index.json查阅：</span><a href="/pme/doku.php?id=ued:template:mindex#index_手机_首页数据_自定义于indexjson文件中" class="wikilink1" title="ued:template:mindex">【手机】首页数据（自定义于index.json文件中）</a>
+</p>
+
+</div>
+<!-- EDIT29 SECTION "{$index} ：PC首页数据（自定义于index.json文件中）" [3919-4320] -->
+<h3 class="sectionedit30" id="轮滚图定义方法">轮滚图定义方法</h3>
+<div class="level3">
+
+<p>
+需在json文件中先定义一个<a href="/pme/doku.php?id=ued:template:json#typeimages" class="wikilink1" title="ued:template:json">类型type为images</a>的数组，<br/>
+
+然后在index.html文件中引用！
+</p>
+
+</div>
+<!-- EDIT31 PLUGIN_INCLUDE_START "ued:template:json" [0-] --><div class="plugin_include_content plugin_include__ued:template:json">
+
+<h4 id="typeimages">type:images</h4>
+<div class="level4">
+
+<p>
+<em class="u">config：</em>
+</p>
+<ul>
+<li class="level1"><div class="li"> width：图片宽度</div>
+</li>
+<li class="level1"><div class="li"> height：图片高度</div>
+</li>
+<li class="level1"><div class="li"> forcesize：强制高宽（所有上传图片都会被压缩</div>
+</li>
+<li class="level1"><div class="li"> limit：图片数量</div>
+</li>
+</ul>
+
+<p>
+json文件内容为：
+</p>
+<dl class="file">
+<dt><a href="/pme/doku.php?do=export_code&amp;id=ued:template:index&amp;codeblock=10" title="下载片段" class="mediafile mf_json">index.json</a></dt>
+<dd><pre class="code file javascript"><span class="br0">&#123;</span>
+	<span class="st0">&quot;slidepics&quot;</span><span class="sy0">:</span> <span class="br0">&#123;</span>
+		<span class="st0">&quot;value&quot;</span><span class="sy0">:</span> <span class="br0">&#91;</span><span class="br0">&#123;</span>
+			<span class="st0">&quot;title&quot;</span><span class="sy0">:</span> <span class="st0">&quot;测试图1&quot;</span><span class="sy0">,</span>
+			<span class="st0">&quot;image&quot;</span><span class="sy0">:</span> <span class="st0">&quot;http://tb2.bdstatic.com/tb/static-common/img/search_logo_big_282cef2.gif&quot;</span><span class="sy0">,</span>
+			<span class="st0">&quot;link&quot;</span><span class="sy0">:</span> <span class="st0">&quot;http://www.baidu.com&quot;</span>
+		<span class="br0">&#125;</span><span class="sy0">,</span> <span class="br0">&#123;</span>
+			<span class="st0">&quot;title&quot;</span><span class="sy0">:</span> <span class="st0">&quot;测试图2&quot;</span><span class="sy0">,</span>
+			<span class="st0">&quot;image&quot;</span><span class="sy0">:</span> <span class="st0">&quot;http://img0.bdstatic.com/static/common/widget/search_box_search/logo/logo_3b6de4c.png&quot;</span><span class="sy0">,</span>
+			<span class="st0">&quot;link&quot;</span><span class="sy0">:</span> <span class="st0">&quot;http://www.baidu.com&quot;</span>
+		<span class="br0">&#125;</span><span class="br0">&#93;</span><span class="sy0">,</span>
+		<span class="st0">&quot;description&quot;</span><span class="sy0">:</span> <span class="st0">&quot;大轮滚图&quot;</span><span class="sy0">,</span>
+		<span class="st0">&quot;type&quot;</span><span class="sy0">:</span> <span class="st0">&quot;images&quot;</span><span class="sy0">,</span>
+		<span class="st0">&quot;config&quot;</span><span class="sy0">:</span> <span class="br0">&#123;</span>
+			<span class="st0">&quot;width&quot;</span><span class="sy0">:</span> <span class="nu0">950</span><span class="sy0">,</span>
+			<span class="st0">&quot;height&quot;</span><span class="sy0">:</span> <span class="nu0">500</span><span class="sy0">,</span>
+			<span class="st0">&quot;forcesize&quot;</span><span class="sy0">:</span> <span class="st0">&quot;true&quot;</span><span class="sy0">,</span>
+			<span class="st0">&quot;limit&quot;</span><span class="sy0">:</span> <span class="nu0">4</span>
+		<span class="br0">&#125;</span>
+	<span class="br0">&#125;</span>
+<span class="br0">&#125;</span></pre>
+</dd></dl>
+
+<p>
+config配置中limit为可选项。
+</p>
+<dl class="file">
+<dt><a href="/pme/doku.php?do=export_code&amp;id=ued:template:index&amp;codeblock=11" title="下载片段" class="mediafile mf_html">index.html</a></dt>
+<dd><pre class="code file html4strict"><span class="sc-1">&lt;!-- 轮滚图 --&gt;</span>
+<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/ul.html"><span class="kw2">ul</span></a> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;clearfix&quot;</span>&gt;</span>
+	{foreach item=slidepic from=$index.slidepics}
+	<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/li.html"><span class="kw2">li</span></a> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;fl&quot;</span>&gt;&lt;<a target="_blank" href="http://december.com/html/4/element/a.html"><span class="kw2">a</span></a> <span class="kw3">href</span><span class="sy0">=</span><span class="st0">&quot;{$slidepic.link}&quot;</span> <span class="kw3">target</span><span class="sy0">=</span><span class="st0">&quot;_blank&quot;</span>&gt;&lt;<a target="_blank" href="http://december.com/html/4/element/img.html"><span class="kw2">img</span></a> <span class="kw3">src</span><span class="sy0">=</span><span class="st0">&quot;{$slidepic.image}&quot;</span> <span class="kw3">alt</span><span class="sy0">=</span><span class="st0">&quot;{$slidepic.title}&quot;</span> <span class="sy0">/</span>&gt;&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/a.html"><span class="kw2">a</span></a>&gt;&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/li.html"><span class="kw2">li</span></a>&gt;</span>
+	{/foreach}
+<span class="sc2">&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/ul.html"><span class="kw2">ul</span></a>&gt;</span>
+<span class="sc-1">&lt;!-- 输出：</span>
+<span class="sc-1">&lt;ul class=&quot;clearfix&quot;&gt;</span>
+<span class="sc-1">	&lt;li class=&quot;fl&quot;&gt;&lt;a href=&quot;http://www.baidu.com&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;http://tb2.bdstatic.com/tb/static-common/img/search_logo_big_282cef2.gif&quot; alt=&quot;测试图1&quot;&gt;&lt;/a&gt;&lt;/li&gt;</span>
+<span class="sc-1">	&lt;li class=&quot;fl&quot;&gt;&lt;a href=&quot;http://www.baidu.com&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;http://img0.bdstatic.com/static/common/widget/search_box_search/logo/logo_3b6de4c.png&quot; alt=&quot;测试图2&quot;&gt;&lt;/a&gt;&lt;/li&gt;</span>
+<span class="sc-1">&lt;/ul&gt;</span>
+<span class="sc-1">--&gt;</span></pre>
+</dd></dl>
+
+<p>
+数据变量说明：
+</p>
+<ul>
+<li class="level1"><div class="li"> {$index.slidepics[0].title} 轮滚图图片标题</div>
+</li>
+<li class="level1"><div class="li"> {$index.slidepics[0].image} 轮滚图图片地址</div>
+</li>
+<li class="level1"><div class="li"> {$index.slidepics[0].link} 轮滚图图片链接</div>
+</li>
+<li class="level1"><div class="li"> {$index.slidepics[0].description} 轮滚图图片描述（可选，需定义<sup><a href="#fn__1" id="fnt__1" class="fn_top">1)</a></sup>）</div>
+</li>
+</ul>
+
+</div>
+<div class="inclmeta level4">
+	<a href="/pme/doku.php?id=ued:template:json#typeimages" class="wikilink1 permalink" title="ued:template:json#typeimages" rel="bookmark">type:images</a>
+	&middot; <abbr class="published" title="2016-10-24T06:38:01Z">2016/10/24 06:38</abbr>
+</div>
+<!-- EDIT32 PLUGIN_INCLUDE_END "ued:template:json" [0-] --></div>
+<div class="level3">
+
+</div>
+<!-- EDIT30 SECTION "轮滚图定义方法" [4321-4532] -->
+<h3 class="sectionedit33" id="文章列表定义方法">文章列表定义方法</h3>
+<div class="level3">
+
+<p>
+需在json文件中先定义一个<a href="/pme/doku.php?id=ued:template:json#typelist" class="wikilink1" title="ued:template:json">类型type为list</a>的数组，<br/>
+
+然后在index.html文件中引用！
+</p>
+
+</div>
+
+<h4 id="列表型栏目数据输出_新闻列表_产品列表">列表型栏目数据输出（新闻列表、产品列表）</h4>
+<div class="level4">
+
+</div>
+<!-- EDIT34 PLUGIN_INCLUDE_START "ued:template:json" [0-] --><div class="plugin_include_content plugin_include__ued:template:json">
+<div class="level4">
+
+<p>
+此类型变量全等于 <a href="/pme/doku.php?id=ued:template:json#typenav" class="wikilink1" title="ued:template:json">type:nav</a> 配置config的 <code>“filter”: “list”</code><sup><a href="#fn__2" id="fnt__2" class="fn_top">2)</a></sup> 。
+</p>
+
+<p>
+比如，json文件内容为：
+</p>
+<dl class="file">
+<dt><a href="/pme/doku.php?do=export_code&amp;id=ued:template:index&amp;codeblock=13" title="下载片段" class="mediafile mf_json">index.json</a></dt>
+<dd><pre class="code file javascript"><span class="br0">&#123;</span>
+	<span class="st0">&quot;list1&quot;</span><span class="sy0">:</span> <span class="br0">&#123;</span>
+		<span class="st0">&quot;value&quot;</span><span class="sy0">:</span> <span class="br0">&#123;</span><span class="br0">&#125;</span><span class="sy0">,</span>
+		<span class="st0">&quot;description&quot;</span><span class="sy0">:</span> <span class="st0">&quot;第一个文字列表&quot;</span><span class="sy0">,</span>
+		<span class="st0">&quot;type&quot;</span><span class="sy0">:</span> <span class="st0">&quot;list&quot;</span><span class="sy0">,</span>
+		<span class="st0">&quot;config&quot;</span><span class="sy0">:</span> <span class="br0">&#123;</span>
+			<span class="st0">&quot;width&quot;</span><span class="sy0">:</span> <span class="nu0">200</span><span class="sy0">,</span>
+			<span class="st0">&quot;height&quot;</span><span class="sy0">:</span> <span class="nu0">120</span><span class="sy0">,</span>
+			<span class="st0">&quot;star_only&quot;</span><span class="sy0">:</span> <span class="kw2">true</span>
+		<span class="br0">&#125;</span>
+	<span class="br0">&#125;</span>
+<span class="br0">&#125;</span></pre>
+</dd></dl>
+
+<p>
+<em class="u">config：</em>
+</p>
+<ul>
+<li class="level1"><div class="li"> filter：筛选栏目类型。默认值：“list”。此参数说明具体参见：[#typenav|type:nav]的config配置</div>
+</li>
+<li class="level1"><div class="li"> data_limit：限制每个栏目列表数据输出的个数（默认20，可以不填写，用@index判断break）</div>
+</li>
+<li class="level1"><div class="li"> width：列表数据图片宽度（如有引用列表数据图片时填写）</div>
+</li>
+<li class="level1"><div class="li"> height：列表数据图片高度（如有引用列表数据图片时填写）</div>
+</li>
+<li class="level1"><div class="li"> star_only：是否默认输出星标(推荐)文章，可用于“热门产品”等栏目</div>
+</li>
+<li class="level1"><div class="li"> nav_width：栏目图片宽度（如有引用栏目图片时填写）</div>
+</li>
+<li class="level1"><div class="li"> nav_height：栏目图片高度（如有引用栏目图片时填写）</div>
+</li>
+<li class="level1"><div class="li"> mustchild：true时筛选出只包含子栏目的栏目供客服选择（默认false，用于侧边子导航）</div>
+</li>
+<li class="level1"><div class="li"> showchilddata：true时childmenu也同时输出data值</div>
+</li>
+</ul>
+
+<p>
+调用形式：
+</p>
+<dl class="file">
+<dt><a href="/pme/doku.php?do=export_code&amp;id=ued:template:index&amp;codeblock=14" title="下载片段" class="mediafile mf_html">index.html</a></dt>
+<dd><pre class="code file html4strict"><span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/h2.html"><span class="kw2">h2</span></a>&gt;</span>{$index.list1.name}<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/span.html"><span class="kw2">span</span></a>&gt;</span>{$index.list1.en_name}<span class="sc2">&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/span.html"><span class="kw2">span</span></a>&gt;&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/h2.html"><span class="kw2">h2</span></a>&gt;</span>
+<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/ul.html"><span class="kw2">ul</span></a> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;clearfix&quot;</span>&gt;</span>
+	{foreach item=article from=$index.list1.data}
+	<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/li.html"><span class="kw2">li</span></a>&gt;&lt;<a target="_blank" href="http://december.com/html/4/element/img.html"><span class="kw2">img</span></a> <span class="kw3">src</span><span class="sy0">=</span><span class="st0">&quot;{$article.image}&quot;</span> <span class="kw3">alt</span><span class="sy0">=</span><span class="st0">&quot;{$article.title|strip_tags}&quot;</span> <span class="sy0">/</span>&gt;&lt;<a target="_blank" href="http://december.com/html/4/element/a.html"><span class="kw2">a</span></a> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;ellipsis&quot;</span> <span class="kw3">href</span><span class="sy0">=</span><span class="st0">&quot;{$article.link}&quot;</span> <span class="kw3">target</span><span class="sy0">=</span><span class="st0">&quot;_blank&quot;</span>&gt;</span>{$article.title}<span class="sc2">&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/a.html"><span class="kw2">a</span></a>&gt;&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/li.html"><span class="kw2">li</span></a>&gt;</span>
+	{if $article@index+1 == 5}{break}{/if}
+	{/foreach}
+<span class="sc2">&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/ul.html"><span class="kw2">ul</span></a>&gt;</span>
+<span class="sc-1">&lt;!-- 输出：</span>
+<span class="sc-1">&lt;h2&gt;产品中心&lt;span&gt;Products&lt;/span&gt;&lt;/h2&gt;</span>
+<span class="sc-1">&lt;ul class=&quot;clearfix&quot;&gt;</span>
+<span class="sc-1">	&lt;li&gt;&lt;img src=&quot;images/pro1.jpg&quot; alt=&quot;这是一篇测试文章&quot; /&gt;&lt;a class=&quot;ellipsis&quot; href=&quot;content-news.html&quot; target=&quot;_blank&quot;&gt;这是一篇测试文章&lt;/a&gt;&lt;/li&gt;</span>
+<span class="sc-1">	&lt;li&gt;&lt;img src=&quot;images/pro2.jpg&quot; alt=&quot;这是一篇测试文章&quot; /&gt;&lt;a class=&quot;ellipsis&quot; href=&quot;content-news.html&quot; target=&quot;_blank&quot;&gt;这是一篇测试文章&lt;/a&gt;&lt;/li&gt;</span>
+<span class="sc-1">	&lt;li&gt;&lt;img src=&quot;images/pro3.jpg&quot; alt=&quot;这是一篇测试文章&quot; /&gt;&lt;a class=&quot;ellipsis&quot; href=&quot;content-news.html&quot; target=&quot;_blank&quot;&gt;这是一篇测试文章&lt;/a&gt;&lt;/li&gt;</span>
+<span class="sc-1">	&lt;li&gt;&lt;img src=&quot;images/pro4.jpg&quot; alt=&quot;这是一篇测试文章&quot; /&gt;&lt;a class=&quot;ellipsis&quot; href=&quot;content-news.html&quot; target=&quot;_blank&quot;&gt;这是一篇测试文章&lt;/a&gt;&lt;/li&gt;</span>
+<span class="sc-1">	&lt;li&gt;&lt;img src=&quot;images/pro5.jpg&quot; alt=&quot;这是一篇测试文章&quot; /&gt;&lt;a class=&quot;ellipsis&quot; href=&quot;content-news.html&quot; target=&quot;_blank&quot;&gt;这是一篇测试文章&lt;/a&gt;&lt;/li&gt;</span>
+<span class="sc-1">&lt;/ul&gt;</span>
+<span class="sc-1">--&gt;</span></pre>
+</dd></dl>
+
+<p>
+数据变量说明（<strong>这个特别注意，输出的数据格式与填写的json格式是不一样的</strong>）：<br/>
+
+（以下参考为filter筛选出list的栏目数据变量格式）
+</p>
+<ul>
+<li class="level1"><div class="li"> {$index.list1.name} 栏目名称</div>
+</li>
+<li class="level1"><div class="li"> {$index.list1.en_name} 栏目英文名称</div>
+</li>
+<li class="level1"><div class="li"> {$index.list1.icon} 栏目图标（iconfont技术，可改大小可换色）</div>
+</li>
+<li class="level1"><div class="li"> {$index.list1.image} 栏目图片</div>
+</li>
+<li class="level1"><div class="li"> {$index.list1.link} 栏目链接(一般用于“查看更多”按钮)</div>
+</li>
+<li class="level1"><div class="li"> {$index.list1.description} 栏目描述</div>
+</li>
+<li class="level1"><div class="li"> {$index.list1.data[]} 栏目下文章数据（数组格式，需foreach循环）</div>
+</li>
+<li class="level1"><div class="li"> {$index.list1.data[0].title} 文章标题</div>
+</li>
+<li class="level1"><div class="li"> {$index.list1.data[0].image} 文章预览图</div>
+</li>
+<li class="level1"><div class="li"> {$index.list1.data[0].link} 文章链接</div>
+</li>
+<li class="level1"><div class="li"> {$index.list1.data[0].description} 文章内容</div>
+</li>
+<li class="level1"><div class="li"> {$index.list1.data[0].pubdate} 发布时间</div>
+</li>
+<li class="level1"><div class="li"> {$index.list1.data[0].pubtimestamp} 发布时间戳</div>
+</li>
+<li class="level1"><div class="li"> {$index.list1.data[0].category.name} 所属栏目名</div>
+</li>
+<li class="level1"><div class="li"> {$index.list1.data[0].category.en_name} 所属栏目英文名</div>
+</li>
+<li class="level1"><div class="li"> {$index.list1.data[0].category.icon} 所属栏目图标（iconfont技术，可改大小可换色）</div>
+</li>
+<li class="level1"><div class="li"> {$index.list1.data[0].category.link} 所属栏目链接</div>
+</li>
+<li class="level1"><div class="li"> {$index.list1.childmenu[]} 子导航，结构类似导航（数组格式，需foreach循环）</div>
+</li>
+<li class="level1"><div class="li"> {$index.list1.childmenu[0].name}</div>
+</li>
+<li class="level1"><div class="li"> {$index.list1.childmenu[0].en_name}</div>
+</li>
+<li class="level1"><div class="li"> {$index.list1.childmenu[0].icon}</div>
+</li>
+<li class="level1"><div class="li"> {$index.list1.childmenu[0].image}</div>
+</li>
+<li class="level1"><div class="li"> {$index.list1.childmenu[0].link}</div>
+</li>
+<li class="level1"><div class="li"> {$index.list1.childmenu[0].description}</div>
+</li>
+<li class="level1"><div class="li"> {$index.list1.childmenu[0].data} （这个值需要配置config的<code>“showchilddata”: true</code><sup><a href="#fn__3" id="fnt__3" class="fn_top">3)</a></sup>）</div>
+</li>
+<li class="level1"><div class="li"> {$index.list1.type} 栏目类型：1-文字列表，2-图片列表，3-图文混排，4-内容单页，5-功能，6-外链，7-微信功能，8-直达号功能</div>
+</li>
+</ul>
+
+</div>
+<div class="inclmeta level4">
+	<a href="/pme/doku.php?id=ued:template:json#typelist" class="wikilink1 permalink" title="ued:template:json#typelist" rel="bookmark">type:list</a>
+	&middot; <abbr class="published" title="2016-10-24T06:38:01Z">2016/10/24 06:38</abbr>
+</div>
+<!-- EDIT35 PLUGIN_INCLUDE_END "ued:template:json" [0-] --></div>
+<div class="level4">
+
+</div>
+
+<h4 id="单页型栏目数据输出_关于我们">单页型栏目数据输出（关于我们）</h4>
+<div class="level4">
+
+</div>
+<!-- EDIT36 PLUGIN_INCLUDE_START "ued:template:json" [0-] --><div class="plugin_include_content plugin_include__ued:template:json">
+<div class="level4">
+
+<p>
+此类型变量全等于 <a href="/pme/doku.php?id=ued:template:json#typenav" class="wikilink1" title="ued:template:json">type:nav</a> 配置config的 <code>“filter”: “page”</code><sup><a href="#fn__4" id="fnt__4" class="fn_top">4)</a></sup> 。
+</p>
+
+<p>
+比如，json文件内容为：
+</p>
+<dl class="file">
+<dt><a href="/pme/doku.php?do=export_code&amp;id=ued:template:index&amp;codeblock=15" title="下载片段" class="mediafile mf_json">index.json</a></dt>
+<dd><pre class="code file javascript"><span class="br0">&#123;</span>
+	<span class="st0">&quot;page1&quot;</span><span class="sy0">:</span> <span class="br0">&#123;</span>
+		<span class="st0">&quot;value&quot;</span><span class="sy0">:</span> <span class="br0">&#123;</span><span class="br0">&#125;</span><span class="sy0">,</span>
+		<span class="st0">&quot;description&quot;</span><span class="sy0">:</span> <span class="st0">&quot;关于我们版块&quot;</span><span class="sy0">,</span>
+		<span class="st0">&quot;type&quot;</span><span class="sy0">:</span> <span class="st0">&quot;page&quot;</span>
+	<span class="br0">&#125;</span>
+<span class="br0">&#125;</span></pre>
+</dd></dl>
+
+<p>
+<em class="u">config：</em>
+</p>
+<ul>
+<li class="level1"><div class="li"> filter：筛选栏目类型。默认值：“ALL”（大写）代表筛选所有栏目。也可填写“list”仅允许列表型栏目，或者“list,page”筛选多种类型栏目。</div>
+</li>
+<li class="level1"><div class="li"> nav_width：栏目图片宽度（如有引用栏目图片时填写）</div>
+</li>
+<li class="level1"><div class="li"> nav_height：栏目图片高度（如有引用栏目图片时填写）</div>
+</li>
+</ul>
+
+<p>
+调用形式：
+</p>
+<dl class="file">
+<dt><a href="/pme/doku.php?do=export_code&amp;id=ued:template:index&amp;codeblock=16" title="下载片段" class="mediafile mf_html">index.html</a></dt>
+<dd><pre class="code file html4strict"><span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/h2.html"><span class="kw2">h2</span></a>&gt;</span>{$index.page1.name}<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/span.html"><span class="kw2">span</span></a>&gt;</span>{$index.page1.en_name}<span class="sc2">&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/span.html"><span class="kw2">span</span></a>&gt;&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/h2.html"><span class="kw2">h2</span></a>&gt;</span>
+<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/p.html"><span class="kw2">p</span></a>&gt;</span>{$index.page1.description}<span class="sc2">&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/p.html"><span class="kw2">p</span></a>&gt;</span>
+<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/a.html"><span class="kw2">a</span></a> <span class="kw3">href</span><span class="sy0">=</span><span class="st0">&quot;{$index.page1.link}&quot;</span>&gt;</span>More<span class="sc2">&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/a.html"><span class="kw2">a</span></a>&gt;</span>
+<span class="sc-1">&lt;!-- 输出：</span>
+<span class="sc-1">&lt;h2&gt;关于我们&lt;span&gt;About Us&lt;/span&gt;&lt;/h2&gt;</span>
+<span class="sc-1">&lt;p&gt;这是栏目的一段描述...&lt;/p&gt;</span>
+<span class="sc-1">&lt;a href=&quot;list-page.html&quot;&gt;More&lt;/a&gt;</span>
+<span class="sc-1">--&gt;</span></pre>
+</dd></dl>
+
+<p>
+数据变量说明（<strong>这个特别注意，输出的数据格式与填写的json格式是不一样的</strong>）：<br/>
+
+（以下参考为filter筛选出list的栏目数据变量格式）
+</p>
+<ul>
+<li class="level1"><div class="li"> {$index.page1.name} 栏目名称</div>
+</li>
+<li class="level1"><div class="li"> {$index.page1.en_name} 栏目英文名称</div>
+</li>
+<li class="level1"><div class="li"> {$index.page1.icon} 栏目图标（iconfont技术，可改大小可换色）</div>
+</li>
+<li class="level1"><div class="li"> {$index.page1.image} 栏目图片</div>
+</li>
+<li class="level1"><div class="li"> {$index.page1.link} 栏目链接(一般用于“查看更多”按钮)</div>
+</li>
+<li class="level1"><div class="li"> {$index.page1.description} 栏目描述</div>
+</li>
+<li class="level1"><div class="li"> {$index.page1.content} 栏目单页内容HTML数据</div>
+</li>
+<li class="level1"><div class="li"> {$index.page1.childmenu[]} 子导航，结构类似导航（数组格式，需foreach循环）</div>
+</li>
+<li class="level1"><div class="li"> {$index.page1.childmenu[0].name}</div>
+</li>
+<li class="level1"><div class="li"> {$index.page1.childmenu[0].en_name}</div>
+</li>
+<li class="level1"><div class="li"> {$index.page1.childmenu[0].icon}</div>
+</li>
+<li class="level1"><div class="li"> {$index.page1.childmenu[0].image}</div>
+</li>
+<li class="level1"><div class="li"> {$index.page1.childmenu[0].link}</div>
+</li>
+<li class="level1"><div class="li"> {$index.page1.childmenu[0].description}</div>
+</li>
+<li class="level1"><div class="li"> {$index.page1.type} 栏目类型（恒等于3，因为此变量只能输出单页内容形栏目）</div>
+</li>
+</ul>
+
+</div>
+<div class="inclmeta level4">
+	<a href="/pme/doku.php?id=ued:template:json#typepage" class="wikilink1 permalink" title="ued:template:json#typepage" rel="bookmark">type:page</a>
+	&middot; <abbr class="published" title="2016-10-24T06:38:01Z">2016/10/24 06:38</abbr>
+</div>
+<!-- EDIT37 PLUGIN_INCLUDE_END "ued:template:json" [0-] --></div>
+<div class="level4">
+
+</div>
+<!-- EDIT33 SECTION "文章列表定义方法" [4533-4918] -->
+<h3 class="sectionedit38" id="留言板定义方法">留言板定义方法</h3>
+<div class="level3">
+
+<p>
+需在json文件中先定义一个<a href="/pme/doku.php?id=ued:template:json#typenav" class="wikilink1" title="ued:template:json">类型type为nav</a>的变量，<br/>
+
+然后在index.html文件中引用！
+</p>
+<dl class="file">
+<dt><a href="/pme/doku.php?do=export_code&amp;id=ued:template:index&amp;codeblock=17" title="下载片段" class="mediafile mf_json">index.json</a></dt>
+<dd><pre class="code file javascript"><span class="br0">&#123;</span>
+	<span class="st0">&quot;feedback&quot;</span><span class="sy0">:</span> <span class="br0">&#123;</span>
+		<span class="st0">&quot;value&quot;</span><span class="sy0">:</span> <span class="br0">&#123;</span><span class="br0">&#125;</span><span class="sy0">,</span>
+		<span class="st0">&quot;description&quot;</span><span class="sy0">:</span> <span class="st0">&quot;留言板&quot;</span><span class="sy0">,</span>
+		<span class="st0">&quot;type&quot;</span><span class="sy0">:</span> <span class="st0">&quot;nav&quot;</span><span class="sy0">,</span>
+		<span class="st0">&quot;config&quot;</span><span class="sy0">:</span> <span class="br0">&#123;</span>
+			<span class="st0">&quot;filter&quot;</span><span class="sy0">:</span> <span class="st0">&quot;feedback&quot;</span>
+		<span class="br0">&#125;</span>
+	<span class="br0">&#125;</span>
+<span class="br0">&#125;</span></pre>
+</dd></dl>
+
+</div>
+<!-- EDIT39 PLUGIN_INCLUDE_START "ued:template:json" [0-] --><div class="plugin_include_content plugin_include__ued:template:json">
+<div class="level3">
+
+<p>
+客服只能选择留言板栏目。
+</p>
+
+<p>
+数据变量说明：
+</p>
+<ul>
+<li class="level1"><div class="li"> {$index.feedback.name} 栏目名称</div>
+</li>
+<li class="level1"><div class="li"> {$index.feedback.en_name} 栏目英文名称</div>
+</li>
+<li class="level1"><div class="li"> {$index.feedback.icon} 栏目图标（iconfont技术，可改大小可换色）</div>
+</li>
+<li class="level1"><div class="li"> {$index.feedback.image} 栏目图片</div>
+</li>
+<li class="level1"><div class="li"> {$index.feedback.link} 栏目链接(一般用于“查看更多”按钮)</div>
+</li>
+<li class="level1"><div class="li"> {$index.feedback.description} 栏目描述</div>
+</li>
+<li class="level1"><div class="li"> <strong>{$index.feedback.posturl} 留言板form表单的action值</strong></div>
+</li>
+<li class="level1"><div class="li"> {$index.feedback.type} 栏目类型</div>
+</li>
+</ul>
+
+<p>
+调用形式：
+</p>
+<dl class="file">
+<dt><a href="/pme/doku.php?do=export_code&amp;id=ued:template:index&amp;codeblock=18" title="下载片段" class="mediafile mf_html">index.html</a></dt>
+<dd><pre class="code file html4strict"><span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/h2.html"><span class="kw2">h2</span></a>&gt;</span>在这里给我留言噢~<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/span.html"><span class="kw2">span</span></a>&gt;</span>{$index.feedback.en_name}<span class="sc2">&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/span.html"><span class="kw2">span</span></a>&gt;&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/h2.html"><span class="kw2">h2</span></a>&gt;</span>
+<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/form.html"><span class="kw2">form</span></a> <span class="kw3">action</span><span class="sy0">=</span><span class="st0">&quot;{$index.feedback.posturl}&quot;</span>&gt;</span>
+	<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/p.html"><span class="kw2">p</span></a>&gt;&lt;<a target="_blank" href="http://december.com/html/4/element/input.html"><span class="kw2">input</span></a> <span class="kw3">type</span><span class="sy0">=</span><span class="st0">&quot;text&quot;</span> <span class="kw3">name</span><span class="sy0">=</span><span class="st0">&quot;name&quot;</span> <span class="sy0">/</span>&gt;&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/p.html"><span class="kw2">p</span></a>&gt;</span>
+	<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/p.html"><span class="kw2">p</span></a>&gt;&lt;<a target="_blank" href="http://december.com/html/4/element/input.html"><span class="kw2">input</span></a> <span class="kw3">type</span><span class="sy0">=</span><span class="st0">&quot;text&quot;</span> <span class="kw3">name</span><span class="sy0">=</span><span class="st0">&quot;telephone&quot;</span> <span class="sy0">/</span>&gt;&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/p.html"><span class="kw2">p</span></a>&gt;</span>
+	<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/p.html"><span class="kw2">p</span></a>&gt;&lt;<a target="_blank" href="http://december.com/html/4/element/input.html"><span class="kw2">input</span></a> <span class="kw3">type</span><span class="sy0">=</span><span class="st0">&quot;text&quot;</span> <span class="kw3">name</span><span class="sy0">=</span><span class="st0">&quot;email&quot;</span> <span class="sy0">/</span>&gt;&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/p.html"><span class="kw2">p</span></a>&gt;</span>
+	<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/p.html"><span class="kw2">p</span></a>&gt;&lt;<a target="_blank" href="http://december.com/html/4/element/textarea.html"><span class="kw2">textarea</span></a> <span class="kw3">name</span><span class="sy0">=</span><span class="st0">&quot;content&quot;</span> <span class="kw3">rows</span><span class="sy0">=</span><span class="st0">&quot;5&quot;</span>&gt;&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/textarea.html"><span class="kw2">textarea</span></a>&gt;&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/p.html"><span class="kw2">p</span></a>&gt;</span>
+	<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/p.html"><span class="kw2">p</span></a>&gt;&lt;<a target="_blank" href="http://december.com/html/4/element/input.html"><span class="kw2">input</span></a> <span class="kw3">type</span><span class="sy0">=</span><span class="st0">&quot;submit&quot;</span> <span class="sy0">/</span>&gt;&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/p.html"><span class="kw2">p</span></a>&gt;</span>
+<span class="sc2">&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/form.html"><span class="kw2">form</span></a>&gt;</span>
+<span class="sc-1">&lt;!-- 输出：</span>
+<span class="sc-1">&lt;h2&gt;在这里给我留言噢~&lt;span&gt;Feed Back&lt;/span&gt;&lt;/h2&gt;</span>
+<span class="sc-1">&lt;form action=&quot;http://....&quot;&gt;</span>
+<span class="sc-1">	&lt;p&gt;&lt;input type=&quot;text&quot; name=&quot;name&quot; /&gt;&lt;/p&gt;</span>
+<span class="sc-1">	&lt;p&gt;&lt;input type=&quot;text&quot; name=&quot;telephone&quot; /&gt;&lt;/p&gt;</span>
+<span class="sc-1">	&lt;p&gt;&lt;input type=&quot;text&quot; name=&quot;email&quot; /&gt;&lt;/p&gt;</span>
+<span class="sc-1">	&lt;p&gt;&lt;textarea name=&quot;content&quot; rows=&quot;5&quot;&gt;&lt;/textarea&gt;&lt;/p&gt;</span>
+<span class="sc-1">	&lt;p&gt;&lt;input type=&quot;submit&quot; /&gt;&lt;/p&gt;</span>
+<span class="sc-1">&lt;/form&gt;</span>
+<span class="sc-1">--&gt;</span></pre>
+</dd></dl>
+
+<p>
+<strong>注意：input的name值必须为以下字段</strong>
+</p>
+<ul>
+<li class="level1"><div class="li"> name：姓名</div>
+</li>
+<li class="level1"><div class="li"> telephone：电话</div>
+</li>
+<li class="level1"><div class="li"> email：邮件地址</div>
+</li>
+<li class="level1"><div class="li"> content：内容</div>
+</li>
+</ul>
+
+</div>
+<div class="inclmeta level3">
+	<a href="/pme/doku.php?id=ued:template:json#filterfeedback" class="wikilink1 permalink" title="ued:template:json#filterfeedback" rel="bookmark">filter:feedback</a>
+	&middot; <abbr class="published" title="2016-10-24T06:38:01Z">2016/10/24 06:38</abbr>
+</div>
+<!-- EDIT40 PLUGIN_INCLUDE_END "ued:template:json" [0-] --></div>
+<div class="level3">
+
+</div>
+<!-- EDIT38 SECTION "留言板定义方法" [4919-5301] -->
+<h3 class="sectionedit41" id="more">More...</h3>
+<div class="level3">
+
+<p>
+更多请查阅：《<a href="/pme/doku.php?id=ued:template:json" class="wikilink1" title="ued:template:json">JSON文件的语法与使用</a>》
+</p>
+
+</div>
+<!-- EDIT41 SECTION "More..." [5302-] --><div class="footnotes">
+<div class="fn"><sup><a href="#fnt__1" id="fn__1" class="fn_bot">1)</a></sup> 
+
+<dl class="file">
+<dt><a href="/pme/doku.php?do=export_code&amp;id=ued:template:index&amp;codeblock=12" title="下载片段" class="mediafile mf_json">index.json</a></dt>
+<dd><pre class="code file javascript"><span class="br0">&#123;</span>
+	<span class="st0">&quot;slidepics&quot;</span><span class="sy0">:</span> <span class="br0">&#123;</span>
+		<span class="st0">&quot;value&quot;</span><span class="sy0">:</span> <span class="br0">&#91;</span><span class="br0">&#123;</span>
+			<span class="st0">&quot;title&quot;</span><span class="sy0">:</span> <span class="st0">&quot;测试图1&quot;</span><span class="sy0">,</span>
+			<span class="st0">&quot;image&quot;</span><span class="sy0">:</span> <span class="st0">&quot;http://tb2.bdstatic.com/tb/static-common/img/search_logo_big_282cef2.gif&quot;</span><span class="sy0">,</span>
+			<span class="st0">&quot;link&quot;</span><span class="sy0">:</span> <span class="st0">&quot;http://www.baidu.com&quot;</span><span class="sy0">,</span>
+			<span class="st0">&quot;description&quot;</span><span class="sy0">:</span> <span class="st0">&quot;这是图片的一大段描述<span class="es0">\r</span><span class="es0">\n</span>可以换行。。。&quot;</span>
+		<span class="br0">&#125;</span><span class="sy0">,</span> <span class="br0">&#123;</span>
+			<span class="st0">&quot;title&quot;</span><span class="sy0">:</span> <span class="st0">&quot;测试图2&quot;</span><span class="sy0">,</span>
+			<span class="st0">&quot;image&quot;</span><span class="sy0">:</span> <span class="st0">&quot;http://img0.bdstatic.com/static/common/widget/search_box_search/logo/logo_3b6de4c.png&quot;</span><span class="sy0">,</span>
+			<span class="st0">&quot;link&quot;</span><span class="sy0">:</span> <span class="st0">&quot;http://www.baidu.com&quot;</span><span class="sy0">,</span>
+			<span class="st0">&quot;description&quot;</span><span class="sy0">:</span> <span class="st0">&quot;这是图片的一大段描述<span class="es0">\r</span><span class="es0">\n</span>可以换行。。。&quot;</span>
+		<span class="br0">&#125;</span><span class="br0">&#93;</span><span class="sy0">,</span>
+		<span class="st0">&quot;description&quot;</span><span class="sy0">:</span> <span class="st0">&quot;大轮滚图&quot;</span><span class="sy0">,</span>
+		<span class="st0">&quot;type&quot;</span><span class="sy0">:</span> <span class="st0">&quot;images&quot;</span><span class="sy0">,</span>
+		<span class="st0">&quot;config&quot;</span><span class="sy0">:</span> <span class="br0">&#123;</span>
+			<span class="st0">&quot;width&quot;</span><span class="sy0">:</span> <span class="nu0">950</span><span class="sy0">,</span>
+			<span class="st0">&quot;height&quot;</span><span class="sy0">:</span> <span class="nu0">500</span><span class="sy0">,</span>
+			<span class="st0">&quot;limit&quot;</span><span class="sy0">:</span> <span class="nu0">4</span>
+		<span class="br0">&#125;</span>
+	<span class="br0">&#125;</span>
+<span class="br0">&#125;</span></pre>
+</dd></dl>
+
+</div>
+<div class="fn"><sup><a href="#fnt__2" id="fn__2" class="fn_bot">2)</a></sup> 
+<pre class="code">&quot;list1&quot;: {
+	&quot;value&quot;: {},
+	&quot;description&quot;: &quot;右侧热门新闻&quot;,
+	&quot;type&quot;: &quot;nav&quot;,
+	&quot;config&quot;: {
+		&quot;filter&quot;: &quot;list&quot;
+	}
+}</pre>
+</div>
+<div class="fn"><sup><a href="#fnt__3" id="fn__3" class="fn_bot">3)</a></sup> 
+<pre class="code">&quot;list1&quot;: {
+	&quot;value&quot;: {},
+	&quot;description&quot;: &quot;右侧热门新闻&quot;,
+	&quot;type&quot;: &quot;list&quot;,
+	&quot;config&quot;: {
+		&quot;showchilddata&quot;: true
+	}
+}</pre>
+</div>
+<div class="fn"><sup><a href="#fnt__4" id="fn__4" class="fn_bot">4)</a></sup> 
+<pre class="code">&quot;page1&quot;: {
+	&quot;value&quot;: {},
+	&quot;description&quot;: &quot;关于我们&quot;,
+	&quot;type&quot;: &quot;nav&quot;,
+	&quot;config&quot;: {
+		&quot;filter&quot;: &quot;page&quot;
+	}
+}</pre>
+</div>
+</div>

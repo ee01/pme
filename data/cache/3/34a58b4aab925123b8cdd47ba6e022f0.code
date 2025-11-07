@@ -1,0 +1,38 @@
+<span class="re0"><span class="br0">&#91;</span>Template<span class="br0">&#93;</span></span>
+<span class="re1">Name</span><span class="sy0">=</span><span class="re2">旅游行业蓝色格调模板</span>
+<span class="re1">Description</span><span class="sy0">=</span>
+<span class="re1">URL</span><span class="sy0">=</span>
+<span class="re1">Version</span><span class="sy0">=</span><span class="re2">1.0</span>
+&nbsp;
+<span class="re0"><span class="br0">&#91;</span>Config<span class="br0">&#93;</span></span>
+<span class="re1">Type</span><span class="sy0">=</span><span class="re2">PC模板</span>
+<span class="re1">Category</span><span class="sy0">=</span><span class="re2">旅游</span>
+<span class="re1">Tags</span><span class="sy0">=</span><span class="re2">蓝色,绿色,旅游行业,出游,高大上</span>
+<span class="re1">StyleColors</span><span class="sy0">=</span><span class="re2">blue,green</span>
+<span class="re1">List1ShowtypeTotal</span><span class="sy0">=</span><span class="re2">3</span>
+<span class="re1">List2ShowtypeTotal</span><span class="sy0">=</span><span class="re2">1</span>
+<span class="re1">List3ShowtypeTotal</span><span class="sy0">=</span><span class="re2">1</span>
+<span class="re1">List4ShowtypeTotal</span><span class="sy0">=</span><span class="re2">0</span>
+<span class="re1">List5ShowtypeTotal</span><span class="sy0">=</span><span class="re2">0</span>
+<span class="re1">List6ShowtypeTotal</span><span class="sy0">=</span><span class="re2">0</span>
+<span class="re1">List7ShowtypeTotal</span><span class="sy0">=</span><span class="re2">0</span>
+<span class="re1">List8ShowtypeTotal</span><span class="sy0">=</span><span class="re2">0</span>
+<span class="re1">QuickBar</span><span class="sy0">=</span><span class="sy0"><span class="re2">#AAA,#BBB,#FFF|tel</span></span>
+&nbsp;
+&nbsp;
+<span class="re0"><span class="br0">&#91;</span>Developer<span class="br0">&#93;</span></span>
+<span class="re1">Name</span><span class="sy0">=</span><span class="re2">小懿</span>
+<span class="re1">Hi</span><span class="sy0">=</span><span class="re2">灵懿</span>
+<span class="re1">Email</span><span class="sy0">=</span>
+<span class="re1">QQ</span><span class="sy0">=</span>
+<span class="re1">URL</span><span class="sy0">=</span>
+&nbsp;
+<span class="re0"><span class="br0">&#91;</span>Designer<span class="br0">&#93;</span></span>
+<span class="re1">Name</span><span class="sy0">=</span><span class="re2">李树</span>
+<span class="re1">Hi</span><span class="sy0">=</span><span class="re2">厦门美工李树</span>
+<span class="re1">Email</span><span class="sy0">=</span>
+<span class="re1">QQ</span><span class="sy0">=</span>
+<span class="re1">URL</span><span class="sy0">=</span>
+&nbsp;
+<span class="re0"><span class="br0">&#91;</span>Debug<span class="br0">&#93;</span></span>
+<span class="re1">stylecolor</span><span class="sy0">=</span><span class="re2">green</span>

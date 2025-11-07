@@ -1,0 +1,799 @@
+
+<h1 class="sectionedit1" id="公共变量">公共变量</h1>
+<div class="level1">
+
+</div>
+<!-- EDIT1 SECTION "公共变量" [1-28] -->
+<h2 class="sectionedit2" id="可调用数据变量">可调用数据变量</h2>
+<div class="level2">
+<div class="table sectionedit3"><table class="inline">
+	<tr class="row0">
+		
+	</tr>
+</table></div>
+<!-- EDIT3 TABLE [63-64] -->
+<p>
+数组型需要foreach遍历进行调用，其他可直接变量名调用示例
+— — — — — — — — —
+</p>
+
+<p>
+切图过程中打开控制台，刷新页面即可输出出所有数据变量。
+</p>
+
+</div>
+<!-- EDIT2 SECTION "可调用数据变量" [29-263] -->
+<h3 class="sectionedit4" id="include_引入文件">{include}：引入文件</h3>
+<div class="level3">
+
+<p>
+加入文件使用include引用路径,注意起步从“./”开始，即相对于当前目录开始，如：
+</p>
+<pre class="code html4strict">{include file=&quot;./header.html&quot;}</pre>
+
+</div>
+<!-- EDIT4 SECTION "{include}：引入文件" [264-460] -->
+<h3 class="sectionedit5" id="site_url_网站资源域名地址">{$site_url} ：网站资源域名地址</h3>
+<div class="level3">
+
+<p>
+用于JS、CSS引用路径，如：
+</p>
+<pre class="code html4strict">...
+	<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/link.html"><span class="kw2">link</span></a> <span class="kw3">rel</span><span class="sy0">=</span><span class="st0">&quot;stylesheet&quot;</span> <span class="kw3">rev</span><span class="sy0">=</span><span class="st0">&quot;stylesheet&quot;</span> <span class="kw3">href</span><span class="sy0">=</span><span class="st0">&quot;{$site_url}css/style_{$stylecolor}.css&quot;</span> <span class="kw3">type</span><span class="sy0">=</span><span class="st0">&quot;text/css&quot;</span> <span class="sy0">/</span>&gt;</span>
+	<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/script.html"><span class="kw2">script</span></a> <span class="kw3">type</span><span class="sy0">=</span><span class="st0">&quot;text/javascript&quot;</span> <span class="kw3">src</span><span class="sy0">=</span><span class="st0">&quot;{$site_url}js/script.js&quot;</span>&gt;&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/script.html"><span class="kw2">script</span></a>&gt;</span>
+<span class="sc2">&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/head.html"><span class="kw2">head</span></a>&gt;</span>
+...</pre>
+
+</div>
+<!-- EDIT5 SECTION "{$site_url} ：网站资源域名地址" [461-760] -->
+<h3 class="sectionedit6" id="site_another_url_网站另一域名地址">{$site_another_url} ：网站另一域名地址</h3>
+<div class="level3">
+
+<p>
+<em class="u">当前是手机模版时，该变量表示PC域名；<br/>
+
+当前是PC模版时，表示手机域名。</em>
+</p>
+
+<p>
+每个模板index.html中head内必备的代码！
+</p>
+<pre class="code html4strict"><span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/head.html"><span class="kw2">head</span></a>&gt;</span>
+	<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/script.html"><span class="kw2">script</span></a> <span class="kw3">type</span><span class="sy0">=</span><span class="st0">&quot;text/javascript&quot;</span>&gt;</span>
+	// 跳转手机页面
+	{if $site_another_url}
+		if (!!navigator.userAgent.match(/AppleWebKit.*Mobile.*/)) {
+			location.href = '{$site_another_url}';
+		}
+	{/if}
+	<span class="sc2">&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/script.html"><span class="kw2">script</span></a>&gt;</span>
+...</pre>
+
+<p>
+如果是手机模板将加入的代码中双感叹号<code>!!</code>改为单个感叹号<code>!</code>即可。
+</p>
+
+</div>
+<!-- EDIT6 SECTION "{$site_another_url} ：网站另一域名地址" [761-1309] -->
+<h3 class="sectionedit7" id="title_页面标题">{$title} ：页面标题</h3>
+<div class="level3">
+<pre class="code html4strict"><span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/head.html"><span class="kw2">head</span></a>&gt;</span>
+	<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/title.html"><span class="kw2">title</span></a>&gt;</span>{$title}<span class="sc2">&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/title.html"><span class="kw2">title</span></a>&gt;</span>
+...</pre>
+
+</div>
+<!-- EDIT7 SECTION "{$title} ：页面标题" [1310-1401] -->
+<h3 class="sectionedit8" id="keywords_页面关键词">{$keywords} ：页面关键词</h3>
+<div class="level3">
+<pre class="code html4strict"><span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/meta.html"><span class="kw2">meta</span></a> <span class="kw3">name</span><span class="sy0">=</span><span class="st0">&quot;keywords&quot;</span> <span class="kw3">content</span><span class="sy0">=</span><span class="st0">&quot;{$keywords}&quot;</span> <span class="sy0">/</span>&gt;</span></pre>
+
+</div>
+<!-- EDIT8 SECTION "{$keywords} ：页面关键词" [1402-1509] -->
+<h3 class="sectionedit9" id="description_页面描述">{$description} ：页面描述</h3>
+<div class="level3">
+<pre class="code html4strict"> <span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/meta.html"><span class="kw2">meta</span></a> <span class="kw3">name</span><span class="sy0">=</span><span class="st0">&quot;description&quot;</span> <span class="kw3">content</span><span class="sy0">=</span><span class="st0">&quot;{$description}&quot;</span> <span class="sy0">/</span>&gt;</span></pre>
+
+</div>
+<!-- EDIT9 SECTION "{$description} ：页面描述" [1510-1624] -->
+<h3 class="sectionedit10" id="favicon_网站图标">{$favicon} ：网站图标</h3>
+<div class="level3">
+<pre class="code html4strict"> <span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/link.html"><span class="kw2">link</span></a> <span class="kw3">rel</span><span class="sy0">=</span><span class="st0">&quot;shortcut icon&quot;</span> <span class="kw3">href</span><span class="sy0">=</span><span class="st0">&quot;{$favicon}&quot;</span> <span class="kw3">type</span><span class="sy0">=</span><span class="st0">&quot;image/x-icon&quot;</span> <span class="sy0">/</span>&gt;</span></pre>
+
+</div>
+<!-- EDIT10 SECTION "{$favicon} ：网站图标" [1625-1749] -->
+<h3 class="sectionedit11" id="stylecolor_网站颜色">{$stylecolor} ：网站颜色</h3>
+<div class="level3">
+
+<p>
+引用的风格颜色css文件。
+</p>
+<pre class="code html4strict"> ...
+ <span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/link.html"><span class="kw2">link</span></a> <span class="kw3">rel</span><span class="sy0">=</span><span class="st0">&quot;stylesheet&quot;</span> <span class="kw3">rev</span><span class="sy0">=</span><span class="st0">&quot;stylesheet&quot;</span> <span class="kw3">href</span><span class="sy0">=</span><span class="st0">&quot;{$site_url}css/style_{$stylecolor}.css&quot;</span> <span class="kw3">type</span><span class="sy0">=</span><span class="st0">&quot;text/css&quot;</span> <span class="sy0">/</span>&gt;</span>
+<span class="sc2">&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/head.html"><span class="kw2">head</span></a>&gt;</span></pre>
+
+</div>
+<!-- EDIT11 SECTION "{$stylecolor} ：网站颜色" [1750-1963] -->
+<h3 class="sectionedit12" id="logo_网站logo">{$logo} ：网站logo</h3>
+<div class="level3">
+
+<p>
+普通的图片式引用：
+</p>
+<pre class="code html4strict"><span class="sc2">&lt;header&gt;</span>
+	<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/div.html"><span class="kw2">div</span></a> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;logo&quot;</span>&gt;&lt;<a target="_blank" href="http://december.com/html/4/element/a.html"><span class="kw2">a</span></a> <span class="kw3">href</span><span class="sy0">=</span><span class="st0">&quot;#&quot;</span>&gt;&lt;<a target="_blank" href="http://december.com/html/4/element/img.html"><span class="kw2">img</span></a> <span class="kw3">src</span><span class="sy0">=</span><span class="st0">&quot;{$header.logo.image}&quot;</span> <span class="kw3">height</span><span class="sy0">=</span><span class="st0">&quot;97&quot;</span> <span class="kw3">width</span><span class="sy0">=</span><span class="st0">&quot;498&quot;</span><span class="sy0">/</span>&gt;&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/a.html"><span class="kw2">a</span></a>&gt;&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/div.html"><span class="kw2">div</span></a>&gt;</span>
+	...</pre>
+
+<p>
+css样式放置LOGO的引用方式：
+</p>
+<dl class="file">
+<dt><a href="/wiki/doku.php?do=export_code&amp;id=ued:temple:global&amp;codeblock=9" title="下载片段" class="mediafile mf_css">style.css</a></dt>
+<dd><pre class="code file css"><span class="re1">.logo</span> <span class="br0">&#123;</span> <span class="kw1">background-image</span><span class="sy0">:</span><span class="kw2">url</span><span class="br0">&#40;</span><span class="co2">../images/logo.png</span><span class="br0">&#41;</span><span class="sy0">;</span> <span class="br0">&#125;</span> <span class="coMULTI">/* 在CSS文件中写好LOGO默认值 */</span></pre>
+</dd></dl>
+<dl class="file">
+<dt><a href="/wiki/doku.php?do=export_code&amp;id=ued:temple:global&amp;codeblock=10" title="下载片段" class="mediafile mf_html">header.html</a></dt>
+<dd><pre class="code file html4strict"><span class="sc-1">&lt;!-- 通过Smarty变量覆盖CSS文件中的默认值 --&gt;</span>
+<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/style.html"><span class="kw2">style</span></a>&gt;</span>
+	.logo { background-image:url({$header.logo.image}); }
+<span class="sc2">&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/style.html"><span class="kw2">style</span></a>&gt;</span>
+<span class="sc2">&lt;header&gt;</span>
+	<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/div.html"><span class="kw2">div</span></a> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;logo&quot;</span>&gt;&lt;<a target="_blank" href="http://december.com/html/4/element/a.html"><span class="kw2">a</span></a> <span class="kw3">href</span><span class="sy0">=</span><span class="st0">&quot;javascript:;&quot;</span>&gt;&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/a.html"><span class="kw2">a</span></a>&gt;&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/div.html"><span class="kw2">div</span></a>&gt;</span>
+<span class="sc2">&lt;<span class="sy0">/</span>header&gt;</span></pre>
+</dd></dl>
+
+</div>
+<!-- EDIT12 SECTION "{$logo} ：网站logo" [1964-2552] -->
+<h3 class="sectionedit13" id="footprint_底部版权">{$footprint} ：底部版权</h3>
+<div class="level3">
+<pre class="code html4strict">...
+<span class="sc2">&lt;footer&gt;</span>
+    <span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/p.html"><span class="kw2">p</span></a>&gt;</span>{$footprint}<span class="sc2">&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/p.html"><span class="kw2">p</span></a>&gt;</span>
+<span class="sc2">&lt;<span class="sy0">/</span>footer&gt;</span></pre>
+
+</div>
+<!-- EDIT13 SECTION "{$footprint} ：底部版权" [2553-2658] -->
+<h3 class="sectionedit14" id="headscript_头部脚本">{$headscript} ：头部脚本</h3>
+<div class="level3">
+
+<p>
+<em class="u">仅首页面运行的脚本，多用于身份识别（直达号、百度站长等）</em>
+</p>
+
+<p>
+放置于index.html的head内尾部
+</p>
+<pre class="code html4strict">	...
+	{$headscript}
+<span class="sc2">&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/head.html"><span class="kw2">head</span></a>&gt;</span></pre>
+
+</div>
+<!-- EDIT14 SECTION "{$headscript} ：头部脚本" [2659-2872] -->
+<h3 class="sectionedit15" id="footscript_底部脚本">{$footscript} ：底部脚本</h3>
+<div class="level3">
+
+<p>
+放置于footer.html中，使得每个页面都运行此（统计）脚本。
+</p>
+<pre class="code html4strict">...
+<span class="sc2">&lt;<span class="sy0">/</span>footer&gt;</span>
+{$footscript}
+<span class="sc2">&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/body.html"><span class="kw2">body</span></a>&gt;</span>
+<span class="sc2">&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/html.html"><span class="kw2">html</span></a>&gt;</span></pre>
+
+</div>
+<!-- EDIT15 SECTION "{$footscript} ：底部脚本" [2873-3054] -->
+<h3 class="sectionedit16" id="pagecontent_内容单页的html">{$pageContent} ：内容单页的HTML</h3>
+<div class="level3">
+
+</div>
+<!-- EDIT16 SECTION "{$pageContent} ：内容单页的HTML" [3055-3103] -->
+<h3 class="sectionedit17" id="navs_网站导航栏">{$navs} ：网站导航栏</h3>
+<div class="level3">
+<ul>
+<li class="level1"><div class="li"> {$navs[0].name} 导航名</div>
+</li>
+<li class="level1"><div class="li"> {$navs[0].image} 导航图片</div>
+</li>
+<li class="level1"><div class="li"> {$navs[0].link} 导航链接</div>
+</li>
+<li class="level1"><div class="li"> {$navs[0].current} 是否当前导航，1为当前导航，class选中</div>
+</li>
+<li class="level1"><div class="li"> {$navs[0].lastest[0]} 栏目最新文章列表（仅一级菜单有），格式同 <a href="#list_列表页数据" title="ued:temple:global ↵" class="wikilink1">{$list} ：列表页数据</a></div>
+</li>
+<li class="level1"><div class="li"> {$navs[0].childmenu} 子导航，结构类似导航</div>
+</li>
+</ul>
+<dl class="file">
+<dt><a href="/wiki/doku.php?do=export_code&amp;id=ued:temple:global&amp;codeblock=14" title="下载片段" class="mediafile mf_html">header.html</a></dt>
+<dd><pre class="code file html4strict"><span class="sc2">&lt;header&gt;</span>
+	<span class="sc2">&lt;nav&gt;</span>
+		<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/ul.html"><span class="kw2">ul</span></a> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;clearfix&quot;</span>&gt;</span>
+			{foreach name=navs item=nav from=$navs}
+			<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/li.html"><span class="kw2">li</span></a> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;{if $nav.current}current{/if}&quot;</span>&gt;</span>
+				<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/a.html"><span class="kw2">a</span></a> <span class="kw3">href</span><span class="sy0">=</span><span class="st0">&quot;{$nav.link}&quot;</span>&gt;</span>{$nav.name}<span class="sc2">&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/a.html"><span class="kw2">a</span></a>&gt;</span>
+				{if $nav.childmenu}
+					<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/ul.html"><span class="kw2">ul</span></a> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;clearfix&quot;</span>&gt;</span>
+						{foreach key=key item=nav_list from=$nav.childmenu}
+						<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/li.html"><span class="kw2">li</span></a> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;{if $nav_list.current}current{/if}&quot;</span>&gt;&lt;<a target="_blank" href="http://december.com/html/4/element/a.html"><span class="kw2">a</span></a> <span class="kw3">href</span><span class="sy0">=</span><span class="st0">&quot;{$nav_list.link}&quot;</span>&gt;</span>{$nav_list.name}<span class="sc2">&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/a.html"><span class="kw2">a</span></a>&gt;&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/li.html"><span class="kw2">li</span></a>&gt;</span>
+						{/foreach}
+					<span class="sc2">&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/ul.html"><span class="kw2">ul</span></a>&gt;</span>
+				{/if}
+			<span class="sc2">&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/li.html"><span class="kw2">li</span></a>&gt;</span>
+			{/foreach}
+		<span class="sc2">&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/ul.html"><span class="kw2">ul</span></a>&gt;</span>
+	<span class="sc2">&lt;<span class="sy0">/</span>nav&gt;</span>
+<span class="sc2">&lt;<span class="sy0">/</span>header&gt;</span></pre>
+</dd></dl>
+
+</div>
+<!-- EDIT17 SECTION "{$navs} ：网站导航栏" [3104-4014] -->
+<h3 class="sectionedit18" id="pagenavs_同栏目导航栏">{$pagenavs} ：同栏目导航栏</h3>
+<div class="level3">
+
+<p>
+多用于文章列表页显示本根栏目的子栏目列表。
+</p>
+<ul>
+<li class="level1"><div class="li"> {$pagenavs[0].name} 导航名</div>
+</li>
+<li class="level1"><div class="li"> {$pagenavs[0].image} 导航图片</div>
+</li>
+<li class="level1"><div class="li"> {$pagenavs[0].link} 导航链接</div>
+</li>
+<li class="level1"><div class="li"> {$pagenavs[0].current} 是否当前导航，1为当前导航，class选中</div>
+</li>
+<li class="level1"><div class="li"> {$pagenavs[0].childmenu} 子导航，结构类似导航</div>
+</li>
+</ul>
+<pre class="code html4strict"><span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/ul.html"><span class="kw2">ul</span></a> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;clearfix&quot;</span>&gt;</span>
+	{foreach name=pagenavs item=nav from=$pagenavs}
+	{if $nav.current}<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/li.html"><span class="kw2">li</span></a> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;fl current&quot;</span>&gt;</span>{else}<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/li.html"><span class="kw2">li</span></a> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;fl&quot;</span>&gt;</span>{/if}
+		<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/a.html"><span class="kw2">a</span></a> <span class="kw3">href</span><span class="sy0">=</span><span class="st0">&quot;{$nav.link}&quot;</span>&gt;</span>{$nav.name}<span class="sc2">&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/a.html"><span class="kw2">a</span></a>&gt;</span>
+	<span class="sc2">&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/li.html"><span class="kw2">li</span></a>&gt;</span>
+	{/foreach}
+<span class="sc2">&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/ul.html"><span class="kw2">ul</span></a>&gt;</span></pre>
+<pre class="code html4strict"><span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/ul.html"><span class="kw2">ul</span></a> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;clearfix&quot;</span>&gt;</span>
+	{foreach name=cnavs item=cnav from=$navs}
+	{if $cnav.current and $cnav.childmenu}
+		{foreach name=pagenavs item=nav from=$cnav.childmenu}
+		{if $nav.current}<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/li.html"><span class="kw2">li</span></a> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;fl current&quot;</span>&gt;</span>{else}<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/li.html"><span class="kw2">li</span></a> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;fl&quot;</span>&gt;</span>{/if}
+			<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/a.html"><span class="kw2">a</span></a> <span class="kw3">href</span><span class="sy0">=</span><span class="st0">&quot;{$nav.link}&quot;</span>&gt;</span>{$nav.name}<span class="sc2">&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/a.html"><span class="kw2">a</span></a>&gt;</span>
+		<span class="sc2">&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/li.html"><span class="kw2">li</span></a>&gt;</span>
+		{/foreach}
+	{/if}
+	{/foreach}
+<span class="sc2">&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/ul.html"><span class="kw2">ul</span></a>&gt;</span></pre>
+
+<p>
+以上两种方式均可!
+</p>
+
+</div>
+<!-- EDIT18 SECTION "{$pagenavs} ：同栏目导航栏" [4015-4961] -->
+<h3 class="sectionedit19" id="contact_联系方式">{$contact} ：联系方式</h3>
+<div class="level3">
+<ul>
+<li class="level1"><div class="li"> {$contact.company} 企业名称</div>
+</li>
+<li class="level1"><div class="li"> {$contact.name} 联系人</div>
+</li>
+<li class="level1"><div class="li"> {$contact.mobile} 手机</div>
+</li>
+<li class="level1"><div class="li"> {$contact.telephone} 固话</div>
+</li>
+<li class="level1"><div class="li"> {$contact.mail} 邮箱</div>
+</li>
+<li class="level1"><div class="li"> {$contact.qq} QQ</div>
+</li>
+<li class="level1"><div class="li"> {$contact.address} 公司地址</div>
+</li>
+</ul>
+
+<p>
+实际示例：
+</p>
+<pre class="code html4strict"><span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/div.html"><span class="kw2">div</span></a> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;footer-top-m mb30&quot;</span>&gt;</span>
+   <span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/p.html"><span class="kw2">p</span></a>&gt;</span>邮箱：{$contact.mail}<span class="sc2">&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/p.html"><span class="kw2">p</span></a>&gt;</span>
+   <span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/p.html"><span class="kw2">p</span></a>&gt;</span>联系地址：{$contact.address}<span class="sc2">&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/p.html"><span class="kw2">p</span></a>&gt;</span>
+<span class="sc2">&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/div.html"><span class="kw2">div</span></a>&gt;</span>
+<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/div.html"><span class="kw2">div</span></a> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;footer-top-r mb30&quot;</span>&gt;</span>
+   <span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/p.html"><span class="kw2">p</span></a>&gt;</span>联系我们<span class="sc2">&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/p.html"><span class="kw2">p</span></a>&gt;</span>
+   <span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/ul.html"><span class="kw2">ul</span></a>&gt;</span>
+       <span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/li.html"><span class="kw2">li</span></a>&gt;</span>电话:{$contact.telephone}<span class="sc2">&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/li.html"><span class="kw2">li</span></a>&gt;</span>
+       <span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/li.html"><span class="kw2">li</span></a>&gt;</span>手机:{$contact.mobile}<span class="sc2">&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/li.html"><span class="kw2">li</span></a>&gt;</span>
+       <span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/li.html"><span class="kw2">li</span></a>&gt;</span>联系人:{$contact.name}<span class="sc2">&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/li.html"><span class="kw2">li</span></a>&gt;</span>
+   <span class="sc2">&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/ul.html"><span class="kw2">ul</span></a>&gt;</span>
+<span class="sc2">&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/div.html"><span class="kw2">div</span></a>&gt;</span></pre>
+
+</div>
+<!-- EDIT19 SECTION "{$contact} ：联系方式" [4962-5569] -->
+<h3 class="sectionedit20" id="list_列表页数据">{$list} ：列表页数据</h3>
+<div class="level3">
+
+<p>
+<em class="u">仅在list-xxx.html页面调用</em>
+</p>
+<ul>
+<li class="level1"><div class="li"> {$list.name} 栏目名称</div>
+</li>
+<li class="level1"><div class="li"> {$list.image} 栏目图片</div>
+</li>
+<li class="level1"><div class="li"> {$list.link} 栏目链接(一般用于“查看更多”按钮)</div>
+</li>
+<li class="level1"><div class="li"> {$list.description} 栏目描述</div>
+</li>
+<li class="level1"><div class="li"> {$list.data[0].title} 文章标题</div>
+</li>
+<li class="level1"><div class="li"> {$list.data[0].image} 文章预览图</div>
+</li>
+<li class="level1"><div class="li"> {$list.data[0].link} 文章链接</div>
+</li>
+<li class="level1"><div class="li"> {$list.data[0].description} 文章内容</div>
+</li>
+<li class="level1"><div class="li"> {$list.data[0].pubdate} 发布时间</div>
+</li>
+<li class="level1"><div class="li"> {$list.data[0].category.name} 所属栏目名</div>
+</li>
+<li class="level1"><div class="li"> {$list.data[0].category.link} 所属栏目链接</div>
+</li>
+</ul>
+<pre class="code html4strict"><span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/h2.html"><span class="kw2">h2</span></a>&gt;&lt;<a target="_blank" href="http://december.com/html/4/element/span.html"><span class="kw2">span</span></a> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;bgc&quot;</span>&gt;</span>{$list.name}<span class="sc2">&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/span.html"><span class="kw2">span</span></a>&gt;&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/h2.html"><span class="kw2">h2</span></a>&gt;</span>
+<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/ul.html"><span class="kw2">ul</span></a> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;list clearfix&quot;</span>&gt;</span>
+	{foreach name=article item=article from=$list.data}
+	<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/li.html"><span class="kw2">li</span></a>&gt;&lt;<a target="_blank" href="http://december.com/html/4/element/a.html"><span class="kw2">a</span></a> <span class="kw3">href</span><span class="sy0">=</span><span class="st0">&quot;{$article.link}&quot;</span>&gt;</span>{$article.title}<span class="sc2">&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/a.html"><span class="kw2">a</span></a>&gt;&lt;time <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;fr&quot;</span> <span class="kw3">datetime</span><span class="sy0">=</span><span class="st0">&quot;{$article.pubdate}&quot;</span> pubdate<span class="sy0">=</span><span class="st0">&quot;pubdate&quot;</span>&gt;</span>{$article.pubdate}<span class="sc2">&lt;<span class="sy0">/</span>time&gt;&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/li.html"><span class="kw2">li</span></a>&gt;</span>
+	{/foreach}
+<span class="sc2">&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/ul.html"><span class="kw2">ul</span></a>&gt;</span></pre>
+
+</div>
+<!-- EDIT20 SECTION "{$list} ：列表页数据" [5570-6429] -->
+<h3 class="sectionedit21" id="page_links_列表分页项">{$page_links} ：列表分页项</h3>
+<div class="level3">
+<ul>
+<li class="level1"><div class="li"> {$page_links.page_count} 总页码数</div>
+</li>
+<li class="level1"><div class="li"> {$page_links.per_page} 每页显示项数</div>
+</li>
+<li class="level1"><div class="li"> {$page_links.current_page} 当前页</div>
+</li>
+<li class="level1"><div class="li"> {$page_links.first_link} 首页链接</div>
+</li>
+<li class="level1"><div class="li"> {$page_links.prev_link} 上一页链接</div>
+</li>
+<li class="level1"><div class="li"> {$page_links.next_link} 下一页链接</div>
+</li>
+<li class="level1"><div class="li"> {$page_links.last_link} 尾页链接</div>
+</li>
+<li class="level1"><div class="li"> {$page_links.nears_link[]} 附近的分页链接</div>
+</li>
+</ul>
+<pre class="code javascript">  <span class="co1">//$page_links.nears_link[]数据格式如下</span>
+  <span class="br0">&#123;</span>
+&nbsp;
+      <span class="st0">'4'</span><span class="sy0">:</span><span class="st0">'category/3_4.html'</span><span class="sy0">,</span>
+      <span class="st0">'5'</span><span class="sy0">:</span><span class="st0">'category/3_5.html'</span><span class="sy0">,</span>
+      <span class="st0">'6'</span><span class="sy0">:</span><span class="st0">'category/3_6.html'</span><span class="sy0">,</span><span class="co1">//当前页,通过current_page判断</span>
+      <span class="st0">'7'</span><span class="sy0">:</span><span class="st0">'category/3_7.html'</span><span class="sy0">,</span>
+      <span class="st0">'8'</span><span class="sy0">:</span><span class="st0">'category/3_8.html'</span><span class="sy0">,</span>
+  <span class="br0">&#125;</span>
+&nbsp;</pre>
+
+<p>
+例如：
+</p>
+<pre class="code html4strict"><span class="sc-1">&lt;!-- 分页链接 --&gt;</span>
+<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/ul.html"><span class="kw2">ul</span></a> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;clearfix fr&quot;</span>&gt;</span>
+	<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/li.html"><span class="kw2">li</span></a> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;fl&quot;</span>&gt;&lt;<a target="_blank" href="http://december.com/html/4/element/a.html"><span class="kw2">a</span></a> <span class="kw3">href</span><span class="sy0">=</span><span class="st0">&quot;{$page_links.first_link}&quot;</span>&gt;</span>首页<span class="sc2">&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/a.html"><span class="kw2">a</span></a>&gt;&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/li.html"><span class="kw2">li</span></a>&gt;</span>
+	<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/li.html"><span class="kw2">li</span></a> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;fl&quot;</span>&gt;&lt;<a target="_blank" href="http://december.com/html/4/element/a.html"><span class="kw2">a</span></a> <span class="kw3">href</span><span class="sy0">=</span><span class="st0">&quot;{$page_links.prev_link}&quot;</span>&gt;</span>上一页<span class="sc2">&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/a.html"><span class="kw2">a</span></a>&gt;&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/li.html"><span class="kw2">li</span></a>&gt;</span>
+	{foreach name=nears_link item=near_link key=near_page from=$page_links.nears_link}
+	{if $near_page == $page_links.current_page}
+		<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/li.html"><span class="kw2">li</span></a> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;fl current&quot;</span>&gt;&lt;<a target="_blank" href="http://december.com/html/4/element/a.html"><span class="kw2">a</span></a>&gt;</span>{$near_page}<span class="sc2">&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/a.html"><span class="kw2">a</span></a>&gt;&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/li.html"><span class="kw2">li</span></a>&gt;</span>
+	{else}
+		<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/li.html"><span class="kw2">li</span></a> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;fl&quot;</span>&gt;&lt;<a target="_blank" href="http://december.com/html/4/element/a.html"><span class="kw2">a</span></a> <span class="kw3">href</span><span class="sy0">=</span><span class="st0">&quot;{$near_link}&quot;</span>&gt;</span>{$near_page}<span class="sc2">&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/a.html"><span class="kw2">a</span></a>&gt;&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/li.html"><span class="kw2">li</span></a>&gt;</span>
+	{/if}
+	{/foreach}
+	<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/li.html"><span class="kw2">li</span></a> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;fl&quot;</span>&gt;&lt;<a target="_blank" href="http://december.com/html/4/element/a.html"><span class="kw2">a</span></a> <span class="kw3">href</span><span class="sy0">=</span><span class="st0">&quot;{$page_links.next_link}&quot;</span>&gt;</span>下一页<span class="sc2">&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/a.html"><span class="kw2">a</span></a>&gt;&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/li.html"><span class="kw2">li</span></a>&gt;</span>
+	<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/li.html"><span class="kw2">li</span></a> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;fl&quot;</span>&gt;&lt;<a target="_blank" href="http://december.com/html/4/element/a.html"><span class="kw2">a</span></a> <span class="kw3">href</span><span class="sy0">=</span><span class="st0">&quot;{$page_links.last_link}&quot;</span>&gt;</span>末页<span class="sc2">&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/a.html"><span class="kw2">a</span></a>&gt;&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/li.html"><span class="kw2">li</span></a>&gt;</span>
+<span class="sc2">&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/ul.html"><span class="kw2">ul</span></a>&gt;</span></pre>
+
+</div>
+<!-- EDIT21 SECTION "{$page_links} ：列表分页项" [6430-7725] -->
+<h3 class="sectionedit22" id="article_文章页数据">{$article} ：文章页数据</h3>
+<div class="level3">
+
+<p>
+<em class="u">仅在content-xxx.html页面调用</em>
+</p>
+<ul>
+<li class="level1"><div class="li"> {$article.title} 文章标题</div>
+</li>
+<li class="level1"><div class="li"> {$article.content} 文章内容</div>
+</li>
+<li class="level1"><div class="li"> {$article.description} 文章简介</div>
+</li>
+<li class="level1"><div class="li"> {$article.images[0].title} 产品图名称</div>
+</li>
+<li class="level1"><div class="li"> {$article.images[0].image} 产品图地址</div>
+</li>
+<li class="level1"><div class="li"> {$article.pubdate} 发布时间</div>
+</li>
+<li class="level1"><div class="li"> {$article.prev.title} 上一篇文章标题</div>
+</li>
+<li class="level1"><div class="li"> {$article.prev.link} 上一篇文章链接</div>
+</li>
+<li class="level1"><div class="li"> {$article.next.title} 下一篇文章标题</div>
+</li>
+<li class="level1"><div class="li"> {$article.next.link} 下一篇文章链接</div>
+</li>
+<li class="level1"><div class="li"> {$article.category.name} 所属栏目名</div>
+</li>
+<li class="level1"><div class="li"> {$article.category.link} 所属栏目链接</div>
+</li>
+</ul>
+<pre class="code html4strict"><span class="sc-1">&lt;!-- 文章主体 --&gt;</span>
+<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/h2.html"><span class="kw2">h2</span></a>&gt;</span>{$article.title}<span class="sc2">&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/h2.html"><span class="kw2">h2</span></a>&gt;</span>
+<span class="sc2">&lt;article&gt;</span>
+	{$article.content|unescape:&quot;html&quot;}
+<span class="sc2">&lt;<span class="sy0">/</span>article&gt;</span></pre>
+
+</div>
+<!-- EDIT22 SECTION "{$article} ：文章页数据" [7726-8454] -->
+<h3 class="sectionedit23" id="mindexcats_移动端首页栏目展示数据">{$mIndexCats} ：移动端首页栏目展示数据</h3>
+<div class="level3">
+<ul>
+<li class="level1"><div class="li"> {$mIndexCats[0].title} 栏目标题</div>
+</li>
+<li class="level1"><div class="li"> …</div>
+</li>
+<li class="level1"><div class="li"> {$mIndexCats[0].type} 栏目类型：1-文字列表，2-图片列表，3-图文列表，4-内容单页，5-功能，6-外链，7-微信功能，8-直达号功能</div>
+</li>
+</ul>
+
+<p>
+如果type==1、2、3：
+</p>
+<ul>
+<li class="level1"><div class="li"> {$mIndexCats[0].title} 栏目标题</div>
+</li>
+<li class="level1"><div class="li"> {$mIndexCats[0].image} 栏目预览图地址</div>
+</li>
+<li class="level1"><div class="li"> {$mIndexCats[0].link} 栏目链接地址</div>
+</li>
+<li class="level1"><div class="li"> {$mIndexCats[0].list[0]} 栏目文章列表，格式同 <a href="#list_列表页数据" title="ued:temple:global ↵" class="wikilink1">{$list} ：列表页数据</a></div>
+</li>
+<li class="level1"><div class="li"> {$mIndexCats[0].type} 栏目类型</div>
+</li>
+</ul>
+
+<p>
+如果type==4：
+</p>
+<ul>
+<li class="level1"><div class="li"> {$mIndexCats[0].title} 栏目标题</div>
+</li>
+<li class="level1"><div class="li"> {$mIndexCats[0].image} 栏目预览图地址</div>
+</li>
+<li class="level1"><div class="li"> {$mIndexCats[0].link} 栏目链接地址</div>
+</li>
+<li class="level1"><div class="li"> {$mIndexCats[0].content} 栏目单页内容</div>
+</li>
+<li class="level1"><div class="li"> {$mIndexCats[0].type} 栏目类型</div>
+</li>
+</ul>
+
+<p>
+如果type==5、6、7、8：
+</p>
+<ul>
+<li class="level1"><div class="li"> {$mIndexCats[0].title} 栏目标题</div>
+</li>
+<li class="level1"><div class="li"> {$mIndexCats[0].image} 栏目预览图地址</div>
+</li>
+<li class="level1"><div class="li"> {$mIndexCats[0].link} 栏目链接地址</div>
+</li>
+<li class="level1"><div class="li"> {$mIndexCats[0].type} 栏目类型</div>
+</li>
+</ul>
+<pre class="code html4strict">{* 输出导航式栏目 *}
+<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/ul.html"><span class="kw2">ul</span></a> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;clearfix&quot;</span>&gt;</span>
+	{foreach name=mIndexCats_nav item=mIndexCat from=$mIndexCats}
+	{if $mIndexCat.type gt 4}
+	<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/li.html"><span class="kw2">li</span></a> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;fl&quot;</span>&gt;&lt;<a target="_blank" href="http://december.com/html/4/element/a.html"><span class="kw2">a</span></a> <span class="kw3">href</span><span class="sy0">=</span><span class="st0">&quot;{$mIndexCat.link}&quot;</span>&gt;&lt;<a target="_blank" href="http://december.com/html/4/element/img.html"><span class="kw2">img</span></a> <span class="kw3">src</span><span class="sy0">=</span><span class="st0">&quot;{$mIndexCat.image}&quot;</span> <span class="kw3">alt</span><span class="sy0">=</span><span class="st0">&quot;{$mIndexCat.title}&quot;</span> <span class="sy0">/</span>&gt;&lt;<a target="_blank" href="http://december.com/html/4/element/h3.html"><span class="kw2">h3</span></a> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;tc&quot;</span>&gt;</span>{$mIndexCat.title}<span class="sc2">&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/h3.html"><span class="kw2">h3</span></a>&gt;&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/a.html"><span class="kw2">a</span></a>&gt;&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/li.html"><span class="kw2">li</span></a>&gt;</span>
+	{/if}
+	{/foreach}
+<span class="sc2">&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/ul.html"><span class="kw2">ul</span></a>&gt;</span>
+{* 输出内容式栏目 *}
+...
+<span class="sc-1">&lt;!-- 根据type显示不同的HTML结构 --&gt;</span></pre>
+
+</div>
+<!-- EDIT23 SECTION "{$mIndexCats} ：移动端首页栏目展示数据" [8455-9892] -->
+<h3 class="sectionedit24" id="index_首页数据_自定义于indexjson文件中">{$index} ：首页数据（自定义于index.json文件中）</h3>
+<div class="level3">
+
+</div>
+
+<h4 id="数据格式">数据格式</h4>
+<div class="level4">
+<pre class="code javascript"><span class="br0">&#123;</span>
+	<span class="st0">&quot;title&quot;</span><span class="sy0">:</span> <span class="br0">&#123;</span>
+		<span class="st0">&quot;value&quot;</span><span class="sy0">:</span> <span class="st0">&quot;XXX企业&quot;</span><span class="sy0">,</span>
+		<span class="st0">&quot;description&quot;</span><span class="sy0">:</span> <span class="st0">&quot;顶部大标题&quot;</span><span class="sy0">,</span>
+		<span class="st0">&quot;type&quot;</span><span class="sy0">:</span> <span class="st0">&quot;text&quot;</span>
+	<span class="br0">&#125;</span>
+<span class="br0">&#125;</span></pre>
+
+<p>
+每个数据都必须包含value、description和type项。
+</p>
+
+<p>
+<em class="u">description描述：</em> 用来描述其在页面的位置，如“顶部轮滚图”“左侧公告”“中部第二个新闻列表”
+</p>
+
+<p>
+<em class="u">type类型：</em>
+</p>
+<ul>
+<li class="level1"><div class="li"> text：单行文字</div>
+</li>
+<li class="level1"><div class="li"> textarea：多行文本</div>
+</li>
+<li class="level1"><div class="li"> image：单张图片</div>
+</li>
+<li class="level1"><div class="li"> images：多图，多个image类型的数组</div>
+</li>
+<li class="level1"><div class="li"> list：栏目列表数据（特别注意：此类型构造的json格式与最终输出smarty变量格式不同，类型不建议另外自定义这五类以外的类型）</div>
+</li>
+</ul>
+
+<p>
+<em class="u">value初始化数据：</em> 可放入示例数据，切图过程实时预览（不同type类型的value值不同，具体可参见如下实例json）
+</p>
+
+</div>
+
+<h4 id="实例json">实例json</h4>
+<div class="level4">
+<pre class="code javascript"><span class="br0">&#123;</span>
+	<span class="st0">&quot;announcement_title&quot;</span><span class="sy0">:</span> <span class="br0">&#123;</span>
+		<span class="st0">&quot;value&quot;</span><span class="sy0">:</span> <span class="st0">&quot;大喇叭：&quot;</span><span class="sy0">,</span>
+		<span class="st0">&quot;description&quot;</span><span class="sy0">:</span> <span class="st0">&quot;公告标题&quot;</span><span class="sy0">,</span>
+		<span class="st0">&quot;type&quot;</span><span class="sy0">:</span> <span class="st0">&quot;text&quot;</span>
+	<span class="br0">&#125;</span><span class="sy0">,</span>
+	<span class="st0">&quot;announcement&quot;</span><span class="sy0">:</span> <span class="br0">&#123;</span>
+		<span class="st0">&quot;value&quot;</span><span class="sy0">:</span> <span class="st0">&quot;你看到的都是模板测试数据，需修改请登陆后台进入【页面内容】更新！<span class="es0">\r</span><span class="es0">\n</span>第二行公告内容公告内容公告内容公告内容&quot;</span><span class="sy0">,</span>
+		<span class="st0">&quot;description&quot;</span><span class="sy0">:</span> <span class="st0">&quot;网站公告&quot;</span><span class="sy0">,</span>
+		<span class="st0">&quot;type&quot;</span><span class="sy0">:</span> <span class="st0">&quot;textarea&quot;</span>
+	<span class="br0">&#125;</span><span class="sy0">,</span>
+	<span class="st0">&quot;logo&quot;</span><span class="sy0">:</span> <span class="br0">&#123;</span>
+		<span class="st0">&quot;value&quot;</span><span class="sy0">:</span> <span class="br0">&#123;</span>
+			<span class="st0">&quot;title&quot;</span><span class="sy0">:</span> <span class="st0">&quot;XXX企业&quot;</span><span class="sy0">,</span>
+			<span class="st0">&quot;image&quot;</span><span class="sy0">:</span> <span class="st0">&quot;http://www.baidu.com/img/baidu_jgylogo3.gif&quot;</span><span class="sy0">,</span>
+			<span class="st0">&quot;link&quot;</span><span class="sy0">:</span> <span class="st0">&quot;http://www.baidu.com/&quot;</span>
+		<span class="br0">&#125;</span><span class="sy0">,</span>
+		<span class="st0">&quot;description&quot;</span><span class="sy0">:</span> <span class="st0">&quot;网站LOGO&quot;</span><span class="sy0">,</span>
+		<span class="st0">&quot;type&quot;</span><span class="sy0">:</span> <span class="st0">&quot;image&quot;</span>
+	<span class="br0">&#125;</span>
+	<span class="st0">&quot;slidepics&quot;</span><span class="sy0">:</span> <span class="br0">&#123;</span>
+		<span class="st0">&quot;value&quot;</span><span class="sy0">:</span> <span class="br0">&#91;</span><span class="br0">&#123;</span>
+			<span class="st0">&quot;title&quot;</span><span class="sy0">:</span> <span class="st0">&quot;测试图1&quot;</span><span class="sy0">,</span>
+			<span class="st0">&quot;image&quot;</span><span class="sy0">:</span> <span class="st0">&quot;http://tb2.bdstatic.com/tb/static-common/img/search_logo_big_282cef2.gif&quot;</span><span class="sy0">,</span>
+			<span class="st0">&quot;link&quot;</span><span class="sy0">:</span> <span class="st0">&quot;article/1.html&quot;</span>
+		<span class="br0">&#125;</span><span class="sy0">,</span> <span class="br0">&#123;</span>
+			<span class="st0">&quot;title&quot;</span><span class="sy0">:</span> <span class="st0">&quot;测试图2&quot;</span><span class="sy0">,</span>
+			<span class="st0">&quot;image&quot;</span><span class="sy0">:</span> <span class="st0">&quot;http://img0.bdstatic.com/static/common/widget/search_box_search/logo/logo_3b6de4c.png&quot;</span><span class="sy0">,</span>
+			<span class="st0">&quot;link&quot;</span><span class="sy0">:</span> <span class="st0">&quot;article/2.html&quot;</span>
+		<span class="br0">&#125;</span><span class="br0">&#93;</span><span class="sy0">,</span>
+		<span class="st0">&quot;description&quot;</span><span class="sy0">:</span> <span class="st0">&quot;大轮滚图&quot;</span><span class="sy0">,</span>
+		<span class="st0">&quot;type&quot;</span><span class="sy0">:</span> <span class="st0">&quot;images&quot;</span>
+	<span class="br0">&#125;</span><span class="sy0">,</span>
+	<span class="st0">&quot;list1&quot;</span><span class="sy0">:</span> <span class="br0">&#123;</span>
+		<span class="st0">&quot;value&quot;</span><span class="sy0">:</span> <span class="br0">&#123;</span>
+			<span class="st0">&quot;id&quot;</span><span class="sy0">:</span> <span class="nu0">1</span><span class="sy0">,</span>
+			<span class="st0">&quot;total&quot;</span><span class="sy0">:</span> <span class="nu0">4</span><span class="sy0">,</span>
+			<span class="st0">&quot;star_only&quot;</span><span class="sy0">:</span> <span class="nu0">0</span>
+		<span class="br0">&#125;</span><span class="sy0">,</span>
+		<span class="st0">&quot;description&quot;</span><span class="sy0">:</span> <span class="st0">&quot;第一个图文列表&quot;</span><span class="sy0">,</span>
+		<span class="st0">&quot;type&quot;</span><span class="sy0">:</span> <span class="st0">&quot;list&quot;</span>
+	<span class="br0">&#125;</span>
+<span class="br0">&#125;</span></pre>
+
+</div>
+
+<h4 id="数据说明">数据说明</h4>
+<div class="level4">
+<ul>
+<li class="level1"><div class="li"> {$index.title} 大标题</div>
+</li>
+<li class="level1"><div class="li"> {$index.slidepics[0].title} 轮滚图</div>
+</li>
+<li class="level1"><div class="li"> {$index.slidepics[0].image} 轮滚图</div>
+</li>
+<li class="level1"><div class="li"> {$index.slidepics[0].link} 轮滚图</div>
+</li>
+<li class="level1"><div class="li"> {$index.list1.name} 栏目名称</div>
+</li>
+<li class="level1"><div class="li"> {$index.list1.image} 栏目图片</div>
+</li>
+<li class="level1"><div class="li"> {$index.list1.link} 栏目链接(一般用于“查看更多”按钮)</div>
+</li>
+<li class="level1"><div class="li"> {$index.list1.description} 栏目描述</div>
+</li>
+<li class="level1"><div class="li"> {$index.list1.data[]} <strong>这个特别注意，输出的数据格式与填写的json格式是不一样的</strong></div>
+</li>
+<li class="level1"><div class="li"> {$index.list1.data[0].title} 文章标题</div>
+</li>
+<li class="level1"><div class="li"> {$index.list1.data[0].image} 文章预览图</div>
+</li>
+<li class="level1"><div class="li"> {$index.list1.data[0].link} 文章链接</div>
+</li>
+<li class="level1"><div class="li"> {$index.list1.data[0].description} 文章内容</div>
+</li>
+<li class="level1"><div class="li"> {$index.list1.data[0].pubdate} 发布时间</div>
+</li>
+<li class="level1"><div class="li"> {$index.list1.data[0].category.name} 所属栏目名</div>
+</li>
+<li class="level1"><div class="li"> {$index.list1.data[0].category.link} 所属栏目链接</div>
+</li>
+<li class="level1"><div class="li"> {$index.announcement} 网站公告</div>
+</li>
+</ul>
+
+<p>
+实际示例：
+比如，json文件内容为：
+</p>
+<pre class="code javascript"><span class="br0">&#123;</span>
+<span class="st0">&quot;logo&quot;</span><span class="sy0">:</span><span class="br0">&#123;</span>
+		<span class="st0">&quot;value&quot;</span><span class="sy0">:</span><span class="br0">&#123;</span>
+			<span class="st0">&quot;title&quot;</span><span class="sy0">:</span> <span class="st0">&quot;测试图1&quot;</span><span class="sy0">,</span>
+			<span class="st0">&quot;image&quot;</span><span class="sy0">:</span> <span class="st0">&quot;images/logo-home.png&quot;</span><span class="sy0">,</span>
+			<span class="st0">&quot;link&quot;</span><span class="sy0">:</span> <span class="st0">&quot;http://tieba.baidu.com/&quot;</span>
+		<span class="br0">&#125;</span><span class="sy0">,</span>
+		<span class="st0">&quot;description&quot;</span><span class="sy0">:</span> <span class="st0">&quot;首页大图&quot;</span><span class="sy0">,</span>
+		<span class="st0">&quot;type&quot;</span><span class="sy0">:</span> <span class="st0">&quot;image&quot;</span>
+	<span class="br0">&#125;</span>
+<span class="br0">&#125;</span></pre>
+
+<p>
+调用形式：
+</p>
+<pre class="code html4strict"><span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/div.html"><span class="kw2">div</span></a> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;header_bottom_l fl&quot;</span>&gt;&lt;<a target="_blank" href="http://december.com/html/4/element/img.html"><span class="kw2">img</span></a> <span class="kw3">src</span><span class="sy0">=</span><span class="st0">&quot;{$index.logo.image}&quot;</span> <span class="kw3">alt</span><span class="sy0">=</span><span class="st0">&quot;{$index.logo.title}&quot;</span>&gt;&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/div.html"><span class="kw2">div</span></a>&gt;</span></pre>
+
+<p>
+json文件内容为：
+</p>
+<pre class="code javascript"><span class="br0">&#123;</span>
+<span class="st0">&quot;list1&quot;</span><span class="sy0">:</span><span class="br0">&#123;</span>
+		<span class="st0">&quot;value&quot;</span><span class="sy0">:</span> <span class="br0">&#91;</span>
+                <span class="br0">&#123;</span>
+                    <span class="st0">&quot;title&quot;</span><span class="sy0">:</span> <span class="st0">&quot;测试图一&quot;</span><span class="sy0">,</span> 
+                    <span class="st0">&quot;src&quot;</span><span class="sy0">:</span> <span class="st0">&quot;http://gtms04.alicdn.com/tps/i4/TB1amJmGFXXXXX6aXXXXkNqIFXX-2000-450.jpg&quot;</span><span class="sy0">,</span> 
+                    <span class="st0">&quot;href&quot;</span><span class="sy0">:</span> <span class="st0">&quot;/article/1.html&quot;</span>
+                <span class="br0">&#125;</span><span class="sy0">,</span> 
+                <span class="br0">&#123;</span>
+                    <span class="st0">&quot;title&quot;</span><span class="sy0">:</span> <span class="st0">&quot;测试图二&quot;</span><span class="sy0">,</span> 
+                    <span class="st0">&quot;src&quot;</span><span class="sy0">:</span> <span class="st0">&quot;http://gtms03.alicdn.com/tps/i3/TB1ryRGGVXXXXc_XpXXPldqIFXX-2000-450.png&quot;</span><span class="sy0">,</span> 
+                    <span class="st0">&quot;href&quot;</span><span class="sy0">:</span> <span class="st0">&quot;article/2.html&quot;</span>
+                <span class="br0">&#125;</span><span class="sy0">,</span> 
+                <span class="br0">&#123;</span>
+                    <span class="st0">&quot;title&quot;</span><span class="sy0">:</span> <span class="st0">&quot;测试图三&quot;</span><span class="sy0">,</span> 
+                    <span class="st0">&quot;src&quot;</span><span class="sy0">:</span> <span class="st0">&quot;http://gtms02.alicdn.com/tps/i2/TB1jPXoGFXXXXcTXVXXXkNqIFXX-2000-450.jpg&quot;</span><span class="sy0">,</span> 
+                    <span class="st0">&quot;href&quot;</span><span class="sy0">:</span> <span class="st0">&quot;/article/3.html&quot;</span>
+                <span class="br0">&#125;</span>
+            <span class="br0">&#93;</span><span class="sy0">,</span> 
+            <span class="st0">&quot;description&quot;</span><span class="sy0">:</span> <span class="st0">&quot;大轮滚图&quot;</span><span class="sy0">,</span> 
+            <span class="st0">&quot;type&quot;</span><span class="sy0">:</span> <span class="st0">&quot;images&quot;</span>
+	<span class="br0">&#125;</span>
+<span class="br0">&#125;</span></pre>
+<pre class="code html4strict"><span class="sc-1">&lt;!-- 列表内容 --&gt;</span>
+<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/div.html"><span class="kw2">div</span></a> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;view-content&quot;</span>&gt;</span>
+    <span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/ul.html"><span class="kw2">ul</span></a>&gt;</span>
+    {foreach key=key item=lists from=$index.list1}
+       <span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/li.html"><span class="kw2">li</span></a>&gt;</span>
+          <span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/div.html"><span class="kw2">div</span></a> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;field-content&quot;</span>&gt;</span>
+              <span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/a.html"><span class="kw2">a</span></a> <span class="kw3">href</span><span class="sy0">=</span><span class="st0">&quot;{$lists.src}&quot;</span>&gt;&lt;<a target="_blank" href="http://december.com/html/4/element/img.html"><span class="kw2">img</span></a> <span class="kw3">src</span><span class="sy0">=</span><span class="st0">&quot;{$lists.title}&quot;</span> <span class="kw3">alt</span><span class="sy0">=</span><span class="st0">&quot;&quot;</span>&gt;&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/a.html"><span class="kw2">a</span></a>&gt;</span>
+          <span class="sc2">&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/div.html"><span class="kw2">div</span></a>&gt;</span>
+       <span class="sc2">&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/li.html"><span class="kw2">li</span></a>&gt;</span>
+     {/foreach}
+     <span class="sc2">&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/ul.html"><span class="kw2">ul</span></a>&gt;</span>
+<span class="sc2">&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/div.html"><span class="kw2">div</span></a>&gt;</span></pre>
+
+<p>
+根据实际自定义的json数据格式，
+</p>
+
+</div>
+<!-- EDIT24 SECTION "{$index} ：首页数据（自定义于index.json文件中）" [9893-14410] -->
+<h3 class="sectionedit25" id="index_手机_首页数据_自定义于indexjson文件中">{$index} ：【手机】首页数据（自定义于index.json文件中）</h3>
+<div class="level3">
+
+</div>
+
+<h4 id="实例json1">实例json</h4>
+<div class="level4">
+<pre class="code javascript"><span class="br0">&#123;</span>
+	<span class="st0">&quot;slidepics&quot;</span><span class="sy0">:</span> <span class="br0">&#123;</span>
+		<span class="st0">&quot;value&quot;</span><span class="sy0">:</span> <span class="br0">&#91;</span><span class="br0">&#123;</span>
+			<span class="st0">&quot;title&quot;</span><span class="sy0">:</span> <span class="st0">&quot;测试图1&quot;</span><span class="sy0">,</span>
+			<span class="st0">&quot;src&quot;</span><span class="sy0">:</span> <span class="st0">&quot;http://tb2.bdstatic.com/tb/static-common/img/search_logo_big_282cef2.gif&quot;</span><span class="sy0">,</span>
+			<span class="st0">&quot;href&quot;</span><span class="sy0">:</span> <span class="st0">&quot;article/1.html&quot;</span>
+		<span class="br0">&#125;</span><span class="sy0">,</span> <span class="br0">&#123;</span>
+			<span class="st0">&quot;title&quot;</span><span class="sy0">:</span> <span class="st0">&quot;测试图2&quot;</span><span class="sy0">,</span>
+			<span class="st0">&quot;src&quot;</span><span class="sy0">:</span> <span class="st0">&quot;http://img0.bdstatic.com/static/common/widget/search_box_search/logo/logo_3b6de4c.png&quot;</span><span class="sy0">,</span>
+			<span class="st0">&quot;href&quot;</span><span class="sy0">:</span> <span class="st0">&quot;article/2.html&quot;</span>
+		<span class="br0">&#125;</span><span class="br0">&#93;</span><span class="sy0">,</span>
+		<span class="st0">&quot;description&quot;</span><span class="sy0">:</span> <span class="st0">&quot;大轮滚图&quot;</span><span class="sy0">,</span>
+		<span class="st0">&quot;type&quot;</span><span class="sy0">:</span> <span class="st0">&quot;images&quot;</span>
+	<span class="br0">&#125;</span><span class="sy0">,</span>
+	<span class="st0">&quot;bottomnavs&quot;</span><span class="sy0">:</span> <span class="br0">&#123;</span>
+		<span class="st0">&quot;value&quot;</span><span class="sy0">:</span> <span class="br0">&#91;</span><span class="br0">&#123;</span>
+			<span class="st0">&quot;name&quot;</span><span class="sy0">:</span> <span class="st0">&quot;电话&quot;</span><span class="sy0">,</span>
+			<span class="st0">&quot;image&quot;</span><span class="sy0">:</span> <span class="st0">&quot;http://..../a.png&quot;</span><span class="sy0">,</span>
+			<span class="st0">&quot;data&quot;</span><span class="sy0">:</span> <span class="st0">&quot;0592-2323232&quot;</span><span class="sy0">,</span>
+			<span class="st0">&quot;type&quot;</span><span class="sy0">:</span> <span class="st0">&quot;tel&quot;</span><span class="sy0">,</span>
+			<span class="st0">&quot;enable&quot;</span><span class="sy0">:</span> <span class="nu0">1</span>
+		<span class="br0">&#125;</span><span class="sy0">,</span> <span class="br0">&#123;</span>
+			<span class="st0">&quot;name&quot;</span><span class="sy0">:</span> <span class="st0">&quot;短信&quot;</span><span class="sy0">,</span>
+			<span class="st0">&quot;image&quot;</span><span class="sy0">:</span> <span class="st0">&quot;http://..../a.png&quot;</span><span class="sy0">,</span>
+			<span class="st0">&quot;data&quot;</span><span class="sy0">:</span> <span class="st0">&quot;13489990000&quot;</span><span class="sy0">,</span>
+			<span class="st0">&quot;type&quot;</span><span class="sy0">:</span> <span class="st0">&quot;sms&quot;</span><span class="sy0">,</span>
+			<span class="st0">&quot;enable&quot;</span><span class="sy0">:</span> <span class="nu0">1</span>
+		<span class="br0">&#125;</span><span class="sy0">,</span> <span class="br0">&#123;</span>
+			<span class="st0">&quot;name&quot;</span><span class="sy0">:</span> <span class="st0">&quot;咨询&quot;</span><span class="sy0">,</span>
+			<span class="st0">&quot;image&quot;</span><span class="sy0">:</span> <span class="st0">&quot;http://..../a.png&quot;</span><span class="sy0">,</span>
+			<span class="st0">&quot;data&quot;</span><span class="sy0">:</span> <span class="st0">&quot;0000001@53kf&quot;</span><span class="sy0">,</span>
+			<span class="st0">&quot;type&quot;</span><span class="sy0">:</span> <span class="st0">&quot;im&quot;</span><span class="sy0">,</span>
+			<span class="st0">&quot;enable&quot;</span><span class="sy0">:</span> <span class="nu0">1</span>
+		<span class="br0">&#125;</span><span class="sy0">,</span> <span class="br0">&#123;</span>
+			<span class="st0">&quot;name&quot;</span><span class="sy0">:</span> <span class="st0">&quot;导航B&quot;</span><span class="sy0">,</span>
+			<span class="st0">&quot;image&quot;</span><span class="sy0">:</span> <span class="st0">&quot;http://..../a.png&quot;</span><span class="sy0">,</span>
+			<span class="st0">&quot;data&quot;</span><span class="sy0">:</span> <span class="st0">&quot;http://...&quot;</span><span class="sy0">,</span>
+			<span class="st0">&quot;childmenu&quot;</span><span class="sy0">:</span> <span class="br0">&#91;</span><span class="br0">&#123;</span>
+				<span class="st0">&quot;name&quot;</span><span class="sy0">:</span> <span class="st0">&quot;导航B1&quot;</span><span class="sy0">,</span>
+				<span class="st0">&quot;image&quot;</span><span class="sy0">:</span> <span class="st0">&quot;http://..../a.png&quot;</span><span class="sy0">,</span>
+				<span class="st0">&quot;data&quot;</span><span class="sy0">:</span> <span class="st0">&quot;http://...&quot;</span><span class="sy0">,</span>
+				<span class="st0">&quot;type&quot;</span><span class="sy0">:</span> <span class="st0">&quot;link&quot;</span><span class="sy0">,</span>
+				<span class="st0">&quot;enable&quot;</span><span class="sy0">:</span> <span class="nu0">1</span>
+			<span class="br0">&#125;</span><span class="sy0">,</span>
+			<span class="br0">&#123;</span>
+				<span class="st0">&quot;name&quot;</span><span class="sy0">:</span> <span class="st0">&quot;导航B2&quot;</span><span class="sy0">,</span>
+				<span class="st0">&quot;image&quot;</span><span class="sy0">:</span> <span class="st0">&quot;http://..../a.png&quot;</span><span class="sy0">,</span>
+				<span class="st0">&quot;data&quot;</span><span class="sy0">:</span> <span class="st0">&quot;http://...&quot;</span><span class="sy0">,</span>
+				<span class="st0">&quot;type&quot;</span><span class="sy0">:</span> <span class="st0">&quot;link&quot;</span><span class="sy0">,</span>
+				<span class="st0">&quot;enable&quot;</span><span class="sy0">:</span> <span class="nu0">1</span>
+			<span class="br0">&#125;</span><span class="br0">&#93;</span><span class="sy0">,</span>
+			<span class="st0">&quot;type&quot;</span><span class="sy0">:</span> <span class="st0">&quot;link&quot;</span><span class="sy0">,</span>
+			<span class="st0">&quot;enable&quot;</span><span class="sy0">:</span> <span class="nu0">1</span>
+		<span class="br0">&#125;</span><span class="sy0">,</span> <span class="br0">&#123;</span>
+			<span class="st0">&quot;name&quot;</span><span class="sy0">:</span> <span class="st0">&quot;分享&quot;</span><span class="sy0">,</span>
+			<span class="st0">&quot;image&quot;</span><span class="sy0">:</span> <span class="st0">&quot;http://..../a.png&quot;</span><span class="sy0">,</span>
+			<span class="st0">&quot;data&quot;</span><span class="sy0">:</span> <span class="st0">&quot;&quot;</span><span class="sy0">,</span>
+			<span class="st0">&quot;type&quot;</span><span class="sy0">:</span> <span class="st0">&quot;share&quot;</span><span class="sy0">,</span>
+			<span class="st0">&quot;enable&quot;</span><span class="sy0">:</span> <span class="nu0">1</span>
+		<span class="br0">&#125;</span><span class="br0">&#93;</span><span class="sy0">,</span>
+		<span class="st0">&quot;description&quot;</span><span class="sy0">:</span> <span class="st0">&quot;底部导航&quot;</span><span class="sy0">,</span>
+		<span class="st0">&quot;type&quot;</span><span class="sy0">:</span> <span class="st0">&quot;navs&quot;</span>
+	<span class="br0">&#125;</span>
+<span class="br0">&#125;</span></pre>
+
+</div>
+
+<h4 id="数据说明1">数据说明</h4>
+<div class="level4">
+<ul>
+<li class="level1"><div class="li"> {$index.bottomnavs[0].name} 导航名称</div>
+</li>
+<li class="level1"><div class="li"> {$index.bottomnavs[0].image} 图标地址</div>
+</li>
+<li class="level1"><div class="li"> {$index.bottomnavs[0].data} 导航数据。tel、sms为电话号码；im、link为链接地址；share暂无数据</div>
+</li>
+<li class="level1"><div class="li"> {$index.bottomnavs[0].type} 底部导航类型：tel|sms|im|link|share</div>
+</li>
+<li class="level1"><div class="li"> {$index.bottomnavs[0].enable} 是否启用，1为启用</div>
+</li>
+</ul>
+
+</div>
+<!-- EDIT25 SECTION "{$index} ：【手机】首页数据（自定义于index.json文件中）" [14411-] -->

@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- generator="FeedCreator 1.7.2-ppt DokuWiki" -->
+<?xml-stylesheet href="https://eexx.me/pme/lib/exe/css.php?s=feed" type="text/css"?>
+<rdf:RDF
+    xmlns="http://purl.org/rss/1.0/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <channel rdf:about="https://eexx.me/pme/feed.php">
+        <title>百度产品部门 知识库</title>
+        <description></description>
+        <link>https://eexx.me/pme/</link>
+        <image rdf:resource="https://eexx.me/pme/lib/tpl/vector/images/favicon.ico" />
+       <dc:date>2022-06-16T03:34:38+00:00</dc:date>
+        <items>
+            <rdf:Seq>
+                <rdf:li rdf:resource="https://eexx.me/pme/doku.php?id=ued:template&amp;rev=1481099020&amp;do=diff"/>
+                <rdf:li rdf:resource="https://eexx.me/pme/doku.php?id=ued:template:json&amp;rev=1477291081&amp;do=diff"/>
+                <rdf:li rdf:resource="https://eexx.me/pme/doku.php?id=ued:template:global&amp;rev=1470279640&amp;do=diff"/>
+                <rdf:li rdf:resource="https://eexx.me/pme/doku.php?id=ued:template:notes&amp;rev=1469521378&amp;do=diff"/>
+                <rdf:li rdf:resource="https://eexx.me/pme/doku.php?id=ued:template:quickbar&amp;rev=1456739929&amp;do=diff"/>
+                <rdf:li rdf:resource="https://eexx.me/pme/doku.php?image=ued%3Atemplate.rar&amp;ns=ued&amp;rev=1450343583&amp;tab_details=history&amp;mediado=diff&amp;do=media"/>
+                <rdf:li rdf:resource="https://eexx.me/pme/doku.php?image=ued%3Atemplate%3Amodules%3Asubclass.rar&amp;ns=ued%3Atemplate%3Amodules&amp;rev=1443409380&amp;tab_details=history&amp;mediado=diff&amp;do=media"/>
+                <rdf:li rdf:resource="https://eexx.me/pme/doku.php?image=ued%3Atemplate%3Asubclass.rar&amp;ns=ued%3Atemplate&amp;rev=1443405879&amp;tab_details=history&amp;mediado=diff&amp;do=media"/>
+                <rdf:li rdf:resource="https://eexx.me/pme/doku.php?image=meeting%3A%E9%A2%84%E7%BA%A6%E4%BC%9A%E8%AE%AE%E5%AE%A4.png&amp;ns=meeting&amp;rev=1438224324&amp;tab_details=history&amp;mediado=diff&amp;do=media"/>
+                <rdf:li rdf:resource="https://eexx.me/pme/doku.php?image=it%3A%E5%9B%A2%E9%98%9F%E9%A1%B9%E7%9B%AE%E8%80%83%E8%AF%84_-_%E4%BA%A7%E5%93%81%E8%B4%A8%E9%87%8F%E9%83%A8%E5%88%86_v2.xls&amp;ns=it&amp;rev=1437468492&amp;tab_details=history&amp;mediado=diff&amp;do=media"/>
+                <rdf:li rdf:resource="https://eexx.me/pme/doku.php?image=it%3Axxx%E9%A1%B9%E7%9B%AE%E7%AB%8B%E9%A1%B9.docx&amp;ns=it&amp;rev=1437468492&amp;tab_details=history&amp;mediado=diff&amp;do=media"/>
+                <rdf:li rdf:resource="https://eexx.me/pme/doku.php?image=it%3A%E6%B4%BB%E5%8A%A8%E7%BB%8F%E8%B4%B9%E6%8A%A5%E9%94%80%E5%8D%95.docx&amp;ns=it&amp;rev=1437468264&amp;tab_details=history&amp;mediado=diff&amp;do=media"/>
+                <rdf:li rdf:resource="https://eexx.me/pme/doku.php?image=zhida%3Apasted%3A20150714-020721.png&amp;ns=zhida%3Apasted&amp;rev=1436864841&amp;tab_details=history&amp;mediado=diff&amp;do=media"/>
+                <rdf:li rdf:resource="https://eexx.me/pme/doku.php?image=zhida%3Apasted%3A20150714-020606.png&amp;ns=zhida%3Apasted&amp;rev=1436864766&amp;tab_details=history&amp;mediado=diff&amp;do=media"/>
+                <rdf:li rdf:resource="https://eexx.me/pme/doku.php?image=zhida%3Apasted%3A20150710-184444.png&amp;ns=zhida%3Apasted&amp;rev=1436579084&amp;tab_details=history&amp;mediado=diff&amp;do=media"/>
+                <rdf:li rdf:resource="https://eexx.me/pme/doku.php?image=zhida%3Apasted%3A20150710-183717.png&amp;ns=zhida%3Apasted&amp;rev=1436578637&amp;tab_details=history&amp;mediado=diff&amp;do=media"/>
+                <rdf:li rdf:resource="https://eexx.me/pme/doku.php?image=zhida%3Apasted%3A20150710-183617.png&amp;ns=zhida%3Apasted&amp;rev=1436578577&amp;tab_details=history&amp;mediado=diff&amp;do=media"/>
+                <rdf:li rdf:resource="https://eexx.me/pme/doku.php?image=zhida%3Apasted%3A20150710-183030.png&amp;ns=zhida%3Apasted&amp;rev=1436578230&amp;tab_details=history&amp;mediado=diff&amp;do=media"/>
+            </rdf:Seq>
+        </items>
+    </channel>
+    <image rdf:about="https://eexx.me/pme/lib/tpl/vector/images/favicon.ico">
+        <title>百度产品部门 知识库</title>
+        <link>https://eexx.me/pme/</link>
+        <url>https://eexx.me/pme/lib/tpl/vector/images/favicon.ico</url>
+    </image>
+    <item rdf:about="https://eexx.me/pme/doku.php?id=ued:template&amp;rev=1481099020&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-12-07T08:23:40+00:00</dc:date>
+        <dc:creator>彭丁超</dc:creator>
+        <title>ued:template - [表单嵌入模板规则] </title>
+        <link>https://eexx.me/pme/doku.php?id=ued:template&amp;rev=1481099020&amp;do=diff</link>
+        <description>统一平台模板切图规范
+
+高级调试方法：可在html文件中输入{debug}调试输出页面所有可用变量。（允许弹窗不被拦截）
+
+模板文件列表
+
+本页Ctrl+F查找Smarty数据变量？
+
+或点击下方文件名可直接进入查阅可用变量</description>
+    </item>
+    <item rdf:about="https://eexx.me/pme/doku.php?id=ued:template:json&amp;rev=1477291081&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-10-24T06:38:01+00:00</dc:date>
+        <dc:creator>彭丁超</dc:creator>
+        <title>ued:template:json</title>
+        <link>https://eexx.me/pme/doku.php?id=ued:template:json&amp;rev=1477291081&amp;do=diff</link>
+        <description>JSON文件的语法与使用
+
+数据格式
+
+
+{
+	&quot;title&quot;: {
+		&quot;value&quot;: &quot;XXX企业&quot;,
+		&quot;description&quot;: &quot;顶部大标题&quot;,
+		&quot;type&quot;: &quot;text&quot;
+	}
+}
+
+
+每个数据都必须包含value、description和type项。
+
+description描述： 用来描述其在页面的位置，如“顶部轮滚图”“左侧公告”“中部第二个新闻列表”</description>
+    </item>
+    <item rdf:about="https://eexx.me/pme/doku.php?id=ued:template:global&amp;rev=1470279640&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-08-04T03:00:40+00:00</dc:date>
+        <dc:creator>彭丁超</dc:creator>
+        <title>ued:template:global - [{$search}：搜索结果] </title>
+        <link>https://eexx.me/pme/doku.php?id=ued:template:global&amp;rev=1470279640&amp;do=diff</link>
+        <description>公共变量
+
+切图过程中打开控制台，刷新页面即可输出出所有数据变量。
+
+--- --- --- --- --- --- --- --- ---
+
+{include}：引入文件
+
+加入文件使用include引用路径,注意起步从“./”开始，即相对于当前目录开始，如：</description>
+    </item>
+    <item rdf:about="https://eexx.me/pme/doku.php?id=ued:template:notes&amp;rev=1469521378&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-07-26T08:22:58+00:00</dc:date>
+        <dc:creator>国协</dc:creator>
+        <title>ued:template:notes</title>
+        <link>https://eexx.me/pme/doku.php?id=ued:template:notes&amp;rev=1469521378&amp;do=diff</link>
+        <description>统一平台模板开发常见问题与注意事项
+
+	*  模板中不要出现任何静态的文字，如2015-01-28。除非是一些more确定之类按钮的名称。如需使用，请在json中定义或使用系统变量，参见：JSON格式与数据变量定义
+	*  HTML文件中请勿包含任何JS代码，将其并入.js文件中调用</description>
+    </item>
+    <item rdf:about="https://eexx.me/pme/doku.php?id=ued:template:quickbar&amp;rev=1456739929&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-02-29T09:58:49+00:00</dc:date>
+        <dc:creator>E神</dc:creator>
+        <title>ued:template:quickbar - [自定义开发底部导航] </title>
+        <link>https://eexx.me/pme/doku.php?id=ued:template:quickbar&amp;rev=1456739929&amp;do=diff</link>
+        <description>Quickbar 快捷导航
+
+配置说明
+
+需在config.ini文件下做好对应配置！
+
+调用系统底部导航
+
+QuickBar 参数值说明
+
+颜色代码用英文逗号分隔：
+
+	*  第一个为导航颜色
+	*  第二个为辅助颜色
+	*  第三个为字体颜色</description>
+    </item>
+    <item rdf:about="https://eexx.me/pme/doku.php?image=ued%3Atemplate.rar&amp;ns=ued&amp;rev=1450343583&amp;tab_details=history&amp;mediado=diff&amp;do=media">
+        <dc:format>text/html</dc:format>
+        <dc:date>2015-12-17T09:13:03+00:00</dc:date>
+        <dc:creator>E神</dc:creator>
+        <title>ued:template.rar</title>
+        <link>https://eexx.me/pme/doku.php?image=ued%3Atemplate.rar&amp;ns=ued&amp;rev=1450343583&amp;tab_details=history&amp;mediado=diff&amp;do=media</link>
+        <description></description>
+    </item>
+    <item rdf:about="https://eexx.me/pme/doku.php?image=ued%3Atemplate%3Amodules%3Asubclass.rar&amp;ns=ued%3Atemplate%3Amodules&amp;rev=1443409380&amp;tab_details=history&amp;mediado=diff&amp;do=media">
+        <dc:format>text/html</dc:format>
+        <dc:date>2015-09-28T03:03:00+00:00</dc:date>
+        <dc:creator>细红</dc:creator>
+        <title>ued:template:modules:subclass.rar - 创建</title>
+        <link>https://eexx.me/pme/doku.php?image=ued%3Atemplate%3Amodules%3Asubclass.rar&amp;ns=ued%3Atemplate%3Amodules&amp;rev=1443409380&amp;tab_details=history&amp;mediado=diff&amp;do=media</link>
+        <description></description>
+    </item>
+    <item rdf:about="https://eexx.me/pme/doku.php?image=ued%3Atemplate%3Asubclass.rar&amp;ns=ued%3Atemplate&amp;rev=1443405879&amp;tab_details=history&amp;mediado=diff&amp;do=media">
+        <dc:format>text/html</dc:format>
+        <dc:date>2015-09-28T02:04:39+00:00</dc:date>
+        <dc:creator>细红</dc:creator>
+        <title>ued:template:subclass.rar - 创建</title>
+        <link>https://eexx.me/pme/doku.php?image=ued%3Atemplate%3Asubclass.rar&amp;ns=ued%3Atemplate&amp;rev=1443405879&amp;tab_details=history&amp;mediado=diff&amp;do=media</link>
+        <description></description>
+    </item>
+    <item rdf:about="https://eexx.me/pme/doku.php?image=meeting%3A%E9%A2%84%E7%BA%A6%E4%BC%9A%E8%AE%AE%E5%AE%A4.png&amp;ns=meeting&amp;rev=1438224324&amp;tab_details=history&amp;mediado=diff&amp;do=media">
+        <dc:format>text/html</dc:format>
+        <dc:date>2015-07-30T02:45:24+00:00</dc:date>
+        <dc:creator>E神</dc:creator>
+        <title>meeting:预约会议室.png - 创建</title>
+        <link>https://eexx.me/pme/doku.php?image=meeting%3A%E9%A2%84%E7%BA%A6%E4%BC%9A%E8%AE%AE%E5%AE%A4.png&amp;ns=meeting&amp;rev=1438224324&amp;tab_details=history&amp;mediado=diff&amp;do=media</link>
+        <description>&lt;img src=&quot;https://eexx.me/pme/lib/exe/fetch.php?w=260&amp;h=260&amp;t=1454531064&amp;amp;tok=46bb6d&amp;amp;media=meeting:%E9%A2%84%E7%BA%A6%E4%BC%9A%E8%AE%AE%E5%AE%A4.png&quot; alt=&quot;meeting:预约会议室.png&quot; /&gt;</description>
+    </item>
+    <item rdf:about="https://eexx.me/pme/doku.php?image=it%3A%E5%9B%A2%E9%98%9F%E9%A1%B9%E7%9B%AE%E8%80%83%E8%AF%84_-_%E4%BA%A7%E5%93%81%E8%B4%A8%E9%87%8F%E9%83%A8%E5%88%86_v2.xls&amp;ns=it&amp;rev=1437468492&amp;tab_details=history&amp;mediado=diff&amp;do=media">
+        <dc:format>text/html</dc:format>
+        <dc:date>2015-07-21T08:48:12+00:00</dc:date>
+        <dc:creator>E神</dc:creator>
+        <title>it:团队项目考评_-_产品质量部分_v2.xls - 创建</title>
+        <link>https://eexx.me/pme/doku.php?image=it%3A%E5%9B%A2%E9%98%9F%E9%A1%B9%E7%9B%AE%E8%80%83%E8%AF%84_-_%E4%BA%A7%E5%93%81%E8%B4%A8%E9%87%8F%E9%83%A8%E5%88%86_v2.xls&amp;ns=it&amp;rev=1437468492&amp;tab_details=history&amp;mediado=diff&amp;do=media</link>
+        <description></description>
+    </item>
+    <item rdf:about="https://eexx.me/pme/doku.php?image=it%3Axxx%E9%A1%B9%E7%9B%AE%E7%AB%8B%E9%A1%B9.docx&amp;ns=it&amp;rev=1437468492&amp;tab_details=history&amp;mediado=diff&amp;do=media">
+        <dc:format>text/html</dc:format>
+        <dc:date>2015-07-21T08:48:12+00:00</dc:date>
+        <dc:creator>E神</dc:creator>
+        <title>it:xxx项目立项.docx - 创建</title>
+        <link>https://eexx.me/pme/doku.php?image=it%3Axxx%E9%A1%B9%E7%9B%AE%E7%AB%8B%E9%A1%B9.docx&amp;ns=it&amp;rev=1437468492&amp;tab_details=history&amp;mediado=diff&amp;do=media</link>
+        <description></description>
+    </item>
+    <item rdf:about="https://eexx.me/pme/doku.php?image=it%3A%E6%B4%BB%E5%8A%A8%E7%BB%8F%E8%B4%B9%E6%8A%A5%E9%94%80%E5%8D%95.docx&amp;ns=it&amp;rev=1437468264&amp;tab_details=history&amp;mediado=diff&amp;do=media">
+        <dc:format>text/html</dc:format>
+        <dc:date>2015-07-21T08:44:24+00:00</dc:date>
+        <dc:creator>E神</dc:creator>
+        <title>it:活动经费报销单.docx - 创建</title>
+        <link>https://eexx.me/pme/doku.php?image=it%3A%E6%B4%BB%E5%8A%A8%E7%BB%8F%E8%B4%B9%E6%8A%A5%E9%94%80%E5%8D%95.docx&amp;ns=it&amp;rev=1437468264&amp;tab_details=history&amp;mediado=diff&amp;do=media</link>
+        <description></description>
+    </item>
+    <item rdf:about="https://eexx.me/pme/doku.php?image=zhida%3Apasted%3A20150714-020721.png&amp;ns=zhida%3Apasted&amp;rev=1436864841&amp;tab_details=history&amp;mediado=diff&amp;do=media">
+        <dc:format>text/html</dc:format>
+        <dc:date>2015-07-14T09:07:21+00:00</dc:date>
+        <dc:creator>sauron</dc:creator>
+        <title>zhida:pasted:20150714-020721.png - 创建</title>
+        <link>https://eexx.me/pme/doku.php?image=zhida%3Apasted%3A20150714-020721.png&amp;ns=zhida%3Apasted&amp;rev=1436864841&amp;tab_details=history&amp;mediado=diff&amp;do=media</link>
+        <description>&lt;img src=&quot;https://eexx.me/pme/lib/exe/fetch.php?w=500&amp;h=372&amp;t=1454531064&amp;amp;tok=9557e2&amp;amp;media=zhida:pasted:20150714-020721.png&quot; alt=&quot;zhida:pasted:20150714-020721.png&quot; /&gt;</description>
+    </item>
+    <item rdf:about="https://eexx.me/pme/doku.php?image=zhida%3Apasted%3A20150714-020606.png&amp;ns=zhida%3Apasted&amp;rev=1436864766&amp;tab_details=history&amp;mediado=diff&amp;do=media">
+        <dc:format>text/html</dc:format>
+        <dc:date>2015-07-14T09:06:06+00:00</dc:date>
+        <dc:creator>sauron</dc:creator>
+        <title>zhida:pasted:20150714-020606.png - 创建</title>
+        <link>https://eexx.me/pme/doku.php?image=zhida%3Apasted%3A20150714-020606.png&amp;ns=zhida%3Apasted&amp;rev=1436864766&amp;tab_details=history&amp;mediado=diff&amp;do=media</link>
+        <description>&lt;img src=&quot;https://eexx.me/pme/lib/exe/fetch.php?w=500&amp;h=345&amp;t=1454531064&amp;amp;tok=4769c4&amp;amp;media=zhida:pasted:20150714-020606.png&quot; alt=&quot;zhida:pasted:20150714-020606.png&quot; /&gt;</description>
+    </item>
+    <item rdf:about="https://eexx.me/pme/doku.php?image=zhida%3Apasted%3A20150710-184444.png&amp;ns=zhida%3Apasted&amp;rev=1436579084&amp;tab_details=history&amp;mediado=diff&amp;do=media">
+        <dc:format>text/html</dc:format>
+        <dc:date>2015-07-11T01:44:44+00:00</dc:date>
+        <dc:creator>sauron</dc:creator>
+        <title>zhida:pasted:20150710-184444.png - 创建</title>
+        <link>https://eexx.me/pme/doku.php?image=zhida%3Apasted%3A20150710-184444.png&amp;ns=zhida%3Apasted&amp;rev=1436579084&amp;tab_details=history&amp;mediado=diff&amp;do=media</link>
+        <description>&lt;img src=&quot;https://eexx.me/pme/lib/exe/fetch.php?w=500&amp;h=71&amp;t=1454531064&amp;amp;tok=2d4f5c&amp;amp;media=zhida:pasted:20150710-184444.png&quot; alt=&quot;zhida:pasted:20150710-184444.png&quot; /&gt;</description>
+    </item>
+    <item rdf:about="https://eexx.me/pme/doku.php?image=zhida%3Apasted%3A20150710-183717.png&amp;ns=zhida%3Apasted&amp;rev=1436578637&amp;tab_details=history&amp;mediado=diff&amp;do=media">
+        <dc:format>text/html</dc:format>
+        <dc:date>2015-07-11T01:37:17+00:00</dc:date>
+        <dc:creator>sauron</dc:creator>
+        <title>zhida:pasted:20150710-183717.png - 创建</title>
+        <link>https://eexx.me/pme/doku.php?image=zhida%3Apasted%3A20150710-183717.png&amp;ns=zhida%3Apasted&amp;rev=1436578637&amp;tab_details=history&amp;mediado=diff&amp;do=media</link>
+        <description>&lt;img src=&quot;https://eexx.me/pme/lib/exe/fetch.php?w=388&amp;h=183&amp;t=1454531064&amp;amp;tok=26b910&amp;amp;media=zhida:pasted:20150710-183717.png&quot; alt=&quot;zhida:pasted:20150710-183717.png&quot; /&gt;</description>
+    </item>
+    <item rdf:about="https://eexx.me/pme/doku.php?image=zhida%3Apasted%3A20150710-183617.png&amp;ns=zhida%3Apasted&amp;rev=1436578577&amp;tab_details=history&amp;mediado=diff&amp;do=media">
+        <dc:format>text/html</dc:format>
+        <dc:date>2015-07-11T01:36:17+00:00</dc:date>
+        <dc:creator>sauron</dc:creator>
+        <title>zhida:pasted:20150710-183617.png - 创建</title>
+        <link>https://eexx.me/pme/doku.php?image=zhida%3Apasted%3A20150710-183617.png&amp;ns=zhida%3Apasted&amp;rev=1436578577&amp;tab_details=history&amp;mediado=diff&amp;do=media</link>
+        <description>&lt;img src=&quot;https://eexx.me/pme/lib/exe/fetch.php?w=500&amp;h=31&amp;t=1454531064&amp;amp;tok=41a810&amp;amp;media=zhida:pasted:20150710-183617.png&quot; alt=&quot;zhida:pasted:20150710-183617.png&quot; /&gt;</description>
+    </item>
+    <item rdf:about="https://eexx.me/pme/doku.php?image=zhida%3Apasted%3A20150710-183030.png&amp;ns=zhida%3Apasted&amp;rev=1436578230&amp;tab_details=history&amp;mediado=diff&amp;do=media">
+        <dc:format>text/html</dc:format>
+        <dc:date>2015-07-11T01:30:30+00:00</dc:date>
+        <dc:creator>sauron</dc:creator>
+        <title>zhida:pasted:20150710-183030.png - 创建</title>
+        <link>https://eexx.me/pme/doku.php?image=zhida%3Apasted%3A20150710-183030.png&amp;ns=zhida%3Apasted&amp;rev=1436578230&amp;tab_details=history&amp;mediado=diff&amp;do=media</link>
+        <description>&lt;img src=&quot;https://eexx.me/pme/lib/exe/fetch.php?w=181&amp;h=251&amp;t=1454531064&amp;amp;tok=52e004&amp;amp;media=zhida:pasted:20150710-183030.png&quot; alt=&quot;zhida:pasted:20150710-183030.png&quot; /&gt;</description>
+    </item>
+</rdf:RDF>

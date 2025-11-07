@@ -1,0 +1,7 @@
+<span class="sc-1">&lt;!-- 实时预览调试代码，模板开发完成后删除 --&gt;</span>
+<span class="sc-1">&lt;!-- {$index.lastest.data[&quot;0&quot;].title = '大屏大法好，第四季度智能手机出货量苹果平了三星'} --&gt;</span>
+<span class="sc-1">&lt;!-- {$index.lastest.data[&quot;0&quot;].description = '小米迅速增长的‘黄金时期’已经结束。联想/摩托罗拉和苹果迅速提升了自己在中国及全球市场的表现，他们开始蚕食小米的市场份额。而苹果...'} --&gt;</span>
+<span class="sc-1">&lt;!-- {$index.lastest.data[&quot;1&quot;].title = '三菱电机推出最新MV4800线切割放电加工机床'} --&gt;</span>
+<span class="sc-1">&lt;!-- {$index.lastest.data[&quot;1&quot;].description = 'MV4800线切割放电加工机床是三菱电机专门为加工各种大型模具、厚板型模具推出的高精度线切割放电加工机床，适用于汽车、电子以及航空、航天等各领域的中大型精密模具的加工。'} --&gt;</span>
+<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/script.html"><span class="kw2">script</span></a> <span class="kw3">type</span><span class="sy0">=</span><span class="st0">&quot;text/javascript&quot;</span> <span class="kw3">src</span><span class="sy0">=</span><span class="st0">&quot;http://chanpin.xm12t.com.cn/js/preview.js&quot;</span> data-jsonfile<span class="sy0">=</span><span class="st0">&quot;index.json&quot;</span>&gt;&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/script.html"><span class="kw2">script</span></a>&gt;</span>
+<span class="sc-1">&lt;!-- 调试代码 End --&gt;</span>

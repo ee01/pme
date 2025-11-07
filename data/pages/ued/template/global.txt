@@ -1,0 +1,436 @@
+====== 公共变量 ======
+|
+切图过程中打开控制台，刷新页面即可输出出所有数据变量。
+
+--- --- --- --- --- --- --- --- ---
+
+===== {include}：引入文件 =====
+加入文件使用include引用路径,注意起步从“./”开始，即相对于当前目录开始，如：
+<code html>
+{include file="./_header.html"}
+</code>
+
+===== {$site_url} ：网站资源域名地址 =====
+用于JS、CSS引用路径，如：
+<code html>
+...
+	<link rel="stylesheet" rev="stylesheet" href="{$site_url}css/style_{$stylecolor}.css" type="text/css" />
+	<script type="text/javascript" src="{$site_url}js/script.js"></script>
+</head>
+...
+</code>
+===== {$site_another_url} ：网站另一域名地址 =====
+__当前是手机模版时，该变量表示PC域名；\\
+当前是PC模版时，表示手机域名。__
+
+**每个模板index.html中head内必备的代码！**
+
+**PC模板：**
+<code html>
+<head>
+	<script type="text/javascript">
+	// 识别为手机客户端，自动跳转手机页面
+	{if $site_another_url}
+		if (!!navigator.userAgent.match(/AppleWebKit.*Mobile.*/)) {
+			location.href = '{$site_another_url}';
+		}
+	{/if}
+	</script>
+...
+</code>
+如果是手机模板将加入的代码中双感叹号''!!''改为单个感叹号''!''即可。
+
+**手机模板：**
+<code html>
+<head>
+	<script type="text/javascript">
+	// 识别为电脑客户端，自动跳转PC页面
+	{if $site_another_url}
+		if (!navigator.userAgent.match(/AppleWebKit.*Mobile.*/)) {
+			location.href = '{$site_another_url}';
+		}
+	{/if}
+	</script>
+...
+</code>
+===== {$title} ：页面标题 =====
+
+<code html>
+<head>
+	<title>{$title}</title>
+...
+</code>
+===== {$keywords} ：页面关键词 =====
+<code html>
+<meta name="keywords" content="{$keywords}" />
+</code>
+===== {$description} ：页面描述 =====
+<code html>
+ <meta name="description" content="{$description}" />
+</code>
+===== {$favicon} ：网站图标 =====
+<code html>
+ <link rel="shortcut icon" href="{$favicon}" type="image/x-icon" />
+</code>
+===== {$stylecolor} ：网站颜色 =====
+引用的风格颜色css文件。
+<code html> 
+ ...
+ <link rel="stylesheet" rev="stylesheet" href="{$site_url}css/style_{$stylecolor}.css" type="text/css" />
+</head>
+</code>
+如果有2个及以上颜色风格，需引入此变量并创建对应css文件，且必须在config.ini文件中做好对应[[ued:template:config#config_模板配置部分|StyleColors]]配置。
+===== {$logo} ：网站logo =====
+
+普通的图片式引用：
+<code html>
+<header>
+	<div class="logo"><a href="#"><img src="{$logo}" height="97" width="498"/></a></div>
+	...
+</code>
+
+css样式放置LOGO的引用方式：
+<file css style.css>
+.logo { background-image:url(../images/logo.png); } /* 在CSS文件中写好LOGO默认值 */
+</file>
+<file html _header.html>
+<!-- 通过Smarty变量覆盖CSS文件中的默认值 -->
+<style>
+	.logo { background-image:url({$logo}); }
+</style>
+<header>
+	<div class="logo"><a href="javascript:;"></a></div>
+</header>
+</file>
+===== {$footprint} ：底部版权 =====
+<code html>
+...
+<footer>
+    <p>{$footprint}</p>
+</footer>
+</code>
+===== {$headscript} ：头部脚本 =====
+__仅首页面运行的脚本，多用于身份识别（直达号、百度站长等）__
+
+放置于index.html的head内尾部
+<code html>
+	...
+	{$headscript}
+</head>
+</code>
+===== {$footscript} ：底部脚本 =====
+放置于[[ued:template:footer|_footer.html]]中，使得每个页面都运行此（统计）脚本。
+<code html>
+...
+</footer>
+{$footscript}
+</code>
+
+===== {$navs} ：网站导航栏 =====
+  * {$navs[0].name} 导航名
+  * {$navs[0].en_name} 导航英文名
+  * {$navs[0].icon} 导航图标（iconfont技术，可改大小可换色）
+  * {$navs[0].image} 导航图片
+  * {$navs[0].link} 导航链接
+  * {$navs[0].description} 导航简介
+  * {$navs[0].current} 是否当前导航（包括所在父级），1为当前导航，class选中
+  * {$navs[0].selected} 是否选中导航（不包括所在父级），1为当前所在选中的导航
+  * {$navs[0].lastest[0]} 栏目最新文章列表（仅一级菜单有），格式同 [[#list_列表页数据|{$list} ：列表页数据]]
+  * {$navs[0].childmenu[]} 子导航，结构类似导航（数组格式，需foreach循环）
+
+<file html _header.html>
+<header>
+	<nav>
+		<ul class="clearfix">
+			{foreach item=nav from=$navs}
+			<li class="{if $nav.current}current{/if}">
+				<a href="{$nav.link}">{$nav.name}</a>
+				{if $nav.childmenu}
+					<ul class="clearfix">
+						{foreach item=nav_list from=$nav.childmenu}
+						<li class="{if $nav_list.current}current{/if}"><a href="{$nav_list.link}">{$nav_list.name}</a></li>
+						{/foreach}
+					</ul>
+				{/if}
+			</li>
+			{/foreach}
+		</ul>
+	</nav>
+</header>
+</file>
+===== {$posnavs} ：面包屑导航 =====
+类似 ''首页 >> 产品中心 >> 热门产品 >> 4月热门'' 这样的展示。
+
+  * {$posnavs[0].name} 导航名
+  * {$posnavs[0].en_name} 导航英文名
+  * {$posnavs[0].icon} 导航图标（iconfont技术，可改大小可换色）
+  * {$posnavs[0].link} 导航链接
+
+<file html list-text.html>
+<ul class="clearfix">
+	<li class="fl"><a href="/">首页</a></li>
+	{foreach item=nav from=$posnavs}
+	<li class="fl"> >> <a href="{$nav.link}">{$nav.name}</a></li>
+	{/foreach}
+</ul>
+</file>
+
+===== {$pagenavs} ：同栏目导航栏 =====
+多用于文章列表页显示本根栏目的子栏目列表。
+
+  * {$pagenavs[0].name} 导航名
+  * {$pagenavs[0].en_name} 导航英文名
+  * {$pagenavs[0].icon} 导航图标（iconfont技术，可改大小可换色）
+  * {$pagenavs[0].image} 导航图片
+  * {$pagenavs[0].link} 导航链接
+  * {$pagenavs[0].description} 导航简介
+  * {$pagenavs[0].current} 是否当前导航（包括所在父级），1为当前导航
+  * {$pagenavs[0].selected} 是否选中导航（不包括所在父级），1为当前所在选中的导航，class选中
+  * {$pagenavs[0].childmenu} 子导航，结构类似导航
+
+<file html list-text.html>
+<h3>{$posnavs[0].name}</h3>	<!-- 下表为0的面包屑导航正好是一级栏目的当前栏目 -->
+<ul>
+	{foreach item=nav from=$pagenavs}
+	<li class="{if $nav.current}current{/if}">
+		<a href="{$nav.link}">{$nav.name}</a>
+	</li>
+	{/foreach}
+</ul>
+</file>
+
+<file html list-text.html>
+{foreach item=cnav from=$navs}
+{if $cnav.current and $cnav.childmenu}
+<h3>{$cnav.name}</h3>
+<ul>
+		{foreach item=nav from=$cnav.childmenu}
+		<li class="{if $nav.current}current{/if}">
+			<a href="{$nav.link}">{$nav.name}</a>
+		</li>
+		{/foreach}
+</ul>
+{/if}
+{/foreach}
+</file>
+以上两种方式均可!
+
+**高级模式（输出三级栏目）：**
+
+<file html list-text.html>
+<ul>
+	{foreach item=nav from=$pagenavs}
+	<li class="{if $nav.current}current{/if}">
+		<a href="{$nav.link}">{$nav.name}</a>
+		{if $nav.childmenu}
+		<ul>
+			{foreach item=nav_list from=$nav.childmenu}
+			<li class="{if $nav_list.current}current{/if}"><a href="{$nav_list.link}">{$nav_list.name}</a></li>
+			{/foreach}
+		</ul>
+		{/if}
+	</li>
+	{/foreach}
+</ul>
+</file>
+===== {$contact} ：联系方式 =====
+  * {$contact.company} 企业名称
+  * {$contact.name} 联系人
+  * {$contact.mobile} 手机
+  * {$contact.telephone} 固话/热线
+  * {$contact.fax} 传真
+  * {$contact.mail} 邮箱
+  * {$contact.qq} QQ
+  * {$contact.address} 公司地址
+实际示例：
+<code html>
+<header>
+	<div class="fr">24小时热线：{$contact.telephone}</div>
+</header>
+...
+<footer>
+	<a href="mailto:{$contact.mail}">邮件反馈</a>
+</footer>
+</code>
+===== {$list} ：列表页数据 =====
+
+==== 内容单页：list-page.html ====
+
+  * {$list.name} 栏目名称
+  * {$list.en_name} 导航英文名
+  * {$list.icon} 栏目图标（iconfont技术，可改大小可换色）
+  * {$list.image} 栏目图片
+  * {$list.link} 栏目链接(一般用于“查看更多”按钮)
+  * {$list.description} 栏目描述
+  * {$list.content} 内容单页的HTML
+
+<file html list-page.html>
+<!-- 单页内容 -->
+<article>
+	{$list.content|unescape:"html"}
+</article>
+</file>
+
+==== 其他列表型栏目页：list-text.html、list-image.html、list-imagetext.html ====
+
+  * {$list.name} 栏目名称
+  * {$list.image} 栏目图片
+  * {$list.link} 栏目链接(一般用于“查看更多”按钮)
+  * {$list.description} 栏目描述
+  * {$list.total} 栏目下文章总数
+  * {$list.data[0].title} 文章标题
+  * {$list.data[0].image} 文章预览图
+  * {$list.data[0].link} 文章链接
+  * {$list.data[0].description} 文章内容
+  * {$list.data[0].pubdate} 发布时间
+  * {$list.data[0].pubtimestamp} 发布时间戳
+  * {$list.data[0].category.name} 所属栏目名
+  * {$list.data[0].category.en_name} 所属栏目英文名
+  * {$list.data[0].category.icon} 所属栏目图标（iconfont技术，可改大小可换色）
+  * {$list.data[0].category.link} 所属栏目链接
+
+<file html list-text.html>
+<h2><span class="bgc">{$list.name}</span></h2>
+<ul class="list clearfix">
+	{foreach item=article from=$list.data}
+	<li><a href="{$article.link}">{$article.title}</a><time class="fr" datetime="{$article.pubdate}" pubdate="pubdate">{$article.pubdate}</time></li>
+	{/foreach}
+</ul>
+</file>
+
+发布日期格式自定义：''{$article.pubtimestamp|date_format:'%Y年%m月%d日 %H:%M:%S'}'' \\
+该结果会显示为 ''2010年07月27日 21:19:36'' 的时间模式\\
+具体日期格式化用法参见：http://www.yiibai.com/smarty/smarty_date_format.html
+===== {$search}：搜索结果 =====
+
+  * {$search.keyword} 搜索关键字
+  * {$search.total} 搜索结果总数
+  * {$search.data[0].title} 文章标题
+  * {$search.data[0].image} 文章预览图
+  * {$search.data[0].link} 文章链接
+  * {$search.data[0].description} 文章内容
+  * {$search.data[0].pubdate} 发布时间
+  * {$search.data[0].pubymd} 发布年月日
+  * {$search.data[0].category.name} 所属栏目名
+  * {$search.data[0].category.en_name} 所属栏目英文名
+  * {$search.data[0].category.icon} 所属栏目图标（iconfont技术，可改大小可换色）
+  * {$search.data[0].category.link} 所属栏目链接
+
+<file html searchresult.html>
+<p>搜索关键词为“<span>{$search.keyword}</span>”的产品/文章，共搜索到{$search.total}个结果：</p>
+<ul class="list clearfix">
+	{foreach item=article from=$search.data}
+	<li><a href="{$article.link}">{$article.title}</a><time class="fr" datetime="{$article.pubdate}" pubdate="pubdate">{$article.pubdate}</time></li>
+	{/foreach}
+</ul>
+</file>
+
+===== {$page_links} ：列表分页项 =====
+  * {$page_links.page_count} 总页码数
+  * {$page_links.per_page} 每页显示项数
+  * {$page_links.current_page} 当前页
+  * {$page_links.first_link} 首页链接
+  * {$page_links.prev_link} 上一页链接
+  * {$page_links.next_link} 下一页链接
+  * {$page_links.last_link} 尾页链接
+  * {$page_links.nears_link[]} 附近的分页链接（数组格式，需foreach循环）
+  <code javascript>
+  //$page_links.nears_link[]数据格式如下
+  {
+
+      '4':'category/3_4.html',
+      '5':'category/3_5.html',
+      '6':'category/3_6.html',//当前页,通过current_page判断
+      '7':'category/3_7.html',
+      '8':'category/3_8.html',
+  }
+  </code>
+例如：
+<file html list-text.html>
+<!-- 分页链接 -->
+<ul class="clearfix fr">
+	<li class="fl"><a href="{$page_links.first_link}">首页</a></li>
+	<li class="fl"><a href="{$page_links.prev_link}">上一页</a></li>
+	{foreach item=near_link key=near_page from=$page_links.nears_link}
+	{if $near_page == $page_links.current_page}
+		<li class="fl current"><a>{$near_page}</a></li>
+	{else}
+		<li class="fl"><a href="{$near_link}">{$near_page}</a></li>
+	{/if}
+	{/foreach}
+	<li class="fl"><a href="{$page_links.next_link}">下一页</a></li>
+	<li class="fl"><a href="{$page_links.last_link}">末页</a></li>
+</ul>
+</file>
+===== {$article} ：文章页数据 =====
+__仅在content-xxx.html页面调用__
+
+  * {$article.title} 文章标题
+  * {$article.content} 文章内容
+  * {$article.description} 文章简介
+  * {$article.image} 文章特色图地址（同等于$article.images数组的第一张）
+  * {$article.images[0].title} 产品图名称
+  * {$article.images[0].image} 产品图地址
+  * {$article.pubdate} 发布时间
+  * {$article.viewcount} 浏览次数
+  * {$article.pubtimestamp} 发布时间戳
+  * {$article.prev.title} 上一篇文章标题
+  * {$article.prev.link} 上一篇文章链接
+  * {$article.next.title} 下一篇文章标题
+  * {$article.next.link} 下一篇文章链接
+  * {$article.category.name} 所属栏目名
+  * {$article.category.en_name} 所属栏目英文名
+  * {$article.category.icon} 所属栏目图标（iconfont技术，可改大小可换色）
+  * {$article.category.link} 所属栏目链接
+
+==== 新闻内页：content-news.html ====
+
+<file html content-news.html>
+<!-- 文章主体 -->
+<h2>{$article.title}</h2>
+<article>
+	<img src="{$article.image}" />
+	{$article.content|unescape:"html"}
+</article>
+</file>
+
+==== 产品内页：content-product.html ====
+
+<file html content-product.html>
+<!-- 产品页主体 -->
+<ul class="clearfix">
+	{foreach item=image from=$article.images}
+	<li class="fl">
+		<dl class="pr">
+			<dt class="image-title">{$image.title}</dt>
+			<dd><img src="{$image.image}" alt="{$image.title}" /></dd>
+		</dl>
+	</li>
+	{/foreach}
+</ul>
+<article>
+	{$article.content|unescape:"html"}
+</article>
+</file>
+
+===== {$related} ：相关阅读 =====
+
+  * {$related[0].title} 文章标题
+  * {$related[0].image} 文章预览图
+  * {$related[0].link} 文章链接
+  * {$related[0].description} 文章内容
+  * {$related[0].pubdate} 发布时间
+  * {$related[0].pubtimestamp} 发布时间戳
+  * {$related[0].category.name} 所属栏目名
+  * {$related[0].category.en_name} 所属栏目英文名
+  * {$related[0].category.icon} 所属栏目图标（iconfont技术，可改大小可换色）
+  * {$related[0].category.link} 所属栏目链接
+
+<file html list-text.html>
+<h2><span class="bgc">{$list.name}</span></h2>
+<ul class="list clearfix">
+	{foreach item=article from=$related}
+	<li><a href="{$article.link}">{$article.title}</a><time class="fr" datetime="{$article.pubdate}" pubdate="pubdate">{$article.pubdate}</time></li>
+	{/foreach}
+</ul>
+</file>

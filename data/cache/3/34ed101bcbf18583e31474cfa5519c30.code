@@ -1,0 +1,10 @@
+<span class="br0">&#123;</span>
+	<span class="st0">&quot;second_navs&quot;</span><span class="sy0">:</span> <span class="br0">&#123;</span>
+		<span class="st0">&quot;value&quot;</span><span class="sy0">:</span> <span class="br0">&#123;</span><span class="br0">&#125;</span><span class="sy0">,</span>
+		<span class="st0">&quot;description&quot;</span><span class="sy0">:</span> <span class="st0">&quot;第二导航（底部）&quot;</span><span class="sy0">,</span>
+		<span class="st0">&quot;type&quot;</span><span class="sy0">:</span> <span class="st0">&quot;navs&quot;</span><span class="sy0">,</span>
+		<span class="st0">&quot;config&quot;</span><span class="sy0">:</span> <span class="br0">&#123;</span>
+			<span class="st0">&quot;limit&quot;</span><span class="sy0">:</span> <span class="nu0">8</span>
+		<span class="br0">&#125;</span>
+	<span class="br0">&#125;</span>
+<span class="br0">&#125;</span>

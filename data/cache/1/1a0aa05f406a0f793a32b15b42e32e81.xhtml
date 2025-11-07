@@ -1,0 +1,39 @@
+
+<h1 class="sectionedit1" id="客服系统">客服系统</h1>
+<div class="level1">
+
+</div>
+<!-- EDIT1 SECTION "客服系统" [1-27] -->
+<h2 class="sectionedit2" id="关于信息答复异步刷新问题">关于信息答复异步刷新问题</h2>
+<div class="level2">
+<pre class="code">  思路：用前端数据，每隔几秒向后台获取数据，后台根据时间获取用户最近几秒内的回复。   
+  后台思路以数据判断对数据进行提取，这个不用多讲，一般都知道如何获取数据。关键来了，前台如何处理，这个就必须用到js中的setTimeout方法，该方法需要重复调用，相当于递归才能产生效果。所以开始时运行一次，写入函数内重复调用，页面不关闭就可以不断的从后台获取最新数据。
+  </pre>
+
+</div>
+<!-- EDIT2 SECTION "关于信息答复异步刷新问题" [28-595] -->
+<h3 class="sectionedit3" id="前台实现js代码_主要">前台实现js代码（主要）</h3>
+<div class="level3">
+<pre class="code"> 
+  function getnewchat(){
+          //后台数据获取
+    $.get(&quot;{weixin::U(&#039;Index/ajaxdata&#039;,array(&#039;openid&#039;=&gt;htmlspecialchars($_GET[&#039;openid&#039;])))}&quot;,
+	   function(data){
+			if(data!= 1564){
+                              //后台拿到数据后，对其做样式添加
+				$str1=&#039;&lt;div class=&quot;chatItem you&quot;&gt;&lt;div class=&quot;chatItemContent&quot;&gt; &lt;img class=&quot;avatar&quot; src=&quot;&lt;if condition=&quot;$userInfo[&#039;headimgurl&#039;] neq &#039;&#039;&quot;&gt;index.php?g=Chat&amp;m=Index&amp;a=showExternalPic&amp;url={weixin:$userInfo.headimgurl}&lt;else/&gt;/tpl/Chat/default/style/css/img/avatar_default17ced3.png&lt;/if&gt;&quot;/&gt; &lt;div class=&quot;cloud cloudText&quot;&gt; &lt;div class=&quot;cloudPannel&quot; style=&quot;&quot;&gt; &lt;div class=&quot;sendStatus&quot;&gt;   &lt;/div&gt; &lt;div class=&quot;cloudBody&quot;&gt; &lt;div class=&quot;cloudContent&quot;&gt;                                  &lt;pre style=&quot;white-space:pre-wrap&quot;&gt;&#039;+data+&#039;&lt;/pre&gt;  &lt;/div&gt;  &lt;/div&gt; &lt;div class=&quot;cloudArrow &quot;&gt;&lt;/div&gt; &lt;/div&gt; &lt;/div&gt; &lt;/div&gt;  &lt;/div&gt;&#039;;
+				//附加到最后。
+				$(&#039;#chat_chatmsglist&#039;).append($str1);
+                                      //一个滚动效果，我抄的
+				$(&#039;#chat_scorll&#039;).scrollTop($(&#039;#chat_scorll&#039;).children().height()+100);
+			}
+	   });
+       //循环，一段时间内重新处理该函。达到重复提取后台数据效果
+setTimeout(&quot;getnewchat()&quot;,3000);
+}
+setTimeout(&quot;getnewchat()&quot;,3000);
+  
+  </pre>
+
+</div>
+<!-- EDIT3 SECTION "前台实现js代码（主要）" [596-] -->

@@ -1,0 +1,10 @@
+a:2:{s:7:"current";a:8:{s:4:"date";a:2:{s:7:"created";i:1414397095;s:8:"modified";i:1454531070;}s:7:"creator";s:9:"邱沼懿";s:4:"user";s:1:"e";s:11:"last_change";b:0;s:5:"title";s:15:"弹出对话框";s:11:"description";a:2:{s:15:"tableofcontents";a:6:{i:0;a:4:{s:3:"hid";s:15:"弹出对话框";s:5:"title";s:15:"弹出对话框";s:4:"type";s:2:"ul";s:5:"level";i:1;}i:1;a:4:{s:3:"hid";s:15:"引用方法一";s:5:"title";s:15:"引用方法一";s:4:"type";s:2:"ul";s:5:"level";i:2;}i:2;a:4:{s:3:"hid";s:12:"引入文件";s:5:"title";s:12:"引入文件";s:4:"type";s:2:"ul";s:5:"level";i:3;}i:3;a:4:{s:3:"hid";s:2:"js";s:5:"title";s:2:"JS";s:4:"type";s:2:"ul";s:5:"level";i:3;}i:4;a:4:{s:3:"hid";s:4:"demo";s:5:"title";s:4:"Demo";s:4:"type";s:2:"ul";s:5:"level";i:3;}i:5;a:4:{s:3:"hid";s:15:"引用方法二";s:5:"title";s:15:"引用方法二";s:4:"type";s:2:"ul";s:5:"level";i:2;}}s:8:"abstract";s:426:"弹出对话框
+
+引用方法一
+
+引入文件
+
+
+<link type="text/css" rel="stylesheet" href="http://common.mn.sina.com.cn/public/resource/lib/artDialog/skins/simple.css" />
+<script type="text/javascript" src="http://common.mn.sina.com.cn/public/resource/lib/artDialog/jquery.artDialog.js"></script>
+<script type="text/javascript" src="http://common.mn.sina.com.cn/public/resource/lib/artDialog/artDialog.plugins.js"></script>";}s:8:"internal";a:2:{s:5:"cache";b:1;s:3:"toc";b:1;}s:8:"relation";a:1:{s:10:"firstimage";s:0:"";}}s:10:"persistent";a:4:{s:4:"date";a:1:{s:7:"created";i:1414397095;}s:7:"creator";s:9:"邱沼懿";s:4:"user";s:1:"e";s:11:"last_change";b:0;}}

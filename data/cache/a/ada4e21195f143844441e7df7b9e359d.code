@@ -1,0 +1,5 @@
+<span class="coMULTI">/* 牌面大小 */</span>
+<span class="re1">.card3d</span> <span class="br0">&#123;</span> <span class="kw1">width</span><span class="sy0">:</span><span class="re3">120px</span><span class="sy0">;</span> <span class="kw1">height</span><span class="sy0">:</span><span class="re3">120px</span><span class="sy0">;</span> <span class="br0">&#125;</span>
+<span class="coMULTI">/* 翻牌速度 */</span>
+<span class="re1">.card3d</span> .front<span class="sy0">,</span>
+<span class="re1">.card3d</span> <span class="re1">.back</span> <span class="br0">&#123;</span> -webkit-transition-duration<span class="sy0">:</span>.8s<span class="sy0">;</span> -moz-transition-duration<span class="sy0">:</span>.8s<span class="sy0">;</span> transition-duration<span class="sy0">:</span>.8s<span class="sy0">;</span> <span class="br0">&#125;</span>

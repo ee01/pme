@@ -1,0 +1,140 @@
+
+<h1 class="sectionedit1" id="slidesjs_图片滚动插件">SlidesJS 图片滚动插件</h1>
+<div class="level1">
+
+</div>
+<!-- EDIT1 SECTION "SlidesJS 图片滚动插件" [1-43] -->
+<h2 class="sectionedit2" id="引入文件">引入文件</h2>
+<div class="level2">
+<pre class="code html4strict"><span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/script.html"><span class="kw2">script</span></a> <span class="kw3">type</span><span class="sy0">=</span><span class="st0">&quot;text/javascript&quot;</span> <span class="kw3">src</span><span class="sy0">=</span><span class="st0">&quot;http://common.mn.sina.com.cn/public/resource/lib/jquery.slides.js&quot;</span>&gt;&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/script.html"><span class="kw2">script</span></a>&gt;</span></pre>
+
+</div>
+<!-- EDIT2 SECTION "引入文件" [44-203] -->
+<h2 class="sectionedit3" id="js">JS</h2>
+<div class="level2">
+<pre class="code javascript"><span class="kw1">var</span> slidesjs <span class="sy0">=</span> $<span class="br0">&#40;</span><span class="st0">'.slidesjs'</span><span class="br0">&#41;</span>.<span class="me1">slidesjs</span><span class="br0">&#40;</span><span class="br0">&#123;</span>
+	width<span class="sy0">:</span> <span class="nu0">900</span><span class="sy0">,</span>
+	height<span class="sy0">:</span> <span class="nu0">350</span><span class="sy0">,</span>
+	play<span class="sy0">:</span> <span class="br0">&#123;</span>
+		active<span class="sy0">:</span> <span class="kw2">false</span><span class="sy0">,</span>
+		auto<span class="sy0">:</span> <span class="kw2">true</span><span class="sy0">,</span>
+		interval<span class="sy0">:</span> <span class="nu0">6000</span><span class="sy0">,</span>
+		pauseOnHover<span class="sy0">:</span> <span class="kw2">true</span><span class="sy0">,</span>
+		restartDelay<span class="sy0">:</span> <span class="nu0">2000</span>
+	<span class="br0">&#125;</span>
+<span class="br0">&#125;</span><span class="br0">&#41;</span>.<span class="me1">css</span><span class="br0">&#40;</span><span class="br0">&#123;</span>visibility<span class="sy0">:</span><span class="st0">&quot;visible&quot;</span><span class="sy0">,</span> overflow<span class="sy0">:</span><span class="st0">&quot;visible&quot;</span><span class="br0">&#125;</span><span class="br0">&#41;</span><span class="sy0">;</span></pre>
+
+</div>
+<!-- EDIT3 SECTION "JS" [204-470] -->
+<h2 class="sectionedit4" id="html">html</h2>
+<div class="level2">
+<pre class="code html4strict"><span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/div.html"><span class="kw2">div</span></a> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;slidesjs&quot;</span> <span class="kw3">style</span><span class="sy0">=</span><span class="st0">&quot;visibility:hidden&quot;</span>&gt;</span>
+	<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/div.html"><span class="kw2">div</span></a>&gt;&lt;<a target="_blank" href="http://december.com/html/4/element/img.html"><span class="kw2">img</span></a> <span class="kw3">alt</span><span class="sy0">=</span><span class="st0">&quot;&quot;</span> <span class="kw3">src</span><span class="sy0">=</span><span class="st0">&quot;images/001.jpg&quot;</span> <span class="kw3">title</span><span class="sy0">=</span><span class="st0">&quot;&quot;</span> <span class="kw3">alt</span><span class="sy0">=</span><span class="st0">&quot;图片标题1&quot;</span> <span class="sy0">/</span>&gt;</span><span class="sc-1">&lt;!--如果是版块切换，这里可以添加div--&gt;</span><span class="sc2">&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/div.html"><span class="kw2">div</span></a>&gt;</span>
+	<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/div.html"><span class="kw2">div</span></a>&gt;&lt;<a target="_blank" href="http://december.com/html/4/element/img.html"><span class="kw2">img</span></a> <span class="kw3">alt</span><span class="sy0">=</span><span class="st0">&quot;&quot;</span> <span class="kw3">src</span><span class="sy0">=</span><span class="st0">&quot;images/002.jpg&quot;</span> <span class="kw3">title</span><span class="sy0">=</span><span class="st0">&quot;&quot;</span> <span class="kw3">alt</span><span class="sy0">=</span><span class="st0">&quot;图片标题2&quot;</span> <span class="sy0">/</span>&gt;&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/div.html"><span class="kw2">div</span></a>&gt;</span>
+	<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/div.html"><span class="kw2">div</span></a>&gt;&lt;<a target="_blank" href="http://december.com/html/4/element/img.html"><span class="kw2">img</span></a> <span class="kw3">alt</span><span class="sy0">=</span><span class="st0">&quot;&quot;</span> <span class="kw3">src</span><span class="sy0">=</span><span class="st0">&quot;images/003.jpg&quot;</span> <span class="kw3">title</span><span class="sy0">=</span><span class="st0">&quot;&quot;</span> <span class="kw3">alt</span><span class="sy0">=</span><span class="st0">&quot;图片标题3&quot;</span> <span class="sy0">/</span>&gt;&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/div.html"><span class="kw2">div</span></a>&gt;</span>
+<span class="sc2">&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/div.html"><span class="kw2">div</span></a>&gt;</span></pre>
+
+</div>
+<!-- EDIT4 SECTION "html" [471-850] -->
+<h2 class="sectionedit5" id="css">css</h2>
+<div class="level2">
+<pre class="code css"><span class="re1">.slidesjs</span> <span class="br0">&#123;</span>
+	<span class="kw1">position</span><span class="sy0">:</span> <span class="kw2">relative</span><span class="sy0">;</span>
+	<span class="kw1">width</span><span class="sy0">:</span> <span class="re3">900px</span><span class="sy0">;</span>
+	<span class="kw1">margin</span><span class="sy0">:</span> <span class="nu0">0</span> <span class="kw2">auto</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+<span class="re1">.slidesjs</span> <span class="re1">.slidesjs-navigation</span> <span class="br0">&#123;</span>
+	<span class="kw1">z-index</span><span class="sy0">:</span> <span class="nu0">10</span><span class="sy0">;</span>
+	filter<span class="sy0">:</span> Alpha<span class="br0">&#40;</span>opacity<span class="sy0">=</span><span class="nu0">40</span><span class="br0">&#41;</span><span class="sy0">;</span>
+	opacity<span class="sy0">:</span> <span class="nu0">0.4</span><span class="sy0">;</span>
+	<span class="kw1">line-height</span><span class="sy0">:</span> <span class="re3">999px</span><span class="sy0">;</span>
+	<span class="kw1">overflow</span><span class="sy0">:</span> <span class="kw2">hidden</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+<span class="re1">.slidesjs</span> <span class="re1">.slidesjs-navigation</span><span class="re2">:hover </span><span class="br0">&#123;</span>
+	filter<span class="sy0">:</span> Alpha<span class="br0">&#40;</span>opacity<span class="sy0">=</span><span class="nu0">100</span><span class="br0">&#41;</span><span class="sy0">;</span>
+	opacity<span class="sy0">:</span> <span class="nu0">1</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+<span class="re1">.slidesjs</span> .slidesjs-previous<span class="sy0">,</span>
+<span class="re1">.slidesjs</span> <span class="re1">.slidesjs-next</span> <span class="br0">&#123;</span>
+	<span class="kw1">position</span><span class="sy0">:</span> <span class="kw2">absolute</span><span class="sy0">;</span>
+	<span class="kw1">top</span><span class="sy0">:</span> <span class="re3">125px</span><span class="sy0">;</span>
+	<span class="kw1">width</span><span class="sy0">:</span> <span class="re3">19px</span><span class="sy0">;</span>
+	<span class="kw1">height</span><span class="sy0">:</span> <span class="re3">90px</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+	<span class="re1">.slidesjs</span> <span class="re1">.slidesjs-previous</span> <span class="br0">&#123;</span>
+		<span class="kw1">left</span><span class="sy0">:</span> <span class="re3">-5px</span><span class="sy0">;</span>
+		<span class="kw1">background</span><span class="sy0">:</span> <span class="kw2">url</span><span class="br0">&#40;</span><span class="co2">images/photos_switch.png</span><span class="br0">&#41;</span> <span class="kw2">no-repeat</span> <span class="nu0">0</span> <span class="nu0">0</span><span class="sy0">;</span>
+	<span class="br0">&#125;</span>
+	<span class="re1">.slidesjs</span> <span class="re1">.slidesjs-next</span> <span class="br0">&#123;</span>
+		<span class="kw1">right</span><span class="sy0">:</span> <span class="re3">-5px</span><span class="sy0">;</span>
+		<span class="kw1">background</span><span class="sy0">:</span> <span class="kw2">url</span><span class="br0">&#40;</span><span class="co2">images/photos_switch.png</span><span class="br0">&#41;</span> <span class="kw2">no-repeat</span> <span class="re3">-19px</span> <span class="nu0">0</span><span class="sy0">;</span>
+	<span class="br0">&#125;</span>
+<span class="re1">.slidesjs-pagination</span> <span class="br0">&#123;</span>
+	<span class="kw1">width</span><span class="sy0">:</span> <span class="re3">160px</span><span class="sy0">;</span>
+	<span class="kw1">margin</span><span class="sy0">:</span> <span class="re3">40px</span> <span class="kw2">auto</span> <span class="nu0">0</span><span class="sy0">;</span>
+	<span class="kw1">list-style</span><span class="sy0">:</span> <span class="kw2">none</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+<span class="re1">.slidesjs-pagination</span> li <span class="br0">&#123;</span>
+	<span class="kw1">float</span><span class="sy0">:</span> <span class="kw1">left</span><span class="sy0">;</span>
+	<span class="kw1">margin</span><span class="sy0">:</span> <span class="nu0">0</span> <span class="re3">5px</span> <span class="nu0">0</span> <span class="re3">4px</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+<span class="re1">.slidesjs-pagination</span> li a <span class="br0">&#123;</span>
+	<span class="kw1">display</span><span class="sy0">:</span> <span class="kw2">block</span><span class="sy0">;</span>
+	<span class="kw1">width</span><span class="sy0">:</span> <span class="re3">11px</span><span class="sy0">;</span>
+	<span class="kw1">height</span><span class="sy0">:</span> <span class="nu0">0</span><span class="sy0">;</span>
+	<span class="kw1">padding-top</span><span class="sy0">:</span> <span class="re3">11px</span><span class="sy0">;</span>
+	<span class="kw1">background</span><span class="sy0">:</span> <span class="kw2">url</span><span class="br0">&#40;</span><span class="co2">images/photos_pagination.png</span><span class="br0">&#41;</span> <span class="kw2">no-repeat</span><span class="sy0">;</span>
+	<span class="kw1">float</span><span class="sy0">:</span> <span class="kw1">left</span><span class="sy0">;</span>
+	<span class="kw1">overflow</span><span class="sy0">:</span> <span class="kw2">hidden</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+<span class="re1">.slidesjs-pagination</span> li a<span class="re1">.active</span> <span class="br0">&#123;</span>
+	<span class="kw1">background-position</span><span class="sy0">:</span> <span class="nu0">0</span> <span class="re3">-11px</span>
+<span class="br0">&#125;</span>
+&nbsp;
+<span class="re1">.slidesjs</span> div <span class="br0">&#123;</span>
+	<span class="kw1">position</span><span class="sy0">:</span> <span class="kw2">relative</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+	<span class="re1">.slidesjs</span> div img <span class="br0">&#123;</span>
+		<span class="kw1">width</span><span class="sy0">:</span> <span class="re3">900px</span><span class="sy0">;</span>
+		<span class="kw1">height</span><span class="sy0">:</span> <span class="re3">350px</span><span class="sy0">;</span>
+	<span class="br0">&#125;</span></pre>
+
+</div>
+<!-- EDIT5 SECTION "css" [851-2003] -->
+<h2 class="sectionedit6" id="扩展用法">扩展用法</h2>
+<div class="level2">
+
+</div>
+<!-- EDIT6 SECTION "扩展用法" [2004-2029] -->
+<h3 class="sectionedit7" id="控制切换指定版块_图片">控制切换指定版块/图片</h3>
+<div class="level3">
+<pre class="code javascript"><span class="kw1">var</span> slidesjs <span class="sy0">=</span> $<span class="br0">&#40;</span><span class="st0">'.slidesjs'</span><span class="br0">&#41;</span>.<span class="me1">slidesjs</span><span class="br0">&#40;</span><span class="br0">&#123;</span>
+	width<span class="sy0">:</span> <span class="nu0">900</span><span class="sy0">,</span>
+	height<span class="sy0">:</span> <span class="nu0">350</span><span class="sy0">,</span>
+	navigation<span class="sy0">:</span> <span class="kw2">false</span><span class="sy0">,</span>
+	play<span class="sy0">:</span> <span class="kw2">false</span>
+<span class="br0">&#125;</span><span class="br0">&#41;</span><span class="sy0">;</span></pre>
+<pre class="code javascript"><span class="kw1">var</span> index <span class="sy0">=</span> <span class="nu0">2</span><span class="sy0">;</span>	<span class="co1">// 跳转到第二张图</span>
+slidesjs.<span class="me1">data</span><span class="br0">&#40;</span><span class="st0">'plugin_slidesjs'</span><span class="br0">&#41;</span>.<span class="kw1">goto</span><span class="br0">&#40;</span>index<span class="br0">&#41;</span><span class="sy0">;</span>
+slidesjs.<span class="me1">data</span><span class="br0">&#40;</span><span class="st0">'plugin_slidesjs'</span><span class="br0">&#41;</span>.<span class="me1">stop</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span></pre>
+
+</div>
+<!-- EDIT7 SECTION "控制切换指定版块/图片" [2030-2358] -->
+<h2 class="sectionedit8" id="专题demo">专题DEMO</h2>
+<div class="level2">
+
+<p>
+<a href="http://mn.sina.com.cn/city/zt/201310sjqf/index.shtml" class="urlextern" target="_blank" title="http://mn.sina.com.cn/city/zt/201310sjqf/index.shtml"  rel="nofollow">http://mn.sina.com.cn/city/zt/201310sjqf/index.shtml</a>
+</p>
+
+</div>
+<!-- EDIT8 SECTION "专题DEMO" [2359-2436] -->
+<h2 class="sectionedit9" id="文档说明">文档说明</h2>
+<div class="level2">
+
+<p>
+<a href="http://www.slidesjs.com/" class="urlextern" target="_blank" title="http://www.slidesjs.com/"  rel="nofollow">http://www.slidesjs.com/</a>
+</p>
+
+</div>
+<!-- EDIT9 SECTION "文档说明" [2437-] -->

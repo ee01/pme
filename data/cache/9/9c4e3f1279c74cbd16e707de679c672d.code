@@ -1,0 +1,6 @@
+<span class="kw1">var</span> slidesjs <span class="sy0">=</span> $<span class="br0">&#40;</span><span class="st0">'.slidesjs'</span><span class="br0">&#41;</span>.<span class="me1">slidesjs</span><span class="br0">&#40;</span><span class="br0">&#123;</span>
+	width<span class="sy0">:</span> <span class="nu0">900</span><span class="sy0">,</span>
+	height<span class="sy0">:</span> <span class="nu0">350</span><span class="sy0">,</span>
+	navigation<span class="sy0">:</span> <span class="kw2">false</span><span class="sy0">,</span>
+	play<span class="sy0">:</span> <span class="kw2">false</span>
+<span class="br0">&#125;</span><span class="br0">&#41;</span><span class="sy0">;</span>

@@ -1,0 +1,9 @@
+a:2:{s:7:"current";a:9:{s:4:"date";a:2:{s:7:"created";i:1437462169;s:8:"modified";i:1438062225;}s:7:"creator";s:6:"sauron";s:4:"user";s:6:"sauron";s:11:"last_change";b:0;s:11:"contributor";a:1:{s:6:"sauron";s:6:"sauron";}s:5:"title";s:33:"直达号服务组件显示原因";s:11:"description";a:2:{s:15:"tableofcontents";a:1:{i:0;a:4:{s:3:"hid";s:33:"直达号服务组件显示原因";s:5:"title";s:33:"直达号服务组件显示原因";s:4:"type";s:2:"ul";s:5:"level";i:1;}}s:8:"abstract";s:398:"直达号服务组件显示原因
+  
+  
+  服务组件只有在移动端百度的搜索框里@直达词进去的时候才会显示，所以本身
+  在PC端是不显示的要显示，显示方式：    域名+ ?bd_wd=0
+  且服务组件在审核通过前不管PC还是手机打开都是不显示的，添加那段代码后
+  可以显示：域名+?bd_wd=0
+  
+  如     http://m.jjxm.com.cn/?bd_wd=0";}s:8:"internal";a:2:{s:5:"cache";b:1;s:3:"toc";b:1;}s:8:"relation";a:1:{s:10:"firstimage";s:0:"";}}s:10:"persistent";a:5:{s:4:"date";a:2:{s:7:"created";i:1437462169;s:8:"modified";i:1438062225;}s:7:"creator";s:6:"sauron";s:4:"user";s:6:"sauron";s:11:"last_change";b:0;s:11:"contributor";a:1:{s:6:"sauron";s:6:"sauron";}}}

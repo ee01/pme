@@ -1,0 +1,16 @@
+a:2:{s:7:"current";a:10:{s:4:"date";a:2:{s:7:"created";i:1426904832;s:8:"modified";i:1452150050;}s:7:"creator";s:9:"邱沼懿";s:4:"user";s:1:"e";s:11:"last_change";b:0;s:11:"contributor";a:2:{s:1:"e";s:4:"E神";s:5:"naihe";s:6:"奈何";}s:5:"title";s:27:"INI文件的语法与使用";s:11:"description";a:2:{s:15:"tableofcontents";a:10:{i:0;a:4:{s:3:"hid";s:27:"ini文件的语法与使用";s:5:"title";s:27:"INI文件的语法与使用";s:4:"type";s:2:"ul";s:5:"level";i:1;}i:1;a:4:{s:3:"hid";s:12:"格式规范";s:5:"title";s:12:"格式规范";s:4:"type";s:2:"ul";s:5:"level";i:2;}i:2;a:4:{s:3:"hid";s:12:"内容规范";s:5:"title";s:12:"内容规范";s:4:"type";s:2:"ul";s:5:"level";i:2;}i:3;a:4:{s:3:"hid";s:27:"template_模板信息部分";s:5:"title";s:29:"[Template] 模板信息部分";s:4:"type";s:2:"ul";s:5:"level";i:3;}i:4;a:4:{s:3:"hid";s:25:"config_模板配置部分";s:5:"title";s:27:"[Config] 模板配置部分";s:4:"type";s:2:"ul";s:5:"level";i:3;}i:5;a:4:{s:3:"hid";s:30:"designer_设计师信息部分";s:5:"title";s:32:"[Designer] 设计师信息部分";s:4:"type";s:2:"ul";s:5:"level";i:3;}i:6;a:4:{s:3:"hid";s:31:"developer_开发者信息部分";s:5:"title";s:33:"[Developer] 开发者信息部分";s:4:"type";s:2:"ul";s:5:"level";i:3;}i:7;a:4:{s:3:"hid";s:28:"tester_测试者信息部分";s:5:"title";s:30:"[Tester] 测试者信息部分";s:4:"type";s:2:"ul";s:5:"level";i:3;}i:8;a:4:{s:3:"hid";s:18:"debug_调试内容";s:5:"title";s:20:"[Debug] 调试内容";s:4:"type";s:2:"ul";s:5:"level";i:3;}i:9;a:4:{s:3:"hid";s:19:"ini文件demo下载";s:5:"title";s:19:"INI文件demo下载";s:4:"type";s:2:"ul";s:5:"level";i:2;}}s:8:"abstract";s:275:"INI文件的语法与使用
+
+格式规范
+
+符合通用ini文件格式规范！
+
+内容规范
+
+[Template] 模板信息部分
+
+	*  Name：模板名称 
+	*  Description：模板的简短介绍
+	*  URL：模板介绍的网址
+	*  Version：版本号
+
+[Config] 模板配置部分";}s:8:"relation";a:3:{s:10:"references";a:2:{s:18:"ued:template:index";b:1;s:21:"ued:template:quickbar";b:1;}s:7:"haspart";a:1:{s:21:"ued:template:quickbar";b:1;}s:10:"firstimage";s:0:"";}s:14:"plugin_include";a:3:{s:12:"instructions";a:1:{i:0;a:4:{s:4:"mode";s:4:"page";s:4:"page";s:21:"ued:template:quickbar";s:4:"sect";s:24:"quickbar_参数值说明";s:9:"parent_id";s:19:"ued:template:config";}}s:5:"pages";a:1:{i:0;a:3:{s:2:"id";s:21:"ued:template:quickbar";s:6:"exists";b:1;s:9:"parent_id";s:19:"ued:template:config";}}s:15:"include_content";b:0;}s:8:"internal";a:2:{s:5:"cache";b:1;s:3:"toc";b:1;}}s:10:"persistent";a:5:{s:4:"date";a:2:{s:7:"created";i:1426904832;s:8:"modified";i:1452150050;}s:7:"creator";s:9:"邱沼懿";s:4:"user";s:1:"e";s:11:"last_change";b:0;s:11:"contributor";a:2:{s:1:"e";s:4:"E神";s:5:"naihe";s:6:"奈何";}}}

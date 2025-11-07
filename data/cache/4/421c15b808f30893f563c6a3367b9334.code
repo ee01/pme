@@ -1,0 +1,24 @@
+<span class="re0">#preLoader</span> <span class="br0">&#123;</span>
+	<span class="kw1">position</span><span class="sy0">:</span> <span class="kw2">fixed</span><span class="sy0">;</span>
+	<span class="kw1">top</span><span class="sy0">:</span> <span class="re3">10%</span><span class="sy0">;</span>
+	<span class="kw1">left</span><span class="sy0">:</span> <span class="re3">40%</span><span class="sy0">;</span>
+	<span class="kw1">width</span><span class="sy0">:</span> <span class="re3">142px</span><span class="sy0">;</span>
+	<span class="kw1">height</span><span class="sy0">:</span> <span class="re3">500px</span><span class="sy0">;</span>
+	<span class="kw1">background</span><span class="sy0">:</span> <span class="kw2">url</span><span class="br0">&#40;</span><span class="co2">images/loader-bottle.png</span><span class="br0">&#41;</span> <span class="nu0">0</span> <span class="kw1">bottom</span> <span class="kw2">no-repeat</span><span class="sy0">;</span>
+	<span class="kw1">z-index</span><span class="sy0">:</span> <span class="nu0">999999999</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+	<span class="re0">#preLoader</span> <span class="re1">.loader</span> <span class="br0">&#123;</span>
+		<span class="kw1">position</span><span class="sy0">:</span> <span class="kw2">absolute</span><span class="sy0">;</span>
+		<span class="kw1">bottom</span><span class="sy0">:</span> <span class="nu0">0</span><span class="sy0">;</span>
+		<span class="kw1">left</span><span class="sy0">:</span> <span class="nu0">0</span><span class="sy0">;</span>
+		<span class="kw1">width</span><span class="sy0">:</span> <span class="re3">142px</span><span class="sy0">;</span>
+		<span class="kw1">height</span><span class="sy0">:</span> <span class="nu0">0</span><span class="sy0">;</span>
+		<span class="kw1">background</span><span class="sy0">:</span> <span class="kw2">url</span><span class="br0">&#40;</span><span class="co2">images/loader-bottle.png</span><span class="br0">&#41;</span> <span class="re3">-142px</span> <span class="kw1">bottom</span> <span class="kw2">no-repeat</span><span class="sy0">;</span>
+	<span class="br0">&#125;</span>
+	<span class="re0">#preLoader</span> <span class="re1">.loader-swf</span> <span class="br0">&#123;</span>
+		<span class="kw1">position</span><span class="sy0">:</span> <span class="kw2">absolute</span><span class="sy0">;</span>
+		<span class="kw1">bottom</span><span class="sy0">:</span> <span class="nu0">0</span><span class="sy0">;</span>
+		<span class="kw1">left</span><span class="sy0">:</span> <span class="nu0">0</span><span class="sy0">;</span>
+		<span class="kw1">width</span><span class="sy0">:</span> <span class="re3">142px</span><span class="sy0">;</span>
+		<span class="kw1">height</span><span class="sy0">:</span> <span class="re3">210px</span><span class="sy0">;</span>
+	<span class="br0">&#125;</span>

@@ -1,0 +1,41 @@
+$<span class="br0">&#40;</span><span class="kw1">function</span><span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+	$<span class="br0">&#40;</span><span class="st0">'#file_upload'</span><span class="br0">&#41;</span>.<span class="me1">uploadify</span><span class="br0">&#40;</span><span class="br0">&#123;</span>
+		<span class="st0">'auto'</span>     <span class="sy0">:</span> <span class="kw2">false</span><span class="sy0">,</span><span class="co1">//关闭自动上传</span>
+		<span class="st0">'removeTimeout'</span> <span class="sy0">:</span> <span class="nu0">1</span><span class="sy0">,</span><span class="co1">//文件队列上传完成1秒后删除	</span>
+		<span class="st0">'swf'</span>      <span class="sy0">:</span> <span class="st0">'http://common.mn.sina.com.cn/public/resource/lib/uploadify/uploadify.swf'</span><span class="sy0">,</span>
+		<span class="st0">'uploader'</span> <span class="sy0">:</span> <span class="st0">'http://common.mn.sina.com.cn/activity/jsonp/7/tt'</span><span class="sy0">,</span>服务端处理脚本
+		<span class="st0">'method'</span>   <span class="sy0">:</span> <span class="st0">'post'</span><span class="sy0">,</span><span class="co1">//方法，服务端可以用$_POST数组获取数据</span>
+		<span class="st0">'buttonText'</span> <span class="sy0">:</span> <span class="st0">'选择图片'</span><span class="sy0">,</span><span class="co1">//设置按钮文本</span>
+		<span class="st0">'multi'</span>    <span class="sy0">:</span> <span class="kw2">true</span><span class="sy0">,</span><span class="co1">//允许同时上传多张图片</span>
+		<span class="st0">'uploadLimit'</span> <span class="sy0">:</span> <span class="nu0">5</span><span class="sy0">,</span><span class="co1">//一次最多只允许上传10张图片</span>
+		<span class="co1">//服务器端脚本使用的文件对象的名称 $_FILES个['field']</span>
+        <span class="st0">'fileObjName'</span><span class="sy0">:</span><span class="st0">'field'</span><span class="sy0">,</span>
+		<span class="st0">'fileTypeDesc'</span> <span class="sy0">:</span> <span class="st0">'支持格式'</span><span class="sy0">,</span><span class="co1">//只允许上传图像</span>
+		<span class="st0">'fileTypeExts'</span> <span class="sy0">:</span> <span class="st0">'*.gif; *.jpg; *.png'</span><span class="sy0">,</span><span class="co1">//限制允许上传的图片后缀</span>
+		<span class="st0">'fileSizeLimit'</span> <span class="sy0">:</span> <span class="st0">'500KB'</span><span class="sy0">,</span><span class="co1">//限制上传的图片不得超过200KB</span>
+		<span class="co1">//返回一个错误，选择文件的时候触发</span>
+        <span class="st0">'onSelectError'</span><span class="sy0">:</span><span class="kw1">function</span><span class="br0">&#40;</span>file<span class="sy0">,</span> errorCode<span class="sy0">,</span> errorMsg<span class="br0">&#41;</span><span class="br0">&#123;</span>
+            <span class="kw1">switch</span><span class="br0">&#40;</span>errorCode<span class="br0">&#41;</span> <span class="br0">&#123;</span>
+                <span class="kw1">case</span> <span class="sy0">-</span><span class="nu0">100</span><span class="sy0">:</span>
+                    alert<span class="br0">&#40;</span><span class="st0">&quot;上传的文件数量应该低于&quot;</span><span class="sy0">+</span>$<span class="br0">&#40;</span><span class="st0">'#file_upload'</span><span class="br0">&#41;</span>.<span class="me1">uploadify</span><span class="br0">&#40;</span><span class="st0">'settings'</span><span class="sy0">,</span><span class="st0">'uploadLimit'</span><span class="br0">&#41;</span><span class="sy0">+</span><span class="st0">&quot;个文件！&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+                    <span class="kw1">break</span><span class="sy0">;</span>
+                <span class="kw1">case</span> <span class="sy0">-</span><span class="nu0">110</span><span class="sy0">:</span>
+                    alert<span class="br0">&#40;</span><span class="st0">&quot;文件应该低于&quot;</span><span class="sy0">+</span>$<span class="br0">&#40;</span><span class="st0">'#file_upload'</span><span class="br0">&#41;</span>.<span class="me1">uploadify</span><span class="br0">&#40;</span><span class="st0">'settings'</span><span class="sy0">,</span><span class="st0">'fileSizeLimit'</span><span class="br0">&#41;</span><span class="sy0">+</span><span class="st0">&quot;！&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+                    <span class="kw1">break</span><span class="sy0">;</span>
+                <span class="kw1">case</span> <span class="sy0">-</span><span class="nu0">120</span><span class="sy0">:</span>
+                    alert<span class="br0">&#40;</span><span class="st0">&quot;文件 [&quot;</span><span class="sy0">+</span>file.<span class="me1">name</span><span class="sy0">+</span><span class="st0">&quot;] 大小异常！&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+                    <span class="kw1">break</span><span class="sy0">;</span>
+                <span class="kw1">case</span> <span class="sy0">-</span><span class="nu0">130</span><span class="sy0">:</span>
+                    alert<span class="br0">&#40;</span><span class="st0">&quot;文件 [&quot;</span><span class="sy0">+</span>file.<span class="me1">name</span><span class="sy0">+</span><span class="st0">&quot;] 类型不正确！&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+                    <span class="kw1">break</span><span class="sy0">;</span>
+            <span class="br0">&#125;</span>
+        <span class="br0">&#125;</span><span class="sy0">,</span>
+        <span class="co1">//检测FLASH失败调用</span>
+        <span class="st0">'onFallback'</span><span class="sy0">:</span><span class="kw1">function</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="br0">&#123;</span>
+            alert<span class="br0">&#40;</span><span class="st0">&quot;您未安装FLASH控件，无法上传图片！请安装FLASH控件后再试。&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+        <span class="br0">&#125;</span><span class="sy0">,</span>
+		<span class="st0">'onUploadSuccess'</span><span class="sy0">:</span><span class="kw1">function</span><span class="br0">&#40;</span>file<span class="sy0">,</span> data<span class="sy0">,</span> response<span class="br0">&#41;</span><span class="br0">&#123;</span>
+			console.<span class="me1">log</span><span class="br0">&#40;</span>data<span class="br0">&#41;</span><span class="sy0">;</span><span class="co1">//成功后输出服务端输出信息</span>
+        <span class="br0">&#125;</span>
+	<span class="br0">&#125;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span><span class="br0">&#41;</span><span class="sy0">;</span>

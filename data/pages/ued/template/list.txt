@@ -1,0 +1,6 @@
+====== 变量语法查询：list-xxx.html ======
+
+{{page>ued:template:global#list_列表页数据&noheader}}
+{{page>ued:template:global#posnavs_面包屑导航}}
+{{page>ued:template:global#page_links_列表分页项}}
+{{page>ued:template:global#pagenavs_同栏目导航栏}}

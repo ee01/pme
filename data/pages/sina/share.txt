@@ -1,0 +1,22 @@
+====== 分享按钮 ======
+
+<code html>
+
+<a href="http://service.weibo.com/share/share.php?url=http%3A%2F%2Fmn.sina.com.cn%2Fcity%2Fzt%2Fxmbankart%2Findex.shtml&type=button&title=啊啊啊&ralateUid=1242837564&language=zh_cn&appkey=5u1khj&pic=http%3A%2F%2Fminnan.sinaimg.cn%2F2014%2F0217%2FU9556P1433DT20140217153029.jpg&searchPic=false&style=simple" target="_blank"></a>
+
+</code>
+
+
+**参数说明：**
+
+''url'' 分享的页面地址
+
+''title'' 分享窗口中默认的文字内容，不设置自动抓取页面标题。
+
+''ralateUid'' 用户分享的内容中会自动@该账号，分享成功后会提示分享者关注该账号。
+
+''pic'' 分享的微博配图
+
+''searchPic''
+  * true: 搜索页面的(多张)图片作为配图
+  * false: 不搜索

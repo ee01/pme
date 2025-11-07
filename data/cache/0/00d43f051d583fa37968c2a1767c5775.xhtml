@@ -1,0 +1,185 @@
+
+<h1 class="sectionedit1" id="ini文件的语法与使用">INI文件的语法与使用</h1>
+<div class="level1">
+
+</div>
+<!-- EDIT1 SECTION "INI文件的语法与使用" [1-43] -->
+<h2 class="sectionedit2" id="格式规范">格式规范</h2>
+<div class="level2">
+
+<p>
+符合通用ini文件格式规范！
+</p>
+
+</div>
+<!-- EDIT2 SECTION "格式规范" [44-107] -->
+<h2 class="sectionedit3" id="内容规范">内容规范</h2>
+<div class="level2">
+
+</div>
+<!-- EDIT3 SECTION "内容规范" [108-133] -->
+<h3 class="sectionedit4" id="template_模板信息部分">[Template] 模板信息部分</h3>
+<div class="level3">
+<ul>
+<li class="level1"><div class="li"> Name：模板名称 </div>
+</li>
+<li class="level1"><div class="li"> Description：模板的简短介绍</div>
+</li>
+<li class="level1"><div class="li"> URL：模板介绍的网址</div>
+</li>
+<li class="level1"><div class="li"> Version：版本号</div>
+</li>
+</ul>
+
+</div>
+<!-- EDIT4 SECTION "[Template] 模板信息部分" [134-295] -->
+<h3 class="sectionedit5" id="config_模板配置部分">[Config] 模板配置部分</h3>
+<div class="level3">
+<ul>
+<li class="level1"><div class="li"> Type：<code>PC模板</code>或者<code>手机模板</code></div>
+</li>
+<li class="level1"><div class="li"> Category：模板的行业类别（<strong>这个很重要！实时预览的示例数据源根据此项和不同</strong>）</div>
+</li>
+<li class="level1"><div class="li"> Tags：模板的标签（多个标签以英文逗号<code>,</code>隔开）</div>
+</li>
+<li class="level1"><div class="li"> StyleColors：模板可选的颜色标识符（英文逗号<code>,</code>隔开）</div>
+</li>
+<li class="level1"><div class="li"> List1ShowtypeTotal：文字列表的showtype样式总数（仅手机模板定义）若首页无文字列表输出的对应样式，则设为0</div>
+</li>
+<li class="level1"><div class="li"> List2ShowtypeTotal：图片列表的showtype样式总数（仅手机模板定义）若首页无图片列表输出的对应样式，则设为0</div>
+</li>
+<li class="level1"><div class="li"> List3ShowtypeTotal：图文列表的showtype样式总数（仅手机模板定义）若首页无图文列表输出的对应样式，则设为0</div>
+</li>
+<li class="level1"><div class="li"> List4ShowtypeTotal：内容单页的showtype样式总数（仅手机模板定义）若首页无内容单页输出的对应样式，则设为0</div>
+</li>
+</ul>
+
+<p>
+<em class="u">例如：</em><br/>
+
+手机模板首页只输出图文列表和图片列表的展现HTML，并且图片列表还有2种展现样式，则设置：
+</p>
+<ul>
+<li class="level1"><div class="li"> List1ShowtypeTotal：0</div>
+</li>
+<li class="level1"><div class="li"> List2ShowtypeTotal：2</div>
+</li>
+<li class="level1"><div class="li"> List3ShowtypeTotal：1</div>
+</li>
+<li class="level1"><div class="li"> List4ShowtypeTotal：0</div>
+</li>
+</ul>
+
+<p>
+Category可填写的值：
+</p>
+<ul>
+<li class="level1"><div class="li"> 旅游</div>
+</li>
+<li class="level1"><div class="li"> 机械</div>
+</li>
+<li class="level1"><div class="li"> 电商</div>
+</li>
+<li class="level1"><div class="li"> …</div>
+</li>
+</ul>
+
+</div>
+<!-- EDIT5 SECTION "[Config] 模板配置部分" [296-1548] -->
+<h3 class="sectionedit6" id="designer_设计师信息部分">[Designer] 设计师信息部分</h3>
+<div class="level3">
+<ul>
+<li class="level1"><div class="li"> Name：设计师姓名 </div>
+</li>
+<li class="level1"><div class="li"> Email：设计师邮箱地址</div>
+</li>
+<li class="level1"><div class="li"> QQ：设计师QQ</div>
+</li>
+<li class="level1"><div class="li"> URL：设计师个人主页</div>
+</li>
+</ul>
+
+</div>
+<!-- EDIT6 SECTION "[Designer] 设计师信息部分" [1549-1707] -->
+<h3 class="sectionedit7" id="developer_开发者信息部分">[Developer] 开发者信息部分</h3>
+<div class="level3">
+<ul>
+<li class="level1"><div class="li"> Name：开发者姓名 </div>
+</li>
+<li class="level1"><div class="li"> Email：开发者邮箱地址</div>
+</li>
+<li class="level1"><div class="li"> QQ：开发者QQ</div>
+</li>
+<li class="level1"><div class="li"> URL：开发者个人主页</div>
+</li>
+</ul>
+
+</div>
+<!-- EDIT7 SECTION "[Developer] 开发者信息部分" [1708-1867] -->
+<h3 class="sectionedit8" id="debug_调试内容">[Debug] 调试内容</h3>
+<div class="level3">
+
+<p>
+此部分可更改系统输出的变量数据。
+</p>
+
+<p>
+如：<code>stylecolor=red</code>可在调试的时候展示红色风格（修改系统变量<code>{$stylecolor}</code>为red）<br/>
+
+如果修改子元素可以<code>contact.telephone=400-820-8888</code>
+</p>
+
+<p>
+如需修改数组变量，可是用json格式：
+</p>
+<pre class="code javascript">navs<span class="sy0">=</span><span class="br0">&#91;</span><span class="br0">&#123;</span>name<span class="sy0">:</span><span class="st0">'新闻列表'</span><span class="sy0">,</span>link<span class="sy0">:</span><span class="st0">'list-text.html?id=1'</span><span class="sy0">,</span>image<span class="sy0">:</span><span class="st0">'http://p.qq181.com/cms/1210/2012100413195471481.jpg'</span><span class="sy0">,</span>current<span class="sy0">:</span><span class="nu0">0</span><span class="sy0">,</span>lastest<span class="sy0">:</span>objClone<span class="br0">&#40;</span>PREVIEW_DEMODATA.<span class="me1">list</span><span class="br0">&#41;</span><span class="sy0">,</span>childmenu<span class="sy0">:</span><span class="kw2">null</span><span class="br0">&#125;</span><span class="sy0">,</span><span class="br0">&#123;</span>name<span class="sy0">:</span><span class="st0">'产品列表'</span><span class="sy0">,</span>link<span class="sy0">:</span><span class="st0">'list-imagetext.html?id=3'</span><span class="sy0">,</span>image<span class="sy0">:</span><span class="st0">'http://p.qq181.com/cms/1210/2012100413195471481.jpg'</span><span class="sy0">,</span>current<span class="sy0">:</span><span class="nu0">0</span><span class="sy0">,</span>lastest<span class="sy0">:</span>objClone<span class="br0">&#40;</span>PREVIEW_DEMODATA.<span class="me1">list</span><span class="br0">&#41;</span><span class="sy0">,</span>childmenu<span class="sy0">:</span><span class="kw2">null</span><span class="br0">&#125;</span><span class="sy0">,</span><span class="br0">&#123;</span>name<span class="sy0">:</span><span class="st0">'最新产品'</span><span class="sy0">,</span>link<span class="sy0">:</span><span class="st0">'list-image.html?id=4'</span><span class="sy0">,</span>image<span class="sy0">:</span><span class="st0">'http://p.qq181.com/cms/1210/2012100413195471481.jpg'</span><span class="sy0">,</span>current<span class="sy0">:</span><span class="nu0">0</span><span class="sy0">,</span>lastest<span class="sy0">:</span>objClone<span class="br0">&#40;</span>PREVIEW_DEMODATA.<span class="me1">list</span><span class="br0">&#41;</span><span class="sy0">,</span>childmenu<span class="sy0">:</span><span class="kw2">null</span><span class="br0">&#125;</span><span class="sy0">,</span><span class="br0">&#123;</span>name<span class="sy0">:</span><span class="st0">'关于我们'</span><span class="sy0">,</span>link<span class="sy0">:</span><span class="st0">'list-page.html?id=7'</span><span class="sy0">,</span>image<span class="sy0">:</span><span class="st0">'http://p.qq181.com/cms/1210/2012100413195471481.jpg'</span><span class="sy0">,</span>current<span class="sy0">:</span><span class="nu0">0</span><span class="sy0">,</span>lastest<span class="sy0">:</span><span class="kw2">null</span><span class="sy0">,</span>childmenu<span class="sy0">:</span><span class="kw2">null</span><span class="br0">&#125;</span><span class="br0">&#93;</span></pre>
+
+<p>
+注意：json格式必须写于<strong>同一行</strong>！（可利用网上在线格式化工具）
+</p>
+
+</div>
+<!-- EDIT8 SECTION "[Debug] 调试内容" [1868-2974] -->
+<h2 class="sectionedit9" id="ini文件demo下载">INI文件demo下载</h2>
+<div class="level2">
+
+<p>
+点击文件名即可下载：
+</p>
+<dl class="file">
+<dt><a href="/wiki/doku.php?do=export_code&amp;id=ued:template:config&amp;codeblock=1" title="下载片段" class="mediafile mf_ini">config.ini</a></dt>
+<dd><pre class="code file ini"><span class="re0"><span class="br0">&#91;</span>Template<span class="br0">&#93;</span></span>
+<span class="re1">Name</span><span class="sy0">=</span><span class="re2">旅游行业蓝色格调模板</span>
+<span class="re1">Description</span><span class="sy0">=</span>
+<span class="re1">URL</span><span class="sy0">=</span>
+<span class="re1">Version</span><span class="sy0">=</span><span class="re2">1.0</span>
+&nbsp;
+<span class="re0"><span class="br0">&#91;</span>Config<span class="br0">&#93;</span></span>
+<span class="re1">Type</span><span class="sy0">=</span><span class="re2">PC模板</span>
+<span class="re1">Category</span><span class="sy0">=</span><span class="re2">旅游</span>
+<span class="re1">Tags</span><span class="sy0">=</span><span class="re2">蓝色,绿色,旅游行业,出游,高大上</span>
+<span class="re1">StyleColors</span><span class="sy0">=</span><span class="re2">blue,green</span>
+<span class="re1">List1ShowtypeTotal</span><span class="sy0">=</span><span class="re2">3</span>
+<span class="re1">List2ShowtypeTotal</span><span class="sy0">=</span><span class="re2">1</span>
+<span class="re1">List3ShowtypeTotal</span><span class="sy0">=</span><span class="re2">1</span>
+<span class="re1">List4ShowtypeTotal</span><span class="sy0">=</span><span class="re2">0</span>
+&nbsp;
+&nbsp;
+<span class="re0"><span class="br0">&#91;</span>Developer<span class="br0">&#93;</span></span>
+<span class="re1">Name</span><span class="sy0">=</span><span class="re2">小懿</span>
+<span class="re1">Email</span><span class="sy0">=</span><span class="re2">01@eexx.me</span>
+<span class="re1">QQ</span><span class="sy0">=</span><span class="re2">156568451</span>
+<span class="re1">URL</span><span class="sy0">=</span><span class="re2">http://IT.eexx.me</span>
+&nbsp;
+<span class="re0"><span class="br0">&#91;</span>Designer<span class="br0">&#93;</span></span>
+<span class="re1">Name</span><span class="sy0">=</span><span class="re2">许警锋</span>
+<span class="re1">Email</span><span class="sy0">=</span>
+<span class="re1">QQ</span><span class="sy0">=</span>
+<span class="re1">URL</span><span class="sy0">=</span>
+&nbsp;
+<span class="re0"><span class="br0">&#91;</span>Debug<span class="br0">&#93;</span></span>
+<span class="re1">stylecolor</span><span class="sy0">=</span><span class="re2">red</span></pre>
+</dd></dl>
+
+</div>
+<!-- EDIT9 SECTION "INI文件demo下载" [2975-] -->

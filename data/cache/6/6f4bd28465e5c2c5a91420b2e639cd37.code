@@ -1,0 +1,2 @@
+<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/h1.html"><span class="kw2">h1</span></a>&gt;</span>{$index.title}<span class="sc2">&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/h1.html"><span class="kw2">h1</span></a>&gt;</span>
+<span class="sc-1">&lt;!-- 输出：&lt;h1&gt;XXX企业&lt;/h1&gt; --&gt;</span>

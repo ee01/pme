@@ -1,0 +1,87 @@
+====== Blend API ======
+一个百度手机上经常用到的js接口：http://clouda.baidu.com/blendapi/introduction/introduce
+
+====== 使用方法 ======
+==== 首先  ====
+导入这个js  
+<code>
+<script name="baidu-tc-cerfication" type="text/javascript" charset="utf-8" src="http://apps.bdimg.com/blend/loader.js"></script>
+</code>
+
+==== 然后导入model  ====
+这个可从  http://clouda.baidu.com/blendapi/product   这边获得
+例：
+<code>
+          blend.lightInit({
+				ak:"u7wpBCazLrhquiQKDmyS3pDg",
+				module:["keyboard"]
+			});
+</code>
+
+===== 上面两个为必须，还有，请导入jq包 =====
+
+====  之后 ====
+请参考官网手册api http://clouda.baidu.com/blendapi/introduction/introduce，其中分为两个，一个本地端能力，一个云服务，可根据需要进行选择。。
+
+====  最后，看一个简单例子，这个是获取当前位置信息 ====
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title></title>
+		<script type="text/javascript" src="jquery.min.js"></script>
+
+		<script name="baidu-tc-cerfication" type="text/javascript" charset="utf-8" src="http://apps.bdimg.com/blend/loader.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				blend.lightInit({
+					ak:"u7wpBCazLrhquiQKDmyS3pDg",
+					module:["geolocation"]
+				});
+				 Blend.device.geolocation.get({
+					onsuccess: function(data){
+					var _data = eval('('+data+')');
+					console.log(_data);
+						$("#api").val(JSON.stringify(data));
+					},
+					onfail: function(data){
+						alert(22);
+					console.log(data);
+						$("#api").val(JSON.stringify(data));
+					}
+				 });
+			});	
+		</script>
+	</head>
+	<body>
+		<div id="api"></div>
+	</body>
+</html>
+
+====社区化分享（可用）====
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title></title>
+		<script type="text/javascript" src="jquery.min.js"></script>
+		<link rel="stylesheet" href="http://apps.bdimg.com/cloudaapi/res/css/crema.css">
+		<script name="baidu-tc-cerfication" type="text/javascript" charset="utf-8" data-appid="3798147" src="http://apps.bdimg.com/blend/loader.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function() {			
+				blend.lightInit({
+					ak:"u7wpBCazLrhquiQKDmyS3pDg",
+					module:["socialshare"]
+				});				
+				var onsuccess = onfail = function(){	
+				$("#api").val(JSON.stringify(data));};
+				Blend.mbaas.socialshare.callShare({mediaType:"all",content:"还可以",onsuccess:onsuccess,onfail:onfail});
+				
+			});	
+		</script>
+	</head>
+	<body>
+		<div id="api"></div>
+	</body>
+</html>

@@ -1,0 +1,126 @@
+
+<h1 class="sectionedit1" id="变量语法查询_headerhtml">变量语法查询：_header.html</h1>
+<div class="level1">
+
+<p>
+此页面非独立HTML页面，只是部分html代码区块。<br/>
+
+为了简化重复代码，而统一写到此文件中，再使用<a href="#include_引入文件" title="ued:template:header ↵" class="wikilink1">include</a>方式引入本文件！
+</p>
+
+</div>
+<!-- EDIT2 PLUGIN_INCLUDE_START "ued:template:global" [0-] --><div class="plugin_include_content plugin_include__ued:template:global">
+
+<h2 class="sectionedit4" id="include_引入文件">{include}：引入文件</h2>
+<div class="level2">
+
+<p>
+加入文件使用include引用路径,注意起步从“./”开始，即相对于当前目录开始，如：
+</p>
+<pre class="code html4strict">{include file=&quot;./_header.html&quot;}</pre>
+
+</div>
+<!-- EDIT4 SECTION "{include}：引入文件" [150-350] --><div class="inclmeta level2">
+	<a href="/pme/doku.php?id=ued:template:global#include_引入文件" class="wikilink1 permalink" title="ued:template:global#include_引入文件" rel="bookmark">{include}：引入文件</a>
+	&middot; <abbr class="published" title="2016-08-04T03:00:40Z">2016/08/04 03:00</abbr>
+</div>
+<!-- EDIT3 PLUGIN_INCLUDE_END "ued:template:global" [0-] --></div>
+<div class="level1">
+
+</div>
+<!-- EDIT5 PLUGIN_INCLUDE_START "ued:template:global" [0-] --><div class="plugin_include_content plugin_include__ued:template:global">
+
+<h2 class="sectionedit7" id="logo_网站logo">{$logo} ：网站logo</h2>
+<div class="level2">
+
+<p>
+普通的图片式引用：
+</p>
+<pre class="code html4strict"><span class="sc2">&lt;header&gt;</span>
+	<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/div.html"><span class="kw2">div</span></a> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;logo&quot;</span>&gt;&lt;<a target="_blank" href="http://december.com/html/4/element/a.html"><span class="kw2">a</span></a> <span class="kw3">href</span><span class="sy0">=</span><span class="st0">&quot;#&quot;</span>&gt;&lt;<a target="_blank" href="http://december.com/html/4/element/img.html"><span class="kw2">img</span></a> <span class="kw3">src</span><span class="sy0">=</span><span class="st0">&quot;{$logo}&quot;</span> <span class="kw3">height</span><span class="sy0">=</span><span class="st0">&quot;97&quot;</span> <span class="kw3">width</span><span class="sy0">=</span><span class="st0">&quot;498&quot;</span><span class="sy0">/</span>&gt;&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/a.html"><span class="kw2">a</span></a>&gt;&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/div.html"><span class="kw2">div</span></a>&gt;</span>
+	...</pre>
+
+<p>
+css样式放置LOGO的引用方式：
+</p>
+<dl class="file">
+<dt><a href="/pme/doku.php?do=export_code&amp;id=ued:template:header&amp;codeblock=2" title="下载片段" class="mediafile mf_css">style.css</a></dt>
+<dd><pre class="code file css"><span class="re1">.logo</span> <span class="br0">&#123;</span> <span class="kw1">background-image</span><span class="sy0">:</span><span class="kw2">url</span><span class="br0">&#40;</span><span class="co2">../images/logo.png</span><span class="br0">&#41;</span><span class="sy0">;</span> <span class="br0">&#125;</span> <span class="coMULTI">/* 在CSS文件中写好LOGO默认值 */</span></pre>
+</dd></dl>
+<dl class="file">
+<dt><a href="/pme/doku.php?do=export_code&amp;id=ued:template:header&amp;codeblock=3" title="下载片段" class="mediafile mf_html">_header.html</a></dt>
+<dd><pre class="code file html4strict"><span class="sc-1">&lt;!-- 通过Smarty变量覆盖CSS文件中的默认值 --&gt;</span>
+<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/style.html"><span class="kw2">style</span></a>&gt;</span>
+	.logo { background-image:url({$logo}); }
+<span class="sc2">&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/style.html"><span class="kw2">style</span></a>&gt;</span>
+<span class="sc2">&lt;header&gt;</span>
+	<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/div.html"><span class="kw2">div</span></a> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;logo&quot;</span>&gt;&lt;<a target="_blank" href="http://december.com/html/4/element/a.html"><span class="kw2">a</span></a> <span class="kw3">href</span><span class="sy0">=</span><span class="st0">&quot;javascript:;&quot;</span>&gt;&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/a.html"><span class="kw2">a</span></a>&gt;&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/div.html"><span class="kw2">div</span></a>&gt;</span>
+<span class="sc2">&lt;<span class="sy0">/</span>header&gt;</span></pre>
+</dd></dl>
+
+</div>
+<!-- EDIT7 SECTION "{$logo} ：网站logo" [2402-2968] --><div class="inclmeta level2">
+	<a href="/pme/doku.php?id=ued:template:global#logo_网站logo" class="wikilink1 permalink" title="ued:template:global#logo_网站logo" rel="bookmark">{$logo} ：网站logo</a>
+	&middot; <abbr class="published" title="2016-08-04T03:00:40Z">2016/08/04 03:00</abbr>
+</div>
+<!-- EDIT6 PLUGIN_INCLUDE_END "ued:template:global" [0-] --></div>
+<div class="level1">
+
+</div>
+<!-- EDIT8 PLUGIN_INCLUDE_START "ued:template:global" [0-] --><div class="plugin_include_content plugin_include__ued:template:global">
+
+<h2 class="sectionedit10" id="navs_网站导航栏">{$navs} ：网站导航栏</h2>
+<div class="level2">
+<ul>
+<li class="level1"><div class="li"> {$navs[0].name} 导航名</div>
+</li>
+<li class="level1"><div class="li"> {$navs[0].en_name} 导航英文名</div>
+</li>
+<li class="level1"><div class="li"> {$navs[0].icon} 导航图标（iconfont技术，可改大小可换色）</div>
+</li>
+<li class="level1"><div class="li"> {$navs[0].image} 导航图片</div>
+</li>
+<li class="level1"><div class="li"> {$navs[0].link} 导航链接</div>
+</li>
+<li class="level1"><div class="li"> {$navs[0].description} 导航简介</div>
+</li>
+<li class="level1"><div class="li"> {$navs[0].current} 是否当前导航（包括所在父级），1为当前导航，class选中</div>
+</li>
+<li class="level1"><div class="li"> {$navs[0].selected} 是否选中导航（不包括所在父级），1为当前所在选中的导航</div>
+</li>
+<li class="level1"><div class="li"> {$navs[0].lastest[0]} 栏目最新文章列表（仅一级菜单有），格式同 <a href="/pme/doku.php?id=ued:template:global#list_列表页数据" class="wikilink1" title="ued:template:global">{$list} ：列表页数据</a></div>
+</li>
+<li class="level1"><div class="li"> {$navs[0].childmenu[]} 子导航，结构类似导航（数组格式，需foreach循环）</div>
+</li>
+</ul>
+<dl class="file">
+<dt><a href="/pme/doku.php?do=export_code&amp;id=ued:template:header&amp;codeblock=4" title="下载片段" class="mediafile mf_html">_header.html</a></dt>
+<dd><pre class="code file html4strict"><span class="sc2">&lt;header&gt;</span>
+	<span class="sc2">&lt;nav&gt;</span>
+		<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/ul.html"><span class="kw2">ul</span></a> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;clearfix&quot;</span>&gt;</span>
+			{foreach item=nav from=$navs}
+			<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/li.html"><span class="kw2">li</span></a> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;{if $nav.current}current{/if}&quot;</span>&gt;</span>
+				<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/a.html"><span class="kw2">a</span></a> <span class="kw3">href</span><span class="sy0">=</span><span class="st0">&quot;{$nav.link}&quot;</span>&gt;</span>{$nav.name}<span class="sc2">&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/a.html"><span class="kw2">a</span></a>&gt;</span>
+				{if $nav.childmenu}
+					<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/ul.html"><span class="kw2">ul</span></a> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;clearfix&quot;</span>&gt;</span>
+						{foreach item=nav_list from=$nav.childmenu}
+						<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/li.html"><span class="kw2">li</span></a> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;{if $nav_list.current}current{/if}&quot;</span>&gt;&lt;<a target="_blank" href="http://december.com/html/4/element/a.html"><span class="kw2">a</span></a> <span class="kw3">href</span><span class="sy0">=</span><span class="st0">&quot;{$nav_list.link}&quot;</span>&gt;</span>{$nav_list.name}<span class="sc2">&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/a.html"><span class="kw2">a</span></a>&gt;&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/li.html"><span class="kw2">li</span></a>&gt;</span>
+						{/foreach}
+					<span class="sc2">&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/ul.html"><span class="kw2">ul</span></a>&gt;</span>
+				{/if}
+			<span class="sc2">&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/li.html"><span class="kw2">li</span></a>&gt;</span>
+			{/foreach}
+		<span class="sc2">&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/ul.html"><span class="kw2">ul</span></a>&gt;</span>
+	<span class="sc2">&lt;<span class="sy0">/</span>nav&gt;</span>
+<span class="sc2">&lt;<span class="sy0">/</span>header&gt;</span></pre>
+</dd></dl>
+
+</div>
+<!-- EDIT10 SECTION "{$navs} ：网站导航栏" [3486-4705] --><div class="inclmeta level2">
+	<a href="/pme/doku.php?id=ued:template:global#navs_网站导航栏" class="wikilink1 permalink" title="ued:template:global#navs_网站导航栏" rel="bookmark">{$navs} ：网站导航栏</a>
+	&middot; <abbr class="published" title="2016-08-04T03:00:40Z">2016/08/04 03:00</abbr>
+</div>
+<!-- EDIT9 PLUGIN_INCLUDE_END "ued:template:global" [0-] --></div>
+<div class="level1">
+
+</div>

@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- generator="FeedCreator 1.7.2-ppt DokuWiki" -->
+<?xml-stylesheet href="https://eexx.me/pme/lib/exe/css.php?s=feed" type="text/css"?>
+<rdf:RDF
+    xmlns="http://purl.org/rss/1.0/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <channel rdf:about="https://eexx.me/pme/feed.php">
+        <title>百度产品部门 知识库</title>
+        <description></description>
+        <link>https://eexx.me/pme/</link>
+        <image rdf:resource="https://eexx.me/pme/lib/tpl/vector/images/favicon.ico" />
+       <dc:date>2019-03-23T17:30:49+08:00</dc:date>
+        <items>
+            <rdf:Seq>
+                <rdf:li rdf:resource="https://eexx.me/pme/doku.php?id=ued:template:global&amp;rev=1470279640&amp;do=diff"/>
+                <rdf:li rdf:resource="https://eexx.me/pme/doku.php?id=ued:template:modules:pagenavs&amp;rev=1454531070&amp;do=diff"/>
+                <rdf:li rdf:resource="https://eexx.me/pme/doku.php?id=ued:template&amp;rev=1481099020&amp;do=diff"/>
+                <rdf:li rdf:resource="https://eexx.me/pme/doku.php?id=ued:template:config&amp;rev=1454531070&amp;do=diff"/>
+                <rdf:li rdf:resource="https://eexx.me/pme/doku.php?id=ued:template:modules&amp;rev=1454531070&amp;do=diff"/>
+                <rdf:li rdf:resource="https://eexx.me/pme/doku.php?id=ued:template:list&amp;rev=1454531070&amp;do=diff"/>
+            </rdf:Seq>
+        </items>
+    </channel>
+    <image rdf:about="https://eexx.me/pme/lib/tpl/vector/images/favicon.ico">
+        <title>百度产品部门 知识库</title>
+        <link>https://eexx.me/pme/</link>
+        <url>https://eexx.me/pme/lib/tpl/vector/images/favicon.ico</url>
+    </image>
+    <item rdf:about="https://eexx.me/pme/doku.php?id=ued:template:global&amp;rev=1470279640&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-08-04T11:00:40+08:00</dc:date>
+        <title>ued:template:global</title>
+        <link>https://eexx.me/pme/doku.php?id=ued:template:global&amp;rev=1470279640&amp;do=diff</link>
+        <description>公共变量
+
+切图过程中打开控制台，刷新页面即可输出出所有数据变量。
+
+--- --- --- --- --- --- --- --- ---
+
+{include}：引入文件
+
+加入文件使用include引用路径,注意起步从“./”开始，即相对于当前目录开始，如：</description>
+    </item>
+    <item rdf:about="https://eexx.me/pme/doku.php?id=ued:template:modules:pagenavs&amp;rev=1454531070&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-02-04T04:24:30+08:00</dc:date>
+        <title>ued:template:modules:pagenavs</title>
+        <link>https://eexx.me/pme/doku.php?id=ued:template:modules:pagenavs&amp;rev=1454531070&amp;do=diff</link>
+        <description>左侧栏目列表（同级子栏目列表）
+
+[点此下载模块：_pagenavs.rar]
+[点此下载模块：_subclass.rar]
+根据模板的设计情况，选择使用二级或三级列表模块。
+subclass里面的文件subclass.js 要在index页面导入
+
+实现只显示到二级栏目
+
+_pagenavs_sub2.html
+
+实现显示到三级栏目</description>
+    </item>
+    <item rdf:about="https://eexx.me/pme/doku.php?id=ued:template&amp;rev=1481099020&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-12-07T16:23:40+08:00</dc:date>
+        <title>ued:template</title>
+        <link>https://eexx.me/pme/doku.php?id=ued:template&amp;rev=1481099020&amp;do=diff</link>
+        <description>统一平台模板切图规范
+
+高级调试方法：可在html文件中输入{debug}调试输出页面所有可用变量。（允许弹窗不被拦截）
+
+模板文件列表
+
+本页Ctrl+F查找Smarty数据变量？
+
+或点击下方文件名可直接进入查阅可用变量</description>
+    </item>
+    <item rdf:about="https://eexx.me/pme/doku.php?id=ued:template:config&amp;rev=1454531070&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-02-04T04:24:30+08:00</dc:date>
+        <title>ued:template:config</title>
+        <link>https://eexx.me/pme/doku.php?id=ued:template:config&amp;rev=1454531070&amp;do=diff</link>
+        <description>INI文件的语法与使用
+
+格式规范
+
+符合通用ini文件格式规范！
+
+内容规范
+
+[Template] 模板信息部分
+
+	*  Name：模板名称 
+	*  Description：模板的简短介绍
+	*  URL：模板介绍的网址
+	*  Version：版本号
+
+[Config] 模板配置部分</description>
+    </item>
+    <item rdf:about="https://eexx.me/pme/doku.php?id=ued:template:modules&amp;rev=1454531070&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-02-04T04:24:30+08:00</dc:date>
+        <title>ued:template:modules</title>
+        <link>https://eexx.me/pme/doku.php?id=ued:template:modules&amp;rev=1454531070&amp;do=diff</link>
+        <description>统一平台模板模块库
+
+以下所有模块使用方法：
+
+	*  下载后解压html文件及样式放入模板开发目录
+	*  在任意页面使用include方法引入以下划线开头的html文件
+	*  即可！
+
+基础模块
+
+	*  导航栏，不固定个数自适宽度
+	*  左侧栏目列表
+	*  友情链接
+	*  列表页翻页
+
+图片类模块</description>
+    </item>
+    <item rdf:about="https://eexx.me/pme/doku.php?id=ued:template:list&amp;rev=1454531070&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-02-04T04:24:30+08:00</dc:date>
+        <title>ued:template:list</title>
+        <link>https://eexx.me/pme/doku.php?id=ued:template:list&amp;rev=1454531070&amp;do=diff</link>
+        <description>变量语法查询：list-xxx.html
+
+内容单页：list-page.html
+
+	*  {$list.name} 栏目名称
+	*  {$list.en_name} 导航英文名
+	*  {$list.icon} 栏目图标（iconfont技术，可改大小可换色）
+	*  {$list.image} 栏目图片
+	*  {$list.link} 栏目链接(一般用于“查看更多”按钮)</description>
+    </item>
+</rdf:RDF>

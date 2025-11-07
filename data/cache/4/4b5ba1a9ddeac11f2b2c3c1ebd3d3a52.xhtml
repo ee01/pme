@@ -1,0 +1,295 @@
+
+<h1 class="sectionedit1" id="统一平台模板切图规范">统一平台模板切图规范</h1>
+<div class="level1">
+
+</div>
+<!-- EDIT1 SECTION "统一平台模板切图规范" [1-46] -->
+<h2 class="sectionedit2" id="模板文件列表">模板文件列表</h2>
+<div class="level2">
+
+<p>
+本页<code>Ctrl+F</code>查找Smarty数据变量？<br/>
+
+或点击下方文件名可直接进入查阅可用变量
+</p>
+
+</div>
+<!-- EDIT2 SECTION "模板文件列表" [47-182] -->
+<h3 class="sectionedit3" id="pc模板文件">PC模板文件</h3>
+<div class="level3">
+<div class="table sectionedit4"><table class="inline">
+	<thead>
+	<tr class="row0">
+		<th class="col0 centeralign">  页面名称   </th><th class="col1 centeralign">        页面文件名（点击文件名查阅变量）            </th><th class="col2"> 是否必须 </th><th class="col3 centeralign">   说明    </th>
+	</tr>
+	</thead>
+	<tr class="row1">
+		<th class="col0 leftalign"> 配置文件    </th><td class="col1 leftalign"> <a href="/doku.php?id=ued:template:config" class="wikilink1" title="ued:template:config">config.ini</a>              </td><td class="col2"> 必须 </td><td class="col3">定义模板名称、行业、风格、设计师和开发者信息等</td>
+	</tr>
+	<tr class="row2">
+		<th class="col0 leftalign"> 首页模板    </th><td class="col1 leftalign"> <a href="/doku.php?id=ued:template:index" class="wikilink1" title="ued:template:index">index.html</a>               </td><td class="col2 leftalign"> 必须     </td><td class="col3 leftalign">           </td>
+	</tr>
+	<tr class="row3">
+		<td class="col0"> 首页自定数据</td><td class="col1 leftalign"> <a href="/doku.php?id=ued:template:index#index_pc首页数据_自定义于indexjson文件中" class="wikilink1" title="ued:template:index">index.json</a>     </td><td class="col2 leftalign"> 可选  </td><td class="col3"> 创建$index.xxx变量，只可被index.html调用</td>
+	</tr>
+	<tr class="row4">
+		<th class="col0 leftalign"> 文字列表页  </th><td class="col1 leftalign"> <a href="/doku.php?id=ued:template:list" class="wikilink1" title="ued:template:list">list-text.html</a>            </td><td class="col2 leftalign"> 必须     </td><td class="col3 leftalign">           </td>
+	</tr>
+	<tr class="row5">
+		<td class="col0"> 文字列表自定数据</td><td class="col1 leftalign"> <a href="/doku.php?id=ued:template:json" class="wikilink1" title="ued:template:json">list-text.json</a>        </td><td class="col2"> 可选 </td><td class="col3"> 创建$list_text.xxx变量，只可被list-text.html调用</td>
+	</tr>
+	<tr class="row6">
+		<th class="col0 leftalign"> 图片列表页  </th><td class="col1 leftalign"> <a href="/doku.php?id=ued:template:list" class="wikilink1" title="ued:template:list">list-image.html</a>           </td><td class="col2 leftalign"> 必须     </td><td class="col3 leftalign">           </td>
+	</tr>
+	<tr class="row7">
+		<td class="col0"> 图片列表自定数据</td><td class="col1 leftalign"> <a href="/doku.php?id=ued:template:json" class="wikilink1" title="ued:template:json">list-image.json</a>       </td><td class="col2"> 可选 </td><td class="col3 leftalign"> 创建$list_image.xxx变量，只可被list-image.html调用  </td>
+	</tr>
+	<tr class="row8">
+		<th class="col0"> 图文混排列表</th><td class="col1 leftalign"> <a href="/doku.php?id=ued:template:list" class="wikilink1" title="ued:template:list">list-imagetext.html</a>       </td><td class="col2 leftalign"> 必须      </td><td class="col3 leftalign">           </td>
+	</tr>
+	<tr class="row9">
+		<td class="col0"> 图文混排自定数据</td><td class="col1 leftalign"> <a href="/doku.php?id=ued:template:json" class="wikilink1" title="ued:template:json">list-imagetext.json</a>   </td><td class="col2 leftalign"> 可选      </td><td class="col3"> 创建$list_imagetext.xxx变量，只可被list-imagetext.html调用</td>
+	</tr>
+	<tr class="row10">
+		<th class="col0"> 内容单页栏目</th><td class="col1 leftalign"> <a href="/doku.php?id=ued:template:list" class="wikilink1" title="ued:template:list">list-page.html</a>            </td><td class="col2 leftalign"> 必须      </td><td class="col3 leftalign">           </td>
+	</tr>
+	<tr class="row11">
+		<td class="col0"> 内容单页自定数据</td><td class="col1 leftalign"> <a href="/doku.php?id=ued:template:json" class="wikilink1" title="ued:template:json">list-page.json</a>        </td><td class="col2"> 可选 </td><td class="col3 leftalign"> 创建$list_page.xxx变量，只可被list-page.html调用  </td>
+	</tr>
+	<tr class="row12">
+		<th class="col0 leftalign"> 新闻内容页  </th><td class="col1 leftalign"> <a href="/doku.php?id=ued:template:content" class="wikilink1" title="ued:template:content">content-news.html</a>      </td><td class="col2 leftalign"> 必须      </td><td class="col3 leftalign">           </td>
+	</tr>
+	<tr class="row13">
+		<td class="col0"> 新闻内容自定数据</td><td class="col1 leftalign"> <a href="/doku.php?id=ued:template:json" class="wikilink1" title="ued:template:json">content-news.json</a>     </td><td class="col2">可选</td><td class="col3"> 创建$content_news.xxx变量，只可被content-news.html调用 </td>
+	</tr>
+	<tr class="row14">
+		<th class="col0 leftalign"> 产品内容页  </th><td class="col1 leftalign"> <a href="/doku.php?id=ued:template:content" class="wikilink1" title="ued:template:content">content-product.html</a>   </td><td class="col2 leftalign"> 必须      </td><td class="col3 leftalign">           </td>
+	</tr>
+	<tr class="row15">
+		<td class="col0"> 产品内容自定数据</td><td class="col1 leftalign"> <a href="/doku.php?id=ued:template:json" class="wikilink1" title="ued:template:json">content-product.json</a>  </td><td class="col2 leftalign"> 可选      </td><td class="col3"> 创建$content_product.xxx变量，<br/>
+只可被content-product.html调用</td>
+	</tr>
+	<tr class="row16">
+		<th class="col0 leftalign"> 留言板      </th><td class="col1 leftalign"> <a href="/doku.php?id=ued:template:feedback" class="wikilink2" title="ued:template:feedback" rel="nofollow">feedback.html</a>         </td><td class="col2 leftalign"> 可选      </td><td class="col3 leftalign"> 如果要自定义留言板展现形式可创建此页面  </td>
+	</tr>
+	<tr class="row17">
+		<th class="col0 leftalign"> 搜索结果页  </th><td class="col1"> <a href="/doku.php?id=ued:template:searchresult" class="wikilink1" title="ued:template:searchresult">searchresult.html</a> </td><td class="col2 leftalign"> 可选      </td><td class="col3 leftalign"> 有搜索框模板必须   </td>
+	</tr>
+	<tr class="row18">
+		<th class="col0 leftalign"> 模板缩略图  </th><td class="col1 leftalign"> screenshot.jpg                                  </td><td class="col2 leftalign"> 必须      </td><td class="col3 leftalign"> 宽600    </td>
+	</tr>
+	<tr class="row19">
+		<th class="col0 leftalign"> 头部区块    </th><td class="col1 leftalign"> <a href="/doku.php?id=ued:template:header" class="wikilink1" title="ued:template:header">_header.html</a>            </td><td class="col2 leftalign"> 可选      </td><td class="col3 leftalign"> HTML区块（非完整html页）被其他页面include  </td>
+	</tr>
+	<tr class="row20">
+		<td class="col0"> 头部自定义数据</td><td class="col1 leftalign"> <a href="/doku.php?id=ued:template:json" class="wikilink1" title="ued:template:json">_header.json</a>            </td><td class="col2"> 可选 </td><td class="col3 leftalign"> 创建$_header.xxx变量，只可被_header.html调用  </td>
+	</tr>
+	<tr class="row21">
+		<th class="col0 leftalign"> 底部区块    </th><td class="col1 leftalign"> <a href="/doku.php?id=ued:template:footer" class="wikilink1" title="ued:template:footer">_footer.html</a>            </td><td class="col2 leftalign"> 可选      </td><td class="col3 leftalign"> HTML区块（非完整html页）被其他页面include  </td>
+	</tr>
+	<tr class="row22">
+		<td class="col0"> 底部自定义数据</td><td class="col1 leftalign"> <a href="/doku.php?id=ued:template:json" class="wikilink1" title="ued:template:json">_footer.json</a>            </td><td class="col2"> 可选 </td><td class="col3 leftalign"> 创建$_footer.xxx变量，只可被_footer.html调用  </td>
+	</tr>
+	<tr class="row23">
+		<th class="col0 leftalign"> 任意区块    </th><td class="col1 leftalign"> <a href="/doku.php?id=ued:template:includes" class="wikilink1" title="ued:template:includes">_xxxx.html</a>            </td><td class="col2 leftalign"> 可选       </td><td class="col3 leftalign"> 创建任意HTML区块。<br/>
+<strong>被其他页面include的页面命名必须以下划线<code>_</code>开头</strong>  </td>
+	</tr>
+	<tr class="row24">
+		<td class="col0"> 全局数据配置</td><td class="col1 leftalign"> <a href="/doku.php?id=ued:template:json" class="wikilink1" title="ued:template:json">global.json</a>               </td><td class="col2 leftalign"> 可选  </td><td class="col3 leftalign"> 在所有页面都可使用此文件创建的变量$global.xxx  </td>
+	</tr>
+</table></div>
+<!-- EDIT4 TABLE [209-3486] -->
+</div>
+<!-- EDIT3 SECTION "PC模板文件" [183-3488] -->
+<h3 class="sectionedit5" id="手机模板文件">手机模板文件</h3>
+<div class="level3">
+<div class="table sectionedit6"><table class="inline">
+	<thead>
+	<tr class="row0">
+		<th class="col0 centeralign">  页面名称   </th><th class="col1 centeralign">        页面文件名（点击文件名查阅变量）            </th><th class="col2 centeralign">  是否必须  </th><th class="col3 centeralign">   说明    </th>
+	</tr>
+	</thead>
+	<tr class="row1">
+		<th class="col0 leftalign"> 配置文件    </th><td class="col1 leftalign"> <a href="/doku.php?id=ued:template:config" class="wikilink1" title="ued:template:config">config.ini</a>              </td><td class="col2 leftalign"> 必须       </td><td class="col3 leftalign">           </td>
+	</tr>
+	<tr class="row2">
+		<th class="col0"> 全局数据配置</th><td class="col1"> <a href="/doku.php?id=ued:template:mindex#global_自定义数据_自定义于globaljson文件中" class="wikilink1" title="ued:template:mindex">global.json</a> </td><td class="col2 leftalign"> 必须  </td><td class="col3 leftalign"> 所有页都可引用变量名$global  </td>
+	</tr>
+	<tr class="row3">
+		<th class="col0 leftalign"> 首页模板    </th><td class="col1 leftalign"> <a href="/doku.php?id=ued:template:mindex" class="wikilink1" title="ued:template:mindex">index.html</a>               </td><td class="col2 leftalign"> 必须       </td><td class="col3 leftalign">           </td>
+	</tr>
+	<tr class="row4">
+		<th class="col0 leftalign"> 文字列表页  </th><td class="col1 leftalign"> <a href="/doku.php?id=ued:template:list" class="wikilink1" title="ued:template:list">list-text.html</a>            </td><td class="col2 leftalign"> 必须       </td><td class="col3 leftalign">           </td>
+	</tr>
+	<tr class="row5">
+		<th class="col0 leftalign"> 图片列表页  </th><td class="col1 leftalign"> <a href="/doku.php?id=ued:template:list" class="wikilink1" title="ued:template:list">list-image.html</a>           </td><td class="col2 leftalign"> 必须       </td><td class="col3 leftalign">           </td>
+	</tr>
+	<tr class="row6">
+		<th class="col0"> 图文混排列表</th><td class="col1 leftalign"> <a href="/doku.php?id=ued:template:list" class="wikilink1" title="ued:template:list">list-imagetext.html</a>       </td><td class="col2 leftalign"> 必须       </td><td class="col3 leftalign">           </td>
+	</tr>
+	<tr class="row7">
+		<th class="col0"> 栏目内容单页</th><td class="col1 leftalign"> <a href="/doku.php?id=ued:template:list" class="wikilink1" title="ued:template:list">list-page.html</a>            </td><td class="col2 leftalign"> 必须       </td><td class="col3 leftalign">           </td>
+	</tr>
+	<tr class="row8">
+		<th class="col0 leftalign"> 新闻内容页  </th><td class="col1 leftalign"> <a href="/doku.php?id=ued:template:content" class="wikilink1" title="ued:template:content">content-news.html</a>      </td><td class="col2 leftalign"> 必须       </td><td class="col3 leftalign">           </td>
+	</tr>
+	<tr class="row9">
+		<th class="col0 leftalign"> 产品内容页  </th><td class="col1 leftalign"> <a href="/doku.php?id=ued:template:content" class="wikilink1" title="ued:template:content">content-product.html</a>   </td><td class="col2 leftalign"> 必须       </td><td class="col3 leftalign">           </td>
+	</tr>
+	<tr class="row10">
+		<th class="col0 leftalign"> 留言板      </th><td class="col1 leftalign"> <a href="/doku.php?id=ued:template:feedback" class="wikilink2" title="ued:template:feedback" rel="nofollow">feedback.html</a>         </td><td class="col2 leftalign"> 可选       </td><td class="col3 leftalign"> 如果要自定义留言板展现形式可创建此页面  </td>
+	</tr>
+	<tr class="row11">
+		<th class="col0 leftalign"> 搜索结果页  </th><td class="col1"> <a href="/doku.php?id=ued:template:searchresult" class="wikilink1" title="ued:template:searchresult">searchresult.html</a> </td><td class="col2 leftalign"> 可选       </td><td class="col3 leftalign"> 有搜索框模板必须   </td>
+	</tr>
+	<tr class="row12">
+		<th class="col0 leftalign"> 模板缩略图  </th><td class="col1 leftalign"> screenshot.jpg                                  </td><td class="col2 leftalign"> 必须       </td><td class="col3 leftalign"> 宽400    </td>
+	</tr>
+	<tr class="row13">
+		<th class="col0 leftalign"> 头部区块    </th><td class="col1 leftalign"> <a href="/doku.php?id=ued:template:header" class="wikilink1" title="ued:template:header">_header.html</a>            </td><td class="col2 leftalign"> 可选       </td><td class="col3 leftalign"> include的HTML区块  </td>
+	</tr>
+	<tr class="row14">
+		<th class="col0 leftalign"> 底部区块    </th><td class="col1 leftalign"> <a href="/doku.php?id=ued:template:footer" class="wikilink1" title="ued:template:footer">_footer.html</a>            </td><td class="col2 leftalign"> 可选       </td><td class="col3 leftalign"> include的HTML区块  </td>
+	</tr>
+	<tr class="row15">
+		<th class="col0 leftalign"> 任意区块    </th><td class="col1 leftalign"> <a href="/doku.php?id=ued:template:includes" class="wikilink1" title="ued:template:includes">_xxxx.html</a>            </td><td class="col2 leftalign"> 可选       </td><td class="col3 centeralign">  说明见下表  </td>
+	</tr>
+</table></div>
+<!-- EDIT6 TABLE [3519-5270] -->
+<p>
+底部导航参见：《<a href="/doku.php?id=ued:template:quickbar" class="wikilink1" title="ued:template:quickbar">Quickbar 配置说明</a>》
+</p>
+
+<p>
+<strong>PS：老模板只有三种列表页展现形式怎么办？</strong><sup><a href="#fn__1" id="fnt__1" class="fn_top">1)</a></sup>
+</p>
+
+</div>
+<!-- EDIT5 SECTION "手机模板文件" [3489-6375] -->
+<h2 class="sectionedit7" id="变量聚合查询">变量聚合查询</h2>
+<div class="level2">
+
+</div>
+<!-- EDIT7 SECTION "变量聚合查询" [6376-6407] -->
+<h3 class="sectionedit8" id="系统变量">系统变量</h3>
+<div class="level3">
+<ul>
+<li class="level1"><div class="li"> <a href="/doku.php?id=ued:template:global#title_页面标题" class="wikilink1" title="ued:template:global">{$title}</a> ：页面标题</div>
+</li>
+<li class="level1"><div class="li"> <a href="/doku.php?id=ued:template:global#keywords_页面关键词" class="wikilink1" title="ued:template:global">{$keywords}</a> ：页面关键词</div>
+</li>
+<li class="level1"><div class="li"> <a href="/doku.php?id=ued:template:global#description_页面描述" class="wikilink1" title="ued:template:global">{$description}</a> ：页面描述</div>
+</li>
+<li class="level1"><div class="li"> <a href="/doku.php?id=ued:template:global#site_url_网站资源域名地址" class="wikilink1" title="ued:template:global">{$site_url}</a> ：网站资源域名地址</div>
+</li>
+<li class="level1"><div class="li"> <a href="/doku.php?id=ued:template:global#site_another_url_网站另一域名地址" class="wikilink1" title="ued:template:global">{$site_another_url}</a> ：网站另一域名地址</div>
+</li>
+<li class="level1"><div class="li"> <a href="/doku.php?id=ued:template:global#favicon_网站图标" class="wikilink1" title="ued:template:global">{$favicon}</a> ：网站图标</div>
+</li>
+<li class="level1"><div class="li"> <a href="/doku.php?id=ued:template:global#stylecolor_网站颜色" class="wikilink1" title="ued:template:global">{$stylecolor}</a> ：网站颜色</div>
+</li>
+<li class="level1"><div class="li"> <a href="/doku.php?id=ued:template:global#headscript_头部脚本" class="wikilink1" title="ued:template:global">{$headscript}</a> ：头部脚本</div>
+</li>
+<li class="level1"><div class="li"> <a href="/doku.php?id=ued:template:global#contact_联系方式" class="wikilink1" title="ued:template:global">{$contact}</a> ：联系方式</div>
+</li>
+<li class="level1"><div class="li"> <a href="/doku.php?id=ued:template:mindex#mindexcats_移动端首页栏目展示数据" class="wikilink1" title="ued:template:mindex">{$mIndexCats}</a> ：移动端首页栏目展示数据</div>
+</li>
+<li class="level1"><div class="li"> <a href="/doku.php?id=ued:template:global#logo_网站logo" class="wikilink1" title="ued:template:global">{$logo}</a> ：网站logo</div>
+</li>
+<li class="level1"><div class="li"> <a href="/doku.php?id=ued:template:global#navs_网站导航栏" class="wikilink1" title="ued:template:global">{$navs}</a> ：网站导航栏</div>
+</li>
+<li class="level1"><div class="li"> <a href="/doku.php?id=ued:template:global#contact_联系方式" class="wikilink1" title="ued:template:global">{$contact}</a> ：联系方式</div>
+</li>
+<li class="level1"><div class="li"> <a href="/doku.php?id=ued:template:global#footprint_底部版权" class="wikilink1" title="ued:template:global">{$footprint}</a> ：底部版权</div>
+</li>
+<li class="level1"><div class="li"> <a href="/doku.php?id=ued:template:global#footscript_底部脚本" class="wikilink1" title="ued:template:global">{$footscript}</a> ：底部脚本</div>
+</li>
+</ul>
+<ul>
+<li class="level1"><div class="li"> <a href="/doku.php?id=ued:template:global#list_列表页数据" class="wikilink1" title="ued:template:global">{$list}</a> ：列表页数据</div>
+</li>
+<li class="level1"><div class="li"> <a href="/doku.php?id=ued:template:global#posnavs_面包屑导航" class="wikilink1" title="ued:template:global">{$posnavs}</a> ：面包屑导航</div>
+</li>
+<li class="level1"><div class="li"> <a href="/doku.php?id=ued:template:global#page_links_列表分页项" class="wikilink1" title="ued:template:global">{$page_links}</a> ：列表分页项</div>
+</li>
+<li class="level1"><div class="li"> <a href="/doku.php?id=ued:template:global#pagenavs_同栏目导航栏" class="wikilink1" title="ued:template:global">{$pagenavs}</a> ：同栏目导航栏</div>
+</li>
+</ul>
+<ul>
+<li class="level1"><div class="li"> <a href="/doku.php?id=ued:template:global#article_内容页数据" class="wikilink1" title="ued:template:global">{$article}</a> ：内容页数据</div>
+</li>
+<li class="level1"><div class="li"> <a href="/doku.php?id=ued:template:global#posnavs_面包屑导航" class="wikilink1" title="ued:template:global">{$posnavs}</a> ：面包屑导航</div>
+</li>
+<li class="level1"><div class="li"> <a href="/doku.php?id=ued:template:global#related_相关阅读" class="wikilink1" title="ued:template:global">{$related}</a> ：相关阅读</div>
+</li>
+</ul>
+
+</div>
+<!-- EDIT8 SECTION "系统变量" [6408-8289] -->
+<h3 class="sectionedit9" id="定义变量">定义变量</h3>
+<div class="level3">
+<ul>
+<li class="level1"><div class="li"> <a href="/doku.php?id=ued:template:json#typetext" class="wikilink1" title="ued:template:json">type:text</a> ：单行文字</div>
+</li>
+<li class="level1"><div class="li"> <a href="/doku.php?id=ued:template:json#typetextarea" class="wikilink1" title="ued:template:json">type:textarea</a> ：多行文本</div>
+</li>
+<li class="level1"><div class="li"> <a href="/doku.php?id=ued:template:json#typeimage" class="wikilink1" title="ued:template:json">type:image</a> ：单张图片</div>
+</li>
+<li class="level1"><div class="li"> <a href="/doku.php?id=ued:template:json#typeimages" class="wikilink1" title="ued:template:json">type:images</a> ：多图，多个image类型的数组</div>
+</li>
+<li class="level1"><div class="li"> <a href="/doku.php?id=ued:template:json#typenav" class="wikilink1" title="ued:template:json">type:nav</a> ：指向栏目数据变量</div>
+</li>
+<li class="level1"><div class="li"> <a href="/doku.php?id=ued:template:json#typenavs" class="wikilink1" title="ued:template:json">type:navs</a> ：指向多个栏目数据</div>
+</li>
+<li class="level1"><div class="li"> <a href="/doku.php?id=ued:template:json#typelist" class="wikilink1" title="ued:template:json">type:list</a> ：指向列表型栏目（<a href="/doku.php?id=ued:template:json#typenav" class="wikilink1" title="ued:template:json">type:nav</a>的扩展）</div>
+</li>
+<li class="level1"><div class="li"> <a href="/doku.php?id=ued:template:json#typepage" class="wikilink1" title="ued:template:json">type:page</a> ：指向单页型栏目（<a href="/doku.php?id=ued:template:json#typenav" class="wikilink1" title="ued:template:json">type:nav</a>的扩展）</div>
+</li>
+<li class="level1"><div class="li"> <a href="/doku.php?id=ued:template:json#typelink" class="wikilink1" title="ued:template:json">type:link</a> ：指向链接型栏目（<a href="/doku.php?id=ued:template:json#typenav" class="wikilink1" title="ued:template:json">type:nav</a>的扩展）</div>
+</li>
+<li class="level1"><div class="li"> <a href="/doku.php?id=ued:template:json#typequickbar" class="wikilink1" title="ued:template:json">type:quickbar</a> ：手机底部导航</div>
+</li>
+</ul>
+
+</div>
+<!-- EDIT9 SECTION "定义变量" [8290-] --><div class="footnotes">
+<div class="fn"><sup><a href="#fnt__1" id="fn__1" class="fn_bot">1)</a></sup> 
+
+<strong>情况一</strong>  如果老模板三种形式：<ul>
+<li class="level1"><div class="li"> news.html比较像 图文列表（或像文字列表</div>
+</li>
+<li class="level1"><div class="li"> pro.html比较像 图片列表</div>
+</li>
+<li class="level1"><div class="li"> about.html是 内容单页</div>
+</li>
+</ul>
+则可这样转换老模板：<ul>
+<li class="level1"><div class="li"> <a href="/doku.php?id=ued:template:list" class="wikilink1" title="ued:template:list">list-text.html</a>       参照news.html模板</div>
+</li>
+<li class="level1"><div class="li"> <a href="/doku.php?id=ued:template:list" class="wikilink1" title="ued:template:list">list-image.html</a>      参照pro.html模板</div>
+</li>
+<li class="level1"><div class="li"> <a href="/doku.php?id=ued:template:list" class="wikilink1" title="ued:template:list">list-imagetext.html</a>  也参照news.html模板</div>
+</li>
+<li class="level1"><div class="li"> <a href="/doku.php?id=ued:template:list" class="wikilink1" title="ued:template:list">list-page.html</a>       参照about.html模板</div>
+</li>
+</ul>
+<strong>情况二</strong>  如果老模板三种形式：<ul>
+<li class="level1"><div class="li"> news.html比较像 文字列表</div>
+</li>
+<li class="level1"><div class="li"> pro.html比较像 图文列表（或像图片列表</div>
+</li>
+<li class="level1"><div class="li"> about.html是 内容单页</div>
+</li>
+</ul>
+则可这样转换老模板：<ul>
+<li class="level1"><div class="li"> <a href="/doku.php?id=ued:template:list" class="wikilink1" title="ued:template:list">list-text.html</a>       参照news.html模板</div>
+</li>
+<li class="level1"><div class="li"> <a href="/doku.php?id=ued:template:list" class="wikilink1" title="ued:template:list">list-image.html</a>      参照pro.html模板</div>
+</li>
+<li class="level1"><div class="li"> <a href="/doku.php?id=ued:template:list" class="wikilink1" title="ued:template:list">list-imagetext.html</a>  也参照pro.html模板</div>
+</li>
+<li class="level1"><div class="li"> <a href="/doku.php?id=ued:template:list" class="wikilink1" title="ued:template:list">list-page.html</a>       参照about.html模板</div>
+</li>
+</ul>
+</div>
+</div>

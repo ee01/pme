@@ -1,0 +1,2 @@
+<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/p.html"><span class="kw2">p</span></a>&gt;</span>{$index.announcement}<span class="sc2">&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/p.html"><span class="kw2">p</span></a>&gt;</span>
+<span class="sc-1">&lt;!-- 输出：&lt;p&gt;这里是自动输出的公共内容！&lt;br /&gt;第二行公告内容&lt;/p&gt; --&gt;</span>

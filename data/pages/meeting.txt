@@ -1,0 +1,29 @@
+====== 会议室安排 ======
+
+===== 36号楼201 =====
+
+36号楼的会议室已共享网盘供大家查阅（实时最新版本）：
+
+<WRAP left round tip 30%>
+[[http://pan.baidu.com/s/1i32DRhF#path=%252F2015%25E5%25B9%25B4|点击查阅会议室]]\\
+（博学、群贤、至善）
+</WRAP>
+<WRAP clear/>
+
+预约接口人：兰晓莲
+
+===== 30号楼107 =====
+
+<WRAP left round tip 30%>
+<html><a href="webcal://p08-calendars.icloud.com/published/2/0FQftqP0e1LUwbYcfv1gJoQ44TvXDToRU2LYPWU3jYxXZdBfGYIl_e9uXqoHRccvHHgMZHgoGm7rxAeu4-LdMOmphJJ1RFl86bfbWqe86oE" class="urlextern">订阅会议室实时预约情况</a></html>\\
+[[http://p08-calendars.icloud.com/published/2/0FQftqP0e1LUwbYcfv1gJoQ44TvXDToRU2LYPWU3jYxXZdBfGYIl_e9uXqoHRccvHHgMZHgoGm7rxAeu4-LdMOmphJJ1RFl86bfbWqe86oE|下载到本地]](此刻版本)
+</WRAP>
+或用iphone扫一扫订阅：{{:meeting:预约会议室.png?nolink&70|}}
+<WRAP clear/>
+
+预约接口人：戴艺华、卢余惠、林霜霜
+
+建议用以上方式订阅实时数据，以下表格更新会延迟一小时（缓存）：
+<HTML>
+<iframe src="http://www.memotoo.com/agendaEmbed.php?uid=b03bbf9a19e7ba051ada9de95cb8d6ab&amp;q=8hLXz7uJistx6BQamH3WppiXMkZtkagNurkw7v7+2FMNABTpfSU7HoC1LC6BFiteW0LB8iy4+2FEr+2Fz+U08f1UNe12+pODJ4AKhGbomgeyKn+2FcjuAJdgsh6O2hCZcg3wJzRdsfIhTcrq9KzgkuAQfcJvU+ikuK2iTYbHFgfeEHPaCZ11nk92mf58gg3QzjWfzOl8J24MeE5STeyHU2oow60PtQ==" width="100%" height="700" style="border:1px solid #cccccc" frameborder="0" scrolling="auto"></iframe>
+</HTML>

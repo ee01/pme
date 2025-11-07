@@ -1,0 +1,8 @@
+  <span class="co1">//$page_links.nears_url[]数据格式如下</span>
+  <span class="br0">&#123;</span>
+&nbsp;
+      <span class="st0">'5'</span><span class="sy0">:</span><span class="st0">'category/3_5.html'</span><span class="sy0">,</span>
+      <span class="st0">'6'</span><span class="sy0">:</span><span class="st0">'category/3_6.html'</span><span class="sy0">,</span><span class="co1">//当前页,通过current_page判断</span>
+      <span class="st0">'7'</span><span class="sy0">:</span><span class="st0">'category/3_7.html'</span><span class="sy0">,</span>
+  <span class="br0">&#125;</span>
+&nbsp;

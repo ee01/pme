@@ -1,0 +1,422 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- generator="FeedCreator 1.7.2-ppt DokuWiki" -->
+<?xml-stylesheet href="http://pme.eexx.me/lib/exe/css.php?s=feed" type="text/css"?>
+<rdf:RDF
+    xmlns="http://purl.org/rss/1.0/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <channel rdf:about="http://pme.eexx.me/feed.php">
+        <title>百度产品部门 知识库</title>
+        <description></description>
+        <link>http://pme.eexx.me/</link>
+        <image rdf:resource="http://pme.eexx.me/lib/tpl/vector/images/favicon.ico" />
+       <dc:date>2015-07-27T22:35:13-07:00</dc:date>
+        <items>
+            <rdf:Seq>
+                <rdf:li rdf:resource="http://pme.eexx.me/doku.php?id=meeting&amp;rev=1437970474&amp;do=diff"/>
+                <rdf:li rdf:resource="http://pme.eexx.me/doku.php?id=it&amp;rev=1437618285&amp;do=diff"/>
+                <rdf:li rdf:resource="http://pme.eexx.me/doku.php?id=wiki:site_notice&amp;rev=1437472128&amp;do=diff"/>
+                <rdf:li rdf:resource="http://pme.eexx.me/doku.php?id=start&amp;rev=1437470341&amp;do=diff"/>
+                <rdf:li rdf:resource="http://pme.eexx.me/doku.php?image=it%3A%E5%9B%A2%E9%98%9F%E9%A1%B9%E7%9B%AE%E8%80%83%E8%AF%84_-_%E4%BA%A7%E5%93%81%E8%B4%A8%E9%87%8F%E9%83%A8%E5%88%86_v2.xls&amp;ns=it&amp;rev=1437468492&amp;tab_details=history&amp;mediado=diff&amp;do=media"/>
+                <rdf:li rdf:resource="http://pme.eexx.me/doku.php?image=it%3Axxx%E9%A1%B9%E7%9B%AE%E7%AB%8B%E9%A1%B9.docx&amp;ns=it&amp;rev=1437468492&amp;tab_details=history&amp;mediado=diff&amp;do=media"/>
+                <rdf:li rdf:resource="http://pme.eexx.me/doku.php?image=it%3A%E6%B4%BB%E5%8A%A8%E7%BB%8F%E8%B4%B9%E6%8A%A5%E9%94%80%E5%8D%95.docx&amp;ns=it&amp;rev=1437468264&amp;tab_details=history&amp;mediado=diff&amp;do=media"/>
+                <rdf:li rdf:resource="http://pme.eexx.me/doku.php?id=ued:template&amp;rev=1437466326&amp;do=diff"/>
+                <rdf:li rdf:resource="http://pme.eexx.me/doku.php?id=wiki:navigation&amp;rev=1437464601&amp;do=diff"/>
+                <rdf:li rdf:resource="http://pme.eexx.me/doku.php?id=sidebar&amp;rev=1437463841&amp;do=diff"/>
+                <rdf:li rdf:resource="http://pme.eexx.me/doku.php?id=%E7%9B%B4%E8%BE%BE%E5%8F%B7%E6%9C%8D%E5%8A%A1%E7%BB%84%E4%BB%B6%E6%98%BE%E7%A4%BA%E6%96%B9%E6%B3%95&amp;rev=1437462169&amp;do=diff"/>
+                <rdf:li rdf:resource="http://pme.eexx.me/doku.php?id=zhida&amp;rev=1437461970&amp;do=diff"/>
+                <rdf:li rdf:resource="http://pme.eexx.me/doku.php?id=ued:template:iconfont&amp;rev=1437029849&amp;do=diff"/>
+                <rdf:li rdf:resource="http://pme.eexx.me/doku.php?id=zhida:ordercenter&amp;rev=1436865008&amp;do=diff"/>
+                <rdf:li rdf:resource="http://pme.eexx.me/doku.php?image=zhida%3Apasted%3A20150714-020721.png&amp;ns=zhida%3Apasted&amp;rev=1436864841&amp;tab_details=history&amp;mediado=diff&amp;do=media"/>
+                <rdf:li rdf:resource="http://pme.eexx.me/doku.php?image=zhida%3Apasted%3A20150714-020606.png&amp;ns=zhida%3Apasted&amp;rev=1436864766&amp;tab_details=history&amp;mediado=diff&amp;do=media"/>
+                <rdf:li rdf:resource="http://pme.eexx.me/doku.php?id=%E7%9B%B4%E8%BE%BE%E5%8F%B7%E6%9C%8D%E5%8A%A1%E7%BB%84%E4%BB%B6%E6%B5%8B%E8%AF%95%E6%B5%81%E7%A8%8B&amp;rev=1436862670&amp;do=diff"/>
+                <rdf:li rdf:resource="http://pme.eexx.me/doku.php?id=%E7%9B%B4%E8%BE%BE%E5%8F%B7%E6%9C%8D%E5%8A%A1%E7%BB%84%E4%BB%B6%E6%B5%8B%E8%AF%95%E5%9C%B0%E5%9D%80&amp;rev=1436753911&amp;do=diff"/>
+                <rdf:li rdf:resource="http://pme.eexx.me/doku.php?image=zhida%3Apasted%3A20150710-184444.png&amp;ns=zhida%3Apasted&amp;rev=1436579084&amp;tab_details=history&amp;mediado=diff&amp;do=media"/>
+                <rdf:li rdf:resource="http://pme.eexx.me/doku.php?image=zhida%3Apasted%3A20150710-183717.png&amp;ns=zhida%3Apasted&amp;rev=1436578637&amp;tab_details=history&amp;mediado=diff&amp;do=media"/>
+            </rdf:Seq>
+        </items>
+    </channel>
+    <image rdf:about="http://pme.eexx.me/lib/tpl/vector/images/favicon.ico">
+        <title>百度产品部门 知识库</title>
+        <link>http://pme.eexx.me/</link>
+        <url>http://pme.eexx.me/lib/tpl/vector/images/favicon.ico</url>
+    </image>
+    <item rdf:about="http://pme.eexx.me/doku.php?id=meeting&amp;rev=1437970474&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2015-07-26T21:14:34-07:00</dc:date>
+        <dc:creator>邱沼懿</dc:creator>
+        <title>meeting - [Table] </title>
+        <link>http://pme.eexx.me/doku.php?id=meeting&amp;rev=1437970474&amp;do=diff</link>
+        <description>会议室安排
+
+32号楼201
+
+32号楼的会议室已共享网盘供大家查阅（实时最新版本）：
+
+点击查阅会议室
+
+（博学、群贤、至善）
+
+30号楼107
+
+30号楼107会议室（暂未同步）
+ 星期一                       星期二   星期三</description>
+    </item>
+    <item rdf:about="http://pme.eexx.me/doku.php?id=it&amp;rev=1437618285&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2015-07-22T19:24:45-07:00</dc:date>
+        <dc:creator>邱沼懿</dc:creator>
+        <title>it - [项目立项] </title>
+        <link>http://pme.eexx.me/doku.php?id=it&amp;rev=1437618285&amp;do=diff</link>
+        <description>IT哥
+
+活动报销申请（自助）
+
+为活跃部门气氛，我们鼓励大家私下联谊活动。
+
+只要你有活动聚会建议，带动大家。钱 不是问题~
+
+填写《活动经费报销单》
+
+
+=&gt;
+
+组织活动
+
+
+=&gt;
+
+填写报销单金额发票部分</description>
+    </item>
+    <item rdf:about="http://pme.eexx.me/doku.php?id=wiki:site_notice&amp;rev=1437472128&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2015-07-21T02:48:48-07:00</dc:date>
+        <dc:creator>邱沼懿</dc:creator>
+        <title>wiki:site_notice</title>
+        <link>http://pme.eexx.me/doku.php?id=wiki:site_notice&amp;rev=1437472128&amp;do=diff</link>
+        <description></description>
+    </item>
+    <item rdf:about="http://pme.eexx.me/doku.php?id=start&amp;rev=1437470341&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2015-07-21T02:19:01-07:00</dc:date>
+        <dc:creator>邱沼懿</dc:creator>
+        <title>start - [统一平台] </title>
+        <link>http://pme.eexx.me/doku.php?id=start&amp;rev=1437470341&amp;do=diff</link>
+        <description>百度厦门 Wiki
+
+欢迎光临小懿的知识库，里面的东西 随便拿～～～
+
+会议室安排
+
+	&quot; ★★★ 进入会议室安排查询 ★★★&quot;
+
+项目
+
+统一平台
+
+	&quot; 统一平台模板切图规范 
+ 统一平台模板模块库 
+ Quickbar 快捷导航
+ iconfont 图标代码查询&quot;
+
+直达号
+
+	&quot; ==== 进入直达号专页 ====&quot;
+
+风信
+
+	*  首页新版201404
+	*  后台测试需求20140505
+	* 小猫虾小知识
+
+微餐饮
+
+	*  微餐饮预期效果DEMO
+
+微商城
+
+	*  个人中心新版201404
+
+程序部门
+
+	&quot; ==== 进入程序部门专页 ====&quot;
+
+UX组
+
+前端开发和用户体验设计。HTML5、CSS3等技术…</description>
+    </item>
+    <item rdf:about="http://pme.eexx.me/doku.php?image=it%3A%E5%9B%A2%E9%98%9F%E9%A1%B9%E7%9B%AE%E8%80%83%E8%AF%84_-_%E4%BA%A7%E5%93%81%E8%B4%A8%E9%87%8F%E9%83%A8%E5%88%86_v2.xls&amp;ns=it&amp;rev=1437468492&amp;tab_details=history&amp;mediado=diff&amp;do=media">
+        <dc:format>text/html</dc:format>
+        <dc:date>2015-07-21T01:48:12-07:00</dc:date>
+        <dc:creator>邱沼懿</dc:creator>
+        <title>it:团队项目考评_-_产品质量部分_v2.xls - 创建</title>
+        <link>http://pme.eexx.me/doku.php?image=it%3A%E5%9B%A2%E9%98%9F%E9%A1%B9%E7%9B%AE%E8%80%83%E8%AF%84_-_%E4%BA%A7%E5%93%81%E8%B4%A8%E9%87%8F%E9%83%A8%E5%88%86_v2.xls&amp;ns=it&amp;rev=1437468492&amp;tab_details=history&amp;mediado=diff&amp;do=media</link>
+        <description></description>
+    </item>
+    <item rdf:about="http://pme.eexx.me/doku.php?image=it%3Axxx%E9%A1%B9%E7%9B%AE%E7%AB%8B%E9%A1%B9.docx&amp;ns=it&amp;rev=1437468492&amp;tab_details=history&amp;mediado=diff&amp;do=media">
+        <dc:format>text/html</dc:format>
+        <dc:date>2015-07-21T01:48:12-07:00</dc:date>
+        <dc:creator>邱沼懿</dc:creator>
+        <title>it:xxx项目立项.docx - 创建</title>
+        <link>http://pme.eexx.me/doku.php?image=it%3Axxx%E9%A1%B9%E7%9B%AE%E7%AB%8B%E9%A1%B9.docx&amp;ns=it&amp;rev=1437468492&amp;tab_details=history&amp;mediado=diff&amp;do=media</link>
+        <description></description>
+    </item>
+    <item rdf:about="http://pme.eexx.me/doku.php?image=it%3A%E6%B4%BB%E5%8A%A8%E7%BB%8F%E8%B4%B9%E6%8A%A5%E9%94%80%E5%8D%95.docx&amp;ns=it&amp;rev=1437468264&amp;tab_details=history&amp;mediado=diff&amp;do=media">
+        <dc:format>text/html</dc:format>
+        <dc:date>2015-07-21T01:44:24-07:00</dc:date>
+        <dc:creator>邱沼懿</dc:creator>
+        <title>it:活动经费报销单.docx - 创建</title>
+        <link>http://pme.eexx.me/doku.php?image=it%3A%E6%B4%BB%E5%8A%A8%E7%BB%8F%E8%B4%B9%E6%8A%A5%E9%94%80%E5%8D%95.docx&amp;ns=it&amp;rev=1437468264&amp;tab_details=history&amp;mediado=diff&amp;do=media</link>
+        <description></description>
+    </item>
+    <item rdf:about="http://pme.eexx.me/doku.php?id=ued:template&amp;rev=1437466326&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2015-07-21T01:12:06-07:00</dc:date>
+        <dc:creator>邱沼懿</dc:creator>
+        <title>ued:template - [针对性修改] </title>
+        <link>http://pme.eexx.me/doku.php?id=ued:template&amp;rev=1437466326&amp;do=diff</link>
+        <description>统一平台模板切图规范
+
+ [点此下载：下载最新的切图模板DEMO]
+更新时间：2015.06.29
+
+模板文件列表
+
+
+
+（点击下方文件名可直接进入查阅可用变量）
+
+手机模板文件
+  页面名称           页面文件名（点击文件名查阅变量）              是否必须</description>
+    </item>
+    <item rdf:about="http://pme.eexx.me/doku.php?id=wiki:navigation&amp;rev=1437464601&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2015-07-21T00:43:21-07:00</dc:date>
+        <dc:creator>邱沼懿</dc:creator>
+        <title>wiki:navigation</title>
+        <link>http://pme.eexx.me/doku.php?id=wiki:navigation&amp;rev=1437464601&amp;do=diff</link>
+        <description>统一平台
+
+	&quot; 统一平台模板切图规范 
+ 统一平台模板模块库 
+ Quickbar 快捷导航
+ iconfont 图标代码查询&quot;
+
+直达号
+
+	&quot; == 进入直达号专页 ==&quot;
+
+程序部门
+
+	&quot; 活动报销申请
+ 项目奖金申请&quot;
+
+UX组
+
+	&quot; JS库CSS包等&quot;</description>
+    </item>
+    <item rdf:about="http://pme.eexx.me/doku.php?id=sidebar&amp;rev=1437463841&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2015-07-21T00:30:41-07:00</dc:date>
+        <dc:creator>邱沼懿</dc:creator>
+        <title>sidebar</title>
+        <link>http://pme.eexx.me/doku.php?id=sidebar&amp;rev=1437463841&amp;do=diff</link>
+        <description>百度厦门 Wiki
+
+=项目=
+
+统一平台
+
+	&quot; 统一平台模板切图规范 
+ 统一平台模板模块库 
+ Quickbar 快捷导航
+ iconfont 图标代码查询&quot;
+
+直达号
+
+	&quot; ==== 进入直达号专页 ====&quot;
+
+风信
+
+	*  首页新版201404
+	*  后台测试需求20140505
+	* 小猫虾小知识
+
+微餐饮
+
+	*  微餐饮预期效果DEMO
+
+微商城
+
+	*  个人中心新版201404
+
+=程序部门=
+
+	&quot; ==== 进入程序部门专页 ====&quot;
+
+=UX组=
+
+前端开发和用户体验设计。HTML5、CSS3等技术...
+
+复用模块
+
+	&quot; 【公共引用资源-JS库CSS包等】
+ 手机端页面转场效果&quot;
+
+前端规范…</description>
+    </item>
+    <item rdf:about="http://pme.eexx.me/doku.php?id=%E7%9B%B4%E8%BE%BE%E5%8F%B7%E6%9C%8D%E5%8A%A1%E7%BB%84%E4%BB%B6%E6%98%BE%E7%A4%BA%E6%96%B9%E6%B3%95&amp;rev=1437462169&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2015-07-21T00:02:49-07:00</dc:date>
+        <dc:creator>sauron</dc:creator>
+        <title>直达号服务组件显示方法 - 创建</title>
+        <link>http://pme.eexx.me/doku.php?id=%E7%9B%B4%E8%BE%BE%E5%8F%B7%E6%9C%8D%E5%8A%A1%E7%BB%84%E4%BB%B6%E6%98%BE%E7%A4%BA%E6%96%B9%E6%B3%95&amp;rev=1437462169&amp;do=diff</link>
+        <description>直达号服务组件显示方法
+  
+  域名+?bd_wd=0
+  
+  如     http://m.jjxm.com.cn/?bd_wd=0</description>
+    </item>
+    <item rdf:about="http://pme.eexx.me/doku.php?id=zhida&amp;rev=1437461970&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2015-07-20T23:59:30-07:00</dc:date>
+        <dc:creator>sauron</dc:creator>
+        <title>zhida - [服务商添加直达号] </title>
+        <link>http://pme.eexx.me/doku.php?id=zhida&amp;rev=1437461970&amp;do=diff</link>
+        <description>直达号
+
+现有的资料
+
+	*  data资料
+
+接入规范
+
+	* fomat移动轻应用接入规范
+	* fomat移动轻应用接入指南
+
+审核流程
+
+	* 轻应用
+	* 直达号
+
+接口说明
+
+	*  oauth接口
+	*  Blend API
+
+目前困境
+
+	* error
+	* error1
+
+小发现
+
+	* 小发现
+	* 小发现1
+	* 小发现2
+	* 小发现3
+
+关于后台订单管理
+
+	* 实现
+
+服务商添加直达号
+
+	* 直达号开通流程
+		* 订单中心接入
+		* 直达号服务组件测试流程
+		* 直达号服务组件显示方法
+
+账号
+
+相关后台账号密码…</description>
+    </item>
+    <item rdf:about="http://pme.eexx.me/doku.php?id=ued:template:iconfont&amp;rev=1437029849&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2015-07-15T23:57:29-07:00</dc:date>
+        <dc:creator>邱沼懿</dc:creator>
+        <title>ued:template:iconfont - 创建</title>
+        <link>http://pme.eexx.me/doku.php?id=ued:template:iconfont&amp;rev=1437029849&amp;do=diff</link>
+        <description>IconFont 字体库</description>
+    </item>
+    <item rdf:about="http://pme.eexx.me/doku.php?id=zhida:ordercenter&amp;rev=1436865008&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2015-07-14T02:10:08-07:00</dc:date>
+        <dc:creator>sauron</dc:creator>
+        <title>zhida:ordercenter</title>
+        <link>http://pme.eexx.me/doku.php?id=zhida:ordercenter&amp;rev=1436865008&amp;do=diff</link>
+        <description>订单中心接入
+
+1、为什么要接入订单中心？
+
+（1）接入订单中心，用户就可即时对订单进行查询；
+（2）用户可通过订单中心对客户关系进行管理；
+（3）用户可通过订单中进行统计分析，包括访订阅分析、订单分析等等；
+（4）用户可通过订单中心进行一系列的活动推广；</description>
+    </item>
+    <item rdf:about="http://pme.eexx.me/doku.php?image=zhida%3Apasted%3A20150714-020721.png&amp;ns=zhida%3Apasted&amp;rev=1436864841&amp;tab_details=history&amp;mediado=diff&amp;do=media">
+        <dc:format>text/html</dc:format>
+        <dc:date>2015-07-14T02:07:21-07:00</dc:date>
+        <dc:creator>sauron</dc:creator>
+        <title>zhida:pasted:20150714-020721.png - 创建</title>
+        <link>http://pme.eexx.me/doku.php?image=zhida%3Apasted%3A20150714-020721.png&amp;ns=zhida%3Apasted&amp;rev=1436864841&amp;tab_details=history&amp;mediado=diff&amp;do=media</link>
+        <description>&lt;img src=&quot;http://pme.eexx.me/lib/exe/fetch.php?w=500&amp;h=372&amp;t=1436864841&amp;amp;tok=9557e2&amp;amp;media=zhida:pasted:20150714-020721.png&quot; alt=&quot;zhida:pasted:20150714-020721.png&quot; /&gt;</description>
+    </item>
+    <item rdf:about="http://pme.eexx.me/doku.php?image=zhida%3Apasted%3A20150714-020606.png&amp;ns=zhida%3Apasted&amp;rev=1436864766&amp;tab_details=history&amp;mediado=diff&amp;do=media">
+        <dc:format>text/html</dc:format>
+        <dc:date>2015-07-14T02:06:06-07:00</dc:date>
+        <dc:creator>sauron</dc:creator>
+        <title>zhida:pasted:20150714-020606.png - 创建</title>
+        <link>http://pme.eexx.me/doku.php?image=zhida%3Apasted%3A20150714-020606.png&amp;ns=zhida%3Apasted&amp;rev=1436864766&amp;tab_details=history&amp;mediado=diff&amp;do=media</link>
+        <description>&lt;img src=&quot;http://pme.eexx.me/lib/exe/fetch.php?w=500&amp;h=345&amp;t=1436864766&amp;amp;tok=4769c4&amp;amp;media=zhida:pasted:20150714-020606.png&quot; alt=&quot;zhida:pasted:20150714-020606.png&quot; /&gt;</description>
+    </item>
+    <item rdf:about="http://pme.eexx.me/doku.php?id=%E7%9B%B4%E8%BE%BE%E5%8F%B7%E6%9C%8D%E5%8A%A1%E7%BB%84%E4%BB%B6%E6%B5%8B%E8%AF%95%E6%B5%81%E7%A8%8B&amp;rev=1436862670&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2015-07-14T01:31:10-07:00</dc:date>
+        <dc:creator>sauron</dc:creator>
+        <title>直达号服务组件测试流程 - 创建</title>
+        <link>http://pme.eexx.me/doku.php?id=%E7%9B%B4%E8%BE%BE%E5%8F%B7%E6%9C%8D%E5%8A%A1%E7%BB%84%E4%BB%B6%E6%B5%8B%E8%AF%95%E6%B5%81%E7%A8%8B&amp;rev=1436862670&amp;do=diff</link>
+        <description>直达号服务组件测试流程
+
+直达号服务组件测试地址：
+
+&lt;http://m.baidu.com/lightapp/&gt;{appid}?debug=1
+
+把{appid}换成直达号的具体ID就可以了
+
+比如：&lt;http://m.baidu.com/lightapp/5977527?debug=1&gt;</description>
+    </item>
+    <item rdf:about="http://pme.eexx.me/doku.php?id=%E7%9B%B4%E8%BE%BE%E5%8F%B7%E6%9C%8D%E5%8A%A1%E7%BB%84%E4%BB%B6%E6%B5%8B%E8%AF%95%E5%9C%B0%E5%9D%80&amp;rev=1436753911&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2015-07-12T19:18:31-07:00</dc:date>
+        <dc:creator>sauron</dc:creator>
+        <title>直达号服务组件测试地址</title>
+        <link>http://pme.eexx.me/doku.php?id=%E7%9B%B4%E8%BE%BE%E5%8F%B7%E6%9C%8D%E5%8A%A1%E7%BB%84%E4%BB%B6%E6%B5%8B%E8%AF%95%E5%9C%B0%E5%9D%80&amp;rev=1436753911&amp;do=diff</link>
+        <description>直达号服务组件测试地址
+
+服务组件测试地址:   
+
+&lt;http://m.baidu.com/lightapp/&gt;{appid}?debug=1
+
+把链接中的{appid}换成具体的ID即可。如：
+
+&lt;http://m.baidu.com/lightapp/5977527?debug=1&gt;</description>
+    </item>
+    <item rdf:about="http://pme.eexx.me/doku.php?image=zhida%3Apasted%3A20150710-184444.png&amp;ns=zhida%3Apasted&amp;rev=1436579084&amp;tab_details=history&amp;mediado=diff&amp;do=media">
+        <dc:format>text/html</dc:format>
+        <dc:date>2015-07-10T18:44:44-07:00</dc:date>
+        <dc:creator>sauron</dc:creator>
+        <title>zhida:pasted:20150710-184444.png - 创建</title>
+        <link>http://pme.eexx.me/doku.php?image=zhida%3Apasted%3A20150710-184444.png&amp;ns=zhida%3Apasted&amp;rev=1436579084&amp;tab_details=history&amp;mediado=diff&amp;do=media</link>
+        <description>&lt;img src=&quot;http://pme.eexx.me/lib/exe/fetch.php?w=500&amp;h=71&amp;t=1436579084&amp;amp;tok=2d4f5c&amp;amp;media=zhida:pasted:20150710-184444.png&quot; alt=&quot;zhida:pasted:20150710-184444.png&quot; /&gt;</description>
+    </item>
+    <item rdf:about="http://pme.eexx.me/doku.php?image=zhida%3Apasted%3A20150710-183717.png&amp;ns=zhida%3Apasted&amp;rev=1436578637&amp;tab_details=history&amp;mediado=diff&amp;do=media">
+        <dc:format>text/html</dc:format>
+        <dc:date>2015-07-10T18:37:17-07:00</dc:date>
+        <dc:creator>sauron</dc:creator>
+        <title>zhida:pasted:20150710-183717.png - 创建</title>
+        <link>http://pme.eexx.me/doku.php?image=zhida%3Apasted%3A20150710-183717.png&amp;ns=zhida%3Apasted&amp;rev=1436578637&amp;tab_details=history&amp;mediado=diff&amp;do=media</link>
+        <description>&lt;img src=&quot;http://pme.eexx.me/lib/exe/fetch.php?w=388&amp;h=183&amp;t=1436578637&amp;amp;tok=26b910&amp;amp;media=zhida:pasted:20150710-183717.png&quot; alt=&quot;zhida:pasted:20150710-183717.png&quot; /&gt;</description>
+    </item>
+</rdf:RDF>

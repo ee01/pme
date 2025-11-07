@@ -1,0 +1,13 @@
+====== 左侧栏目列表（同级子栏目列表） ======
+
+{{:ued:template:modules:pagenavs.rar|点此下载模块：_pagenavs.rar}}
+{{:ued:template:modules:subclass.rar|点此下载模块：_subclass.rar}}
+根据模板的设计情况，选择使用二级或三级列表模块。
+subclass里面的文件subclass.js 要在index页面导入
+===== 实现只显示到二级栏目 =====
+
+_pagenavs_sub2.html
+
+===== 实现显示到三级栏目 =====
+
+_pagenavs_sub3.html

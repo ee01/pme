@@ -1,0 +1,46 @@
+====== 弹出对话框 ======
+
+===== 引用方法一 =====
+
+
+==== 引入文件 ====
+
+<code html>
+<link type="text/css" rel="stylesheet" href="http://common.mn.sina.com.cn/public/resource/lib/artDialog/skins/simple.css" />
+<script type="text/javascript" src="http://common.mn.sina.com.cn/public/resource/lib/artDialog/jquery.artDialog.js"></script>
+<script type="text/javascript" src="http://common.mn.sina.com.cn/public/resource/lib/artDialog/artDialog.plugins.js"></script>
+</code>
+
+BTW：样式文件可以选择性引入以下列表中的一个
+  * default.css
+  * simple.css
+  * black.css
+  * blue.css
+  * green.css
+  * aero.css
+  * idialog.css
+  * chrome.css
+  * opera.css
+  * twitter.css
+
+==== JS ====
+
+<code javascript>
+$.dialog.alert('test');
+</code>
+
+==== Demo ====
+
+http://www.planeart.cn/demo/artDialog/index.html
+
+===== 引用方法二 =====
+
+如果引用了common.js：
+
+<code javascript>
+
+Util.load('dialog', function() {
+	$.dialog.alert('test');
+});
+
+</code>

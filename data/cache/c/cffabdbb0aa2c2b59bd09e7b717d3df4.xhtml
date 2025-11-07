@@ -1,0 +1,222 @@
+
+<h1 class="sectionedit1" id="客服系统">客服系统</h1>
+<div class="level1">
+
+</div>
+<!-- EDIT1 SECTION "客服系统" [1-27] -->
+<h2 class="sectionedit2" id="关于信息答复异步刷新问题">关于信息答复异步刷新问题</h2>
+<div class="level2">
+<pre class="code">  思路：用前端数据，每隔几秒向后台获取数据，后台根据时间获取用户最近几秒内的回复。   
+  后台思路以数据判断对数据进行提取，这个不用多讲，一般都知道如何获取数据。关键来了，前台如何处理，这个就必须用到js中的setTimeout方法，该方法需要重复调用，相当于递归才能产生效果。所以开始时运行一次，写入函数内重复调用，页面不关闭就可以不断的从后台获取最新数据。
+  </pre>
+
+</div>
+<!-- EDIT2 SECTION "关于信息答复异步刷新问题" [28-595] -->
+<h3 class="sectionedit3" id="前台实现代码">前台实现代码</h3>
+<div class="level3">
+<pre class="code"> 
+  function getnewchat(){
+          //后台数据获取
+    $.get(&quot;{weixin::U(&#039;Index/ajaxdata&#039;,array(&#039;openid&#039;=&gt;htmlspecialchars($_GET[&#039;openid&#039;])))}&quot;,
+	   function(data){
+			if(data!= 1564){
+                              //后台拿到数据后，对其做样式添加
+				$str1=&#039;&lt;div class=&quot;chatItem you&quot;&gt;&lt;div class=&quot;chatItemContent&quot;&gt; &lt;img class=&quot;avatar&quot; src=&quot;&lt;if condition=&quot;$userInfo[&#039;headimgurl&#039;] neq &#039;&#039;&quot;&gt;index.php?g=Chat&amp;m=Index&amp;a=showExternalPic&amp;url={weixin:$userInfo.headimgurl}&lt;else/&gt;/tpl/Chat/default/style/css/img/avatar_default17ced3.png&lt;/if&gt;&quot;/&gt; &lt;div class=&quot;cloud cloudText&quot;&gt; &lt;div class=&quot;cloudPannel&quot; style=&quot;&quot;&gt; &lt;div class=&quot;sendStatus&quot;&gt;   &lt;/div&gt; &lt;div class=&quot;cloudBody&quot;&gt; &lt;div class=&quot;cloudContent&quot;&gt;                                  &lt;pre style=&quot;white-space:pre-wrap&quot;&gt;&#039;+data+&#039;&lt;/pre&gt;  &lt;/div&gt;  &lt;/div&gt; &lt;div class=&quot;cloudArrow &quot;&gt;&lt;/div&gt; &lt;/div&gt; &lt;/div&gt; &lt;/div&gt;  &lt;/div&gt;&#039;;
+				//附加到最后。
+				$(&#039;#chat_chatmsglist&#039;).append($str1);
+                                      //一个滚动效果，我抄的
+				$(&#039;#chat_scorll&#039;).scrollTop($(&#039;#chat_scorll&#039;).children().height()+100);
+			}
+	   });
+       //循环，一段时间内重新处理该函。达到重复提取后台数据效果
+setTimeout(&quot;getnewchat()&quot;,3000);
+}
+setTimeout(&quot;getnewchat()&quot;,3000);</pre>
+
+</div>
+<!-- EDIT3 SECTION "前台实现代码" [596-1906] -->
+<h1 class="sectionedit4" id="微信支付js_api_demo">微信支付js_api_demo</h1>
+<div class="level1">
+
+<p>
+给出修改后封好，可直接使用的demo。   <a href="/pme/lib/exe/fetch.php?media=fengxin:%E5%BE%AE%E4%BF%A1js_api_demo.zip" class="media mediafile mf_zip" title="fengxin:微信js_api_demo.zip (6 KB)">微信js_api_demo.zip</a>
+</p>
+
+</div>
+<!-- EDIT4 SECTION "微信支付js_api_demo" [1907-2033] -->
+<h1 class="sectionedit5" id="正则">正则</h1>
+<div class="level1">
+
+<p>
+<a href="/pme/lib/exe/detail.php?id=fengxin%3A%E5%B0%8F%E7%8C%AB%E5%B0%8F%E8%99%BE&amp;media=fengxin:%E6%AD%A3%E5%88%99.png" class="media" title="fengxin:正则.png"><img src="/pme/lib/exe/fetch.php?w=200&amp;tok=be6867&amp;media=fengxin:%E6%AD%A3%E5%88%99.png" class="media" alt="" width="200" /></a>
+</p>
+
+</div>
+<!-- EDIT5 SECTION "正则" [2034-2084] -->
+<h1 class="sectionedit6" id="移动手机平台的html5前端优化指南">移动手机平台的HTML5前端优化指南</h1>
+<div class="level1">
+
+<p>
+不错的文章 ：<a href="http://www.html5cn.org/article-7666-1.html" class="urlextern" target="_blank" title="http://www.html5cn.org/article-7666-1.html"  rel="nofollow">http://www.html5cn.org/article-7666-1.html</a> ，<a href="http://www.html5cn.org/article-7654-1.html" class="urlextern" target="_blank" title="http://www.html5cn.org/article-7654-1.html"  rel="nofollow">http://www.html5cn.org/article-7654-1.html</a>
+</p>
+
+</div>
+<!-- EDIT6 SECTION "移动手机平台的HTML5前端优化指南" [2085-2251] -->
+<h1 class="sectionedit7" id="js_substr和substring">js  substr和substring</h1>
+<div class="level1">
+<pre class="code">   js中的截取字符段，两个不同点。 
+   substr用法  stringval.sbustr(start,length);  
+   substring用法  stringval.substring(start,end);     
+   从字面上看可以看出两者区别（start开始坐标，length长度，end结束坐标）。</pre>
+
+</div>
+<!-- EDIT7 SECTION "js  substr和substring" [2252-2553] -->
+<h3 class="sectionedit8" id="特别说明">特别说明</h3>
+<div class="level3">
+
+<p>
+substr
+如果 length 为 0 或负数，将返回一个空字符串。如果没有指定该参数，则子字符串将延续到 stringval 的最后。  
+</p>
+
+<p>
+sustring
+substring方法将返回一个包含从 start 到最后（不包含 end ）的子字符串的字符串。
+</p>
+
+<p>
+substring 方法使用 start 和 end 两者中的较小值作为子字符串的起始点。例如， strvar.substring(0, 3) 和 strvar.substring(3, 0) 将返回相同的子字符串。
+</p>
+
+<p>
+如果 start 或 end 为 NaN 或者负数，那么将其替换为0。
+</p>
+
+<p>
+子字符串的长度等于 start 和 end 之差的绝对值。例如，在 strvar.substring(0, 3) 和 strvar.substring(3, 0) 返回的子字符串的的长度是 3。
+</p>
+
+</div>
+<!-- EDIT8 SECTION "特别说明" [2554-3272] -->
+<h1 class="sectionedit9" id="关于微信最新js-sdk">关于微信最新JS-SDK</h1>
+<div class="level1">
+
+<p>
+具体文档请参照官网：<a href="http://mp.weixin.qq.com/wiki/7/aaa137b55fb2e0456bf8dd9148dd613f.html" class="urlextern" target="_blank" title="http://mp.weixin.qq.com/wiki/7/aaa137b55fb2e0456bf8dd9148dd613f.html"  rel="nofollow">http://mp.weixin.qq.com/wiki/7/aaa137b55fb2e0456bf8dd9148dd613f.html</a>
+</p>
+
+<p>
+该方法支持服务号和认证的订阅号
+JSSDK使用步骤
+</p>
+
+<p>
+步骤一：绑定域名
+</p>
+
+<p>
+先登录微信公众平台进入“公众号设置”的“功能设置”里填写“JS接口安全域名”。
+</p>
+
+<p>
+备注：登录后可在“开发者中心”查看对应的接口权限。
+</p>
+
+<p>
+步骤二：引入JS文件
+</p>
+
+<p>
+在需要调用JS接口的页面引入如下JS文件，（支持https）：<a href="http://res.wx.qq.com/open/js/jweixin-1.0.0.js" class="urlextern" target="_blank" title="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"  rel="nofollow">http://res.wx.qq.com/open/js/jweixin-1.0.0.js</a>
+</p>
+
+<p>
+备注：支持使用 AMD/CMD 标准模块加载方法加载
+</p>
+
+<p>
+步骤三：通过config接口注入权限验证配置
+</p>
+
+<p>
+所有需要使用JS-SDK的页面必须先注入配置信息，否则将无法调用（同一个url仅需调用一次，对于变化url的SPA的web app可在每次url变化时进行调用,目前Android微信客户端不支持pushState的H5新特性，所以使用pushState来实现web app的页面会导致签名失败，此问题会在Android6.2中修复）。
+</p>
+
+<p>
+wx.config({
+</p>
+<pre class="code">  debug: true, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
+  appId: &#039;&#039;, // 必填，公众号的唯一标识
+  timestamp: , // 必填，生成签名的时间戳
+  nonceStr: &#039;&#039;, // 必填，生成签名的随机串
+  signature: &#039;&#039;,// 必填，签名，见demo
+  jsApiList: [
+  &#039;checkJsApi&#039;,
+      &#039;onMenuShareTimeline&#039;,
+      &#039;onMenuShareAppMessage&#039;,
+      &#039;onMenuShareQQ&#039;,
+      &#039;onMenuShareWeibo&#039;,
+      &#039;hideMenuItems&#039;,
+      &#039;showMenuItems&#039;,
+      &#039;hideAllNonBaseMenuItem&#039;,
+      &#039;showAllNonBaseMenuItem&#039;,
+      &#039;translateVoice&#039;,
+      &#039;startRecord&#039;,
+      &#039;stopRecord&#039;,
+      &#039;onRecordEnd&#039;,
+      &#039;playVoice&#039;,
+      &#039;pauseVoice&#039;,
+      &#039;stopVoice&#039;,
+      &#039;uploadVoice&#039;,
+      &#039;downloadVoice&#039;,
+      &#039;chooseImage&#039;,
+      &#039;previewImage&#039;,
+      &#039;uploadImage&#039;,
+      &#039;downloadImage&#039;,
+      &#039;getNetworkType&#039;,
+      &#039;openLocation&#039;,
+      &#039;getLocation&#039;,
+      &#039;hideOptionMenu&#039;,
+      &#039;showOptionMenu&#039;,
+      &#039;closeWindow&#039;,
+      &#039;scanQRCode&#039;,
+      &#039;chooseWXPay&#039;,
+      &#039;openProductSpecificView&#039;,
+      &#039;addCard&#039;,
+      &#039;chooseCard&#039;,
+      &#039;openCard&#039;
+  ] // 必填，需要使用的JS接口列表，所有JS接口列表</pre>
+
+<p>
+});
+步骤四：通过ready接口处理成功验证
+</p>
+
+<p>
+wx.ready(function(){
+</p>
+<pre class="code">  // config信息验证后会执行ready方法，所有接口调用都必须在config接口获得结果之后，config是一个客户端的异步操作，所以如果需要在页面加载时就调用相关接口，则须把相关接口放在ready函数中调用来确保正确执行。对于用户触发时才调用的接口，则可以直接调用，不需要放在ready函数中。</pre>
+
+<p>
+});
+</p>
+
+<p>
+步骤五：通过error接口处理失败验证
+</p>
+
+<p>
+wx.error(function(res){
+</p>
+<pre class="code">  // config信息验证失败会执行error函数，如签名过期导致验证失败，具体错误信息可以打开config的debug模式查看，也可以在返回的res参数中查看，对于SPA可以在这里更新签名。</pre>
+
+<p>
+});
+</p>
+
+<p>
+附上demo    <a href="/pme/lib/exe/fetch.php?media=fengxin:sample.zip" class="media mediafile mf_zip" title="fengxin:sample.zip (23.7 KB)">sample.zip</a>
+</p>
+
+</div>
+<!-- EDIT9 SECTION "关于微信最新JS-SDK" [3273-] -->

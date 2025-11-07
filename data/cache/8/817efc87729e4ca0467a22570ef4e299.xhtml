@@ -1,0 +1,112 @@
+
+<h1 class="sectionedit1" id="变量语法查询_footerhtml">变量语法查询：_footer.html</h1>
+<div class="level1">
+
+<p>
+此页面非独立HTML页面，只是部分html代码区块。<br/>
+
+为了简化重复代码，而统一写到此文件中，再使用<a href="#include_引入文件" title="ued:template:footer ↵" class="wikilink1">include</a>方式引入本文件！
+</p>
+
+</div>
+<!-- EDIT2 PLUGIN_INCLUDE_START "ued:template:global" [0-] --><div class="plugin_include_content plugin_include__ued:template:global">
+
+<h2 class="sectionedit4" id="include_引入文件">{include}：引入文件</h2>
+<div class="level2">
+
+<p>
+加入文件使用include引用路径,注意起步从“./”开始，即相对于当前目录开始，如：
+</p>
+<pre class="code html4strict">{include file=&quot;./_header.html&quot;}</pre>
+
+</div>
+<!-- EDIT4 SECTION "{include}：引入文件" [150-350] --><div class="inclmeta level2">
+	<a href="/doku.php?id=ued:template:global#include_引入文件" class="wikilink1 permalink" title="ued:template:global#include_引入文件" rel="bookmark">{include}：引入文件</a>
+	&middot; <abbr class="published" title="2015-10-28T02:34:36Z">2015/10/28 02:34</abbr>
+</div>
+<!-- EDIT3 PLUGIN_INCLUDE_END "ued:template:global" [0-] --></div>
+<div class="level1">
+
+</div>
+<!-- EDIT5 PLUGIN_INCLUDE_START "ued:template:global" [0-] --><div class="plugin_include_content plugin_include__ued:template:global">
+
+<h2 class="sectionedit7" id="footprint_底部版权">{$footprint} ：底部版权</h2>
+<div class="level2">
+<pre class="code html4strict">...
+<span class="sc2">&lt;footer&gt;</span>
+    <span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/p.html"><span class="kw2">p</span></a>&gt;</span>{$footprint}<span class="sc2">&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/p.html"><span class="kw2">p</span></a>&gt;</span>
+<span class="sc2">&lt;<span class="sy0">/</span>footer&gt;</span></pre>
+
+</div>
+<!-- EDIT7 SECTION "{$footprint} ：底部版权" [2968-3076] --><div class="inclmeta level2">
+	<a href="/doku.php?id=ued:template:global#footprint_底部版权" class="wikilink1 permalink" title="ued:template:global#footprint_底部版权" rel="bookmark">{$footprint} ：底部版权</a>
+	&middot; <abbr class="published" title="2015-10-28T02:34:36Z">2015/10/28 02:34</abbr>
+</div>
+<!-- EDIT6 PLUGIN_INCLUDE_END "ued:template:global" [0-] --></div>
+<div class="level1">
+
+</div>
+<!-- EDIT8 PLUGIN_INCLUDE_START "ued:template:global" [0-] --><div class="plugin_include_content plugin_include__ued:template:global">
+
+<h2 class="sectionedit10" id="footscript_底部脚本">{$footscript} ：底部脚本</h2>
+<div class="level2">
+
+<p>
+放置于<span class="curid"><a href="/doku.php?id=ued:template:footer" class="wikilink1" title="ued:template:footer">_footer.html</a></span>中，使得每个页面都运行此（统计）脚本。
+</p>
+<pre class="code html4strict">...
+<span class="sc2">&lt;<span class="sy0">/</span>footer&gt;</span>
+{$footscript}</pre>
+
+</div>
+<!-- EDIT10 SECTION "{$footscript} ：底部脚本" [3292-3486] --><div class="inclmeta level2">
+	<a href="/doku.php?id=ued:template:global#footscript_底部脚本" class="wikilink1 permalink" title="ued:template:global#footscript_底部脚本" rel="bookmark">{$footscript} ：底部脚本</a>
+	&middot; <abbr class="published" title="2015-10-28T02:34:36Z">2015/10/28 02:34</abbr>
+</div>
+<!-- EDIT9 PLUGIN_INCLUDE_END "ued:template:global" [0-] --></div>
+<div class="level1">
+
+</div>
+<!-- EDIT11 PLUGIN_INCLUDE_START "ued:template:global" [0-] --><div class="plugin_include_content plugin_include__ued:template:global">
+
+<h2 class="sectionedit13" id="contact_联系方式">{$contact} ：联系方式</h2>
+<div class="level2">
+<ul>
+<li class="level1"><div class="li"> {$contact.company} 企业名称</div>
+</li>
+<li class="level1"><div class="li"> {$contact.name} 联系人</div>
+</li>
+<li class="level1"><div class="li"> {$contact.mobile} 手机</div>
+</li>
+<li class="level1"><div class="li"> {$contact.telephone} 固话/热线</div>
+</li>
+<li class="level1"><div class="li"> {$contact.fax} 传真</div>
+</li>
+<li class="level1"><div class="li"> {$contact.mail} 邮箱</div>
+</li>
+<li class="level1"><div class="li"> {$contact.qq} QQ</div>
+</li>
+<li class="level1"><div class="li"> {$contact.address} 公司地址</div>
+</li>
+</ul>
+
+<p>
+实际示例：
+</p>
+<pre class="code html4strict"><span class="sc2">&lt;header&gt;</span>
+	<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/div.html"><span class="kw2">div</span></a> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;fr&quot;</span>&gt;</span>24小时热线：{$contact.telephone}<span class="sc2">&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/div.html"><span class="kw2">div</span></a>&gt;</span>
+<span class="sc2">&lt;<span class="sy0">/</span>header&gt;</span>
+...
+<span class="sc2">&lt;footer&gt;</span>
+	<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/a.html"><span class="kw2">a</span></a> <span class="kw3">href</span><span class="sy0">=</span><span class="st0">&quot;mailto:{$contact.mail}&quot;</span>&gt;</span>邮件反馈<span class="sc2">&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/a.html"><span class="kw2">a</span></a>&gt;</span>
+<span class="sc2">&lt;<span class="sy0">/</span>footer&gt;</span></pre>
+
+</div>
+<!-- EDIT13 SECTION "{$contact} ：联系方式" [6956-7429] --><div class="inclmeta level2">
+	<a href="/doku.php?id=ued:template:global#contact_联系方式" class="wikilink1 permalink" title="ued:template:global#contact_联系方式" rel="bookmark">{$contact} ：联系方式</a>
+	&middot; <abbr class="published" title="2015-10-28T02:34:36Z">2015/10/28 02:34</abbr>
+</div>
+<!-- EDIT12 PLUGIN_INCLUDE_END "ued:template:global" [0-] --></div>
+<div class="level1">
+
+</div>

@@ -1,0 +1,24 @@
+====== 关注按钮 ======
+
+<code html>
+
+<iframe src="http://widget.weibo.com/relationship/followbutton.php?uid=1242837564&btn=red&style=1&language=zh_cn" width="67" height="24" frameborder="0" scrolling="no" marginheight="0"></iframe>
+
+</code>
+
+
+**参数说明：**
+
+''uid'' 要关注的微博ID
+
+''style''
+  * 1: 简洁按钮
+  * 2: 显示粉丝数
+  * 3: 显示昵称和粉丝数
+  * 4: 展示粉丝
+
+注：''style''修改后要相应调整iframe的高宽值
+
+''btn''
+  * red: 红色
+  * light: 银色

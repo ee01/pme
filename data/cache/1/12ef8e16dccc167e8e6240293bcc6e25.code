@@ -1,0 +1,25 @@
+<span class="br0">&#123;</span>
+	title<span class="sy0">:</span> <span class="br0">&#123;</span>
+		value<span class="sy0">:</span> <span class="st0">'XXX企业'</span><span class="sy0">,</span>
+		description<span class="sy0">:</span> <span class="st0">'顶部大标题'</span><span class="sy0">,</span>
+		type<span class="sy0">:</span> <span class="st0">'text'</span>
+	<span class="br0">&#125;</span><span class="sy0">,</span>
+	slidepics<span class="sy0">:</span> <span class="br0">&#123;</span>
+		value<span class="sy0">:</span> <span class="br0">&#91;</span><span class="br0">&#123;</span>
+			title<span class="sy0">:</span> <span class="st0">'测试图1'</span><span class="sy0">,</span>
+			src<span class="sy0">:</span> <span class="st0">'http://tb2.bdstatic.com/tb/static-common/img/search_logo_big_282cef2.gif'</span><span class="sy0">,</span>
+			href<span class="sy0">:</span> <span class="st0">'{siteurl}/article/1.html'</span><span class="sy0">,</span>
+		<span class="br0">&#125;</span><span class="sy0">,</span> <span class="br0">&#123;</span>
+			title<span class="sy0">:</span> <span class="st0">'测试图2'</span><span class="sy0">,</span>
+			src<span class="sy0">:</span> <span class="st0">'http://img0.bdstatic.com/static/common/widget/search_box_search/logo/logo_3b6de4c.png'</span><span class="sy0">,</span>
+			href<span class="sy0">:</span> <span class="st0">'{siteurl}/article/2.html'</span><span class="sy0">,</span>
+		<span class="br0">&#125;</span><span class="br0">&#93;</span><span class="sy0">,</span>
+		description<span class="sy0">:</span> <span class="st0">'大轮滚图'</span><span class="sy0">,</span>
+		type<span class="sy0">:</span> <span class="st0">'images'</span>
+	<span class="br0">&#125;</span><span class="sy0">,</span>
+	list1<span class="sy0">:</span> <span class="br0">&#123;</span>
+		value<span class="sy0">:</span> <span class="nu0">1</span><span class="sy0">,</span>
+		description<span class="sy0">:</span> <span class="st0">'第一个图文列表'</span><span class="sy0">,</span>
+		type<span class="sy0">:</span> <span class="st0">'column-image'</span>
+	<span class="br0">&#125;</span>
+<span class="br0">&#125;</span>

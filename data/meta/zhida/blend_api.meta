@@ -1,0 +1,15 @@
+a:2:{s:7:"current";a:9:{s:4:"date";a:2:{s:7:"created";i:1418977493;s:8:"modified";i:1420680411;}s:7:"creator";s:12:"小猫小虾";s:4:"user";s:10:"xiaomaoxia";s:11:"last_change";b:0;s:11:"contributor";a:1:{s:10:"xiaomaoxia";s:12:"小猫小虾";}s:5:"title";s:9:"Blend API";s:11:"description";a:2:{s:15:"tableofcontents";a:8:{i:0;a:4:{s:3:"hid";s:9:"blend_api";s:5:"title";s:9:"Blend API";s:4:"type";s:2:"ul";s:5:"level";i:1;}i:1;a:4:{s:3:"hid";s:12:"使用方法";s:5:"title";s:12:"使用方法";s:4:"type";s:2:"ul";s:5:"level";i:1;}i:2;a:4:{s:3:"hid";s:6:"首先";s:5:"title";s:6:"首先";s:4:"type";s:2:"ul";s:5:"level";i:3;}i:3;a:4:{s:3:"hid";s:17:"然后导入model";s:5:"title";s:17:"然后导入model";s:4:"type";s:2:"ul";s:5:"level";i:3;}i:4;a:4:{s:3:"hid";s:43:"上面两个为必须_还有_请导入jq包";s:5:"title";s:47:"上面两个为必须，还有，请导入jq包";s:4:"type";s:2:"ul";s:5:"level";i:2;}i:5;a:4:{s:3:"hid";s:6:"之后";s:5:"title";s:6:"之后";s:4:"type";s:2:"ul";s:5:"level";i:3;}i:6;a:4:{s:3:"hid";s:62:"最后_看一个简单例子_这个是获取当前位置信息";s:5:"title";s:66:"最后，看一个简单例子，这个是获取当前位置信息";s:4:"type";s:2:"ul";s:5:"level";i:3;}i:7;a:4:{s:3:"hid";s:22:"社区化分享_可用";s:5:"title";s:27:"社区化分享（可用）";s:4:"type";s:2:"ul";s:5:"level";i:3;}}s:8:"abstract";s:306:"Blend API
+
+一个百度手机上经常用到的js接口：<http://clouda.baidu.com/blendapi/introduction/introduce>
+
+使用方法
+
+首先
+
+导入这个js  
+
+
+<script name="baidu-tc-cerfication" type="text/javascript" charset="utf-8" src="http://apps.bdimg.com/blend/loader.js"></script>
+
+
+然后导入model";}s:8:"internal";a:2:{s:5:"cache";b:1;s:3:"toc";b:1;}s:8:"relation";a:1:{s:10:"firstimage";s:0:"";}}s:10:"persistent";a:5:{s:4:"date";a:2:{s:7:"created";i:1418977493;s:8:"modified";i:1420680411;}s:7:"creator";s:12:"小猫小虾";s:4:"user";s:10:"xiaomaoxia";s:11:"last_change";b:0;s:11:"contributor";a:1:{s:10:"xiaomaoxia";s:12:"小猫小虾";}}}

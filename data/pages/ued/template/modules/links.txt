@@ -1,0 +1,11 @@
+====== 友情链接 ======
+
+{{:ued:template:modules:links.rar|点此下载模块：_links.rar}}
+
+===== 纯文字版本友情链接 =====
+
+_links.html
+
+===== 带LOGO版本友情链接 =====
+
+_links_withlogo.html

@@ -1,0 +1,11 @@
+1、直达号提交页面：http://www.fjzhida.com/tijiao/
+
+2、直达号服务商：http://zhida.baidu.com/service/console/list
+   账号：chnpch@sohu.com
+   密码：456321
+3、G宝盆后台：http://ht.gbpen.cn/superadmin/
+   账号：kf_yangjingyuan
+   密码：yangjingyuan
+4、厦门百付通授权账号
+   账号：fjzhida@eexx.me
+   密码：a123456

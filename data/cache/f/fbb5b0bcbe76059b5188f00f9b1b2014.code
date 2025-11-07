@@ -1,0 +1,12 @@
+<span class="re1">.card3dfast</span> <span class="br0">&#123;</span>
+	-webkit-perspective<span class="sy0">:</span> <span class="nu0">200</span><span class="sy0">;</span>
+	perspective<span class="sy0">:</span> <span class="nu0">200</span><span class="sy0">;</span>
+	-webkit-perspective-origin<span class="sy0">:</span> <span class="re3">50%</span> <span class="re3">-100%</span><span class="sy0">;</span>
+	perspective-origin<span class="sy0">:</span> <span class="re3">50%</span> <span class="re3">-100%</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+	<span class="re1">.card3dfast</span> <span class="re1">.fastflip</span> <span class="br0">&#123;</span>
+		-webkit-transform-style<span class="sy0">:</span> preserve-3d<span class="sy0">;</span>
+		-webkit-animation<span class="sy0">:</span> flipcard 1000ms ease-out<span class="sy0">;</span>
+		-moz-animation<span class="sy0">:</span> flipcard 1000ms ease-out<span class="sy0">;</span>
+		animation<span class="sy0">:</span> flipcard 1000ms ease-out<span class="sy0">;</span>
+	<span class="br0">&#125;</span>

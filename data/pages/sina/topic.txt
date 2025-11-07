@@ -1,0 +1,15 @@
+==== 常用样式 ====
+
+	<iframe width="650" height="680" frameborder="0" scrolling="no" src="http://v.t.sina.com.cn/widget/widget_topic_mblog.php?tags=%E5%8E%A6%E9%97%A8%7E%E9%97%BD%E5%8D%97%E5%B0%8F%E5%90%83&width=650&height=680&isOutTopicSearch=1"></iframe>
+
+==== 右侧带 相关微博一周转发榜 ====
+
+	http://service.weibo.com/widget/widget_topic_width.php?tags=%E5%AF%BB%E6%89%BE%E5%8E%A6%E9%97%A8%E5%A5%BD%E5%A3%B0%E9%9F%B3&rightwidth=250&height=750&width=940&widgetcolor=f2f2f2&leftcolor=333&leftbgcolor=fff&leftlinkcolor=013979&rightcolor=333&rightbgcolor=fafafa&rightlinkcolor=013979
+
+==== 可缩小版本 自动填#话题# ====
+
+	http://widget.weibo.com/livestream/listlive.php?language=zh_cn&width=240&height=513&uid=1260167471&skin=1&refer=1&appkey=&pic=0&titlebar=0&border=1&publish=1&atalk=1&recomm=0&at=0&atopic=%E9%87%91%E6%8A%95%E8%B5%8F&ptopic=%E9%87%91%E6%8A%95%E8%B5%8F&dpc=1
+
+==== 可缩小版本 不自动填#话题# ====
+
+	<iframe width="940" scrolling="no" height="500" frameborder="0" src="http://v.t.sina.com.cn/widget/widget_topic_publish.php?tags=%E7%8E%8B%E5%BA%9C%E4%BA%95%E7%99%BE%E8%B4%A7&skin=4&isShowPic=1&width=940&height=276&wordLength=&mblogNum=20"></iframe>

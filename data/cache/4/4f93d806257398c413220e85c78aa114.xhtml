@@ -1,0 +1,206 @@
+
+<h1 class="sectionedit1" id="转盘亮灯抽奖插件">转盘亮灯抽奖插件</h1>
+<div class="level1">
+
+<p>
+跳灯翻牌式抽奖
+</p>
+
+</div>
+<!-- EDIT1 SECTION "转盘亮灯抽奖插件" [1-64] -->
+<h2 class="sectionedit2" id="引入脚本文件">引入脚本文件</h2>
+<div class="level2">
+<pre class="code">&lt;script type=&quot;text/javascript&quot; src=&quot;http://common.mn.sina.com.cn/public/resource/lib/jquery.roulette.js&quot;&gt;&lt;/script&gt;</pre>
+
+</div>
+<!-- EDIT2 SECTION "引入脚本文件" [65-213] -->
+<h2 class="sectionedit3" id="基础html">基础HTML</h2>
+<div class="level2">
+<pre class="code html4strict"><span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/div.html"><span class="kw2">div</span></a> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;roulette&quot;</span>&gt;</span>
+	<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/ul.html"><span class="kw2">ul</span></a> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;roulette_prizes&quot;</span>&gt;</span>
+		<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/li.html"><span class="kw2">li</span></a> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;prize_6&quot;</span> jump<span class="sy0">=</span><span class="st0">&quot;1&quot;</span>&gt;&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/li.html"><span class="kw2">li</span></a>&gt;</span>
+		<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/li.html"><span class="kw2">li</span></a> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;prize_1&quot;</span> jump<span class="sy0">=</span><span class="st0">&quot;2&quot;</span>&gt;&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/li.html"><span class="kw2">li</span></a>&gt;</span>
+		<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/li.html"><span class="kw2">li</span></a> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;prize_-1&quot;</span> jump<span class="sy0">=</span><span class="st0">&quot;3&quot;</span>&gt;&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/li.html"><span class="kw2">li</span></a>&gt;</span>
+		<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/li.html"><span class="kw2">li</span></a> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;prize_2&quot;</span> jump<span class="sy0">=</span><span class="st0">&quot;4&quot;</span>&gt;&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/li.html"><span class="kw2">li</span></a>&gt;</span>
+		<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/li.html"><span class="kw2">li</span></a> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;prize_5&quot;</span> jump<span class="sy0">=</span><span class="st0">&quot;5&quot;</span>&gt;&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/li.html"><span class="kw2">li</span></a>&gt;</span>
+		<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/li.html"><span class="kw2">li</span></a> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;prize_7&quot;</span> jump<span class="sy0">=</span><span class="st0">&quot;6&quot;</span>&gt;&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/li.html"><span class="kw2">li</span></a>&gt;</span>
+		<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/li.html"><span class="kw2">li</span></a> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;prize_4&quot;</span> jump<span class="sy0">=</span><span class="st0">&quot;7&quot;</span>&gt;&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/li.html"><span class="kw2">li</span></a>&gt;</span>
+		<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/li.html"><span class="kw2">li</span></a> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;prize_3&quot;</span> jump<span class="sy0">=</span><span class="st0">&quot;8&quot;</span>&gt;&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/li.html"><span class="kw2">li</span></a>&gt;</span>
+	<span class="sc2">&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/ul.html"><span class="kw2">ul</span></a>&gt;</span>
+	<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/a.html"><span class="kw2">a</span></a> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;roulette_start&quot;</span> <span class="kw3">href</span><span class="sy0">=</span><span class="st0">&quot;javascript:;&quot;</span>&gt;&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/a.html"><span class="kw2">a</span></a>&gt;</span>
+<span class="sc2">&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/div.html"><span class="kw2">div</span></a>&gt;</span></pre>
+
+<p>
+<strong>注意：li标签中<code>class</code>属性的<code>prize_X</code>，<code>X</code>为数据库奖品列表的奖品ID（<code>row_id</code>）</strong>
+</p>
+
+<p>
+<strong>　　　li标签的<code>jump</code>属性是跳灯顺序，无需修改！</strong>
+</p>
+
+</div>
+<!-- EDIT3 SECTION "基础HTML" [214-860] -->
+<h2 class="sectionedit4" id="js主代码">JS主代码</h2>
+<div class="level2">
+<dl class="file">
+<dt><a href="/pme/doku.php?do=export_code&amp;id=sina:roulette&amp;codeblock=1" title="下载片段" class="mediafile mf_js">cashout.js</a></dt>
+<dd><pre class="code file javascript"><span class="kw1">var</span> roulette <span class="sy0">=</span> $<span class="br0">&#40;</span><span class="st0">&quot;.roulette&quot;</span><span class="br0">&#41;</span>.<span class="me1">roulette</span><span class="br0">&#40;</span><span class="br0">&#123;</span>
+	start_selector<span class="sy0">:</span> <span class="st0">&quot;.roulette .roulette_start&quot;</span><span class="sy0">,</span>
+	thanks_jump<span class="sy0">:</span> <span class="nu0">3</span><span class="sy0">,</span>
+	prize_num<span class="sy0">:</span> <span class="nu0">8</span><span class="sy0">,</span>
+	result_url<span class="sy0">:</span> <span class="st0">&quot;http://common.mn.sina.com.cn/activity/jsonp/15/roulette&quot;</span><span class="sy0">,</span>
+	result_data<span class="sy0">:</span> <span class="br0">&#123;</span><span class="br0">&#125;</span><span class="sy0">,</span>
+	result_datatype<span class="sy0">:</span> <span class="st0">'jsonp'</span><span class="sy0">,</span>
+	result_get_error<span class="sy0">:</span> <span class="kw1">function</span><span class="br0">&#40;</span>json<span class="br0">&#41;</span> <span class="br0">&#123;</span>
+		<span class="kw1">return</span> json.<span class="me1">err</span><span class="sy0">;</span>
+	<span class="br0">&#125;</span><span class="sy0">,</span>
+	alert<span class="sy0">:</span> <span class="kw1">typeof</span> $.<span class="me1">dialog</span> <span class="sy0">!==</span> <span class="st0">&quot;undefined&quot;</span> <span class="sy0">?</span> $.<span class="me1">dialog</span>.<span class="me1">alert</span> <span class="sy0">:</span> <span class="kw1">function</span><span class="br0">&#40;</span>msg<span class="br0">&#41;</span><span class="br0">&#123;</span>alert<span class="br0">&#40;</span>msg<span class="br0">&#41;</span><span class="sy0">;</span><span class="br0">&#125;</span><span class="sy0">,</span>
+	before<span class="sy0">:</span> <span class="kw1">function</span><span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+		<span class="kw1">if</span> <span class="br0">&#40;</span><span class="sy0">!</span>checkLogin<span class="br0">&#40;</span><span class="kw2">false</span><span class="br0">&#41;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>	<span class="co1">// 弹出登录窗口</span>
+			<span class="kw1">return</span> <span class="kw2">false</span><span class="sy0">;</span>	<span class="co1">// 阻止抽奖操作</span>
+		<span class="br0">&#125;</span>
+	<span class="br0">&#125;</span><span class="sy0">,</span>
+	error<span class="sy0">:</span> <span class="kw1">function</span><span class="br0">&#40;</span>error<span class="sy0">,</span> msg<span class="sy0">,</span> json<span class="br0">&#41;</span> <span class="br0">&#123;</span>
+		<span class="kw1">this</span>.<span class="me1">alert</span><span class="br0">&#40;</span>msg<span class="br0">&#41;</span><span class="sy0">;</span>
+	<span class="br0">&#125;</span><span class="sy0">,</span>
+	callback<span class="sy0">:</span> <span class="kw1">function</span><span class="br0">&#40;</span>id<span class="sy0">,</span> name<span class="sy0">,</span> json<span class="br0">&#41;</span> <span class="br0">&#123;</span>
+		<span class="kw1">if</span> <span class="br0">&#40;</span>id <span class="sy0">!=</span> <span class="sy0">-</span><span class="nu0">1</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+			<span class="kw1">var</span> msg <span class="sy0">=</span> <span class="st0">&quot;恭喜！！&lt;br /&gt;您抽中了 &quot;</span> <span class="sy0">+</span> name <span class="sy0">+</span> <span class="st0">&quot;！&lt;br /&gt;&lt;br /&gt;请等待活动结束后我们官方微博的私信~&quot;</span><span class="sy0">;</span>
+			<span class="kw1">this</span>.<span class="me1">alert</span><span class="br0">&#40;</span>msg<span class="br0">&#41;</span><span class="sy0">;</span>
+		<span class="br0">&#125;</span><span class="kw1">else</span><span class="br0">&#123;</span>
+			<span class="kw1">var</span> msg <span class="sy0">=</span> name<span class="sy0">;</span>
+			<span class="kw1">this</span>.<span class="me1">alert</span><span class="br0">&#40;</span>msg<span class="br0">&#41;</span><span class="sy0">;</span>
+		<span class="br0">&#125;</span>
+	<span class="br0">&#125;</span>
+<span class="br0">&#125;</span><span class="br0">&#41;</span><span class="sy0">;</span></pre>
+</dd></dl>
+
+<p>
+<strong>注意：开始抽奖按钮无需click额外绑定事件！</strong>
+</p>
+
+</div>
+<!-- EDIT4 SECTION "JS主代码" [861-1812] -->
+<h2 class="sectionedit5" id="样式参考">样式参考</h2>
+<div class="level2">
+<dl class="file">
+<dt><a href="/pme/doku.php?do=export_code&amp;id=sina:roulette&amp;codeblock=2" title="下载片段" class="mediafile mf_css">cashout.css</a></dt>
+<dd><pre class="code file css"><span class="re1">.roulette</span> <span class="br0">&#123;</span>
+	<span class="kw1">position</span><span class="sy0">:</span> <span class="kw2">relative</span><span class="sy0">;</span>
+	<span class="kw1">width</span><span class="sy0">:</span> <span class="re3">541px</span><span class="sy0">;</span>
+	<span class="kw1">height</span><span class="sy0">:</span> <span class="re3">537px</span><span class="sy0">;</span>
+	<span class="kw1">margin-top</span><span class="sy0">:</span> <span class="re3">10px</span><span class="sy0">;</span>
+	<span class="kw1">background</span><span class="sy0">:</span> <span class="kw2">url</span><span class="br0">&#40;</span><span class="co2">images/roulette.png</span><span class="br0">&#41;</span> <span class="kw2">no-repeat</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+	<span class="re1">.roulette</span> <span class="re1">.roulette_start</span> <span class="br0">&#123;</span>
+		<span class="kw1">position</span><span class="sy0">:</span> <span class="kw2">absolute</span><span class="sy0">;</span>
+		<span class="kw1">left</span><span class="sy0">:</span> <span class="re3">163px</span><span class="sy0">;</span>
+		<span class="kw1">top</span><span class="sy0">:</span> <span class="re3">166px</span><span class="sy0">;</span>
+		<span class="kw1">width</span><span class="sy0">:</span> <span class="re3">213px</span><span class="sy0">;</span>
+		<span class="kw1">height</span><span class="sy0">:</span> <span class="re3">211px</span><span class="sy0">;</span>
+		<span class="kw1">background</span><span class="sy0">:</span> <span class="kw2">url</span><span class="br0">&#40;</span><span class="co2">images/roulette_start.png</span><span class="br0">&#41;</span> <span class="kw2">no-repeat</span><span class="sy0">;</span>
+	<span class="br0">&#125;</span>
+	<span class="re1">.roulette</span> <span class="re1">.roulette_start</span><span class="re2">:hover </span><span class="br0">&#123;</span>
+		<span class="kw1">background-position</span><span class="sy0">:</span> <span class="nu0">0</span> <span class="re3">-211px</span><span class="sy0">;</span>
+	<span class="br0">&#125;</span>
+	<span class="re1">.roulette</span> <span class="re1">.prize_6</span> <span class="br0">&#123;</span>
+		<span class="kw1">position</span><span class="sy0">:</span> <span class="kw2">absolute</span><span class="sy0">;</span>
+		<span class="kw1">left</span><span class="sy0">:</span> <span class="re3">11px</span><span class="sy0">;</span>
+		<span class="kw1">top</span><span class="sy0">:</span> <span class="re3">91px</span><span class="sy0">;</span>
+		<span class="kw1">width</span><span class="sy0">:</span> <span class="re3">181px</span><span class="sy0">;</span>
+		<span class="kw1">height</span><span class="sy0">:</span> <span class="re3">177px</span><span class="sy0">;</span>
+		<span class="kw1">background</span><span class="sy0">:</span> <span class="kw2">url</span><span class="br0">&#40;</span>images/roulette_prize_1.png<span class="br0">&#41;</span> <span class="kw2">no-repeat</span><span class="sy0">;</span>
+	<span class="br0">&#125;</span>
+	<span class="re1">.roulette</span> <span class="re1">.prize_6</span><span class="re1">.current</span> <span class="br0">&#123;</span>
+		<span class="kw1">background-position</span><span class="sy0">:</span> <span class="nu0">0</span> <span class="re3">-177px</span><span class="sy0">;</span>
+	<span class="br0">&#125;</span>
+	<span class="re1">.roulette</span> <span class="re1">.prize_1</span> <span class="br0">&#123;</span>
+		<span class="kw1">position</span><span class="sy0">:</span> <span class="kw2">absolute</span><span class="sy0">;</span>
+		<span class="kw1">left</span><span class="sy0">:</span> <span class="re3">91px</span><span class="sy0">;</span>
+		<span class="kw1">top</span><span class="sy0">:</span> <span class="re3">10px</span><span class="sy0">;</span>
+		<span class="kw1">width</span><span class="sy0">:</span> <span class="re3">177px</span><span class="sy0">;</span>
+		<span class="kw1">height</span><span class="sy0">:</span> <span class="re3">184px</span><span class="sy0">;</span>
+		<span class="kw1">background</span><span class="sy0">:</span> <span class="kw2">url</span><span class="br0">&#40;</span>images/roulette_prize_2.png<span class="br0">&#41;</span> <span class="kw2">no-repeat</span><span class="sy0">;</span>
+	<span class="br0">&#125;</span>
+	<span class="re1">.roulette</span> <span class="re1">.prize_1</span><span class="re1">.current</span> <span class="br0">&#123;</span>
+		<span class="kw1">background-position</span><span class="sy0">:</span> <span class="nu0">0</span> <span class="re3">-184px</span><span class="sy0">;</span>
+	<span class="br0">&#125;</span>
+	<span class="re1">.roulette</span> <span class="re1">.prize_-1</span> <span class="br0">&#123;</span>
+		<span class="kw1">position</span><span class="sy0">:</span> <span class="kw2">absolute</span><span class="sy0">;</span>
+		<span class="kw1">left</span><span class="sy0">:</span> <span class="re3">274px</span><span class="sy0">;</span>
+		<span class="kw1">top</span><span class="sy0">:</span> <span class="re3">10px</span><span class="sy0">;</span>
+		<span class="kw1">width</span><span class="sy0">:</span> <span class="re3">178px</span><span class="sy0">;</span>
+		<span class="kw1">height</span><span class="sy0">:</span> <span class="re3">183px</span><span class="sy0">;</span>
+		<span class="kw1">background</span><span class="sy0">:</span> <span class="kw2">url</span><span class="br0">&#40;</span>images/roulette_prize_3.png<span class="br0">&#41;</span> <span class="kw2">no-repeat</span><span class="sy0">;</span>
+	<span class="br0">&#125;</span>
+	<span class="re1">.roulette</span> <span class="re1">.prize_-1</span><span class="re1">.current</span> <span class="br0">&#123;</span>
+		<span class="kw1">background-position</span><span class="sy0">:</span> <span class="nu0">0</span> <span class="re3">-183px</span><span class="sy0">;</span>
+	<span class="br0">&#125;</span>
+	<span class="re1">.roulette</span> <span class="re1">.prize_2</span> <span class="br0">&#123;</span>
+		<span class="kw1">position</span><span class="sy0">:</span> <span class="kw2">absolute</span><span class="sy0">;</span>
+		<span class="kw1">left</span><span class="sy0">:</span> <span class="re3">349px</span><span class="sy0">;</span>
+		<span class="kw1">top</span><span class="sy0">:</span> <span class="re3">91px</span><span class="sy0">;</span>
+		<span class="kw1">width</span><span class="sy0">:</span> <span class="re3">181px</span><span class="sy0">;</span>
+		<span class="kw1">height</span><span class="sy0">:</span> <span class="re3">177px</span><span class="sy0">;</span>
+		<span class="kw1">background</span><span class="sy0">:</span> <span class="kw2">url</span><span class="br0">&#40;</span>images/roulette_prize_4.png<span class="br0">&#41;</span> <span class="kw2">no-repeat</span><span class="sy0">;</span>
+	<span class="br0">&#125;</span>
+	<span class="re1">.roulette</span> <span class="re1">.prize_2</span><span class="re1">.current</span> <span class="br0">&#123;</span>
+		<span class="kw1">background-position</span><span class="sy0">:</span> <span class="nu0">0</span> <span class="re3">-177px</span><span class="sy0">;</span>
+	<span class="br0">&#125;</span>
+	<span class="re1">.roulette</span> <span class="re1">.prize_5</span> <span class="br0">&#123;</span>
+		<span class="kw1">position</span><span class="sy0">:</span> <span class="kw2">absolute</span><span class="sy0">;</span>
+		<span class="kw1">left</span><span class="sy0">:</span> <span class="re3">349px</span><span class="sy0">;</span>
+		<span class="kw1">top</span><span class="sy0">:</span> <span class="re3">275px</span><span class="sy0">;</span>
+		<span class="kw1">width</span><span class="sy0">:</span> <span class="re3">181px</span><span class="sy0">;</span>
+		<span class="kw1">height</span><span class="sy0">:</span> <span class="re3">177px</span><span class="sy0">;</span>
+		<span class="kw1">background</span><span class="sy0">:</span> <span class="kw2">url</span><span class="br0">&#40;</span>images/roulette_prize_5.png<span class="br0">&#41;</span> <span class="kw2">no-repeat</span><span class="sy0">;</span>
+	<span class="br0">&#125;</span>
+	<span class="re1">.roulette</span> <span class="re1">.prize_5</span><span class="re1">.current</span> <span class="br0">&#123;</span>
+		<span class="kw1">background-position</span><span class="sy0">:</span> <span class="nu0">0</span> <span class="re3">-177px</span><span class="sy0">;</span>
+	<span class="br0">&#125;</span>
+	<span class="re1">.roulette</span> .prize_7<span class="br0">&#123;</span>
+		<span class="kw1">position</span><span class="sy0">:</span> <span class="kw2">absolute</span><span class="sy0">;</span>
+		<span class="kw1">left</span><span class="sy0">:</span> <span class="re3">271px</span><span class="sy0">;</span>
+		<span class="kw1">top</span><span class="sy0">:</span> <span class="re3">349px</span><span class="sy0">;</span>
+		<span class="kw1">width</span><span class="sy0">:</span> <span class="re3">178px</span><span class="sy0">;</span>
+		<span class="kw1">height</span><span class="sy0">:</span> <span class="re3">183px</span><span class="sy0">;</span>
+		<span class="kw1">background</span><span class="sy0">:</span> <span class="kw2">url</span><span class="br0">&#40;</span>images/roulette_prize_6.png<span class="br0">&#41;</span> <span class="kw2">no-repeat</span><span class="sy0">;</span>
+	<span class="br0">&#125;</span>
+	<span class="re1">.roulette</span> <span class="re1">.prize_7</span><span class="re1">.current</span> <span class="br0">&#123;</span>
+		<span class="kw1">background-position</span><span class="sy0">:</span> <span class="nu0">0</span> <span class="re3">-183px</span><span class="sy0">;</span>
+	<span class="br0">&#125;</span>
+	<span class="re1">.roulette</span> <span class="re1">.prize_4</span> <span class="br0">&#123;</span>
+		<span class="kw1">position</span><span class="sy0">:</span> <span class="kw2">absolute</span><span class="sy0">;</span>
+		<span class="kw1">left</span><span class="sy0">:</span> <span class="re3">91px</span><span class="sy0">;</span>
+		<span class="kw1">top</span><span class="sy0">:</span> <span class="re3">349px</span><span class="sy0">;</span>
+		<span class="kw1">width</span><span class="sy0">:</span> <span class="re3">178px</span><span class="sy0">;</span>
+		<span class="kw1">height</span><span class="sy0">:</span> <span class="re3">184px</span><span class="sy0">;</span>
+		<span class="kw1">background</span><span class="sy0">:</span> <span class="kw2">url</span><span class="br0">&#40;</span>images/roulette_prize_7.png<span class="br0">&#41;</span> <span class="kw2">no-repeat</span><span class="sy0">;</span>
+	<span class="br0">&#125;</span>
+	<span class="re1">.roulette</span> <span class="re1">.prize_4</span><span class="re1">.current</span> <span class="br0">&#123;</span>
+		<span class="kw1">background-position</span><span class="sy0">:</span> <span class="nu0">0</span> <span class="re3">-184px</span><span class="sy0">;</span>
+	<span class="br0">&#125;</span>
+	<span class="re1">.roulette</span> <span class="re1">.prize_3</span> <span class="br0">&#123;</span>
+		<span class="kw1">position</span><span class="sy0">:</span> <span class="kw2">absolute</span><span class="sy0">;</span>
+		<span class="kw1">left</span><span class="sy0">:</span> <span class="re3">11px</span><span class="sy0">;</span>
+		<span class="kw1">top</span><span class="sy0">:</span> <span class="re3">274px</span><span class="sy0">;</span>
+		<span class="kw1">width</span><span class="sy0">:</span> <span class="re3">181px</span><span class="sy0">;</span>
+		<span class="kw1">height</span><span class="sy0">:</span> <span class="re3">177px</span><span class="sy0">;</span>
+		<span class="kw1">background</span><span class="sy0">:</span> <span class="kw2">url</span><span class="br0">&#40;</span>images/roulette_prize_8.png<span class="br0">&#41;</span> <span class="kw2">no-repeat</span><span class="sy0">;</span>
+	<span class="br0">&#125;</span>
+	<span class="re1">.roulette</span> <span class="re1">.prize_3</span><span class="re1">.current</span> <span class="br0">&#123;</span>
+		<span class="kw1">background-position</span><span class="sy0">:</span> <span class="nu0">0</span> <span class="re3">-177px</span><span class="sy0">;</span>
+	<span class="br0">&#125;</span></pre>
+</dd></dl>
+
+</div>
+<!-- EDIT5 SECTION "样式参考" [1813-4106] -->
+<h2 class="sectionedit6" id="高级用法">高级用法</h2>
+<div class="level2">
+
+<p>
+可以利用li标签的id值改变 跳灯 的顺序，再重写样式，就可以实现各种闪烁乱跳~
+</p>
+
+</div>
+<!-- EDIT6 SECTION "高级用法" [4107-] -->

@@ -1,0 +1,47 @@
+
+<h1 class="sectionedit1" id="导航栏滑动滚动插件">导航栏滑动滚动插件</h1>
+<div class="level1">
+
+<p>
+引入文件：
+</p>
+<pre class="code">&lt;script type=&quot;text/javascript&quot; src=&quot;http://common.mn.sina.com.cn/public/resource/lib/jquery.spasticNav.js&quot;&gt;&lt;/script&gt;</pre>
+
+<p>
+<abbr title="HyperText Markup Language">HTML</abbr>:
+</p>
+<pre class="code">  &lt;ul id=&quot;nav&quot;&gt;
+      &lt;li class=&quot;selected&quot;&gt;&lt;a href=&quot;index.html&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;about.html&quot;&gt;About&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Blog&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#&quot;&gt;More About My Portfolio&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Contact&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;</pre>
+
+<p>
+JS：
+</p>
+<pre class="code">$(&quot;ul#nav&quot;).spasticNav({
+	overlap: 0,
+	color: &#039;transparent&#039;
+});</pre>
+
+<p>
+CSS：
+</p>
+<pre class="code">ul li a {
+	position: relative;
+	z-index: 2;
+}
+#blob {
+	position: absolute;
+	z-index: 1;
+	top: 0;
+	background: url(images/rank-tab-hover.png) no-repeat;
+}</pre>
+
+<p>
+DEMO地址：<a href="http://sc.chinaz.com/jiaobendemo.aspx?downloadid=13123152544262" class="urlextern" target="_blank" title="http://sc.chinaz.com/jiaobendemo.aspx?downloadid=13123152544262"  rel="nofollow">http://sc.chinaz.com/jiaobendemo.aspx?downloadid=13123152544262</a>
+</p>
+
+</div>

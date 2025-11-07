@@ -1,0 +1,7 @@
+<span class="sy0">&lt;!--</span> 通过Smarty变量覆盖CSS文件中的默认值 <span class="sy0">--&gt;</span>
+<span class="sy0">&lt;</span>style<span class="sy0">&gt;</span>
+	<span class="sy0">.</span>logo <span class="br0">&#123;</span> background<span class="sy0">-</span>image<span class="sy0">:</span>url<span class="br0">&#40;</span><span class="br0">&#123;</span><span class="re0">$header</span><span class="sy0">.</span>logo<span class="sy0">.</span>image<span class="br0">&#125;</span><span class="br0">&#41;</span><span class="sy0">;</span> <span class="br0">&#125;</span>
+<span class="sy0">&lt;/</span>style<span class="sy0">&gt;</span>
+<span class="sy0">&lt;</span>header<span class="sy0">&gt;</span>
+	<span class="sy0">&lt;</span>div <span class="kw2">class</span><span class="sy0">=</span><span class="st0">&quot;logo&quot;</span><span class="sy0">&gt;&lt;</span>a href<span class="sy0">=</span><span class="st0">&quot;javascript:;&quot;</span><span class="sy0">&gt;&lt;/</span>a<span class="sy0">&gt;&lt;/</span>div<span class="sy0">&gt;</span>
+<span class="sy0">&lt;/</span>header<span class="sy0">&gt;</span>

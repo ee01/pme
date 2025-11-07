@@ -1,0 +1,11 @@
+  分页链接数据格式
+  <span class="br0">&#123;</span>
+      <span class="st0">'first'</span><span class="sy0">:</span><span class="st0">'&lt;a herf=&quot;#&quot;&gt;第一页&lt;/a&gt;'</span><span class="sy0">,</span>
+      <span class="st0">'prev'</span><span class="sy0">:</span><span class="st0">'&lt;a herf=&quot;#&quot;&gt;上一页&lt;/a&gt;'</span><span class="sy0">,</span>
+      <span class="st0">'1'</span><span class="sy0">:</span><span class="st0">'&lt;a herf=&quot;category/3_1&quot;&gt;1&lt;/a&gt;'</span><span class="sy0">,</span>
+      <span class="st0">'current'</span><span class="sy0">:</span><span class="st0">'2'</span><span class="sy0">,</span>
+      <span class="st0">'3'</span><span class="sy0">:</span><span class="st0">'&lt;a herf=&quot;category/3_3&quot;&gt;3&lt;/a&gt;'</span><span class="sy0">,</span>
+      <span class="st0">'next'</span><span class="sy0">:</span><span class="st0">'&lt;a herf=&quot;#&quot;&gt;下一页&lt;/a&gt;'</span><span class="sy0">,</span>
+      <span class="st0">'last'</span><span class="sy0">:</span><span class="st0">'&lt;a herf=&quot;#&quot;&gt;最后一页&lt;/a&gt;'</span><span class="sy0">,</span>
+  <span class="br0">&#125;</span>
+&nbsp;

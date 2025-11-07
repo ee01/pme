@@ -1,0 +1,118 @@
+
+<h1 class="sectionedit1" id="quickbar_快捷导航">Quickbar 快捷导航</h1>
+<div class="level1">
+
+</div>
+<!-- EDIT1 SECTION "Quickbar 快捷导航" [1-37] -->
+<h2 class="sectionedit2" id="配置说明">配置说明</h2>
+<div class="level2">
+
+<p>
+需在<a href="/pme/doku.php?id=ued:template:config#config_模板配置部分" class="wikilink1" title="ued:template:config">config.ini</a>文件下做好对应配置！
+</p>
+
+</div>
+<!-- EDIT2 SECTION "配置说明" [38-161] -->
+<h3 class="sectionedit3" id="调用系统底部导航">调用系统底部导航</h3>
+<div class="level3">
+
+</div>
+
+<h4 id="quickbar_参数值说明">QuickBar 参数值说明</h4>
+<div class="level4">
+
+<p>
+颜色代码用英文逗号分隔：
+</p>
+<ol>
+<li class="level1"><div class="li"> 第一个为导航颜色</div>
+</li>
+<li class="level1"><div class="li"> 第二个为辅助颜色</div>
+</li>
+<li class="level1"><div class="li"> 第三个为字体颜色</div>
+</li>
+<li class="level1"><div class="li"> 第四个为图标颜色（不填则与字体颜色相同）</div>
+</li>
+</ol>
+
+<p>
+QuickBar高级参数：
+</p>
+
+<p>
+用<code>|</code>分割参数（<code>#AAA,#BBB,#FFF|tel</code>）
+</p>
+<ol>
+<li class="level1"><div class="li"> 第一个为颜色代码（同上）</div>
+</li>
+<li class="level1"><div class="li"> 第二个为模块配置（可选tel等英文逗号分隔）<br/>
+模块配置也可直接填写<code>#xxx</code>使用自定模块（每个页面上需要有id为xxx的对应标签）</div>
+</li>
+</ol>
+
+<p>
+QuickBar高级参数-模块语法：
+</p>
+<ol>
+<li class="level1"><div class="li"> 可选模块<code>#AAA,#BBB,#FFF|tel,totop</code>：<br/>
+tel 展示咨询热线（目前仅手机支持）<br/>
+totop 回到顶部（目前仅PC支持）</div>
+</li>
+<li class="level1"><div class="li"> 高级模块<code>#AAA,#BBB,#FFF|#bbs</code>：</div>
+</li>
+</ol>
+
+<p>
+在<code>_footer.html</code>加入以下代码：
+</p>
+<dl class="code">
+<dt><a href="/pme/doku.php?do=export_code&amp;id=ued:template:quickbar&amp;codeblock=0" title="下载片段" class="mediafile mf_html">_footer.html</a></dt>
+<dd><pre class="code html4strict"><span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/li.html"><span class="kw2">li</span></a> <span class="kw3">id</span><span class="sy0">=</span><span class="st0">&quot;bbs&quot;</span> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;quickbar_bbs&quot;</span>&gt;</span>
+	<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/a.html"><span class="kw2">a</span></a> <span class="kw3">href</span><span class="sy0">=</span><span class="st0">&quot;{$global.bbsurl}&quot;</span> <span class="kw3">target</span><span class="sy0">=</span><span class="st0">&quot;_blank&quot;</span>&gt;&lt;<a target="_blank" href="http://december.com/html/4/element/div.html"><span class="kw2">div</span></a> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;quickbar_box&quot;</span>&gt;&lt;<a target="_blank" href="http://december.com/html/4/element/span.html"><span class="kw2">span</span></a> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;icon&quot;</span>&gt;&lt;<a target="_blank" href="http://december.com/html/4/element/i.html"><span class="kw2">i</span></a> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;icon iconfont&quot;</span>&gt;</span><span class="sc1">&amp;#xe612;</span><span class="sc2">&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/i.html"><span class="kw2">i</span></a>&gt;&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/span.html"><span class="kw2">span</span></a>&gt;&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/div.html"><span class="kw2">div</span></a>&gt;&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/a.html"><span class="kw2">a</span></a>&gt;</span>
+<span class="sc2">&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/li.html"><span class="kw2">li</span></a>&gt;</span></pre>
+</dd></dl>
+
+<p>
+即可在配置文件中配置：<code>#AAA,#BBB,#FFF|#bbs</code>
+</p>
+
+</div>
+
+<h4 id="quickbar_模板调用接口">QuickBar 模板调用接口</h4>
+<div class="level4">
+
+<p>
+创建id为quickbar-backtotop的HTML标签，即可实现滚动条回到顶部功能。（用原声js的<code>document.body.scrollTop=0;</code>无效）
+</p>
+
+<p>
+创建id为quickbar-showcats的HTML标签，即可实现调出侧边栏目导航菜单。
+</p>
+
+<p>
+创建id为quickbar-share的HTML标签，即可实现调出分享弹框。
+</p>
+
+<p>
+例如：&lt;div id="quickbar-showcats"&gt;展开导航&lt;/div&gt;
+</p>
+
+</div>
+<!-- EDIT3 SECTION "调用系统底部导航" [162-1685] -->
+<h3 class="sectionedit4" id="自定义开发底部导航">自定义开发底部导航</h3>
+<div class="level3">
+
+<p>
+在config.ini的<a href="/pme/doku.php?id=ued:template:config#config_模板配置部分" class="wikilink1" title="ued:template:config">[Config]模板配置部分</a> 加入<br/>
+
+<code>QuickBar:custom</code>
+</p>
+
+<p>
+接下来所有底部导航的HTML、CSS、JS代码都须自行开发！<br/>
+
+手动开发可参见：《<a href="/pme/doku.php?id=ued:template:json#typequickbar" class="wikilink1" title="ued:template:json">type:quickbar格式的定义与用法</a>》
+</p>
+
+</div>
+<!-- EDIT4 SECTION "自定义开发底部导航" [1686-] -->

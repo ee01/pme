@@ -1,0 +1,10 @@
+http://counter.sina.com.cn/ip
+
+
+
+    <script src="http://counter.sina.com.cn/ip" type="text/javascript" charset="gb2312"></script>
+    <script type="text/javascript">
+    alert('IP：' + ILData[0]);
+    alert('位置：' + ILData[1] + ILData[2] + ILData[3]);
+    alert('线路：' + ILData[4]);
+    </script>

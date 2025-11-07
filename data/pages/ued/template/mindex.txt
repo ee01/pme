@@ -1,0 +1,199 @@
+====== 变量语法查询：index.html（手机） ======
+<html><span style="color:red">本页面是用于手机模板的index.html文件Smarty变量</span></html>\\
+<html><span style="color:red">查阅PC模板的index.html请点击：</span></html>[[ued:template:index|变量语法查询：index.html（PC）]]
+
+{{:ued:template:mindex-screenshot.jpg?nolink&400 |}}
+
+如果几乎每个页面都包含①②③，可以将①②③放入[[ued:template:header|_header.html]]文件中，利用[[ued:template:header#include_引入文件|include]]方式引入到index.html文件中；
+  * ①[[ued:template:header#logo_网站logo|{$logo} ：网站logo]]
+  * ②[[#轮滚图定义方法|轮滚图定义]]
+②需要[[#global_自定义数据_自定义于globaljson文件中|global.json]]文件配合，因为轮滚图的默认图片需要在[[#global_自定义数据_自定义于globaljson文件中|global.json]]文件中定义，并用[[#global_自定义数据_自定义于globaljson文件中|{$global.xxx}]]变量引用：
+
+  * ③[[ued:template:header#navs_网站导航栏|{$navs} ：网站导航栏]]
+如果其他页面不全包含①②③，比如只有③，也可以新建一个[[ued:template:includes|_nav.html]]文件，将②栏目导航放入此文件中，同样利用[[ued:template:header#include_引入文件|include]]方式引入到index.html文件中。
+
+  * ④[[#mindexcats_移动端首页栏目展示数据|{$mIndexCats}：移动端首页栏目展示数据]]
+④是所有栏目的内容在首页的一个集中展示。\\
+**注意：**在手机模板中，与PC不同的是，手机模板调用的是[[#mindexcats_移动端首页栏目展示数据|{$mIndexCats}]]变量，而不是json文件中的类型为list的变量！
+
+  * ⑤输出[[#mindexcats_移动端首页栏目展示数据|{$mIndexCats}]]变量中type为4（内容单页）的元素
+  * ⑥输出[[#mindexcats_移动端首页栏目展示数据|{$mIndexCats}]]变量中type为3（图文混排）的元素
+  * ⑦输出[[#mindexcats_移动端首页栏目展示数据|{$mIndexCats}]]变量中type为2（图片列表）的元素
+  * ⑧输出[[#mindexcats_移动端首页栏目展示数据|{$mIndexCats}]]变量中type为2（图片列表）的元素
+
+可以看到页面中没有type为1（文字列表）的板面样式。\\
+注意：**手机模板开发中type为1234四种类型的列表HTML必须都有定义！**
+
+故在此手机模板中应定义type为1的HTML，而在234三个列表中，属3（图文列表）比较像文字列表。\\
+于是可以在循环中''{if $mIndexCat.type == 3 or $mIndexCat.type == 1}''来输出同一块HTML代码（假设''foreach''循环中的''item''变量名为''$mIndexCa''）
+
+  * ⑨[[ued:template:footer#footprint_底部版权|{$footprint} ：底部版权]]
+⑨版权信息可放入[[ued:template:footer|变量语法查询：_footer.html]]文件中，利用[[ued:template:footer#include_引入文件|include]]方式引入到index.html文件中；
+
+  * ⑩[[#底部导航定义方法|底部导航定义]]
+底部导航无需自行开发，可[[#方法一_推荐|自动生成]]！
+
+
+{{page>ued:template:global#title_页面标题}}
+{{page>ued:template:global#keywords_页面关键词}}
+{{page>ued:template:global#description_页面描述}}
+{{page>ued:template:global#site_url_网站资源域名地址}}
+{{page>ued:template:global#site_another_url_网站另一域名地址}}
+{{page>ued:template:global#favicon_网站图标}}
+{{page>ued:template:global#stylecolor_网站颜色}}
+{{page>ued:template:global#headscript_头部脚本}}
+{{page>ued:template:global#contact_联系方式}}
+
+===== {$mIndexCats} ：移动端首页栏目展示数据 =====
+<html><span style="color:red">此输出与</span></html>[[ued:template:config#config_模板配置部分|config.ini]]<html><span style="color:red">配置文件的List?ShowtypeTotal配置关联。<br />
+此内容输出后必须到config.ini文件做对应配置，具体参见：</span></html>[[ued:template:config#config_模板配置部分|《config.ini：[Config] 模板配置部分》]]的''List?ShowtypeTotal''配置项说明！
+
+  * {$mIndexCats[0].name} 栏目标题
+  * ...
+  * {$mIndexCats[0].type} 栏目类型：1-文字列表，2-图片列表，3-图文混排，4-内容单页，5-功能，6-外链，7-微信功能，8-直达号功能
+如果type==1、2、3：
+  * {$mIndexCats[0].name} 栏目标题
+  * {$mIndexCats[0].icon} 栏目图标（iconfont技术，可改大小可换色）
+  * {$mIndexCats[0].image} 栏目预览图地址
+  * {$mIndexCats[0].link} 栏目链接地址
+  * {$mIndexCats[0].description} 栏目简介
+  * {$mIndexCats[0].data[0].title} 文章标题
+  * {$mIndexCats[0].data[0].image} 文章预览图
+  * {$mIndexCats[0].data[0].link} 文章链接
+  * {$mIndexCats[0].data[0].description} 文章内容
+  * {$mIndexCats[0].data[0].pubdate} 发布时间
+  * {$mIndexCats[0].data[0].pubtimestamp} 发布时间戳
+  * {$mIndexCats[0].data[0].category.name} 所属栏目名
+  * {$mIndexCats[0].data[0].category.link} 所属栏目链接
+  * {$mIndexCats[0].type} 栏目类型
+  * {$mIndexCats[0].showtype} 首页展现样式
+  * {$mIndexCats[0].childmenu} 子栏目数组（需要foreach循环调用）
+如果type==4：
+  * {$mIndexCats[0].name} 栏目标题
+  * {$mIndexCats[0].icon} 栏目图标（iconfont技术，可改大小可换色）
+  * {$mIndexCats[0].image} 栏目预览图地址
+  * {$mIndexCats[0].link} 栏目链接地址
+  * {$mIndexCats[0].description} 栏目单页内容简介
+  * {$mIndexCats[0].content} 栏目单页内容HTML
+  * {$mIndexCats[0].type} 栏目类型
+  * {$mIndexCats[0].showtype} 首页展现样式
+  * {$mIndexCats[0].childmenu} 子栏目数组（需要foreach循环调用）
+如果type==5、6、7、8：
+  * {$mIndexCats[0].name} 栏目标题
+  * {$mIndexCats[0].icon} 栏目图标（iconfont技术，可改大小可换色）
+  * {$mIndexCats[0].image} 栏目预览图地址
+  * {$mIndexCats[0].link} 栏目链接地址
+  * {$mIndexCats[0].description} 栏目简介
+  * {$mIndexCats[0].type} 栏目类型
+  * {$mIndexCats[0].childmenu} 子栏目数组（需要foreach循环调用）
+
+理论type:1234这四种类型都要定义其对应的HTML样式：
+<code html>
+{foreach item=mIndexCat from=$mIndexCats}
+{if $mIndexCat.type eq 1}
+<!-- 如果栏目类型是文字列表，输出此HTML代码块 -->
+{elseif $mIndexCat.type eq 2}
+<!-- 如果栏目类型是图片列表，输出此HTML代码块 -->
+{elseif $mIndexCat.type eq 3}
+<!-- 如果栏目类型是图文列表，输出此HTML代码块 -->
+{elseif $mIndexCat.type eq 4}
+<!-- 如果栏目类型是内容单页，输出此HTML代码块 -->
+{/if}
+</code>
+**如果模板设计首页无对应样式，则可不输出，并在[[ued:template:config#config_模板配置部分|config.ini]]文件做好''List?ShowtypeTotal''对应配置！**
+<html><span style="color:red"><br />如果模板中有type==5、6、7、8这样非列表型的，$mIndexCats可以独立进行一次循环，然后小于5的类型再进行一次循环；否则整个index界面请只出现一次$mIndexCats的遍历循环<span></html>
+
+例：
+<file html index.html>
+{* 输出type为1234的栏目展现HTML，且1234每个都须定义 *}
+{foreach item=mIndexCat from=$mIndexCats}
+{* 仅输出类型为 2图片列表 的栏目 *}
+{if $mIndexCat.type eq 2}
+	<h3><a href="{$mIndexCat.link}">{$mIndexCat.name}</a>：</h3>
+	{* 后台选中“样式1”的展现模式： *}
+	{if $mIndexCat.showtype eq 1}
+	<ul class="clearfix">
+		{foreach item=article from=$mIndexCat.data}
+		<li><a href="{$article.link}" target="_blank">{$article.title}</a><time class="fr" datetime="{$article.pubdate}" pubdate="pubdate">{$article.pubdate}</time></li>
+		{if $article@index+1 == 4}{break}{/if}
+		{/foreach}
+	</ul>
+	{* 后台选中“样式2”的展现模式： *}
+	{elseif $mIndexCat.showtype eq 2}
+	<!-- 样式2的HTML代码 -->
+	{elseif $mIndexCat.showtype eq 3}
+	<!-- 样式3的HTML代码 -->
+	{* elseif $mIndexCat.showtype eq ? *}
+	{/if}
+
+{* 仅输出类型为非产品列表的栏目（1文字列表、3图文列表） *}
+{elseif $mIndexCat.type eq 1 or $mIndexCat.type eq 3}
+	<h3><a href="{$mIndexCat.link}">{$mIndexCat.name}</a>：</h3>
+	{* 后台选中“样式1”的展现模式： *}
+	{if $mIndexCat.showtype eq 1}
+	<ul class="clearfix">
+		{foreach item=article from=$mIndexCat.data}
+		<li class="fl">
+			<dl class="pr">
+				<dt class="image-title">{$article.title}</dt>
+				<dd><a href="{$article.link}"><img src="{$article.image}" alt="{$article.title}" /></a></dd>
+			</dl>
+		</li>
+		{if $article@index+1 == 4}{break}{/if}
+		{/foreach}
+	</ul>
+	{* 后台选中“样式2”的展现模式： *}
+	{elseif $mIndexCat.showtype eq 2}
+	<!-- 样式2的HTML代码 -->
+	{/if}
+
+{* 仅输出类型为 4单页内容 的栏目（关于我们、联系我们） *}
+{elseif $mIndexCat.type eq 4}
+	<h3><a href="{$mIndexCat.link}">{$mIndexCat.name}</a>：</h3>
+	{* 后台选中“样式1”的展现模式： *}
+	{if $mIndexCat.showtype eq 1}
+	<p>{$mIndexCat.description|unescape:"html"}</p>
+	<p><img src="{$mIndexCat.image}" alt="{$mIndexCat.name}" /></p>
+	{/if}
+{/if}
+{/foreach}
+</file>
+
+高级用法（导航式(九宫格)栏目与内容式栏目分开输出）：
+<file html index.html>
+{* ***输出导航式栏目（不包括内容式栏目）*** *}
+<ul class="clearfix">
+	{foreach item=mIndexCat from=$mIndexCats}
+	{* 仅输出类型为外链的栏目（包括5留言板、7微信、8直达号功能） *}
+	{if $mIndexCat.type gt 4}
+	<li class="fl"><a href="{$mIndexCat.link}"><img src="{$mIndexCat.image}" alt="{$mIndexCat.name}" /><h3 class="tc">{$mIndexCat.name}</h3></a></li>
+	{/if}
+	{/foreach}
+</ul>
+
+{* ***输出内容式栏目*** *}
+{* 输出type为1234的栏目展现HTML，且1234每个都须定义 *}
+...
+<!-- 同上方代码段 -->
+</file>
+===== {$global} ：自定义数据（自定义于global.json文件中） =====
+
+<html><span style="color:red">请先查阅：</span></html>[[ued:template:json|JSON文件的语法规范]]
+
+==== 轮滚图定义方法 ====
+
+需在global.json文件中先定义一个[[ued:template:json#typeimages|类型type为images]]的数组，\\
+然后在各个html文件中引用！
+
+{{page>ued:template:json#typeimages}}
+
+==== 底部导航定义方法 ====
+
+=== 方法一（推荐） ===
+
+在[[ued:template:config#config_模板配置部分|config.ini]]文件的配置部分写入 ''QuickBar=#AAA,#CCC,#FFF'' 类似代码来定义导航的颜色。\\
+即可**自动生成**底部导航，无需任何代码或样式定义！
+
+=== 方法二 ===
+
+参见json文件中[[ued:template:json#typequickbar|type:quickbar]]的变量类型！

@@ -1,0 +1,180 @@
+====== 统一平台模板切图规范 ======
+
+**高级调试方法：**可在html文件中输入''{debug}''调试输出页面所有可用变量。（允许弹窗不被拦截）
+
+===== 模板文件列表 =====
+
+本页''Ctrl+F''查找Smarty数据变量？\\
+或点击下方文件名可直接进入查阅可用变量
+==== PC模板文件 ====
+
+^  页面名称   ^        页面文件名（点击文件名查阅变量）            ^ 是否必须 ^   说明    ^
+^ 配置文件    | [[ued:template:config|config.ini]]              | 必须 |定义模板名称、行业、风格、设计师和开发者信息等|
+^ 首页模板    | [[ued:template:index|index.html]]               | 必须     |           |
+| 首页自定数据| [[ued:template:index#index_pc首页数据_自定义于indexjson文件中|index.json]]     | 可选  | 创建$index.xxx变量，只可被index.html调用|
+^ 文字列表页  | [[ued:template:list|list-text.html]]            | 必须     |           |
+| 文字列表自定数据| [[ued:template:json|list-text.json]]        | 可选 | 创建$list_text.xxx变量，只可被list-text.html调用|
+^ 图片列表页  | [[ued:template:list|list-image.html]]           | 必须     |           |
+| 图片列表自定数据| [[ued:template:json|list-image.json]]       | 可选 | 创建$list_image.xxx变量，只可被list-image.html调用  |
+^ 图文混排列表| [[ued:template:list|list-imagetext.html]]       | 必须      |           |
+| 图文混排自定数据| [[ued:template:json|list-imagetext.json]]   | 可选      | 创建$list_imagetext.xxx变量，只可被list-imagetext.html调用|
+^ 内容单页栏目| [[ued:template:list|list-page.html]]            | 必须      |           |
+| 内容单页自定数据| [[ued:template:json|list-page.json]]        | 可选 | 创建$list_page.xxx变量，只可被list-page.html调用  |
+^ 新闻内容页  | [[ued:template:content|content-news.html]]      | 必须      |           |
+| 新闻内容自定数据| [[ued:template:json|content-news.json]]     |可选| 创建$content_news.xxx变量，只可被content-news.html调用 |
+^ 产品内容页  | [[ued:template:content|content-product.html]]   | 必须      |           |
+| 产品内容自定数据| [[ued:template:json|content-product.json]]  | 可选      | 创建$content_product.xxx变量，\\ 只可被content-product.html调用|
+^ 留言板      | [[ued:template:feedback|feedback.html]]         | 可选      | 如果要自定义留言板展现形式可创建此页面  |
+^ 搜索结果页  | [[ued:template:searchresult|searchresult.html]] | 可选      | 有搜索框模板必须   |
+^ 模板缩略图  | screenshot.jpg                                  | 必须      | 宽600    |
+^ 头部区块    | [[ued:template:header|_header.html]]            | 可选      | HTML区块（非完整html页）被其他页面include  |
+| 头部自定义数据| [[ued:template:json|_header.json]]            | 可选 | 创建$_header.xxx变量，只可被_header.html调用  |
+^ 底部区块    | [[ued:template:footer|_footer.html]]            | 可选      | HTML区块（非完整html页）被其他页面include  |
+| 底部自定义数据| [[ued:template:json|_footer.json]]            | 可选 | 创建$_footer.xxx变量，只可被_footer.html调用  |
+^ 任意区块    | [[ued:template:includes|_xxxx.html]]            | 可选       | 创建任意HTML区块。\\ **被其他页面include的页面命名必须以下划线''_''开头**  |
+| 全局数据配置| [[ued:template:json|global.json]]               | 可选  | 在所有页面都可使用此文件创建的变量$global.xxx  |
+
+
+==== 手机模板文件 ====
+
+^  页面名称   ^        页面文件名（点击文件名查阅变量）            ^  是否必须  ^   说明    ^
+^ 配置文件    | [[ued:template:config|config.ini]]              | 必须       |           |
+^ 全局数据配置| [[ued:template:mindex#global_自定义数据_自定义于globaljson文件中|global.json]] | 必须  | 所有页都可引用变量名$global  |
+^ 首页模板    | [[ued:template:mindex|index.html]]               | 必须       |           |
+^ 文字列表页  | [[ued:template:list|list-text.html]]            | 必须       |           |
+^ 图片列表页  | [[ued:template:list|list-image.html]]           | 必须       |           |
+^ 图文混排列表| [[ued:template:list|list-imagetext.html]]       | 必须       |           |
+^ 栏目内容单页| [[ued:template:list|list-page.html]]            | 必须       |           |
+^ 新闻内容页  | [[ued:template:content|content-news.html]]      | 必须       |           |
+^ 产品内容页  | [[ued:template:content|content-product.html]]   | 必须       |           |
+^ 留言板      | [[ued:template:feedback|feedback.html]]         | 可选       | 如果要自定义留言板展现形式可创建此页面  |
+^ 搜索结果页  | [[ued:template:searchresult|searchresult.html]] | 可选       | 有搜索框模板必须   |
+^ 模板缩略图  | screenshot.jpg                                  | 必须       | 宽400    |
+^ 头部区块    | [[ued:template:header|_header.html]]            | 可选       | include的HTML区块  |
+^ 底部区块    | [[ued:template:footer|_footer.html]]            | 可选       | include的HTML区块  |
+^ 任意区块    | [[ued:template:includes|_xxxx.html]]            | 可选       |  说明见下表  |
+
+
+底部导航参见：《[[ued:template:quickbar|Quickbar 配置说明]]》
+
+**PS：老模板只有三种列表页展现形式怎么办？**((
+**情况一**  如果老模板三种形式：
+  * news.html比较像 图文列表（或像文字列表
+  * pro.html比较像 图片列表
+  * about.html是 内容单页
+则可这样转换老模板：
+  * [[ued:template:list|list-text.html]]       参照news.html模板
+  * [[ued:template:list|list-image.html]]      参照pro.html模板
+  * [[ued:template:list|list-imagetext.html]]  也参照news.html模板
+  * [[ued:template:list|list-page.html]]       参照about.html模板
+**情况二**  如果老模板三种形式：
+  * news.html比较像 文字列表
+  * pro.html比较像 图文列表（或像图片列表
+  * about.html是 内容单页
+则可这样转换老模板：
+  * [[ued:template:list|list-text.html]]       参照news.html模板
+  * [[ued:template:list|list-image.html]]      参照pro.html模板
+  * [[ued:template:list|list-imagetext.html]]  也参照pro.html模板
+  * [[ued:template:list|list-page.html]]       参照about.html模板
+))
+
+===== 变量聚合查询 =====
+
+==== 系统变量 ====
+  * [[ued:template:global#title_页面标题|{$title}]] ：页面标题
+  * [[ued:template:global#keywords_页面关键词|{$keywords}]] ：页面关键词
+  * [[ued:template:global#description_页面描述|{$description}]] ：页面描述
+  * [[ued:template:global#site_url_网站资源域名地址|{$site_url}]] ：网站资源域名地址
+  * [[ued:template:global#site_another_url_网站另一域名地址|{$site_another_url}]] ：网站另一域名地址
+  * [[ued:template:global#favicon_网站图标|{$favicon}]] ：网站图标
+  * [[ued:template:global#stylecolor_网站颜色|{$stylecolor}]] ：网站颜色
+  * [[ued:template:global#headscript_头部脚本|{$headscript}]] ：头部脚本
+  * [[ued:template:global#contact_联系方式|{$contact}]] ：联系方式
+  * [[ued:template:mindex#mIndexCats_移动端首页栏目展示数据|{$mIndexCats}]] ：移动端首页栏目展示数据
+  * [[ued:template:global#logo_网站logo|{$logo}]] ：网站logo
+  * [[ued:template:global#navs_网站导航栏|{$navs}]] ：网站导航栏
+  * [[ued:template:global#contact_联系方式|{$contact}]] ：联系方式
+  * [[ued:template:global#footprint_底部版权|{$footprint}]] ：底部版权
+  * [[ued:template:global#footscript_底部脚本|{$footscript}]] ：底部脚本
+
+  * [[ued:template:global#list_列表页数据|{$list}]] ：列表页数据
+  * [[ued:template:global#posnavs_面包屑导航|{$posnavs}]] ：面包屑导航
+  * [[ued:template:global#page_links_列表分页项|{$page_links}]] ：列表分页项
+  * [[ued:template:global#pagenavs_同栏目导航栏|{$pagenavs}]] ：同栏目导航栏
+
+  * [[ued:template:global#article_内容页数据|{$article}]] ：内容页数据
+  * [[ued:template:global#posnavs_面包屑导航|{$posnavs}]] ：面包屑导航
+  * [[ued:template:global#related_相关阅读|{$related}]] ：相关阅读
+
+==== 定义变量 ====
+  * [[ued:template:json#typetext|type:text]] ：单行文字
+  * [[ued:template:json#typetextarea|type:textarea]] ：多行文本
+  * [[ued:template:json#typeimage|type:image]] ：单张图片
+  * [[ued:template:json#typeimages|type:images]] ：多图，多个image类型的数组
+  * [[ued:template:json#typenav|type:nav]] ：指向栏目数据变量
+  * [[ued:template:json#typenavs|type:navs]] ：指向多个栏目数据
+  * [[ued:template:json#typelist|type:list]] ：指向列表型栏目（[[ued:template:json#typenav|type:nav]]的扩展）
+  * [[ued:template:json#typepage|type:page]] ：指向单页型栏目（[[ued:template:json#typenav|type:nav]]的扩展）
+  * [[ued:template:json#typelink|type:link]] ：指向链接型栏目（[[ued:template:json#typenav|type:nav]]的扩展）
+  * [[ued:template:json#typequickbar|type:quickbar]] ：手机底部导航
+
+
+==== 表单嵌入模板规则 ====
+1、需要添加form.json文件，文件格式如下：
+{
+    "bind_div0": {
+        "value": [
+        ],
+        "description": "绑定显示区域",
+        "type": "form",
+        "config": {
+            "kind": "div",
+            "name": "div_area0,div_area1"
+        }
+    },
+    "bind_css0": {
+        "value": [
+        ],
+        "description": "绑定样式",
+        "type": "form",
+        "config": {
+            "kind": "css",
+            "name": "form_css0,form_css1"
+        }
+    },
+    "bind_form0": {
+        "value": [
+        ],
+        "description": "绑定表单",
+        "type": "form",
+        "config": {
+            "kind": "form_id",
+            "form_id": "1"
+        }
+    }
+}
+
+2、.html 文件
+
+  <!--表单嵌入-->
+  **<div id="div_area0">**
+  <form method="post">
+  <p class="kz" data-limit="58" //data-type="title"//></p>
+  <p class="kz" data-limit="58" //data-type="description"//>{$index.word}</p>
+  <input type="text" placeholder="学生姓名" class="short short1" //data-type="inset"// />
+  <input type="text" placeholder="年龄" class="short" //data-type="inset"///>
+  <input type="text" placeholder="联系电话" class="long" //data-type="inset"///>
+  **<input type="submit" value="立即预约" name="submit" />**
+  </form>
+  </div>
+  <!--表单嵌入end-->
+                            
+    ·表单嵌入的区域根据id来定位，id值要在json文件的bind_div中存在。
+    ·data-type="title" 是表单标题
+    ·data-type="description" 表单描述
+    ·data-type="inset" 表单列，模板中的inset个数应该和嵌入的表单列个数相同
+    ·每个表单都需要一个提交按钮，value值可以自定义
+    
+3、.css样式文件    
+
+   ·表单嵌入的样式值要在json文件的bind_css中存在，并且对样式的设置要在该类名下。

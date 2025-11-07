@@ -1,0 +1,129 @@
+====== SlidesJS 图片滚动插件 ======
+
+===== 引入文件 =====
+
+<code html>
+<script type="text/javascript" src="http://common.mn.sina.com.cn/public/resource/lib/jquery.slides.js"></script>
+</code>
+
+===== JS =====
+
+<code javascript>
+var slidesjs = $('.slidesjs').slidesjs({
+	width: 900,
+	height: 350,
+	play: {
+		active: false,
+		auto: true,
+		interval: 6000,
+		pauseOnHover: true,
+		restartDelay: 2000
+	}
+}).css({visibility:"visible", overflow:"visible"});
+</code>
+
+===== html =====
+
+<code html>
+
+<div class="slidesjs" style="visibility:hidden">
+	<div><img alt="" src="images/001.jpg" title="" alt="图片标题1" /><!--如果是版块切换，这里可以添加div--></div>
+	<div><img alt="" src="images/002.jpg" title="" alt="图片标题2" /></div>
+	<div><img alt="" src="images/003.jpg" title="" alt="图片标题3" /></div>
+</div>
+
+</code>
+
+===== css =====
+
+<code css>
+
+.slidesjs {
+	position: relative;
+	width: 900px;
+	margin: 0 auto;
+}
+.slidesjs .slidesjs-navigation {
+	z-index: 10;
+	filter: Alpha(opacity=40);
+	opacity: 0.4;
+	line-height: 999px;
+	overflow: hidden;
+}
+.slidesjs .slidesjs-navigation:hover {
+	filter: Alpha(opacity=100);
+	opacity: 1;
+}
+.slidesjs .slidesjs-previous,
+.slidesjs .slidesjs-next {
+	position: absolute;
+	top: 125px;
+	width: 19px;
+	height: 90px;
+}
+	.slidesjs .slidesjs-previous {
+		left: -5px;
+		background: url(images/photos_switch.png) no-repeat 0 0;
+	}
+	.slidesjs .slidesjs-next {
+		right: -5px;
+		background: url(images/photos_switch.png) no-repeat -19px 0;
+	}
+.slidesjs-pagination {
+	width: 160px;
+	margin: 40px auto 0;
+	list-style: none;
+}
+.slidesjs-pagination li {
+	float: left;
+	margin: 0 5px 0 4px;
+}
+.slidesjs-pagination li a {
+	display: block;
+	width: 11px;
+	height: 0;
+	padding-top: 11px;
+	background: url(images/photos_pagination.png) no-repeat;
+	float: left;
+	overflow: hidden;
+}
+.slidesjs-pagination li a.active {
+	background-position: 0 -11px
+}
+
+.slidesjs div {
+	position: relative;
+}
+	.slidesjs div img {
+		width: 900px;
+		height: 350px;
+	}
+
+</code>
+
+===== 扩展用法 =====
+
+==== 控制切换指定版块/图片 ====
+
+<code javascript>
+var slidesjs = $('.slidesjs').slidesjs({
+	width: 900,
+	height: 350,
+	navigation: false,
+	play: false
+});
+</code>
+
+<code javascript>
+var index = 2;	// 跳转到第二张图
+slidesjs.data('plugin_slidesjs').goto(index);
+slidesjs.data('plugin_slidesjs').stop();
+</code>
+
+===== 专题DEMO =====
+
+http://mn.sina.com.cn/city/zt/201310sjqf/index.shtml
+
+===== 文档说明 =====
+
+http://www.slidesjs.com/

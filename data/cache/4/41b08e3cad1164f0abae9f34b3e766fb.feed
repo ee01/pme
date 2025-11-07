@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- generator="FeedCreator 1.7.2-ppt DokuWiki" -->
+<?xml-stylesheet href="http://pme.eexx.me/lib/exe/css.php?s=feed" type="text/css"?>
+<rdf:RDF
+    xmlns="http://purl.org/rss/1.0/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <channel rdf:about="http://pme.eexx.me/feed.php">
+        <title>百度产品部门 知识库 ued:template:modules</title>
+        <description></description>
+        <link>http://pme.eexx.me/</link>
+        <image rdf:resource="http://pme.eexx.me/lib/tpl/vector/images/favicon.ico" />
+       <dc:date>2018-01-28T22:43:24+00:00</dc:date>
+        <items>
+            <rdf:Seq>
+                <rdf:li rdf:resource="http://pme.eexx.me/doku.php?id=ued:template:modules:links&amp;rev=1454531070&amp;do=diff"/>
+                <rdf:li rdf:resource="http://pme.eexx.me/doku.php?id=ued:template:modules:navs&amp;rev=1454531070&amp;do=diff"/>
+                <rdf:li rdf:resource="http://pme.eexx.me/doku.php?id=ued:template:modules:pagelinks&amp;rev=1454531070&amp;do=diff"/>
+                <rdf:li rdf:resource="http://pme.eexx.me/doku.php?id=ued:template:modules:pagenavs&amp;rev=1454531070&amp;do=diff"/>
+            </rdf:Seq>
+        </items>
+    </channel>
+    <image rdf:about="http://pme.eexx.me/lib/tpl/vector/images/favicon.ico">
+        <title>百度产品部门 知识库</title>
+        <link>http://pme.eexx.me/</link>
+        <url>http://pme.eexx.me/lib/tpl/vector/images/favicon.ico</url>
+    </image>
+    <item rdf:about="http://pme.eexx.me/doku.php?id=ued:template:modules:links&amp;rev=1454531070&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-02-03T20:24:30+00:00</dc:date>
+        <title>ued:template:modules:links</title>
+        <link>http://pme.eexx.me/doku.php?id=ued:template:modules:links&amp;rev=1454531070&amp;do=diff</link>
+        <description>友情链接
+
+[点此下载模块：_links.rar]
+
+纯文字版本友情链接
+
+_links.html
+
+带LOGO版本友情链接
+
+_links_withlogo.html</description>
+    </item>
+    <item rdf:about="http://pme.eexx.me/doku.php?id=ued:template:modules:navs&amp;rev=1454531070&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-02-03T20:24:30+00:00</dc:date>
+        <title>ued:template:modules:navs</title>
+        <link>http://pme.eexx.me/doku.php?id=ued:template:modules:navs&amp;rev=1454531070&amp;do=diff</link>
+        <description>导航栏：不固定个数自适宽度
+
+无论后台添加了几个导航（一级栏目），都可以等分的排列在一起。
+
+[点此下载模块：_navs.rar]
+
+预览效果：
+
+
+
+通过百分比来实现
+
+_navs_with_percent.html
+
+通过table-cell来实现（IE7及以下不支持）</description>
+    </item>
+    <item rdf:about="http://pme.eexx.me/doku.php?id=ued:template:modules:pagelinks&amp;rev=1454531070&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-02-03T20:24:30+00:00</dc:date>
+        <title>ued:template:modules:pagelinks</title>
+        <link>http://pme.eexx.me/doku.php?id=ued:template:modules:pagelinks&amp;rev=1454531070&amp;do=diff</link>
+        <description>列表页翻页
+
+[点此下载模块：_pagelinks.rar]
+
+完全版本
+
+_pagelinks.html
+
+只有上一页下一页的版本
+
+_pagelinks_simple.html
+
+“加载更多”无限按钮
+
+_pagelinks_ajax.html</description>
+    </item>
+    <item rdf:about="http://pme.eexx.me/doku.php?id=ued:template:modules:pagenavs&amp;rev=1454531070&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-02-03T20:24:30+00:00</dc:date>
+        <title>ued:template:modules:pagenavs</title>
+        <link>http://pme.eexx.me/doku.php?id=ued:template:modules:pagenavs&amp;rev=1454531070&amp;do=diff</link>
+        <description>左侧栏目列表（同级子栏目列表）
+
+[点此下载模块：_pagenavs.rar]
+[点此下载模块：_subclass.rar]
+根据模板的设计情况，选择使用二级或三级列表模块。
+subclass里面的文件subclass.js 要在index页面导入
+
+实现只显示到二级栏目
+
+_pagenavs_sub2.html
+
+实现显示到三级栏目</description>
+    </item>
+</rdf:RDF>

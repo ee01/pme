@@ -1,0 +1,15 @@
+a:2:{s:7:"current";a:9:{s:4:"date";a:2:{s:7:"created";i:1430278805;s:8:"modified";i:1430289405;}s:7:"creator";s:9:"邱沼懿";s:4:"user";s:1:"e";s:11:"last_change";b:0;s:11:"contributor";a:1:{s:1:"e";s:9:"邱沼懿";}s:5:"title";s:39:"导航栏：不固定个数自适宽度";s:11:"description";a:2:{s:15:"tableofcontents";a:3:{i:0;a:4:{s:3:"hid";s:37:"导航栏_不固定个数自适宽度";s:5:"title";s:39:"导航栏：不固定个数自适宽度";s:4:"type";s:2:"ul";s:5:"level";i:1;}i:1;a:4:{s:3:"hid";s:24:"通过百分比来实现";s:5:"title";s:24:"通过百分比来实现";s:4:"type";s:2:"ul";s:5:"level";i:2;}i:2;a:4:{s:3:"hid";s:47:"通过table-cell来实现_ie7及以下不支持";s:5:"title";s:52:"通过table-cell来实现（IE7及以下不支持）";s:4:"type";s:2:"ul";s:5:"level";i:2;}}s:8:"abstract";s:289:"导航栏：不固定个数自适宽度
+
+无论后台添加了几个导航（一级栏目），都可以等分的排列在一起。
+
+[点此下载模块：_navs.rar]
+
+预览效果：
+
+
+
+通过百分比来实现
+
+_navs_with_percent.html
+
+通过table-cell来实现（IE7及以下不支持）";}s:8:"relation";a:2:{s:5:"media";a:3:{s:29:"ued:template:modules:navs.rar";b:1;s:47:"ued:template:modules:pasted:20150429-143611.png";b:1;s:47:"ued:template:modules:pasted:20150429-143629.png";b:1;}s:10:"firstimage";s:47:"ued:template:modules:pasted:20150429-143611.png";}s:8:"internal";a:2:{s:5:"cache";b:1;s:3:"toc";b:1;}}s:10:"persistent";a:5:{s:4:"date";a:2:{s:7:"created";i:1430278805;s:8:"modified";i:1430289405;}s:7:"creator";s:9:"邱沼懿";s:4:"user";s:1:"e";s:11:"last_change";b:0;s:11:"contributor";a:1:{s:1:"e";s:9:"邱沼懿";}}}

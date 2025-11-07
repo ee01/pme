@@ -1,0 +1,72 @@
+
+<h1 class="sectionedit1" id="弹出对话框">弹出对话框</h1>
+<div class="level1">
+
+</div>
+<!-- EDIT1 SECTION "弹出对话框" [1-31] -->
+<h2 class="sectionedit2" id="引用方法一">引用方法一</h2>
+<div class="level2">
+
+</div>
+<!-- EDIT2 SECTION "引用方法一" [32-61] -->
+<h3 class="sectionedit3" id="引入文件">引入文件</h3>
+<div class="level3">
+<pre class="code html4strict"><span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/link.html"><span class="kw2">link</span></a> <span class="kw3">type</span><span class="sy0">=</span><span class="st0">&quot;text/css&quot;</span> <span class="kw3">rel</span><span class="sy0">=</span><span class="st0">&quot;stylesheet&quot;</span> <span class="kw3">href</span><span class="sy0">=</span><span class="st0">&quot;http://common.mn.sina.com.cn/public/resource/lib/artDialog/skins/simple.css&quot;</span> <span class="sy0">/</span>&gt;</span>
+<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/script.html"><span class="kw2">script</span></a> <span class="kw3">type</span><span class="sy0">=</span><span class="st0">&quot;text/javascript&quot;</span> <span class="kw3">src</span><span class="sy0">=</span><span class="st0">&quot;http://common.mn.sina.com.cn/public/resource/lib/artDialog/jquery.artDialog.js&quot;</span>&gt;&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/script.html"><span class="kw2">script</span></a>&gt;</span>
+<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/script.html"><span class="kw2">script</span></a> <span class="kw3">type</span><span class="sy0">=</span><span class="st0">&quot;text/javascript&quot;</span> <span class="kw3">src</span><span class="sy0">=</span><span class="st0">&quot;http://common.mn.sina.com.cn/public/resource/lib/artDialog/artDialog.plugins.js&quot;</span>&gt;&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/script.html"><span class="kw2">script</span></a>&gt;</span></pre>
+
+<p>
+BTW：样式文件可以选择性引入以下列表中的一个
+</p>
+<ul>
+<li class="level1"><div class="li"> default.css</div>
+</li>
+<li class="level1"><div class="li"> simple.css</div>
+</li>
+<li class="level1"><div class="li"> black.css</div>
+</li>
+<li class="level1"><div class="li"> blue.css</div>
+</li>
+<li class="level1"><div class="li"> green.css</div>
+</li>
+<li class="level1"><div class="li"> aero.css</div>
+</li>
+<li class="level1"><div class="li"> idialog.css</div>
+</li>
+<li class="level1"><div class="li"> chrome.css</div>
+</li>
+<li class="level1"><div class="li"> opera.css</div>
+</li>
+<li class="level1"><div class="li"> twitter.css</div>
+</li>
+</ul>
+
+</div>
+<!-- EDIT3 SECTION "引入文件" [62-695] -->
+<h3 class="sectionedit4" id="js">JS</h3>
+<div class="level3">
+<pre class="code javascript">$.<span class="me1">dialog</span>.<span class="me1">alert</span><span class="br0">&#40;</span><span class="st0">'test'</span><span class="br0">&#41;</span><span class="sy0">;</span></pre>
+
+</div>
+<!-- EDIT4 SECTION "JS" [696-760] -->
+<h3 class="sectionedit5" id="demo">Demo</h3>
+<div class="level3">
+
+<p>
+<a href="http://www.planeart.cn/demo/artDialog/index.html" class="urlextern" target="_blank" title="http://www.planeart.cn/demo/artDialog/index.html"  rel="nofollow">http://www.planeart.cn/demo/artDialog/index.html</a>
+</p>
+
+</div>
+<!-- EDIT5 SECTION "Demo" [761-826] -->
+<h2 class="sectionedit6" id="引用方法二">引用方法二</h2>
+<div class="level2">
+
+<p>
+如果引用了common.js：
+</p>
+<pre class="code javascript">Util.<span class="me1">load</span><span class="br0">&#40;</span><span class="st0">'dialog'</span><span class="sy0">,</span> <span class="kw1">function</span><span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+	$.<span class="me1">dialog</span>.<span class="me1">alert</span><span class="br0">&#40;</span><span class="st0">'test'</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span><span class="br0">&#41;</span><span class="sy0">;</span></pre>
+
+</div>
+<!-- EDIT6 SECTION "引用方法二" [827-] -->

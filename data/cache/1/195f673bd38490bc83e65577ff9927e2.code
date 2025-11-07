@@ -1,0 +1,60 @@
+<span class="re1">.slidesjs</span> <span class="br0">&#123;</span>
+	<span class="kw1">position</span><span class="sy0">:</span> <span class="kw2">relative</span><span class="sy0">;</span>
+	<span class="kw1">width</span><span class="sy0">:</span> <span class="re3">900px</span><span class="sy0">;</span>
+	<span class="kw1">margin</span><span class="sy0">:</span> <span class="nu0">0</span> <span class="kw2">auto</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+<span class="re1">.slidesjs</span> <span class="re1">.slidesjs-navigation</span> <span class="br0">&#123;</span>
+	<span class="kw1">z-index</span><span class="sy0">:</span> <span class="nu0">10</span><span class="sy0">;</span>
+	filter<span class="sy0">:</span> Alpha<span class="br0">&#40;</span>opacity<span class="sy0">=</span><span class="nu0">40</span><span class="br0">&#41;</span><span class="sy0">;</span>
+	opacity<span class="sy0">:</span> <span class="nu0">0.4</span><span class="sy0">;</span>
+	<span class="kw1">line-height</span><span class="sy0">:</span> <span class="re3">999px</span><span class="sy0">;</span>
+	<span class="kw1">overflow</span><span class="sy0">:</span> <span class="kw2">hidden</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+<span class="re1">.slidesjs</span> <span class="re1">.slidesjs-navigation</span><span class="re2">:hover </span><span class="br0">&#123;</span>
+	filter<span class="sy0">:</span> Alpha<span class="br0">&#40;</span>opacity<span class="sy0">=</span><span class="nu0">100</span><span class="br0">&#41;</span><span class="sy0">;</span>
+	opacity<span class="sy0">:</span> <span class="nu0">1</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+<span class="re1">.slidesjs</span> .slidesjs-previous<span class="sy0">,</span>
+<span class="re1">.slidesjs</span> <span class="re1">.slidesjs-next</span> <span class="br0">&#123;</span>
+	<span class="kw1">position</span><span class="sy0">:</span> <span class="kw2">absolute</span><span class="sy0">;</span>
+	<span class="kw1">top</span><span class="sy0">:</span> <span class="re3">125px</span><span class="sy0">;</span>
+	<span class="kw1">width</span><span class="sy0">:</span> <span class="re3">19px</span><span class="sy0">;</span>
+	<span class="kw1">height</span><span class="sy0">:</span> <span class="re3">90px</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+	<span class="re1">.slidesjs</span> <span class="re1">.slidesjs-previous</span> <span class="br0">&#123;</span>
+		<span class="kw1">left</span><span class="sy0">:</span> <span class="re3">-5px</span><span class="sy0">;</span>
+		<span class="kw1">background</span><span class="sy0">:</span> <span class="kw2">url</span><span class="br0">&#40;</span><span class="co2">images/photos_switch.png</span><span class="br0">&#41;</span> <span class="kw2">no-repeat</span> <span class="nu0">0</span> <span class="nu0">0</span><span class="sy0">;</span>
+	<span class="br0">&#125;</span>
+	<span class="re1">.slidesjs</span> <span class="re1">.slidesjs-next</span> <span class="br0">&#123;</span>
+		<span class="kw1">right</span><span class="sy0">:</span> <span class="re3">-5px</span><span class="sy0">;</span>
+		<span class="kw1">background</span><span class="sy0">:</span> <span class="kw2">url</span><span class="br0">&#40;</span><span class="co2">images/photos_switch.png</span><span class="br0">&#41;</span> <span class="kw2">no-repeat</span> <span class="re3">-19px</span> <span class="nu0">0</span><span class="sy0">;</span>
+	<span class="br0">&#125;</span>
+<span class="re1">.slidesjs-pagination</span> <span class="br0">&#123;</span>
+	<span class="kw1">width</span><span class="sy0">:</span> <span class="re3">160px</span><span class="sy0">;</span>
+	<span class="kw1">margin</span><span class="sy0">:</span> <span class="re3">40px</span> <span class="kw2">auto</span> <span class="nu0">0</span><span class="sy0">;</span>
+	<span class="kw1">list-style</span><span class="sy0">:</span> <span class="kw2">none</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+<span class="re1">.slidesjs-pagination</span> li <span class="br0">&#123;</span>
+	<span class="kw1">float</span><span class="sy0">:</span> <span class="kw1">left</span><span class="sy0">;</span>
+	<span class="kw1">margin</span><span class="sy0">:</span> <span class="nu0">0</span> <span class="re3">5px</span> <span class="nu0">0</span> <span class="re3">4px</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+<span class="re1">.slidesjs-pagination</span> li a <span class="br0">&#123;</span>
+	<span class="kw1">display</span><span class="sy0">:</span> <span class="kw2">block</span><span class="sy0">;</span>
+	<span class="kw1">width</span><span class="sy0">:</span> <span class="re3">11px</span><span class="sy0">;</span>
+	<span class="kw1">height</span><span class="sy0">:</span> <span class="nu0">0</span><span class="sy0">;</span>
+	<span class="kw1">padding-top</span><span class="sy0">:</span> <span class="re3">11px</span><span class="sy0">;</span>
+	<span class="kw1">background</span><span class="sy0">:</span> <span class="kw2">url</span><span class="br0">&#40;</span><span class="co2">images/photos_pagination.png</span><span class="br0">&#41;</span> <span class="kw2">no-repeat</span><span class="sy0">;</span>
+	<span class="kw1">float</span><span class="sy0">:</span> <span class="kw1">left</span><span class="sy0">;</span>
+	<span class="kw1">overflow</span><span class="sy0">:</span> <span class="kw2">hidden</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+<span class="re1">.slidesjs-pagination</span> li a<span class="re1">.active</span> <span class="br0">&#123;</span>
+	<span class="kw1">background-position</span><span class="sy0">:</span> <span class="nu0">0</span> <span class="re3">-11px</span>
+<span class="br0">&#125;</span>
+&nbsp;
+<span class="re1">.slidesjs</span> div <span class="br0">&#123;</span>
+	<span class="kw1">position</span><span class="sy0">:</span> <span class="kw2">relative</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+	<span class="re1">.slidesjs</span> div img <span class="br0">&#123;</span>
+		<span class="kw1">width</span><span class="sy0">:</span> <span class="re3">900px</span><span class="sy0">;</span>
+		<span class="kw1">height</span><span class="sy0">:</span> <span class="re3">350px</span><span class="sy0">;</span>
+	<span class="br0">&#125;</span>

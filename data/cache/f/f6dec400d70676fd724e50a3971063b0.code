@@ -1,0 +1,3 @@
+<span class="kw1">var</span> index <span class="sy0">=</span> <span class="nu0">2</span><span class="sy0">;</span>	<span class="co1">// 跳转到第二张图</span>
+slidesjs.<span class="me1">data</span><span class="br0">&#40;</span><span class="st0">'plugin_slidesjs'</span><span class="br0">&#41;</span>.<span class="kw1">goto</span><span class="br0">&#40;</span>index<span class="br0">&#41;</span><span class="sy0">;</span>
+slidesjs.<span class="me1">data</span><span class="br0">&#40;</span><span class="st0">'plugin_slidesjs'</span><span class="br0">&#41;</span>.<span class="me1">stop</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>

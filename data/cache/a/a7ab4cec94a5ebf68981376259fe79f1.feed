@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- generator="FeedCreator 1.7.2-ppt DokuWiki" -->
+<?xml-stylesheet href="https://eexx.me/pme/lib/exe/css.php?s=feed" type="text/css"?>
+<rdf:RDF
+    xmlns="http://purl.org/rss/1.0/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <channel rdf:about="https://eexx.me/pme/feed.php">
+        <title>百度产品部门 知识库 fx:main</title>
+        <description></description>
+        <link>https://eexx.me/pme/</link>
+        <image rdf:resource="https://eexx.me/pme/lib/tpl/vector/images/favicon.ico" />
+       <dc:date>2022-06-14T08:46:34+00:00</dc:date>
+        <items>
+            <rdf:Seq>
+                <rdf:li rdf:resource="https://eexx.me/pme/doku.php?id=fx:main:201404&amp;rev=1454531070&amp;do=diff"/>
+                <rdf:li rdf:resource="https://eexx.me/pme/doku.php?id=fx:main:20140505&amp;rev=1454531070&amp;do=diff"/>
+            </rdf:Seq>
+        </items>
+    </channel>
+    <image rdf:about="https://eexx.me/pme/lib/tpl/vector/images/favicon.ico">
+        <title>百度产品部门 知识库</title>
+        <link>https://eexx.me/pme/</link>
+        <url>https://eexx.me/pme/lib/tpl/vector/images/favicon.ico</url>
+    </image>
+    <item rdf:about="https://eexx.me/pme/doku.php?id=fx:main:201404&amp;rev=1454531070&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-02-03T20:24:30+00:00</dc:date>
+        <title>fx:main:201404</title>
+        <link>https://eexx.me/pme/doku.php?id=fx:main:201404&amp;rev=1454531070&amp;do=diff</link>
+        <description>首页新版201404
+
+原型图设计
+
+首页
+
+
+
+解决方案内页
+
+
+
+参考：
+
+	*  &lt;http://s.webafang.com/wcs.html&gt;
+	*  &lt;http://www.webafang.cn/func.html&gt;
+
+风信套餐内页
+
+
+
+设计初稿
+
+&lt;http://web.xm12t.cn/lgx/fx/&gt;</description>
+    </item>
+    <item rdf:about="https://eexx.me/pme/doku.php?id=fx:main:20140505&amp;rev=1454531070&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-02-03T20:24:30+00:00</dc:date>
+        <title>fx:main:20140505</title>
+        <link>https://eexx.me/pme/doku.php?id=fx:main:20140505&amp;rev=1454531070&amp;do=diff</link>
+        <description>风信后台测试需求
+
+测试需求说明书：</description>
+    </item>
+</rdf:RDF>

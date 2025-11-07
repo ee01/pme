@@ -1,0 +1,683 @@
+
+<h1 class="sectionedit1" id="变量语法查询_indexhtml_手机">变量语法查询：index.html（手机）</h1>
+<div class="level1">
+
+<p>
+<span style="color:red">本页面是用于手机模板的index.html文件Smarty变量</span><br/>
+
+<span style="color:red">查阅PC模板的index.html请点击：</span><a href="/doku.php?id=ued:template:index" class="wikilink1" title="ued:template:index">变量语法查询：index.html（PC）</a>
+</p>
+
+<p>
+<img src="/lib/exe/fetch.php?w=400&amp;tok=7b803a&amp;media=ued:template:mindex-screenshot.jpg" class="medialeft" alt="" width="400" />
+</p>
+
+<p>
+如果几乎每个页面都包含①②③，可以将①②③放入<a href="/doku.php?id=ued:template:header" class="wikilink1" title="ued:template:header">_header.html</a>文件中，利用<a href="/doku.php?id=ued:template:header#include_引入文件" class="wikilink1" title="ued:template:header">include</a>方式引入到index.html文件中；
+</p>
+<ul>
+<li class="level1"><div class="li"> ①<a href="/doku.php?id=ued:template:header#logo_网站logo" class="wikilink1" title="ued:template:header">{$logo} ：网站logo</a></div>
+</li>
+<li class="level1"><div class="li"> ②<a href="#轮滚图定义方法" title="ued:template:mindex ↵" class="wikilink1">轮滚图定义</a></div>
+</li>
+</ul>
+
+<p>
+②需要<a href="#global_自定义数据_自定义于globaljson文件中" title="ued:template:mindex ↵" class="wikilink1">global.json</a>文件配合，因为轮滚图的默认图片需要在<a href="#global_自定义数据_自定义于globaljson文件中" title="ued:template:mindex ↵" class="wikilink1">global.json</a>文件中定义，并用<a href="#global_自定义数据_自定义于globaljson文件中" title="ued:template:mindex ↵" class="wikilink1">{$global.xxx}</a>变量引用：
+</p>
+<ul>
+<li class="level1"><div class="li"> ③<a href="/doku.php?id=ued:template:header#navs_网站导航栏" class="wikilink1" title="ued:template:header">{$navs} ：网站导航栏</a></div>
+</li>
+</ul>
+
+<p>
+如果其他页面不全包含①②③，比如只有③，也可以新建一个<a href="/doku.php?id=ued:template:includes" class="wikilink1" title="ued:template:includes">_nav.html</a>文件，将②栏目导航放入此文件中，同样利用<a href="/doku.php?id=ued:template:header#include_引入文件" class="wikilink1" title="ued:template:header">include</a>方式引入到index.html文件中。
+</p>
+<ul>
+<li class="level1"><div class="li"> ④<a href="#mindexcats_移动端首页栏目展示数据" title="ued:template:mindex ↵" class="wikilink1">{$mIndexCats}：移动端首页栏目展示数据</a></div>
+</li>
+</ul>
+
+<p>
+④是所有栏目的内容在首页的一个集中展示。<br/>
+
+<strong>注意：</strong>在手机模板中，与PC不同的是，手机模板调用的是<a href="#mindexcats_移动端首页栏目展示数据" title="ued:template:mindex ↵" class="wikilink1">{$mIndexCats}</a>变量，而不是json文件中的类型为list的变量！
+</p>
+<ul>
+<li class="level1"><div class="li"> ⑤输出<a href="#mindexcats_移动端首页栏目展示数据" title="ued:template:mindex ↵" class="wikilink1">{$mIndexCats}</a>变量中type为4（内容单页）的元素</div>
+</li>
+<li class="level1"><div class="li"> ⑥输出<a href="#mindexcats_移动端首页栏目展示数据" title="ued:template:mindex ↵" class="wikilink1">{$mIndexCats}</a>变量中type为3（图文混排）的元素</div>
+</li>
+<li class="level1"><div class="li"> ⑦输出<a href="#mindexcats_移动端首页栏目展示数据" title="ued:template:mindex ↵" class="wikilink1">{$mIndexCats}</a>变量中type为2（图片列表）的元素</div>
+</li>
+<li class="level1"><div class="li"> ⑧输出<a href="#mindexcats_移动端首页栏目展示数据" title="ued:template:mindex ↵" class="wikilink1">{$mIndexCats}</a>变量中type为2（图片列表）的元素</div>
+</li>
+</ul>
+
+<p>
+可以看到页面中没有type为1（文字列表）的板面样式。<br/>
+
+注意：<strong>手机模板开发中type为1234四种类型的列表HTML必须都有定义！</strong>
+</p>
+
+<p>
+故在此手机模板中应定义type为1的HTML，而在234三个列表中，属3（图文列表）比较像文字列表。<br/>
+
+于是可以在循环中<code>{if $mIndexCat.type == 3 or $mIndexCat.type == 1}</code>来输出同一块HTML代码（假设<code>foreach</code>循环中的<code>item</code>变量名为<code>$mIndexCa</code>）
+</p>
+<ul>
+<li class="level1"><div class="li"> ⑨<a href="/doku.php?id=ued:template:footer#footprint_底部版权" class="wikilink1" title="ued:template:footer">{$footprint} ：底部版权</a></div>
+</li>
+</ul>
+
+<p>
+⑨版权信息可放入<a href="/doku.php?id=ued:template:footer" class="wikilink1" title="ued:template:footer">变量语法查询：_footer.html</a>文件中，利用<a href="/doku.php?id=ued:template:footer#include_引入文件" class="wikilink1" title="ued:template:footer">include</a>方式引入到index.html文件中；
+</p>
+<ul>
+<li class="level1"><div class="li"> ⑩<a href="#底部导航定义方法" title="ued:template:mindex ↵" class="wikilink1">底部导航定义</a></div>
+</li>
+</ul>
+
+<p>
+底部导航无需自行开发，可<a href="#方法一_推荐" title="ued:template:mindex ↵" class="wikilink1">自动生成</a>！
+</p>
+
+</div>
+<!-- EDIT2 PLUGIN_INCLUDE_START "ued:template:global" [0-] --><div class="plugin_include_content plugin_include__ued:template:global">
+
+<h2 class="sectionedit4" id="title_页面标题">{$title} ：页面标题</h2>
+<div class="level2">
+<pre class="code html4strict"><span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/head.html"><span class="kw2">head</span></a>&gt;</span>
+	<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/title.html"><span class="kw2">title</span></a>&gt;</span>{$title}<span class="sc2">&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/title.html"><span class="kw2">title</span></a>&gt;</span>
+...</pre>
+
+</div>
+<!-- EDIT4 SECTION "{$title} ：页面标题" [1542-1636] --><div class="inclmeta level2">
+	<a href="/doku.php?id=ued:template:global#title_页面标题" class="wikilink1 permalink" title="ued:template:global#title_页面标题" rel="bookmark">{$title} ：页面标题</a>
+	&middot; <abbr class="published" title="2016-08-04T03:00:40Z">2016/08/04 03:00</abbr>
+</div>
+<!-- EDIT3 PLUGIN_INCLUDE_END "ued:template:global" [0-] --></div>
+<div class="level1">
+
+</div>
+<!-- EDIT5 PLUGIN_INCLUDE_START "ued:template:global" [0-] --><div class="plugin_include_content plugin_include__ued:template:global">
+
+<h2 class="sectionedit7" id="keywords_页面关键词">{$keywords} ：页面关键词</h2>
+<div class="level2">
+<pre class="code html4strict"><span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/meta.html"><span class="kw2">meta</span></a> <span class="kw3">name</span><span class="sy0">=</span><span class="st0">&quot;keywords&quot;</span> <span class="kw3">content</span><span class="sy0">=</span><span class="st0">&quot;{$keywords}&quot;</span> <span class="sy0">/</span>&gt;</span></pre>
+
+</div>
+<!-- EDIT7 SECTION "{$keywords} ：页面关键词" [1636-1746] --><div class="inclmeta level2">
+	<a href="/doku.php?id=ued:template:global#keywords_页面关键词" class="wikilink1 permalink" title="ued:template:global#keywords_页面关键词" rel="bookmark">{$keywords} ：页面关键词</a>
+	&middot; <abbr class="published" title="2016-08-04T03:00:40Z">2016/08/04 03:00</abbr>
+</div>
+<!-- EDIT6 PLUGIN_INCLUDE_END "ued:template:global" [0-] --></div>
+<div class="level1">
+
+</div>
+<!-- EDIT8 PLUGIN_INCLUDE_START "ued:template:global" [0-] --><div class="plugin_include_content plugin_include__ued:template:global">
+
+<h2 class="sectionedit10" id="description_页面描述">{$description} ：页面描述</h2>
+<div class="level2">
+<pre class="code html4strict"> <span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/meta.html"><span class="kw2">meta</span></a> <span class="kw3">name</span><span class="sy0">=</span><span class="st0">&quot;description&quot;</span> <span class="kw3">content</span><span class="sy0">=</span><span class="st0">&quot;{$description}&quot;</span> <span class="sy0">/</span>&gt;</span></pre>
+
+</div>
+<!-- EDIT10 SECTION "{$description} ：页面描述" [1746-1863] --><div class="inclmeta level2">
+	<a href="/doku.php?id=ued:template:global#description_页面描述" class="wikilink1 permalink" title="ued:template:global#description_页面描述" rel="bookmark">{$description} ：页面描述</a>
+	&middot; <abbr class="published" title="2016-08-04T03:00:40Z">2016/08/04 03:00</abbr>
+</div>
+<!-- EDIT9 PLUGIN_INCLUDE_END "ued:template:global" [0-] --></div>
+<div class="level1">
+
+</div>
+<!-- EDIT11 PLUGIN_INCLUDE_START "ued:template:global" [0-] --><div class="plugin_include_content plugin_include__ued:template:global">
+
+<h2 class="sectionedit13" id="site_url_网站资源域名地址">{$site_url} ：网站资源域名地址</h2>
+<div class="level2">
+
+<p>
+用于JS、CSS引用路径，如：
+</p>
+<pre class="code html4strict">...
+	<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/link.html"><span class="kw2">link</span></a> <span class="kw3">rel</span><span class="sy0">=</span><span class="st0">&quot;stylesheet&quot;</span> <span class="kw3">rev</span><span class="sy0">=</span><span class="st0">&quot;stylesheet&quot;</span> <span class="kw3">href</span><span class="sy0">=</span><span class="st0">&quot;{$site_url}css/style_{$stylecolor}.css&quot;</span> <span class="kw3">type</span><span class="sy0">=</span><span class="st0">&quot;text/css&quot;</span> <span class="sy0">/</span>&gt;</span>
+	<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/script.html"><span class="kw2">script</span></a> <span class="kw3">type</span><span class="sy0">=</span><span class="st0">&quot;text/javascript&quot;</span> <span class="kw3">src</span><span class="sy0">=</span><span class="st0">&quot;{$site_url}js/script.js&quot;</span>&gt;&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/script.html"><span class="kw2">script</span></a>&gt;</span>
+<span class="sc2">&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/head.html"><span class="kw2">head</span></a>&gt;</span>
+...</pre>
+
+</div>
+<!-- EDIT13 SECTION "{$site_url} ：网站资源域名地址" [350-652] --><div class="inclmeta level2">
+	<a href="/doku.php?id=ued:template:global#site_url_网站资源域名地址" class="wikilink1 permalink" title="ued:template:global#site_url_网站资源域名地址" rel="bookmark">{$site_url} ：网站资源域名地址</a>
+	&middot; <abbr class="published" title="2016-08-04T03:00:40Z">2016/08/04 03:00</abbr>
+</div>
+<!-- EDIT12 PLUGIN_INCLUDE_END "ued:template:global" [0-] --></div>
+<div class="level1">
+
+</div>
+<!-- EDIT14 PLUGIN_INCLUDE_START "ued:template:global" [0-] --><div class="plugin_include_content plugin_include__ued:template:global">
+
+<h2 class="sectionedit16" id="site_another_url_网站另一域名地址">{$site_another_url} ：网站另一域名地址</h2>
+<div class="level2">
+
+<p>
+<em class="u">当前是手机模版时，该变量表示PC域名；<br/>
+
+当前是PC模版时，表示手机域名。</em>
+</p>
+
+<p>
+<strong>每个模板index.html中head内必备的代码！</strong>
+</p>
+
+<p>
+<strong>PC模板：</strong>
+</p>
+<pre class="code html4strict"><span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/head.html"><span class="kw2">head</span></a>&gt;</span>
+	<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/script.html"><span class="kw2">script</span></a> <span class="kw3">type</span><span class="sy0">=</span><span class="st0">&quot;text/javascript&quot;</span>&gt;</span>
+	// 识别为手机客户端，自动跳转手机页面
+	{if $site_another_url}
+		if (!!navigator.userAgent.match(/AppleWebKit.*Mobile.*/)) {
+			location.href = '{$site_another_url}';
+		}
+	{/if}
+	<span class="sc2">&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/script.html"><span class="kw2">script</span></a>&gt;</span>
+...</pre>
+
+<p>
+如果是手机模板将加入的代码中双感叹号<code>!!</code>改为单个感叹号<code>!</code>即可。
+</p>
+
+<p>
+<strong>手机模板：</strong>
+</p>
+<pre class="code html4strict"><span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/head.html"><span class="kw2">head</span></a>&gt;</span>
+	<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/script.html"><span class="kw2">script</span></a> <span class="kw3">type</span><span class="sy0">=</span><span class="st0">&quot;text/javascript&quot;</span>&gt;</span>
+	// 识别为电脑客户端，自动跳转PC页面
+	{if $site_another_url}
+		if (!navigator.userAgent.match(/AppleWebKit.*Mobile.*/)) {
+			location.href = '{$site_another_url}';
+		}
+	{/if}
+	<span class="sc2">&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/script.html"><span class="kw2">script</span></a>&gt;</span>
+...</pre>
+
+</div>
+<!-- EDIT16 SECTION "{$site_another_url} ：网站另一域名地址" [652-1542] --><div class="inclmeta level2">
+	<a href="/doku.php?id=ued:template:global#site_another_url_网站另一域名地址" class="wikilink1 permalink" title="ued:template:global#site_another_url_网站另一域名地址" rel="bookmark">{$site_another_url} ：网站另一域名地址</a>
+	&middot; <abbr class="published" title="2016-08-04T03:00:40Z">2016/08/04 03:00</abbr>
+</div>
+<!-- EDIT15 PLUGIN_INCLUDE_END "ued:template:global" [0-] --></div>
+<div class="level1">
+
+</div>
+<!-- EDIT17 PLUGIN_INCLUDE_START "ued:template:global" [0-] --><div class="plugin_include_content plugin_include__ued:template:global">
+
+<h2 class="sectionedit19" id="favicon_网站图标">{$favicon} ：网站图标</h2>
+<div class="level2">
+<pre class="code html4strict"> <span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/link.html"><span class="kw2">link</span></a> <span class="kw3">rel</span><span class="sy0">=</span><span class="st0">&quot;shortcut icon&quot;</span> <span class="kw3">href</span><span class="sy0">=</span><span class="st0">&quot;{$favicon}&quot;</span> <span class="kw3">type</span><span class="sy0">=</span><span class="st0">&quot;image/x-icon&quot;</span> <span class="sy0">/</span>&gt;</span></pre>
+
+</div>
+<!-- EDIT19 SECTION "{$favicon} ：网站图标" [1863-1990] --><div class="inclmeta level2">
+	<a href="/doku.php?id=ued:template:global#favicon_网站图标" class="wikilink1 permalink" title="ued:template:global#favicon_网站图标" rel="bookmark">{$favicon} ：网站图标</a>
+	&middot; <abbr class="published" title="2016-08-04T03:00:40Z">2016/08/04 03:00</abbr>
+</div>
+<!-- EDIT18 PLUGIN_INCLUDE_END "ued:template:global" [0-] --></div>
+<div class="level1">
+
+</div>
+<!-- EDIT20 PLUGIN_INCLUDE_START "ued:template:global" [0-] --><div class="plugin_include_content plugin_include__ued:template:global">
+
+<h2 class="sectionedit22" id="stylecolor_网站颜色">{$stylecolor} ：网站颜色</h2>
+<div class="level2">
+
+<p>
+引用的风格颜色css文件。
+</p>
+<pre class="code html4strict"> ...
+ <span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/link.html"><span class="kw2">link</span></a> <span class="kw3">rel</span><span class="sy0">=</span><span class="st0">&quot;stylesheet&quot;</span> <span class="kw3">rev</span><span class="sy0">=</span><span class="st0">&quot;stylesheet&quot;</span> <span class="kw3">href</span><span class="sy0">=</span><span class="st0">&quot;{$site_url}css/style_{$stylecolor}.css&quot;</span> <span class="kw3">type</span><span class="sy0">=</span><span class="st0">&quot;text/css&quot;</span> <span class="sy0">/</span>&gt;</span>
+<span class="sc2">&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/head.html"><span class="kw2">head</span></a>&gt;</span></pre>
+
+<p>
+如果有2个及以上颜色风格，需引入此变量并创建对应css文件，且必须在config.ini文件中做好对应<a href="/doku.php?id=ued:template:config#config_模板配置部分" class="wikilink1" title="ued:template:config">StyleColors</a>配置。
+</p>
+
+</div>
+<!-- EDIT22 SECTION "{$stylecolor} ：网站颜色" [1990-2402] --><div class="inclmeta level2">
+	<a href="/doku.php?id=ued:template:global#stylecolor_网站颜色" class="wikilink1 permalink" title="ued:template:global#stylecolor_网站颜色" rel="bookmark">{$stylecolor} ：网站颜色</a>
+	&middot; <abbr class="published" title="2016-08-04T03:00:40Z">2016/08/04 03:00</abbr>
+</div>
+<!-- EDIT21 PLUGIN_INCLUDE_END "ued:template:global" [0-] --></div>
+<div class="level1">
+
+</div>
+<!-- EDIT23 PLUGIN_INCLUDE_START "ued:template:global" [0-] --><div class="plugin_include_content plugin_include__ued:template:global">
+
+<h2 class="sectionedit25" id="headscript_头部脚本">{$headscript} ：头部脚本</h2>
+<div class="level2">
+
+<p>
+<em class="u">仅首页面运行的脚本，多用于身份识别（直达号、百度站长等）</em>
+</p>
+
+<p>
+放置于index.html的head内尾部
+</p>
+<pre class="code html4strict">	...
+	{$headscript}
+<span class="sc2">&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/head.html"><span class="kw2">head</span></a>&gt;</span></pre>
+
+</div>
+<!-- EDIT25 SECTION "{$headscript} ：头部脚本" [3076-3292] --><div class="inclmeta level2">
+	<a href="/doku.php?id=ued:template:global#headscript_头部脚本" class="wikilink1 permalink" title="ued:template:global#headscript_头部脚本" rel="bookmark">{$headscript} ：头部脚本</a>
+	&middot; <abbr class="published" title="2016-08-04T03:00:40Z">2016/08/04 03:00</abbr>
+</div>
+<!-- EDIT24 PLUGIN_INCLUDE_END "ued:template:global" [0-] --></div>
+<div class="level1">
+
+</div>
+<!-- EDIT26 PLUGIN_INCLUDE_START "ued:template:global" [0-] --><div class="plugin_include_content plugin_include__ued:template:global">
+
+<h2 class="sectionedit28" id="contact_联系方式">{$contact} ：联系方式</h2>
+<div class="level2">
+<ul>
+<li class="level1"><div class="li"> {$contact.company} 企业名称</div>
+</li>
+<li class="level1"><div class="li"> {$contact.name} 联系人</div>
+</li>
+<li class="level1"><div class="li"> {$contact.mobile} 手机</div>
+</li>
+<li class="level1"><div class="li"> {$contact.telephone} 固话/热线</div>
+</li>
+<li class="level1"><div class="li"> {$contact.fax} 传真</div>
+</li>
+<li class="level1"><div class="li"> {$contact.mail} 邮箱</div>
+</li>
+<li class="level1"><div class="li"> {$contact.qq} QQ</div>
+</li>
+<li class="level1"><div class="li"> {$contact.address} 公司地址</div>
+</li>
+</ul>
+
+<p>
+实际示例：
+</p>
+<pre class="code html4strict"><span class="sc2">&lt;header&gt;</span>
+	<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/div.html"><span class="kw2">div</span></a> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;fr&quot;</span>&gt;</span>24小时热线：{$contact.telephone}<span class="sc2">&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/div.html"><span class="kw2">div</span></a>&gt;</span>
+<span class="sc2">&lt;<span class="sy0">/</span>header&gt;</span>
+...
+<span class="sc2">&lt;footer&gt;</span>
+	<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/a.html"><span class="kw2">a</span></a> <span class="kw3">href</span><span class="sy0">=</span><span class="st0">&quot;mailto:{$contact.mail}&quot;</span>&gt;</span>邮件反馈<span class="sc2">&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/a.html"><span class="kw2">a</span></a>&gt;</span>
+<span class="sc2">&lt;<span class="sy0">/</span>footer&gt;</span></pre>
+
+</div>
+<!-- EDIT28 SECTION "{$contact} ：联系方式" [6956-7429] --><div class="inclmeta level2">
+	<a href="/doku.php?id=ued:template:global#contact_联系方式" class="wikilink1 permalink" title="ued:template:global#contact_联系方式" rel="bookmark">{$contact} ：联系方式</a>
+	&middot; <abbr class="published" title="2016-08-04T03:00:40Z">2016/08/04 03:00</abbr>
+</div>
+<!-- EDIT27 PLUGIN_INCLUDE_END "ued:template:global" [0-] --></div>
+<div class="level1">
+
+</div>
+<!-- EDIT1 SECTION "变量语法查询：index.html（手机）" [1-3592] -->
+<h2 class="sectionedit29" id="mindexcats_移动端首页栏目展示数据">{$mIndexCats} ：移动端首页栏目展示数据</h2>
+<div class="level2">
+
+<p>
+<span style="color:red">此输出与</span><a href="/doku.php?id=ued:template:config#config_模板配置部分" class="wikilink1" title="ued:template:config">config.ini</a><span style="color:red">配置文件的List?ShowtypeTotal配置关联。<br />
+此内容输出后必须到config.ini文件做对应配置，具体参见：</span><a href="/doku.php?id=ued:template:config#config_模板配置部分" class="wikilink1" title="ued:template:config">《config.ini：[Config] 模板配置部分》</a>的<code>List?ShowtypeTotal</code>配置项说明！
+</p>
+<ul>
+<li class="level1"><div class="li"> {$mIndexCats[0].name} 栏目标题</div>
+</li>
+<li class="level1"><div class="li"> …</div>
+</li>
+<li class="level1"><div class="li"> {$mIndexCats[0].type} 栏目类型：1-文字列表，2-图片列表，3-图文混排，4-内容单页，5-功能，6-外链，7-微信功能，8-直达号功能</div>
+</li>
+</ul>
+
+<p>
+如果type==1、2、3：
+</p>
+<ul>
+<li class="level1"><div class="li"> {$mIndexCats[0].name} 栏目标题</div>
+</li>
+<li class="level1"><div class="li"> {$mIndexCats[0].icon} 栏目图标（iconfont技术，可改大小可换色）</div>
+</li>
+<li class="level1"><div class="li"> {$mIndexCats[0].image} 栏目预览图地址</div>
+</li>
+<li class="level1"><div class="li"> {$mIndexCats[0].link} 栏目链接地址</div>
+</li>
+<li class="level1"><div class="li"> {$mIndexCats[0].description} 栏目简介</div>
+</li>
+<li class="level1"><div class="li"> {$mIndexCats[0].data[0].title} 文章标题</div>
+</li>
+<li class="level1"><div class="li"> {$mIndexCats[0].data[0].image} 文章预览图</div>
+</li>
+<li class="level1"><div class="li"> {$mIndexCats[0].data[0].link} 文章链接</div>
+</li>
+<li class="level1"><div class="li"> {$mIndexCats[0].data[0].description} 文章内容</div>
+</li>
+<li class="level1"><div class="li"> {$mIndexCats[0].data[0].pubdate} 发布时间</div>
+</li>
+<li class="level1"><div class="li"> {$mIndexCats[0].data[0].pubtimestamp} 发布时间戳</div>
+</li>
+<li class="level1"><div class="li"> {$mIndexCats[0].data[0].category.name} 所属栏目名</div>
+</li>
+<li class="level1"><div class="li"> {$mIndexCats[0].data[0].category.link} 所属栏目链接</div>
+</li>
+<li class="level1"><div class="li"> {$mIndexCats[0].type} 栏目类型</div>
+</li>
+<li class="level1"><div class="li"> {$mIndexCats[0].showtype} 首页展现样式</div>
+</li>
+<li class="level1"><div class="li"> {$mIndexCats[0].childmenu} 子栏目数组（需要foreach循环调用）</div>
+</li>
+</ul>
+
+<p>
+如果type==4：
+</p>
+<ul>
+<li class="level1"><div class="li"> {$mIndexCats[0].name} 栏目标题</div>
+</li>
+<li class="level1"><div class="li"> {$mIndexCats[0].icon} 栏目图标（iconfont技术，可改大小可换色）</div>
+</li>
+<li class="level1"><div class="li"> {$mIndexCats[0].image} 栏目预览图地址</div>
+</li>
+<li class="level1"><div class="li"> {$mIndexCats[0].link} 栏目链接地址</div>
+</li>
+<li class="level1"><div class="li"> {$mIndexCats[0].description} 栏目单页内容简介</div>
+</li>
+<li class="level1"><div class="li"> {$mIndexCats[0].content} 栏目单页内容HTML</div>
+</li>
+<li class="level1"><div class="li"> {$mIndexCats[0].type} 栏目类型</div>
+</li>
+<li class="level1"><div class="li"> {$mIndexCats[0].showtype} 首页展现样式</div>
+</li>
+<li class="level1"><div class="li"> {$mIndexCats[0].childmenu} 子栏目数组（需要foreach循环调用）</div>
+</li>
+</ul>
+
+<p>
+如果type==5、6、7、8：
+</p>
+<ul>
+<li class="level1"><div class="li"> {$mIndexCats[0].name} 栏目标题</div>
+</li>
+<li class="level1"><div class="li"> {$mIndexCats[0].icon} 栏目图标（iconfont技术，可改大小可换色）</div>
+</li>
+<li class="level1"><div class="li"> {$mIndexCats[0].image} 栏目预览图地址</div>
+</li>
+<li class="level1"><div class="li"> {$mIndexCats[0].link} 栏目链接地址</div>
+</li>
+<li class="level1"><div class="li"> {$mIndexCats[0].description} 栏目简介</div>
+</li>
+<li class="level1"><div class="li"> {$mIndexCats[0].type} 栏目类型</div>
+</li>
+<li class="level1"><div class="li"> {$mIndexCats[0].childmenu} 子栏目数组（需要foreach循环调用）</div>
+</li>
+</ul>
+
+<p>
+理论type:1234这四种类型都要定义其对应的HTML样式：
+</p>
+<pre class="code html4strict">{foreach item=mIndexCat from=$mIndexCats}
+{if $mIndexCat.type eq 1}
+<span class="sc-1">&lt;!-- 如果栏目类型是文字列表，输出此HTML代码块 --&gt;</span>
+{elseif $mIndexCat.type eq 2}
+<span class="sc-1">&lt;!-- 如果栏目类型是图片列表，输出此HTML代码块 --&gt;</span>
+{elseif $mIndexCat.type eq 3}
+<span class="sc-1">&lt;!-- 如果栏目类型是图文列表，输出此HTML代码块 --&gt;</span>
+{elseif $mIndexCat.type eq 4}
+<span class="sc-1">&lt;!-- 如果栏目类型是内容单页，输出此HTML代码块 --&gt;</span>
+{/if}</pre>
+
+<p>
+<strong>如果模板设计首页无对应样式，则可不输出，并在<a href="/doku.php?id=ued:template:config#config_模板配置部分" class="wikilink1" title="ued:template:config">config.ini</a>文件做好<code>List?ShowtypeTotal</code>对应配置！</strong>
+<span style="color:red"><br />如果模板中有type==5、6、7、8这样非列表型的，$mIndexCats可以独立进行一次循环，然后小于5的类型再进行一次循环；否则整个index界面请只出现一次$mIndexCats的遍历循环<span>
+</p>
+
+<p>
+例：
+</p>
+<dl class="file">
+<dt><a href="/doku.php?do=export_code&amp;id=ued:template:mindex&amp;codeblock=11" title="下载片段" class="mediafile mf_html">index.html</a></dt>
+<dd><pre class="code file html4strict">{* 输出type为1234的栏目展现HTML，且1234每个都须定义 *}
+{foreach item=mIndexCat from=$mIndexCats}
+{* 仅输出类型为 2图片列表 的栏目 *}
+{if $mIndexCat.type eq 2}
+	<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/h3.html"><span class="kw2">h3</span></a>&gt;&lt;<a target="_blank" href="http://december.com/html/4/element/a.html"><span class="kw2">a</span></a> <span class="kw3">href</span><span class="sy0">=</span><span class="st0">&quot;{$mIndexCat.link}&quot;</span>&gt;</span>{$mIndexCat.name}<span class="sc2">&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/a.html"><span class="kw2">a</span></a>&gt;</span>：<span class="sc2">&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/h3.html"><span class="kw2">h3</span></a>&gt;</span>
+	{* 后台选中“样式1”的展现模式： *}
+	{if $mIndexCat.showtype eq 1}
+	<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/ul.html"><span class="kw2">ul</span></a> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;clearfix&quot;</span>&gt;</span>
+		{foreach item=article from=$mIndexCat.data}
+		<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/li.html"><span class="kw2">li</span></a>&gt;&lt;<a target="_blank" href="http://december.com/html/4/element/a.html"><span class="kw2">a</span></a> <span class="kw3">href</span><span class="sy0">=</span><span class="st0">&quot;{$article.link}&quot;</span> <span class="kw3">target</span><span class="sy0">=</span><span class="st0">&quot;_blank&quot;</span>&gt;</span>{$article.title}<span class="sc2">&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/a.html"><span class="kw2">a</span></a>&gt;&lt;time <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;fr&quot;</span> <span class="kw3">datetime</span><span class="sy0">=</span><span class="st0">&quot;{$article.pubdate}&quot;</span> pubdate<span class="sy0">=</span><span class="st0">&quot;pubdate&quot;</span>&gt;</span>{$article.pubdate}<span class="sc2">&lt;<span class="sy0">/</span>time&gt;&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/li.html"><span class="kw2">li</span></a>&gt;</span>
+		{if $article@index+1 == 4}{break}{/if}
+		{/foreach}
+	<span class="sc2">&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/ul.html"><span class="kw2">ul</span></a>&gt;</span>
+	{* 后台选中“样式2”的展现模式： *}
+	{elseif $mIndexCat.showtype eq 2}
+	<span class="sc-1">&lt;!-- 样式2的HTML代码 --&gt;</span>
+	{elseif $mIndexCat.showtype eq 3}
+	<span class="sc-1">&lt;!-- 样式3的HTML代码 --&gt;</span>
+	{* elseif $mIndexCat.showtype eq ? *}
+	{/if}
+&nbsp;
+{* 仅输出类型为非产品列表的栏目（1文字列表、3图文列表） *}
+{elseif $mIndexCat.type eq 1 or $mIndexCat.type eq 3}
+	<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/h3.html"><span class="kw2">h3</span></a>&gt;&lt;<a target="_blank" href="http://december.com/html/4/element/a.html"><span class="kw2">a</span></a> <span class="kw3">href</span><span class="sy0">=</span><span class="st0">&quot;{$mIndexCat.link}&quot;</span>&gt;</span>{$mIndexCat.name}<span class="sc2">&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/a.html"><span class="kw2">a</span></a>&gt;</span>：<span class="sc2">&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/h3.html"><span class="kw2">h3</span></a>&gt;</span>
+	{* 后台选中“样式1”的展现模式： *}
+	{if $mIndexCat.showtype eq 1}
+	<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/ul.html"><span class="kw2">ul</span></a> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;clearfix&quot;</span>&gt;</span>
+		{foreach item=article from=$mIndexCat.data}
+		<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/li.html"><span class="kw2">li</span></a> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;fl&quot;</span>&gt;</span>
+			<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/dl.html"><span class="kw2">dl</span></a> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;pr&quot;</span>&gt;</span>
+				<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/dt.html"><span class="kw2">dt</span></a> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;image-title&quot;</span>&gt;</span>{$article.title}<span class="sc2">&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/dt.html"><span class="kw2">dt</span></a>&gt;</span>
+				<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/dd.html"><span class="kw2">dd</span></a>&gt;&lt;<a target="_blank" href="http://december.com/html/4/element/a.html"><span class="kw2">a</span></a> <span class="kw3">href</span><span class="sy0">=</span><span class="st0">&quot;{$article.link}&quot;</span>&gt;&lt;<a target="_blank" href="http://december.com/html/4/element/img.html"><span class="kw2">img</span></a> <span class="kw3">src</span><span class="sy0">=</span><span class="st0">&quot;{$article.image}&quot;</span> <span class="kw3">alt</span><span class="sy0">=</span><span class="st0">&quot;{$article.title}&quot;</span> <span class="sy0">/</span>&gt;&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/a.html"><span class="kw2">a</span></a>&gt;&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/dd.html"><span class="kw2">dd</span></a>&gt;</span>
+			<span class="sc2">&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/dl.html"><span class="kw2">dl</span></a>&gt;</span>
+		<span class="sc2">&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/li.html"><span class="kw2">li</span></a>&gt;</span>
+		{if $article@index+1 == 4}{break}{/if}
+		{/foreach}
+	<span class="sc2">&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/ul.html"><span class="kw2">ul</span></a>&gt;</span>
+	{* 后台选中“样式2”的展现模式： *}
+	{elseif $mIndexCat.showtype eq 2}
+	<span class="sc-1">&lt;!-- 样式2的HTML代码 --&gt;</span>
+	{/if}
+&nbsp;
+{* 仅输出类型为 4单页内容 的栏目（关于我们、联系我们） *}
+{elseif $mIndexCat.type eq 4}
+	<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/h3.html"><span class="kw2">h3</span></a>&gt;&lt;<a target="_blank" href="http://december.com/html/4/element/a.html"><span class="kw2">a</span></a> <span class="kw3">href</span><span class="sy0">=</span><span class="st0">&quot;{$mIndexCat.link}&quot;</span>&gt;</span>{$mIndexCat.name}<span class="sc2">&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/a.html"><span class="kw2">a</span></a>&gt;</span>：<span class="sc2">&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/h3.html"><span class="kw2">h3</span></a>&gt;</span>
+	{* 后台选中“样式1”的展现模式： *}
+	{if $mIndexCat.showtype eq 1}
+	<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/p.html"><span class="kw2">p</span></a>&gt;</span>{$mIndexCat.description|unescape:&quot;html&quot;}<span class="sc2">&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/p.html"><span class="kw2">p</span></a>&gt;</span>
+	<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/p.html"><span class="kw2">p</span></a>&gt;&lt;<a target="_blank" href="http://december.com/html/4/element/img.html"><span class="kw2">img</span></a> <span class="kw3">src</span><span class="sy0">=</span><span class="st0">&quot;{$mIndexCat.image}&quot;</span> <span class="kw3">alt</span><span class="sy0">=</span><span class="st0">&quot;{$mIndexCat.name}&quot;</span> <span class="sy0">/</span>&gt;&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/p.html"><span class="kw2">p</span></a>&gt;</span>
+	{/if}
+{/if}
+{/foreach}</pre>
+</dd></dl>
+
+<p>
+高级用法（导航式(九宫格)栏目与内容式栏目分开输出）：
+</p>
+<dl class="file">
+<dt><a href="/doku.php?do=export_code&amp;id=ued:template:mindex&amp;codeblock=12" title="下载片段" class="mediafile mf_html">index.html</a></dt>
+<dd><pre class="code file html4strict">{* ***输出导航式栏目（不包括内容式栏目）*** *}
+<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/ul.html"><span class="kw2">ul</span></a> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;clearfix&quot;</span>&gt;</span>
+	{foreach item=mIndexCat from=$mIndexCats}
+	{* 仅输出类型为外链的栏目（包括5留言板、7微信、8直达号功能） *}
+	{if $mIndexCat.type gt 4}
+	<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/li.html"><span class="kw2">li</span></a> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;fl&quot;</span>&gt;&lt;<a target="_blank" href="http://december.com/html/4/element/a.html"><span class="kw2">a</span></a> <span class="kw3">href</span><span class="sy0">=</span><span class="st0">&quot;{$mIndexCat.link}&quot;</span>&gt;&lt;<a target="_blank" href="http://december.com/html/4/element/img.html"><span class="kw2">img</span></a> <span class="kw3">src</span><span class="sy0">=</span><span class="st0">&quot;{$mIndexCat.image}&quot;</span> <span class="kw3">alt</span><span class="sy0">=</span><span class="st0">&quot;{$mIndexCat.name}&quot;</span> <span class="sy0">/</span>&gt;&lt;<a target="_blank" href="http://december.com/html/4/element/h3.html"><span class="kw2">h3</span></a> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;tc&quot;</span>&gt;</span>{$mIndexCat.name}<span class="sc2">&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/h3.html"><span class="kw2">h3</span></a>&gt;&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/a.html"><span class="kw2">a</span></a>&gt;&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/li.html"><span class="kw2">li</span></a>&gt;</span>
+	{/if}
+	{/foreach}
+<span class="sc2">&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/ul.html"><span class="kw2">ul</span></a>&gt;</span>
+&nbsp;
+{* ***输出内容式栏目*** *}
+{* 输出type为1234的栏目展现HTML，且1234每个都须定义 *}
+...
+<span class="sc-1">&lt;!-- 同上方代码段 --&gt;</span></pre>
+</dd></dl>
+
+</div>
+<!-- EDIT29 SECTION "{$mIndexCats} ：移动端首页栏目展示数据" [3593-9770] -->
+<h2 class="sectionedit30" id="global_自定义数据_自定义于globaljson文件中">{$global} ：自定义数据（自定义于global.json文件中）</h2>
+<div class="level2">
+
+<p>
+<span style="color:red">请先查阅：</span><a href="/doku.php?id=ued:template:json" class="wikilink1" title="ued:template:json">JSON文件的语法规范</a>
+</p>
+
+</div>
+<!-- EDIT30 SECTION "{$global} ：自定义数据（自定义于global.json文件中）" [9771-9958] -->
+<h3 class="sectionedit31" id="轮滚图定义方法">轮滚图定义方法</h3>
+<div class="level3">
+
+<p>
+需在global.json文件中先定义一个<a href="/doku.php?id=ued:template:json#typeimages" class="wikilink1" title="ued:template:json">类型type为images</a>的数组，<br/>
+
+然后在各个html文件中引用！
+</p>
+
+</div>
+<!-- EDIT32 PLUGIN_INCLUDE_START "ued:template:json" [0-] --><div class="plugin_include_content plugin_include__ued:template:json">
+
+<h4 id="typeimages">type:images</h4>
+<div class="level4">
+
+<p>
+<em class="u">config：</em>
+</p>
+<ul>
+<li class="level1"><div class="li"> width：图片宽度</div>
+</li>
+<li class="level1"><div class="li"> height：图片高度</div>
+</li>
+<li class="level1"><div class="li"> forcesize：强制高宽（所有上传图片都会被压缩</div>
+</li>
+<li class="level1"><div class="li"> limit：图片数量</div>
+</li>
+</ul>
+
+<p>
+json文件内容为：
+</p>
+<dl class="file">
+<dt><a href="/doku.php?do=export_code&amp;id=ued:template:mindex&amp;codeblock=13" title="下载片段" class="mediafile mf_json">index.json</a></dt>
+<dd><pre class="code file javascript"><span class="br0">&#123;</span>
+	<span class="st0">&quot;slidepics&quot;</span><span class="sy0">:</span> <span class="br0">&#123;</span>
+		<span class="st0">&quot;value&quot;</span><span class="sy0">:</span> <span class="br0">&#91;</span><span class="br0">&#123;</span>
+			<span class="st0">&quot;title&quot;</span><span class="sy0">:</span> <span class="st0">&quot;测试图1&quot;</span><span class="sy0">,</span>
+			<span class="st0">&quot;image&quot;</span><span class="sy0">:</span> <span class="st0">&quot;http://tb2.bdstatic.com/tb/static-common/img/search_logo_big_282cef2.gif&quot;</span><span class="sy0">,</span>
+			<span class="st0">&quot;link&quot;</span><span class="sy0">:</span> <span class="st0">&quot;http://www.baidu.com&quot;</span>
+		<span class="br0">&#125;</span><span class="sy0">,</span> <span class="br0">&#123;</span>
+			<span class="st0">&quot;title&quot;</span><span class="sy0">:</span> <span class="st0">&quot;测试图2&quot;</span><span class="sy0">,</span>
+			<span class="st0">&quot;image&quot;</span><span class="sy0">:</span> <span class="st0">&quot;http://img0.bdstatic.com/static/common/widget/search_box_search/logo/logo_3b6de4c.png&quot;</span><span class="sy0">,</span>
+			<span class="st0">&quot;link&quot;</span><span class="sy0">:</span> <span class="st0">&quot;http://www.baidu.com&quot;</span>
+		<span class="br0">&#125;</span><span class="br0">&#93;</span><span class="sy0">,</span>
+		<span class="st0">&quot;description&quot;</span><span class="sy0">:</span> <span class="st0">&quot;大轮滚图&quot;</span><span class="sy0">,</span>
+		<span class="st0">&quot;type&quot;</span><span class="sy0">:</span> <span class="st0">&quot;images&quot;</span><span class="sy0">,</span>
+		<span class="st0">&quot;config&quot;</span><span class="sy0">:</span> <span class="br0">&#123;</span>
+			<span class="st0">&quot;width&quot;</span><span class="sy0">:</span> <span class="nu0">950</span><span class="sy0">,</span>
+			<span class="st0">&quot;height&quot;</span><span class="sy0">:</span> <span class="nu0">500</span><span class="sy0">,</span>
+			<span class="st0">&quot;forcesize&quot;</span><span class="sy0">:</span> <span class="st0">&quot;true&quot;</span><span class="sy0">,</span>
+			<span class="st0">&quot;limit&quot;</span><span class="sy0">:</span> <span class="nu0">4</span>
+		<span class="br0">&#125;</span>
+	<span class="br0">&#125;</span>
+<span class="br0">&#125;</span></pre>
+</dd></dl>
+
+<p>
+config配置中limit为可选项。
+</p>
+<dl class="file">
+<dt><a href="/doku.php?do=export_code&amp;id=ued:template:mindex&amp;codeblock=14" title="下载片段" class="mediafile mf_html">index.html</a></dt>
+<dd><pre class="code file html4strict"><span class="sc-1">&lt;!-- 轮滚图 --&gt;</span>
+<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/ul.html"><span class="kw2">ul</span></a> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;clearfix&quot;</span>&gt;</span>
+	{foreach item=slidepic from=$index.slidepics}
+	<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/li.html"><span class="kw2">li</span></a> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;fl&quot;</span>&gt;&lt;<a target="_blank" href="http://december.com/html/4/element/a.html"><span class="kw2">a</span></a> <span class="kw3">href</span><span class="sy0">=</span><span class="st0">&quot;{$slidepic.link}&quot;</span> <span class="kw3">target</span><span class="sy0">=</span><span class="st0">&quot;_blank&quot;</span>&gt;&lt;<a target="_blank" href="http://december.com/html/4/element/img.html"><span class="kw2">img</span></a> <span class="kw3">src</span><span class="sy0">=</span><span class="st0">&quot;{$slidepic.image}&quot;</span> <span class="kw3">alt</span><span class="sy0">=</span><span class="st0">&quot;{$slidepic.title}&quot;</span> <span class="sy0">/</span>&gt;&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/a.html"><span class="kw2">a</span></a>&gt;&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/li.html"><span class="kw2">li</span></a>&gt;</span>
+	{/foreach}
+<span class="sc2">&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/ul.html"><span class="kw2">ul</span></a>&gt;</span>
+<span class="sc-1">&lt;!-- 输出：</span>
+<span class="sc-1">&lt;ul class=&quot;clearfix&quot;&gt;</span>
+<span class="sc-1">	&lt;li class=&quot;fl&quot;&gt;&lt;a href=&quot;http://www.baidu.com&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;http://tb2.bdstatic.com/tb/static-common/img/search_logo_big_282cef2.gif&quot; alt=&quot;测试图1&quot;&gt;&lt;/a&gt;&lt;/li&gt;</span>
+<span class="sc-1">	&lt;li class=&quot;fl&quot;&gt;&lt;a href=&quot;http://www.baidu.com&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;http://img0.bdstatic.com/static/common/widget/search_box_search/logo/logo_3b6de4c.png&quot; alt=&quot;测试图2&quot;&gt;&lt;/a&gt;&lt;/li&gt;</span>
+<span class="sc-1">&lt;/ul&gt;</span>
+<span class="sc-1">--&gt;</span></pre>
+</dd></dl>
+
+<p>
+数据变量说明：
+</p>
+<ul>
+<li class="level1"><div class="li"> {$index.slidepics[0].title} 轮滚图图片标题</div>
+</li>
+<li class="level1"><div class="li"> {$index.slidepics[0].image} 轮滚图图片地址</div>
+</li>
+<li class="level1"><div class="li"> {$index.slidepics[0].link} 轮滚图图片链接</div>
+</li>
+<li class="level1"><div class="li"> {$index.slidepics[0].description} 轮滚图图片描述（可选，需定义<sup><a href="#fn__1" id="fnt__1" class="fn_top">1)</a></sup>）</div>
+</li>
+</ul>
+
+</div>
+<div class="inclmeta level4">
+	<a href="/doku.php?id=ued:template:json#typeimages" class="wikilink1 permalink" title="ued:template:json#typeimages" rel="bookmark">type:images</a>
+	&middot; <abbr class="published" title="2016-10-24T06:38:01Z">2016/10/24 06:38</abbr>
+</div>
+<!-- EDIT33 PLUGIN_INCLUDE_END "ued:template:json" [0-] --></div>
+<div class="level3">
+
+</div>
+<!-- EDIT31 SECTION "轮滚图定义方法" [9959-10177] -->
+<h3 class="sectionedit34" id="底部导航定义方法">底部导航定义方法</h3>
+<div class="level3">
+
+</div>
+
+<h4 id="方法一_推荐">方法一（推荐）</h4>
+<div class="level4">
+
+<p>
+在<a href="/doku.php?id=ued:template:config#config_模板配置部分" class="wikilink1" title="ued:template:config">config.ini</a>文件的配置部分写入 <code>QuickBar=#AAA,#CCC,#FFF</code> 类似代码来定义导航的颜色。<br/>
+
+即可<strong>自动生成</strong>底部导航，无需任何代码或样式定义！
+</p>
+
+</div>
+
+<h4 id="方法二">方法二</h4>
+<div class="level4">
+
+<p>
+参见json文件中<a href="/doku.php?id=ued:template:json#typequickbar" class="wikilink1" title="ued:template:json">type:quickbar</a>的变量类型！
+</p>
+
+</div>
+<!-- EDIT34 SECTION "底部导航定义方法" [10178-] --><div class="footnotes">
+<div class="fn"><sup><a href="#fnt__1" id="fn__1" class="fn_bot">1)</a></sup> 
+
+<dl class="file">
+<dt><a href="/doku.php?do=export_code&amp;id=ued:template:mindex&amp;codeblock=15" title="下载片段" class="mediafile mf_json">index.json</a></dt>
+<dd><pre class="code file javascript"><span class="br0">&#123;</span>
+	<span class="st0">&quot;slidepics&quot;</span><span class="sy0">:</span> <span class="br0">&#123;</span>
+		<span class="st0">&quot;value&quot;</span><span class="sy0">:</span> <span class="br0">&#91;</span><span class="br0">&#123;</span>
+			<span class="st0">&quot;title&quot;</span><span class="sy0">:</span> <span class="st0">&quot;测试图1&quot;</span><span class="sy0">,</span>
+			<span class="st0">&quot;image&quot;</span><span class="sy0">:</span> <span class="st0">&quot;http://tb2.bdstatic.com/tb/static-common/img/search_logo_big_282cef2.gif&quot;</span><span class="sy0">,</span>
+			<span class="st0">&quot;link&quot;</span><span class="sy0">:</span> <span class="st0">&quot;http://www.baidu.com&quot;</span><span class="sy0">,</span>
+			<span class="st0">&quot;description&quot;</span><span class="sy0">:</span> <span class="st0">&quot;这是图片的一大段描述<span class="es0">\r</span><span class="es0">\n</span>可以换行。。。&quot;</span>
+		<span class="br0">&#125;</span><span class="sy0">,</span> <span class="br0">&#123;</span>
+			<span class="st0">&quot;title&quot;</span><span class="sy0">:</span> <span class="st0">&quot;测试图2&quot;</span><span class="sy0">,</span>
+			<span class="st0">&quot;image&quot;</span><span class="sy0">:</span> <span class="st0">&quot;http://img0.bdstatic.com/static/common/widget/search_box_search/logo/logo_3b6de4c.png&quot;</span><span class="sy0">,</span>
+			<span class="st0">&quot;link&quot;</span><span class="sy0">:</span> <span class="st0">&quot;http://www.baidu.com&quot;</span><span class="sy0">,</span>
+			<span class="st0">&quot;description&quot;</span><span class="sy0">:</span> <span class="st0">&quot;这是图片的一大段描述<span class="es0">\r</span><span class="es0">\n</span>可以换行。。。&quot;</span>
+		<span class="br0">&#125;</span><span class="br0">&#93;</span><span class="sy0">,</span>
+		<span class="st0">&quot;description&quot;</span><span class="sy0">:</span> <span class="st0">&quot;大轮滚图&quot;</span><span class="sy0">,</span>
+		<span class="st0">&quot;type&quot;</span><span class="sy0">:</span> <span class="st0">&quot;images&quot;</span><span class="sy0">,</span>
+		<span class="st0">&quot;config&quot;</span><span class="sy0">:</span> <span class="br0">&#123;</span>
+			<span class="st0">&quot;width&quot;</span><span class="sy0">:</span> <span class="nu0">950</span><span class="sy0">,</span>
+			<span class="st0">&quot;height&quot;</span><span class="sy0">:</span> <span class="nu0">500</span><span class="sy0">,</span>
+			<span class="st0">&quot;limit&quot;</span><span class="sy0">:</span> <span class="nu0">4</span>
+		<span class="br0">&#125;</span>
+	<span class="br0">&#125;</span>
+<span class="br0">&#125;</span></pre>
+</dd></dl>
+
+</div>
+</div>

@@ -1,0 +1,114 @@
+
+<h1 class="sectionedit1" id="问题">问题</h1>
+<div class="level1">
+
+<p>
+<a href="/wiki/lib/exe/fetch.php?media=zhida:%E5%9C%A8%E7%BA%BF%E7%99%BB%E8%AE%B0%E9%A2%84%E7%BA%A6%E7%BA%BF%E4%B8%8B%E4%BA%A4%E6%98%93%E8%AE%A2%E5%8D%95api_v1.0.0_.docx" class="media mediafile mf_docx" title="zhida:在线登记预约线下交易订单api_v1.0.0_.docx (51 KB)">在线登记预约线下交易订单api_v1.0.0_.docx</a>
+模拟订单支付，参考文档（在线登记预约线下交易订单api_v1.0.0_.docx）
+</p>
+
+<p>
+用e帅的账号拿到的授权值，用oauth拿到的值,有更新的话就会过期。  具体授权方式指请移步 <a href="http://developer.baidu.com/wiki/index.php?title=docs/oauth/authorization" class="urlextern" target="_blank" title="http://developer.baidu.com/wiki/index.php?title=docs/oauth/authorization"  rel="nofollow">http://developer.baidu.com/wiki/index.php?title=docs/oauth/authorization</a>，可看我整理文档 <a href="/wiki/lib/exe/fetch.php?media=zhida:%E7%99%BE%E5%BA%A6oauth%E8%B5%84%E6%96%99.docx" class="media mediafile mf_docx" title="zhida:百度oauth资料.docx (500.3 KB)">百度oauth资料.docx</a>
+</p>
+<pre class="code">{&quot;expires_in&quot;:2592000,&quot;refresh_token&quot;:&quot;22.ab726715114cb04a14cf80e25cdf18fc.315360000.1734243449.4077135496-3798147&quot;,&quot;access_token&quot;:&quot;21.b7da8a5f9ebc622f2d4cd195755ded7f.2592000.1421475449.4077135496-3798147&quot;,&quot;session_secret&quot;:&quot;3a404b6a328ab62058a4b9b8b40d9cba&quot;,&quot;session_key&quot;:&quot;9mnRJqYCfsJx66Ei8YMsXWewxZEprJBkGEk7wZCthzUPo+\/qWuEjY4aFkzvCSM+TJScxRFX0m3UOocGdeEXeNegSn47Bset5xA==&quot;,&quot;scope&quot;:&quot;basic&quot;}</pre>
+
+<p>
+订单提交代码,模拟提交订单
+</p>
+<pre class="code">    //订单接入接口
+      $url  = &#039;http://m.baidu.com/lightapp/pay/appoint/offline/add&#039;;      
+   $params = array(
+      &#039;sp_no&#039; =&gt; 3798147,
+      &#039;order_no&#039; =&gt; &#039;9002342dfdfassaxq&#039;,
+      &#039;goods_name&#039; =&gt; &#039;订单a名称&#039;,
+      &#039;return_url&#039; =&gt; &#039;http://wx.dn160.com.cn/oauth1.php&#039;,
+      &#039;detail&#039; =&gt; &#039;[{&quot;item_id&quot;:&quot;721745&quot;,&quot;name&quot;:&quot;\u4e34\u65f6\u4fdd\u59c6\u670d\u52a1&quot;,&quot;desc&quot;:&quot;50\u5143\/\u5c0f\u65f6&quot;,&quot;price&quot;:60,&quot;amount&quot;:1,&quot;url&quot;:&quot;http:\/\/li.test.com\/&quot;}]&#039;,
+      &#039;order_source_url&#039; =&gt;&#039;http://wx.dn160.com.cn/oauth1.php&#039;,
+      &#039;customer_name&#039; =&gt; &#039;客户名称&#039;,
+      &#039;customer_mobile&#039; =&gt; &#039;1860000000&#039;,
+      &#039;customer_address&#039; =&gt; &#039;北京市北京市海淀区上地东路20号&#039;,
+      &#039;appoint_time&#039;=&gt;1418874147,
+      &#039;ps&#039;=&gt;&#039;&#039;
+  );
+     //sign加密数组   
+         $sign =getSignature($params,&#039;3a404b6a328ab62058a4b9b8b40d9cba&#039;);    
+   $dataa = &#039;sp_no=3798147&amp;order_no=9002342dfdfassaxq&amp;goods_name=订单a名称&amp;order_source_url=http://wx.dn160.com.cn/oauth1.php&amp;return_url=http://wx.dn160.com.cn/oauth1.php&amp;customer_name=客户名称&amp;customer_mobile=1860000000&amp;customer_address=北京市北京市海淀区上地东路20号&amp;detail=[{&quot;item_id&quot;:&quot;721745&quot;,&quot;cat_id&quot;:0,&quot;name&quot;:&quot;\u4e34\u65f6\u4fdd\u59c6\u670d\u52a1&quot;,&quot;desc&quot;:&quot;50\u5143\/\u5c0f\u65f6&quot;,&quot;price&quot;:60,&quot;amount&quot;:1,&quot;url&quot;:&quot;http:\/\/li.test.com\/&quot;}]&amp;appoint_time=1418874147&amp;ps=&amp;sign=&#039;.$sign;
+	$json     = json_decode(curlGet($url, &#039;post&#039;, $dataa));</pre>
+
+<p>
+var_dump($json);die;
+</p>
+<pre class="code">   //获取签名
+/**
+* 签名生成算法
+* @param  array  $params API调用的请求参数集合的关联数组，不包含sign参数
+* @param  string $secret 签名的密钥即获取access token时返回的session secret
+* @return string 返回参数签名值
+*/</pre>
+
+<p>
+ function getSignature($params, $secret)
+ {
+</p>
+<pre class="code">  $str = &#039;&#039;;  //待签名字符串
+  //先将参数以其参数名的字典序升序进行排序
+  ksort($params);
+  //遍历排序后的参数数组中的每一个key/value对
+  foreach ($params as $k =&gt; $v) {
+      //为key/value对生成一个key=value格式的字符串，并拼接到待签名字符串后面
+      $str .= &quot;$k=$v&quot;;
+  }
+  //将签名密钥拼接到签名字符串最后面
+  $str .= $secret;
+  //通过md5算法为签名字符串生成一个md5签名，该签名就是我们要追加的sign参数值
+  return md5($str);</pre>
+
+<p>
+ }
+</p>
+
+<p>
+function curlGet($url, $method = &#039;get&#039;, $data = &#039;&#039;)
+</p>
+<pre class="code">{
+	$ch     = curl_init();
+	$header = &quot;Accept-Charset: utf-8&quot;;
+	curl_setopt($ch, CURLOPT_URL, $url);
+	curl_setopt($ch, CURLOPT_CUSTOMREQUEST, strtoupper($method));
+	curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, FALSE);
+	curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, FALSE);
+	curl_setopt($curl, CURLOPT_HTTPHEADER, $header);
+	curl_setopt($ch, CURLOPT_USERAGENT, &#039;Mozilla/5.0 (compatible; MSIE 5.01; Windows NT 5.0)&#039;);
+	curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
+	curl_setopt($ch, CURLOPT_AUTOREFERER, 1);
+	curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
+	curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+	$temp = curl_exec($ch);
+	return $temp;
+}</pre>
+
+<p>
+ 提交订单的时候出现这个错误。。
+object(stdClass)#1 (2) {
+</p>
+<pre class="code">[&quot;error_code&quot;]=&gt;
+int(108709)
+[&quot;error_msg&quot;]=&gt;
+string(8) &quot;db error&quot;</pre>
+
+<p>
+}
+</p>
+
+</div>
+<!-- EDIT1 SECTION "问题" [1-4078] -->
+<h3 class="sectionedit2" id="根据官网的资料_我觉得订单管理的话_需要开通支付能力">根据官网的资料，我觉得订单管理的话，需要开通支付能力</h3>
+<div class="level3">
+
+</div>
+<!-- EDIT2 SECTION "根据官网的资料，我觉得订单管理的话，需要开通支付能力" [4079-4168] -->
+<h1 class="sectionedit3" id="解决方案">解决方案</h1>
+<div class="level1">
+
+</div>
+<!-- EDIT3 SECTION "解决方案" [4169-] -->

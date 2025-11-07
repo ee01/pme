@@ -1,0 +1,51 @@
+<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/body.html"><span class="kw2">body</span></a>&gt;</span>
+&nbsp;
+<span class="sc-1">&lt;!-- 开始 Loading... --&gt;</span>
+<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/script.html"><span class="kw2">script</span></a> <span class="kw3">type</span><span class="sy0">=</span><span class="st0">&quot;text/javascript&quot;</span> <span class="kw3">src</span><span class="sy0">=</span><span class="st0">&quot;http://common.mn.sina.com.cn/public/resource/lib/jquery.core.js&quot;</span>&gt;&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/script.html"><span class="kw2">script</span></a>&gt;</span>
+<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/script.html"><span class="kw2">script</span></a> <span class="kw3">type</span><span class="sy0">=</span><span class="st0">&quot;text/javascript&quot;</span> <span class="kw3">src</span><span class="sy0">=</span><span class="st0">&quot;http://common.mn.sina.com.cn/public/resource/lib/jquery.loader.js&quot;</span>&gt;&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/script.html"><span class="kw2">script</span></a>&gt;</span>
+<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/script.html"><span class="kw2">script</span></a> <span class="kw3">type</span><span class="sy0">=</span><span class="st0">&quot;text/javascript&quot;</span>&gt;</span>
+// 载入进度
+var loads = [
+	['images/make-title.png', true],
+	['images/flipcard-title.jpg', true],
+	['images/people-title.jpg', true],
+	['images/top.jpg', true]
+];
+$('<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/div.html"><span class="kw2">div</span></a>&gt;&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/div.html"><span class="kw2">div</span></a>&gt;</span>').attr('id', 'preLoadGUIBeta4-1').appendTo('body');	// 阻止原有Loader
+$('<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/div.html"><span class="kw2">div</span></a>&gt;&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/div.html"><span class="kw2">div</span></a>&gt;</span>').attr({'id':'preLoadGUIBeta4-1loader', 'rel':loads.length, 'loaded':0}).appendTo('body');	// 触发callbackEnd
+$('<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/div.html"><span class="kw2">div</span></a>&gt;&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/div.html"><span class="kw2">div</span></a>&gt;</span>').attr('id', 'preLoad').css({
+	width: '100%',
+	height: '100%',
+	backgroundColor: '#BBB',
+	zIndex: 99999999,
+	position: 'fixed',
+	opacity: 1,
+	left: 0,
+	top: 0
+}).appendTo('body');
+$('<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/div.html"><span class="kw2">div</span></a>&gt;&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/div.html"><span class="kw2">div</span></a>&gt;</span>').attr({'id':'preLoader', 'rel':loads.length, 'loaded':0}).appendTo('body').css({
+	left: ($(window).width() - $('#preLoader').width())/2,
+	top: ($(window).height() - $('#preLoader').height())/3
+}).append('<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/div.html"><span class="kw2">div</span></a> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;loader&quot;</span>&gt;&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/div.html"><span class="kw2">div</span></a>&gt;</span>').append('<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/div.html"><span class="kw2">div</span></a> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;loader-swf&quot;</span>&gt;&lt;<a target="_blank" href="http://december.com/html/4/element/object.html"><span class="kw2">object</span></a> <span class="kw3">width</span><span class="sy0">=</span><span class="st0">&quot;100%&quot;</span> <span class="kw3">height</span><span class="sy0">=</span><span class="st0">&quot;100%&quot;</span> <span class="kw3">classid</span><span class="sy0">=</span><span class="st0">&quot;clsid:D27CDB6E-AE6D-11cf-96B8-444553540000&quot;</span> <span class="kw3">codebase</span><span class="sy0">=</span><span class="st0">&quot;http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,29,0&quot;</span> <span class="kw3">width</span><span class="sy0">=</span><span class="st0">&quot;680&quot;</span> <span class="kw3">height</span><span class="sy0">=</span><span class="st0">&quot;150&quot;</span>&gt;</span>\n\
+													<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/param.html"><span class="kw2">param</span></a> <span class="kw3">name</span><span class="sy0">=</span><span class="st0">&quot;movie&quot;</span> <span class="kw3">value</span><span class="sy0">=</span><span class="st0">&quot;images/bubble.swf&quot;</span>&gt;</span>\n\
+													<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/param.html"><span class="kw2">param</span></a> <span class="kw3">name</span><span class="sy0">=</span><span class="st0">&quot;menu&quot;</span> <span class="kw3">value</span><span class="sy0">=</span><span class="st0">&quot;false&quot;</span>&gt;</span>\n\
+													<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/param.html"><span class="kw2">param</span></a> <span class="kw3">name</span><span class="sy0">=</span><span class="st0">&quot;quality&quot;</span> <span class="kw3">value</span><span class="sy0">=</span><span class="st0">&quot;high&quot;</span>&gt;</span>\n\
+													<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/param.html"><span class="kw2">param</span></a> <span class="kw3">name</span><span class="sy0">=</span><span class="st0">&quot;wmode&quot;</span> <span class="kw3">value</span><span class="sy0">=</span><span class="st0">&quot;transparent&quot;</span>&gt;</span>\n\
+													<span class="sc2">&lt;embed <span class="kw3">src</span><span class="sy0">=</span><span class="st0">&quot;images/bubble.swf&quot;</span> <span class="kw3">width</span><span class="sy0">=</span><span class="st0">&quot;100%&quot;</span> <span class="kw3">height</span><span class="sy0">=</span><span class="st0">&quot;100%&quot;</span> quality<span class="sy0">=</span><span class="st0">&quot;high&quot;</span> wmode<span class="sy0">=</span><span class="st0">&quot;transparent&quot;</span> pluginspage<span class="sy0">=</span><span class="st0">&quot;http://www.macromedia.com/go/getflashplayer&quot;</span> <span class="kw3">type</span><span class="sy0">=</span><span class="st0">&quot;application/x-shockwave-flash&quot;</span>&gt;&lt;<span class="sy0">/</span>embed&gt;</span>\n\
+												<span class="sc2">&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/object.html"><span class="kw2">object</span></a>&gt;&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/div.html"><span class="kw2">div</span></a>&gt;</span>');
+$.preLoadGUI({
+	load: loads,
+	callbackEach: function(item) {
+		var loaded = parseInt($('#preLoader').attr('loaded')) || 0,
+			rel = parseInt($('#preLoader').attr('rel'));
+		$('#preLoader').attr('loaded', ++loaded);
+		$('#preLoader .loader').height(loaded / rel * $('#preLoader').height());
+	},
+	callbackEnd: function() {
+		$('#preLoad, #preLoader').fadeOut();
+	}
+});
+<span class="sc2">&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/script.html"><span class="kw2">script</span></a>&gt;</span>
+<span class="sc-1">&lt;!-- 结束 Loading... --&gt;</span>
+&nbsp;
+$G{厦门站频道顶部导航共用}

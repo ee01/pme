@@ -1,0 +1,4 @@
+<span class="sc-1">&lt;!-- 单页内容 --&gt;</span>
+<span class="sc2">&lt;article&gt;</span>
+	{$list.content|unescape:&quot;html&quot;}
+<span class="sc2">&lt;<span class="sy0">/</span>article&gt;</span>

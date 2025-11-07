@@ -1,0 +1,92 @@
+a:6:{i:0;a:3:{i:0;s:14:"document_start";i:1;a:0:{}i:2;i:0;}i:1;a:3:{i:0;s:6:"header";i:1;a:3:{i:0;s:21:"图片自适应总结";i:1;i:1;i:2;i:1;}i:2;i:1;}i:2;a:3:{i:0;s:12:"section_open";i:1;a:1:{i:0;i:1;}i:2;i:1;}i:3;a:3:{i:0;s:4:"file";i:1;a:3:{i:0;s:2146:"
+***********************************************************************/
+/*logo图片
+**给外层的h1定一个最大的宽高
+**比如宽200px，高100px
+*/
+h1.logo{
+	position: relative;/*这个定位一定要有的*/
+	width: 200px;
+	height: 100px;
+	overflow: hidden;/*设置超出隐藏*/
+}
+h1.logo a img{
+	/*让图片垂直居中*/
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	max-height: 100%;
+	max-width: 100%;
+	margin: auto 0;
+}
+/************************************************************************/
+
+
+/*list-image图片列表
+**使用display:inline-block布局,定宽不定高
+**因为图片之间会有间隙，父元素要设置font-size: 0;
+*/
+ul{
+	position: relative;
+	font-size: 0;
+}
+ul li{
+	width: 25%;
+	display: inline-block;
+}
+ul li a img{
+	width: 100%;
+	height: auto;
+}
+/************************************************************************/
+
+
+
+/*list-imagetext图文列表
+**图文列表的图片建议定高，宽度自适应
+*/
+.imgwrap{
+	position: relative;
+	float: left;
+	margin-right: 10px;
+	height: 150px;
+}
+.imgwrap img{
+	height: 100%;
+	width: auto;
+}
+
+/*文字不需要定宽，但是高度要限制*/
+.imgtext h2{
+	height: 24px;
+	line-height: 24px;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+.imgtext div.txt{
+	line-height: 18px;
+	height: 54px;/*18*3=54*/
+	overflow: hidden;
+	/*文本超出省略号*/
+	/*Weird WebKit Flexbox Way*/
+	display: -webkit-box;
+	-webkit-line-clamp: $line;
+	-webkit-box-orient: vertical;
+	/*Opera Overflow Way */
+	text-overflow: -o-ellipsis-lastline; 
+	/*文本超出省略的兼容性目前不是很好，pc的可以使用js来做
+	**这里推荐两个插件Clamp.js（https://github.com/josephschmitt/Clamp.js）
+	**和jQuery插件-jQuery.dotdotdot（https://github.com/BeSite/jQuery.dotdotdot）
+	*/
+}
+/************************************************************************/
+
+
+/*另外，轮播图的插件建议不要使用那种定死宽高的，
+这样使用起来不灵活，图片可能会变形*/
+/*我们的原则是尽量自适应，能不定死宽高的就不要定死*/
+
+/*暂时先到这里，后期不定时更新，有问题欢迎一起讨论
+";i:1;s:3:"css";i:2;s:25:"模板图片自适应.css";}i:2;i:43;}i:4;a:3:{i:0;s:13:"section_close";i:1;a:0:{}i:2;i:2227;}i:5;a:3:{i:0;s:12:"document_end";i:1;a:0:{}i:2;i:2227;}}

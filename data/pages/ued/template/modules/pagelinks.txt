@@ -1,0 +1,15 @@
+====== 列表页翻页 ======
+
+{{:ued:template:modules:pagelinks.rar|点此下载模块：_pagelinks.rar}}
+
+===== 完全版本 =====
+
+_pagelinks.html
+
+===== 只有上一页下一页的版本 =====
+
+_pagelinks_simple.html
+
+===== “加载更多”无限按钮 =====
+
+_pagelinks_ajax.html

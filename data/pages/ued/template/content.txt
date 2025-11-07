@@ -1,0 +1,5 @@
+====== 变量语法查询：content-news.html ======
+
+{{page>ued:template:global#article_文章页数据&noheader}}
+{{page>ued:template:global#posnavs_面包屑导航}}
+{{page>ued:template:global#related_相关阅读}}

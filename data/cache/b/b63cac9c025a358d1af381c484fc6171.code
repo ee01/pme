@@ -1,0 +1,11 @@
+<span class="br0">&#123;</span>
+<span class="st0">&quot;logo&quot;</span><span class="sy0">:</span><span class="br0">&#123;</span>
+		<span class="st0">&quot;value&quot;</span><span class="sy0">:</span><span class="br0">&#123;</span>
+			<span class="st0">&quot;title&quot;</span><span class="sy0">:</span> <span class="st0">&quot;测试图1&quot;</span><span class="sy0">,</span>
+			<span class="st0">&quot;image&quot;</span><span class="sy0">:</span> <span class="st0">&quot;images/logo-home.png&quot;</span><span class="sy0">,</span>
+			<span class="st0">&quot;link&quot;</span><span class="sy0">:</span> <span class="st0">&quot;http://tieba.baidu.com/&quot;</span>
+		<span class="br0">&#125;</span><span class="sy0">,</span>
+		<span class="st0">&quot;description&quot;</span><span class="sy0">:</span> <span class="st0">&quot;首页大图&quot;</span><span class="sy0">,</span>
+		<span class="st0">&quot;type&quot;</span><span class="sy0">:</span> <span class="st0">&quot;image&quot;</span>
+	<span class="br0">&#125;</span>
+<span class="br0">&#125;</span>

@@ -1,0 +1,20 @@
+a:2:{s:7:"current";a:10:{s:4:"date";a:2:{s:7:"created";i:1433176123;s:8:"modified";i:1433686044;}s:7:"creator";s:9:"邱沼懿";s:4:"user";s:1:"e";s:11:"last_change";b:0;s:11:"contributor";a:1:{s:1:"e";s:9:"邱沼懿";}s:5:"title";s:16:"新浪厦门WIKI";s:11:"description";a:2:{s:15:"tableofcontents";a:11:{i:0;a:4:{s:3:"hid";s:16:"新浪厦门wiki";s:5:"title";s:16:"新浪厦门WIKI";s:4:"type";s:2:"ul";s:5:"level";i:1;}i:1;a:4:{s:3:"hid";s:9:"插件库";s:5:"title";s:9:"插件库";s:4:"type";s:2:"ul";s:5:"level";i:2;}i:2;a:4:{s:3:"hid";s:9:"微博类";s:5:"title";s:9:"微博类";s:4:"type";s:2:"ul";s:5:"level";i:2;}i:3;a:4:{s:3:"hid";s:9:"其他类";s:5:"title";s:9:"其他类";s:4:"type";s:2:"ul";s:5:"level";i:2;}i:4;a:4:{s:3:"hid";s:15:"css公共资源";s:5:"title";s:15:"CSS公共资源";s:4:"type";s:2:"ul";s:5:"level";i:2;}i:5;a:4:{s:3:"hid";s:14:"js公共资源";s:5:"title";s:14:"JS公共资源";s:4:"type";s:2:"ul";s:5:"level";i:2;}i:6;a:4:{s:3:"hid";s:9:"弹窗类";s:5:"title";s:9:"弹窗类";s:4:"type";s:2:"ul";s:5:"level";i:3;}i:7;a:4:{s:3:"hid";s:15:"消息提示类";s:5:"title";s:15:"消息提示类";s:4:"type";s:2:"ul";s:5:"level";i:3;}i:8;a:4:{s:3:"hid";s:15:"图片展示类";s:5:"title";s:15:"图片展示类";s:4:"type";s:2:"ul";s:5:"level";i:3;}i:9;a:4:{s:3:"hid";s:15:"提交上传类";s:5:"title";s:15:"提交上传类";s:4:"type";s:2:"ul";s:5:"level";i:3;}i:10;a:4:{s:3:"hid";s:10:"其他类1";s:5:"title";s:9:"其他类";s:4:"type";s:2:"ul";s:5:"level";i:3;}}s:8:"abstract";s:513:"新浪厦门WIKI
+
+插件库
+
+	*  jquery.cashout.js 登登登 水果机抽奖插件
+	*  jquery.roulette.js 转盘亮灯抽奖插件
+	*  指针转动转盘抽奖
+
+微博类
+
+	*  登录检测 及返回个人信息
+	*  分享按钮（无需加载js库）
+	*  关注按钮（无需加载js库）
+	*  微博热议（微博展示iframe）
+	*  微博调用封装
+
+其他类
+
+	*  minnan.css 闽南共用样式，包括DFZ登陆弹窗样式、mask遮罩样式等
+	*  ip 获取当前IP地址及区域名及网络运营商…";}s:8:"relation";a:3:{s:10:"references";a:26:{s:12:"sina:cashout";b:1;s:13:"sina:roulette";b:1;s:15:"sina:checklogin";b:1;s:10:"sina:share";b:1;s:11:"sina:follow";b:1;s:10:"sina:topic";b:1;s:7:"sina:wb";b:1;s:11:"sina:minnan";b:0;s:7:"sina:ip";b:1;s:12:"ued:resource";b:1;s:19:"ued:resource:global";b:1;s:21:"ued:resource:css3pack";b:1;s:24:"ued:resource:imgautosize";b:1;s:16:"ued:resource:box";b:1;s:19:"ued:resource:dialog";b:1;s:17:"ued:resource:mask";b:1;s:24:"ued:resource:smallslider";b:1;s:26:"ued:resource:jcarousellite";b:1;s:21:"ued:resource:slidesjs";b:1;s:22:"ued:resource:crossajax";b:1;s:22:"ued:resource:uploadify";b:1;s:20:"ued:resource:loading";b:1;s:23:"ued:resource:pagination";b:1;s:23:"ued:resource:spasticnav";b:1;s:20:"ued:resource:jscroll";b:1;s:19:"ued:resource:killie";b:0;}s:7:"haspart";a:1:{s:12:"ued:resource";b:1;}s:10:"firstimage";s:0:"";}s:14:"plugin_include";a:4:{s:12:"instructions";a:1:{i:0;a:4:{s:4:"mode";s:4:"page";s:4:"page";s:12:"ued:resource";s:4:"sect";N;s:9:"parent_id";s:4:"sina";}}s:5:"pages";a:1:{i:0;a:3:{s:2:"id";s:12:"ued:resource";s:6:"exists";b:1;s:9:"parent_id";s:4:"sina";}}s:15:"include_content";b:0;s:6:"secids";a:1:{s:12:"ued:resource";a:2:{s:3:"hid";s:29:"plugin_include__ued__resource";s:3:"pos";i:752;}}}s:8:"internal";a:2:{s:5:"cache";b:1;s:3:"toc";b:1;}}s:10:"persistent";a:5:{s:4:"date";a:2:{s:7:"created";i:1433176123;s:8:"modified";i:1433686044;}s:7:"creator";s:9:"邱沼懿";s:4:"user";s:1:"e";s:11:"last_change";b:0;s:11:"contributor";a:1:{s:1:"e";s:9:"邱沼懿";}}}

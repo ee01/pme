@@ -1,0 +1,55 @@
+
+<h1 class="sectionedit1" id="统一平台模板开发常见问题与注意事项">统一平台模板开发常见问题与注意事项</h1>
+<div class="level1">
+<ol>
+<li class="level1"><div class="li"> 模板中不要出现任何静态的文字，如<code>2015-01-28</code>。除非是一些<code>more</code><code>确定</code>之类按钮的名称。如需使用，请在json中定义或使用系统变量，参见：<a href="/doku.php?id=ued:templalte:json" class="wikilink2" title="ued:templalte:json" rel="nofollow">JSON格式与数据变量定义</a></div>
+</li>
+<li class="level1"><div class="li"> HTML文件中请勿包含任何JS代码，将其并入.js文件中调用</div>
+</li>
+<li class="level1"><div class="li"> 配置文件问题1、行业类型 2、颜色值 3、设计师 4、标签 5、logo尺寸配置。</div>
+</li>
+<li class="level1"><div class="li"> 网页中，尽量把内容做活，可以在后台更换内容。比如快捷导航，客户需要绑定栏目名称，如果有图标也会换相应的图标，所以图标要做后台可以上传。</div>
+</li>
+<li class="level1"><div class="li"> PC模板缩略图screenshot.jpg，尺寸宽度1050px,高度根据模板高度，不进行裁剪。手机模板缩略图宽度尺寸为640px,也就是说直接导首页psd的图片就可以。</div>
+</li>
+<li class="level1"><div class="li"> banner图不限制张数，配置文件要标注尺寸。通栏banner图，最大宽度要做1920px。</div>
+</li>
+<li class="level1"><div class="li"> 在JION文件中，列表不用设置limit。除非是navs，需要限制个数才用limit。（navs是新增类型，属于第二导航）</div>
+</li>
+<li class="level1"><div class="li"> 快捷导航（第二导航）直接用navs,不需要再json里面定义。</div>
+</li>
+<li class="level1"><div class="li"> 版权信息，全部由客服后台添加。前端不需要写版权信息，如“技术支持，人才网支持”由后台系统直接开关。前端人员需要根据设计版面调整样式。如颜色，及布局。</div>
+</li>
+<li class="level1"><div class="li"> 网页有涉及到图片，在json文件中，全部需要配置图片尺寸。如：栏目图片“nav_width，nav_height”,列表图片“width,height”</div>
+</li>
+<li class="level1"><div class="li"> 网页有涉及到图片，尽量做成图片自适应，只限制一个宽或者一个高，另一个限制其最大值，防止其比例失调，影响美观。并且图片的宽高尺寸全部由CSS控制。</div>
+</li>
+<li class="level1"><div class="li"> 首页和列表页有涉及到时间请用“pubtimestamp|date_format:&#039;%Y-%m-%d&#039;”，pubdate显示为2015-05-06 24:00:00，请根据设计需求来用。</div>
+</li>
+<li class="level1"><div class="li"> 整站中，务必不能出现文字显示出一半。</div>
+</li>
+<li class="level1"><div class="li"> 固定宽度高度，一定要记得超出隐藏，如：图片列表的标题，首页文章内容，编辑框等等。如果标题需要显示多行，要考虑布局美观。</div>
+</li>
+<li class="level1"><div class="li"> 导航一定要做出一级下来，并且要有鼠标经过效果、当前状态效果。</div>
+</li>
+<li class="level1"><div class="li"> 内页分类，要做四级，同样要标注经过效果、当前状态效果。</div>
+</li>
+<li class="level1"><div class="li"> 图片列表详细页，需要做单图和多图滚动2种。</div>
+</li>
+<li class="level1"><div class="li"> 列表页分页，需要标注当前页。</div>
+</li>
+<li class="level1"><div class="li"> 详细页放大功能，需要有这几个类名中的一个。focus,bd,slides,tempWrap,focusBox（单图多图都要做放大，属于记得类名）</div>
+</li>
+<li class="level1"><div class="li"> z-index尽量用到范围，100以内</div>
+</li>
+<li class="level1"><div class="li"> jq库用1.9.1版本，否则会冲突。</div>
+</li>
+<li class="level1"><div class="li"> 整站字体全部使用微软雅黑</div>
+</li>
+<li class="level1"><div class="li"> 不用MSClass.js框架，这个框架对iframe框架冲突。</div>
+</li>
+<li class="level1"><div class="li"> </div>
+</li>
+</ol>
+
+</div>

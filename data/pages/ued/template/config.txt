@@ -1,0 +1,192 @@
+====== INI文件的语法与使用 ======
+
+===== 格式规范 =====
+
+符合通用ini文件格式规范！
+
+===== 内容规范 =====
+
+==== [Template] 模板信息部分 ====
+  * Name：模板名称 
+  * Description：模板的简短介绍
+  * URL：模板介绍的网址
+  * Version：版本号
+
+==== [Config] 模板配置部分 ====
+  * Type：''PC模板''或者''手机模板''
+  * Category：模板的行业类别（**这个很重要！实时预览的示例数据源根据此项和不同**）
+  * Tags：模板的标签（多个标签以英文逗号'',''隔开）
+  * StyleColors：模板可选的颜色标识符（英文逗号'',''隔开。至少1个，如果有2个以上，必须引入[[ued:template:index#stylecolor_网站颜色|$stylecolor]]变量及创建对应css文件）
+  * LogoSize：LOGO的大小：''200*150''，如果强制定义高宽值应为：''200*150|forcesize''（默认不定义，代表LOGO自适应；如模板LOGO大小定死，须定义此项）
+  * EnableNavsData：启用$navs的data输出，默认0不输出，1代表仅第一级输出data，2代表前两级输出data，以此类推..
+  * EnableNavsStarData：启用$navs的stardata输出，默认0不输出，1代表仅第一级输出stardata，2代表前两级输出stardata，以此类推..
+  * EnablePagenavsData：启用$pagenavs的data输出，默认0不输出，1代表仅第一级输出data，2代表前两级输出data，以此类推..
+  * EnablePagenavsStarData：启用$pagenavs的stardata输出，默认0不输出，1代表仅第一级输出stardata，2代表前两级输出stardata，以此类推..
+  * List1ShowtypeTotal：文字列表的showtype样式总数（仅手机模板定义）若首页无文字列表输出的对应样式，则设为0
+  * List2ShowtypeTotal：图片列表的showtype样式总数（仅手机模板定义）若首页无图片列表输出的对应样式，则设为0
+  * List3ShowtypeTotal：图文列表的showtype样式总数（仅手机模板定义）若首页无图文列表输出的对应样式，则设为0
+  * List4ShowtypeTotal：内容单页的showtype样式总数（仅手机模板定义）若首页无内容单页输出的对应样式，则设为0
+  * List5ShowtypeTotal：留言板的showtype样式总数（仅手机模板定义）若首页无内容单页输出的对应样式，则设为0
+  * List6ShowtypeTotal：外链栏目的showtype样式总数（仅手机模板定义）若首页无内容单页输出的对应样式，则设为0
+  * List7ShowtypeTotal：微信栏目的showtype样式总数（仅手机模板定义）若首页无内容单页输出的对应样式，则设为0
+  * List8ShowtypeTotal：直达号栏目的showtype样式总数（仅手机模板定义）若首页无内容单页输出的对应样式，则设为0
+  * QuickBar：自定义底部导航开发。值为''custom''完全自定义导航代码；值为''#AAA,#BBB,#FFF,#CCC''为引用系统底部导航模块
+__例如：__\\
+手机模板首页只输出图文列表和图片列表的展现HTML，并且图片列表还有2种展现样式，则设置：
+  * List1ShowtypeTotal=0
+  * List2ShowtypeTotal=2
+  * List3ShowtypeTotal=1
+  * List4ShowtypeTotal=0
+  * List5ShowtypeTotal=0
+  * List6ShowtypeTotal=0
+  * List7ShowtypeTotal=0
+  * List8ShowtypeTotal=0
+
+__StyleColors可填写的值：__
+  * 灰色	grey
+  * 黑色	black
+  * 蓝色	blue
+  * 绿色	green
+  * 黄色	yellow
+  * 橘色	orange
+  * 粉色	pink
+  * 红色	red
+  * 紫色	purple
+  * 棕色	brown
+  * 多色	colorful
+
+__Category可填写的值：__
+  * 旅游
+  * 餐饮
+  * 宠物
+  * IT科技、软件、通讯业
+  * 金属制品、工业制品、机械、电子、电工
+  * 养殖业、农牧业、种殖业
+  * 服装、鞋帽、皮具
+  * 办公、文教、乐器
+  * 房地产、房屋租赁
+  * 化工、化学、涂料
+  * 环保、生态、园艺
+  * 广告、社会服务、家政
+  * 相亲网站、婚庆、风水
+  * 塑胶制品、木制品、陶瓷制品
+  * 家电、音响、电器
+  * 家居、日用、家具
+  * 金融、证券、保险
+  * 贸易、物流、出口
+  * 美容、美发、护肤
+  * 名家个人网站、展厅
+  * 汽车、运输、汽配
+  * 摄影、冲印、玩具
+  * 食品、饮料加工
+  * 文化、娱乐休闲
+  * 五金、仪器、仪表
+  * 物业、票务、黄金
+  * 鲜花、礼品、工艺品
+  * 学校、教育、培训
+  * 医疗、药品、保健
+  * 照明、水电、能源
+  * 政府、综合性门户
+  * 钟表、眼镜、珠宝、饰品
+  * 咨询、顾问、翻译、财务
+  * 建筑、装潢、建材
+  * 印刷、包装、丝印
+  * 酒店、酒店用品
+  * 酒业、茶业
+  * 消防器材、货架、钢器材
+  * 拍卖、投资、典当
+  * ...
+
+__QuickBar值说明：__
+
+{{page>ued:template:quickbar#QuickBar 参数值说明&noheader}}
+==== [Designer] 设计师信息部分 ====
+  * SN：PSD编号
+  * Name：设计师姓名 
+  * Hi：设计师的百度hi号
+  * Email：设计师邮箱地址
+  * QQ：设计师QQ
+  * URL：设计师个人主页
+
+==== [Developer] 开发者信息部分 ====
+  * SN：模板编号
+  * Name：开发者姓名 
+  * Hi：开发者的百度hi号
+  * Email：开发者邮箱地址
+  * QQ：开发者QQ
+  * URL：开发者个人主页
+
+==== [Tester] 测试者信息部分 ====
+  * Name：测试者姓名 
+  * Hi：测试者的百度hi号
+  * Email：测试者邮箱地址
+  * QQ：测试者QQ
+  * URL：测试者个人主页
+
+==== [Debug] 调试内容 ====
+此部分可更改系统输出的变量数据。
+
+如：''stylecolor=red''可在调试的时候展示红色风格（修改系统变量''{$stylecolor}''为red）\\
+如果修改子元素可以''contact.telephone=400-820-8888''
+
+如需修改数组变量，可是用json格式：
+
+<code javascript>
+navs=[{name:'新闻列表',link:'list-text.html?id=1',image:'http://p.qq181.com/cms/1210/2012100413195471481.jpg',current:0,lastest:objClone(PREVIEW_DEMODATA.list),childmenu:null},{name:'产品列表',link:'list-imagetext.html?id=3',image:'http://p.qq181.com/cms/1210/2012100413195471481.jpg',current:0,lastest:objClone(PREVIEW_DEMODATA.list),childmenu:null},{name:'最新产品',link:'list-image.html?id=4',image:'http://p.qq181.com/cms/1210/2012100413195471481.jpg',current:0,lastest:objClone(PREVIEW_DEMODATA.list),childmenu:null},{name:'关于我们',link:'list-page.html?id=7',image:'http://p.qq181.com/cms/1210/2012100413195471481.jpg',current:0,lastest:null,childmenu:null}]
+</code>
+
+注意：json格式必须写于**同一行**！（可利用网上在线格式化工具）
+===== INI文件demo下载 =====
+
+点击文件名即可下载：
+
+<file ini config.ini>
+[Template]
+Name=旅游行业蓝色格调模板
+Description=
+URL=
+Version=1.0
+
+[Config]
+Type=PC模板
+Category=旅游
+Tags=蓝色,绿色,旅游行业,出游,高大上
+StyleColors=blue,green
+LogoSize=200*150
+List1ShowtypeTotal=3
+List2ShowtypeTotal=1
+List3ShowtypeTotal=1
+List4ShowtypeTotal=0
+List5ShowtypeTotal=0
+List6ShowtypeTotal=0
+List7ShowtypeTotal=0
+List8ShowtypeTotal=0
+QuickBar=#AAA,#BBB,#FFF|tel
+
+
+[Developer]
+SN=GM001
+Name=小懿
+Hi=灵懿
+Email=qiuzhaoyi@xm12t.com
+QQ=156568451
+URL=http://IT.eexx.me
+
+[Designer]
+SN=061
+Name=李树
+Hi=厦门美工李树
+Email=lishu@xm12t.com
+QQ=
+URL=
+
+[Tester]
+Name=陈樱萍
+Hi=飃落人间
+Email=chenyingping@xm12t.com
+QQ=735020977
+URL=
+
+[Debug]
+stylecolor=green
+</file>

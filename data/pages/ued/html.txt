@@ -1,0 +1,45 @@
+====== HTML规范 ======
+
+===== 代码DEMO =====
+
+	<!DOCTYPE HTML>
+	<html>
+	<head>
+	<title></title>
+	<script type="text/javascript" main="script.js" src="common.js?load=png"></script>
+	<link rel="stylesheet" type="text/css" href="style.css" />
+	</head>
+	<body>
+		<header id="top">
+		</header>
+		<section id="main">
+			<section id="block">
+				<div class="block-title"></div>
+				<div class="block-content">
+					<div class="lottery">
+						<div class="lottery-prizes"></div>
+						<a class="lottery-button"></a>
+					</div>
+				</div>
+			</section>
+		</section>
+		<footer id="bottom">
+		</footer>
+		//弹窗
+		<div id="dialog-demo" class="dialog pngCss">
+			<a href="javascript:;" class="cls pngCss rotate"></a>
+			<div class="dialog-body">
+				</div>
+			</div>
+		</div>
+	</body>
+
+===== 命名规范 =====
+
+HTML代码、CSS选择器、切图图片名 **统一**!!
+
+	lottery
+	lottery-prizes
+	lottery-button
+	lottery-button-hover
+	dialog-demo

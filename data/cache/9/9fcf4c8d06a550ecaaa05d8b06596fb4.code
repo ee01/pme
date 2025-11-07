@@ -1,0 +1,34 @@
+<span class="br0">&#123;</span>
+	<span class="st0">&quot;announcement&quot;</span><span class="sy0">:</span> <span class="br0">&#123;</span>
+		<span class="st0">&quot;value&quot;</span><span class="sy0">:</span> <span class="st0">&quot;你看到的都是模板测试数据，需修改请登陆后台进入【页面内容】更新！<span class="es0">\r</span><span class="es0">\n</span>第二行公告内容公告内容公告内容公告内容&quot;</span><span class="sy0">,</span>
+		<span class="st0">&quot;description&quot;</span><span class="sy0">:</span> <span class="st0">&quot;网站公告&quot;</span><span class="sy0">,</span>
+		<span class="st0">&quot;type&quot;</span><span class="sy0">:</span> <span class="st0">&quot;text&quot;</span>
+	<span class="br0">&#125;</span><span class="sy0">,</span>
+	<span class="st0">&quot;slidepics&quot;</span><span class="sy0">:</span> <span class="br0">&#123;</span>
+		<span class="st0">&quot;value&quot;</span><span class="sy0">:</span> <span class="br0">&#91;</span><span class="br0">&#123;</span>
+			<span class="st0">&quot;title&quot;</span><span class="sy0">:</span> <span class="st0">&quot;测试图1&quot;</span><span class="sy0">,</span>
+			<span class="st0">&quot;src&quot;</span><span class="sy0">:</span> <span class="st0">&quot;http://tb2.bdstatic.com/tb/static-common/img/search_logo_big_282cef2.gif&quot;</span><span class="sy0">,</span>
+			<span class="st0">&quot;href&quot;</span><span class="sy0">:</span> <span class="st0">&quot;{$path}article/1.html&quot;</span>
+		<span class="br0">&#125;</span><span class="sy0">,</span> <span class="br0">&#123;</span>
+			<span class="st0">&quot;title&quot;</span><span class="sy0">:</span> <span class="st0">&quot;测试图2&quot;</span><span class="sy0">,</span>
+			<span class="st0">&quot;src&quot;</span><span class="sy0">:</span> <span class="st0">&quot;http://img0.bdstatic.com/static/common/widget/search_box_search/logo/logo_3b6de4c.png&quot;</span><span class="sy0">,</span>
+			<span class="st0">&quot;href&quot;</span><span class="sy0">:</span> <span class="st0">&quot;{$path}article/2.html&quot;</span>
+		<span class="br0">&#125;</span><span class="br0">&#93;</span><span class="sy0">,</span>
+		<span class="st0">&quot;description&quot;</span><span class="sy0">:</span> <span class="st0">&quot;大轮滚图&quot;</span><span class="sy0">,</span>
+		<span class="st0">&quot;type&quot;</span><span class="sy0">:</span> <span class="st0">&quot;images&quot;</span>
+	<span class="br0">&#125;</span><span class="sy0">,</span>
+	<span class="st0">&quot;list1&quot;</span><span class="sy0">:</span> <span class="br0">&#123;</span>
+		<span class="st0">&quot;value&quot;</span><span class="sy0">:</span> <span class="br0">&#123;</span>
+			<span class="st0">&quot;id&quot;</span><span class="sy0">:</span> <span class="nu0">1</span><span class="sy0">,</span>
+			<span class="st0">&quot;total&quot;</span><span class="sy0">:</span> <span class="nu0">4</span><span class="sy0">,</span>
+			<span class="st0">&quot;star_only&quot;</span><span class="sy0">:</span> <span class="nu0">0</span>
+		<span class="br0">&#125;</span><span class="sy0">,</span>
+		<span class="st0">&quot;description&quot;</span><span class="sy0">:</span> <span class="st0">&quot;第一个图文列表&quot;</span><span class="sy0">,</span>
+		<span class="st0">&quot;type&quot;</span><span class="sy0">:</span> <span class="st0">&quot;list&quot;</span>
+	<span class="br0">&#125;</span><span class="sy0">,</span>
+	<span class="st0">&quot;contact&quot;</span><span class="sy0">:</span> <span class="br0">&#123;</span>
+		<span class="st0">&quot;value&quot;</span><span class="sy0">:</span> <span class="st0">&quot;QQ：156568451<span class="es0">\r</span><span class="es0">\n</span>（这其实是个文本区域）&quot;</span><span class="sy0">,</span>
+		<span class="st0">&quot;description&quot;</span><span class="sy0">:</span> <span class="st0">&quot;联系我们&quot;</span><span class="sy0">,</span>
+		<span class="st0">&quot;type&quot;</span><span class="sy0">:</span> <span class="st0">&quot;text&quot;</span>
+	<span class="br0">&#125;</span>
+<span class="br0">&#125;</span>

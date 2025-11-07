@@ -1,0 +1,12 @@
+<span class="sc-1">&lt;!-- 轮滚图 --&gt;</span>
+<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/ul.html"><span class="kw2">ul</span></a> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;clearfix&quot;</span>&gt;</span>
+	{foreach name=slidepics item=slidepic from=$index.slidepics}
+	<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/li.html"><span class="kw2">li</span></a> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;fl&quot;</span>&gt;&lt;<a target="_blank" href="http://december.com/html/4/element/a.html"><span class="kw2">a</span></a> <span class="kw3">href</span><span class="sy0">=</span><span class="st0">&quot;{$slidepic.link}&quot;</span> <span class="kw3">target</span><span class="sy0">=</span><span class="st0">&quot;_blank&quot;</span>&gt;&lt;<a target="_blank" href="http://december.com/html/4/element/img.html"><span class="kw2">img</span></a> <span class="kw3">src</span><span class="sy0">=</span><span class="st0">&quot;{$slidepic.image}&quot;</span> <span class="kw3">alt</span><span class="sy0">=</span><span class="st0">&quot;{$slidepic.title}&quot;</span> <span class="sy0">/</span>&gt;&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/a.html"><span class="kw2">a</span></a>&gt;&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/li.html"><span class="kw2">li</span></a>&gt;</span>
+	{/foreach}
+<span class="sc2">&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/ul.html"><span class="kw2">ul</span></a>&gt;</span>
+<span class="sc-1">&lt;!-- 输出：</span>
+<span class="sc-1">&lt;ul class=&quot;clearfix&quot;&gt;</span>
+<span class="sc-1">	&lt;li class=&quot;fl&quot;&gt;&lt;a href=&quot;http://www.baidu.com&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;http://tb2.bdstatic.com/tb/static-common/img/search_logo_big_282cef2.gif&quot; alt=&quot;测试图1&quot;&gt;&lt;/a&gt;&lt;/li&gt;</span>
+<span class="sc-1">	&lt;li class=&quot;fl&quot;&gt;&lt;a href=&quot;http://www.baidu.com&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;http://img0.bdstatic.com/static/common/widget/search_box_search/logo/logo_3b6de4c.png&quot; alt=&quot;测试图2&quot;&gt;&lt;/a&gt;&lt;/li&gt;</span>
+<span class="sc-1">&lt;/ul&gt;</span>
+<span class="sc-1">--&gt;</span>

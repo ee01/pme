@@ -1,0 +1,81 @@
+
+<h1 class="sectionedit1" id="flash上传文件">FLASH上传文件</h1>
+<div class="level1">
+
+<p>
+<em class="u"><strong>注意！！</strong> 一定要放到服务器上才能测试效果！</em>
+</p>
+
+</div>
+<!-- EDIT1 SECTION "FLASH上传文件" [1-103] -->
+<h2 class="sectionedit2" id="引入文件">引入文件：</h2>
+<div class="level2">
+<pre class="code">&lt;script src=&quot;http://common.mn.sina.com.cn/public/resource/lib/uploadify/jquery.uploadify.min.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
+&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;http://common.mn.sina.com.cn/public/resource/lib/uploadify/uploadify.css&quot;&gt;</pre>
+
+</div>
+
+<h4 id="html">HTML:</h4>
+<div class="level4">
+<pre class="code html4strict"><span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/input.html"><span class="kw2">input</span></a> <span class="kw3">type</span><span class="sy0">=</span><span class="st0">&quot;file&quot;</span> <span class="kw3">name</span><span class="sy0">=</span><span class="st0">&quot;file_upload&quot;</span> <span class="kw3">id</span><span class="sy0">=</span><span class="st0">&quot;file_upload&quot;</span> <span class="sy0">/</span>&gt;</span>
+<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/p.html"><span class="kw2">p</span></a>&gt;&lt;<a target="_blank" href="http://december.com/html/4/element/a.html"><span class="kw2">a</span></a> <span class="kw3">href</span><span class="sy0">=</span><span class="st0">&quot;javascript:$('#file_upload').uploadify('upload','*');&quot;</span>&gt;</span>上传<span class="sc2">&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/a.html"><span class="kw2">a</span></a>&gt;</span>
+<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/a.html"><span class="kw2">a</span></a> <span class="kw3">href</span><span class="sy0">=</span><span class="st0">&quot;javascript:$('#file_upload').uploadify('cancel','*')&quot;</span>&gt;</span>重置上传队列<span class="sc2">&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/a.html"><span class="kw2">a</span></a>&gt;</span>
+<span class="sc2">&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/p.html"><span class="kw2">p</span></a>&gt;</span></pre>
+
+</div>
+<!-- EDIT2 SECTION "引入文件：" [104-646] -->
+<h2 class="sectionedit3" id="js">JS：</h2>
+<div class="level2">
+<pre class="code javascript">$<span class="br0">&#40;</span><span class="kw1">function</span><span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+	$<span class="br0">&#40;</span><span class="st0">'#file_upload'</span><span class="br0">&#41;</span>.<span class="me1">uploadify</span><span class="br0">&#40;</span><span class="br0">&#123;</span>
+		<span class="st0">'auto'</span>     <span class="sy0">:</span> <span class="kw2">false</span><span class="sy0">,</span><span class="co1">//关闭自动上传</span>
+		<span class="st0">'removeTimeout'</span> <span class="sy0">:</span> <span class="nu0">1</span><span class="sy0">,</span><span class="co1">//文件队列上传完成1秒后删除	</span>
+		<span class="st0">'swf'</span>      <span class="sy0">:</span> <span class="st0">'http://common.mn.sina.com.cn/public/resource/lib/uploadify/uploadify.swf'</span><span class="sy0">,</span>
+		<span class="st0">'uploader'</span> <span class="sy0">:</span> <span class="st0">'http://common.mn.sina.com.cn/activity/jsonp/7/tt'</span><span class="sy0">,</span><span class="co1">//服务端处理脚本，与swf文件同服务器，否则需做跨域CrossDomain.xml文件</span>
+		<span class="st0">'method'</span>   <span class="sy0">:</span> <span class="st0">'post'</span><span class="sy0">,</span><span class="co1">//方法，服务端可以用$_POST数组获取数据</span>
+		<span class="st0">'buttonText'</span> <span class="sy0">:</span> <span class="st0">'选择图片'</span><span class="sy0">,</span><span class="co1">//设置按钮文本</span>
+		<span class="st0">'multi'</span>    <span class="sy0">:</span> <span class="kw2">true</span><span class="sy0">,</span><span class="co1">//允许同时上传多张图片</span>
+		<span class="st0">'uploadLimit'</span> <span class="sy0">:</span> <span class="nu0">5</span><span class="sy0">,</span><span class="co1">//一次最多只允许上传10张图片</span>
+		<span class="co1">//服务器端脚本使用的文件对象的名称 $_FILES个['field']</span>
+        <span class="st0">'fileObjName'</span><span class="sy0">:</span><span class="st0">'field'</span><span class="sy0">,</span>
+		<span class="st0">'fileTypeDesc'</span> <span class="sy0">:</span> <span class="st0">'支持格式'</span><span class="sy0">,</span><span class="co1">//只允许上传图像</span>
+		<span class="st0">'fileTypeExts'</span> <span class="sy0">:</span> <span class="st0">'*.gif; *.jpg; *.png'</span><span class="sy0">,</span><span class="co1">//限制允许上传的图片后缀</span>
+		<span class="st0">'fileSizeLimit'</span> <span class="sy0">:</span> <span class="st0">'500KB'</span><span class="sy0">,</span><span class="co1">//限制上传的图片不得超过200KB</span>
+		<span class="co1">//返回一个错误，选择文件的时候触发</span>
+        <span class="st0">'onSelectError'</span><span class="sy0">:</span><span class="kw1">function</span><span class="br0">&#40;</span>file<span class="sy0">,</span> errorCode<span class="sy0">,</span> errorMsg<span class="br0">&#41;</span><span class="br0">&#123;</span>
+            <span class="kw1">switch</span><span class="br0">&#40;</span>errorCode<span class="br0">&#41;</span> <span class="br0">&#123;</span>
+                <span class="kw1">case</span> <span class="sy0">-</span><span class="nu0">100</span><span class="sy0">:</span>
+                    alert<span class="br0">&#40;</span><span class="st0">&quot;上传的文件数量应该低于&quot;</span><span class="sy0">+</span>$<span class="br0">&#40;</span><span class="st0">'#file_upload'</span><span class="br0">&#41;</span>.<span class="me1">uploadify</span><span class="br0">&#40;</span><span class="st0">'settings'</span><span class="sy0">,</span><span class="st0">'uploadLimit'</span><span class="br0">&#41;</span><span class="sy0">+</span><span class="st0">&quot;个文件！&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+                    <span class="kw1">break</span><span class="sy0">;</span>
+                <span class="kw1">case</span> <span class="sy0">-</span><span class="nu0">110</span><span class="sy0">:</span>
+                    alert<span class="br0">&#40;</span><span class="st0">&quot;文件应该低于&quot;</span><span class="sy0">+</span>$<span class="br0">&#40;</span><span class="st0">'#file_upload'</span><span class="br0">&#41;</span>.<span class="me1">uploadify</span><span class="br0">&#40;</span><span class="st0">'settings'</span><span class="sy0">,</span><span class="st0">'fileSizeLimit'</span><span class="br0">&#41;</span><span class="sy0">+</span><span class="st0">&quot;！&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+                    <span class="kw1">break</span><span class="sy0">;</span>
+                <span class="kw1">case</span> <span class="sy0">-</span><span class="nu0">120</span><span class="sy0">:</span>
+                    alert<span class="br0">&#40;</span><span class="st0">&quot;文件 [&quot;</span><span class="sy0">+</span>file.<span class="me1">name</span><span class="sy0">+</span><span class="st0">&quot;] 大小异常！&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+                    <span class="kw1">break</span><span class="sy0">;</span>
+                <span class="kw1">case</span> <span class="sy0">-</span><span class="nu0">130</span><span class="sy0">:</span>
+                    alert<span class="br0">&#40;</span><span class="st0">&quot;文件 [&quot;</span><span class="sy0">+</span>file.<span class="me1">name</span><span class="sy0">+</span><span class="st0">&quot;] 类型不正确！&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+                    <span class="kw1">break</span><span class="sy0">;</span>
+            <span class="br0">&#125;</span>
+        <span class="br0">&#125;</span><span class="sy0">,</span>
+        <span class="co1">//检测FLASH失败调用</span>
+        <span class="st0">'onFallback'</span><span class="sy0">:</span><span class="kw1">function</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="br0">&#123;</span>
+            alert<span class="br0">&#40;</span><span class="st0">&quot;您未安装FLASH控件，无法上传图片！请安装FLASH控件后再试。&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+        <span class="br0">&#125;</span><span class="sy0">,</span>
+	<span class="st0">'onUploadSuccess'</span><span class="sy0">:</span><span class="kw1">function</span><span class="br0">&#40;</span>file<span class="sy0">,</span> data<span class="sy0">,</span> response<span class="br0">&#41;</span><span class="br0">&#123;</span>
+			console.<span class="me1">log</span><span class="br0">&#40;</span>data<span class="br0">&#41;</span><span class="sy0">;</span><span class="co1">//成功后输出服务端输出信息</span>
+        <span class="br0">&#125;</span>
+	<span class="br0">&#125;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span><span class="br0">&#41;</span><span class="sy0">;</span></pre>
+
+</div>
+<!-- EDIT3 SECTION "JS：" [647-2725] -->
+<h2 class="sectionedit4" id="更多参数">更多参数</h2>
+<div class="level2">
+
+<p>
+<a href="http://www.cnblogs.com/oec2003/archive/2010/01/06/1640027.html" class="urlextern" target="_blank" title="http://www.cnblogs.com/oec2003/archive/2010/01/06/1640027.html"  rel="nofollow">http://www.cnblogs.com/oec2003/archive/2010/01/06/1640027.html</a>
+</p>
+
+</div>
+<!-- EDIT4 SECTION "更多参数" [2726-] -->

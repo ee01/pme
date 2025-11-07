@@ -1,0 +1,16 @@
+====== 跨域采用POST提交数据 ======
+
+===== 引入文件： =====
+
+	<script src="http://common.mn.sina.com.cn/public/resource/lib/crossajax/jquery.swfobject.js" type="text/javascript"></script>
+	<script src="http://common.mn.sina.com.cn/public/resource/lib/crossajax/jquery.crossajax.js" type="text/javascript"></script>
+
+
+===== JS： =====
+
+	$.request("http://...", 'a=b', 'function(data){ callback(); },'POST','utf-8');
+OR
+	$.request("http://...", {a:b}, function(data){
+		// callback function
+	});
+	// with POST & utf-8

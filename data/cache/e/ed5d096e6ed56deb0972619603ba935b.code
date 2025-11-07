@@ -1,0 +1,14 @@
+<span class="sc-1">&lt;!-- 产品页主体 --&gt;</span>
+<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/ul.html"><span class="kw2">ul</span></a> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;clearfix&quot;</span>&gt;</span>
+	{foreach item=image from=$article.images}
+	<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/li.html"><span class="kw2">li</span></a> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;fl&quot;</span>&gt;</span>
+		<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/dl.html"><span class="kw2">dl</span></a> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;pr&quot;</span>&gt;</span>
+			<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/dt.html"><span class="kw2">dt</span></a> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;image-title&quot;</span>&gt;</span>{$image.title}<span class="sc2">&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/dt.html"><span class="kw2">dt</span></a>&gt;</span>
+			<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/dd.html"><span class="kw2">dd</span></a>&gt;&lt;<a target="_blank" href="http://december.com/html/4/element/img.html"><span class="kw2">img</span></a> <span class="kw3">src</span><span class="sy0">=</span><span class="st0">&quot;{$image.image}&quot;</span> <span class="kw3">alt</span><span class="sy0">=</span><span class="st0">&quot;{$image.title}&quot;</span> <span class="sy0">/</span>&gt;&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/dd.html"><span class="kw2">dd</span></a>&gt;</span>
+		<span class="sc2">&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/dl.html"><span class="kw2">dl</span></a>&gt;</span>
+	<span class="sc2">&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/li.html"><span class="kw2">li</span></a>&gt;</span>
+	{/foreach}
+<span class="sc2">&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/ul.html"><span class="kw2">ul</span></a>&gt;</span>
+<span class="sc2">&lt;article&gt;</span>
+	{$article.content|unescape:&quot;html&quot;}
+<span class="sc2">&lt;<span class="sy0">/</span>article&gt;</span>

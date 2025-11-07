@@ -1,0 +1,116 @@
+
+<h1 class="sectionedit1" id="简单图片滚动jquery插件">简单图片滚动jQuery插件</h1>
+<div class="level1">
+
+</div>
+<!-- EDIT1 SECTION "简单图片滚动jQuery插件" [1-48] -->
+<h3 class="sectionedit2" id="引入文件">引入文件</h3>
+<div class="level3">
+<pre class="code html4strict"><span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/script.html"><span class="kw2">script</span></a> <span class="kw3">type</span><span class="sy0">=</span><span class="st0">&quot;text/javascript&quot;</span> <span class="kw3">src</span><span class="sy0">=</span><span class="st0">&quot;http://common.mn.sina.com.cn/public/resource/lib/jquery.jcarousellite.js&quot;</span>&gt;&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/script.html"><span class="kw2">script</span></a>&gt;</span></pre>
+
+</div>
+<!-- EDIT2 SECTION "引入文件" [49-212] -->
+<h3 class="sectionedit3" id="js">JS</h3>
+<div class="level3">
+<pre class="code javascript">$<span class="br0">&#40;</span><span class="st0">'#prizes .photos-content'</span><span class="br0">&#41;</span>.<span class="me1">jCarouselLite</span><span class="br0">&#40;</span><span class="br0">&#123;</span>
+	btnPrev<span class="sy0">:</span> <span class="st0">'#prizes a.photos-prev'</span><span class="sy0">,</span>
+	btnNext<span class="sy0">:</span> <span class="st0">'#prizes a.photos-next'</span><span class="sy0">,</span>
+	visible<span class="sy0">:</span> <span class="nu0">3</span><span class="sy0">,</span>
+	auto<span class="sy0">:</span> <span class="nu0">3000</span><span class="sy0">,</span>
+	speed<span class="sy0">:</span> <span class="nu0">1000</span>
+<span class="br0">&#125;</span><span class="br0">&#41;</span>.<span class="me1">css</span><span class="br0">&#40;</span><span class="br0">&#123;</span>visibility<span class="sy0">:</span><span class="st0">&quot;visible&quot;</span><span class="br0">&#125;</span><span class="br0">&#41;</span><span class="sy0">;</span></pre>
+
+</div>
+<!-- EDIT3 SECTION "JS" [213-441] -->
+<h3 class="sectionedit4" id="html">html</h3>
+<div class="level3">
+<pre class="code html4strict"><span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/div.html"><span class="kw2">div</span></a> <span class="kw3">id</span><span class="sy0">=</span><span class="st0">&quot;prizes&quot;</span>&gt;</span>
+	<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/div.html"><span class="kw2">div</span></a> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;photos&quot;</span>&gt;</span>
+		<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/a.html"><span class="kw2">a</span></a> <span class="kw3">href</span><span class="sy0">=</span><span class="st0">&quot;javascript:void(0);&quot;</span> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;photos-button photos-prev&quot;</span>&gt;&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/a.html"><span class="kw2">a</span></a>&gt;</span>
+		<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/div.html"><span class="kw2">div</span></a> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;photos-content&quot;</span> <span class="kw3">style</span><span class="sy0">=</span><span class="st0">&quot;visibility:hidden&quot;</span>&gt;</span>
+			<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/ul.html"><span class="kw2">ul</span></a>&gt;</span>
+				<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/li.html"><span class="kw2">li</span></a>&gt;&lt;<a target="_blank" href="http://december.com/html/4/element/img.html"><span class="kw2">img</span></a> <span class="kw3">alt</span><span class="sy0">=</span><span class="st0">&quot;&quot;</span> <span class="kw3">src</span><span class="sy0">=</span><span class="st0">&quot;http://minnan.sinaimg.cn/2013/0111/U8235P1433DT20130111110147.jpg&quot;</span> <span class="sy0">/</span>&gt;&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/li.html"><span class="kw2">li</span></a>&gt;</span>
+				<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/li.html"><span class="kw2">li</span></a>&gt;&lt;<a target="_blank" href="http://december.com/html/4/element/img.html"><span class="kw2">img</span></a> <span class="kw3">alt</span><span class="sy0">=</span><span class="st0">&quot;&quot;</span> <span class="kw3">src</span><span class="sy0">=</span><span class="st0">&quot;http://minnan.sinaimg.cn/2013/0111/U8235P1433DT20130111110219.jpg&quot;</span> <span class="sy0">/</span>&gt;&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/li.html"><span class="kw2">li</span></a>&gt;</span>
+				<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/li.html"><span class="kw2">li</span></a>&gt;&lt;<a target="_blank" href="http://december.com/html/4/element/img.html"><span class="kw2">img</span></a> <span class="kw3">alt</span><span class="sy0">=</span><span class="st0">&quot;&quot;</span> <span class="kw3">src</span><span class="sy0">=</span><span class="st0">&quot;http://minnan.sinaimg.cn/2013/0111/U8235P1433DT20130111110144.jpg&quot;</span> <span class="sy0">/</span>&gt;&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/li.html"><span class="kw2">li</span></a>&gt;</span>
+				<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/li.html"><span class="kw2">li</span></a>&gt;&lt;<a target="_blank" href="http://december.com/html/4/element/img.html"><span class="kw2">img</span></a> <span class="kw3">alt</span><span class="sy0">=</span><span class="st0">&quot;&quot;</span> <span class="kw3">src</span><span class="sy0">=</span><span class="st0">&quot;http://minnan.sinaimg.cn/2013/0123/U8235P1433DT20130123173838.jpg&quot;</span> <span class="sy0">/</span>&gt;&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/li.html"><span class="kw2">li</span></a>&gt;</span>
+				<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/li.html"><span class="kw2">li</span></a>&gt;&lt;<a target="_blank" href="http://december.com/html/4/element/img.html"><span class="kw2">img</span></a> <span class="kw3">alt</span><span class="sy0">=</span><span class="st0">&quot;&quot;</span> <span class="kw3">src</span><span class="sy0">=</span><span class="st0">&quot;http://minnan.sinaimg.cn/2013/0123/U8235P1433DT20130123173841.jpg&quot;</span> <span class="sy0">/</span>&gt;&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/li.html"><span class="kw2">li</span></a>&gt;</span>
+			<span class="sc2">&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/ul.html"><span class="kw2">ul</span></a>&gt;</span>
+		<span class="sc2">&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/div.html"><span class="kw2">div</span></a>&gt;</span>
+		<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/a.html"><span class="kw2">a</span></a> <span class="kw3">href</span><span class="sy0">=</span><span class="st0">&quot;javascript:void(0);&quot;</span> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;photos-button photos-next&quot;</span>&gt;&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/a.html"><span class="kw2">a</span></a>&gt;</span>
+	<span class="sc2">&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/div.html"><span class="kw2">div</span></a>&gt;</span>
+<span class="sc2">&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/div.html"><span class="kw2">div</span></a>&gt;</span></pre>
+
+</div>
+<!-- EDIT4 SECTION "html" [442-1260] -->
+<h3 class="sectionedit5" id="css">css</h3>
+<div class="level3">
+<pre class="code css"><span class="re1">.photos</span> <span class="br0">&#123;</span>
+	<span class="kw1">position</span><span class="sy0">:</span> <span class="kw2">relative</span><span class="sy0">;</span>
+	<span class="kw1">width</span><span class="sy0">:</span> <span class="re3">940px</span><span class="sy0">;</span>
+	<span class="kw1">margin</span><span class="sy0">:</span> <span class="nu0">0</span> <span class="kw2">auto</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+	<span class="re1">.photos</span> <span class="re1">.photos-button</span> <span class="br0">&#123;</span>
+		<span class="kw1">position</span><span class="sy0">:</span> <span class="kw2">absolute</span><span class="sy0">;</span>
+		<span class="kw1">top</span><span class="sy0">:</span> <span class="re3">40px</span><span class="sy0">;</span>
+		<span class="kw1">width</span><span class="sy0">:</span> <span class="re3">57px</span><span class="sy0">;</span>
+		<span class="kw1">height</span><span class="sy0">:</span> <span class="re3">102px</span><span class="sy0">;</span>
+		<span class="kw1">z-index</span><span class="sy0">:</span> <span class="nu0">10</span><span class="sy0">;</span>
+	<span class="br0">&#125;</span>
+	<span class="re1">.photos</span> <span class="re1">.photos-prev</span> <span class="br0">&#123;</span>
+		<span class="kw1">left</span><span class="sy0">:</span> <span class="re3">-5px</span><span class="sy0">;</span>
+		<span class="kw1">background</span><span class="sy0">:</span> <span class="kw2">url</span><span class="br0">&#40;</span><span class="co2">images/photos-prev.png</span><span class="br0">&#41;</span> <span class="kw2">no-repeat</span><span class="sy0">;</span>
+	<span class="br0">&#125;</span>
+	<span class="re1">.photos</span> <span class="re1">.photos-next</span> <span class="br0">&#123;</span>
+		<span class="kw1">right</span><span class="sy0">:</span> <span class="re3">-18px</span><span class="sy0">;</span>
+		<span class="kw1">background</span><span class="sy0">:</span> <span class="kw2">url</span><span class="br0">&#40;</span><span class="co2">images/photos-next.png</span><span class="br0">&#41;</span> <span class="kw2">no-repeat</span><span class="sy0">;</span>
+	<span class="br0">&#125;</span>
+&nbsp;
+	<span class="re1">.photos</span> <span class="re1">.photos-content</span> <span class="br0">&#123;</span>
+		<span class="kw1">margin</span><span class="sy0">:</span> <span class="nu0">0</span> <span class="kw2">auto</span><span class="sy0">;</span>
+	<span class="br0">&#125;</span>
+	<span class="re1">.photos</span> <span class="re1">.photos-content</span> li <span class="br0">&#123;</span>
+		<span class="kw1">margin</span><span class="sy0">:</span> <span class="nu0">0</span> <span class="re3">5px</span><span class="sy0">;</span>
+	<span class="br0">&#125;</span>
+	<span class="re1">.photos</span> <span class="re1">.photos-content</span> li img <span class="br0">&#123;</span>
+		<span class="kw1">width</span><span class="sy0">:</span> <span class="re3">270px</span><span class="sy0">;</span>
+		<span class="kw1">height</span><span class="sy0">:</span> <span class="re3">180px</span><span class="sy0">;</span>
+		<span class="kw1">border</span><span class="sy0">:</span> <span class="re3">3px</span> <span class="kw2">solid</span> <span class="re0">#cbc6c6</span><span class="sy0">;</span>
+	<span class="br0">&#125;</span>
+	<span class="re1">.photos</span> <span class="re1">.photos-content</span> li img<span class="re2">:hover </span><span class="br0">&#123;</span>
+		<span class="kw1">border-color</span><span class="sy0">:</span> <span class="re0">#ff001b</span><span class="sy0">;</span>
+	<span class="br0">&#125;</span></pre>
+
+</div>
+<!-- EDIT5 SECTION "css" [1261-1929] -->
+<h3 class="sectionedit6" id="参数说明">参数说明</h3>
+<div class="level3">
+<pre class="code javascript"><span class="coMULTI">/** 接口说明
+ *
+ *	btnPrev		string	上一个按钮的选择器, 比如 btnPrev: &quot;.prev&quot;
+ *	btnNext		string	下一个按钮的选择器, 比如 btnNext: &quot;.next&quot;
+ *	btnGo		array	自定义滚动位置,类似幻灯片效果置,有选项卡,按照数组顺序,依次为按钮1按钮2按钮N,如以下,选择器为1的按钮是第一个按钮：[&quot;.1&quot;, &quot;.2&quot;]
+ *	mouseWheel	bool	鼠标滑是否可以轮控制上下滚动,可选：false,true,默认false
+ *	auto		int		指定多少秒内容定期自动滚动。默认为空(null),是不滚动,如果设定的,单位为毫秒,如1秒为1000
+ *	speed		int		滑动的速度,可以尝试800 1000 1500,设置成0将删除效果
+ *	easing		string	缓冲效果名称,如：easing: &quot;bounceout&quot;,需要jquery中的easing pluin（缓冲插件实现）,只适用于jq1.2
+ *	vertical	bool	是否垂直滚动,可选：false,true,默认false
+ *	circular	bool	是否循环滚动,默认为true,如果为false,滚动到最后一个将停止滚动
+ *	visible		int		可见数量,可以为小数，如2.5为2.5个li
+ *	start		int		开始的地方,默认是0
+ *	scroll		int		每次滚动的li数量
+ *	beforeStart	func	滚动开始时回调的函数,可以传入对象参数 beforeStart: function(a) { alert(&quot;开始的对象是:&quot; + a)}
+ *	afterEnd	func	滚动结束时回调的函数,使用方法同上
+ *
+ */</span></pre>
+
+</div>
+<!-- EDIT6 SECTION "参数说明" [1930-3313] -->
+<h3 class="sectionedit7" id="demo地址">DEMO地址</h3>
+<div class="level3">
+
+<p>
+<a href="http://www.jsfoot.com/jquery/demo/2012-04-04/523.html" class="urlextern" target="_blank" title="http://www.jsfoot.com/jquery/demo/2012-04-04/523.html"  rel="nofollow">http://www.jsfoot.com/jquery/demo/2012-04-04/523.html</a>
+</p>
+
+</div>
+<!-- EDIT7 SECTION "DEMO地址" [3314-] -->

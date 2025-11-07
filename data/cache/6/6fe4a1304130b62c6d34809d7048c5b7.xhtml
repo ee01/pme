@@ -1,0 +1,180 @@
+
+<h1 class="sectionedit1" id="css3特效封装">CSS3特效封装</h1>
+<div class="level1">
+
+</div>
+<!-- EDIT1 SECTION "CSS3特效封装" [1-32] -->
+<h2 class="sectionedit2" id="引入文件">引入文件</h2>
+<div class="level2">
+<pre class="code">&lt;link type=&quot;text/css&quot; rel=&quot;stylesheet&quot; href=&quot;http://common.mn.sina.com.cn/public/resource/css/css3pack.css&quot; /&gt;</pre>
+
+</div>
+<!-- EDIT2 SECTION "引入文件" [33-172] -->
+<h2 class="sectionedit3" id="旋转_多用于关闭按钮">旋转（多用于关闭按钮）：</h2>
+<div class="level2">
+
+<p>
+class：
+</p>
+<pre class="code">rotate</pre>
+
+</div>
+<!-- EDIT3 SECTION "旋转（多用于关闭按钮）：" [173-240] -->
+<h2 class="sectionedit4" id="浮动放大_多用于提交按钮">浮动放大（多用于提交按钮）</h2>
+<div class="level2">
+
+<p>
+class：
+</p>
+<pre class="code">largen</pre>
+
+</div>
+<!-- EDIT4 SECTION "浮动放大（多用于提交按钮）" [241-311] -->
+<h2 class="sectionedit5" id="字内阴影_大字适合">字内阴影（大字适合）</h2>
+<div class="level2">
+
+<p>
+class：
+</p>
+<pre class="code">innerShadowGrey
+innerShadowWhite</pre>
+
+<p>
+HTML：
+</p>
+<pre class="code">&lt;div class=&quot;innerShadowGrey&quot;&gt;&lt;span&gt;TEST&lt;/span&gt;&lt;/div&gt;</pre>
+
+</div>
+<!-- EDIT5 SECTION "字内阴影（大字适合）" [312-463] -->
+<h2 class="sectionedit6" id="d翻牌_-_正反互换">3D翻牌 - 正反互换</h2>
+<div class="level2">
+
+</div>
+<!-- EDIT6 SECTION "3D翻牌 - 正反互换" [464-500] -->
+<h3 class="sectionedit7" id="html">HTML：</h3>
+<div class="level3">
+
+<p>
+横向翻牌：
+</p>
+<pre class="code html4strict"><span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/dl.html"><span class="kw2">dl</span></a> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;card3d&quot;</span>&gt;</span>
+	<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/dd.html"><span class="kw2">dd</span></a> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;front&quot;</span>&gt;</span><span class="sc-1">&lt;!-- 正面内容 --&gt;</span><span class="sc2">&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/dd.html"><span class="kw2">dd</span></a>&gt;</span>
+	<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/dd.html"><span class="kw2">dd</span></a> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;back&quot;</span>&gt;</span><span class="sc-1">&lt;!-- 背面内容 --&gt;</span><span class="sc2">&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/dd.html"><span class="kw2">dd</span></a>&gt;</span>
+<span class="sc2">&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/dl.html"><span class="kw2">dl</span></a>&gt;</span></pre>
+
+<p>
+纵向翻牌：
+</p>
+<pre class="code html4strict"><span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/dl.html"><span class="kw2">dl</span></a> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;card3d card3d-down&quot;</span>&gt;</span>
+	<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/dd.html"><span class="kw2">dd</span></a> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;front&quot;</span>&gt;</span><span class="sc-1">&lt;!-- 正面内容 --&gt;</span><span class="sc2">&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/dd.html"><span class="kw2">dd</span></a>&gt;</span>
+	<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/dd.html"><span class="kw2">dd</span></a> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;back&quot;</span>&gt;</span><span class="sc-1">&lt;!-- 背面内容 --&gt;</span><span class="sc2">&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/dd.html"><span class="kw2">dd</span></a>&gt;</span>
+<span class="sc2">&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/dl.html"><span class="kw2">dl</span></a>&gt;</span></pre>
+
+<p>
+注：可用div，仅需class结构对应；
+　　card3d有relative值，front、back有absolute值。
+</p>
+
+</div>
+<!-- EDIT7 SECTION "HTML：" [501-942] -->
+<h3 class="sectionedit8" id="css">CSS：</h3>
+<div class="level3">
+<pre class="code css"><span class="coMULTI">/* 牌面大小 */</span>
+<span class="re1">.card3d</span> <span class="br0">&#123;</span> <span class="kw1">width</span><span class="sy0">:</span><span class="re3">120px</span><span class="sy0">;</span> <span class="kw1">height</span><span class="sy0">:</span><span class="re3">120px</span><span class="sy0">;</span> <span class="br0">&#125;</span>
+<span class="coMULTI">/* 翻牌速度 */</span>
+<span class="re1">.card3d</span> .front<span class="sy0">,</span>
+<span class="re1">.card3d</span> <span class="re1">.back</span> <span class="br0">&#123;</span> -webkit-transition-duration<span class="sy0">:</span>.8s<span class="sy0">;</span> -moz-transition-duration<span class="sy0">:</span>.8s<span class="sy0">;</span> transition-duration<span class="sy0">:</span>.8s<span class="sy0">;</span> <span class="br0">&#125;</span></pre>
+<pre class="code css"><span class="coMULTI">/* 弹窗上翻牌需以下z-index */</span>
+<span class="re1">.card3d</span> <span class="re1">.front</span> <span class="br0">&#123;</span> <span class="kw1">z-index</span><span class="sy0">:</span><span class="nu0">310</span><span class="sy0">;</span> <span class="br0">&#125;</span>
+<span class="re1">.card3d</span> <span class="re1">.back</span> <span class="br0">&#123;</span> <span class="kw1">z-index</span><span class="sy0">:</span><span class="nu0">308</span><span class="sy0">;</span> <span class="br0">&#125;</span>
+<span class="re1">.card3d</span><span class="re1">.flipped</span> <span class="re1">.front</span> <span class="br0">&#123;</span> <span class="kw1">z-index</span><span class="sy0">:</span><span class="nu0">308</span><span class="sy0">;</span> <span class="br0">&#125;</span>
+<span class="re1">.card3d</span><span class="re1">.flipped</span> <span class="re1">.back</span> <span class="br0">&#123;</span> <span class="kw1">z-index</span><span class="sy0">:</span><span class="nu0">310</span><span class="sy0">;</span> <span class="br0">&#125;</span></pre>
+
+</div>
+<!-- EDIT8 SECTION "CSS：" [943-1382] -->
+<h3 class="sectionedit9" id="js">JS：</h3>
+<div class="level3">
+<pre class="code javascript">$<span class="br0">&#40;</span><span class="st0">'.card3d'</span><span class="br0">&#41;</span>.<span class="me1">click</span><span class="br0">&#40;</span><span class="kw1">function</span><span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+	$<span class="br0">&#40;</span><span class="kw1">this</span><span class="br0">&#41;</span>.<span class="me1">toggleClass</span><span class="br0">&#40;</span><span class="st0">'flipped'</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span><span class="br0">&#41;</span><span class="sy0">;</span></pre>
+
+<p>
+如果卡片无背景色透明，加入以下代码兼容低版本chrome的<code>backface-visibility</code>无效：
+</p>
+<pre class="code javascript"><span class="br0">&#40;</span><span class="kw1">function</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="br0">&#123;</span>
+	<span class="kw1">var</span> mth<span class="sy0">;</span>
+	<span class="kw1">if</span><span class="br0">&#40;</span><span class="br0">&#40;</span>mth <span class="sy0">=</span> navigator.<span class="me1">userAgent</span>.<span class="me1">match</span><span class="br0">&#40;</span><span class="co2">/Chrome\/([0-9]+)/i</span><span class="br0">&#41;</span><span class="br0">&#41;</span> <span class="sy0">&amp;&amp;</span> mth<span class="br0">&#91;</span><span class="nu0">1</span><span class="br0">&#93;</span> <span class="sy0">&lt;</span> <span class="nu0">25</span><span class="br0">&#41;</span><span class="br0">&#123;</span>
+		$<span class="br0">&#40;</span><span class="st0">'head'</span><span class="br0">&#41;</span>.<span class="me1">append</span><span class="br0">&#40;</span><span class="st0">'&lt;style type=&quot;text/css&quot;&gt;.card3d .front {display:block;}.card3d .back {display:none;}.card3d.flipped .front {display:none;}.card3d.flipped .back {display:block;}&lt;/style&gt;'</span><span class="br0">&#41;</span><span class="sy0">;</span>
+	<span class="br0">&#125;</span>
+<span class="br0">&#125;</span><span class="br0">&#41;</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span></pre>
+
+</div>
+<!-- EDIT9 SECTION "JS：" [1383-1932] -->
+<h2 class="sectionedit10" id="d翻牌_-_单面快速旋转">3D翻牌 - 单面快速旋转</h2>
+<div class="level2">
+
+</div>
+<!-- EDIT10 SECTION "3D翻牌 - 单面快速旋转" [1933-1975] -->
+<h3 class="sectionedit11" id="html1">HTML：</h3>
+<div class="level3">
+<pre class="code html4strict"><span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/dl.html"><span class="kw2">dl</span></a> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;card3dfast&quot;</span>&gt;</span>
+	<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/dd.html"><span class="kw2">dd</span></a> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;cardflipped&quot;</span>&gt;</span><span class="sc-1">&lt;!-- 翻转内容 --&gt;</span><span class="sc2">&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/dd.html"><span class="kw2">dd</span></a>&gt;</span>
+<span class="sc2">&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/dl.html"><span class="kw2">dl</span></a>&gt;</span></pre>
+
+</div>
+<!-- EDIT11 SECTION "HTML：" [1976-2096] -->
+<h3 class="sectionedit12" id="css1">CSS：</h3>
+<div class="level3">
+
+<p>
+添加fastflip样式即可实现翻转效果
+或使用以下JS来翻转卡片
+</p>
+
+<p>
+自定义效果：
+</p>
+<pre class="code css"><span class="re1">.card3dfast</span> <span class="br0">&#123;</span>
+	-webkit-perspective<span class="sy0">:</span> <span class="nu0">200</span><span class="sy0">;</span>
+	perspective<span class="sy0">:</span> <span class="nu0">200</span><span class="sy0">;</span>
+	-webkit-perspective-origin<span class="sy0">:</span> <span class="re3">50%</span> <span class="re3">-100%</span><span class="sy0">;</span>
+	perspective-origin<span class="sy0">:</span> <span class="re3">50%</span> <span class="re3">-100%</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+	<span class="re1">.card3dfast</span> <span class="re1">.fastflip</span> <span class="br0">&#123;</span>
+		-webkit-transform-style<span class="sy0">:</span> preserve-3d<span class="sy0">;</span>
+		-webkit-animation<span class="sy0">:</span> flipcard 1000ms ease-out<span class="sy0">;</span>
+		-moz-animation<span class="sy0">:</span> flipcard 1000ms ease-out<span class="sy0">;</span>
+		animation<span class="sy0">:</span> flipcard 1000ms ease-out<span class="sy0">;</span>
+	<span class="br0">&#125;</span></pre>
+
+</div>
+<!-- EDIT12 SECTION "CSS：" [2097-2566] -->
+<h3 class="sectionedit13" id="js1">JS：</h3>
+<div class="level3">
+<pre class="code javascript"><span class="co1">// JS翻转卡片+Callback</span>
+<span class="kw1">var</span> flipCard <span class="sy0">=</span> <span class="kw1">function</span> <span class="br0">&#40;</span>selectedCard<span class="sy0">,</span> callback<span class="br0">&#41;</span><span class="br0">&#123;</span>
+	$<span class="br0">&#40;</span>selectedCard<span class="br0">&#41;</span>.<span class="me1">addClass</span><span class="br0">&#40;</span><span class="st0">&quot;fastflip&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+&nbsp;
+	<span class="kw1">var</span> style <span class="sy0">=</span> document.<span class="me1">body</span>.<span class="me1">style</span><span class="sy0">;</span>
+	<span class="kw1">var</span> time <span class="sy0">=</span> <span class="nu0">0</span><span class="sy0">;</span> 
+	<span class="co1">//webkit、Firefox下执行动画</span>
+	<span class="kw1">if</span><span class="br0">&#40;</span>style.<span class="me1">webkitAnimation</span> <span class="sy0">!==</span> <span class="kw2">undefined</span> <span class="sy0">||</span> style.<span class="me1">MozAnimation</span> <span class="sy0">!==</span> <span class="kw2">undefined</span><span class="br0">&#41;</span><span class="br0">&#123;</span>
+		time <span class="sy0">=</span> <span class="nu0">1001</span><span class="sy0">;</span>
+	<span class="br0">&#125;</span>
+	setTimeout<span class="br0">&#40;</span>doEndFlip<span class="sy0">,</span>time<span class="br0">&#41;</span><span class="sy0">;</span>
+&nbsp;
+	<span class="kw1">function</span> doEndFlip<span class="br0">&#40;</span><span class="br0">&#41;</span><span class="br0">&#123;</span>
+		$<span class="br0">&#40;</span>selectedCard<span class="br0">&#41;</span>.<span class="me1">removeClass</span><span class="br0">&#40;</span><span class="st0">&quot;fastflip&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+		<span class="kw1">typeof</span><span class="br0">&#40;</span>callback<span class="br0">&#41;</span> <span class="sy0">===</span> <span class="st0">'function'</span> <span class="sy0">&amp;&amp;</span> callback.<span class="me1">call</span><span class="br0">&#40;</span>$<span class="br0">&#40;</span>selectedCard<span class="br0">&#41;</span>.<span class="kw1">get</span><span class="br0">&#40;</span><span class="nu0">0</span><span class="br0">&#41;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+	<span class="br0">&#125;</span>
+<span class="br0">&#125;</span><span class="sy0">;</span>
+&nbsp;
+$<span class="br0">&#40;</span><span class="st0">'dl'</span><span class="br0">&#41;</span>.<span class="me1">click</span><span class="br0">&#40;</span><span class="kw1">function</span><span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+	flipCard<span class="br0">&#40;</span>$<span class="br0">&#40;</span><span class="st0">&quot;.act_cards .selected&quot;</span><span class="br0">&#41;</span><span class="sy0">,</span><span class="kw1">function</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="br0">&#123;</span>
+		$<span class="br0">&#40;</span><span class="kw1">this</span><span class="br0">&#41;</span>.<span class="me1">find</span><span class="br0">&#40;</span><span class="st0">&quot;img&quot;</span><span class="br0">&#41;</span>.<span class="me1">show</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+	<span class="br0">&#125;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+	<span class="kw1">return</span> <span class="kw2">false</span><span class="sy0">;</span>
+<span class="br0">&#125;</span><span class="br0">&#41;</span><span class="sy0">;</span></pre>
+
+</div>
+<!-- EDIT13 SECTION "JS：" [2567-] -->

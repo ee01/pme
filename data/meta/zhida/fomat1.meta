@@ -1,0 +1,7 @@
+a:2:{s:7:"current";a:8:{s:4:"date";a:2:{s:7:"created";i:1418972570;s:8:"modified";i:1454531070;}s:7:"creator";s:12:"小猫小虾";s:4:"user";s:10:"xiaomaoxia";s:11:"last_change";b:0;s:5:"title";s:12:"接入指南";s:11:"description";a:2:{s:15:"tableofcontents";a:1:{i:0;a:4:{s:3:"hid";s:12:"接入指南";s:5:"title";s:12:"接入指南";s:4:"type";s:2:"ul";s:5:"level";i:1;}}s:8:"abstract";s:393:"接入指南
+
+官网：<http://developer.baidu.com/wiki/index.php?title=docs/lightapp/standard>
+
+概述
+
+以下过程旨在帮助您如何创建、接入、配置和提交轻应用。在此，您将了解到在百度开放云平台接入轻应用的关键信息和步骤。若想更好的享受轻应用的体验服务，您需要动动手，进行简单的几步操作，总流程图如下：";}s:8:"internal";a:2:{s:5:"cache";b:1;s:3:"toc";b:1;}s:8:"relation";a:1:{s:10:"firstimage";s:0:"";}}s:10:"persistent";a:4:{s:4:"date";a:1:{s:7:"created";i:1418972570;}s:7:"creator";s:12:"小猫小虾";s:4:"user";s:10:"xiaomaoxia";s:11:"last_change";b:0;}}

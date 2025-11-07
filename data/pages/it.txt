@@ -1,0 +1,63 @@
+====== IT哥 ======
+
+===== 活动报销申请（自助） =====
+
+为活跃部门气氛，我们鼓励大家私下联谊活动。
+
+只要你有活动聚会建议，带动大家。钱 不是问题~
+
+<WRAP group>
+<WRAP column round box>填写《活动经费报销单》</WRAP>
+<WRAP column>\\ =></WRAP>
+<WRAP column round box>组织活动</WRAP>
+<WRAP column>\\ =></WRAP>
+<WRAP column round box>填写报销单金额发票部分</WRAP>
+</WRAP>
+
+<WRAP left round download 30%>\\
+{{:活动经费报销单.docx|活动经费报销单.docx}}
+</WRAP>
+
+
+===== 项目奖金申请（自助） =====
+
+<WRAP group>
+<WRAP column round box>项目立项</WRAP>
+<WRAP column>\\ =></WRAP>
+<WRAP column round box>项目进行</WRAP>
+<WRAP column>\\ =></WRAP>
+<WRAP column round box>项目评分</WRAP>
+<WRAP column>\\ =></WRAP>
+<WRAP column round box>激励获得</WRAP>
+</WRAP>
+
+==== 项目立项 ====
+项目立项时需填写《项目立项》表，附到邮件内发送给''wuzy@xm12t.com''，邮件审批通过后完成项目立项。（邮件标题格式：【项目立项申报】XXXX 201507）
+  * 填写参与人员以及奖金分配比例（考虑礼品预算）
+  * 申报金额不可超出预算的150%（实际据评分获得部分激励金额）
+  * 申报金额超出100%时需总监审批
+
+==== 项目进行 ====
+项目进行过程中需经常检查项目进度是否符合预期规划。
+
+==== 项目评分 ====
+在项目结束时，根据项目的完成效率以及完成效果给项目评分，填入《项目立项》表。
+
+==== 激励获得 ====
+=== 月度激励（纵向） ===
+最终获得的项目奖金 = 申报最高奖金额度 * (项目总评分 / 100)
+
+月度激励颁发会上只颁发项目奖金的现金部分
+
+=== 季度激励（横向） ===
+最终获得项目奖金的项目通过横向PK选取项目总评分最高分的项目，获得全额奖金激励。
+
+
+<WRAP group>
+<WRAP column round download 30%>\\
+{{:it:xxx项目立项.docx|}}
+</WRAP>
+<WRAP column round download 30%>\\
+{{:it:团队项目考评_-_产品质量部分_v2.xls|团队项目考评 - 产品质量部分.xls}}
+</WRAP>
+</WRAP>

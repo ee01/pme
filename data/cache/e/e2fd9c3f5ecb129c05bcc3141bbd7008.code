@@ -1,0 +1,10 @@
+{foreach name=mIndexCats_data item=mIndexCat from=$mIndexCats}
+{if $mIndexCat.type eq 1}
+<span class="sc-1">&lt;!-- 如果栏目类型是文字列表，输出此HTML代码块 --&gt;</span>
+{elseif $mIndexCat.type eq 2}
+<span class="sc-1">&lt;!-- 如果栏目类型是图片列表，输出此HTML代码块 --&gt;</span>
+{elseif $mIndexCat.type eq 3}
+<span class="sc-1">&lt;!-- 如果栏目类型是图文列表，输出此HTML代码块 --&gt;</span>
+{elseif $mIndexCat.type eq 4}
+<span class="sc-1">&lt;!-- 如果栏目类型是内容单页，输出此HTML代码块 --&gt;</span>
+{/if}

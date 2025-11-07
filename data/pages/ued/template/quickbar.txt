@@ -1,0 +1,49 @@
+====== Quickbar 快捷导航 ======
+
+===== 配置说明 =====
+
+需在[[ued:template:config#config_模板配置部分|config.ini]]文件下做好对应配置！
+
+==== 调用系统底部导航 ====
+
+=== QuickBar 参数值说明 ===
+
+颜色代码用英文逗号分隔：
+  - 第一个为导航颜色
+  - 第二个为辅助颜色
+  - 第三个为字体颜色
+  - 第四个为图标颜色（不填则与字体颜色相同）
+
+QuickBar高级参数：
+
+用''|''分割参数（''#AAA,#BBB,#FFF|tel''）
+  - 第一个为颜色代码（同上）
+  - 第二个为模块配置（可选tel等英文逗号分隔）\\ 模块配置也可直接填写''#xxx''使用自定模块（每个页面上需要有id为xxx的对应标签）
+
+QuickBar高级参数-模块语法：
+  - 可选模块''#AAA,#BBB,#FFF|tel,totop''：\\ tel 展示咨询热线（目前仅手机支持）\\ totop 回到顶部（目前仅PC支持）
+  - 高级模块''#AAA,#BBB,#FFF|#bbs''：
+在''_footer.html''加入以下代码：
+<code html _footer.html>
+<li id="bbs" class="quickbar_bbs">
+	<a href="{$global.bbsurl}" target="_blank"><div class="quickbar_box"><span class="icon"><i class="icon iconfont">&#xe612;</i></span></div></a>
+</li>
+</code>
+即可在配置文件中配置：''#AAA,#BBB,#FFF|#bbs''
+
+=== QuickBar 模板调用接口 ===
+
+创建id为quickbar-backtotop的HTML标签，即可实现滚动条回到顶部功能。（用原声js的''document.body.scrollTop=0;''无效）
+
+创建id为quickbar-showcats的HTML标签，即可实现调出侧边栏目导航菜单。
+
+创建id为quickbar-share的HTML标签，即可实现调出分享弹框。
+
+例如：<html>&lt;div id="quickbar-showcats"&gt;展开导航&lt;/div&gt;</html>
+==== 自定义开发底部导航 ====
+
+在config.ini的[[ued:template:config#config_模板配置部分|[Config]模板配置部分]] 加入\\
+''QuickBar:custom''
+
+接下来所有底部导航的HTML、CSS、JS代码都须自行开发！\\
+手动开发可参见：《[[ued:template:json#typequickbar|type:quickbar格式的定义与用法]]》

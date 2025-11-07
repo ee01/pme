@@ -1,0 +1,13 @@
+====== 百度厦门 Wiki ======
+
+===== =项目= =====
+{{page>start#项目&noheader&nofooter}}
+
+===== =程序部门= =====
+{{page>start#程序部门&noheader&nofooter}}
+
+===== =UX组= =====
+{{page>start#UX组&noheader&nofooter}}
+
+===== =设计部门= =====
+{{page>start#设计部门&noheader&nofooter}}

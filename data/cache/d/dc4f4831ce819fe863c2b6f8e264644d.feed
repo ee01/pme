@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- generator="FeedCreator 1.7.2-ppt DokuWiki" -->
+<?xml-stylesheet href="https://eexx.me/pme/lib/exe/css.php?s=feed" type="text/css"?>
+<rdf:RDF
+    xmlns="http://purl.org/rss/1.0/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <channel rdf:about="https://eexx.me/pme/feed.php">
+        <title>百度产品部门 知识库 ued:template</title>
+        <description></description>
+        <link>https://eexx.me/pme/</link>
+        <image rdf:resource="https://eexx.me/pme/lib/tpl/vector/images/favicon.ico" />
+       <dc:date>2019-10-20T21:38:12+00:00</dc:date>
+        <items>
+            <rdf:Seq>
+                <rdf:li rdf:resource="https://eexx.me/pme/doku.php?id=ued:template:config&amp;rev=1454531070&amp;do=diff"/>
+                <rdf:li rdf:resource="https://eexx.me/pme/doku.php?id=ued:template:content&amp;rev=1454531070&amp;do=diff"/>
+                <rdf:li rdf:resource="https://eexx.me/pme/doku.php?id=ued:template:footer&amp;rev=1454531070&amp;do=diff"/>
+                <rdf:li rdf:resource="https://eexx.me/pme/doku.php?id=ued:template:global&amp;rev=1470279640&amp;do=diff"/>
+                <rdf:li rdf:resource="https://eexx.me/pme/doku.php?id=ued:template:guide&amp;rev=1454531070&amp;do=diff"/>
+                <rdf:li rdf:resource="https://eexx.me/pme/doku.php?id=ued:template:header&amp;rev=1454531070&amp;do=diff"/>
+                <rdf:li rdf:resource="https://eexx.me/pme/doku.php?id=ued:template:iconfont&amp;rev=1454531070&amp;do=diff"/>
+                <rdf:li rdf:resource="https://eexx.me/pme/doku.php?id=ued:template:includes&amp;rev=1454531070&amp;do=diff"/>
+                <rdf:li rdf:resource="https://eexx.me/pme/doku.php?id=ued:template:index&amp;rev=1454531070&amp;do=diff"/>
+                <rdf:li rdf:resource="https://eexx.me/pme/doku.php?id=ued:template:json&amp;rev=1477291081&amp;do=diff"/>
+                <rdf:li rdf:resource="https://eexx.me/pme/doku.php?id=ued:template:list&amp;rev=1454531070&amp;do=diff"/>
+                <rdf:li rdf:resource="https://eexx.me/pme/doku.php?id=ued:template:mindex&amp;rev=1454531070&amp;do=diff"/>
+                <rdf:li rdf:resource="https://eexx.me/pme/doku.php?id=ued:template:modules&amp;rev=1454531070&amp;do=diff"/>
+                <rdf:li rdf:resource="https://eexx.me/pme/doku.php?id=ued:template:notes&amp;rev=1469521378&amp;do=diff"/>
+                <rdf:li rdf:resource="https://eexx.me/pme/doku.php?id=ued:template:quickbar&amp;rev=1456739929&amp;do=diff"/>
+                <rdf:li rdf:resource="https://eexx.me/pme/doku.php?id=ued:template:searchresult&amp;rev=1454531070&amp;do=diff"/>
+            </rdf:Seq>
+        </items>
+    </channel>
+    <image rdf:about="https://eexx.me/pme/lib/tpl/vector/images/favicon.ico">
+        <title>百度产品部门 知识库</title>
+        <link>https://eexx.me/pme/</link>
+        <url>https://eexx.me/pme/lib/tpl/vector/images/favicon.ico</url>
+    </image>
+    <item rdf:about="https://eexx.me/pme/doku.php?id=ued:template:config&amp;rev=1454531070&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-02-03T20:24:30+00:00</dc:date>
+        <title>ued:template:config</title>
+        <link>https://eexx.me/pme/doku.php?id=ued:template:config&amp;rev=1454531070&amp;do=diff</link>
+        <description>INI文件的语法与使用
+
+格式规范
+
+符合通用ini文件格式规范！
+
+内容规范
+
+[Template] 模板信息部分
+
+	*  Name：模板名称 
+	*  Description：模板的简短介绍
+	*  URL：模板介绍的网址
+	*  Version：版本号
+
+[Config] 模板配置部分</description>
+    </item>
+    <item rdf:about="https://eexx.me/pme/doku.php?id=ued:template:content&amp;rev=1454531070&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-02-03T20:24:30+00:00</dc:date>
+        <title>ued:template:content</title>
+        <link>https://eexx.me/pme/doku.php?id=ued:template:content&amp;rev=1454531070&amp;do=diff</link>
+        <description>变量语法查询：content-news.html
+
+仅在content-xxx.html页面调用
+
+	*  {$article.title} 文章标题
+	*  {$article.content} 文章内容
+	*  {$article.description} 文章简介
+	*  {$article.image} 文章特色图地址（同等于$article.images数组的第一张）</description>
+    </item>
+    <item rdf:about="https://eexx.me/pme/doku.php?id=ued:template:footer&amp;rev=1454531070&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-02-03T20:24:30+00:00</dc:date>
+        <title>ued:template:footer</title>
+        <link>https://eexx.me/pme/doku.php?id=ued:template:footer&amp;rev=1454531070&amp;do=diff</link>
+        <description>变量语法查询：_footer.html
+
+此页面非独立HTML页面，只是部分html代码区块。
+
+为了简化重复代码，而统一写到此文件中，再使用方式引入本文件！
+
+{include}：引入文件
+
+加入文件使用include引用路径,注意起步从“./”开始，即相对于当前目录开始，如：</description>
+    </item>
+    <item rdf:about="https://eexx.me/pme/doku.php?id=ued:template:global&amp;rev=1470279640&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-08-04T03:00:40+00:00</dc:date>
+        <title>ued:template:global</title>
+        <link>https://eexx.me/pme/doku.php?id=ued:template:global&amp;rev=1470279640&amp;do=diff</link>
+        <description>公共变量
+
+切图过程中打开控制台，刷新页面即可输出出所有数据变量。
+
+--- --- --- --- --- --- --- --- ---
+
+{include}：引入文件
+
+加入文件使用include引用路径,注意起步从“./”开始，即相对于当前目录开始，如：</description>
+    </item>
+    <item rdf:about="https://eexx.me/pme/doku.php?id=ued:template:guide&amp;rev=1454531070&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-02-03T20:24:30+00:00</dc:date>
+        <title>ued:template:guide</title>
+        <link>https://eexx.me/pme/doku.php?id=ued:template:guide&amp;rev=1454531070&amp;do=diff</link>
+        <description>统一平台模板切图入门
+
+ [点此下载：下载最新的切图模板DEMO]
+更新时间：2015.12.17
+
+NO静态切图！升级你的作品~
+
+统一平台的“切图”与“套页面”工作是同步进行的，去除切图人员与套页面人员的沟通环节，缩短工期。
+
+统一平台的模板前端开发可在切图过程中调用统一平台数据，
+使用标签语法时可同时实现与切静态页面类似的“</description>
+    </item>
+    <item rdf:about="https://eexx.me/pme/doku.php?id=ued:template:header&amp;rev=1454531070&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-02-03T20:24:30+00:00</dc:date>
+        <title>ued:template:header</title>
+        <link>https://eexx.me/pme/doku.php?id=ued:template:header&amp;rev=1454531070&amp;do=diff</link>
+        <description>变量语法查询：_header.html
+
+此页面非独立HTML页面，只是部分html代码区块。
+
+为了简化重复代码，而统一写到此文件中，再使用方式引入本文件！
+
+{include}：引入文件
+
+加入文件使用include引用路径,注意起步从“./”开始，即相对于当前目录开始，如：</description>
+    </item>
+    <item rdf:about="https://eexx.me/pme/doku.php?id=ued:template:iconfont&amp;rev=1454531070&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-02-03T20:24:30+00:00</dc:date>
+        <title>ued:template:iconfont</title>
+        <link>https://eexx.me/pme/doku.php?id=ued:template:iconfont&amp;rev=1454531070&amp;do=diff</link>
+        <description>IconFont 字体库</description>
+    </item>
+    <item rdf:about="https://eexx.me/pme/doku.php?id=ued:template:includes&amp;rev=1454531070&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-02-03T20:24:30+00:00</dc:date>
+        <title>ued:template:includes</title>
+        <link>https://eexx.me/pme/doku.php?id=ued:template:includes&amp;rev=1454531070&amp;do=diff</link>
+        <description>变量语法查询：_xxxx.html
+
+此页面非独立HTML页面，只是部分html代码区块。
+
+为了简化重复代码，而统一写到此文件中，再使用方式引入本文件！
+
+文件名命名规范
+
+必须以_下划线开头的文件名！</description>
+    </item>
+    <item rdf:about="https://eexx.me/pme/doku.php?id=ued:template:index&amp;rev=1454531070&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-02-03T20:24:30+00:00</dc:date>
+        <title>ued:template:index</title>
+        <link>https://eexx.me/pme/doku.php?id=ued:template:index&amp;rev=1454531070&amp;do=diff</link>
+        <description>变量语法查询：index.html（PC）
+
+
+
+变量语法查询：index.html（手机）
+
+
+
+①②放入_header.html文件中，利用include方式引入到index.html文件中；
+
+	*  ①{$logo} ：网站logo
+	*  ②{$navs} ：网站导航栏
+
+③需要文件配合，因为轮滚图的默认图片需要在文件中定义，并用变量引用：
+
+	*  ③
+
+④⑤⑥⑦⑧⑨⑾使用到的也是</description>
+    </item>
+    <item rdf:about="https://eexx.me/pme/doku.php?id=ued:template:json&amp;rev=1477291081&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-10-24T06:38:01+00:00</dc:date>
+        <title>ued:template:json</title>
+        <link>https://eexx.me/pme/doku.php?id=ued:template:json&amp;rev=1477291081&amp;do=diff</link>
+        <description>JSON文件的语法与使用
+
+数据格式
+
+
+{
+	&quot;title&quot;: {
+		&quot;value&quot;: &quot;XXX企业&quot;,
+		&quot;description&quot;: &quot;顶部大标题&quot;,
+		&quot;type&quot;: &quot;text&quot;
+	}
+}
+
+
+每个数据都必须包含value、description和type项。
+
+description描述： 用来描述其在页面的位置，如“顶部轮滚图”“左侧公告”“中部第二个新闻列表”</description>
+    </item>
+    <item rdf:about="https://eexx.me/pme/doku.php?id=ued:template:list&amp;rev=1454531070&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-02-03T20:24:30+00:00</dc:date>
+        <title>ued:template:list</title>
+        <link>https://eexx.me/pme/doku.php?id=ued:template:list&amp;rev=1454531070&amp;do=diff</link>
+        <description>变量语法查询：list-xxx.html
+
+内容单页：list-page.html
+
+	*  {$list.name} 栏目名称
+	*  {$list.en_name} 导航英文名
+	*  {$list.icon} 栏目图标（iconfont技术，可改大小可换色）
+	*  {$list.image} 栏目图片
+	*  {$list.link} 栏目链接(一般用于“查看更多”按钮)</description>
+    </item>
+    <item rdf:about="https://eexx.me/pme/doku.php?id=ued:template:mindex&amp;rev=1454531070&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-02-03T20:24:30+00:00</dc:date>
+        <title>ued:template:mindex</title>
+        <link>https://eexx.me/pme/doku.php?id=ued:template:mindex&amp;rev=1454531070&amp;do=diff</link>
+        <description>变量语法查询：index.html（手机）
+
+
+
+变量语法查询：index.html（PC）
+
+
+
+如果几乎每个页面都包含①②③，可以将①②③放入_header.html文件中，利用include方式引入到index.html文件中；
+
+	*  ①{$logo} ：网站logo
+	*  ②
+
+②需要文件配合，因为轮滚图的默认图片需要在</description>
+    </item>
+    <item rdf:about="https://eexx.me/pme/doku.php?id=ued:template:modules&amp;rev=1454531070&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-02-03T20:24:30+00:00</dc:date>
+        <title>ued:template:modules</title>
+        <link>https://eexx.me/pme/doku.php?id=ued:template:modules&amp;rev=1454531070&amp;do=diff</link>
+        <description>统一平台模板模块库
+
+以下所有模块使用方法：
+
+	*  下载后解压html文件及样式放入模板开发目录
+	*  在任意页面使用include方法引入以下划线开头的html文件
+	*  即可！
+
+基础模块
+
+	*  导航栏，不固定个数自适宽度
+	*  左侧栏目列表
+	*  友情链接
+	*  列表页翻页
+
+图片类模块</description>
+    </item>
+    <item rdf:about="https://eexx.me/pme/doku.php?id=ued:template:notes&amp;rev=1469521378&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-07-26T08:22:58+00:00</dc:date>
+        <title>ued:template:notes</title>
+        <link>https://eexx.me/pme/doku.php?id=ued:template:notes&amp;rev=1469521378&amp;do=diff</link>
+        <description>统一平台模板开发常见问题与注意事项
+
+	*  模板中不要出现任何静态的文字，如2015-01-28。除非是一些more确定之类按钮的名称。如需使用，请在json中定义或使用系统变量，参见：JSON格式与数据变量定义
+	*  HTML文件中请勿包含任何JS代码，将其并入.js文件中调用</description>
+    </item>
+    <item rdf:about="https://eexx.me/pme/doku.php?id=ued:template:quickbar&amp;rev=1456739929&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-02-29T09:58:49+00:00</dc:date>
+        <title>ued:template:quickbar</title>
+        <link>https://eexx.me/pme/doku.php?id=ued:template:quickbar&amp;rev=1456739929&amp;do=diff</link>
+        <description>Quickbar 快捷导航
+
+配置说明
+
+需在config.ini文件下做好对应配置！
+
+调用系统底部导航
+
+QuickBar 参数值说明
+
+颜色代码用英文逗号分隔：
+
+	*  第一个为导航颜色
+	*  第二个为辅助颜色
+	*  第三个为字体颜色</description>
+    </item>
+    <item rdf:about="https://eexx.me/pme/doku.php?id=ued:template:searchresult&amp;rev=1454531070&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-02-03T20:24:30+00:00</dc:date>
+        <title>ued:template:searchresult</title>
+        <link>https://eexx.me/pme/doku.php?id=ued:template:searchresult&amp;rev=1454531070&amp;do=diff</link>
+        <description>变量语法查询：searchresult.html
+
+搜素框
+
+在其他页面（或头部）定义好搜索框：
+
+form的action使用$search_action变量输出
+
+搜索input的name=“s”
+
+
+&lt;form action=&quot;{$search_action}&quot; method=&quot;GET&quot;&gt;
+	&lt;input type=&quot;text&quot; name=&quot;s&quot; value=&quot;&quot; /&gt;
+	&lt;input type=&quot;submit&quot; value=&quot;搜索&quot; /&gt;
+&lt;/form&gt;</description>
+    </item>
+</rdf:RDF>

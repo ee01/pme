@@ -1,0 +1,9 @@
+====== 直达号服务组件测试地址 ======
+
+服务组件测试地址:   
+
+http://m.baidu.com/lightapp/{appid}?debug=1
+
+把链接中的{appid}换成具体的ID即可。如：
+
+http://m.baidu.com/lightapp/5977527?debug=1

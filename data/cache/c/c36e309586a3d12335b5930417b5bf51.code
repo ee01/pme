@@ -1,0 +1,5 @@
+checkLogin<span class="br0">&#40;</span><span class="kw1">function</span><span class="br0">&#40;</span>json<span class="br0">&#41;</span> <span class="br0">&#123;</span>
+	<span class="co1">// 已登录，执行操作</span>
+<span class="br0">&#125;</span><span class="sy0">,</span> <span class="kw1">function</span><span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+	<span class="co1">// 未登录操作，弹出提示等</span>
+<span class="br0">&#125;</span><span class="br0">&#41;</span><span class="sy0">;</span>

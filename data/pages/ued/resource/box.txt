@@ -1,0 +1,120 @@
+====== 自封装弹窗插件 ======
+
+===== 引入文件： =====
+
+<code html>
+<script type="text/javascript" src="http://common.mn.sina.com.cn/public/resource/lib/jquery.floatDiv.js"></script>
+<script type="text/javascript" src="http://common.mn.sina.com.cn/public/resource/lib/mask.js"></script>
+<script type="text/javascript" src="http://common.mn.sina.com.cn/public/resource/lib/jquery.box.js"></script>
+</code>
+
+=== HTML: ===
+
+<code html>
+<div id="box-rule" class="box pngCss">
+	<div class="box-close"><a href="javascript:;" class="pngCss rotate"></a></div>
+	<div class="box-body">
+		// 弹窗主体
+	</div>
+</div>
+</code>
+
+
+===== JS： =====
+
+<code javascript>
+// 弹窗弹出
+$('#rule_btn').click(function() {
+	ruleBox.show();
+});
+
+// 弹窗定义
+var ruleBox = $('#box-rule').box({
+	close_selector: '.box-close',
+	submit_selector: '.box-submit',
+	mask: {
+		opacity: 0.8
+	},
+	init: function() {
+		// 初始化弹窗
+	},
+	before: function() {
+		// 弹窗弹出前操作；return false 无法弹出
+	},
+	after: function() {
+		// 弹窗弹出后操作
+	},
+	submit: function() {
+		// 弹窗数据提交操作；return false 提交失败，弹窗不关闭
+	},
+	close: function() {
+		// 弹窗关闭后操作
+	}
+});
+</code>
+
+
+===== CSS： =====
+<code css>
+/* 弹窗 */
+.box { display:none; position:absolute; width:600px; height:300px; z-index:300; }
+.box .box-close { position:absolute; right:10px; top:20px; width:24px; height:24px; overflow:hidden; }
+.box .box-close a { display:block; width:20px; height:20px; margin:2px auto 0; }
+.box .box-body { padding: 20px 10px; }
+.box .box-submit { position:absolute; right:60px; bottom:20px; width:100px; height:30px; }
+</code>
+<code css>
+#box-rule { width:400px; height:600px; background-image:url(images/box-rule.png); }
+#box-rule .box-close { right:-30px; top:0; width:30px; height:30px; }
+#box-rule .box-close a { width:17px; height:17px; background-image:url(images/box-close.png); }
+#box-rule .box-submit { right:60px; bottom:20px; width:100px; height:30px; background-image:url(images/box-submit.png); }
+#box-rule .box-body { padding:100px 50px 0; }
+</code>
+
+===== 进阶用法： =====
+
+==== 弹出前判断登录、加载内容等操作 ====
+
+<code javascript>
+
+var signupBox = $('#box-signup').box({
+	before: function() {
+		if (!checkLogin(false)) {
+			return false;	// 阻止弹出
+		}else{
+			checkLogin(function() {
+				// ...
+			});
+		}
+	}
+});
+
+</code>
+
+==== 先定义弹窗，再增加方法参数 ====
+
+<code javascript>
+
+// 先定义弹窗
+var ruleBox = $('#box-rule').box({
+	close: function() {
+		// 清除数据
+		$(this).removeData('xxx_id');
+	}
+});
+// 之后补充弹窗的before操作函数
+$('#rule_btn').click(function() {
+	// 弹出前填充数据
+	ruleBox.before(function() {
+		// 加载数据
+		$(this).data('xxx_id', '123');
+		// 填入数据
+		$(this).find('input').val(ruleBox.data('xxx_id'));
+	});
+	// 弹出
+	ruleBox.show();
+});
+
+</code>
+注：弹窗支持before、after、close、submit的函数传入''ruleBox.before(function(){...})''，及直接运行''ruleBox.before()''
+注：init、before、after、close、submit函数参数内可用''this''代表弹窗DOM Element

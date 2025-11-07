@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- generator="FeedCreator 1.7.2-ppt DokuWiki" -->
+<?xml-stylesheet href="https://eexx.me/pme/lib/exe/css.php?s=feed" type="text/css"?>
+<rdf:RDF
+    xmlns="http://purl.org/rss/1.0/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <channel rdf:about="https://eexx.me/pme/feed.php">
+        <title>百度产品部门 知识库 ued</title>
+        <description></description>
+        <link>https://eexx.me/pme/</link>
+        <image rdf:resource="https://eexx.me/pme/lib/tpl/vector/images/favicon.ico" />
+       <dc:date>2019-10-18T06:02:38+00:00</dc:date>
+        <items>
+            <rdf:Seq>
+                <rdf:li rdf:resource="https://eexx.me/pme/doku.php?id=ued:css&amp;rev=1454531070&amp;do=diff"/>
+                <rdf:li rdf:resource="https://eexx.me/pme/doku.php?id=ued:html&amp;rev=1454531070&amp;do=diff"/>
+                <rdf:li rdf:resource="https://eexx.me/pme/doku.php?id=ued:js&amp;rev=1454531070&amp;do=diff"/>
+                <rdf:li rdf:resource="https://eexx.me/pme/doku.php?id=ued:resource&amp;rev=1454531070&amp;do=diff"/>
+                <rdf:li rdf:resource="https://eexx.me/pme/doku.php?id=ued:template&amp;rev=1481099020&amp;do=diff"/>
+                <rdf:li rdf:resource="https://eexx.me/pme/doku.php?id=ued:temple&amp;rev=1454531070&amp;do=diff"/>
+            </rdf:Seq>
+        </items>
+    </channel>
+    <image rdf:about="https://eexx.me/pme/lib/tpl/vector/images/favicon.ico">
+        <title>百度产品部门 知识库</title>
+        <link>https://eexx.me/pme/</link>
+        <url>https://eexx.me/pme/lib/tpl/vector/images/favicon.ico</url>
+    </image>
+    <item rdf:about="https://eexx.me/pme/doku.php?id=ued:css&amp;rev=1454531070&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-02-03T20:24:30+00:00</dc:date>
+        <title>ued:css</title>
+        <link>https://eexx.me/pme/doku.php?id=ued:css&amp;rev=1454531070&amp;do=diff</link>
+        <description>CSS 规范 分类: Alice 文档库 
+
+本规范概述
+
+制定本规范的目的在于使我们的CSS代码更加易于维护和重用，从而提升效率执行本规范时建议的流程 建议使用D(esign)C(oding)D(ebug)V(alidate)R(oundup)，即DCDVR的流程。首先需要规划样式并分为共有样式和页面个性化样式，然后才开始编码，编码的同时进行Debug，Validate和代码片断的总结，而不是在所有模板都完成后才进行这三个步骤。</description>
+    </item>
+    <item rdf:about="https://eexx.me/pme/doku.php?id=ued:html&amp;rev=1454531070&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-02-03T20:24:30+00:00</dc:date>
+        <title>ued:html</title>
+        <link>https://eexx.me/pme/doku.php?id=ued:html&amp;rev=1454531070&amp;do=diff</link>
+        <description>HTML规范
+
+代码DEMO
+&lt;!DOCTYPE HTML&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;&lt;/title&gt;
+&lt;script type=&quot;text/javascript&quot; main=&quot;script.js&quot; src=&quot;common.js?load=png&quot;&gt;&lt;/script&gt;
+&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;style.css&quot; /&gt;
+&lt;/head&gt;
+&lt;body&gt;
+	&lt;header id=&quot;top&quot;&gt;
+	&lt;/header&gt;
+	&lt;section id=&quot;main&quot;&gt;
+		&lt;section id=&quot;block&quot;&gt;
+			&lt;div class=&quot;block-title&quot;&gt;&lt;/div&gt;
+			&lt;div class=&quot;block-content&quot;&gt;
+				&lt;div class=&quot;lottery&quot;&gt;
+					&lt;div class=&quot;lottery-prizes&quot;&gt;&lt;/div&gt;
+					&lt;a class=&quot;lottery-button&quot;&gt;&lt;/a&gt;
+				&lt;/div&gt;
+			&lt;/div&gt;
+		&lt;/section&gt;
+	&lt;/sec…</description>
+    </item>
+    <item rdf:about="https://eexx.me/pme/doku.php?id=ued:js&amp;rev=1454531070&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-02-03T20:24:30+00:00</dc:date>
+        <title>ued:js</title>
+        <link>https://eexx.me/pme/doku.php?id=ued:js&amp;rev=1454531070&amp;do=diff</link>
+        <description>JS规范
+
+	*  Javascript模块化编程（一）：模块的写法 &lt;http://www.ruanyifeng.com/blog/2012/10/javascript_module.html&gt;
+
+	*  Javascript模块化编程（二）：AMD规范 &lt;http://www.ruanyifeng.com/blog/2012/10/asynchronous_module_definition.html&gt;</description>
+    </item>
+    <item rdf:about="https://eexx.me/pme/doku.php?id=ued:resource&amp;rev=1454531070&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-02-03T20:24:30+00:00</dc:date>
+        <title>ued:resource</title>
+        <link>https://eexx.me/pme/doku.php?id=ued:resource&amp;rev=1454531070&amp;do=diff</link>
+        <description>=公共引用资源=
+
+CSS公共资源
+
+	*  global.css 公共CSS样式表
+	*  css3pack.css CSS3 特效封装
+	*  图片自适应总结
+
+JS公共资源
+
+弹窗类
+
+	*  box 自定义弹窗（推荐）
+	*  dialog 弹出对话框插件
+	*  mask 弹窗遮罩以及按钮Loading
+
+消息提示类
+
+	*  dialog 弹出对话框插件</description>
+    </item>
+    <item rdf:about="https://eexx.me/pme/doku.php?id=ued:template&amp;rev=1481099020&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-12-07T08:23:40+00:00</dc:date>
+        <title>ued:template</title>
+        <link>https://eexx.me/pme/doku.php?id=ued:template&amp;rev=1481099020&amp;do=diff</link>
+        <description>统一平台模板切图规范
+
+高级调试方法：可在html文件中输入{debug}调试输出页面所有可用变量。（允许弹窗不被拦截）
+
+模板文件列表
+
+本页Ctrl+F查找Smarty数据变量？
+
+或点击下方文件名可直接进入查阅可用变量</description>
+    </item>
+    <item rdf:about="https://eexx.me/pme/doku.php?id=ued:temple&amp;rev=1454531070&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-02-03T20:24:30+00:00</dc:date>
+        <title>ued:temple</title>
+        <link>https://eexx.me/pme/doku.php?id=ued:temple&amp;rev=1454531070&amp;do=diff</link>
+        <description>此页面已迁移至《统一平台模板切图规范》</description>
+    </item>
+</rdf:RDF>

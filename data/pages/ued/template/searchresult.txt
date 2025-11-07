@@ -1,0 +1,18 @@
+====== 变量语法查询：searchresult.html ======
+
+===== 搜素框 =====
+
+在其他页面（或头部）定义好搜索框：\\
+form的action使用''$search_action''变量输出\\
+搜索input的''name="s"''
+
+<code html _header.html>
+<form action="{$search_action}" method="GET">
+	<input type="text" name="s" value="" />
+	<input type="submit" value="搜索" />
+</form>
+</code>
+
+{{page>ued:template:global#search_搜索结果}}
+{{page>ued:template:global#page_links_列表分页项}}
+{{page>ued:template:global#posnavs_面包屑导航}}

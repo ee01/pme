@@ -1,0 +1,10 @@
+====== Picasa关联PSD美化图标版 ======
+
+===== 文档 =====
+
+{{:design:picasa关联psd美化图标版.docx|}}
+
+===== 工具 =====
+
+{{:design:picasa关联psd美化图标版_打开前先编辑最后两行ps安装路径_v2.rar|}}
+

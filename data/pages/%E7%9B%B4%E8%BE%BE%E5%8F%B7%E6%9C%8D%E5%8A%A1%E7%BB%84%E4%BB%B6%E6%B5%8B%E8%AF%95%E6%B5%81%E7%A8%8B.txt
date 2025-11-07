@@ -1,0 +1,9 @@
+====== 直达号服务组件测试流程 ======
+
+直达号服务组件测试地址：
+
+http://m.baidu.com/lightapp/{appid}?debug=1
+
+把{appid}换成直达号的具体ID就可以了
+
+比如：http://m.baidu.com/lightapp/5977527?debug=1

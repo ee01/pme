@@ -1,0 +1,12 @@
+<span class="br0">&#123;</span>
+	<span class="st0">&quot;list1&quot;</span><span class="sy0">:</span> <span class="br0">&#123;</span>
+		<span class="st0">&quot;value&quot;</span><span class="sy0">:</span> <span class="br0">&#123;</span><span class="br0">&#125;</span><span class="sy0">,</span>
+		<span class="st0">&quot;description&quot;</span><span class="sy0">:</span> <span class="st0">&quot;第一个文字列表&quot;</span><span class="sy0">,</span>
+		<span class="st0">&quot;type&quot;</span><span class="sy0">:</span> <span class="st0">&quot;list&quot;</span><span class="sy0">,</span>
+		<span class="st0">&quot;config&quot;</span><span class="sy0">:</span> <span class="br0">&#123;</span>
+			<span class="st0">&quot;width&quot;</span><span class="sy0">:</span> <span class="nu0">200</span><span class="sy0">,</span>
+			<span class="st0">&quot;height&quot;</span><span class="sy0">:</span> <span class="nu0">120</span><span class="sy0">,</span>
+			<span class="st0">&quot;star_only&quot;</span><span class="sy0">:</span> <span class="kw2">true</span>
+		<span class="br0">&#125;</span>
+	<span class="br0">&#125;</span>
+<span class="br0">&#125;</span>

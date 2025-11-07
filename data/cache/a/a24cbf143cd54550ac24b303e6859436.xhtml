@@ -1,0 +1,60 @@
+
+<p>
+<a href="/lib/exe/fetch.php?media=zhida:%E7%99%BE%E5%BA%A6oauth%E8%B5%84%E6%96%99.docx" class="media mediafile mf_docx" title="zhida:百度oauth资料.docx (500.3 KB)">百度oauth资料.docx</a>
+</p>
+
+<h1 class="sectionedit1" id="oauth">oauth</h1>
+<div class="level1">
+
+<p>
+官方地址：<a href="http://developer.baidu.com/wiki/index.php?title=docs/oauth" class="urlextern" target="_blank" title="http://developer.baidu.com/wiki/index.php?title=docs/oauth"  rel="nofollow">http://developer.baidu.com/wiki/index.php?title=docs/oauth</a>
+</p>
+
+</div>
+<!-- EDIT1 SECTION "oauth" [36-130] -->
+<h2 class="sectionedit2" id="简单demo">简单demo</h2>
+<div class="level2">
+
+<p>
+ if (!isset($_GET[&#039;code&#039;])){
+</p>
+<pre class="code">  //获取code
+  $url = &#039;https://openapi.baidu.com/oauth/2.0/authorize?response_type=code&amp;client_id=u7wpBCazLrhquiQKDmyS3pDg&amp;redirect_uri=http://wx.dn160.com.cn/hehe/a.php&#039;;
+Header(&quot;Location: $url&quot;); </pre>
+
+<p>
+}else{
+</p>
+<pre class="code"> //获取access_token
+ $url1 = &#039;https://openapi.baidu.com/oauth/2.0/token?grant_type=authorization_code&amp;code=&#039;.$_GET[&#039;code&#039;].&#039;&amp;client_id=u7wpBCazLrhquiQKDmyS3pDg&amp;client_secret=IbhZn0Y4Y6t0uNNLyQRvhCfK3C7AHWIE&amp;redirect_uri=http://wx.dn160.com.cn/hehe/a.php&#039;;
+ $data1 = json_decode(curlGet($url1));
+  header ( &#039;Content-type: application/json; charset=utf-8&#039; );
+//当前用户信息
+$url11 =&#039;https://openapi.baidu.com/rest/2.0/passport/users/getLoggedInUser?access_token=&#039;.$data1-&gt;access_token;
+$data = json_decode(curlGet($url11));</pre>
+<pre class="code">echo &#039;恭喜您 &#039;.$data-&gt;uname.&#039; 中了一等奖&#039;;
+ </pre>
+
+<p>
+}
+function curlGet($url, $method = &#039;get&#039;, $data = &#039;&#039;)
+</p>
+<pre class="code">{
+	$ch     = curl_init();
+	$header = &quot;Accept-Charset: utf-8&quot;;
+	curl_setopt($ch, CURLOPT_URL, $url);
+	curl_setopt($ch, CURLOPT_CUSTOMREQUEST, strtoupper($method));
+	curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, FALSE);
+	curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, FALSE);
+	curl_setopt($curl, CURLOPT_HTTPHEADER, $header);
+	curl_setopt($ch, CURLOPT_USERAGENT, &#039;Mozilla/5.0 (compatible; MSIE 5.01; Windows NT 5.0)&#039;);
+	curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
+	curl_setopt($ch, CURLOPT_AUTOREFERER, 1);
+	curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
+	curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+	$temp = curl_exec($ch);
+	return $temp;
+}</pre>
+
+</div>
+<!-- EDIT2 SECTION "简单demo" [131-] -->

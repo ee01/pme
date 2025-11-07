@@ -1,0 +1,44 @@
+<span class="br0">&#123;</span>
+	<span class="st0">&quot;second_navs&quot;</span><span class="sy0">:</span> <span class="br0">&#123;</span>
+		<span class="st0">&quot;value&quot;</span><span class="sy0">:</span> <span class="br0">&#123;</span><span class="br0">&#125;</span><span class="sy0">,</span>
+		<span class="st0">&quot;description&quot;</span><span class="sy0">:</span> <span class="st0">&quot;第二导航（底部）&quot;</span><span class="sy0">,</span>
+		<span class="st0">&quot;type&quot;</span><span class="sy0">:</span> <span class="st0">&quot;navs&quot;</span><span class="sy0">,</span>
+		<span class="st0">&quot;config&quot;</span><span class="sy0">:</span> <span class="br0">&#123;</span>
+			<span class="st0">&quot;limit&quot;</span><span class="sy0">:</span> <span class="nu0">8</span>
+		<span class="br0">&#125;</span>
+	<span class="br0">&#125;</span>
+<span class="br0">&#125;</span>
+&nbsp;
+__config：__ 
+  <span class="sy0">*</span> filter：筛选栏目类型。默认值：<span class="st0">&quot;ALL&quot;</span>（大写）代表筛选所有栏目。也可填写<span class="st0">&quot;list&quot;</span>仅允许列表型栏目，或者<span class="st0">&quot;list,page&quot;</span>筛选多种类型栏目。
+  <span class="sy0">*</span> limit：限制输出<span class="br0">&#91;</span>#typenav<span class="sy0">|</span>type<span class="sy0">:</span>navs<span class="br0">&#93;</span>的个数
+  <span class="sy0">*</span> nav_width：栏目图片宽度（如有引用栏目图片时填写）
+  <span class="sy0">*</span> nav_height：栏目图片高度（如有引用栏目图片时填写）
+  <span class="sy0">*</span> data_limit：限制每个栏目列表数据输出的个数（默认<span class="nu0">0</span>，不输出任何列表数据）
+  <span class="sy0">*</span> width：每个栏目列表数据图片宽度（如有引用列表数据图片时填写）
+  <span class="sy0">*</span> height：每个栏目列表数据图片高度（如有引用列表数据图片时填写）
+&nbsp;
+调用形式：
+<span class="sy0">&lt;</span>file html _footer.<span class="me1">html</span><span class="sy0">&gt;</span>
+<span class="sy0">&lt;</span>footer<span class="sy0">&gt;</span>
+	<span class="sy0">&lt;!--</span> 第二导航 <span class="sy0">--&gt;</span>
+	<span class="sy0">&lt;</span>nav<span class="sy0">&gt;</span>
+		<span class="sy0">&lt;</span>ul <span class="kw5">class</span><span class="sy0">=</span><span class="st0">&quot;clearfix&quot;</span><span class="sy0">&gt;</span>
+			<span class="br0">&#123;</span>foreach item<span class="sy0">=</span>nav from<span class="sy0">=</span>$index.<span class="me1">second_navs</span><span class="br0">&#125;</span>
+			<span class="sy0">&lt;</span>li <span class="kw5">class</span><span class="sy0">=</span><span class="st0">&quot;{if $nav.current}current{/if}&quot;</span><span class="sy0">&gt;&lt;</span>a href<span class="sy0">=</span><span class="st0">&quot;{$nav.link}&quot;</span><span class="sy0">&gt;</span><span class="br0">&#123;</span>$nav.<span class="me1">name</span><span class="br0">&#125;</span><span class="sy0">&lt;/</span>a<span class="sy0">&gt;&lt;/</span>li<span class="sy0">&gt;</span>
+			<span class="br0">&#123;</span><span class="sy0">/</span>foreach<span class="br0">&#125;</span>
+		<span class="sy0">&lt;/</span>ul<span class="sy0">&gt;</span>
+	<span class="sy0">&lt;/</span>nav<span class="sy0">&gt;</span>
+<span class="sy0">&lt;/</span>footer<span class="sy0">&gt;</span>
+<span class="sy0">&lt;!--</span> 输出：
+<span class="sy0">&lt;</span>footer<span class="sy0">&gt;</span>
+	<span class="sy0">&lt;</span>nav<span class="sy0">&gt;</span>
+		<span class="sy0">&lt;</span>ul <span class="kw5">class</span><span class="sy0">=</span><span class="st0">&quot;clearfix&quot;</span><span class="sy0">&gt;</span>
+			<span class="sy0">&lt;</span>li<span class="sy0">&gt;&lt;</span>a href<span class="sy0">=</span><span class="st0">&quot;list-text.html&quot;</span><span class="sy0">&gt;</span>新闻动态<span class="sy0">&lt;/</span>a<span class="sy0">&gt;&lt;/</span>li<span class="sy0">&gt;</span>
+			<span class="sy0">&lt;</span>li <span class="kw5">class</span><span class="sy0">=</span><span class="st0">&quot;current&quot;</span><span class="sy0">&gt;&lt;</span>a href<span class="sy0">=</span><span class="st0">&quot;list-imagetext.html&quot;</span><span class="sy0">&gt;</span>产品中心<span class="sy0">&lt;/</span>a<span class="sy0">&gt;&lt;/</span>li<span class="sy0">&gt;</span>
+			<span class="sy0">&lt;</span>li<span class="sy0">&gt;&lt;</span>a href<span class="sy0">=</span><span class="st0">&quot;list-text.html&quot;</span><span class="sy0">&gt;</span>产品动态<span class="sy0">&lt;/</span>a<span class="sy0">&gt;&lt;/</span>li<span class="sy0">&gt;</span>
+			<span class="sy0">&lt;</span>li<span class="sy0">&gt;&lt;</span>a href<span class="sy0">=</span><span class="st0">&quot;list-page.html&quot;</span><span class="sy0">&gt;</span>公司简介<span class="sy0">&lt;/</span>a<span class="sy0">&gt;&lt;/</span>li<span class="sy0">&gt;</span>
+		<span class="sy0">&lt;/</span>ul<span class="sy0">&gt;</span>
+	<span class="sy0">&lt;/</span>nav<span class="sy0">&gt;</span>
+<span class="sy0">&lt;/</span>footer<span class="sy0">&gt;</span>
+<span class="sy0">--&gt;</span>

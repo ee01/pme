@@ -1,0 +1,8 @@
+====== 变量语法查询：_header.html ======
+
+此页面非独立HTML页面，只是部分html代码区块。\\
+为了简化重复代码，而统一写到此文件中，再使用[[#include_引入文件|include]]方式引入本文件！
+
+{{page>ued:template:global#include_引入文件}}
+{{page>ued:template:global#logo_网站logo}}
+{{page>ued:template:global#navs_网站导航栏}}

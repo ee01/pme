@@ -1,0 +1,1 @@
+<span class="kw1">var</span> mask <span class="sy0">=</span> <span class="kw1">new</span> Mask<span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>

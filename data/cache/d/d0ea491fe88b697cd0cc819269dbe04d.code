@@ -1,0 +1,1 @@
+{shareExt shareText=$article.content|unescape:&quot;html&quot;|strip_tags|truncate:140:&quot;…&quot; sharePic=$article.image}

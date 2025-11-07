@@ -1,0 +1,9 @@
+====== 直达号 ======
+这几个小东西---
+直达号创建流程：http://developer.baidu.com/wiki/index.php?title=docs/direct/directguide
+
+商家认证填写指南：http://developer.baidu.com/wiki/index.php?title=docs/direct/authentication
+
+关键词填写指南：  http://developer.baidu.com/wiki/index.php?title=docs/direct/keyword
+
+政务直达绿色通道：http://developer.baidu.com/wiki/index.php?title=docs/direct/govlstd

@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- generator="FeedCreator 1.7.2-ppt DokuWiki" -->
+<?xml-stylesheet href="http://pme.eexx.me/lib/exe/css.php?s=feed" type="text/css"?>
+<rdf:RDF
+    xmlns="http://purl.org/rss/1.0/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <channel rdf:about="http://pme.eexx.me/feed.php">
+        <title>百度产品部门 知识库 zhida</title>
+        <description></description>
+        <link>http://pme.eexx.me/</link>
+        <image rdf:resource="http://pme.eexx.me/lib/tpl/vector/images/favicon.ico" />
+       <dc:date>2018-01-21T03:33:59+00:00</dc:date>
+        <items>
+            <rdf:Seq>
+                <rdf:li rdf:resource="http://pme.eexx.me/doku.php?id=zhida:addzhida&amp;rev=1454531070&amp;do=diff"/>
+                <rdf:li rdf:resource="http://pme.eexx.me/doku.php?id=zhida:auth&amp;rev=1454531070&amp;do=diff"/>
+                <rdf:li rdf:resource="http://pme.eexx.me/doku.php?id=zhida:blend_api&amp;rev=1454531070&amp;do=diff"/>
+                <rdf:li rdf:resource="http://pme.eexx.me/doku.php?id=zhida:data&amp;rev=1454531070&amp;do=diff"/>
+                <rdf:li rdf:resource="http://pme.eexx.me/doku.php?id=zhida:error&amp;rev=1454531070&amp;do=diff"/>
+                <rdf:li rdf:resource="http://pme.eexx.me/doku.php?id=zhida:error1&amp;rev=1454531070&amp;do=diff"/>
+                <rdf:li rdf:resource="http://pme.eexx.me/doku.php?id=zhida:fomat&amp;rev=1454531070&amp;do=diff"/>
+                <rdf:li rdf:resource="http://pme.eexx.me/doku.php?id=zhida:fomat1&amp;rev=1454531070&amp;do=diff"/>
+                <rdf:li rdf:resource="http://pme.eexx.me/doku.php?id=zhida:minfind&amp;rev=1454531070&amp;do=diff"/>
+                <rdf:li rdf:resource="http://pme.eexx.me/doku.php?id=zhida:minfind1&amp;rev=1454531070&amp;do=diff"/>
+                <rdf:li rdf:resource="http://pme.eexx.me/doku.php?id=zhida:minfind2&amp;rev=1454531070&amp;do=diff"/>
+                <rdf:li rdf:resource="http://pme.eexx.me/doku.php?id=zhida:minfind3&amp;rev=1454531070&amp;do=diff"/>
+                <rdf:li rdf:resource="http://pme.eexx.me/doku.php?id=zhida:oauth&amp;rev=1454531070&amp;do=diff"/>
+                <rdf:li rdf:resource="http://pme.eexx.me/doku.php?id=zhida:ordercenter&amp;rev=1454531070&amp;do=diff"/>
+                <rdf:li rdf:resource="http://pme.eexx.me/doku.php?id=zhida:passport&amp;rev=1454531070&amp;do=diff"/>
+                <rdf:li rdf:resource="http://pme.eexx.me/doku.php?id=zhida:qing&amp;rev=1454531070&amp;do=diff"/>
+                <rdf:li rdf:resource="http://pme.eexx.me/doku.php?id=zhida:shixian&amp;rev=1454531070&amp;do=diff"/>
+                <rdf:li rdf:resource="http://pme.eexx.me/doku.php?id=zhida:zhidadetaik&amp;rev=1454531070&amp;do=diff"/>
+            </rdf:Seq>
+        </items>
+    </channel>
+    <image rdf:about="http://pme.eexx.me/lib/tpl/vector/images/favicon.ico">
+        <title>百度产品部门 知识库</title>
+        <link>http://pme.eexx.me/</link>
+        <url>http://pme.eexx.me/lib/tpl/vector/images/favicon.ico</url>
+    </image>
+    <item rdf:about="http://pme.eexx.me/doku.php?id=zhida:addzhida&amp;rev=1454531070&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-02-03T20:24:30+00:00</dc:date>
+        <title>zhida:addzhida</title>
+        <link>http://pme.eexx.me/doku.php?id=zhida:addzhida&amp;rev=1454531070&amp;do=diff</link>
+        <description>服务商开通直达号流程
+
+1. 用开通接口添加直达号
+
+请于php环境下测试：
+
+2.直达号开通流程
+
+一、材料准备
+ 客户Logo  、   直达词
+ 客户网址（手机站）、联系邮箱、联系电话
+ 客户简介（20~200字） 
+ 寻找对应的客户所属类目ID（文件可以HI上给我留言索取 
+ HI:厦门技术）</description>
+    </item>
+    <item rdf:about="http://pme.eexx.me/doku.php?id=zhida:auth&amp;rev=1454531070&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-02-03T20:24:30+00:00</dc:date>
+        <title>zhida:auth</title>
+        <link>http://pme.eexx.me/doku.php?id=zhida:auth&amp;rev=1454531070&amp;do=diff</link>
+        <description>oauth
+
+官方地址：&lt;http://developer.baidu.com/wiki/index.php?title=docs/oauth&gt;</description>
+    </item>
+    <item rdf:about="http://pme.eexx.me/doku.php?id=zhida:blend_api&amp;rev=1454531070&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-02-03T20:24:30+00:00</dc:date>
+        <title>zhida:blend_api</title>
+        <link>http://pme.eexx.me/doku.php?id=zhida:blend_api&amp;rev=1454531070&amp;do=diff</link>
+        <description>Blend API
+
+一个百度手机上经常用到的js接口：&lt;http://clouda.baidu.com/blendapi/introduction/introduce&gt;
+
+使用方法
+
+首先
+
+导入这个js  
+
+
+&lt;script name=&quot;baidu-tc-cerfication&quot; type=&quot;text/javascript&quot; charset=&quot;utf-8&quot; src=&quot;http://apps.bdimg.com/blend/loader.js&quot;&gt;&lt;/script&gt;
+
+
+然后导入model</description>
+    </item>
+    <item rdf:about="http://pme.eexx.me/doku.php?id=zhida:data&amp;rev=1454531070&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-02-03T20:24:30+00:00</dc:date>
+        <title>zhida:data</title>
+        <link>http://pme.eexx.me/doku.php?id=zhida:data&amp;rev=1454531070&amp;do=diff</link>
+        <description>现有资料
+
+1.轻应用解释文档
+
+&lt;http://developer.baidu.com/wiki/index.php?title=docs/lightapp&gt;
+
+2.直达号解释文档
+
+&lt;http://developer.baidu.com/wiki/index.php?title=docs/direct&gt;
+
+3.轻应用接入一点小资料（轻应用接入文档.pdf）上传不上，请到 链接: &lt;http://pan.baidu.com/s/1i0naY&gt; 密码: 6osn
+
+4.直达号一点小资料（直达号接入指南.pdf）   
+
+5.一个百度的一个签名算法，觉得还可以的，针对有份报告（订单接口文档/用户在线登记预约后线上支付（v1.0.0）.docx）…</description>
+    </item>
+    <item rdf:about="http://pme.eexx.me/doku.php?id=zhida:error&amp;rev=1454531070&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-02-03T20:24:30+00:00</dc:date>
+        <title>zhida:error</title>
+        <link>http://pme.eexx.me/doku.php?id=zhida:error&amp;rev=1454531070&amp;do=diff</link>
+        <description>问题
+
+
+模拟订单支付，参考文档（在线登记预约线下交易订单api_v1.0.0_.docx）
+
+用e帅的账号拿到的授权值，用oauth拿到的值,有更新的话就会过期。  具体授权方式指请移步 &lt;http://developer.baidu.com/wiki/index.php?title=docs/oauth/authorization&gt;，可看我整理文档 
+
+
+{&quot;expires_in&quot;:2592000,&quot;refresh_token&quot;:&quot;22.ab726715114cb04a14cf80e25cdf18fc.315360000.1734243449.4077135496-3798147&quot;,&quot;access_token&quot;:&quot;21.b7da8a5f9ebc622f2d4cd195755ded7f.2592000.1421475449.4077135496-3798147&quot;,&quot;session_secret&quot;:&quot;3a404b6a328ab62058a4b9b8b40d9cba&quot;,&quot;session_key&quot;:&quot;9mnRJqYCfsJx66Ei8YMsXWewxZEprJBkGEk7wZCthzUPo…</description>
+    </item>
+    <item rdf:about="http://pme.eexx.me/doku.php?id=zhida:error1&amp;rev=1454531070&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-02-03T20:24:30+00:00</dc:date>
+        <title>zhida:error1</title>
+        <link>http://pme.eexx.me/doku.php?id=zhida:error1&amp;rev=1454531070&amp;do=diff</link>
+        <description>Blend API
+
+这个域名：&lt;http://clouda.baidu.com/blendapi/introduction/introduce&gt; 的内容
+
+账号还是其他调用操作都是报错
+其中一部分代码情况
+&lt;html xmlns=“&lt;http://www.w3.org/1999/xhtml&gt;”&gt;
+&lt;head&gt;
+	&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=utf-8&quot; /&gt;
+	&lt;title&gt;&lt;/title&gt;
+	&lt;script name=&quot;baidu-tc-cerfication&quot; type=&quot;text/javascript&quot; charset=&quot;utf-8&quot; data-appid=&quot;3798147&quot; src=&quot;http://apps.bdimg.com/blend/loader.js&quot;&gt;&lt;/script&gt;
+	&lt;script type=&quot;text/javascript&quot; src=&quot;jquery.min.js&quot;&gt;&lt;/script&gt;
+	&lt;script type=&quot;text/javascript&quot;&gt;
+		$(docum…</description>
+    </item>
+    <item rdf:about="http://pme.eexx.me/doku.php?id=zhida:fomat&amp;rev=1454531070&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-02-03T20:24:30+00:00</dc:date>
+        <title>zhida:fomat</title>
+        <link>http://pme.eexx.me/doku.php?id=zhida:fomat&amp;rev=1454531070&amp;do=diff</link>
+        <description>移动轻应用接入规范
+
+参考文档：&lt;http://developer.baidu.com/wiki/index.php?title=docs/lightapp/standard&gt;
+
+产品规范
+
+保证应用内容、设计、性能、安全合法并符合《开发者中心轻应用服务协议》
+不论是使用平台提供的模板，还是使用自有的站点或应用，内容均需要符合对站点内容的规范
+接入Android、iPhone平台的应用需要支持HTML5标准</description>
+    </item>
+    <item rdf:about="http://pme.eexx.me/doku.php?id=zhida:fomat1&amp;rev=1454531070&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-02-03T20:24:30+00:00</dc:date>
+        <title>zhida:fomat1</title>
+        <link>http://pme.eexx.me/doku.php?id=zhida:fomat1&amp;rev=1454531070&amp;do=diff</link>
+        <description>接入指南
+
+官网：&lt;http://developer.baidu.com/wiki/index.php?title=docs/lightapp/standard&gt;
+
+概述
+
+以下过程旨在帮助您如何创建、接入、配置和提交轻应用。在此，您将了解到在百度开放云平台接入轻应用的关键信息和步骤。若想更好的享受轻应用的体验服务，您需要动动手，进行简单的几步操作，总流程图如下：</description>
+    </item>
+    <item rdf:about="http://pme.eexx.me/doku.php?id=zhida:minfind&amp;rev=1454531070&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-02-03T20:24:30+00:00</dc:date>
+        <title>zhida:minfind</title>
+        <link>http://pme.eexx.me/doku.php?id=zhida:minfind&amp;rev=1454531070&amp;do=diff</link>
+        <description>针对近来做订单中心的小发现
+
+页面  &lt;http://developer.baidu.com/wiki/index.php?title=docs/direct/CRM&gt; 中的订单管理发现了这句话：
+
+订单管理页面显示截止到当前商户直达号的全部订单（需直达号开通交易）。
+
+这是什么情况？？需要先开通支付，才能有订单操作？</description>
+    </item>
+    <item rdf:about="http://pme.eexx.me/doku.php?id=zhida:minfind1&amp;rev=1454531070&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-02-03T20:24:30+00:00</dc:date>
+        <title>zhida:minfind1</title>
+        <link>http://pme.eexx.me/doku.php?id=zhida:minfind1&amp;rev=1454531070&amp;do=diff</link>
+        <description>小发现1
+  根据资料，要做直达号得需要一个轻应用，直达号是在轻应用的基础上成立，当然，直达号是针对wap端的。轻应用的页面设计标准是需要html5。百度我们调用的数据主要技术大部分以js技术为准，当然还有以web接口对接。</description>
+    </item>
+    <item rdf:about="http://pme.eexx.me/doku.php?id=zhida:minfind2&amp;rev=1454531070&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-02-03T20:24:30+00:00</dc:date>
+        <title>zhida:minfind2</title>
+        <link>http://pme.eexx.me/doku.php?id=zhida:minfind2&amp;rev=1454531070&amp;do=diff</link>
+        <description>小发现2
+
+一些小图片</description>
+    </item>
+    <item rdf:about="http://pme.eexx.me/doku.php?id=zhida:minfind3&amp;rev=1454531070&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-02-03T20:24:30+00:00</dc:date>
+        <title>zhida:minfind3</title>
+        <link>http://pme.eexx.me/doku.php?id=zhida:minfind3&amp;rev=1454531070&amp;do=diff</link>
+        <description>小发现3
+
+针对目前我们公司直达号问题，主要是底部服务导航没有预留空间（为45px），百度服务组件导航与原来底部导航冲突。另一个原因为关键词有歧义。（这一个可以邮件向百度申诉）</description>
+    </item>
+    <item rdf:about="http://pme.eexx.me/doku.php?id=zhida:oauth&amp;rev=1454531070&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-02-03T20:24:30+00:00</dc:date>
+        <title>zhida:oauth</title>
+        <link>http://pme.eexx.me/doku.php?id=zhida:oauth&amp;rev=1454531070&amp;do=diff</link>
+        <description>oauth
+
+官方地址：&lt;http://developer.baidu.com/wiki/index.php?title=docs/oauth&gt;
+
+简单demo
+
+ if (!isset($_GET['code'])){
+  //获取code
+  $url = 'https://openapi.baidu.com/oauth/2.0/authorize?response_type=code&amp;client_id=u7wpBCazLrhquiQKDmyS3pDg&amp;redirect_uri=http://wx.dn160.com.cn/hehe/a.php';
+Header(&quot;Location: $url&quot;);</description>
+    </item>
+    <item rdf:about="http://pme.eexx.me/doku.php?id=zhida:ordercenter&amp;rev=1454531070&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-02-03T20:24:30+00:00</dc:date>
+        <title>zhida:ordercenter</title>
+        <link>http://pme.eexx.me/doku.php?id=zhida:ordercenter&amp;rev=1454531070&amp;do=diff</link>
+        <description>订单中心接入
+
+1、为什么要接入订单中心？
+
+（1）接入订单中心，用户就可即时对订单进行查询；
+（2）用户可通过订单中心对客户关系进行管理；
+（3）用户可通过订单中进行统计分析，包括访订阅分析、订单分析等等；
+（4）用户可通过订单中心进行一系列的活动推广；</description>
+    </item>
+    <item rdf:about="http://pme.eexx.me/doku.php?id=zhida:passport&amp;rev=1454531070&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-02-03T20:24:30+00:00</dc:date>
+        <title>zhida:passport</title>
+        <link>http://pme.eexx.me/doku.php?id=zhida:passport&amp;rev=1454531070&amp;do=diff</link>
+        <description>1、直达号提交页面：&lt;http://www.fjzhida.com/tijiao/&gt;
+
+2、直达号服务商：&lt;http://zhida.baidu.com/service/console/list&gt;
+ 账号：chnpch@sohu.com
+ 密码：456321
+3、G宝盆后台：&lt;http://ht.gbpen.cn/superadmin/&gt;
+ 账号：kf_yangjingyuan
+ 密码：yangjingyuan
+4、厦门百付通授权账号
+ 账号：fjzhida@eexx.me
+ 密码：a123456</description>
+    </item>
+    <item rdf:about="http://pme.eexx.me/doku.php?id=zhida:qing&amp;rev=1454531070&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-02-03T20:24:30+00:00</dc:date>
+        <title>zhida:qing</title>
+        <link>http://pme.eexx.me/doku.php?id=zhida:qing&amp;rev=1454531070&amp;do=diff</link>
+        <description>轻应用
+
+官方：&lt;http://developer.baidu.com/wiki/index.php?title=docs/lightapp&gt;</description>
+    </item>
+    <item rdf:about="http://pme.eexx.me/doku.php?id=zhida:shixian&amp;rev=1454531070&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-02-03T20:24:30+00:00</dc:date>
+        <title>zhida:shixian</title>
+        <link>http://pme.eexx.me/doku.php?id=zhida:shixian&amp;rev=1454531070&amp;do=diff</link>
+        <description>目前可用订单管理
+
+附上几张图片说明  
+
+
+
+
+.net实现代码</description>
+    </item>
+    <item rdf:about="http://pme.eexx.me/doku.php?id=zhida:zhidadetaik&amp;rev=1454531070&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-02-03T20:24:30+00:00</dc:date>
+        <title>zhida:zhidadetaik</title>
+        <link>http://pme.eexx.me/doku.php?id=zhida:zhidadetaik&amp;rev=1454531070&amp;do=diff</link>
+        <description>直达号
+
+这几个小东西---
+直达号创建流程：&lt;http://developer.baidu.com/wiki/index.php?title=docs/direct/directguide&gt;
+
+商家认证填写指南：&lt;http://developer.baidu.com/wiki/index.php?title=docs/direct/authentication&gt;
+
+关键词填写指南：  &lt;http://developer.baidu.com/wiki/index.php?title=docs/direct/keyword&gt;
+
+政务直达绿色通道：&lt;http://developer.baidu.com/wiki/index.php?title=docs/direct/govlstd&gt;</description>
+    </item>
+</rdf:RDF>

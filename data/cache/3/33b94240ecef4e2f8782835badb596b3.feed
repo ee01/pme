@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- generator="FeedCreator 1.7.2-ppt DokuWiki" -->
+<?xml-stylesheet href="https://eexx.me/pme/lib/exe/css.php?s=feed" type="text/css"?>
+<rdf:RDF
+    xmlns="http://purl.org/rss/1.0/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <channel rdf:about="https://eexx.me/pme/feed.php">
+        <title>百度产品部门 知识库 ued:resource</title>
+        <description></description>
+        <link>https://eexx.me/pme/</link>
+        <image rdf:resource="https://eexx.me/pme/lib/tpl/vector/images/favicon.ico" />
+       <dc:date>2021-02-07T06:41:14+00:00</dc:date>
+        <items>
+            <rdf:Seq>
+                <rdf:li rdf:resource="https://eexx.me/pme/doku.php?id=ued:resource:box&amp;rev=1454531070&amp;do=diff"/>
+                <rdf:li rdf:resource="https://eexx.me/pme/doku.php?id=ued:resource:crossajax&amp;rev=1454531070&amp;do=diff"/>
+                <rdf:li rdf:resource="https://eexx.me/pme/doku.php?id=ued:resource:css3pack&amp;rev=1454531070&amp;do=diff"/>
+                <rdf:li rdf:resource="https://eexx.me/pme/doku.php?id=ued:resource:dialog&amp;rev=1454531070&amp;do=diff"/>
+                <rdf:li rdf:resource="https://eexx.me/pme/doku.php?id=ued:resource:global&amp;rev=1454531070&amp;do=diff"/>
+                <rdf:li rdf:resource="https://eexx.me/pme/doku.php?id=ued:resource:imgautosize&amp;rev=1454531070&amp;do=diff"/>
+                <rdf:li rdf:resource="https://eexx.me/pme/doku.php?id=ued:resource:jcarousellite&amp;rev=1454531070&amp;do=diff"/>
+                <rdf:li rdf:resource="https://eexx.me/pme/doku.php?id=ued:resource:jscroll&amp;rev=1454531070&amp;do=diff"/>
+                <rdf:li rdf:resource="https://eexx.me/pme/doku.php?id=ued:resource:loading&amp;rev=1454531070&amp;do=diff"/>
+                <rdf:li rdf:resource="https://eexx.me/pme/doku.php?id=ued:resource:mask&amp;rev=1454531070&amp;do=diff"/>
+                <rdf:li rdf:resource="https://eexx.me/pme/doku.php?id=ued:resource:pagination&amp;rev=1454531070&amp;do=diff"/>
+                <rdf:li rdf:resource="https://eexx.me/pme/doku.php?id=ued:resource:slidesjs&amp;rev=1454531070&amp;do=diff"/>
+                <rdf:li rdf:resource="https://eexx.me/pme/doku.php?id=ued:resource:smallslider&amp;rev=1454531070&amp;do=diff"/>
+                <rdf:li rdf:resource="https://eexx.me/pme/doku.php?id=ued:resource:spasticnav&amp;rev=1454531070&amp;do=diff"/>
+                <rdf:li rdf:resource="https://eexx.me/pme/doku.php?id=ued:resource:uploadify&amp;rev=1454531070&amp;do=diff"/>
+            </rdf:Seq>
+        </items>
+    </channel>
+    <image rdf:about="https://eexx.me/pme/lib/tpl/vector/images/favicon.ico">
+        <title>百度产品部门 知识库</title>
+        <link>https://eexx.me/pme/</link>
+        <url>https://eexx.me/pme/lib/tpl/vector/images/favicon.ico</url>
+    </image>
+    <item rdf:about="https://eexx.me/pme/doku.php?id=ued:resource:box&amp;rev=1454531070&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-02-03T20:24:30+00:00</dc:date>
+        <title>ued:resource:box</title>
+        <link>https://eexx.me/pme/doku.php?id=ued:resource:box&amp;rev=1454531070&amp;do=diff</link>
+        <description>自封装弹窗插件
+
+引入文件：
+
+
+&lt;script type=&quot;text/javascript&quot; src=&quot;http://common.mn.sina.com.cn/public/resource/lib/jquery.floatDiv.js&quot;&gt;&lt;/script&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;http://common.mn.sina.com.cn/public/resource/lib/mask.js&quot;&gt;&lt;/script&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;http://common.mn.sina.com.cn/public/resource/lib/jquery.box.js&quot;&gt;&lt;/script&gt;</description>
+    </item>
+    <item rdf:about="https://eexx.me/pme/doku.php?id=ued:resource:crossajax&amp;rev=1454531070&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-02-03T20:24:30+00:00</dc:date>
+        <title>ued:resource:crossajax</title>
+        <link>https://eexx.me/pme/doku.php?id=ued:resource:crossajax&amp;rev=1454531070&amp;do=diff</link>
+        <description>跨域采用POST提交数据
+
+引入文件：
+&lt;script src=&quot;http://common.mn.sina.com.cn/public/resource/lib/crossajax/jquery.swfobject.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;http://common.mn.sina.com.cn/public/resource/lib/crossajax/jquery.crossajax.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;</description>
+    </item>
+    <item rdf:about="https://eexx.me/pme/doku.php?id=ued:resource:css3pack&amp;rev=1454531070&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-02-03T20:24:30+00:00</dc:date>
+        <title>ued:resource:css3pack</title>
+        <link>https://eexx.me/pme/doku.php?id=ued:resource:css3pack&amp;rev=1454531070&amp;do=diff</link>
+        <description>CSS3特效封装
+
+引入文件
+&lt;link type=&quot;text/css&quot; rel=&quot;stylesheet&quot; href=&quot;http://common.mn.sina.com.cn/public/resource/css/css3pack.css&quot; /&gt;
+旋转（多用于关闭按钮）：
+
+class：
+rotate
+浮动放大（多用于提交按钮）
+
+class：
+largen</description>
+    </item>
+    <item rdf:about="https://eexx.me/pme/doku.php?id=ued:resource:dialog&amp;rev=1454531070&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-02-03T20:24:30+00:00</dc:date>
+        <title>ued:resource:dialog</title>
+        <link>https://eexx.me/pme/doku.php?id=ued:resource:dialog&amp;rev=1454531070&amp;do=diff</link>
+        <description>弹出对话框
+
+引用方法一
+
+引入文件
+
+
+&lt;link type=&quot;text/css&quot; rel=&quot;stylesheet&quot; href=&quot;http://common.mn.sina.com.cn/public/resource/lib/artDialog/skins/simple.css&quot; /&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;http://common.mn.sina.com.cn/public/resource/lib/artDialog/jquery.artDialog.js&quot;&gt;&lt;/script&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;http://common.mn.sina.com.cn/public/resource/lib/artDialog/artDialog.plugins.js&quot;&gt;&lt;/script&gt;</description>
+    </item>
+    <item rdf:about="https://eexx.me/pme/doku.php?id=ued:resource:global&amp;rev=1454531070&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-02-03T20:24:30+00:00</dc:date>
+        <title>ued:resource:global</title>
+        <link>https://eexx.me/pme/doku.php?id=ued:resource:global&amp;rev=1454531070&amp;do=diff</link>
+        <description>global.css
+
+Reset Css
+
+针对不同浏览器的默认样式不同，重置CSS默认样式统一。
+
+基础常用样式
+
+详见 global.css 源文件
+
+引入文件
+&lt;link rel=&quot;stylesheet&quot; rev=&quot;stylesheet&quot; href=&quot;http://chanpin.xm12t.com.cn/css/global.css&quot; type=&quot;text/css&quot; /&gt;</description>
+    </item>
+    <item rdf:about="https://eexx.me/pme/doku.php?id=ued:resource:imgautosize&amp;rev=1454531070&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-02-03T20:24:30+00:00</dc:date>
+        <title>ued:resource:imgautosize</title>
+        <link>https://eexx.me/pme/doku.php?id=ued:resource:imgautosize&amp;rev=1454531070&amp;do=diff</link>
+        <description>图片自适应总结
+
+
+***********************************************************************/
+/*logo图片
+**给外层的h1定一个最大的宽高
+**比如宽200px，高100px
+*/
+h1.logo{
+	position: relative;/*这个定位一定要有的*/
+	width: 200px;
+	height: 100px;
+	overflow: hidden;/*设置超出隐藏*/
+}
+h1.logo a img{
+	/*让图片垂直居中*/
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	max-height: 100%;
+	max-width: 100%;
+	margin: auto 0;
+}
+/************************************************************************/
+
+
+/*list-image图片列表
+**使用display:inline-block布局,定宽不定高
+**因为图片之间会有间隙…</description>
+    </item>
+    <item rdf:about="https://eexx.me/pme/doku.php?id=ued:resource:jcarousellite&amp;rev=1454531070&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-02-03T20:24:30+00:00</dc:date>
+        <title>ued:resource:jcarousellite</title>
+        <link>https://eexx.me/pme/doku.php?id=ued:resource:jcarousellite&amp;rev=1454531070&amp;do=diff</link>
+        <description>简单图片滚动jQuery插件
+
+引入文件
+
+
+&lt;script type=&quot;text/javascript&quot; src=&quot;http://common.mn.sina.com.cn/public/resource/lib/jquery.jcarousellite.js&quot;&gt;&lt;/script&gt;
+
+
+JS
+
+
+
+$('#prizes .photos-content').jCarouselLite({
+	btnPrev: '#prizes a.photos-prev',
+	btnNext: '#prizes a.photos-next',
+	visible: 3,
+	auto: 3000,
+	speed: 1000
+}).css({visibility:&quot;visible&quot;});</description>
+    </item>
+    <item rdf:about="https://eexx.me/pme/doku.php?id=ued:resource:jscroll&amp;rev=1454531070&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-02-03T20:24:30+00:00</dc:date>
+        <title>ued:resource:jscroll</title>
+        <link>https://eexx.me/pme/doku.php?id=ued:resource:jscroll&amp;rev=1454531070&amp;do=diff</link>
+        <description>图片滚动条插件
+
+引用方法
+$(&quot;#tt&quot;).jscroll();
+DEMO地址：&lt;http://js.alixixi.com/demo/656/&gt;</description>
+    </item>
+    <item rdf:about="https://eexx.me/pme/doku.php?id=ued:resource:loading&amp;rev=1454531070&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-02-03T20:24:30+00:00</dc:date>
+        <title>ued:resource:loading</title>
+        <link>https://eexx.me/pme/doku.php?id=ued:resource:loading&amp;rev=1454531070&amp;do=diff</link>
+        <description>Loading
+
+数据载入loading
+
+HTML
+
+
+&lt;ul&gt;
+	&lt;center&gt;&lt;img src=&quot;http://minnan.sinaimg.cn/utils/images/loading_large.gif&quot; /&gt;&lt;/center&gt;
+&lt;/ul&gt;
+
+
+JS
+
+
+
+$.getJSON('http://...?callback=?', function(json) {
+	if (json.err == 0) {
+		var html_data = '';
+		$.each(json.data, function() {
+			html_data += // ...
+		});
+		$('ul').html('').append(html_data);
+	}
+});</description>
+    </item>
+    <item rdf:about="https://eexx.me/pme/doku.php?id=ued:resource:mask&amp;rev=1454531070&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-02-03T20:24:30+00:00</dc:date>
+        <title>ued:resource:mask</title>
+        <link>https://eexx.me/pme/doku.php?id=ued:resource:mask&amp;rev=1454531070&amp;do=diff</link>
+        <description>引入文件:
+
+
+&lt;script type=&quot;text/javascript&quot; src=&quot;http://common.mn.sina.com.cn/public/resource/lib/jquery.floatDiv.js&quot;&gt;&lt;/script&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;http://common.mn.sina.com.cn/public/resource/lib/mask.js&quot;&gt;&lt;/script&gt;
+
+
+弹窗遮罩层</description>
+    </item>
+    <item rdf:about="https://eexx.me/pme/doku.php?id=ued:resource:pagination&amp;rev=1454531070&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-02-03T20:24:30+00:00</dc:date>
+        <title>ued:resource:pagination</title>
+        <link>https://eexx.me/pme/doku.php?id=ued:resource:pagination&amp;rev=1454531070&amp;do=diff</link>
+        <description>翻页插件
+
+引入文件：
+
+
+&lt;link type=&quot;text/css&quot; rel=&quot;stylesheet&quot; href=&quot;http://common.mn.sina.com.cn/public/resource/lib/pagination/pagination.css&quot; /&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;http://common.mn.sina.com.cn/public/resource/lib/pagination/jquery.pagination.js&quot;&gt;&lt;/script&gt;</description>
+    </item>
+    <item rdf:about="https://eexx.me/pme/doku.php?id=ued:resource:slidesjs&amp;rev=1454531070&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-02-03T20:24:30+00:00</dc:date>
+        <title>ued:resource:slidesjs</title>
+        <link>https://eexx.me/pme/doku.php?id=ued:resource:slidesjs&amp;rev=1454531070&amp;do=diff</link>
+        <description>SlidesJS 图片滚动插件
+
+引入文件
+
+
+&lt;script type=&quot;text/javascript&quot; src=&quot;http://common.mn.sina.com.cn/public/resource/lib/jquery.slides.js&quot;&gt;&lt;/script&gt;
+
+
+JS
+
+
+var slidesjs = $('.slidesjs').slidesjs({
+	width: 900,
+	height: 350,
+	play: {
+		active: false,
+		auto: true,
+		interval: 6000,
+		pauseOnHover: true,
+		restartDelay: 2000
+	}
+}).css({visibility:&quot;visible&quot;, overflow:&quot;visible&quot;});</description>
+    </item>
+    <item rdf:about="https://eexx.me/pme/doku.php?id=ued:resource:smallslider&amp;rev=1454531070&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-02-03T20:24:30+00:00</dc:date>
+        <title>ued:resource:smallslider</title>
+        <link>https://eexx.me/pme/doku.php?id=ued:resource:smallslider&amp;rev=1454531070&amp;do=diff</link>
+        <description>SmallSlider 图片轮播插件
+
+引入文件
+
+JS
+
+
+$('#exp1').smallslider();
+
+
+html
+
+
+
+&lt;div id=&quot;exp1&quot; class=&quot;smallslider&quot;&gt;
+  &lt;ul&gt;
+	 &lt;li&gt;&lt;a href=&quot;#&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;rs/images/001.jpg&quot; title=&quot;&quot; alt=&quot;图片标题1&quot; /&gt;&lt;/a&gt;&lt;/li&gt;
+	 &lt;li&gt;&lt;a href=&quot;#&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;rs/images/002.jpg&quot; title=&quot;&quot; alt=&quot;图片标题2&quot; /&gt;&lt;/a&gt;&lt;/li&gt;
+	 &lt;li&gt;&lt;a href=&quot;#&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;rs/images/003.jpg&quot; title=&quot;&quot; alt=&quot;图片标题3&quot; /&gt;&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;</description>
+    </item>
+    <item rdf:about="https://eexx.me/pme/doku.php?id=ued:resource:spasticnav&amp;rev=1454531070&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-02-03T20:24:30+00:00</dc:date>
+        <title>ued:resource:spasticnav</title>
+        <link>https://eexx.me/pme/doku.php?id=ued:resource:spasticnav&amp;rev=1454531070&amp;do=diff</link>
+        <description>导航栏滑动滚动插件
+
+引入文件：
+&lt;script type=&quot;text/javascript&quot; src=&quot;http://common.mn.sina.com.cn/public/resource/lib/jquery.spasticNav.js&quot;&gt;&lt;/script&gt;
+HTML:
+  &lt;ul id=&quot;nav&quot;&gt;
+      &lt;li class=&quot;selected&quot;&gt;&lt;a href=&quot;index.html&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;about.html&quot;&gt;About&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Blog&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#&quot;&gt;More About My Portfolio&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Contact&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;</description>
+    </item>
+    <item rdf:about="https://eexx.me/pme/doku.php?id=ued:resource:uploadify&amp;rev=1454531070&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-02-03T20:24:30+00:00</dc:date>
+        <title>ued:resource:uploadify</title>
+        <link>https://eexx.me/pme/doku.php?id=ued:resource:uploadify&amp;rev=1454531070&amp;do=diff</link>
+        <description>FLASH上传文件
+
+注意！！ 一定要放到服务器上才能测试效果！
+
+引入文件：
+&lt;script src=&quot;http://common.mn.sina.com.cn/public/resource/lib/uploadify/jquery.uploadify.min.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
+&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;http://common.mn.sina.com.cn/public/resource/lib/uploadify/uploadify.css&quot;&gt;</description>
+    </item>
+</rdf:RDF>

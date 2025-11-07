@@ -1,0 +1,98 @@
+
+<h1 class="sectionedit1" id="变量语法查询_xxxxhtml">变量语法查询：_xxxx.html</h1>
+<div class="level1">
+
+<p>
+此页面非独立HTML页面，只是部分html代码区块。<br/>
+
+为了简化重复代码，而统一写到此文件中，再使用<a href="#include_引入文件" title="ued:template:includes ↵" class="wikilink1">include</a>方式引入本文件！
+</p>
+
+</div>
+<!-- EDIT1 SECTION "变量语法查询：_xxxx.html" [1-237] -->
+<h2 class="sectionedit2" id="文件名命名规范">文件名命名规范</h2>
+<div class="level2">
+
+<p>
+必须以<code>_</code>下划线开头的文件名！
+</p>
+
+<p>
+注：被<a href="#include_引入文件" title="ued:template:includes ↵" class="wikilink1">include</a>的文件必须以<code>_</code>下划线开头。<br/>
+
+除系统规定的html文件名外，任意<code>_xxxx.html</code>都将以相同的方式生成静态文件推送到静态服务器；<br/>
+
+而其他<code>xxxx.html</code>文件将被推送到交互服务器作实时动态解析，如searchresult.html、feedback.html…
+</p>
+
+</div>
+<!-- EDIT2 SECTION "文件名命名规范" [238-656] -->
+<h2 class="sectionedit3" id="include_引入文件">include_引入文件</h2>
+<div class="level2">
+
+</div>
+<!-- EDIT4 PLUGIN_INCLUDE_START "ued:template:global" [0-] --><div class="plugin_include_content plugin_include__ued:template:global">
+<div class="level2">
+
+<p>
+加入文件使用include引用路径,注意起步从“./”开始，即相对于当前目录开始，如：
+</p>
+<pre class="code html4strict">{include file=&quot;./_header.html&quot;}</pre>
+
+</div>
+<div class="inclmeta level2">
+	<a href="/doku.php?id=ued:template:global#include_引入文件" class="wikilink1 permalink" title="ued:template:global#include_引入文件" rel="bookmark">{include}：引入文件</a>
+	&middot; <abbr class="published" title="2016-08-04T03:00:40Z">2016/08/04 03:00</abbr>
+</div>
+<!-- EDIT5 PLUGIN_INCLUDE_END "ued:template:global" [0-] --></div>
+<div class="level2">
+
+</div>
+<!-- EDIT3 SECTION "include_引入文件" [657-750] -->
+<h2 class="sectionedit6" id="范例">范例</h2>
+<div class="level2">
+
+<p>
+例如手机模板的侧边菜单(栏目)导航在每个页面中都需要展示，则创建一个公共文件_nav.html，代码如下：
+</p>
+<dl class="file">
+<dt><a href="/doku.php?do=export_code&amp;id=ued:template:includes&amp;codeblock=1" title="下载片段" class="mediafile mf_html">_nav.html</a></dt>
+<dd><pre class="code file html4strict"><span class="sc-1">&lt;!-- 侧边栏目导航 --&gt;</span>
+<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/div.html"><span class="kw2">div</span></a> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;class page-prev&quot;</span>&gt;</span>
+  <span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/h1.html"><span class="kw2">h1</span></a> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;class-top&quot;</span>&gt;&lt;<a target="_blank" href="http://december.com/html/4/element/span.html"><span class="kw2">span</span></a> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;class-close&quot;</span>&gt;</span>×<span class="sc2">&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/span.html"><span class="kw2">span</span></a>&gt;</span>快速导航<span class="sc2">&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/h1.html"><span class="kw2">h1</span></a>&gt;</span>
+  <span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/div.html"><span class="kw2">div</span></a> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;class-m&quot;</span>&gt;</span>
+  <span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/div.html"><span class="kw2">div</span></a> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;swiper-container scroll-container&quot;</span>&gt;</span>
+					<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/div.html"><span class="kw2">div</span></a> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;swiper-wrapper&quot;</span>&gt;</span>
+						<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/div.html"><span class="kw2">div</span></a> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;swiper-slide&quot;</span>&gt;</span>
+  	<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/ul.html"><span class="kw2">ul</span></a> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;class-list&quot;</span>&gt;</span>
+    	<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/li.html"><span class="kw2">li</span></a>&gt;&lt;<a target="_blank" href="http://december.com/html/4/element/a.html"><span class="kw2">a</span></a> <span class="kw3">href</span><span class="sy0">=</span><span class="st0">&quot;index.html&quot;</span>&gt;</span>网站首页<span class="sc2">&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/a.html"><span class="kw2">a</span></a>&gt;&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/li.html"><span class="kw2">li</span></a>&gt;</span>
+		{foreach name=navs item=nav from=$navs}
+        <span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/li.html"><span class="kw2">li</span></a> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;menu_head&quot;</span>&gt;</span>
+			{if $nav.childmenu}<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/dl.html"><span class="kw2">dl</span></a> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;icon&quot;</span>&gt;&lt;<a target="_blank" href="http://december.com/html/4/element/span.html"><span class="kw2">span</span></a> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;icon1&quot;</span>&gt;</span>-<span class="sc2">&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/span.html"><span class="kw2">span</span></a>&gt;&lt;<a target="_blank" href="http://december.com/html/4/element/span.html"><span class="kw2">span</span></a> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;icon2&quot;</span>&gt;</span>+<span class="sc2">&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/span.html"><span class="kw2">span</span></a>&gt;&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/dl.html"><span class="kw2">dl</span></a>&gt;</span>{/if}
+			<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/a.html"><span class="kw2">a</span></a> <span class="kw3">href</span><span class="sy0">=</span><span class="st0">&quot;{$nav.link}&quot;</span>&gt;</span>{$nav.name}<span class="sc2">&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/a.html"><span class="kw2">a</span></a>&gt;</span>
+		<span class="sc2">&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/li.html"><span class="kw2">li</span></a>&gt;</span>
+		{if $nav.childmenu}
+        <span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/li.html"><span class="kw2">li</span></a> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;menu_body&quot;</span>&gt;</span>
+			{foreach key=key item=nav_list from=$nav.childmenu}
+        	<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/dl.html"><span class="kw2">dl</span></a>&gt;&lt;<a target="_blank" href="http://december.com/html/4/element/a.html"><span class="kw2">a</span></a> <span class="kw3">href</span><span class="sy0">=</span><span class="st0">&quot;{$nav_list.link}&quot;</span>&gt;&lt;<a target="_blank" href="http://december.com/html/4/element/span.html"><span class="kw2">span</span></a>&gt;</span>〉<span class="sc2">&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/span.html"><span class="kw2">span</span></a>&gt;</span>{$nav_list.name}<span class="sc2">&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/a.html"><span class="kw2">a</span></a>&gt;&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/dl.html"><span class="kw2">dl</span></a>&gt;</span>
+			{/foreach}
+        <span class="sc2">&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/li.html"><span class="kw2">li</span></a>&gt;</span>
+		{/if}
+		{/foreach}
+    <span class="sc2">&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/ul.html"><span class="kw2">ul</span></a>&gt;</span>
+    <span class="sc2">&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/div.html"><span class="kw2">div</span></a>&gt;&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/div.html"><span class="kw2">div</span></a>&gt;&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/div.html"><span class="kw2">div</span></a>&gt;</span>
+  <span class="sc2">&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/div.html"><span class="kw2">div</span></a>&gt;</span>
+<span class="sc2">&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/div.html"><span class="kw2">div</span></a>&gt;</span></pre>
+</dd></dl>
+
+<p>
+然后在每个页面使用
+</p>
+<pre class="code">{include file=&quot;./_nav.html&quot;}</pre>
+
+<p>
+引入此文件！
+</p>
+
+</div>
+<!-- EDIT6 SECTION "范例" [751-] -->

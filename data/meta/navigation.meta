@@ -1,0 +1,17 @@
+a:2:{s:7:"current";a:9:{s:4:"date";a:2:{s:7:"created";i:1425522491;s:8:"modified";i:1425522655;}s:7:"creator";s:9:"邱沼懿";s:4:"user";s:1:"e";s:11:"last_change";b:0;s:11:"contributor";a:1:{s:1:"e";s:9:"邱沼懿";}s:5:"title";s:7:"=UX组=";s:11:"description";a:2:{s:15:"tableofcontents";a:5:{i:0;a:4:{s:3:"hid";s:5:"ux组";s:5:"title";s:7:"=UX组=";s:4:"type";s:2:"ul";s:5:"level";i:2;}i:1;a:4:{s:3:"hid";s:12:"复用模块";s:5:"title";s:12:"复用模块";s:4:"type";s:2:"ul";s:5:"level";i:3;}i:2;a:4:{s:3:"hid";s:6:"项目";s:5:"title";s:8:"=项目=";s:4:"type";s:2:"ul";s:5:"level";i:2;}i:3;a:4:{s:3:"hid";s:12:"统一平台";s:5:"title";s:12:"统一平台";s:4:"type";s:2:"ul";s:5:"level";i:3;}i:4;a:4:{s:3:"hid";s:9:"直达号";s:5:"title";s:9:"直达号";s:4:"type";s:2:"ul";s:5:"level";i:3;}}s:8:"abstract";s:285:"=UX组=
+
+复用模块
+
+	*  公共引用资源-JS库CSS包等
+	*  手机端页面转场效果
+
+=项目=
+
+统一平台
+
+	*  平台模板切图规范 （入门教程）
+	*  平台模板Demo与Smarty变量 （可在模板开发中实时预览）
+
+直达号
+
+==== 进入直达号专页 ====";}s:8:"relation";a:2:{s:10:"references";a:5:{s:12:"ued:resource";b:1;s:16:"design:pageslide";b:1;s:15:"ued:temple:rule";b:0;s:10:"ued:temple";b:1;s:5:"zhida";b:1;}s:10:"firstimage";s:0:"";}s:8:"internal";a:2:{s:5:"cache";b:1;s:3:"toc";b:1;}}s:10:"persistent";a:5:{s:4:"date";a:2:{s:7:"created";i:1425522491;s:8:"modified";i:1425522655;}s:7:"creator";s:9:"邱沼懿";s:4:"user";s:1:"e";s:11:"last_change";b:0;s:11:"contributor";a:1:{s:1:"e";s:9:"邱沼懿";}}}

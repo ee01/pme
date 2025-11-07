@@ -1,0 +1,8 @@
+<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/h2.html"><span class="kw2">h2</span></a>&gt;</span>{$index.list1.name}<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/span.html"><span class="kw2">span</span></a>&gt;</span>{$index.list1.en_name}<span class="sc2">&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/span.html"><span class="kw2">span</span></a>&gt;&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/h2.html"><span class="kw2">h2</span></a>&gt;</span>
+<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/p.html"><span class="kw2">p</span></a>&gt;</span>{$index.list1.description}<span class="sc2">&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/p.html"><span class="kw2">p</span></a>&gt;</span>
+<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/a.html"><span class="kw2">a</span></a> <span class="kw3">href</span><span class="sy0">=</span><span class="st0">&quot;{$index.list1.link}&quot;</span>&gt;</span>More<span class="sc2">&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/a.html"><span class="kw2">a</span></a>&gt;</span>
+<span class="sc-1">&lt;!-- 输出：</span>
+<span class="sc-1">&lt;h2&gt;关于我们&lt;span&gt;About Us&lt;/span&gt;&lt;/h2&gt;</span>
+<span class="sc-1">&lt;p&gt;这是栏目的一段描述...&lt;/p&gt;</span>
+<span class="sc-1">&lt;a href=&quot;list-page.html&quot;&gt;More&lt;/a&gt;</span>
+<span class="sc-1">--&gt;</span>

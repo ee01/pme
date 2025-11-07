@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- generator="FeedCreator 1.7.2-ppt DokuWiki" -->
+<?xml-stylesheet href="https://eexx.me/pme/lib/exe/css.php?s=feed" type="text/css"?>
+<rdf:RDF
+    xmlns="http://purl.org/rss/1.0/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <channel rdf:about="https://eexx.me/pme/feed.php">
+        <title>百度产品部门 知识库 sina</title>
+        <description></description>
+        <link>https://eexx.me/pme/</link>
+        <image rdf:resource="https://eexx.me/pme/lib/tpl/vector/images/favicon.ico" />
+       <dc:date>2019-10-28T09:56:07+00:00</dc:date>
+        <items>
+            <rdf:Seq>
+                <rdf:li rdf:resource="https://eexx.me/pme/doku.php?id=sina:cashout&amp;rev=1454531070&amp;do=diff"/>
+                <rdf:li rdf:resource="https://eexx.me/pme/doku.php?id=sina:checklogin&amp;rev=1454531070&amp;do=diff"/>
+                <rdf:li rdf:resource="https://eexx.me/pme/doku.php?id=sina:follow&amp;rev=1454531070&amp;do=diff"/>
+                <rdf:li rdf:resource="https://eexx.me/pme/doku.php?id=sina:ip&amp;rev=1454531070&amp;do=diff"/>
+                <rdf:li rdf:resource="https://eexx.me/pme/doku.php?id=sina:roulette&amp;rev=1454531070&amp;do=diff"/>
+                <rdf:li rdf:resource="https://eexx.me/pme/doku.php?id=sina:share&amp;rev=1454531070&amp;do=diff"/>
+                <rdf:li rdf:resource="https://eexx.me/pme/doku.php?id=sina:topic&amp;rev=1454531070&amp;do=diff"/>
+                <rdf:li rdf:resource="https://eexx.me/pme/doku.php?id=sina:wb&amp;rev=1454531070&amp;do=diff"/>
+            </rdf:Seq>
+        </items>
+    </channel>
+    <image rdf:about="https://eexx.me/pme/lib/tpl/vector/images/favicon.ico">
+        <title>百度产品部门 知识库</title>
+        <link>https://eexx.me/pme/</link>
+        <url>https://eexx.me/pme/lib/tpl/vector/images/favicon.ico</url>
+    </image>
+    <item rdf:about="https://eexx.me/pme/doku.php?id=sina:cashout&amp;rev=1454531070&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-02-03T20:24:30+00:00</dc:date>
+        <title>sina:cashout</title>
+        <link>https://eexx.me/pme/doku.php?id=sina:cashout&amp;rev=1454531070&amp;do=diff</link>
+        <description>登登登 就是“登登登登 登登登”
+
+引入脚本文件
+
+
+&lt;script type=&quot;text/javascript&quot; src=&quot;http://common.mn.sina.com.cn/public/resource/lib/jquery.cashout.js&quot;&gt;&lt;/script&gt;
+
+
+基础HTML
+
+
+&lt;div class=&quot;cashout-container&quot;&gt;
+	&lt;div class=&quot;cashout&quot;&gt;
+		&lt;ul class=&quot;cashout_main clearfix&quot;&gt;
+			&lt;li class=&quot;prize prize_1&quot; jump=&quot;1&quot;&gt;&lt;/li&gt;
+			&lt;li class=&quot;prize prize_7&quot; jump=&quot;2&quot;&gt;&lt;/li&gt;
+			&lt;li class=&quot;prize prize_4&quot; jump=&quot;3&quot;&gt;&lt;/li&gt;
+			&lt;li class=&quot;prize prize_8&quot; jump=&quot;4&quot;&gt;&lt;/li&gt;
+			&lt;li class=&quot;prize prize_3&quot; jump=&quot;10&quot;&gt;&lt;/li&gt;
+			&lt;li class=&quot;cashout_start&quot;&gt;&lt;a cla…</description>
+    </item>
+    <item rdf:about="https://eexx.me/pme/doku.php?id=sina:checklogin&amp;rev=1454531070&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-02-03T20:24:30+00:00</dc:date>
+        <title>sina:checklogin</title>
+        <link>https://eexx.me/pme/doku.php?id=sina:checklogin&amp;rev=1454531070&amp;do=diff</link>
+        <description>引入文件
+
+提示：所有文件专题系统已默认引入，
+如在本地测试，可引入调试！
+
+登录检测
+
+callback内执行登录后的操作
+
+
+
+checkLogin(function() {
+	// 执行callback操作
+});
+
+
+
+注：如果未登录则弹出登录弹窗！</description>
+    </item>
+    <item rdf:about="https://eexx.me/pme/doku.php?id=sina:follow&amp;rev=1454531070&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-02-03T20:24:30+00:00</dc:date>
+        <title>sina:follow</title>
+        <link>https://eexx.me/pme/doku.php?id=sina:follow&amp;rev=1454531070&amp;do=diff</link>
+        <description>关注按钮
+
+
+
+&lt;iframe src=&quot;http://widget.weibo.com/relationship/followbutton.php?uid=1242837564&amp;btn=red&amp;style=1&amp;language=zh_cn&quot; width=&quot;67&quot; height=&quot;24&quot; frameborder=&quot;0&quot; scrolling=&quot;no&quot; marginheight=&quot;0&quot;&gt;&lt;/iframe&gt;
+
+
+
+参数说明：
+
+uid 要关注的微博ID</description>
+    </item>
+    <item rdf:about="https://eexx.me/pme/doku.php?id=sina:ip&amp;rev=1454531070&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-02-03T20:24:30+00:00</dc:date>
+        <title>sina:ip</title>
+        <link>https://eexx.me/pme/doku.php?id=sina:ip&amp;rev=1454531070&amp;do=diff</link>
+        <description>&lt;http://counter.sina.com.cn/ip&gt;
+  &lt;script src=&quot;http://counter.sina.com.cn/ip&quot; type=&quot;text/javascript&quot; charset=&quot;gb2312&quot;&gt;&lt;/script&gt;
+  &lt;script type=&quot;text/javascript&quot;&gt;
+  alert('IP：' + ILData[0]);
+  alert('位置：' + ILData[1] + ILData[2] + ILData[3]);
+  alert('线路：' + ILData[4]);
+  &lt;/script&gt;</description>
+    </item>
+    <item rdf:about="https://eexx.me/pme/doku.php?id=sina:roulette&amp;rev=1454531070&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-02-03T20:24:30+00:00</dc:date>
+        <title>sina:roulette</title>
+        <link>https://eexx.me/pme/doku.php?id=sina:roulette&amp;rev=1454531070&amp;do=diff</link>
+        <description>转盘亮灯抽奖插件
+
+跳灯翻牌式抽奖
+
+引入脚本文件
+&lt;script type=&quot;text/javascript&quot; src=&quot;http://common.mn.sina.com.cn/public/resource/lib/jquery.roulette.js&quot;&gt;&lt;/script&gt;
+基础HTML
+
+
+&lt;div class=&quot;roulette&quot;&gt;
+	&lt;ul class=&quot;roulette_prizes&quot;&gt;
+		&lt;li class=&quot;prize_6&quot; jump=&quot;1&quot;&gt;&lt;/li&gt;
+		&lt;li class=&quot;prize_1&quot; jump=&quot;2&quot;&gt;&lt;/li&gt;
+		&lt;li class=&quot;prize_-1&quot; jump=&quot;3&quot;&gt;&lt;/li&gt;
+		&lt;li class=&quot;prize_2&quot; jump=&quot;4&quot;&gt;&lt;/li&gt;
+		&lt;li class=&quot;prize_5&quot; jump=&quot;5&quot;&gt;&lt;/li&gt;
+		&lt;li class=&quot;prize_7&quot; jump=&quot;6&quot;&gt;&lt;/li&gt;
+		&lt;li class=&quot;prize_4&quot; jump=&quot;7&quot;&gt;&lt;/li&gt;
+		&lt;li class=&quot;prize_3&quot; jump=&quot;8&quot;&gt;&lt;/li&gt;
+…</description>
+    </item>
+    <item rdf:about="https://eexx.me/pme/doku.php?id=sina:share&amp;rev=1454531070&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-02-03T20:24:30+00:00</dc:date>
+        <title>sina:share</title>
+        <link>https://eexx.me/pme/doku.php?id=sina:share&amp;rev=1454531070&amp;do=diff</link>
+        <description>分享按钮
+
+
+
+&lt;a href=&quot;http://service.weibo.com/share/share.php?url=http%3A%2F%2Fmn.sina.com.cn%2Fcity%2Fzt%2Fxmbankart%2Findex.shtml&amp;type=button&amp;title=啊啊啊&amp;ralateUid=1242837564&amp;language=zh_cn&amp;appkey=5u1khj&amp;pic=http%3A%2F%2Fminnan.sinaimg.cn%2F2014%2F0217%2FU9556P1433DT20140217153029.jpg&amp;searchPic=false&amp;style=simple&quot; target=&quot;_blank&quot;&gt;&lt;/a&gt;</description>
+    </item>
+    <item rdf:about="https://eexx.me/pme/doku.php?id=sina:topic&amp;rev=1454531070&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-02-03T20:24:30+00:00</dc:date>
+        <title>sina:topic</title>
+        <link>https://eexx.me/pme/doku.php?id=sina:topic&amp;rev=1454531070&amp;do=diff</link>
+        <description>常用样式
+&lt;iframe width=&quot;650&quot; height=&quot;680&quot; frameborder=&quot;0&quot; scrolling=&quot;no&quot; src=&quot;http://v.t.sina.com.cn/widget/widget_topic_mblog.php?tags=%E5%8E%A6%E9%97%A8%7E%E9%97%BD%E5%8D%97%E5%B0%8F%E5%90%83&amp;width=650&amp;height=680&amp;isOutTopicSearch=1&quot;&gt;&lt;/iframe&gt;
+右侧带 相关微博一周转发榜</description>
+    </item>
+    <item rdf:about="https://eexx.me/pme/doku.php?id=sina:wb&amp;rev=1454531070&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-02-03T20:24:30+00:00</dc:date>
+        <title>sina:wb</title>
+        <link>https://eexx.me/pme/doku.php?id=sina:wb&amp;rev=1454531070&amp;do=diff</link>
+        <description>WB
+
+引入文件
+
+
+&lt;script type=&quot;text/javascript&quot; src=&quot;http://common.mn.sina.com.cn/public/resource/lib/WB.js&quot;&gt;&lt;/script&gt;
+
+
+DEMO地址
+
+&lt;http://mn.sina.com.cn/API4.html&gt;</description>
+    </item>
+</rdf:RDF>

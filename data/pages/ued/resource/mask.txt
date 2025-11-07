@@ -1,0 +1,77 @@
+//引入文件://
+
+<code html>
+<script type="text/javascript" src="http://common.mn.sina.com.cn/public/resource/lib/jquery.floatDiv.js"></script>
+<script type="text/javascript" src="http://common.mn.sina.com.cn/public/resource/lib/mask.js"></script>
+</code>
+
+====== 弹窗遮罩层 ======
+
+===== 定义： =====
+
+<code javascript>
+var mask = new Mask();
+</code>
+
+===== 使用： =====
+
+<code javascript>
+
+mask.show();
+mask.hide();
+
+</code>
+
+===== 参数： =====
+
+<code javascript>
+var mask = new Mask({opacity:0.8});
+</code>
+参数列表：
+  * opacity: 0.5,
+  * zIndex: 120,
+  * backgroundColor: '#000',
+====== 按钮loading ======
+
+===== JS： =====
+
+<code javascript>
+
+var _loading = buttonLoading(this);
+$.getJSON('http://...?callback=?', {}, function(json) {
+	_loading.remove();
+	if (json.err == 0) {
+		// ...
+	}else{
+		// ...
+	}
+});
+
+</code>
+
+===== 生效： =====
+
+<code javascript>
+var _loading = buttonLoading(this);
+</code>
+窗口内按钮：
+<code javascript>
+var _loading = buttonLoading(this, {zIndex:310});
+</code>
+
+===== 失效： =====
+
+<code javascript>
+_loading.remove();
+</code>
+
+===== 参数： =====
+
+  * timeout: 10000,
+  * timeoutMsg: '你的网速太卡了点..过会儿重新提交试试~',
+  * opacity: 0.5,
+  * zIndex: 0,
+  * backgroundColor: '#000',
+  * backgroundImage: 'http://minnan.sinaimg.cn/utils/images/loading_button.gif'
+
+backgroundImage可传入gif，swf地址

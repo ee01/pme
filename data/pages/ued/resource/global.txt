@@ -1,0 +1,19 @@
+====== global.css ======
+
+===== Reset Css =====
+
+针对不同浏览器的默认样式不同，重置CSS默认样式统一。
+
+===== 基础常用样式 =====
+
+详见 [[http://common.mn.sina.com.cn/public/resource/css/global.css|global.css]] 源文件
+
+
+===== 引入文件 =====
+
+	<link rel="stylesheet" rev="stylesheet" href="http://chanpin.xm12t.com.cn/css/global.css" type="text/css" />
+
+===== 扩展共用样式 =====
+
+  * **.inline-block** 转换block元素为inline-block，兼容所有浏览器。
+  * **.ellipsis** 文本过长显示省略号。必须再定义宽度！

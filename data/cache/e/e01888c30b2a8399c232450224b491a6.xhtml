@@ -1,0 +1,135 @@
+
+<h1 class="sectionedit1" id="blend_api">Blend API</h1>
+<div class="level1">
+
+<p>
+这个域名：<a href="http://clouda.baidu.com/blendapi/introduction/introduce" class="urlextern" target="_blank" title="http://clouda.baidu.com/blendapi/introduction/introduce"  rel="nofollow">http://clouda.baidu.com/blendapi/introduction/introduce</a> 的内容
+</p>
+
+</div>
+<!-- EDIT1 SECTION "Blend API" [1-105] -->
+<h2 class="sectionedit2" id="账号还是其他调用操作都是报错">账号还是其他调用操作都是报错</h2>
+<div class="level2">
+<pre class="code">其中一部分代码情况</pre>
+
+<p>
+&lt;html xmlns=“<a href="http://www.w3.org/1999/xhtml" class="urlextern" target="_blank" title="http://www.w3.org/1999/xhtml"  rel="nofollow">http://www.w3.org/1999/xhtml</a>”&gt;
+</p>
+<pre class="code">&lt;head&gt;
+	&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=utf-8&quot; /&gt;
+	&lt;title&gt;&lt;/title&gt;
+	&lt;script name=&quot;baidu-tc-cerfication&quot; type=&quot;text/javascript&quot; charset=&quot;utf-8&quot; data-appid=&quot;3798147&quot; src=&quot;http://apps.bdimg.com/blend/loader.js&quot;&gt;&lt;/script&gt;
+	&lt;script type=&quot;text/javascript&quot; src=&quot;jquery.min.js&quot;&gt;&lt;/script&gt;
+	&lt;script type=&quot;text/javascript&quot;&gt;
+		$(document).ready(function() {
+		//生成module，百度可生成
+			blend.lightInit({
+				ak:&quot;u7wpBCazLrhquiQKDmyS3pDg&quot;,
+				module:[&quot;account&quot;]
+			});
+			
+			//具体方案
+			Blend.mbaas.account.login({
+			    redirect_uri:&quot;http://my.fengxin2.com/&quot;,
+				onsuccess: function(data){
+					$(&quot;#api&quot;,dom).val(JSON.stringify(data));
+					Tips.show(dom,{text:&quot;调用成功&quot;})
+				},
+				onfail: function(data){
+					$(&quot;#api&quot;,dom).val(JSON.stringify(data));
+					Tips.show(dom,{text:&quot;调用失败&quot;})
+				},
+			});
+		});	
+	&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+	
+&lt;/body&gt;</pre>
+
+<p>
+&lt;/html&gt;
+</p>
+
+</div>
+<!-- EDIT2 SECTION "账号还是其他调用操作都是报错" [106-1167] -->
+<h2 class="sectionedit3" id="错误提示">错误提示</h2>
+<div class="level2">
+<pre class="code">Uncaught SecurityError: Failed to set the &#039;domain&#039; property on &#039;Document&#039;: &#039;weimob.com&#039; is not a suffix of &#039;my.fengxin2.com&#039;. project.js:1
+GET http://bbs.52jscn.com/tpl/static/images/weixin.jpg 404 (Not Found) </pre>
+
+</div>
+<!-- EDIT3 SECTION "错误提示" [1168-1418] -->
+<h3 class="sectionedit4" id="调用数据看着应该都加载了_在该页面就是没办法成功调用">调用数据看着应该都加载了，在该页面就是没办法成功调用</h3>
+<div class="level3">
+
+</div>
+<!-- EDIT4 SECTION "调用数据看着应该都加载了，在该页面就是没办法成功调用" [1419-1508] -->
+<h2 class="sectionedit5" id="待解决方案">待解决方案</h2>
+<div class="level2">
+
+<p>
+只能在手机百度上能用，用uc测试的话uc会叫你下载手机百度
+</p>
+
+<p>
+手机百度上使用线上测试地址：<a href="http://test56.xm12t.cn/hehe/c.html" class="urlextern" target="_blank" title="http://test56.xm12t.cn/hehe/c.html"  rel="nofollow">http://test56.xm12t.cn/hehe/c.html</a>
+</p>
+
+<p>
+拍照实现代码
+</p>
+
+<p>
+&lt;html xmlns=“<a href="http://www.w3.org/1999/xhtml" class="urlextern" target="_blank" title="http://www.w3.org/1999/xhtml"  rel="nofollow">http://www.w3.org/1999/xhtml</a>”&gt;
+</p>
+<pre class="code">&lt;head&gt;
+	&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=utf-8&quot; /&gt;
+	&lt;title&gt;&lt;/title&gt;
+	&lt;script name=&quot;baidu-tc-cerfication&quot; type=&quot;text/javascript&quot; charset=&quot;utf-8&quot; data-appid=&quot;3798147&quot; src=&quot;http://apps.bdimg.com/blend/loader.js&quot;&gt;&lt;/script&gt;
+   &lt;script type=&quot;text/javascript&quot; src=&quot;jquery.min.js&quot;&gt;&lt;/script&gt;
+	&lt;script type=&quot;text/javascript&quot;&gt;
+		$(document).ready(function() {
+                           //生成module，百度可生成
+		        blend.lightInit({
+				ak:&quot;u7wpBCazLrhquiQKDmyS3pDg&quot;,
+				module:[&quot;activity&quot;]
+				});
+				var intent_cal  =  {
+				action: &quot;android.intent.action.EDIT&quot;,
+				type: &quot;vnd.android.cursor.item/event&quot;,
+				title: &quot;Some title&quot;,
+				description: &quot;Some description&quot;,
+				beginTime: 1384676947757,
+				endTime: 1384680547757
+			};
+                         //具体方案
+			Blend.device.activity.start({
+				onsuccess: function(data){
+					$(&quot;#api&quot;,dom).val(JSON.stringify(data));
+					Tips.show(dom,{text:&quot;调用成功&quot;})
+				},
+				onfail: function(data){
+					$(&quot;#api&quot;,dom).val(JSON.stringify(data));
+					Tips.show(dom,{text:&quot;调用失败&quot;})
+				},
+				intent:intent_cal
+			});
+		});	
+	&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+	
+&lt;/body&gt;</pre>
+
+<p>
+&lt;/html&gt;
+</p>
+
+</div>
+<!-- EDIT5 SECTION "待解决方案" [1509-2969] -->
+<h3 class="sectionedit6" id="解决方案">解决方案</h3>
+<div class="level3">
+
+</div>
+<!-- EDIT6 SECTION "解决方案" [2970-] -->

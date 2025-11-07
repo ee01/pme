@@ -1,0 +1,200 @@
+====== 登登登 就是“登登登登 登登登” ======
+
+
+===== 引入脚本文件 =====
+
+<code html>
+<script type="text/javascript" src="http://common.mn.sina.com.cn/public/resource/lib/jquery.cashout.js"></script>
+</code>
+
+===== 基础HTML =====
+
+<code html>
+<div class="cashout-container">
+	<div class="cashout">
+		<ul class="cashout_main clearfix">
+			<li class="prize prize_1" jump="1"></li>
+			<li class="prize prize_7" jump="2"></li>
+			<li class="prize prize_4" jump="3"></li>
+			<li class="prize prize_8" jump="4"></li>
+			<li class="prize prize_3" jump="10"></li>
+			<li class="cashout_start"><a class="cashout_start_btn" href="javascript:;"></a></li>
+			<li class="prize prize_9" jump="5"></li>
+			<li class="prize prize_6" jump="9"></li>
+			<li class="prize prize_2" jump="8"></li>
+			<li class="prize prize_5" jump="7"></li>
+			<li class="prize prize_-1" jump="6"><img src="http://common.fj.sina.com.cn/mn/widget/public/dice_game/images/prize/prize-25.jpg" /><div class="prize_name">谢谢参与</div><div class="prize_description"><h3>新浪偷偷送你的小小祝福</h3></div></li>
+		</ul>
+	</div>
+</div>
+</code>
+
+**注意：li标签中''class''属性的''prize_X''，''X''为数据库奖品列表的奖品ID（''row_id''）**
+
+**　　　li标签的''jump''属性是 登登登 的顺序，无需修改！**
+===== JS主代码 =====
+
+<file javascript cashout.js>
+
+var cashout = $("ul.cashout_main").cashout({
+	start_selector: "a.cashout_start_btn",
+	thanks_jump: 6,
+	result_url: "http://common.mn.sina.com.cn/activity/jsonp/15/cashout",
+	result_data: {},
+	result_datatype: 'jsonp',
+	result_get_error: function(json) {
+		return json.err;
+	},
+	alert: typeof $.dialog !== "undefined" ? $.dialog.alert : function(msg){alert(msg);},
+	before: function() {
+		if (!checkLogin(false)) {	// 弹出登录窗口
+			return false;	// 阻止抽奖操作
+		}
+	},
+	error: function(error, msg, json) {
+		this.alert(msg);
+	},
+	callback: function(id, name, json) {
+		if (id != -1) {
+			var msg = "恭喜！！<br />您抽中了 " + name + "！<br /><br />请等待活动结束后我们官方微博的私信~";
+			this.alert(msg);
+		}else{
+			var msg = name;
+			this.alert(msg);
+		}
+	}
+});
+
+</file>
+
+**注意：开始抽奖按钮无需click额外绑定事件！**
+===== 样式参考 =====
+
+<file css cashout.css>
+
+.cashout {
+	position: relative;
+	width: 600px;
+	padding-top: 36px;
+	padding-left: 38px;
+}
+	.cashout ul.cashout_main {
+		width: 592px;
+		margin: 0 auto;
+	}
+	.cashout ul.cashout_main li {
+		position: relative;
+		float: left;
+		margin: 0 2px 2px 0;
+		width: 146px;
+		height: 119px;
+		background: #FFF;
+	}
+		.cashout ul.cashout_main li img {
+			width: 146px;
+			height: 119px;
+		}
+		.cashout ul.cashout_main li .prize_name {
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			width: 146px;
+			height: 24px;
+			line-height: 24px;
+			text-align: center;
+			color: #FFF;
+			background: #000;
+			filter:alpha(opacity=50);
+			-moz-opacity:0.5;
+			-khtml-opacity: 0.5;
+			opacity: 0.5;
+		}
+		.cashout ul.cashout_main li .prize_description {
+			position: absolute;
+			left: 0;
+			top: 0;
+			padding: 10px 20px;
+			display: none;
+			width: 254px;
+			height: 126px;
+			color: #FFF;
+			background: #000;
+			filter:alpha(opacity=30);
+			-moz-opacity:0.6;
+			-khtml-opacity: 0.6;
+			opacity: 0.6;
+		}
+			.cashout-content ul.cashout_main li .prize_description h1,
+			.cashout-content ul.cashout_main li .prize_description h2,
+			.cashout-content ul.cashout_main li .prize_description h3,
+			.cashout-content ul.cashout_main li .prize_description h4,
+			.cashout-content ul.cashout_main li .prize_description h5 {
+				line-height: 32px;
+				font-family: "Microsoft Yahei";
+				text-align: center;
+			}
+			.cashout ul.cashout_main li .prize_description h1 { font-size: 24px; }
+			.cashout ul.cashout_main li .prize_description h2 { font-size: 20px; }
+			.cashout ul.cashout_main li .prize_description h3{ font-size: 18px; }
+			.cashout ul.cashout_main li .prize_description h4 { font-size: 16px; }
+			.cashout ul.cashout_main li .prize_description h5 { font-size: 14px; }
+			.cashout ul.cashout_main li .prize_description p {
+				margin-bottom: 5px;
+			}
+	.cashout ul.cashout_main li.cashout_start {
+		position: relative;
+		float: left;
+		margin: 0 2px 2px 0;
+		width: 294px;
+		height: 119px;
+		overflow: hidden;
+	}
+		.cashout ul.cashout_main li.cashout_start a.cashout_start_btn {
+			display: block;
+			width: 294px;
+			height: 119px;
+			background: url(images/cashout_start.jpg) no-repeat;
+		}
+
+</file>
+
+
+===== 远程抓取奖品列表 =====
+
+<file javascript cashout-getprizes.js>
+
+$.getJSON("http://common.mn.sina.com.cn/activity/jsonp?project_id=1&method=getprizes&callback=?", function(json) {
+	if (json.err == 0) {
+		$.each(json.data, function(n,m) {
+			var _prize = $(".cashout_main li.prize.prize_" + m.row_id);
+			if (_prize.length > 0) {
+				var _prize_name = _prize.find(".prize_name").length > 0 ?
+						_prize.find(".prize_name") :
+						$('<div class="prize_name">').appendTo(_prize);
+				var _prize_description = _prize.find(".prize_description").length > 0 ?
+						_prize.find(".prize_description") :
+						$('<div class="prize_description">').appendTo(_prize);
+				var _prize_img = _prize.find("img").length > 0 ?
+						_prize.find("img") :
+						$('<img />').appendTo(_prize);
+				_prize_name.html(m.name);
+				_prize_description.html(m.description);
+				_prize_img.attr({src:m.img, alt:m.name, title:m.name});
+			}
+		});
+	}
+});
+$(".cashout_main li.prize").hover(function() {
+	var _cashout_start = $(".cashout_main .cashout_start"),
+		_prize_description = _cashout_start.find(".prize_description").length > 0 ?
+			_cashout_start.find(".prize_description") :
+			$('<div class="prize_description">').appendTo(_cashout_start);
+	_prize_description.html($(this).find(".prize_description").html()).show();
+}, function() {
+	$(".cashout_main .cashout_start .prize_description").hide();
+});
+
+</file>
+===== 高级用法 =====
+
+可以利用li标签的id值改变 登登登 的顺序，再重写样式，就可以实现各种登登登乱跳~

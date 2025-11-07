@@ -1,0 +1,137 @@
+====== 客服系统 ======
+===== 关于信息答复异步刷新问题 =====
+    思路：用前端数据，每隔几秒向后台获取数据，后台根据时间获取用户最近几秒内的回复。   
+    后台思路以数据判断对数据进行提取，这个不用多讲，一般都知道如何获取数据。关键来了，前台如何处理，这个就必须用到js中的setTimeout方法，该方法需要重复调用，相当于递归才能产生效果。所以开始时运行一次，写入函数内重复调用，页面不关闭就可以不断的从后台获取最新数据。
+    
+ ==== 前台实现代码 ====
+   
+    function getnewchat(){
+            //后台数据获取
+	    $.get("{weixin::U('Index/ajaxdata',array('openid'=>htmlspecialchars($_GET['openid'])))}",
+		   function(data){
+				if(data!= 1564){
+                                //后台拿到数据后，对其做样式添加
+					$str1='<div class="chatItem you"><div class="chatItemContent"> <img class="avatar" src="<if condition="$userInfo['headimgurl'] neq ''">index.php?g=Chat&m=Index&a=showExternalPic&url={weixin:$userInfo.headimgurl}<else/>/tpl/Chat/default/style/css/img/avatar_default17ced3.png</if>"/> <div class="cloud cloudText"> <div class="cloudPannel" style=""> <div class="sendStatus">   </div> <div class="cloudBody"> <div class="cloudContent">                                  <pre style="white-space:pre-wrap">'+data+'</pre>  </div>  </div> <div class="cloudArrow "></div> </div> </div> </div>  </div>';
+					//附加到最后。
+					$('#chat_chatmsglist').append($str1);
+                                        //一个滚动效果，我抄的
+					$('#chat_scorll').scrollTop($('#chat_scorll').children().height()+100);
+				}
+		   });
+         //循环，一段时间内重新处理该函。达到重复提取后台数据效果
+	setTimeout("getnewchat()",3000);
+  }
+	setTimeout("getnewchat()",3000);
+
+
+====== 微信支付js_api_demo ======
+给出修改后封好，可直接使用的demo。   {{:fengxin:微信js_api_demo.zip|}}
+
+====== 正则 ======
+{{:fengxin:正则.png?200|}}
+
+====== 移动手机平台的HTML5前端优化指南======
+不错的文章 ：http://www.html5cn.org/article-7666-1.html ，http://www.html5cn.org/article-7654-1.html
+
+======js  substr和substring======
+     js中的截取字符段，两个不同点。 
+     substr用法  stringval.sbustr(start,length);  
+     substring用法  stringval.substring(start,end);     
+     从字面上看可以看出两者区别（start开始坐标，length长度，end结束坐标）。
+====特别说明===== 
+substr
+如果 length 为 0 或负数，将返回一个空字符串。如果没有指定该参数，则子字符串将延续到 stringval 的最后。  
+
+sustring
+substring方法将返回一个包含从 start 到最后（不包含 end ）的子字符串的字符串。
+
+substring 方法使用 start 和 end 两者中的较小值作为子字符串的起始点。例如， strvar.substring(0, 3) 和 strvar.substring(3, 0) 将返回相同的子字符串。
+
+如果 start 或 end 为 NaN 或者负数，那么将其替换为0。
+
+子字符串的长度等于 start 和 end 之差的绝对值。例如，在 strvar.substring(0, 3) 和 strvar.substring(3, 0) 返回的子字符串的的长度是 3。
+
+
+====== 关于微信最新JS-SDK ======
+具体文档请参照官网：http://mp.weixin.qq.com/wiki/7/aaa137b55fb2e0456bf8dd9148dd613f.html
+
+该方法支持服务号和认证的订阅号
+JSSDK使用步骤
+
+步骤一：绑定域名
+
+先登录微信公众平台进入“公众号设置”的“功能设置”里填写“JS接口安全域名”。
+
+备注：登录后可在“开发者中心”查看对应的接口权限。
+
+步骤二：引入JS文件
+
+在需要调用JS接口的页面引入如下JS文件，（支持https）：http://res.wx.qq.com/open/js/jweixin-1.0.0.js
+
+备注：支持使用 AMD/CMD 标准模块加载方法加载
+
+
+步骤三：通过config接口注入权限验证配置
+
+所有需要使用JS-SDK的页面必须先注入配置信息，否则将无法调用（同一个url仅需调用一次，对于变化url的SPA的web app可在每次url变化时进行调用,目前Android微信客户端不支持pushState的H5新特性，所以使用pushState来实现web app的页面会导致签名失败，此问题会在Android6.2中修复）。
+
+wx.config({
+    debug: true, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
+    appId: '', // 必填，公众号的唯一标识
+    timestamp: , // 必填，生成签名的时间戳
+    nonceStr: '', // 必填，生成签名的随机串
+    signature: '',// 必填，签名，见demo
+    jsApiList: [
+    'checkJsApi',
+        'onMenuShareTimeline',
+        'onMenuShareAppMessage',
+        'onMenuShareQQ',
+        'onMenuShareWeibo',
+        'hideMenuItems',
+        'showMenuItems',
+        'hideAllNonBaseMenuItem',
+        'showAllNonBaseMenuItem',
+        'translateVoice',
+        'startRecord',
+        'stopRecord',
+        'onRecordEnd',
+        'playVoice',
+        'pauseVoice',
+        'stopVoice',
+        'uploadVoice',
+        'downloadVoice',
+        'chooseImage',
+        'previewImage',
+        'uploadImage',
+        'downloadImage',
+        'getNetworkType',
+        'openLocation',
+        'getLocation',
+        'hideOptionMenu',
+        'showOptionMenu',
+        'closeWindow',
+        'scanQRCode',
+        'chooseWXPay',
+        'openProductSpecificView',
+        'addCard',
+        'chooseCard',
+        'openCard'
+    ] // 必填，需要使用的JS接口列表，所有JS接口列表
+});
+步骤四：通过ready接口处理成功验证
+
+wx.ready(function(){
+
+    // config信息验证后会执行ready方法，所有接口调用都必须在config接口获得结果之后，config是一个客户端的异步操作，所以如果需要在页面加载时就调用相关接口，则须把相关接口放在ready函数中调用来确保正确执行。对于用户触发时才调用的接口，则可以直接调用，不需要放在ready函数中。
+});
+
+
+步骤五：通过error接口处理失败验证
+
+wx.error(function(res){
+
+    // config信息验证失败会执行error函数，如签名过期导致验证失败，具体错误信息可以打开config的debug模式查看，也可以在返回的res参数中查看，对于SPA可以在这里更新签名。
+
+});
+
+附上demo    {{:fengxin:sample.zip|}}

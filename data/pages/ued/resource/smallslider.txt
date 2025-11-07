@@ -1,0 +1,44 @@
+====== SmallSlider 图片轮播插件 ======
+
+
+==== 引入文件 ====
+
+<HTML>
+<link type="text/css" rel="stylesheet" href="http://common.mn.sina.com.cn/public/resource/lib/smallslider/smallslider.css">
+<script type="text/javascript" src="http://common.mn.sina.com.cn/public/resource/lib/smallslider/jquery.smallslider.js"></script>
+</HTML>
+
+==== JS ====
+
+<code javascript>
+$('#exp1').smallslider();
+</code>
+
+==== html ====
+
+<code html>
+
+<div id="exp1" class="smallslider">
+  <ul>
+	 <li><a href="#" target="_blank"><img src="rs/images/001.jpg" title="" alt="图片标题1" /></a></li>
+	 <li><a href="#" target="_blank"><img src="rs/images/002.jpg" title="" alt="图片标题2" /></a></li>
+	 <li><a href="#" target="_blank"><img src="rs/images/003.jpg" title="" alt="图片标题3" /></a></li>
+  </ul>
+</div>
+
+</code>
+
+==== css ====
+
+<code css>
+
+#exp1 {
+	width: 320px;
+	height: 240px;
+}
+
+</code>
+
+==== DEMO地址 ====
+
+http://www.cssue.com/demo/small-slider/index.html

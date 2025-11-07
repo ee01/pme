@@ -1,0 +1,1434 @@
+
+<h1 class="sectionedit1" id="json文件的语法与使用">JSON文件的语法与使用</h1>
+<div class="level1">
+
+</div>
+<!-- EDIT1 SECTION "JSON文件的语法与使用" [1-44] -->
+<h2 class="sectionedit2" id="数据格式">数据格式</h2>
+<div class="level2">
+<dl class="file">
+<dt><a href="/doku.php?do=export_code&amp;id=ued:template:json&amp;codeblock=0" title="下载片段" class="mediafile mf_json">index.json</a></dt>
+<dd><pre class="code file javascript"><span class="br0">&#123;</span>
+	<span class="st0">&quot;title&quot;</span><span class="sy0">:</span> <span class="br0">&#123;</span>
+		<span class="st0">&quot;value&quot;</span><span class="sy0">:</span> <span class="st0">&quot;XXX企业&quot;</span><span class="sy0">,</span>
+		<span class="st0">&quot;description&quot;</span><span class="sy0">:</span> <span class="st0">&quot;顶部大标题&quot;</span><span class="sy0">,</span>
+		<span class="st0">&quot;type&quot;</span><span class="sy0">:</span> <span class="st0">&quot;text&quot;</span>
+	<span class="br0">&#125;</span>
+<span class="br0">&#125;</span></pre>
+</dd></dl>
+
+<p>
+每个数据都必须包含value、description和type项。
+</p>
+
+<p>
+<em class="u">description描述：</em> 用来描述其在页面的位置，如“顶部轮滚图”“左侧公告”“中部第二个新闻列表”
+</p>
+
+<p>
+<em class="u">type类型：</em>
+</p>
+<ul>
+<li class="level1"><div class="li"> <a href="#typetext" title="ued:template:json ↵" class="wikilink1">text</a>：单行文字</div>
+</li>
+<li class="level1"><div class="li"> <a href="#typetextarea" title="ued:template:json ↵" class="wikilink1">textarea</a>：多行文本</div>
+</li>
+<li class="level1"><div class="li"> <a href="#typeimage" title="ued:template:json ↵" class="wikilink1">image</a>：单张图片</div>
+</li>
+<li class="level1"><div class="li"> <a href="#typeimages" title="ued:template:json ↵" class="wikilink1">images</a>：多图，多个image类型的数组</div>
+</li>
+<li class="level1"><div class="li"> <a href="#typenav" title="ued:template:json ↵" class="wikilink1">nav</a>：指向栏目数据变量（特别注意：此类型构造的json格式与最终输出smarty变量格式不同）</div>
+</li>
+<li class="level1"><div class="li"> <a href="#typenavs" title="ued:template:json ↵" class="wikilink1">navs</a>：指向多个栏目数据</div>
+</li>
+<li class="level1"><div class="li"> <a href="#typelist" title="ued:template:json ↵" class="wikilink1">list</a>：指向列表型栏目（<a href="#typenav" title="ued:template:json ↵" class="wikilink1">nav</a>的扩展）</div>
+</li>
+<li class="level1"><div class="li"> <a href="#typepage" title="ued:template:json ↵" class="wikilink1">page</a>：指向单页型栏目（<a href="#typenav" title="ued:template:json ↵" class="wikilink1">nav</a>的扩展）</div>
+</li>
+<li class="level1"><div class="li"> <a href="#typelink" title="ued:template:json ↵" class="wikilink1">link</a>：指向链接型栏目（<a href="#typenav" title="ued:template:json ↵" class="wikilink1">nav</a>的扩展）</div>
+</li>
+<li class="level1"><div class="li"> <a href="/doku.php?id=ued:template:mindex#底部导航定义方法" class="wikilink1" title="ued:template:mindex">quickbar</a>：手机底部导航，仅供手机模板调用，具体参见：<a href="/doku.php?id=ued:template:mindex#底部导航定义方法" class="wikilink1" title="ued:template:mindex">底部导航定义方法</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="#typeform" title="ued:template:json ↵" class="wikilink1">form</a>：表单（嵌入） ===ADD===</div>
+</li>
+</ul>
+
+<p>
+<em class="u">value初始化数据：</em> 可放入示例数据，切图过程实时预览（不同type类型的value值不同，具体可参见如下实例json）
+</p>
+
+<p>
+<em class="u">config配置：</em> 目前只有<a href="#typelist" title="ued:template:json ↵" class="wikilink1">type:list</a>类型有config配置项
+</p>
+
+<p>
+<strong>注：nav、list、page、link四种类型实际是同一种类型，对比如下：</strong>
+</p>
+<div class="table sectionedit3"><table class="inline">
+	<thead>
+	<tr class="row0">
+		<td class="col0 leftalign">                                  </td><th class="col1 leftalign"> nav    </th><th class="col2 leftalign"> list   </th><th class="col3 leftalign"> page  </th><th class="col4 leftalign"> link  </th><th class="col5 leftalign"> navs   </th>
+	</tr>
+	</thead>
+	<tr class="row1">
+		<th class="col0 leftalign"> filter默认值                        </th><td class="col1 leftalign"> ALL    </td><td class="col2 leftalign"> list   </td><td class="col3 leftalign"> page  </td><td class="col4 leftalign"> link  </td><td class="col5 leftalign"> ALL    </td>
+	</tr>
+	<tr class="row2">
+		<th class="col0 leftalign"> $index.xxx.data                  </th><td class="col1 leftalign"> 默认空    </td><td class="col2 leftalign"> 默认20条  </td><td class="col3 leftalign"> 无     </td><td class="col4 leftalign"> 无     </td><td class="col5 leftalign"> 默认空    </td>
+	</tr>
+	<tr class="row3">
+		<th class="col0 leftalign"> 定义data_limit后<br/>
+$index.xxx.data  </th><td class="col1 leftalign"> 默认20条  </td><td class="col2 leftalign"> 默认20条  </td><td class="col3 leftalign"> 无     </td><td class="col4 leftalign"> 无     </td><td class="col5 leftalign"> 默认20条  </td>
+	</tr>
+	<tr class="row4">
+		<th class="col0 leftalign"> star_only参数                      </th><td class="col1 leftalign"> 不生效    </td><td class="col2 leftalign"> 生效     </td><td class="col3 leftalign"> 无     </td><td class="col4 leftalign"> 无     </td><td class="col5 leftalign"> 不生效    </td>
+	</tr>
+	<tr class="row5">
+		<th class="col0 leftalign"> 定义data_limit后<br/>
+star_only参数      </th><td class="col1 leftalign"> 生效     </td><td class="col2 leftalign"> 生效     </td><td class="col3 leftalign"> 无     </td><td class="col4 leftalign"> 无     </td><td class="col5 leftalign"> 生效     </td>
+	</tr>
+	<tr class="row6">
+		<th class="col0 leftalign"> $index.xxx.content（少用）           </th><td class="col1 leftalign"> 无      </td><td class="col2 leftalign"> 无      </td><td class="col3 leftalign"> 有     </td><td class="col4 leftalign"> 无     </td><td class="col5 leftalign"> 无      </td>
+	</tr>
+</table></div>
+<!-- EDIT3 TABLE [1607-2290] -->
+</div>
+<!-- EDIT2 SECTION "数据格式" [45-2290] -->
+<h2 class="sectionedit4" id="实例json与数据说明">实例json与数据说明</h2>
+<div class="level2">
+
+<p>
+查阅完整的json实例，请点击注脚！<sup><a href="#fn__1" id="fnt__1" class="fn_top">1)</a></sup>
+</p>
+
+</div>
+<!-- EDIT4 SECTION "实例json与数据说明" [2291-4913] -->
+<h3 class="sectionedit5" id="typetext">type:text</h3>
+<div class="level3">
+
+<p>
+比如，json文件内容为：
+</p>
+<dl class="file">
+<dt><a href="/doku.php?do=export_code&amp;id=ued:template:json&amp;codeblock=2" title="下载片段" class="mediafile mf_json">index.json</a></dt>
+<dd><pre class="code file javascript"><span class="br0">&#123;</span>
+	<span class="st0">&quot;announcement_title&quot;</span><span class="sy0">:</span> <span class="br0">&#123;</span>
+		<span class="st0">&quot;value&quot;</span><span class="sy0">:</span> <span class="st0">&quot;大喇叭：&quot;</span><span class="sy0">,</span>
+		<span class="st0">&quot;description&quot;</span><span class="sy0">:</span> <span class="st0">&quot;公告标题&quot;</span><span class="sy0">,</span>
+		<span class="st0">&quot;type&quot;</span><span class="sy0">:</span> <span class="st0">&quot;text&quot;</span>
+	<span class="br0">&#125;</span>
+<span class="br0">&#125;</span></pre>
+</dd></dl>
+
+<p>
+调用形式：
+</p>
+<dl class="file">
+<dt><a href="/doku.php?do=export_code&amp;id=ued:template:json&amp;codeblock=3" title="下载片段" class="mediafile mf_html">index.html</a></dt>
+<dd><pre class="code file html4strict"><span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/h1.html"><span class="kw2">h1</span></a>&gt;</span>{$index.title}<span class="sc2">&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/h1.html"><span class="kw2">h1</span></a>&gt;</span>
+<span class="sc-1">&lt;!-- 输出：&lt;h1&gt;XXX企业&lt;/h1&gt; --&gt;</span></pre>
+</dd></dl>
+
+<p>
+数据变量说明：
+</p>
+<ul>
+<li class="level1"><div class="li"> {$index.announcement_title} 公告标题文案</div>
+</li>
+</ul>
+
+</div>
+<!-- EDIT5 SECTION "type:text" [4914-5294] -->
+<h3 class="sectionedit6" id="typetextarea">type:textarea</h3>
+<div class="level3">
+
+<p>
+比如，json文件内容为：
+</p>
+<dl class="file">
+<dt><a href="/doku.php?do=export_code&amp;id=ued:template:json&amp;codeblock=4" title="下载片段" class="mediafile mf_json">index.json</a></dt>
+<dd><pre class="code file javascript"><span class="br0">&#123;</span>
+	<span class="st0">&quot;announcement&quot;</span><span class="sy0">:</span> <span class="br0">&#123;</span>
+		<span class="st0">&quot;value&quot;</span><span class="sy0">:</span> <span class="st0">&quot;这里是自动输出的公共内容！<span class="es0">\r</span><span class="es0">\n</span>第二行公告内容&quot;</span><span class="sy0">,</span>
+		<span class="st0">&quot;description&quot;</span><span class="sy0">:</span> <span class="st0">&quot;公告内容&quot;</span><span class="sy0">,</span>
+		<span class="st0">&quot;type&quot;</span><span class="sy0">:</span> <span class="st0">&quot;textarea&quot;</span>
+	<span class="br0">&#125;</span>
+<span class="br0">&#125;</span></pre>
+</dd></dl>
+
+<p>
+调用形式：
+</p>
+<dl class="file">
+<dt><a href="/doku.php?do=export_code&amp;id=ued:template:json&amp;codeblock=5" title="下载片段" class="mediafile mf_html">index.html</a></dt>
+<dd><pre class="code file html4strict"><span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/p.html"><span class="kw2">p</span></a>&gt;</span>{$index.announcement}<span class="sc2">&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/p.html"><span class="kw2">p</span></a>&gt;</span>
+<span class="sc-1">&lt;!-- 输出：&lt;p&gt;这里是自动输出的公共内容！&lt;br /&gt;第二行公告内容&lt;/p&gt; --&gt;</span></pre>
+</dd></dl>
+
+<p>
+数据变量说明：
+</p>
+<ul>
+<li class="level1"><div class="li"> {$index.announcement} 网站公告</div>
+</li>
+</ul>
+
+</div>
+<!-- EDIT6 SECTION "type:textarea" [5295-5777] -->
+<h3 class="sectionedit7" id="typeimage">type:image</h3>
+<div class="level3">
+
+<p>
+比如，json文件内容为：
+</p>
+<dl class="file">
+<dt><a href="/doku.php?do=export_code&amp;id=ued:template:json&amp;codeblock=6" title="下载片段" class="mediafile mf_json">index.json</a></dt>
+<dd><pre class="code file javascript"><span class="br0">&#123;</span>
+	<span class="st0">&quot;logo&quot;</span><span class="sy0">:</span> <span class="br0">&#123;</span>
+		<span class="st0">&quot;value&quot;</span><span class="sy0">:</span> <span class="br0">&#123;</span>
+			<span class="st0">&quot;title&quot;</span><span class="sy0">:</span> <span class="st0">&quot;XXX企业&quot;</span><span class="sy0">,</span>
+			<span class="st0">&quot;image&quot;</span><span class="sy0">:</span> <span class="st0">&quot;images/logo-home.png&quot;</span><span class="sy0">,</span>
+			<span class="st0">&quot;link&quot;</span><span class="sy0">:</span> <span class="st0">&quot;http://www.baidu.com/&quot;</span>
+		<span class="br0">&#125;</span><span class="sy0">,</span>
+		<span class="st0">&quot;description&quot;</span><span class="sy0">:</span> <span class="st0">&quot;网站LOGO&quot;</span><span class="sy0">,</span>
+		<span class="st0">&quot;type&quot;</span><span class="sy0">:</span> <span class="st0">&quot;image&quot;</span><span class="sy0">,</span>
+		<span class="st0">&quot;config&quot;</span><span class="sy0">:</span> <span class="br0">&#123;</span>
+			<span class="st0">&quot;height&quot;</span><span class="sy0">:</span> <span class="nu0">100</span>
+		<span class="br0">&#125;</span>
+	<span class="br0">&#125;</span>
+<span class="br0">&#125;</span></pre>
+</dd></dl>
+
+<p>
+config配置中的width和height也可只设置一个，另一个会自适。
+</p>
+
+<p>
+调用形式：
+</p>
+<dl class="file">
+<dt><a href="/doku.php?do=export_code&amp;id=ued:template:json&amp;codeblock=7" title="下载片段" class="mediafile mf_html">index.html</a></dt>
+<dd><pre class="code file html4strict"><span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/img.html"><span class="kw2">img</span></a> <span class="kw3">src</span><span class="sy0">=</span><span class="st0">&quot;{$index.logo.image}&quot;</span> <span class="kw3">alt</span><span class="sy0">=</span><span class="st0">&quot;{$index.logo.title}&quot;</span>&gt;</span>
+<span class="sc-1">&lt;!-- 输出：&lt;img src=&quot;images/logo-home.png&quot; alt=&quot;XXX企业&quot;&gt; --&gt;</span></pre>
+</dd></dl>
+
+<p>
+数据变量说明：
+</p>
+<ul>
+<li class="level1"><div class="li"> {$index.logo.title} LOGO文案（网站标题）</div>
+</li>
+<li class="level1"><div class="li"> {$index.logo.image} LOGO图片地址</div>
+</li>
+<li class="level1"><div class="li"> {$index.logo.link} LOGO链接</div>
+</li>
+</ul>
+
+</div>
+<!-- EDIT7 SECTION "type:image" [5778-6487] -->
+<h3 class="sectionedit8" id="typeimages">type:images</h3>
+<div class="level3">
+
+<p>
+<em class="u">config：</em>
+</p>
+<ul>
+<li class="level1"><div class="li"> width：图片宽度</div>
+</li>
+<li class="level1"><div class="li"> height：图片高度</div>
+</li>
+<li class="level1"><div class="li"> forcesize：强制高宽（所有上传图片都会被压缩</div>
+</li>
+<li class="level1"><div class="li"> limit：图片数量</div>
+</li>
+</ul>
+
+<p>
+json文件内容为：
+</p>
+<dl class="file">
+<dt><a href="/doku.php?do=export_code&amp;id=ued:template:json&amp;codeblock=8" title="下载片段" class="mediafile mf_json">index.json</a></dt>
+<dd><pre class="code file javascript"><span class="br0">&#123;</span>
+	<span class="st0">&quot;slidepics&quot;</span><span class="sy0">:</span> <span class="br0">&#123;</span>
+		<span class="st0">&quot;value&quot;</span><span class="sy0">:</span> <span class="br0">&#91;</span><span class="br0">&#123;</span>
+			<span class="st0">&quot;title&quot;</span><span class="sy0">:</span> <span class="st0">&quot;测试图1&quot;</span><span class="sy0">,</span>
+			<span class="st0">&quot;image&quot;</span><span class="sy0">:</span> <span class="st0">&quot;http://tb2.bdstatic.com/tb/static-common/img/search_logo_big_282cef2.gif&quot;</span><span class="sy0">,</span>
+			<span class="st0">&quot;link&quot;</span><span class="sy0">:</span> <span class="st0">&quot;http://www.baidu.com&quot;</span>
+		<span class="br0">&#125;</span><span class="sy0">,</span> <span class="br0">&#123;</span>
+			<span class="st0">&quot;title&quot;</span><span class="sy0">:</span> <span class="st0">&quot;测试图2&quot;</span><span class="sy0">,</span>
+			<span class="st0">&quot;image&quot;</span><span class="sy0">:</span> <span class="st0">&quot;http://img0.bdstatic.com/static/common/widget/search_box_search/logo/logo_3b6de4c.png&quot;</span><span class="sy0">,</span>
+			<span class="st0">&quot;link&quot;</span><span class="sy0">:</span> <span class="st0">&quot;http://www.baidu.com&quot;</span>
+		<span class="br0">&#125;</span><span class="br0">&#93;</span><span class="sy0">,</span>
+		<span class="st0">&quot;description&quot;</span><span class="sy0">:</span> <span class="st0">&quot;大轮滚图&quot;</span><span class="sy0">,</span>
+		<span class="st0">&quot;type&quot;</span><span class="sy0">:</span> <span class="st0">&quot;images&quot;</span><span class="sy0">,</span>
+		<span class="st0">&quot;config&quot;</span><span class="sy0">:</span> <span class="br0">&#123;</span>
+			<span class="st0">&quot;width&quot;</span><span class="sy0">:</span> <span class="nu0">950</span><span class="sy0">,</span>
+			<span class="st0">&quot;height&quot;</span><span class="sy0">:</span> <span class="nu0">500</span><span class="sy0">,</span>
+			<span class="st0">&quot;forcesize&quot;</span><span class="sy0">:</span> <span class="st0">&quot;true&quot;</span><span class="sy0">,</span>
+			<span class="st0">&quot;limit&quot;</span><span class="sy0">:</span> <span class="nu0">4</span>
+		<span class="br0">&#125;</span>
+	<span class="br0">&#125;</span>
+<span class="br0">&#125;</span></pre>
+</dd></dl>
+
+<p>
+config配置中limit为可选项。
+</p>
+<dl class="file">
+<dt><a href="/doku.php?do=export_code&amp;id=ued:template:json&amp;codeblock=9" title="下载片段" class="mediafile mf_html">index.html</a></dt>
+<dd><pre class="code file html4strict"><span class="sc-1">&lt;!-- 轮滚图 --&gt;</span>
+<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/ul.html"><span class="kw2">ul</span></a> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;clearfix&quot;</span>&gt;</span>
+	{foreach item=slidepic from=$index.slidepics}
+	<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/li.html"><span class="kw2">li</span></a> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;fl&quot;</span>&gt;&lt;<a target="_blank" href="http://december.com/html/4/element/a.html"><span class="kw2">a</span></a> <span class="kw3">href</span><span class="sy0">=</span><span class="st0">&quot;{$slidepic.link}&quot;</span> <span class="kw3">target</span><span class="sy0">=</span><span class="st0">&quot;_blank&quot;</span>&gt;&lt;<a target="_blank" href="http://december.com/html/4/element/img.html"><span class="kw2">img</span></a> <span class="kw3">src</span><span class="sy0">=</span><span class="st0">&quot;{$slidepic.image}&quot;</span> <span class="kw3">alt</span><span class="sy0">=</span><span class="st0">&quot;{$slidepic.title}&quot;</span> <span class="sy0">/</span>&gt;&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/a.html"><span class="kw2">a</span></a>&gt;&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/li.html"><span class="kw2">li</span></a>&gt;</span>
+	{/foreach}
+<span class="sc2">&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/ul.html"><span class="kw2">ul</span></a>&gt;</span>
+<span class="sc-1">&lt;!-- 输出：</span>
+<span class="sc-1">&lt;ul class=&quot;clearfix&quot;&gt;</span>
+<span class="sc-1">	&lt;li class=&quot;fl&quot;&gt;&lt;a href=&quot;http://www.baidu.com&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;http://tb2.bdstatic.com/tb/static-common/img/search_logo_big_282cef2.gif&quot; alt=&quot;测试图1&quot;&gt;&lt;/a&gt;&lt;/li&gt;</span>
+<span class="sc-1">	&lt;li class=&quot;fl&quot;&gt;&lt;a href=&quot;http://www.baidu.com&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;http://img0.bdstatic.com/static/common/widget/search_box_search/logo/logo_3b6de4c.png&quot; alt=&quot;测试图2&quot;&gt;&lt;/a&gt;&lt;/li&gt;</span>
+<span class="sc-1">&lt;/ul&gt;</span>
+<span class="sc-1">--&gt;</span></pre>
+</dd></dl>
+
+<p>
+数据变量说明：
+</p>
+<ul>
+<li class="level1"><div class="li"> {$index.slidepics[0].title} 轮滚图图片标题</div>
+</li>
+<li class="level1"><div class="li"> {$index.slidepics[0].image} 轮滚图图片地址</div>
+</li>
+<li class="level1"><div class="li"> {$index.slidepics[0].link} 轮滚图图片链接</div>
+</li>
+<li class="level1"><div class="li"> {$index.slidepics[0].description} 轮滚图图片描述（可选，需定义<sup><a href="#fn__2" id="fnt__2" class="fn_top">2)</a></sup>）</div>
+</li>
+</ul>
+
+</div>
+<!-- EDIT8 SECTION "type:images" [6488-8877] -->
+<h3 class="sectionedit9" id="typenav">type:nav</h3>
+<div class="level3">
+
+<p>
+<span style="color:red">此类型的自定义变量与以上不同，value值留空，会自动填充网站数据！</span>
+</p>
+<dl class="file">
+<dt><a href="/doku.php?do=export_code&amp;id=ued:template:json&amp;codeblock=11" title="下载片段" class="mediafile mf_json">index.json</a></dt>
+<dd><pre class="code file javascript"><span class="br0">&#123;</span>
+	<span class="st0">&quot;nav1&quot;</span><span class="sy0">:</span> <span class="br0">&#123;</span>
+		<span class="st0">&quot;value&quot;</span><span class="sy0">:</span> <span class="br0">&#123;</span><span class="br0">&#125;</span><span class="sy0">,</span>
+		<span class="st0">&quot;description&quot;</span><span class="sy0">:</span> <span class="st0">&quot;快速导航链接&quot;</span><span class="sy0">,</span>
+		<span class="st0">&quot;type&quot;</span><span class="sy0">:</span> <span class="st0">&quot;nav&quot;</span><span class="sy0">,</span>
+		<span class="st0">&quot;config&quot;</span><span class="sy0">:</span> <span class="br0">&#123;</span>
+			<span class="st0">&quot;filter&quot;</span><span class="sy0">:</span> <span class="st0">&quot;ALL&quot;</span><span class="sy0">,</span>
+			<span class="st0">&quot;nav_width&quot;</span><span class="sy0">:</span> <span class="nu0">200</span><span class="sy0">,</span>
+			<span class="st0">&quot;nav_height&quot;</span><span class="sy0">:</span> <span class="nu0">200</span><span class="sy0">,</span>
+			<span class="st0">&quot;width&quot;</span><span class="sy0">:</span> <span class="nu0">200</span><span class="sy0">,</span>
+			<span class="st0">&quot;height&quot;</span><span class="sy0">:</span> <span class="nu0">120</span>
+		<span class="br0">&#125;</span>
+	<span class="br0">&#125;</span>
+<span class="br0">&#125;</span></pre>
+</dd></dl>
+
+<p>
+<em class="u">config：</em>
+</p>
+<ul>
+<li class="level1"><div class="li"> filter：筛选栏目类型。默认值：“ALL”（大写）代表筛选所有栏目。也可填写“list”仅允许列表型栏目，或者“list,page”筛选多种类型栏目。详见：[#filter参数|filter参数]</div>
+</li>
+<li class="level1"><div class="li"> nav_width：栏目图片宽度（如有引用栏目图片时填写）</div>
+</li>
+<li class="level1"><div class="li"> nav_height：栏目图片高度（如有引用栏目图片时填写）</div>
+</li>
+<li class="level1"><div class="li"> data_limit：限制每个栏目列表数据输出的个数（默认0，不输出任何列表数据）</div>
+</li>
+<li class="level1"><div class="li"> width：列表数据图片宽度，data_limit有值时生效（如有引用列表数据图片时填写）</div>
+</li>
+<li class="level1"><div class="li"> height：列表数据图片高度，data_limit有值时生效（如有引用列表数据图片时填写）</div>
+</li>
+<li class="level1"><div class="li"> star_only：是否默认输出星标(推荐)文章，data_limit有值时生效（可用于“热门产品”等栏目）</div>
+</li>
+<li class="level1"><div class="li"> mustchild：true时筛选出只包含子栏目的栏目供客服选择（true时用于侧边子导航，默认值false）</div>
+</li>
+<li class="level1"><div class="li"> showchilddata：true时childmenu也同时输出data值</div>
+</li>
+</ul>
+
+<p>
+如果是filter筛选list型，是图片列表必须定义高宽：
+</p>
+<dl class="file">
+<dt><a href="/doku.php?do=export_code&amp;id=ued:template:json&amp;codeblock=12" title="下载片段" class="mediafile mf_json">index.json</a></dt>
+<dd><pre class="code file javascript"><span class="br0">&#123;</span>
+	<span class="st0">&quot;list1&quot;</span><span class="sy0">:</span> <span class="br0">&#123;</span>
+		<span class="st0">&quot;value&quot;</span><span class="sy0">:</span> <span class="br0">&#123;</span><span class="br0">&#125;</span><span class="sy0">,</span>
+		<span class="st0">&quot;description&quot;</span><span class="sy0">:</span> <span class="st0">&quot;快速导航链接&quot;</span><span class="sy0">,</span>
+		<span class="st0">&quot;type&quot;</span><span class="sy0">:</span> <span class="st0">&quot;nav&quot;</span><span class="sy0">,</span>
+		<span class="st0">&quot;config&quot;</span><span class="sy0">:</span> <span class="br0">&#123;</span>
+			<span class="st0">&quot;filter&quot;</span><span class="sy0">:</span> <span class="st0">&quot;list&quot;</span><span class="sy0">,</span>
+			<span class="st0">&quot;width&quot;</span><span class="sy0">:</span> <span class="nu0">200</span><span class="sy0">,</span>
+			<span class="st0">&quot;height&quot;</span><span class="sy0">:</span> <span class="nu0">120</span>
+		<span class="br0">&#125;</span>
+	<span class="br0">&#125;</span>
+<span class="br0">&#125;</span></pre>
+</dd></dl>
+
+<p>
+如果是有引用栏目图片，必须定义栏目图高宽：
+</p>
+<dl class="file">
+<dt><a href="/doku.php?do=export_code&amp;id=ued:template:json&amp;codeblock=13" title="下载片段" class="mediafile mf_json">index.json</a></dt>
+<dd><pre class="code file javascript"><span class="br0">&#123;</span>
+	<span class="st0">&quot;page1&quot;</span><span class="sy0">:</span> <span class="br0">&#123;</span>
+		<span class="st0">&quot;value&quot;</span><span class="sy0">:</span> <span class="br0">&#123;</span><span class="br0">&#125;</span><span class="sy0">,</span>
+		<span class="st0">&quot;description&quot;</span><span class="sy0">:</span> <span class="st0">&quot;左上角单页内容展示&quot;</span><span class="sy0">,</span>
+		<span class="st0">&quot;type&quot;</span><span class="sy0">:</span> <span class="st0">&quot;nav&quot;</span><span class="sy0">,</span>
+		<span class="st0">&quot;config&quot;</span><span class="sy0">:</span> <span class="br0">&#123;</span>
+			<span class="st0">&quot;filter&quot;</span><span class="sy0">:</span> <span class="st0">&quot;page&quot;</span><span class="sy0">,</span>
+			<span class="st0">&quot;nav_width&quot;</span><span class="sy0">:</span> <span class="nu0">200</span><span class="sy0">,</span>
+			<span class="st0">&quot;nav_height&quot;</span><span class="sy0">:</span> <span class="nu0">120</span>
+		<span class="br0">&#125;</span>
+	<span class="br0">&#125;</span>
+<span class="br0">&#125;</span></pre>
+</dd></dl>
+
+</div>
+
+<h4 id="filter参数">filter参数</h4>
+<div class="level4">
+
+</div>
+
+<h5 id="filterall">filter:ALL</h5>
+<div class="level5">
+
+<p>
+客服可以选择任何类型的栏目。
+</p>
+
+<p>
+数据变量说明：
+</p>
+<ul>
+<li class="level1"><div class="li"> {$index.nav1.name} 栏目名称</div>
+</li>
+<li class="level1"><div class="li"> {$index.nav1.en_name} 栏目英文名称</div>
+</li>
+<li class="level1"><div class="li"> {$index.nav1.icon} 栏目图标（iconfont技术，可改大小可换色）</div>
+</li>
+<li class="level1"><div class="li"> {$index.nav1.image} 栏目图片</div>
+</li>
+<li class="level1"><div class="li"> {$index.nav1.link} 栏目链接(一般用于“查看更多”按钮)</div>
+</li>
+<li class="level1"><div class="li"> {$index.nav1.description} 栏目描述</div>
+</li>
+<li class="level1"><div class="li"> {$index.nav1.type} 栏目类型</div>
+</li>
+</ul>
+
+</div>
+
+<h5 id="filterlist">filter:list</h5>
+<div class="level5">
+
+<p>
+客服只能选择列表类型的栏目（1文字列表、2图片列表、3图文列表）。
+</p>
+
+<p>
+数据变量说明：
+</p>
+<ul>
+<li class="level1"><div class="li"> {$index.list1.name} 栏目名称</div>
+</li>
+<li class="level1"><div class="li"> {$index.list1.en_name} 栏目英文名称</div>
+</li>
+<li class="level1"><div class="li"> {$index.list1.icon} 栏目图标（iconfont技术，可改大小可换色）</div>
+</li>
+<li class="level1"><div class="li"> {$index.list1.image} 栏目图片</div>
+</li>
+<li class="level1"><div class="li"> {$index.list1.link} 栏目链接(一般用于“查看更多”按钮)</div>
+</li>
+<li class="level1"><div class="li"> {$index.list1.description} 栏目描述</div>
+</li>
+<li class="level1"><div class="li"> <strong>{$index.list1.data[]} 栏目下文章数据</strong>（数组格式，需foreach循环）</div>
+</li>
+<li class="level1"><div class="li"> {$index.list1.childmenu[]} 子导航，结构类似导航</div>
+</li>
+<li class="level1"><div class="li"> {$index.list1.type} 栏目类型</div>
+</li>
+</ul>
+
+</div>
+
+<h5 id="filterpage">filter:page</h5>
+<div class="level5">
+
+<p>
+客服只能选择单页类型的栏目。
+</p>
+
+<p>
+数据变量说明：
+</p>
+<ul>
+<li class="level1"><div class="li"> {$index.page1.name} 栏目名称</div>
+</li>
+<li class="level1"><div class="li"> {$index.page1.en_name} 栏目英文名称</div>
+</li>
+<li class="level1"><div class="li"> {$index.page1.icon} 栏目图标（iconfont技术，可改大小可换色）</div>
+</li>
+<li class="level1"><div class="li"> {$index.page1.image} 栏目图片</div>
+</li>
+<li class="level1"><div class="li"> {$index.page1.link} 栏目链接(一般用于“查看更多”按钮)</div>
+</li>
+<li class="level1"><div class="li"> {$index.page1.description} 栏目描述</div>
+</li>
+<li class="level1"><div class="li"> <strong>{$index.page1.content} 栏目单页内容HTML数据</strong></div>
+</li>
+<li class="level1"><div class="li"> {$index.page1.childmenu[]} 子导航，结构类似导航（数组格式，需foreach循环）</div>
+</li>
+<li class="level1"><div class="li"> {$index.page1.type} 栏目类型</div>
+</li>
+</ul>
+
+</div>
+
+<h5 id="filterlink">filter:link</h5>
+<div class="level5">
+
+<p>
+客服只能选择链接类型的栏目。（5功能栏目、6链接、7、8）
+</p>
+
+<p>
+数据变量说明：
+</p>
+<ul>
+<li class="level1"><div class="li"> {$index.link1.name} 栏目名称</div>
+</li>
+<li class="level1"><div class="li"> {$index.link1.en_name} 栏目英文名称</div>
+</li>
+<li class="level1"><div class="li"> {$index.link1.icon} 栏目图标（iconfont技术，可改大小可换色）</div>
+</li>
+<li class="level1"><div class="li"> {$index.link1.image} 栏目图片</div>
+</li>
+<li class="level1"><div class="li"> {$index.link1.link} 栏目链接(一般用于“查看更多”按钮)</div>
+</li>
+<li class="level1"><div class="li"> {$index.link1.description} 栏目描述</div>
+</li>
+<li class="level1"><div class="li"> <strong>{$index.link1.content} 栏目单页内容HTML数据</strong></div>
+</li>
+<li class="level1"><div class="li"> {$index.link1.type} 栏目类型</div>
+</li>
+</ul>
+
+</div>
+
+<h5 id="filterfeedback">filter:feedback</h5>
+<div class="level5">
+
+<p>
+客服只能选择留言板栏目。
+</p>
+
+<p>
+数据变量说明：
+</p>
+<ul>
+<li class="level1"><div class="li"> {$index.feedback.name} 栏目名称</div>
+</li>
+<li class="level1"><div class="li"> {$index.feedback.en_name} 栏目英文名称</div>
+</li>
+<li class="level1"><div class="li"> {$index.feedback.icon} 栏目图标（iconfont技术，可改大小可换色）</div>
+</li>
+<li class="level1"><div class="li"> {$index.feedback.image} 栏目图片</div>
+</li>
+<li class="level1"><div class="li"> {$index.feedback.link} 栏目链接(一般用于“查看更多”按钮)</div>
+</li>
+<li class="level1"><div class="li"> {$index.feedback.description} 栏目描述</div>
+</li>
+<li class="level1"><div class="li"> <strong>{$index.feedback.posturl} 留言板form表单的action值</strong></div>
+</li>
+<li class="level1"><div class="li"> {$index.feedback.type} 栏目类型</div>
+</li>
+</ul>
+
+<p>
+调用形式：
+</p>
+<dl class="file">
+<dt><a href="/doku.php?do=export_code&amp;id=ued:template:json&amp;codeblock=14" title="下载片段" class="mediafile mf_html">index.html</a></dt>
+<dd><pre class="code file html4strict"><span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/h2.html"><span class="kw2">h2</span></a>&gt;</span>在这里给我留言噢~<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/span.html"><span class="kw2">span</span></a>&gt;</span>{$index.feedback.en_name}<span class="sc2">&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/span.html"><span class="kw2">span</span></a>&gt;&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/h2.html"><span class="kw2">h2</span></a>&gt;</span>
+<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/form.html"><span class="kw2">form</span></a> <span class="kw3">action</span><span class="sy0">=</span><span class="st0">&quot;{$index.feedback.posturl}&quot;</span>&gt;</span>
+	<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/p.html"><span class="kw2">p</span></a>&gt;&lt;<a target="_blank" href="http://december.com/html/4/element/input.html"><span class="kw2">input</span></a> <span class="kw3">type</span><span class="sy0">=</span><span class="st0">&quot;text&quot;</span> <span class="kw3">name</span><span class="sy0">=</span><span class="st0">&quot;name&quot;</span> <span class="sy0">/</span>&gt;&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/p.html"><span class="kw2">p</span></a>&gt;</span>
+	<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/p.html"><span class="kw2">p</span></a>&gt;&lt;<a target="_blank" href="http://december.com/html/4/element/input.html"><span class="kw2">input</span></a> <span class="kw3">type</span><span class="sy0">=</span><span class="st0">&quot;text&quot;</span> <span class="kw3">name</span><span class="sy0">=</span><span class="st0">&quot;telephone&quot;</span> <span class="sy0">/</span>&gt;&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/p.html"><span class="kw2">p</span></a>&gt;</span>
+	<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/p.html"><span class="kw2">p</span></a>&gt;&lt;<a target="_blank" href="http://december.com/html/4/element/input.html"><span class="kw2">input</span></a> <span class="kw3">type</span><span class="sy0">=</span><span class="st0">&quot;text&quot;</span> <span class="kw3">name</span><span class="sy0">=</span><span class="st0">&quot;email&quot;</span> <span class="sy0">/</span>&gt;&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/p.html"><span class="kw2">p</span></a>&gt;</span>
+	<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/p.html"><span class="kw2">p</span></a>&gt;&lt;<a target="_blank" href="http://december.com/html/4/element/textarea.html"><span class="kw2">textarea</span></a> <span class="kw3">name</span><span class="sy0">=</span><span class="st0">&quot;content&quot;</span> <span class="kw3">rows</span><span class="sy0">=</span><span class="st0">&quot;5&quot;</span>&gt;&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/textarea.html"><span class="kw2">textarea</span></a>&gt;&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/p.html"><span class="kw2">p</span></a>&gt;</span>
+	<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/p.html"><span class="kw2">p</span></a>&gt;&lt;<a target="_blank" href="http://december.com/html/4/element/input.html"><span class="kw2">input</span></a> <span class="kw3">type</span><span class="sy0">=</span><span class="st0">&quot;submit&quot;</span> <span class="sy0">/</span>&gt;&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/p.html"><span class="kw2">p</span></a>&gt;</span>
+<span class="sc2">&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/form.html"><span class="kw2">form</span></a>&gt;</span>
+<span class="sc-1">&lt;!-- 输出：</span>
+<span class="sc-1">&lt;h2&gt;在这里给我留言噢~&lt;span&gt;Feed Back&lt;/span&gt;&lt;/h2&gt;</span>
+<span class="sc-1">&lt;form action=&quot;http://....&quot;&gt;</span>
+<span class="sc-1">	&lt;p&gt;&lt;input type=&quot;text&quot; name=&quot;name&quot; /&gt;&lt;/p&gt;</span>
+<span class="sc-1">	&lt;p&gt;&lt;input type=&quot;text&quot; name=&quot;telephone&quot; /&gt;&lt;/p&gt;</span>
+<span class="sc-1">	&lt;p&gt;&lt;input type=&quot;text&quot; name=&quot;email&quot; /&gt;&lt;/p&gt;</span>
+<span class="sc-1">	&lt;p&gt;&lt;textarea name=&quot;content&quot; rows=&quot;5&quot;&gt;&lt;/textarea&gt;&lt;/p&gt;</span>
+<span class="sc-1">	&lt;p&gt;&lt;input type=&quot;submit&quot; /&gt;&lt;/p&gt;</span>
+<span class="sc-1">&lt;/form&gt;</span>
+<span class="sc-1">--&gt;</span></pre>
+</dd></dl>
+
+<p>
+<strong>注意：input的name值必须为以下字段</strong>
+</p>
+<ul>
+<li class="level1"><div class="li"> name：姓名</div>
+</li>
+<li class="level1"><div class="li"> telephone：电话</div>
+</li>
+<li class="level1"><div class="li"> email：邮件地址</div>
+</li>
+<li class="level1"><div class="li"> content：内容</div>
+</li>
+</ul>
+
+</div>
+
+<h5 id="filterlist_page">filter:list,page</h5>
+<div class="level5">
+
+<p>
+客服只能选择列表或者单页类型的栏目。（也可以英文逗号分割list,page,link任意组合）
+</p>
+
+<p>
+数据变量说明：
+</p>
+<ul>
+<li class="level1"><div class="li"> {$index.leftnavs.name} 栏目名称</div>
+</li>
+<li class="level1"><div class="li"> {$index.leftnavs.en_name} 栏目英文名称</div>
+</li>
+<li class="level1"><div class="li"> {$index.leftnavs.icon} 栏目图标（iconfont技术，可改大小可换色）</div>
+</li>
+<li class="level1"><div class="li"> {$index.leftnavs.image} 栏目图片</div>
+</li>
+<li class="level1"><div class="li"> {$index.leftnavs.link} 栏目链接(一般用于“查看更多”按钮)</div>
+</li>
+<li class="level1"><div class="li"> {$index.leftnavs.description} 栏目描述</div>
+</li>
+<li class="level1"><div class="li"> {$index.leftnavs.childmenu[]} 子导航，结构类似导航（数组格式，需foreach循环）</div>
+</li>
+<li class="level1"><div class="li"> {$index.leftnavs.type} 栏目类型</div>
+</li>
+</ul>
+
+</div>
+<!-- EDIT9 SECTION "type:nav" [8878-15115] -->
+<h3 class="sectionedit10" id="typenavs">type:navs</h3>
+<div class="level3">
+
+<p>
+多个[#typenav|type:nav]的集合，类似images与image类型变量。
+</p>
+<dl class="file">
+<dt><a href="/doku.php?do=export_code&amp;id=ued:template:json&amp;codeblock=15" title="下载片段" class="mediafile mf_json">index.json</a></dt>
+<dd><pre class="code file javascript"><span class="br0">&#123;</span>
+	<span class="st0">&quot;second_navs&quot;</span><span class="sy0">:</span> <span class="br0">&#123;</span>
+		<span class="st0">&quot;value&quot;</span><span class="sy0">:</span> <span class="br0">&#123;</span><span class="br0">&#125;</span><span class="sy0">,</span>
+		<span class="st0">&quot;description&quot;</span><span class="sy0">:</span> <span class="st0">&quot;第二导航（底部）&quot;</span><span class="sy0">,</span>
+		<span class="st0">&quot;type&quot;</span><span class="sy0">:</span> <span class="st0">&quot;navs&quot;</span><span class="sy0">,</span>
+		<span class="st0">&quot;config&quot;</span><span class="sy0">:</span> <span class="br0">&#123;</span>
+			<span class="st0">&quot;limit&quot;</span><span class="sy0">:</span> <span class="nu0">8</span>
+		<span class="br0">&#125;</span>
+	<span class="br0">&#125;</span>
+<span class="br0">&#125;</span></pre>
+</dd></dl>
+
+<p>
+<em class="u">config：</em>
+</p>
+<ul>
+<li class="level1"><div class="li"> filter：筛选栏目类型。默认值：“ALL”（大写）代表筛选所有栏目。也可填写“list”仅允许列表型栏目，或者“list,page”筛选多种类型栏目。</div>
+</li>
+<li class="level1"><div class="li"> limit：限制输出[#typenav|type:navs]的个数</div>
+</li>
+<li class="level1"><div class="li"> nav_width：栏目图片宽度（如有引用栏目图片时填写）</div>
+</li>
+<li class="level1"><div class="li"> nav_height：栏目图片高度（如有引用栏目图片时填写）</div>
+</li>
+<li class="level1"><div class="li"> data_limit：限制每个栏目列表数据输出的个数（默认0，不输出任何列表数据）</div>
+</li>
+<li class="level1"><div class="li"> width：每个栏目列表数据图片宽度，data_limit有值时生效（如有引用列表数据图片时填写）</div>
+</li>
+<li class="level1"><div class="li"> height：每个栏目列表数据图片高度，data_limit有值时生效（如有引用列表数据图片时填写）</div>
+</li>
+<li class="level1"><div class="li"> star_only：是否默认输出星标(推荐)文章，data_limit有值时生效（可用于“热门产品”等栏目）</div>
+</li>
+<li class="level1"><div class="li"> mustchild：true时筛选出只包含子栏目的栏目供客服选择（默认false，用于侧边子导航）</div>
+</li>
+<li class="level1"><div class="li"> showchilddata：true时childmenu也同时输出data值</div>
+</li>
+</ul>
+
+<p>
+调用形式：
+</p>
+<dl class="file">
+<dt><a href="/doku.php?do=export_code&amp;id=ued:template:json&amp;codeblock=16" title="下载片段" class="mediafile mf_html">_footer.html</a></dt>
+<dd><pre class="code file html4strict"><span class="sc2">&lt;footer&gt;</span>
+	<span class="sc-1">&lt;!-- 第二导航 --&gt;</span>
+	<span class="sc2">&lt;nav&gt;</span>
+		<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/ul.html"><span class="kw2">ul</span></a> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;clearfix&quot;</span>&gt;</span>
+			{foreach item=nav from=$index.second_navs}
+			<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/li.html"><span class="kw2">li</span></a> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;{if $nav.current}current{/if}&quot;</span>&gt;&lt;<a target="_blank" href="http://december.com/html/4/element/a.html"><span class="kw2">a</span></a> <span class="kw3">href</span><span class="sy0">=</span><span class="st0">&quot;{$nav.link}&quot;</span>&gt;</span>{$nav.name}<span class="sc2">&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/a.html"><span class="kw2">a</span></a>&gt;&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/li.html"><span class="kw2">li</span></a>&gt;</span>
+			{/foreach}
+		<span class="sc2">&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/ul.html"><span class="kw2">ul</span></a>&gt;</span>
+	<span class="sc2">&lt;<span class="sy0">/</span>nav&gt;</span>
+<span class="sc2">&lt;<span class="sy0">/</span>footer&gt;</span>
+<span class="sc-1">&lt;!-- 输出：</span>
+<span class="sc-1">&lt;footer&gt;</span>
+<span class="sc-1">	&lt;nav&gt;</span>
+<span class="sc-1">		&lt;ul class=&quot;clearfix&quot;&gt;</span>
+<span class="sc-1">			&lt;li&gt;&lt;a href=&quot;list-text.html&quot;&gt;新闻动态&lt;/a&gt;&lt;/li&gt;</span>
+<span class="sc-1">			&lt;li class=&quot;current&quot;&gt;&lt;a href=&quot;list-imagetext.html&quot;&gt;产品中心&lt;/a&gt;&lt;/li&gt;</span>
+<span class="sc-1">			&lt;li&gt;&lt;a href=&quot;list-text.html&quot;&gt;产品动态&lt;/a&gt;&lt;/li&gt;</span>
+<span class="sc-1">			&lt;li&gt;&lt;a href=&quot;list-page.html&quot;&gt;公司简介&lt;/a&gt;&lt;/li&gt;</span>
+<span class="sc-1">		&lt;/ul&gt;</span>
+<span class="sc-1">	&lt;/nav&gt;</span>
+<span class="sc-1">&lt;/footer&gt;</span>
+<span class="sc-1">--&gt;</span></pre>
+</dd></dl>
+
+</div>
+<!-- EDIT10 SECTION "type:navs" [15116-17043] -->
+<h3 class="sectionedit11" id="typelist">type:list</h3>
+<div class="level3">
+
+<p>
+此类型变量全等于 <a href="#typenav" title="ued:template:json ↵" class="wikilink1">type:nav</a> 配置config的 <code>“filter”: “list”</code><sup><a href="#fn__3" id="fnt__3" class="fn_top">3)</a></sup> 。
+</p>
+
+<p>
+比如，json文件内容为：
+</p>
+<dl class="file">
+<dt><a href="/doku.php?do=export_code&amp;id=ued:template:json&amp;codeblock=17" title="下载片段" class="mediafile mf_json">index.json</a></dt>
+<dd><pre class="code file javascript"><span class="br0">&#123;</span>
+	<span class="st0">&quot;list1&quot;</span><span class="sy0">:</span> <span class="br0">&#123;</span>
+		<span class="st0">&quot;value&quot;</span><span class="sy0">:</span> <span class="br0">&#123;</span><span class="br0">&#125;</span><span class="sy0">,</span>
+		<span class="st0">&quot;description&quot;</span><span class="sy0">:</span> <span class="st0">&quot;第一个文字列表&quot;</span><span class="sy0">,</span>
+		<span class="st0">&quot;type&quot;</span><span class="sy0">:</span> <span class="st0">&quot;list&quot;</span><span class="sy0">,</span>
+		<span class="st0">&quot;config&quot;</span><span class="sy0">:</span> <span class="br0">&#123;</span>
+			<span class="st0">&quot;width&quot;</span><span class="sy0">:</span> <span class="nu0">200</span><span class="sy0">,</span>
+			<span class="st0">&quot;height&quot;</span><span class="sy0">:</span> <span class="nu0">120</span><span class="sy0">,</span>
+			<span class="st0">&quot;star_only&quot;</span><span class="sy0">:</span> <span class="kw2">true</span>
+		<span class="br0">&#125;</span>
+	<span class="br0">&#125;</span>
+<span class="br0">&#125;</span></pre>
+</dd></dl>
+
+<p>
+<em class="u">config：</em>
+</p>
+<ul>
+<li class="level1"><div class="li"> filter：筛选栏目类型。默认值：“list”。此参数说明具体参见：[#typenav|type:nav]的config配置</div>
+</li>
+<li class="level1"><div class="li"> data_limit：限制每个栏目列表数据输出的个数（默认20，可以不填写，用@index判断break）</div>
+</li>
+<li class="level1"><div class="li"> width：列表数据图片宽度（如有引用列表数据图片时填写）</div>
+</li>
+<li class="level1"><div class="li"> height：列表数据图片高度（如有引用列表数据图片时填写）</div>
+</li>
+<li class="level1"><div class="li"> star_only：是否默认输出星标(推荐)文章，可用于“热门产品”等栏目</div>
+</li>
+<li class="level1"><div class="li"> nav_width：栏目图片宽度（如有引用栏目图片时填写）</div>
+</li>
+<li class="level1"><div class="li"> nav_height：栏目图片高度（如有引用栏目图片时填写）</div>
+</li>
+<li class="level1"><div class="li"> mustchild：true时筛选出只包含子栏目的栏目供客服选择（默认false，用于侧边子导航）</div>
+</li>
+<li class="level1"><div class="li"> showchilddata：true时childmenu也同时输出data值</div>
+</li>
+</ul>
+
+<p>
+调用形式：
+</p>
+<dl class="file">
+<dt><a href="/doku.php?do=export_code&amp;id=ued:template:json&amp;codeblock=18" title="下载片段" class="mediafile mf_html">index.html</a></dt>
+<dd><pre class="code file html4strict"><span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/h2.html"><span class="kw2">h2</span></a>&gt;</span>{$index.list1.name}<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/span.html"><span class="kw2">span</span></a>&gt;</span>{$index.list1.en_name}<span class="sc2">&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/span.html"><span class="kw2">span</span></a>&gt;&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/h2.html"><span class="kw2">h2</span></a>&gt;</span>
+<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/ul.html"><span class="kw2">ul</span></a> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;clearfix&quot;</span>&gt;</span>
+	{foreach item=article from=$index.list1.data}
+	<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/li.html"><span class="kw2">li</span></a>&gt;&lt;<a target="_blank" href="http://december.com/html/4/element/img.html"><span class="kw2">img</span></a> <span class="kw3">src</span><span class="sy0">=</span><span class="st0">&quot;{$article.image}&quot;</span> <span class="kw3">alt</span><span class="sy0">=</span><span class="st0">&quot;{$article.title|strip_tags}&quot;</span> <span class="sy0">/</span>&gt;&lt;<a target="_blank" href="http://december.com/html/4/element/a.html"><span class="kw2">a</span></a> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;ellipsis&quot;</span> <span class="kw3">href</span><span class="sy0">=</span><span class="st0">&quot;{$article.link}&quot;</span> <span class="kw3">target</span><span class="sy0">=</span><span class="st0">&quot;_blank&quot;</span>&gt;</span>{$article.title}<span class="sc2">&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/a.html"><span class="kw2">a</span></a>&gt;&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/li.html"><span class="kw2">li</span></a>&gt;</span>
+	{if $article@index+1 == 5}{break}{/if}
+	{/foreach}
+<span class="sc2">&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/ul.html"><span class="kw2">ul</span></a>&gt;</span>
+<span class="sc-1">&lt;!-- 输出：</span>
+<span class="sc-1">&lt;h2&gt;产品中心&lt;span&gt;Products&lt;/span&gt;&lt;/h2&gt;</span>
+<span class="sc-1">&lt;ul class=&quot;clearfix&quot;&gt;</span>
+<span class="sc-1">	&lt;li&gt;&lt;img src=&quot;images/pro1.jpg&quot; alt=&quot;这是一篇测试文章&quot; /&gt;&lt;a class=&quot;ellipsis&quot; href=&quot;content-news.html&quot; target=&quot;_blank&quot;&gt;这是一篇测试文章&lt;/a&gt;&lt;/li&gt;</span>
+<span class="sc-1">	&lt;li&gt;&lt;img src=&quot;images/pro2.jpg&quot; alt=&quot;这是一篇测试文章&quot; /&gt;&lt;a class=&quot;ellipsis&quot; href=&quot;content-news.html&quot; target=&quot;_blank&quot;&gt;这是一篇测试文章&lt;/a&gt;&lt;/li&gt;</span>
+<span class="sc-1">	&lt;li&gt;&lt;img src=&quot;images/pro3.jpg&quot; alt=&quot;这是一篇测试文章&quot; /&gt;&lt;a class=&quot;ellipsis&quot; href=&quot;content-news.html&quot; target=&quot;_blank&quot;&gt;这是一篇测试文章&lt;/a&gt;&lt;/li&gt;</span>
+<span class="sc-1">	&lt;li&gt;&lt;img src=&quot;images/pro4.jpg&quot; alt=&quot;这是一篇测试文章&quot; /&gt;&lt;a class=&quot;ellipsis&quot; href=&quot;content-news.html&quot; target=&quot;_blank&quot;&gt;这是一篇测试文章&lt;/a&gt;&lt;/li&gt;</span>
+<span class="sc-1">	&lt;li&gt;&lt;img src=&quot;images/pro5.jpg&quot; alt=&quot;这是一篇测试文章&quot; /&gt;&lt;a class=&quot;ellipsis&quot; href=&quot;content-news.html&quot; target=&quot;_blank&quot;&gt;这是一篇测试文章&lt;/a&gt;&lt;/li&gt;</span>
+<span class="sc-1">&lt;/ul&gt;</span>
+<span class="sc-1">--&gt;</span></pre>
+</dd></dl>
+
+<p>
+数据变量说明（<strong>这个特别注意，输出的数据格式与填写的json格式是不一样的</strong>）：<br/>
+
+（以下参考为filter筛选出list的栏目数据变量格式）
+</p>
+<ul>
+<li class="level1"><div class="li"> {$index.list1.name} 栏目名称</div>
+</li>
+<li class="level1"><div class="li"> {$index.list1.en_name} 栏目英文名称</div>
+</li>
+<li class="level1"><div class="li"> {$index.list1.icon} 栏目图标（iconfont技术，可改大小可换色）</div>
+</li>
+<li class="level1"><div class="li"> {$index.list1.image} 栏目图片</div>
+</li>
+<li class="level1"><div class="li"> {$index.list1.link} 栏目链接(一般用于“查看更多”按钮)</div>
+</li>
+<li class="level1"><div class="li"> {$index.list1.description} 栏目描述</div>
+</li>
+<li class="level1"><div class="li"> {$index.list1.data[]} 栏目下文章数据（数组格式，需foreach循环）</div>
+</li>
+<li class="level1"><div class="li"> {$index.list1.data[0].title} 文章标题</div>
+</li>
+<li class="level1"><div class="li"> {$index.list1.data[0].image} 文章预览图</div>
+</li>
+<li class="level1"><div class="li"> {$index.list1.data[0].link} 文章链接</div>
+</li>
+<li class="level1"><div class="li"> {$index.list1.data[0].description} 文章内容</div>
+</li>
+<li class="level1"><div class="li"> {$index.list1.data[0].pubdate} 发布时间</div>
+</li>
+<li class="level1"><div class="li"> {$index.list1.data[0].pubtimestamp} 发布时间戳</div>
+</li>
+<li class="level1"><div class="li"> {$index.list1.data[0].category.name} 所属栏目名</div>
+</li>
+<li class="level1"><div class="li"> {$index.list1.data[0].category.en_name} 所属栏目英文名</div>
+</li>
+<li class="level1"><div class="li"> {$index.list1.data[0].category.icon} 所属栏目图标（iconfont技术，可改大小可换色）</div>
+</li>
+<li class="level1"><div class="li"> {$index.list1.data[0].category.link} 所属栏目链接</div>
+</li>
+<li class="level1"><div class="li"> {$index.list1.childmenu[]} 子导航，结构类似导航（数组格式，需foreach循环）</div>
+</li>
+<li class="level1"><div class="li"> {$index.list1.childmenu[0].name}</div>
+</li>
+<li class="level1"><div class="li"> {$index.list1.childmenu[0].en_name}</div>
+</li>
+<li class="level1"><div class="li"> {$index.list1.childmenu[0].icon}</div>
+</li>
+<li class="level1"><div class="li"> {$index.list1.childmenu[0].image}</div>
+</li>
+<li class="level1"><div class="li"> {$index.list1.childmenu[0].link}</div>
+</li>
+<li class="level1"><div class="li"> {$index.list1.childmenu[0].description}</div>
+</li>
+<li class="level1"><div class="li"> {$index.list1.childmenu[0].data} （这个值需要配置config的<code>“showchilddata”: true</code><sup><a href="#fn__4" id="fnt__4" class="fn_top">4)</a></sup>）</div>
+</li>
+<li class="level1"><div class="li"> {$index.list1.type} 栏目类型：1-文字列表，2-图片列表，3-图文混排，4-内容单页，5-功能，6-外链，7-微信功能，8-直达号功能</div>
+</li>
+</ul>
+
+</div>
+<!-- EDIT11 SECTION "type:list" [17044-21541] -->
+<h3 class="sectionedit12" id="typepage">type:page</h3>
+<div class="level3">
+
+<p>
+此类型变量全等于 <a href="#typenav" title="ued:template:json ↵" class="wikilink1">type:nav</a> 配置config的 <code>“filter”: “page”</code><sup><a href="#fn__5" id="fnt__5" class="fn_top">5)</a></sup> 。
+</p>
+
+<p>
+比如，json文件内容为：
+</p>
+<dl class="file">
+<dt><a href="/doku.php?do=export_code&amp;id=ued:template:json&amp;codeblock=19" title="下载片段" class="mediafile mf_json">index.json</a></dt>
+<dd><pre class="code file javascript"><span class="br0">&#123;</span>
+	<span class="st0">&quot;page1&quot;</span><span class="sy0">:</span> <span class="br0">&#123;</span>
+		<span class="st0">&quot;value&quot;</span><span class="sy0">:</span> <span class="br0">&#123;</span><span class="br0">&#125;</span><span class="sy0">,</span>
+		<span class="st0">&quot;description&quot;</span><span class="sy0">:</span> <span class="st0">&quot;关于我们版块&quot;</span><span class="sy0">,</span>
+		<span class="st0">&quot;type&quot;</span><span class="sy0">:</span> <span class="st0">&quot;page&quot;</span>
+	<span class="br0">&#125;</span>
+<span class="br0">&#125;</span></pre>
+</dd></dl>
+
+<p>
+<em class="u">config：</em>
+</p>
+<ul>
+<li class="level1"><div class="li"> filter：筛选栏目类型。默认值：“ALL”（大写）代表筛选所有栏目。也可填写“list”仅允许列表型栏目，或者“list,page”筛选多种类型栏目。</div>
+</li>
+<li class="level1"><div class="li"> nav_width：栏目图片宽度（如有引用栏目图片时填写）</div>
+</li>
+<li class="level1"><div class="li"> nav_height：栏目图片高度（如有引用栏目图片时填写）</div>
+</li>
+</ul>
+
+<p>
+调用形式：
+</p>
+<dl class="file">
+<dt><a href="/doku.php?do=export_code&amp;id=ued:template:json&amp;codeblock=20" title="下载片段" class="mediafile mf_html">index.html</a></dt>
+<dd><pre class="code file html4strict"><span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/h2.html"><span class="kw2">h2</span></a>&gt;</span>{$index.page1.name}<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/span.html"><span class="kw2">span</span></a>&gt;</span>{$index.page1.en_name}<span class="sc2">&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/span.html"><span class="kw2">span</span></a>&gt;&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/h2.html"><span class="kw2">h2</span></a>&gt;</span>
+<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/p.html"><span class="kw2">p</span></a>&gt;</span>{$index.page1.description}<span class="sc2">&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/p.html"><span class="kw2">p</span></a>&gt;</span>
+<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/a.html"><span class="kw2">a</span></a> <span class="kw3">href</span><span class="sy0">=</span><span class="st0">&quot;{$index.page1.link}&quot;</span>&gt;</span>More<span class="sc2">&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/a.html"><span class="kw2">a</span></a>&gt;</span>
+<span class="sc-1">&lt;!-- 输出：</span>
+<span class="sc-1">&lt;h2&gt;关于我们&lt;span&gt;About Us&lt;/span&gt;&lt;/h2&gt;</span>
+<span class="sc-1">&lt;p&gt;这是栏目的一段描述...&lt;/p&gt;</span>
+<span class="sc-1">&lt;a href=&quot;list-page.html&quot;&gt;More&lt;/a&gt;</span>
+<span class="sc-1">--&gt;</span></pre>
+</dd></dl>
+
+<p>
+数据变量说明（<strong>这个特别注意，输出的数据格式与填写的json格式是不一样的</strong>）：<br/>
+
+（以下参考为filter筛选出list的栏目数据变量格式）
+</p>
+<ul>
+<li class="level1"><div class="li"> {$index.page1.name} 栏目名称</div>
+</li>
+<li class="level1"><div class="li"> {$index.page1.en_name} 栏目英文名称</div>
+</li>
+<li class="level1"><div class="li"> {$index.page1.icon} 栏目图标（iconfont技术，可改大小可换色）</div>
+</li>
+<li class="level1"><div class="li"> {$index.page1.image} 栏目图片</div>
+</li>
+<li class="level1"><div class="li"> {$index.page1.link} 栏目链接(一般用于“查看更多”按钮)</div>
+</li>
+<li class="level1"><div class="li"> {$index.page1.description} 栏目描述</div>
+</li>
+<li class="level1"><div class="li"> {$index.page1.content} 栏目单页内容HTML数据</div>
+</li>
+<li class="level1"><div class="li"> {$index.page1.childmenu[]} 子导航，结构类似导航（数组格式，需foreach循环）</div>
+</li>
+<li class="level1"><div class="li"> {$index.page1.childmenu[0].name}</div>
+</li>
+<li class="level1"><div class="li"> {$index.page1.childmenu[0].en_name}</div>
+</li>
+<li class="level1"><div class="li"> {$index.page1.childmenu[0].icon}</div>
+</li>
+<li class="level1"><div class="li"> {$index.page1.childmenu[0].image}</div>
+</li>
+<li class="level1"><div class="li"> {$index.page1.childmenu[0].link}</div>
+</li>
+<li class="level1"><div class="li"> {$index.page1.childmenu[0].description}</div>
+</li>
+<li class="level1"><div class="li"> {$index.page1.type} 栏目类型（恒等于3，因为此变量只能输出单页内容形栏目）</div>
+</li>
+</ul>
+
+</div>
+<!-- EDIT12 SECTION "type:page" [21542-23593] -->
+<h3 class="sectionedit13" id="typelink">type:link</h3>
+<div class="level3">
+
+<p>
+只能选择链接型栏目，如留言板、微信直达号、外部链接等。
+</p>
+
+<p>
+此类型变量全等于 <a href="#typenav" title="ued:template:json ↵" class="wikilink1">type:nav</a> 配置config的 <code>“filter”: “link”</code><sup><a href="#fn__6" id="fnt__6" class="fn_top">6)</a></sup> 。
+</p>
+
+<p>
+json文件内容为：
+</p>
+<dl class="file">
+<dt><a href="/doku.php?do=export_code&amp;id=ued:template:json&amp;codeblock=21" title="下载片段" class="mediafile mf_json">index.json</a></dt>
+<dd><pre class="code file javascript"><span class="br0">&#123;</span>
+	<span class="st0">&quot;link2&quot;</span><span class="sy0">:</span> <span class="br0">&#123;</span>
+		<span class="st0">&quot;value&quot;</span><span class="sy0">:</span> <span class="br0">&#123;</span><span class="br0">&#125;</span><span class="sy0">,</span>
+		<span class="st0">&quot;description&quot;</span><span class="sy0">:</span> <span class="st0">&quot;意见反馈&quot;</span><span class="sy0">,</span>
+		<span class="st0">&quot;type&quot;</span><span class="sy0">:</span> <span class="st0">&quot;link&quot;</span>
+	<span class="br0">&#125;</span>
+<span class="br0">&#125;</span></pre>
+</dd></dl>
+
+</div>
+<!-- EDIT13 SECTION "type:link" [23594-24054] -->
+<h3 class="sectionedit14" id="typequickbar">type:quickbar</h3>
+<div class="level3">
+
+<p>
+手机底部导航，仅供手机模板调用，具体参见：<a href="/doku.php?id=ued:template:mindex#底部导航定义方法" class="wikilink1" title="ued:template:mindex">底部导航定义方法</a>
+</p>
+
+<p>
+<span style="color:red">推荐使用config.ini来配置Quickbar！</span>参见：<a href="/doku.php?id=ued:template:config#config_模板配置部分" class="wikilink1" title="ued:template:config">配置文件修改QuickBar=#AAA,#CCC,#FFF</a>
+</p>
+
+<p>
+网站的底部导航，因其在每个页面都存在，建议定义与单独html文件后用<a href="/doku.php?id=ued:template:footer#include_引入文件" class="wikilink1" title="ued:template:footer">include</a>方式引入到index.html文件中。<br/>
+
+既可以放入<a href="/doku.php?id=ued:template:footer" class="wikilink1" title="ued:template:footer">变量语法查询：_footer.html</a>文件中，也可以放入一个新建的<a href="/doku.php?id=ued:template:includes" class="wikilink1" title="ued:template:includes">_bottomnav.html</a>文件中。
+</p>
+
+<p>
+<strong>数据变量说明：</strong>
+</p>
+
+<p>
+json定义一个type为<code>quickbar</code>的变量，value内元素的键值说明：
+</p>
+<ul>
+<li class="level1"><div class="li"> name 导航名称</div>
+</li>
+<li class="level1"><div class="li"> icon 导航按钮图标，值放入iconfont的图标对应编码。</div>
+</li>
+<li class="level1"><div class="li"> image 导航按钮图标（如无icon值，则调此图），可使用相对路径<code>images/icon_01.png</code></div>
+</li>
+<li class="level1"><div class="li"> data 导航按钮数据 type:tel|sms时为电话号码；type:link时为url；type:share时为空；type:im时为<code>客服账号ID@im类型</code></div>
+</li>
+<li class="level1"><div class="li"> type <a href="#导航类型说明" title="ued:template:json ↵" class="wikilink1">导航类型</a> tel:电话、sms:短信、im:咨询、link:外链、share:分享</div>
+</li>
+<li class="level1"><div class="li"> enable 是否启用 1-启用</div>
+</li>
+<li class="level1"><div class="li"> childmenu 仅type:link类型有子菜单</div>
+</li>
+</ul>
+
+<p>
+输出调用变量：
+</p>
+<ul>
+<li class="level1"><div class="li"> name</div>
+</li>
+<li class="level1"><div class="li"> icon</div>
+</li>
+<li class="level1"><div class="li"> image</div>
+</li>
+<li class="level1"><div class="li"> <strong>link</strong> 直接放置于a标签的<code>href</code>属性中</div>
+</li>
+<li class="level1"><div class="li"> type</div>
+</li>
+<li class="level1"><div class="li"> childmenu</div>
+</li>
+</ul>
+
+</div>
+
+<h5 id="导航类型说明">导航类型说明</h5>
+<div class="level5">
+
+<p>
+<em class="u">tel</em><br/>
+
+ data格式：<code>热线电话:0592-2323232|售后电话：13088888888</code><br/>
+
+ 生成link：<code>“tel:<em>0592-2323232”<code>（首个电话的号码点击链接）
+
+<em class="u">sms</em><br/>
+
+ data格式：</code>13489990000<code><br/>
+
+ 生成link：</code>“sms:</em>13489990000”</code>（调用系统短信的点击链接）
+</p>
+
+<p>
+<em class="u">im</em><br/>
+
+ data格式：<code>小E:156568451@QQ|客服-XX:10000@QQ</code><br/>
+
+ 生成link：<code>“<a href="http://wpd.b.qq.com/cgi/get_m_sign.php?uin=156568451" class="urlextern" target="_blank" title="http://wpd.b.qq.com/cgi/get_m_sign.php?uin=156568451"  rel="nofollow">http://wpd.b.qq.com/cgi/get_m_sign.php?uin=156568451</a>”</code>（首个咨询的点击链接，调用对应app或跳转到咨询页）
+</p>
+
+<p>
+<em class="u">map</em><br/>
+
+ data格式：<code>厦门市思明区观日路30号|118.189598,24.491176</code><br/>
+
+ 生成link：<code>“<a href="http://api.map.baidu.com/geocoder?address=" class="urlextern" target="_blank" title="http://api.map.baidu.com/geocoder?address="  rel="nofollow">http://api.map.baidu.com/geocoder?address=</a>厦门市思明区观日路30号&amp;output=html”</code>（地图跳转链接）
+</p>
+
+<p>
+<em class="u">share</em><br/>
+
+ data格式：<code>qzone,tqq,tsina,ibaidu</code><br/>
+
+ 生成link：<code>“javascript:void(0);”</code>（无效果链接，所以分享的点击按钮要自己调用js去写分享效果）
+</p>
+
+<p>
+<em class="u">follow</em><br/>
+
+ data格式：<code><a href="http://s.jiathis.com/qrcode.php?url=http://weixin.qq.com/r/Pt5PV97EWYMmrZo094ss" class="urlextern" target="_blank" title="http://s.jiathis.com/qrcode.php?url=http://weixin.qq.com/r/Pt5PV97EWYMmrZo094ss"  rel="nofollow">http://s.jiathis.com/qrcode.php?url=http://weixin.qq.com/r/Pt5PV97EWYMmrZo094ss</a></code>（图片地址）<br/>
+
+ 生成link：<code>“javascript:void(0);”</code>（无效果链接，所以扫码关注的点击或hover按钮要自己调用js去写二维码出现效果）
+</p>
+
+<p>
+<em class="u">link</em><br/>
+
+ data格式：<code><a href="http://www.baidu.com" class="urlextern" target="_blank" title="http://www.baidu.com"  rel="nofollow">http://www.baidu.com</a></code><br/>
+
+ 生成link：<code>“<a href="http://www.baidu.com" class="urlextern" target="_blank" title="http://www.baidu.com"  rel="nofollow">http://www.baidu.com</a>”</code>（就是data填入的链接地址）
+</p>
+
+<p>
+必须在json文件中定义：
+</p>
+<dl class="file">
+<dt><a href="/doku.php?do=export_code&amp;id=ued:template:json&amp;codeblock=22" title="下载片段" class="mediafile mf_json">global.json</a></dt>
+<dd><pre class="code file javascript"><span class="br0">&#123;</span>
+	<span class="st0">&quot;bottomnavs&quot;</span><span class="sy0">:</span> <span class="br0">&#123;</span>
+		<span class="st0">&quot;value&quot;</span><span class="sy0">:</span> <span class="br0">&#91;</span><span class="br0">&#123;</span>
+			<span class="st0">&quot;name&quot;</span><span class="sy0">:</span> <span class="st0">&quot;电话&quot;</span><span class="sy0">,</span>
+			<span class="st0">&quot;icon&quot;</span><span class="sy0">:</span> <span class="st0">&quot;&amp;#xe602;&quot;</span><span class="sy0">,</span>
+			<span class="st0">&quot;image&quot;</span><span class="sy0">:</span> <span class="st0">&quot;http://..../a.png&quot;</span><span class="sy0">,</span>
+			<span class="st0">&quot;data&quot;</span><span class="sy0">:</span> <span class="st0">&quot;0592-2323232&quot;</span><span class="sy0">,</span>
+			<span class="st0">&quot;type&quot;</span><span class="sy0">:</span> <span class="st0">&quot;tel&quot;</span><span class="sy0">,</span>
+			<span class="st0">&quot;enable&quot;</span><span class="sy0">:</span> <span class="nu0">1</span>
+		<span class="br0">&#125;</span><span class="sy0">,</span> <span class="br0">&#123;</span>
+			<span class="st0">&quot;name&quot;</span><span class="sy0">:</span> <span class="st0">&quot;短信&quot;</span><span class="sy0">,</span>
+			<span class="st0">&quot;icon&quot;</span><span class="sy0">:</span> <span class="st0">&quot;&amp;#xe604;&quot;</span><span class="sy0">,</span>
+			<span class="st0">&quot;image&quot;</span><span class="sy0">:</span> <span class="st0">&quot;http://..../a.png&quot;</span><span class="sy0">,</span>
+			<span class="st0">&quot;data&quot;</span><span class="sy0">:</span> <span class="st0">&quot;热线电话:0592-2323232|售后电话:13088888888&quot;</span><span class="sy0">,</span>
+			<span class="st0">&quot;type&quot;</span><span class="sy0">:</span> <span class="st0">&quot;sms&quot;</span><span class="sy0">,</span>
+			<span class="st0">&quot;enable&quot;</span><span class="sy0">:</span> <span class="nu0">1</span>
+		<span class="br0">&#125;</span><span class="sy0">,</span> <span class="br0">&#123;</span>
+			<span class="st0">&quot;name&quot;</span><span class="sy0">:</span> <span class="st0">&quot;咨询&quot;</span><span class="sy0">,</span>
+			<span class="st0">&quot;icon&quot;</span><span class="sy0">:</span> <span class="st0">&quot;&amp;#xe606;&quot;</span><span class="sy0">,</span>
+			<span class="st0">&quot;image&quot;</span><span class="sy0">:</span> <span class="st0">&quot;http://..../a.png&quot;</span><span class="sy0">,</span>
+			<span class="st0">&quot;data&quot;</span><span class="sy0">:</span> <span class="st0">&quot;小E:156568451@QQ|客服-XX:10000@QQ&quot;</span><span class="sy0">,</span>
+			<span class="st0">&quot;type&quot;</span><span class="sy0">:</span> <span class="st0">&quot;im&quot;</span><span class="sy0">,</span>
+			<span class="st0">&quot;enable&quot;</span><span class="sy0">:</span> <span class="nu0">1</span>
+		<span class="br0">&#125;</span><span class="sy0">,</span> <span class="br0">&#123;</span>
+			<span class="st0">&quot;name&quot;</span><span class="sy0">:</span> <span class="st0">&quot;导航B&quot;</span><span class="sy0">,</span>
+			<span class="st0">&quot;icon&quot;</span><span class="sy0">:</span> <span class="st0">&quot;&amp;#xe607;&quot;</span><span class="sy0">,</span>
+			<span class="st0">&quot;image&quot;</span><span class="sy0">:</span> <span class="st0">&quot;http://..../a.png&quot;</span><span class="sy0">,</span>
+			<span class="st0">&quot;data&quot;</span><span class="sy0">:</span> <span class="st0">&quot;http://...&quot;</span><span class="sy0">,</span>
+			<span class="st0">&quot;childmenu&quot;</span><span class="sy0">:</span> <span class="br0">&#91;</span><span class="br0">&#123;</span>
+				<span class="st0">&quot;name&quot;</span><span class="sy0">:</span> <span class="st0">&quot;导航B1&quot;</span><span class="sy0">,</span>
+				<span class="st0">&quot;icon&quot;</span><span class="sy0">:</span> <span class="st0">&quot;&amp;#xe607;&quot;</span><span class="sy0">,</span>
+				<span class="st0">&quot;image&quot;</span><span class="sy0">:</span> <span class="st0">&quot;http://..../a.png&quot;</span><span class="sy0">,</span>
+				<span class="st0">&quot;data&quot;</span><span class="sy0">:</span> <span class="st0">&quot;http://...&quot;</span><span class="sy0">,</span>
+				<span class="st0">&quot;type&quot;</span><span class="sy0">:</span> <span class="st0">&quot;link&quot;</span><span class="sy0">,</span>
+				<span class="st0">&quot;enable&quot;</span><span class="sy0">:</span> <span class="nu0">1</span>
+			<span class="br0">&#125;</span><span class="sy0">,</span>
+			<span class="br0">&#123;</span>
+				<span class="st0">&quot;name&quot;</span><span class="sy0">:</span> <span class="st0">&quot;导航B2&quot;</span><span class="sy0">,</span>
+				<span class="st0">&quot;icon&quot;</span><span class="sy0">:</span> <span class="st0">&quot;&amp;#xe607;&quot;</span><span class="sy0">,</span>
+				<span class="st0">&quot;image&quot;</span><span class="sy0">:</span> <span class="st0">&quot;http://..../a.png&quot;</span><span class="sy0">,</span>
+				<span class="st0">&quot;data&quot;</span><span class="sy0">:</span> <span class="st0">&quot;http://...&quot;</span><span class="sy0">,</span>
+				<span class="st0">&quot;type&quot;</span><span class="sy0">:</span> <span class="st0">&quot;link&quot;</span><span class="sy0">,</span>
+				<span class="st0">&quot;enable&quot;</span><span class="sy0">:</span> <span class="nu0">1</span>
+			<span class="br0">&#125;</span><span class="br0">&#93;</span><span class="sy0">,</span>
+			<span class="st0">&quot;type&quot;</span><span class="sy0">:</span> <span class="st0">&quot;link&quot;</span><span class="sy0">,</span>
+			<span class="st0">&quot;enable&quot;</span><span class="sy0">:</span> <span class="nu0">1</span>
+		<span class="br0">&#125;</span><span class="sy0">,</span> <span class="br0">&#123;</span>
+			<span class="st0">&quot;name&quot;</span><span class="sy0">:</span> <span class="st0">&quot;地图&quot;</span><span class="sy0">,</span>
+			<span class="st0">&quot;icon&quot;</span><span class="sy0">:</span> <span class="st0">&quot;&amp;#xe605;&quot;</span><span class="sy0">,</span>
+			<span class="st0">&quot;image&quot;</span><span class="sy0">:</span> <span class="st0">&quot;http://..../a.png&quot;</span><span class="sy0">,</span>
+			<span class="st0">&quot;data&quot;</span><span class="sy0">:</span> <span class="st0">&quot;厦门市思明区观日路30号|118.189598,24.491176&quot;</span><span class="sy0">,</span>
+			<span class="st0">&quot;type&quot;</span><span class="sy0">:</span> <span class="st0">&quot;map&quot;</span><span class="sy0">,</span>
+			<span class="st0">&quot;enable&quot;</span><span class="sy0">:</span> <span class="nu0">1</span>
+		<span class="br0">&#125;</span><span class="sy0">,</span> <span class="br0">&#123;</span>
+			<span class="st0">&quot;name&quot;</span><span class="sy0">:</span> <span class="st0">&quot;分享&quot;</span><span class="sy0">,</span>
+			<span class="st0">&quot;icon&quot;</span><span class="sy0">:</span> <span class="st0">&quot;&amp;#xe600;&quot;</span><span class="sy0">,</span>
+			<span class="st0">&quot;image&quot;</span><span class="sy0">:</span> <span class="st0">&quot;http://..../a.png&quot;</span><span class="sy0">,</span>
+			<span class="st0">&quot;data&quot;</span><span class="sy0">:</span> <span class="st0">&quot;&quot;</span><span class="sy0">,</span>
+			<span class="st0">&quot;type&quot;</span><span class="sy0">:</span> <span class="st0">&quot;share&quot;</span><span class="sy0">,</span>
+			<span class="st0">&quot;enable&quot;</span><span class="sy0">:</span> <span class="nu0">1</span>
+		<span class="br0">&#125;</span><span class="sy0">,</span> <span class="br0">&#123;</span>
+			<span class="st0">&quot;name&quot;</span><span class="sy0">:</span> <span class="st0">&quot;关注微信&quot;</span><span class="sy0">,</span>
+			<span class="st0">&quot;icon&quot;</span><span class="sy0">:</span> <span class="st0">&quot;&amp;#xe61b;&quot;</span><span class="sy0">,</span>
+			<span class="st0">&quot;image&quot;</span><span class="sy0">:</span> <span class="st0">&quot;http://..../a.png&quot;</span><span class="sy0">,</span>
+			<span class="st0">&quot;data&quot;</span><span class="sy0">:</span> <span class="st0">&quot;http://s.jiathis.com/qrcode.php?url=http://weixin.qq.com/r/Pt5PV97EWYMmrZo094ss&quot;</span><span class="sy0">,</span>
+			<span class="st0">&quot;type&quot;</span><span class="sy0">:</span> <span class="st0">&quot;follow&quot;</span><span class="sy0">,</span>
+			<span class="st0">&quot;enable&quot;</span><span class="sy0">:</span> <span class="nu0">1</span>
+		<span class="br0">&#125;</span><span class="br0">&#93;</span><span class="sy0">,</span>
+		<span class="st0">&quot;description&quot;</span><span class="sy0">:</span> <span class="st0">&quot;底部导航&quot;</span><span class="sy0">,</span>
+		<span class="st0">&quot;type&quot;</span><span class="sy0">:</span> <span class="st0">&quot;quickbar&quot;</span>
+	<span class="br0">&#125;</span>
+<span class="br0">&#125;</span></pre>
+</dd></dl>
+
+<p>
+可调用变量说明：
+</p>
+<ul>
+<li class="level1"><div class="li"> {$global.bottomnavs[0].name} 导航名称</div>
+</li>
+<li class="level1"><div class="li"> {$global.bottomnavs[0].icon} 图标iconfont编码</div>
+</li>
+<li class="level1"><div class="li"> {$global.bottomnavs[0].image} 图标地址</div>
+</li>
+<li class="level1"><div class="li"> {$global.bottomnavs[0].data} 导航数据。tel、sms为电话号码；im、link为链接地址；share暂无数据</div>
+</li>
+<li class="level1"><div class="li"> <strong>{$global.bottomnavs[0].link} 输出供导航图标a标签的href属性使用（与json内容不同）</strong></div>
+</li>
+<li class="level1"><div class="li"> {$global.bottomnavs[0].type} 底部导航类型：tel|sms|im|link|share</div>
+</li>
+<li class="level1"><div class="li"> {$global.bottomnavs[0].enable} 是否启用，1为启用</div>
+</li>
+</ul>
+
+<p>
+调用形式：
+</p>
+<dl class="file">
+<dt><a href="/doku.php?do=export_code&amp;id=ued:template:json&amp;codeblock=23" title="下载片段" class="mediafile mf_html">_footer.html</a></dt>
+<dd><pre class="code file html4strict"><span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/ul.html"><span class="kw2">ul</span></a> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;clearfix&quot;</span>&gt;</span>
+	{foreach item=bottomnav from=$global.bottomnavs}
+		<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/li.html"><span class="kw2">li</span></a> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;{$bottomnav.type}&quot;</span>&gt;&lt;<a target="_blank" href="http://december.com/html/4/element/a.html"><span class="kw2">a</span></a> <span class="kw3">href</span><span class="sy0">=</span><span class="st0">&quot;{$bottomnav.link}&quot;</span> <span class="kw3">target</span><span class="sy0">=</span><span class="st0">&quot;_blank&quot;</span>&gt;&lt;<a target="_blank" href="http://december.com/html/4/element/img.html"><span class="kw2">img</span></a> <span class="kw3">src</span><span class="sy0">=</span><span class="st0">&quot;{$bottomnav.image}&quot;</span> <span class="kw3">alt</span><span class="sy0">=</span><span class="st0">&quot;{$bottomnav.name}&quot;</span> <span class="sy0">/</span>&gt;&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/a.html"><span class="kw2">a</span></a>&gt;</span>
+		{if $bottomnav.childmenu}
+			<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/ul.html"><span class="kw2">ul</span></a> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;clearfix&quot;</span>&gt;</span>
+				{foreach item=bottomnav_child from=$bottomnav.childmenu}
+				<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/li.html"><span class="kw2">li</span></a> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;{$bottomnav_child.type}&quot;</span>&gt;&lt;<a target="_blank" href="http://december.com/html/4/element/a.html"><span class="kw2">a</span></a> <span class="kw3">href</span><span class="sy0">=</span><span class="st0">&quot;{$bottomnav_child.link}&quot;</span> <span class="kw3">target</span><span class="sy0">=</span><span class="st0">&quot;_blank&quot;</span>&gt;&lt;<a target="_blank" href="http://december.com/html/4/element/img.html"><span class="kw2">img</span></a> <span class="kw3">src</span><span class="sy0">=</span><span class="st0">&quot;{$bottomnav_child.image}&quot;</span> <span class="kw3">alt</span><span class="sy0">=</span><span class="st0">&quot;{$bottomnav_child.name}&quot;</span> <span class="sy0">/</span>&gt;&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/a.html"><span class="kw2">a</span></a>&gt;&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/li.html"><span class="kw2">li</span></a>&gt;</span>
+				{/foreach}
+			<span class="sc2">&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/ul.html"><span class="kw2">ul</span></a>&gt;</span>
+		{/if}
+		<span class="sc2">&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/li.html"><span class="kw2">li</span></a>&gt;</span>
+	{/foreach}
+<span class="sc2">&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/ul.html"><span class="kw2">ul</span></a>&gt;</span>
+<span class="sc-1">&lt;!-- 输出：</span>
+<span class="sc-1">&lt;ul class=&quot;clearfix&quot;&gt;</span>
+<span class="sc-1">	&lt;li class=&quot;tel&quot;&gt;&lt;a href=&quot;tel://0592-2323232&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;http://..../a.png&quot; alt=&quot;电话&quot;&gt;&lt;/a&gt;&lt;/li&gt;</span>
+<span class="sc-1">	&lt;li class=&quot;sms&quot;&gt;&lt;a href=&quot;sms://13489990000&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;http://..../a.png&quot; alt=&quot;短信&quot;&gt;&lt;/a&gt;&lt;/li&gt;</span>
+<span class="sc-1">	&lt;li class=&quot;im&quot;&gt;&lt;a href=&quot;javascript:void(0);&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;http://..../a.png&quot; alt=&quot;咨询&quot;&gt;&lt;/a&gt;&lt;/li&gt;</span>
+<span class="sc-1">	&lt;li class=&quot;link&quot;&gt;&lt;a href=&quot;javascript:void(0);&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;http://..../a.png&quot; alt=&quot;导航B&quot;&gt;&lt;/a&gt;</span>
+<span class="sc-1">		&lt;ul class=&quot;clearfix&quot;&gt;</span>
+<span class="sc-1">			&lt;li class=&quot;link&quot;&gt;&lt;a href=&quot;http://...&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;http://..../a.png&quot; alt=&quot;导航B1&quot;&gt;&lt;/a&gt;&lt;/li&gt;</span>
+<span class="sc-1">			&lt;li class=&quot;link&quot;&gt;&lt;a href=&quot;http://...&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;http://..../a.png&quot; alt=&quot;导航B2&quot;&gt;&lt;/a&gt;&lt;/li&gt;</span>
+<span class="sc-1">		&lt;/ul&gt;</span>
+<span class="sc-1">	&lt;/li&gt;</span>
+<span class="sc-1">	&lt;li class=&quot;share&quot;&gt;&lt;a href=&quot;javascript:void(0);&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;http://..../a.png&quot; alt=&quot;分享&quot;&gt;&lt;/a&gt;&lt;/li&gt;</span>
+<span class="sc-1">&lt;/ul&gt;</span>
+<span class="sc-1">--&gt;</span></pre>
+</dd></dl>
+
+<p>
+高级调用：
+</p>
+<dl class="file">
+<dt><a href="/doku.php?do=export_code&amp;id=ued:template:json&amp;codeblock=24" title="下载片段" class="mediafile mf_html">_footer.html</a></dt>
+<dd><pre class="code file html4strict">{* 筑造底部导航的a标签 *}
+{function name=&quot;buildA&quot; bottomnav=''}
+	{if $bottomnav.type == &quot;tel&quot;}<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/a.html"><span class="kw2">a</span></a> <span class="kw3">href</span><span class="sy0">=</span><span class="st0">&quot;tel://{$bottomnav.data}&quot;</span> <span class="kw3">target</span><span class="sy0">=</span><span class="st0">&quot;_blank&quot;</span>&gt;&lt;<a target="_blank" href="http://december.com/html/4/element/img.html"><span class="kw2">img</span></a> <span class="kw3">src</span><span class="sy0">=</span><span class="st0">&quot;{$bottomnav.image}&quot;</span> <span class="kw3">alt</span><span class="sy0">=</span><span class="st0">&quot;{$bottomnav.name}&quot;</span> <span class="sy0">/</span>&gt;&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/a.html"><span class="kw2">a</span></a>&gt;</span>
+	{elseif $bottomnav.type == &quot;sms&quot;}<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/a.html"><span class="kw2">a</span></a> <span class="kw3">href</span><span class="sy0">=</span><span class="st0">&quot;sms://{$bottomnav.data}&quot;</span> <span class="kw3">target</span><span class="sy0">=</span><span class="st0">&quot;_blank&quot;</span>&gt;&lt;<a target="_blank" href="http://december.com/html/4/element/img.html"><span class="kw2">img</span></a> <span class="kw3">src</span><span class="sy0">=</span><span class="st0">&quot;{$bottomnav.image}&quot;</span> <span class="kw3">alt</span><span class="sy0">=</span><span class="st0">&quot;{$bottomnav.name}&quot;</span> <span class="sy0">/</span>&gt;&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/a.html"><span class="kw2">a</span></a>&gt;</span>
+	{elseif $bottomnav.type == &quot;share&quot; or $bottomnav.type == &quot;im&quot;}<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/a.html"><span class="kw2">a</span></a> <span class="kw3">href</span><span class="sy0">=</span><span class="st0">&quot;javascript:void(0);&quot;</span> <span class="kw3">target</span><span class="sy0">=</span><span class="st0">&quot;_blank&quot;</span>&gt;&lt;<a target="_blank" href="http://december.com/html/4/element/img.html"><span class="kw2">img</span></a> <span class="kw3">src</span><span class="sy0">=</span><span class="st0">&quot;{$bottomnav.image}&quot;</span> <span class="kw3">alt</span><span class="sy0">=</span><span class="st0">&quot;{$bottomnav.name}&quot;</span> <span class="sy0">/</span>&gt;&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/a.html"><span class="kw2">a</span></a>&gt;</span>
+	{else}<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/a.html"><span class="kw2">a</span></a> <span class="kw3">href</span><span class="sy0">=</span><span class="st0">&quot;{$bottomnav.data}&quot;</span> <span class="kw3">target</span><span class="sy0">=</span><span class="st0">&quot;_blank&quot;</span>&gt;&lt;<a target="_blank" href="http://december.com/html/4/element/img.html"><span class="kw2">img</span></a> <span class="kw3">src</span><span class="sy0">=</span><span class="st0">&quot;{$bottomnav.image}&quot;</span> <span class="kw3">alt</span><span class="sy0">=</span><span class="st0">&quot;{$bottomnav.name}&quot;</span> <span class="sy0">/</span>&gt;&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/a.html"><span class="kw2">a</span></a>&gt;</span>{/if}
+{/function}
+&nbsp;
+<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/ul.html"><span class="kw2">ul</span></a> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;clearfix&quot;</span>&gt;</span>
+	{foreach item=bottomnav from=$global.bottomnavs}
+		<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/li.html"><span class="kw2">li</span></a> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;{$bottomnav.type}&quot;</span>&gt;</span>{buildA bottomnav=$bottomnav}
+		{if $bottomnav.childmenu}
+			<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/ul.html"><span class="kw2">ul</span></a> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;clearfix&quot;</span>&gt;</span>
+				{foreach item=bottomnav_child from=$bottomnav.childmenu}
+				<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/li.html"><span class="kw2">li</span></a> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;{$bottomnav_child.type}&quot;</span>&gt;</span>{buildA bottomnav=$bottomnav_child}<span class="sc2">&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/li.html"><span class="kw2">li</span></a>&gt;</span>
+				{/foreach}
+			<span class="sc2">&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/ul.html"><span class="kw2">ul</span></a>&gt;</span>
+		{/if}
+		<span class="sc2">&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/li.html"><span class="kw2">li</span></a>&gt;</span>
+	{/foreach}
+<span class="sc2">&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/ul.html"><span class="kw2">ul</span></a>&gt;</span>
+<span class="sc-1">&lt;!-- 输出结果同上 --&gt;</span></pre>
+</dd></dl>
+
+</div>
+<div class="level3">
+
+<p>
+<br/>
+
+</p>
+
+<p>
+<br/>
+
+</p>
+
+<p>
+<br/>
+
+</p>
+
+<p>
+<br/>
+
+</p>
+
+</div>
+<!-- EDIT14 SECTION "type:quickbar" [24055-] --><div class="footnotes">
+<div class="fn"><sup><a href="#fnt__1" id="fn__1" class="fn_bot">1)</a></sup> 
+
+<dl class="file">
+<dt><a href="/doku.php?do=export_code&amp;id=ued:template:json&amp;codeblock=1" title="下载片段" class="mediafile mf_json">index.json</a></dt>
+<dd><pre class="code file javascript"><span class="br0">&#123;</span>
+	<span class="st0">&quot;announcement_title&quot;</span><span class="sy0">:</span> <span class="br0">&#123;</span>
+		<span class="st0">&quot;value&quot;</span><span class="sy0">:</span> <span class="st0">&quot;大喇叭：&quot;</span><span class="sy0">,</span>
+		<span class="st0">&quot;description&quot;</span><span class="sy0">:</span> <span class="st0">&quot;公告标题&quot;</span><span class="sy0">,</span>
+		<span class="st0">&quot;type&quot;</span><span class="sy0">:</span> <span class="st0">&quot;text&quot;</span>
+	<span class="br0">&#125;</span><span class="sy0">,</span>
+	<span class="st0">&quot;announcement&quot;</span><span class="sy0">:</span> <span class="br0">&#123;</span>
+		<span class="st0">&quot;value&quot;</span><span class="sy0">:</span> <span class="st0">&quot;你看到的都是模板测试数据，需修改请登陆后台进入【页面内容】更新！<span class="es0">\r</span><span class="es0">\n</span>第二行公告内容公告内容公告内容公告内容&quot;</span><span class="sy0">,</span>
+		<span class="st0">&quot;description&quot;</span><span class="sy0">:</span> <span class="st0">&quot;网站公告&quot;</span><span class="sy0">,</span>
+		<span class="st0">&quot;type&quot;</span><span class="sy0">:</span> <span class="st0">&quot;textarea&quot;</span>
+	<span class="br0">&#125;</span><span class="sy0">,</span>
+	<span class="st0">&quot;logo&quot;</span><span class="sy0">:</span> <span class="br0">&#123;</span>
+		<span class="st0">&quot;value&quot;</span><span class="sy0">:</span> <span class="br0">&#123;</span>
+			<span class="st0">&quot;title&quot;</span><span class="sy0">:</span> <span class="st0">&quot;XXX企业&quot;</span><span class="sy0">,</span>
+			<span class="st0">&quot;image&quot;</span><span class="sy0">:</span> <span class="st0">&quot;http://www.baidu.com/img/baidu_jgylogo3.gif&quot;</span><span class="sy0">,</span>
+			<span class="st0">&quot;link&quot;</span><span class="sy0">:</span> <span class="st0">&quot;http://www.baidu.com/&quot;</span>
+		<span class="br0">&#125;</span><span class="sy0">,</span>
+		<span class="st0">&quot;description&quot;</span><span class="sy0">:</span> <span class="st0">&quot;网站LOGO&quot;</span><span class="sy0">,</span>
+		<span class="st0">&quot;type&quot;</span><span class="sy0">:</span> <span class="st0">&quot;image&quot;</span>
+	<span class="br0">&#125;</span>
+	<span class="st0">&quot;slidepics&quot;</span><span class="sy0">:</span> <span class="br0">&#123;</span>
+		<span class="st0">&quot;value&quot;</span><span class="sy0">:</span> <span class="br0">&#91;</span><span class="br0">&#123;</span>
+			<span class="st0">&quot;title&quot;</span><span class="sy0">:</span> <span class="st0">&quot;测试图1&quot;</span><span class="sy0">,</span>
+			<span class="st0">&quot;image&quot;</span><span class="sy0">:</span> <span class="st0">&quot;http://tb2.bdstatic.com/tb/static-common/img/search_logo_big_282cef2.gif&quot;</span><span class="sy0">,</span>
+			<span class="st0">&quot;link&quot;</span><span class="sy0">:</span> <span class="st0">&quot;article/1.html&quot;</span>
+		<span class="br0">&#125;</span><span class="sy0">,</span> <span class="br0">&#123;</span>
+			<span class="st0">&quot;title&quot;</span><span class="sy0">:</span> <span class="st0">&quot;测试图2&quot;</span><span class="sy0">,</span>
+			<span class="st0">&quot;image&quot;</span><span class="sy0">:</span> <span class="st0">&quot;http://img0.bdstatic.com/static/common/widget/search_box_search/logo/logo_3b6de4c.png&quot;</span><span class="sy0">,</span>
+			<span class="st0">&quot;link&quot;</span><span class="sy0">:</span> <span class="st0">&quot;article/2.html&quot;</span>
+		<span class="br0">&#125;</span><span class="br0">&#93;</span><span class="sy0">,</span>
+		<span class="st0">&quot;description&quot;</span><span class="sy0">:</span> <span class="st0">&quot;大轮滚图&quot;</span><span class="sy0">,</span>
+		<span class="st0">&quot;type&quot;</span><span class="sy0">:</span> <span class="st0">&quot;images&quot;</span>
+	<span class="br0">&#125;</span><span class="sy0">,</span>
+	<span class="st0">&quot;list1&quot;</span><span class="sy0">:</span> <span class="br0">&#123;</span>
+		<span class="st0">&quot;value&quot;</span><span class="sy0">:</span> <span class="br0">&#123;</span>
+			<span class="st0">&quot;id&quot;</span><span class="sy0">:</span> <span class="nu0">1</span><span class="sy0">,</span>
+			<span class="st0">&quot;total&quot;</span><span class="sy0">:</span> <span class="nu0">4</span><span class="sy0">,</span>
+			<span class="st0">&quot;star_only&quot;</span><span class="sy0">:</span> <span class="nu0">0</span>
+		<span class="br0">&#125;</span><span class="sy0">,</span>
+		<span class="st0">&quot;description&quot;</span><span class="sy0">:</span> <span class="st0">&quot;第一个图文列表&quot;</span><span class="sy0">,</span>
+		<span class="st0">&quot;type&quot;</span><span class="sy0">:</span> <span class="st0">&quot;list&quot;</span>
+	<span class="br0">&#125;</span>
+<span class="br0">&#125;</span></pre>
+</dd></dl>
+
+
+<strong>数据变量说明：</strong>
+<ul>
+<li class="level1"><div class="li"> {$index.announcement_title} 公告标题文案</div>
+</li>
+<li class="level1"><div class="li"> {$index.announcement} 网站公告</div>
+</li>
+<li class="level1"><div class="li"> {$index.logo.title} LOGO文案（网站标题）</div>
+</li>
+<li class="level1"><div class="li"> {$index.logo.image} LOGO图片地址</div>
+</li>
+<li class="level1"><div class="li"> {$index.logo.link} LOGO链接</div>
+</li>
+<li class="level1"><div class="li"> {$index.slidepics[0].title} 轮滚图图片标题</div>
+</li>
+<li class="level1"><div class="li"> {$index.slidepics[0].image} 轮滚图图片地址</div>
+</li>
+<li class="level1"><div class="li"> {$index.slidepics[0].link} 轮滚图图片链接</div>
+</li>
+<li class="level1"><div class="li"> {$index.list1.name} 栏目名称</div>
+</li>
+<li class="level1"><div class="li"> {$index.list1.en_name} 栏目英文名称</div>
+</li>
+<li class="level1"><div class="li"> {$index.list1.icon} 栏目图标（iconfont技术，可改大小可换色）</div>
+</li>
+<li class="level1"><div class="li"> {$index.list1.image} 栏目图片</div>
+</li>
+<li class="level1"><div class="li"> {$index.list1.link} 栏目链接(一般用于“查看更多”按钮)</div>
+</li>
+<li class="level1"><div class="li"> {$index.list1.description} 栏目描述</div>
+</li>
+<li class="level1"><div class="li"> <strong>{$index.list1.data[]} 这个特别注意，输出的数据格式与填写的json格式是不一样的</strong>（数组格式，需foreach循环）</div>
+</li>
+<li class="level1"><div class="li"> {$index.list1.data[0].title} 文章标题</div>
+</li>
+<li class="level1"><div class="li"> {$index.list1.data[0].image} 文章预览图</div>
+</li>
+<li class="level1"><div class="li"> {$index.list1.data[0].link} 文章链接</div>
+</li>
+<li class="level1"><div class="li"> {$index.list1.data[0].description} 文章内容</div>
+</li>
+<li class="level1"><div class="li"> {$index.list1.data[0].pubdate} 发布时间</div>
+</li>
+<li class="level1"><div class="li"> {$index.list1.data[0].category.name} 所属栏目名</div>
+</li>
+<li class="level1"><div class="li"> {$index.list1.data[0].category.en_name} 所属栏目英文名</div>
+</li>
+<li class="level1"><div class="li"> {$index.list1.data[0].category.icon} 所属栏目图标（iconfont技术，可改大小可换色）</div>
+</li>
+<li class="level1"><div class="li"> {$index.list1.data[0].category.link} 所属栏目链接</div>
+</li>
+</ul>
+
+</div>
+<div class="fn"><sup><a href="#fnt__2" id="fn__2" class="fn_bot">2)</a></sup> 
+
+<dl class="file">
+<dt><a href="/doku.php?do=export_code&amp;id=ued:template:json&amp;codeblock=10" title="下载片段" class="mediafile mf_json">index.json</a></dt>
+<dd><pre class="code file javascript"><span class="br0">&#123;</span>
+	<span class="st0">&quot;slidepics&quot;</span><span class="sy0">:</span> <span class="br0">&#123;</span>
+		<span class="st0">&quot;value&quot;</span><span class="sy0">:</span> <span class="br0">&#91;</span><span class="br0">&#123;</span>
+			<span class="st0">&quot;title&quot;</span><span class="sy0">:</span> <span class="st0">&quot;测试图1&quot;</span><span class="sy0">,</span>
+			<span class="st0">&quot;image&quot;</span><span class="sy0">:</span> <span class="st0">&quot;http://tb2.bdstatic.com/tb/static-common/img/search_logo_big_282cef2.gif&quot;</span><span class="sy0">,</span>
+			<span class="st0">&quot;link&quot;</span><span class="sy0">:</span> <span class="st0">&quot;http://www.baidu.com&quot;</span><span class="sy0">,</span>
+			<span class="st0">&quot;description&quot;</span><span class="sy0">:</span> <span class="st0">&quot;这是图片的一大段描述<span class="es0">\r</span><span class="es0">\n</span>可以换行。。。&quot;</span>
+		<span class="br0">&#125;</span><span class="sy0">,</span> <span class="br0">&#123;</span>
+			<span class="st0">&quot;title&quot;</span><span class="sy0">:</span> <span class="st0">&quot;测试图2&quot;</span><span class="sy0">,</span>
+			<span class="st0">&quot;image&quot;</span><span class="sy0">:</span> <span class="st0">&quot;http://img0.bdstatic.com/static/common/widget/search_box_search/logo/logo_3b6de4c.png&quot;</span><span class="sy0">,</span>
+			<span class="st0">&quot;link&quot;</span><span class="sy0">:</span> <span class="st0">&quot;http://www.baidu.com&quot;</span><span class="sy0">,</span>
+			<span class="st0">&quot;description&quot;</span><span class="sy0">:</span> <span class="st0">&quot;这是图片的一大段描述<span class="es0">\r</span><span class="es0">\n</span>可以换行。。。&quot;</span>
+		<span class="br0">&#125;</span><span class="br0">&#93;</span><span class="sy0">,</span>
+		<span class="st0">&quot;description&quot;</span><span class="sy0">:</span> <span class="st0">&quot;大轮滚图&quot;</span><span class="sy0">,</span>
+		<span class="st0">&quot;type&quot;</span><span class="sy0">:</span> <span class="st0">&quot;images&quot;</span><span class="sy0">,</span>
+		<span class="st0">&quot;config&quot;</span><span class="sy0">:</span> <span class="br0">&#123;</span>
+			<span class="st0">&quot;width&quot;</span><span class="sy0">:</span> <span class="nu0">950</span><span class="sy0">,</span>
+			<span class="st0">&quot;height&quot;</span><span class="sy0">:</span> <span class="nu0">500</span><span class="sy0">,</span>
+			<span class="st0">&quot;limit&quot;</span><span class="sy0">:</span> <span class="nu0">4</span>
+		<span class="br0">&#125;</span>
+	<span class="br0">&#125;</span>
+<span class="br0">&#125;</span></pre>
+</dd></dl>
+
+</div>
+<div class="fn"><sup><a href="#fnt__3" id="fn__3" class="fn_bot">3)</a></sup> 
+<pre class="code">&quot;list1&quot;: {
+	&quot;value&quot;: {},
+	&quot;description&quot;: &quot;右侧热门新闻&quot;,
+	&quot;type&quot;: &quot;nav&quot;,
+	&quot;config&quot;: {
+		&quot;filter&quot;: &quot;list&quot;
+	}
+}</pre>
+</div>
+<div class="fn"><sup><a href="#fnt__4" id="fn__4" class="fn_bot">4)</a></sup> 
+<pre class="code">&quot;list1&quot;: {
+	&quot;value&quot;: {},
+	&quot;description&quot;: &quot;右侧热门新闻&quot;,
+	&quot;type&quot;: &quot;list&quot;,
+	&quot;config&quot;: {
+		&quot;showchilddata&quot;: true
+	}
+}</pre>
+</div>
+<div class="fn"><sup><a href="#fnt__5" id="fn__5" class="fn_bot">5)</a></sup> 
+<pre class="code">&quot;page1&quot;: {
+	&quot;value&quot;: {},
+	&quot;description&quot;: &quot;关于我们&quot;,
+	&quot;type&quot;: &quot;nav&quot;,
+	&quot;config&quot;: {
+		&quot;filter&quot;: &quot;page&quot;
+	}
+}</pre>
+</div>
+<div class="fn"><sup><a href="#fnt__6" id="fn__6" class="fn_bot">6)</a></sup> 
+<pre class="code">&quot;link1&quot;: {
+	&quot;value&quot;: {},
+	&quot;description&quot;: &quot;意见反馈&quot;,
+	&quot;type&quot;: &quot;nav&quot;,
+	&quot;config&quot;: {
+		&quot;filter&quot;: &quot;link&quot;
+	}
+}</pre>
+</div>
+</div>

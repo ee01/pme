@@ -1,0 +1,8 @@
+st=&gt;start: Start
+e=&gt;end
+op=&gt;operation: My Operation
+cond=&gt;condition: Yes or No?
+&nbsp;
+st-&gt;op-&gt;cond
+cond(yes)-&gt;e
+cond(no)-&gt;op

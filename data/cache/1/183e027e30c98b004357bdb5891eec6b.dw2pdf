@@ -1,0 +1,694 @@
+<a name="uedtemple__"></a>
+<h1><bookmark content="统一平台模板Demo与Smarty变量" level="0" /><a name="uedtemple__统一平台模板demo与smarty变量">统一平台模板Demo与Smarty变量</a></h1>
+<div class="level1">
+<div class="table sectionedit1"><table class="inline">
+	<tr class="row0">
+		
+	</tr>
+</table></div>
+<!-- EDIT1 TABLE [54-55] --><div class="table sectionedit2"><table class="inline">
+	<tr class="row0">
+		
+	</tr>
+</table></div>
+<!-- EDIT2 TABLE [57-58] -->
+<p>
+点击这里查阅 <a href="/wiki/doku.php?id=ued:temple:rule" class="wikilink1" title="ued:temple:rule">《统一平台模板切图规范》</a>
+</p>
+<div class="table sectionedit3"><table class="inline">
+	<tr class="row0">
+		
+	</tr>
+</table></div>
+<!-- EDIT3 TABLE [137-138] --><div class="table sectionedit4"><table class="inline">
+	<tr class="row0">
+		
+	</tr>
+</table></div>
+<!-- EDIT4 TABLE [140-141] --><div class="table sectionedit5"><table class="inline">
+	<tr class="row0">
+		
+	</tr>
+</table></div>
+<!-- EDIT5 TABLE [143-144] --><div class="table sectionedit6"><table class="inline">
+	<tr class="row0">
+		
+	</tr>
+</table></div>
+<!-- EDIT6 TABLE [146-147] --><blockquote><div class="no">
+<blockquote><div class="no">
+<blockquote><div class="no">
+<blockquote><div class="no">
+<blockquote><div class="no">
+<blockquote><div class="no">
+<blockquote><div class="no">
+<blockquote><div class="no">
+<blockquote><div class="no">
+<blockquote><div class="no">
+<blockquote><div class="no">
+<blockquote><div class="no">
+<blockquote><div class="no">
+ 　<a href="/wiki/lib/exe/fetch.php?media=ued:temple.rar" class="media mediafile mf_rar" title="ued:temple.rar (2.4 MB)">点此下载：切图模板</a> 更新时间：2015.02.11</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+<div class="table sectionedit7"><table class="inline">
+	<tr class="row0">
+		
+	</tr>
+</table></div>
+<!-- EDIT7 TABLE [241-242] --><div class="table sectionedit8"><table class="inline">
+	<tr class="row0">
+		
+	</tr>
+</table></div>
+<!-- EDIT8 TABLE [244-245] --><div class="table sectionedit9"><table class="inline">
+	<tr class="row0">
+		
+	</tr>
+</table></div>
+<!-- EDIT9 TABLE [247-248] --><div class="table sectionedit10"><table class="inline">
+	<tr class="row0">
+		
+	</tr>
+</table></div>
+<!-- EDIT10 TABLE [250-251] -->
+<p>
+<strong>如何实现实时预览：</strong>
+</p>
+
+<p>
+— — — — — — —
+</p>
+
+<p>
+编辑Chrome的快捷方式→右键“属性”，在“目标”地址最后加上<code> –allow-file-access-from-files</code>（需重启Chrome，用此快捷方式启动）
+</p>
+
+<p>
+如 <code>“C:\Program Files (x86)\Google\Chrome\Application\chrome.exe” –allow-file-access-from-files</code>
+</p>
+
+<p>
+或本地搭建http服务器环境调试。
+</p>
+<hr />
+
+<p>
+统一平台的“切图”与“套页面”工作是同步进行的，去除切图人员与套页面人员的沟通环节，缩短工期。
+</p>
+
+<p>
+统一平台的模板前端开发可在切图过程中调用统一平台数据，
+使用标签语法时可同时实现与切静态页面类似的“实时预览”。
+</p>
+
+<p>
+如：
+</p>
+<pre class="code html4strict">{foreach name=list item=article from=$list}
+<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/li.html"><span class="kw2">li</span></a> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;fl&quot;</span>&gt;</span>{$article.title}<span class="sc2">&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/li.html"><span class="kw2">li</span></a>&gt;</span>
+{/foreach}</pre>
+<p>
+即可得到，以下预览列表
+</p>
+<pre class="code html4strict"><span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/li.html"><span class="kw2">li</span></a>&gt;</span>这是一篇测试文章<span class="sc2">&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/li.html"><span class="kw2">li</span></a>&gt;</span>
+<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/li.html"><span class="kw2">li</span></a>&gt;</span>这是一篇测试文章<span class="sc2">&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/li.html"><span class="kw2">li</span></a>&gt;</span>
+<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/li.html"><span class="kw2">li</span></a>&gt;</span>这是一篇测试文章<span class="sc2">&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/li.html"><span class="kw2">li</span></a>&gt;</span></pre><hr />
+<div class="table sectionedit11"><table class="inline">
+	<tr class="row0">
+		
+	</tr>
+</table></div>
+<!-- EDIT11 TABLE [1218-1219] -->
+</div>
+
+<h2><bookmark content="实时预览标签语法" level="1" /><a name="uedtemple__实时预览标签语法">实时预览标签语法</a></h2>
+<div class="level2">
+
+<p>
+— — — — — — — — — —
+</p>
+
+<p>
+统一平台的模板采用Smarty国际化引擎，语法通熟易懂。
+</p>
+
+<p>
+输出文本类型变量： <code>{$title}</code>
+</p>
+
+<p>
+输出数组类型变量（嵌套循环与限制循环次数）：
+</p>
+<pre class="code html4strict">{foreach name=navs item=nav from=$navs}
+<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/li.html"><span class="kw2">li</span></a> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;fl&quot;</span>&gt;</span>{$nav.name}
+	{if $nav.children}
+	{foreach key=key item=nav_list from=$nav.children}
+	<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/ul.html"><span class="kw2">ul</span></a> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;clearfix&quot;</span>&gt;</span>
+		<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/li.html"><span class="kw2">li</span></a>&gt;</span>{$nav_list.name}<span class="sc2">&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/li.html"><span class="kw2">li</span></a>&gt;</span>
+	<span class="sc2">&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/ul.html"><span class="kw2">ul</span></a>&gt;</span>
+	{/foreach}
+	{/if}
+<span class="sc2">&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/li.html"><span class="kw2">li</span></a>&gt;</span>
+{if $smarty.foreach.navs.iteration == 5}{break}{/if}
+{/foreach}</pre>
+<p>
+更多Smarty语法请参见：<a href="http://www.yiibai.com/smarty/smarty_ifelseif.html" class="urlextern" target="_blank" title="http://www.yiibai.com/smarty/smarty_ifelseif.html"  rel="nofollow">http://www.yiibai.com/smarty/smarty_ifelseif.html</a>
+</p>
+<hr />
+<div class="table sectionedit12"><table class="inline">
+	<tr class="row0">
+		
+	</tr>
+</table></div>
+<!-- EDIT12 TABLE [1869-1870] -->
+</div>
+
+<h2><bookmark content="可调用数据变量" level="1" /><a name="uedtemple__可调用数据变量">可调用数据变量</a></h2>
+<div class="level2">
+
+<p>
+— — — — — — — — —
+</p>
+
+<p>
+切图过程中打开控制台，刷新页面即可输出出所有数据变量。
+</p>
+
+</div>
+
+<h3><bookmark content="{$path} ：文件路径" level="2" /><a name="uedtemple__path_文件路径">{$path} ：文件路径</a></h3>
+<div class="level3">
+
+<p>
+用于include引用路径，如：
+</p>
+<pre class="code html4strict">...
+	{include file=&quot;{$path}header.html&quot;}
+...</pre>
+</div>
+
+<h3><bookmark content="{$site_url} ：网站域名地址" level="2" /><a name="uedtemple__site_url_网站域名地址">{$site_url} ：网站域名地址</a></h3>
+<div class="level3">
+
+<p>
+用于JS、CSS引用路径，如：
+</p>
+<pre class="code html4strict">...
+	<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/link.html"><span class="kw2">link</span></a> <span class="kw3">rel</span><span class="sy0">=</span><span class="st0">&quot;stylesheet&quot;</span> <span class="kw3">rev</span><span class="sy0">=</span><span class="st0">&quot;stylesheet&quot;</span> <span class="kw3">href</span><span class="sy0">=</span><span class="st0">&quot;{$site_url}css/style_{$stylecolor}.css&quot;</span> <span class="kw3">type</span><span class="sy0">=</span><span class="st0">&quot;text/css&quot;</span> <span class="sy0">/</span>&gt;</span>
+	<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/script.html"><span class="kw2">script</span></a> <span class="kw3">type</span><span class="sy0">=</span><span class="st0">&quot;text/javascript&quot;</span> <span class="kw3">src</span><span class="sy0">=</span><span class="st0">&quot;{$site_url}js/script.js&quot;</span>&gt;&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/script.html"><span class="kw2">script</span></a>&gt;</span>
+<span class="sc2">&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/head.html"><span class="kw2">head</span></a>&gt;</span>
+...</pre>
+</div>
+
+<h3><bookmark content="{$site_another_url} ：网站另一域名地址(当前是手机模版时，该变量表示PC域名；当前是PC模版时，表示PC域名)" level="2" /><a name="uedtemple__site_another_url_网站另一域名地址_当前是手机模版时_该变量表示pc域名_当前是pc模版时_表示pc域名">{$site_another_url} ：网站另一域名地址(当前是手机模版时，该变量表示PC域名；当前是PC模版时，表示PC域名)</a></h3>
+<div class="level3">
+
+</div>
+
+<h3><bookmark content="{$title} ：页面标题" level="2" /><a name="uedtemple__title_页面标题">{$title} ：页面标题</a></h3>
+<div class="level3">
+
+</div>
+
+<h3><bookmark content="{$keywords} ：页面关键词" level="2" /><a name="uedtemple__keywords_页面关键词">{$keywords} ：页面关键词</a></h3>
+<div class="level3">
+
+</div>
+
+<h3><bookmark content="{$description} ：页面描述" level="2" /><a name="uedtemple__description_页面描述">{$description} ：页面描述</a></h3>
+<div class="level3">
+
+</div>
+
+<h3><bookmark content="{$favicon} ：网站图标" level="2" /><a name="uedtemple__favicon_网站图标">{$favicon} ：网站图标</a></h3>
+<div class="level3">
+
+</div>
+
+<h3><bookmark content="{$stylecolor} ：网站颜色" level="2" /><a name="uedtemple__stylecolor_网站颜色">{$stylecolor} ：网站颜色</a></h3>
+<div class="level3">
+
+</div>
+
+<h3><bookmark content="{$logo} ：网站logo" level="2" /><a name="uedtemple__logo_网站logo">{$logo} ：网站logo</a></h3>
+<div class="level3">
+
+</div>
+
+<h3><bookmark content="{$footprint} ：脚印" level="2" /><a name="uedtemple__footprint_脚印">{$footprint} ：脚印</a></h3>
+<div class="level3">
+
+</div>
+
+<h3><bookmark content="{$footscript} ：底部脚本" level="2" /><a name="uedtemple__footscript_底部脚本">{$footscript} ：底部脚本</a></h3>
+<div class="level3">
+
+</div>
+
+<h3><bookmark content="{$pageContent} ：内容单页的HTML" level="2" /><a name="uedtemple__pagecontent_内容单页的html">{$pageContent} ：内容单页的HTML</a></h3>
+<div class="level3">
+
+</div>
+
+<h3><bookmark content="{$navs} ：网站导航栏" level="2" /><a name="uedtemple__navs_网站导航栏">{$navs} ：网站导航栏</a></h3>
+<div class="level3">
+<ul>
+<li class="level1"><div class="li"> {$navs[0].name} 导航名</div>
+</li>
+<li class="level1"><div class="li"> {$navs[0].image} 导航图片</div>
+</li>
+<li class="level1"><div class="li"> {$navs[0].link} 导航链接</div>
+</li>
+<li class="level1"><div class="li"> {$navs[0].current} 是否当前导航，1为当前导航，class选中</div>
+</li>
+<li class="level1"><div class="li"> {$navs[0].lastest[0]} 栏目最新文章列表（仅一级菜单有），格式同 <a href="#uedtemple__list_列表页数据" title="ued:temple ↵" class="wikilink1">{$list} ：列表页数据</a></div>
+</li>
+<li class="level1"><div class="li"> {$navs[0].children} 子导航，结构类似导航</div>
+</li>
+</ul>
+
+</div>
+
+<h3><bookmark content="{$pagenavs} ：页面导航栏" level="2" /><a name="uedtemple__pagenavs_页面导航栏">{$pagenavs} ：页面导航栏</a></h3>
+<div class="level3">
+<ul>
+<li class="level1"><div class="li"> {$pagenavs[0].name} 导航名</div>
+</li>
+<li class="level1"><div class="li"> {$pagenavs[0].image} 导航图片</div>
+</li>
+<li class="level1"><div class="li"> {$pagenavs[0].link} 导航链接</div>
+</li>
+<li class="level1"><div class="li"> {$pagenavs[0].current} 是否当前导航，1为当前导航，class选中</div>
+</li>
+<li class="level1"><div class="li"> {$pagenavs[0].children} 子导航，结构类似导航</div>
+</li>
+</ul>
+
+</div>
+
+<h3><bookmark content="{$contact} ：联系方式" level="2" /><a name="uedtemple__contact_联系方式">{$contact} ：联系方式</a></h3>
+<div class="level3">
+<ul>
+<li class="level1"><div class="li"> {$contact.company} 企业名称</div>
+</li>
+<li class="level1"><div class="li"> {$contact.name} 联系人</div>
+</li>
+<li class="level1"><div class="li"> {$contact.mobile} 手机</div>
+</li>
+<li class="level1"><div class="li"> {$contact.telephone} 固话</div>
+</li>
+<li class="level1"><div class="li"> {$contact.mail} 邮箱</div>
+</li>
+<li class="level1"><div class="li"> {$contact.qq} QQ</div>
+</li>
+<li class="level1"><div class="li"> {$contact.address} 公司地址</div>
+</li>
+</ul>
+
+</div>
+
+<h3><bookmark content="{$list} ：列表页数据（仅在list-xxx.html页面调用）" level="2" /><a name="uedtemple__list_列表页数据_仅在list-xxxhtml页面调用">{$list} ：列表页数据（仅在list-xxx.html页面调用）</a></h3>
+<div class="level3">
+<ul>
+<li class="level1"><div class="li"> {$list.name} 栏目名称</div>
+</li>
+<li class="level1"><div class="li"> {$list.image} 栏目图片</div>
+</li>
+<li class="level1"><div class="li"> {$list.link} 栏目链接(一般用于“查看更多”按钮)</div>
+</li>
+<li class="level1"><div class="li"> {$list.description} 栏目描述</div>
+</li>
+<li class="level1"><div class="li"> {$list.data[0].title} 文章标题</div>
+</li>
+<li class="level1"><div class="li"> {$list.data[0].image} 文章预览图</div>
+</li>
+<li class="level1"><div class="li"> {$list.data[0].link} 文章链接</div>
+</li>
+<li class="level1"><div class="li"> {$list.data[0].description} 文章内容</div>
+</li>
+<li class="level1"><div class="li"> {$list.data[0].pubdate} 发布时间</div>
+</li>
+<li class="level1"><div class="li"> {$list.data[0].category.name} 所属栏目名</div>
+</li>
+<li class="level1"><div class="li"> {$list.data[0].category.link} 所属栏目链接</div>
+</li>
+</ul>
+
+</div>
+
+<h3><bookmark content="{$page_links} ：列表分页项" level="2" /><a name="uedtemple__page_links_列表分页项">{$page_links} ：列表分页项</a></h3>
+<div class="level3">
+<ul>
+<li class="level1"><div class="li"> {$page_links.page_count} 总页码数</div>
+</li>
+<li class="level1"><div class="li"> {$page_links.per_page} 每页显示项数</div>
+</li>
+<li class="level1"><div class="li"> {$page_links.current_page} 当前页</div>
+</li>
+<li class="level1"><div class="li"> {$page_links.first_link} 首页链接</div>
+</li>
+<li class="level1"><div class="li"> {$page_links.prev_link} 上一页链接</div>
+</li>
+<li class="level1"><div class="li"> {$page_links.next_link} 下一页链接</div>
+</li>
+<li class="level1"><div class="li"> {$page_links.last_link} 尾页链接</div>
+</li>
+<li class="level1"><div class="li"> {$page_links.nears_link[]} 分页链接</div>
+</li>
+</ul>
+<pre class="code javascript">  <span class="co1">//$page_links.nears_link[]数据格式如下</span>
+  <span class="br0">&#123;</span>
+&nbsp;
+      <span class="st0">'5'</span><span class="sy0">:</span><span class="st0">'category/3_5.html'</span><span class="sy0">,</span>
+      <span class="st0">'6'</span><span class="sy0">:</span><span class="st0">'category/3_6.html'</span><span class="sy0">,</span><span class="co1">//当前页,通过current_page判断</span>
+      <span class="st0">'7'</span><span class="sy0">:</span><span class="st0">'category/3_7.html'</span><span class="sy0">,</span>
+  <span class="br0">&#125;</span>
+&nbsp;</pre>
+
+</div>
+
+<h3><bookmark content="{$article} ：文章页数据（仅在content-xxx.html页面调用）" level="2" /><a name="uedtemple__article_文章页数据_仅在content-xxxhtml页面调用">{$article} ：文章页数据（仅在content-xxx.html页面调用）</a></h3>
+<div class="level3">
+<ul>
+<li class="level1"><div class="li"> {$article.title} 文章标题</div>
+</li>
+<li class="level1"><div class="li"> {$article.content} 文章内容</div>
+</li>
+<li class="level1"><div class="li"> {$article.description} 文章简介</div>
+</li>
+<li class="level1"><div class="li"> {$article.images[0].title} 产品图名称</div>
+</li>
+<li class="level1"><div class="li"> {$article.images[0].image} 产品图地址</div>
+</li>
+<li class="level1"><div class="li"> {$article.pubdate} 发布时间</div>
+</li>
+<li class="level1"><div class="li"> {$article.prev.title} 上一篇文章标题</div>
+</li>
+<li class="level1"><div class="li"> {$article.prev.link} 上一篇文章链接</div>
+</li>
+<li class="level1"><div class="li"> {$article.next.title} 下一篇文章标题</div>
+</li>
+<li class="level1"><div class="li"> {$article.next.link} 下一篇文章链接</div>
+</li>
+<li class="level1"><div class="li"> {$article.category.name} 所属栏目名</div>
+</li>
+<li class="level1"><div class="li"> {$article.category.link} 所属栏目链接</div>
+</li>
+</ul>
+
+</div>
+
+<h3><bookmark content="{$mIndexCats} ：移动端首页栏目展示数据" level="2" /><a name="uedtemple__mindexcats_移动端首页栏目展示数据">{$mIndexCats} ：移动端首页栏目展示数据</a></h3>
+<div class="level3">
+<ul>
+<li class="level1"><div class="li"> {$mIndexCats[0].title} 栏目标题</div>
+</li>
+<li class="level1"><div class="li"> …</div>
+</li>
+<li class="level1"><div class="li"> {$mIndexCats[0].type} 栏目类型</div>
+</li>
+</ul>
+
+<p>
+如果type==1、2、3：
+</p>
+<ul>
+<li class="level1"><div class="li"> {$mIndexCats[0].title} 栏目标题</div>
+</li>
+<li class="level1"><div class="li"> {$mIndexCats[0].image} 栏目预览图地址</div>
+</li>
+<li class="level1"><div class="li"> {$mIndexCats[0].link} 栏目链接地址</div>
+</li>
+<li class="level1"><div class="li"> {$mIndexCats[0].list[0]} 栏目文章列表，格式同 <a href="#uedtemple__list_列表页数据" title="ued:temple ↵" class="wikilink1">{$list} ：列表页数据</a></div>
+</li>
+<li class="level1"><div class="li"> {$mIndexCats[0].type} 栏目类型</div>
+</li>
+</ul>
+
+<p>
+如果type==4：
+</p>
+<ul>
+<li class="level1"><div class="li"> {$mIndexCats[0].title} 栏目标题</div>
+</li>
+<li class="level1"><div class="li"> {$mIndexCats[0].image} 栏目预览图地址</div>
+</li>
+<li class="level1"><div class="li"> {$mIndexCats[0].link} 栏目链接地址</div>
+</li>
+<li class="level1"><div class="li"> {$mIndexCats[0].content} 栏目单页内容</div>
+</li>
+<li class="level1"><div class="li"> {$mIndexCats[0].type} 栏目类型</div>
+</li>
+</ul>
+
+<p>
+如果type==5、6、7、8：
+</p>
+<ul>
+<li class="level1"><div class="li"> {$mIndexCats[0].title} 栏目标题</div>
+</li>
+<li class="level1"><div class="li"> {$mIndexCats[0].image} 栏目预览图地址</div>
+</li>
+<li class="level1"><div class="li"> {$mIndexCats[0].link} 栏目链接地址</div>
+</li>
+<li class="level1"><div class="li"> {$mIndexCats[0].type} 栏目类型</div>
+</li>
+</ul>
+
+</div>
+
+<h3><bookmark content="{$index} ：首页数据（自定义于index.json）" level="2" /><a name="uedtemple__index_首页数据_自定义于indexjson">{$index} ：首页数据（自定义于index.json）</a></h3>
+<div class="level3">
+
+</div>
+
+<h4><bookmark content="数据格式" level="3" /><a name="uedtemple__数据格式">数据格式</a></h4>
+<div class="level4">
+<pre class="code javascript"><span class="br0">&#123;</span>
+	<span class="st0">&quot;title&quot;</span><span class="sy0">:</span> <span class="br0">&#123;</span>
+		<span class="st0">&quot;value&quot;</span><span class="sy0">:</span> <span class="st0">&quot;XXX企业&quot;</span><span class="sy0">,</span>
+		<span class="st0">&quot;description&quot;</span><span class="sy0">:</span> <span class="st0">&quot;顶部大标题&quot;</span><span class="sy0">,</span>
+		<span class="st0">&quot;type&quot;</span><span class="sy0">:</span> <span class="st0">&quot;text&quot;</span>
+	<span class="br0">&#125;</span>
+<span class="br0">&#125;</span></pre>
+
+<p>
+每个数据都包含value、description和type项。
+</p>
+
+<p>
+<em class="u">description描述：</em> 用来描述其在页面的位置，如“顶部轮滚图”“左侧公告”“中部第二个新闻列表”
+</p>
+
+<p>
+<em class="u">type类型：</em>
+</p>
+<ul>
+<li class="level1"><div class="li"> text：单行文字</div>
+</li>
+<li class="level1"><div class="li"> textarea：多行文本</div>
+</li>
+<li class="level1"><div class="li"> image：单张图片</div>
+</li>
+<li class="level1"><div class="li"> images：多图，多个image类型的数组</div>
+</li>
+<li class="level1"><div class="li"> list：栏目列表数据（特别注意：此类型构造的json格式与最终输出smarty变量格式不同）</div>
+</li>
+</ul>
+
+<p>
+<em class="u">value初始化数据：</em> 可放入示例数据，切图过程实时预览（不同type类型的value值不同，具体可参见如下实例json）
+</p>
+
+</div>
+
+<h4><bookmark content="实例json" level="3" /><a name="uedtemple__实例json">实例json</a></h4>
+<div class="level4">
+<pre class="code javascript"><span class="br0">&#123;</span>
+	<span class="st0">&quot;announcement_title&quot;</span><span class="sy0">:</span> <span class="br0">&#123;</span>
+		<span class="st0">&quot;value&quot;</span><span class="sy0">:</span> <span class="st0">&quot;大喇叭：&quot;</span><span class="sy0">,</span>
+		<span class="st0">&quot;description&quot;</span><span class="sy0">:</span> <span class="st0">&quot;公告标题&quot;</span><span class="sy0">,</span>
+		<span class="st0">&quot;type&quot;</span><span class="sy0">:</span> <span class="st0">&quot;text&quot;</span>
+	<span class="br0">&#125;</span><span class="sy0">,</span>
+	<span class="st0">&quot;announcement&quot;</span><span class="sy0">:</span> <span class="br0">&#123;</span>
+		<span class="st0">&quot;value&quot;</span><span class="sy0">:</span> <span class="st0">&quot;你看到的都是模板测试数据，需修改请登陆后台进入【页面内容】更新！<span class="es0">\r</span><span class="es0">\n</span>第二行公告内容公告内容公告内容公告内容&quot;</span><span class="sy0">,</span>
+		<span class="st0">&quot;description&quot;</span><span class="sy0">:</span> <span class="st0">&quot;网站公告&quot;</span><span class="sy0">,</span>
+		<span class="st0">&quot;type&quot;</span><span class="sy0">:</span> <span class="st0">&quot;textarea&quot;</span>
+	<span class="br0">&#125;</span><span class="sy0">,</span>
+	<span class="st0">&quot;logo&quot;</span><span class="sy0">:</span> <span class="br0">&#123;</span>
+		<span class="st0">&quot;value&quot;</span><span class="sy0">:</span> <span class="br0">&#123;</span>
+			<span class="st0">&quot;title&quot;</span><span class="sy0">:</span> <span class="st0">&quot;XXX企业&quot;</span><span class="sy0">,</span>
+			<span class="st0">&quot;image&quot;</span><span class="sy0">:</span> <span class="st0">&quot;http://www.baidu.com/img/baidu_jgylogo3.gif&quot;</span><span class="sy0">,</span>
+			<span class="st0">&quot;link&quot;</span><span class="sy0">:</span> <span class="st0">&quot;http://www.baidu.com/&quot;</span>
+		<span class="br0">&#125;</span><span class="sy0">,</span>
+		<span class="st0">&quot;description&quot;</span><span class="sy0">:</span> <span class="st0">&quot;网站LOGO&quot;</span><span class="sy0">,</span>
+		<span class="st0">&quot;type&quot;</span><span class="sy0">:</span> <span class="st0">&quot;image&quot;</span>
+	<span class="br0">&#125;</span>
+	<span class="st0">&quot;slidepics&quot;</span><span class="sy0">:</span> <span class="br0">&#123;</span>
+		<span class="st0">&quot;value&quot;</span><span class="sy0">:</span> <span class="br0">&#91;</span><span class="br0">&#123;</span>
+			<span class="st0">&quot;title&quot;</span><span class="sy0">:</span> <span class="st0">&quot;测试图1&quot;</span><span class="sy0">,</span>
+			<span class="st0">&quot;image&quot;</span><span class="sy0">:</span> <span class="st0">&quot;http://tb2.bdstatic.com/tb/static-common/img/search_logo_big_282cef2.gif&quot;</span><span class="sy0">,</span>
+			<span class="st0">&quot;link&quot;</span><span class="sy0">:</span> <span class="st0">&quot;{$path}article/1.html&quot;</span>
+		<span class="br0">&#125;</span><span class="sy0">,</span> <span class="br0">&#123;</span>
+			<span class="st0">&quot;title&quot;</span><span class="sy0">:</span> <span class="st0">&quot;测试图2&quot;</span><span class="sy0">,</span>
+			<span class="st0">&quot;image&quot;</span><span class="sy0">:</span> <span class="st0">&quot;http://img0.bdstatic.com/static/common/widget/search_box_search/logo/logo_3b6de4c.png&quot;</span><span class="sy0">,</span>
+			<span class="st0">&quot;link&quot;</span><span class="sy0">:</span> <span class="st0">&quot;{$path}article/2.html&quot;</span>
+		<span class="br0">&#125;</span><span class="br0">&#93;</span><span class="sy0">,</span>
+		<span class="st0">&quot;description&quot;</span><span class="sy0">:</span> <span class="st0">&quot;大轮滚图&quot;</span><span class="sy0">,</span>
+		<span class="st0">&quot;type&quot;</span><span class="sy0">:</span> <span class="st0">&quot;images&quot;</span>
+	<span class="br0">&#125;</span><span class="sy0">,</span>
+	<span class="st0">&quot;list1&quot;</span><span class="sy0">:</span> <span class="br0">&#123;</span>
+		<span class="st0">&quot;value&quot;</span><span class="sy0">:</span> <span class="br0">&#123;</span>
+			<span class="st0">&quot;id&quot;</span><span class="sy0">:</span> <span class="nu0">1</span><span class="sy0">,</span>
+			<span class="st0">&quot;total&quot;</span><span class="sy0">:</span> <span class="nu0">4</span><span class="sy0">,</span>
+			<span class="st0">&quot;star_only&quot;</span><span class="sy0">:</span> <span class="nu0">0</span>
+		<span class="br0">&#125;</span><span class="sy0">,</span>
+		<span class="st0">&quot;description&quot;</span><span class="sy0">:</span> <span class="st0">&quot;第一个图文列表&quot;</span><span class="sy0">,</span>
+		<span class="st0">&quot;type&quot;</span><span class="sy0">:</span> <span class="st0">&quot;list&quot;</span>
+	<span class="br0">&#125;</span>
+<span class="br0">&#125;</span></pre>
+
+</div>
+
+<h4><bookmark content="数据说明" level="3" /><a name="uedtemple__数据说明">数据说明</a></h4>
+<div class="level4">
+<ul>
+<li class="level1"><div class="li"> {$index.title} 大标题</div>
+</li>
+<li class="level1"><div class="li"> {$index.slidepics[0].title} 轮滚图</div>
+</li>
+<li class="level1"><div class="li"> {$index.slidepics[0].image} 轮滚图</div>
+</li>
+<li class="level1"><div class="li"> {$index.slidepics[0].link} 轮滚图</div>
+</li>
+<li class="level1"><div class="li"> {$index.list1.name} 栏目名称</div>
+</li>
+<li class="level1"><div class="li"> {$index.list1.image} 栏目图片</div>
+</li>
+<li class="level1"><div class="li"> {$index.list1.link} 栏目链接(一般用于“查看更多”按钮)</div>
+</li>
+<li class="level1"><div class="li"> {$index.list1.description} 栏目描述</div>
+</li>
+<li class="level1"><div class="li"> {$index.list1.data[]} <strong>这个特别注意，输出的数据格式与填写的json格式是不一样的</strong></div>
+</li>
+<li class="level1"><div class="li"> {$index.list1.data[0].title} 文章标题</div>
+</li>
+<li class="level1"><div class="li"> {$index.list1.data[0].image} 文章预览图</div>
+</li>
+<li class="level1"><div class="li"> {$index.list1.data[0].link} 文章链接</div>
+</li>
+<li class="level1"><div class="li"> {$index.list1.data[0].description} 文章内容</div>
+</li>
+<li class="level1"><div class="li"> {$index.list1.data[0].pubdate} 发布时间</div>
+</li>
+<li class="level1"><div class="li"> {$index.list1.data[0].category.name} 所属栏目名</div>
+</li>
+<li class="level1"><div class="li"> {$index.list1.data[0].category.link} 所属栏目链接</div>
+</li>
+<li class="level1"><div class="li"> {$index.announcement} 网站公告</div>
+</li>
+</ul>
+
+</div>
+
+<h3><bookmark content="{$index} ：【手机】首页数据（自定义于index.json）" level="2" /><a name="uedtemple__index_手机_首页数据_自定义于indexjson">{$index} ：【手机】首页数据（自定义于index.json）</a></h3>
+<div class="level3">
+
+</div>
+
+<h4><bookmark content="实例json" level="3" /><a name="uedtemple__实例json1">实例json</a></h4>
+<div class="level4">
+<pre class="code javascript"><span class="br0">&#123;</span>
+	<span class="st0">&quot;slidepics&quot;</span><span class="sy0">:</span> <span class="br0">&#123;</span>
+		<span class="st0">&quot;value&quot;</span><span class="sy0">:</span> <span class="br0">&#91;</span><span class="br0">&#123;</span>
+			<span class="st0">&quot;title&quot;</span><span class="sy0">:</span> <span class="st0">&quot;测试图1&quot;</span><span class="sy0">,</span>
+			<span class="st0">&quot;src&quot;</span><span class="sy0">:</span> <span class="st0">&quot;http://tb2.bdstatic.com/tb/static-common/img/search_logo_big_282cef2.gif&quot;</span><span class="sy0">,</span>
+			<span class="st0">&quot;href&quot;</span><span class="sy0">:</span> <span class="st0">&quot;{$path}article/1.html&quot;</span>
+		<span class="br0">&#125;</span><span class="sy0">,</span> <span class="br0">&#123;</span>
+			<span class="st0">&quot;title&quot;</span><span class="sy0">:</span> <span class="st0">&quot;测试图2&quot;</span><span class="sy0">,</span>
+			<span class="st0">&quot;src&quot;</span><span class="sy0">:</span> <span class="st0">&quot;http://img0.bdstatic.com/static/common/widget/search_box_search/logo/logo_3b6de4c.png&quot;</span><span class="sy0">,</span>
+			<span class="st0">&quot;href&quot;</span><span class="sy0">:</span> <span class="st0">&quot;{$path}article/2.html&quot;</span>
+		<span class="br0">&#125;</span><span class="br0">&#93;</span><span class="sy0">,</span>
+		<span class="st0">&quot;description&quot;</span><span class="sy0">:</span> <span class="st0">&quot;大轮滚图&quot;</span><span class="sy0">,</span>
+		<span class="st0">&quot;type&quot;</span><span class="sy0">:</span> <span class="st0">&quot;images&quot;</span>
+	<span class="br0">&#125;</span><span class="sy0">,</span>
+	<span class="st0">&quot;bottomnavs&quot;</span><span class="sy0">:</span> <span class="br0">&#123;</span>
+		<span class="st0">&quot;value&quot;</span><span class="sy0">:</span> <span class="br0">&#91;</span><span class="br0">&#123;</span>
+			<span class="st0">&quot;name&quot;</span><span class="sy0">:</span> <span class="st0">&quot;电话&quot;</span><span class="sy0">,</span>
+			<span class="st0">&quot;image&quot;</span><span class="sy0">:</span> <span class="st0">&quot;http://..../a.png&quot;</span><span class="sy0">,</span>
+			<span class="st0">&quot;data&quot;</span><span class="sy0">:</span> <span class="st0">&quot;0592-2323232&quot;</span><span class="sy0">,</span>
+			<span class="st0">&quot;type&quot;</span><span class="sy0">:</span> <span class="st0">&quot;tel&quot;</span><span class="sy0">,</span>
+			<span class="st0">&quot;enable&quot;</span><span class="sy0">:</span> <span class="nu0">1</span>
+		<span class="br0">&#125;</span><span class="sy0">,</span> <span class="br0">&#123;</span>
+			<span class="st0">&quot;name&quot;</span><span class="sy0">:</span> <span class="st0">&quot;短信&quot;</span><span class="sy0">,</span>
+			<span class="st0">&quot;image&quot;</span><span class="sy0">:</span> <span class="st0">&quot;http://..../a.png&quot;</span><span class="sy0">,</span>
+			<span class="st0">&quot;data&quot;</span><span class="sy0">:</span> <span class="st0">&quot;13489990000&quot;</span><span class="sy0">,</span>
+			<span class="st0">&quot;type&quot;</span><span class="sy0">:</span> <span class="st0">&quot;sms&quot;</span><span class="sy0">,</span>
+			<span class="st0">&quot;enable&quot;</span><span class="sy0">:</span> <span class="nu0">1</span>
+		<span class="br0">&#125;</span><span class="sy0">,</span> <span class="br0">&#123;</span>
+			<span class="st0">&quot;name&quot;</span><span class="sy0">:</span> <span class="st0">&quot;咨询&quot;</span><span class="sy0">,</span>
+			<span class="st0">&quot;image&quot;</span><span class="sy0">:</span> <span class="st0">&quot;http://..../a.png&quot;</span><span class="sy0">,</span>
+			<span class="st0">&quot;data&quot;</span><span class="sy0">:</span> <span class="st0">&quot;0000001@53kf&quot;</span><span class="sy0">,</span>
+			<span class="st0">&quot;type&quot;</span><span class="sy0">:</span> <span class="st0">&quot;im&quot;</span><span class="sy0">,</span>
+			<span class="st0">&quot;enable&quot;</span><span class="sy0">:</span> <span class="nu0">1</span>
+		<span class="br0">&#125;</span><span class="sy0">,</span> <span class="br0">&#123;</span>
+			<span class="st0">&quot;name&quot;</span><span class="sy0">:</span> <span class="st0">&quot;导航B&quot;</span><span class="sy0">,</span>
+			<span class="st0">&quot;image&quot;</span><span class="sy0">:</span> <span class="st0">&quot;http://..../a.png&quot;</span><span class="sy0">,</span>
+			<span class="st0">&quot;data&quot;</span><span class="sy0">:</span> <span class="st0">&quot;http://...&quot;</span><span class="sy0">,</span>
+			<span class="st0">&quot;children&quot;</span><span class="sy0">:</span> <span class="br0">&#91;</span><span class="br0">&#123;</span>
+				<span class="st0">&quot;name&quot;</span><span class="sy0">:</span> <span class="st0">&quot;导航B1&quot;</span><span class="sy0">,</span>
+				<span class="st0">&quot;image&quot;</span><span class="sy0">:</span> <span class="st0">&quot;http://..../a.png&quot;</span><span class="sy0">,</span>
+				<span class="st0">&quot;data&quot;</span><span class="sy0">:</span> <span class="st0">&quot;http://...&quot;</span><span class="sy0">,</span>
+				<span class="st0">&quot;type&quot;</span><span class="sy0">:</span> <span class="st0">&quot;link&quot;</span><span class="sy0">,</span>
+				<span class="st0">&quot;enable&quot;</span><span class="sy0">:</span> <span class="nu0">1</span>
+			<span class="br0">&#125;</span><span class="sy0">,</span>
+			<span class="br0">&#123;</span>
+				<span class="st0">&quot;name&quot;</span><span class="sy0">:</span> <span class="st0">&quot;导航B2&quot;</span><span class="sy0">,</span>
+				<span class="st0">&quot;image&quot;</span><span class="sy0">:</span> <span class="st0">&quot;http://..../a.png&quot;</span><span class="sy0">,</span>
+				<span class="st0">&quot;data&quot;</span><span class="sy0">:</span> <span class="st0">&quot;http://...&quot;</span><span class="sy0">,</span>
+				<span class="st0">&quot;type&quot;</span><span class="sy0">:</span> <span class="st0">&quot;link&quot;</span><span class="sy0">,</span>
+				<span class="st0">&quot;enable&quot;</span><span class="sy0">:</span> <span class="nu0">1</span>
+			<span class="br0">&#125;</span><span class="br0">&#93;</span><span class="sy0">,</span>
+			<span class="st0">&quot;type&quot;</span><span class="sy0">:</span> <span class="st0">&quot;link&quot;</span><span class="sy0">,</span>
+			<span class="st0">&quot;enable&quot;</span><span class="sy0">:</span> <span class="nu0">1</span>
+		<span class="br0">&#125;</span><span class="sy0">,</span> <span class="br0">&#123;</span>
+			<span class="st0">&quot;name&quot;</span><span class="sy0">:</span> <span class="st0">&quot;分享&quot;</span><span class="sy0">,</span>
+			<span class="st0">&quot;image&quot;</span><span class="sy0">:</span> <span class="st0">&quot;http://..../a.png&quot;</span><span class="sy0">,</span>
+			<span class="st0">&quot;data&quot;</span><span class="sy0">:</span> <span class="st0">&quot;&quot;</span><span class="sy0">,</span>
+			<span class="st0">&quot;type&quot;</span><span class="sy0">:</span> <span class="st0">&quot;share&quot;</span><span class="sy0">,</span>
+			<span class="st0">&quot;enable&quot;</span><span class="sy0">:</span> <span class="nu0">1</span>
+		<span class="br0">&#125;</span><span class="br0">&#93;</span><span class="sy0">,</span>
+		<span class="st0">&quot;description&quot;</span><span class="sy0">:</span> <span class="st0">&quot;底部导航&quot;</span><span class="sy0">,</span>
+		<span class="st0">&quot;type&quot;</span><span class="sy0">:</span> <span class="st0">&quot;navs&quot;</span>
+	<span class="br0">&#125;</span>
+<span class="br0">&#125;</span></pre>
+
+</div>
+
+<h4><bookmark content="数据说明" level="3" /><a name="uedtemple__数据说明1">数据说明</a></h4>
+<div class="level4">
+<ul>
+<li class="level1"><div class="li"> {$index.bottomnavs[0].name} 导航名称</div>
+</li>
+<li class="level1"><div class="li"> {$index.bottomnavs[0].image} 图标地址</div>
+</li>
+<li class="level1"><div class="li"> {$index.bottomnavs[0].data} 导航数据。tel、sms为电话号码；im、link为链接地址；share暂无数据</div>
+</li>
+<li class="level1"><div class="li"> {$index.bottomnavs[0].type} 底部导航类型：tel|sms|im|link|share</div>
+</li>
+<li class="level1"><div class="li"> {$index.bottomnavs[0].enable} 是否启用，1为启用</div>
+</li>
+</ul>
+
+</div>

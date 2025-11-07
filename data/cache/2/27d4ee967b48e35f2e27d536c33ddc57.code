@@ -1,0 +1,19 @@
+<span class="co1">// 先定义弹窗</span>
+<span class="kw1">var</span> ruleBox <span class="sy0">=</span> $<span class="br0">&#40;</span><span class="st0">'#box-rule'</span><span class="br0">&#41;</span>.<span class="me1">box</span><span class="br0">&#40;</span><span class="br0">&#123;</span>
+	close<span class="sy0">:</span> <span class="kw1">function</span><span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+		<span class="co1">// 清除数据</span>
+		$<span class="br0">&#40;</span><span class="kw1">this</span><span class="br0">&#41;</span>.<span class="me1">removeData</span><span class="br0">&#40;</span><span class="st0">'xxx_id'</span><span class="br0">&#41;</span><span class="sy0">;</span>
+	<span class="br0">&#125;</span>
+<span class="br0">&#125;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="co1">// 之后补充弹窗的before操作函数</span>
+$<span class="br0">&#40;</span><span class="st0">'#rule_btn'</span><span class="br0">&#41;</span>.<span class="me1">click</span><span class="br0">&#40;</span><span class="kw1">function</span><span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+	<span class="co1">// 弹出前填充数据</span>
+	ruleBox.<span class="me1">before</span><span class="br0">&#40;</span><span class="kw1">function</span><span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+		<span class="co1">// 加载数据</span>
+		$<span class="br0">&#40;</span><span class="kw1">this</span><span class="br0">&#41;</span>.<span class="me1">data</span><span class="br0">&#40;</span><span class="st0">'xxx_id'</span><span class="sy0">,</span> <span class="st0">'123'</span><span class="br0">&#41;</span><span class="sy0">;</span>
+		<span class="co1">// 填入数据</span>
+		$<span class="br0">&#40;</span><span class="kw1">this</span><span class="br0">&#41;</span>.<span class="me1">find</span><span class="br0">&#40;</span><span class="st0">'input'</span><span class="br0">&#41;</span>.<span class="me1">val</span><span class="br0">&#40;</span>ruleBox.<span class="me1">data</span><span class="br0">&#40;</span><span class="st0">'xxx_id'</span><span class="br0">&#41;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+	<span class="br0">&#125;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+	<span class="co1">// 弹出</span>
+	ruleBox.<span class="me1">show</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span><span class="br0">&#41;</span><span class="sy0">;</span>

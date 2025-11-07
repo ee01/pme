@@ -1,0 +1,4 @@
+  <span class="kw1">var</span> ihubo <span class="sy0">=</span> <span class="br0">&#123;</span>
+    nickName  <span class="sy0">:</span> <span class="st0">&quot;草依山&quot;</span><span class="sy0">,</span>
+    site <span class="sy0">:</span> <span class="st0">&quot;http://jser.me&quot;</span>
+  <span class="br0">&#125;</span>

@@ -1,0 +1,130 @@
+
+<h1 class="sectionedit1" id="blend_api">Blend API</h1>
+<div class="level1">
+
+<p>
+一个百度手机上经常用到的js接口：<a href="http://clouda.baidu.com/blendapi/introduction/introduce" class="urlextern" target="_blank" title="http://clouda.baidu.com/blendapi/introduction/introduce"  rel="nofollow">http://clouda.baidu.com/blendapi/introduction/introduce</a>
+</p>
+
+</div>
+<!-- EDIT1 SECTION "Blend API" [1-128] -->
+<h1 class="sectionedit2" id="使用方法">使用方法</h1>
+<div class="level1">
+
+</div>
+<!-- EDIT2 SECTION "使用方法" [129-155] -->
+<h3 class="sectionedit3" id="首先">首先</h3>
+<div class="level3">
+
+<p>
+导入这个js  
+</p>
+<pre class="code">&lt;script name=&quot;baidu-tc-cerfication&quot; type=&quot;text/javascript&quot; charset=&quot;utf-8&quot; src=&quot;http://apps.bdimg.com/blend/loader.js&quot;&gt;&lt;/script&gt;</pre>
+
+</div>
+<!-- EDIT3 SECTION "首先" [156-335] -->
+<h3 class="sectionedit4" id="然后导入model">然后导入model</h3>
+<div class="level3">
+
+<p>
+这个可从  <a href="http://clouda.baidu.com/blendapi/product" class="urlextern" target="_blank" title="http://clouda.baidu.com/blendapi/product"  rel="nofollow">http://clouda.baidu.com/blendapi/product</a>   这边获得
+例：
+</p>
+<pre class="code">          blend.lightInit({
+				ak:&quot;u7wpBCazLrhquiQKDmyS3pDg&quot;,
+				module:[&quot;keyboard&quot;]
+			});</pre>
+
+</div>
+<!-- EDIT4 SECTION "然后导入model" [336-551] -->
+<h2 class="sectionedit5" id="上面两个为必须_还有_请导入jq包">上面两个为必须，还有，请导入jq包</h2>
+<div class="level2">
+
+</div>
+<!-- EDIT5 SECTION "上面两个为必须，还有，请导入jq包" [552-612] -->
+<h3 class="sectionedit6" id="之后">之后</h3>
+<div class="level3">
+
+<p>
+请参考官网手册api <a href="http://clouda.baidu.com/blendapi/introduction/introduce" class="urlextern" target="_blank" title="http://clouda.baidu.com/blendapi/introduction/introduce"  rel="nofollow">http://clouda.baidu.com/blendapi/introduction/introduce</a>，其中分为两个，一个本地端能力，一个云服务，可根据需要进行选择。。
+</p>
+
+</div>
+<!-- EDIT6 SECTION "之后" [613-811] -->
+<h3 class="sectionedit7" id="最后_看一个简单例子_这个是获取当前位置信息">最后，看一个简单例子，这个是获取当前位置信息</h3>
+<div class="level3">
+
+<p>
+&lt;html xmlns=“<a href="http://www.w3.org/1999/xhtml" class="urlextern" target="_blank" title="http://www.w3.org/1999/xhtml"  rel="nofollow">http://www.w3.org/1999/xhtml</a>”&gt;
+</p>
+<pre class="code">&lt;head&gt;
+	&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=utf-8&quot; /&gt;
+	&lt;title&gt;&lt;/title&gt;
+	&lt;script type=&quot;text/javascript&quot; src=&quot;jquery.min.js&quot;&gt;&lt;/script&gt;</pre>
+<pre class="code">	&lt;script name=&quot;baidu-tc-cerfication&quot; type=&quot;text/javascript&quot; charset=&quot;utf-8&quot; src=&quot;http://apps.bdimg.com/blend/loader.js&quot;&gt;&lt;/script&gt;
+	&lt;script type=&quot;text/javascript&quot;&gt;
+		$(document).ready(function() {
+			blend.lightInit({
+				ak:&quot;u7wpBCazLrhquiQKDmyS3pDg&quot;,
+				module:[&quot;geolocation&quot;]
+			});
+			 Blend.device.geolocation.get({
+				onsuccess: function(data){
+				var _data = eval(&#039;(&#039;+data+&#039;)&#039;);
+				console.log(_data);
+					$(&quot;#api&quot;).val(JSON.stringify(data));
+				},
+				onfail: function(data){
+					alert(22);
+				console.log(data);
+					$(&quot;#api&quot;).val(JSON.stringify(data));
+				}
+			 });
+		});	
+	&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+	&lt;div id=&quot;api&quot;&gt;&lt;/div&gt;
+&lt;/body&gt;</pre>
+
+<p>
+&lt;/html&gt;
+</p>
+
+</div>
+<!-- EDIT7 SECTION "最后，看一个简单例子，这个是获取当前位置信息" [812-1778] -->
+<h3 class="sectionedit8" id="社区化分享_可用">社区化分享（可用）</h3>
+<div class="level3">
+
+<p>
+&lt;html xmlns=“<a href="http://www.w3.org/1999/xhtml" class="urlextern" target="_blank" title="http://www.w3.org/1999/xhtml"  rel="nofollow">http://www.w3.org/1999/xhtml</a>”&gt;
+</p>
+<pre class="code">&lt;head&gt;
+	&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=utf-8&quot; /&gt;
+	&lt;title&gt;&lt;/title&gt;
+	&lt;script type=&quot;text/javascript&quot; src=&quot;jquery.min.js&quot;&gt;&lt;/script&gt;
+	&lt;link rel=&quot;stylesheet&quot; href=&quot;http://apps.bdimg.com/cloudaapi/res/css/crema.css&quot;&gt;
+	&lt;script name=&quot;baidu-tc-cerfication&quot; type=&quot;text/javascript&quot; charset=&quot;utf-8&quot; data-appid=&quot;3798147&quot; src=&quot;http://apps.bdimg.com/blend/loader.js&quot;&gt;&lt;/script&gt;
+	&lt;script type=&quot;text/javascript&quot;&gt;
+		$(document).ready(function() {			
+			blend.lightInit({
+				ak:&quot;u7wpBCazLrhquiQKDmyS3pDg&quot;,
+				module:[&quot;socialshare&quot;]
+			});				
+			var onsuccess = onfail = function(){	
+			$(&quot;#api&quot;).val(JSON.stringify(data));};
+			Blend.mbaas.socialshare.callShare({mediaType:&quot;all&quot;,content:&quot;还可以&quot;,onsuccess:onsuccess,onfail:onfail});
+			
+		});	
+	&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+	&lt;div id=&quot;api&quot;&gt;&lt;/div&gt;
+&lt;/body&gt;</pre>
+
+<p>
+&lt;/html&gt;
+</p>
+
+</div>
+<!-- EDIT8 SECTION "社区化分享（可用）" [1779-] -->

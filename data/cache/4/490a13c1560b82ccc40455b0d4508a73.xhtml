@@ -1,0 +1,124 @@
+
+<h1 class="sectionedit1" id="自封装弹窗插件">自封装弹窗插件</h1>
+<div class="level1">
+
+</div>
+<!-- EDIT1 SECTION "自封装弹窗插件" [1-37] -->
+<h2 class="sectionedit2" id="引入文件">引入文件：</h2>
+<div class="level2">
+<pre class="code html4strict"><span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/script.html"><span class="kw2">script</span></a> <span class="kw3">type</span><span class="sy0">=</span><span class="st0">&quot;text/javascript&quot;</span> <span class="kw3">src</span><span class="sy0">=</span><span class="st0">&quot;http://common.mn.sina.com.cn/public/resource/lib/jquery.floatDiv.js&quot;</span>&gt;&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/script.html"><span class="kw2">script</span></a>&gt;</span>
+<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/script.html"><span class="kw2">script</span></a> <span class="kw3">type</span><span class="sy0">=</span><span class="st0">&quot;text/javascript&quot;</span> <span class="kw3">src</span><span class="sy0">=</span><span class="st0">&quot;http://common.mn.sina.com.cn/public/resource/lib/mask.js&quot;</span>&gt;&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/script.html"><span class="kw2">script</span></a>&gt;</span>
+<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/script.html"><span class="kw2">script</span></a> <span class="kw3">type</span><span class="sy0">=</span><span class="st0">&quot;text/javascript&quot;</span> <span class="kw3">src</span><span class="sy0">=</span><span class="st0">&quot;http://common.mn.sina.com.cn/public/resource/lib/jquery.box.js&quot;</span>&gt;&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/script.html"><span class="kw2">script</span></a>&gt;</span></pre>
+
+</div>
+
+<h4 id="html">HTML:</h4>
+<div class="level4">
+<pre class="code html4strict"><span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/div.html"><span class="kw2">div</span></a> <span class="kw3">id</span><span class="sy0">=</span><span class="st0">&quot;box-rule&quot;</span> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;box pngCss&quot;</span>&gt;</span>
+	<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/div.html"><span class="kw2">div</span></a> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;box-close&quot;</span>&gt;&lt;<a target="_blank" href="http://december.com/html/4/element/a.html"><span class="kw2">a</span></a> <span class="kw3">href</span><span class="sy0">=</span><span class="st0">&quot;javascript:;&quot;</span> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;pngCss rotate&quot;</span>&gt;&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/a.html"><span class="kw2">a</span></a>&gt;&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/div.html"><span class="kw2">div</span></a>&gt;</span>
+	<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/div.html"><span class="kw2">div</span></a> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;box-body&quot;</span>&gt;</span>
+		// 弹窗主体
+	<span class="sc2">&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/div.html"><span class="kw2">div</span></a>&gt;</span>
+<span class="sc2">&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/div.html"><span class="kw2">div</span></a>&gt;</span></pre>
+
+</div>
+<!-- EDIT2 SECTION "引入文件：" [38-629] -->
+<h2 class="sectionedit3" id="js">JS：</h2>
+<div class="level2">
+<pre class="code javascript"><span class="co1">// 弹窗弹出</span>
+$<span class="br0">&#40;</span><span class="st0">'#rule_btn'</span><span class="br0">&#41;</span>.<span class="me1">click</span><span class="br0">&#40;</span><span class="kw1">function</span><span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+	ruleBox.<span class="me1">show</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+&nbsp;
+<span class="co1">// 弹窗定义</span>
+<span class="kw1">var</span> ruleBox <span class="sy0">=</span> $<span class="br0">&#40;</span><span class="st0">'#box-rule'</span><span class="br0">&#41;</span>.<span class="me1">box</span><span class="br0">&#40;</span><span class="br0">&#123;</span>
+	close_selector<span class="sy0">:</span> <span class="st0">'.box-close'</span><span class="sy0">,</span>
+	submit_selector<span class="sy0">:</span> <span class="st0">'.box-submit'</span><span class="sy0">,</span>
+	mask<span class="sy0">:</span> <span class="br0">&#123;</span>
+		opacity<span class="sy0">:</span> <span class="nu0">0.8</span>
+	<span class="br0">&#125;</span><span class="sy0">,</span>
+	init<span class="sy0">:</span> <span class="kw1">function</span><span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+		<span class="co1">// 初始化弹窗</span>
+	<span class="br0">&#125;</span><span class="sy0">,</span>
+	before<span class="sy0">:</span> <span class="kw1">function</span><span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+		<span class="co1">// 弹窗弹出前操作；return false 无法弹出</span>
+	<span class="br0">&#125;</span><span class="sy0">,</span>
+	after<span class="sy0">:</span> <span class="kw1">function</span><span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+		<span class="co1">// 弹窗弹出后操作</span>
+	<span class="br0">&#125;</span><span class="sy0">,</span>
+	submit<span class="sy0">:</span> <span class="kw1">function</span><span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+		<span class="co1">// 弹窗数据提交操作；return false 提交失败，弹窗不关闭</span>
+	<span class="br0">&#125;</span><span class="sy0">,</span>
+	close<span class="sy0">:</span> <span class="kw1">function</span><span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+		<span class="co1">// 弹窗关闭后操作</span>
+	<span class="br0">&#125;</span>
+<span class="br0">&#125;</span><span class="br0">&#41;</span><span class="sy0">;</span></pre>
+
+</div>
+<!-- EDIT3 SECTION "JS：" [630-1226] -->
+<h2 class="sectionedit4" id="css">CSS：</h2>
+<div class="level2">
+<pre class="code css"><span class="coMULTI">/* 弹窗 */</span>
+<span class="re1">.box</span> <span class="br0">&#123;</span> <span class="kw1">display</span><span class="sy0">:</span><span class="kw2">none</span><span class="sy0">;</span> <span class="kw1">position</span><span class="sy0">:</span><span class="kw2">absolute</span><span class="sy0">;</span> <span class="kw1">width</span><span class="sy0">:</span><span class="re3">600px</span><span class="sy0">;</span> <span class="kw1">height</span><span class="sy0">:</span><span class="re3">300px</span><span class="sy0">;</span> <span class="kw1">z-index</span><span class="sy0">:</span><span class="nu0">300</span><span class="sy0">;</span> <span class="br0">&#125;</span>
+<span class="re1">.box</span> <span class="re1">.box-close</span> <span class="br0">&#123;</span> <span class="kw1">position</span><span class="sy0">:</span><span class="kw2">absolute</span><span class="sy0">;</span> <span class="kw1">right</span><span class="sy0">:</span><span class="re3">10px</span><span class="sy0">;</span> <span class="kw1">top</span><span class="sy0">:</span><span class="re3">20px</span><span class="sy0">;</span> <span class="kw1">width</span><span class="sy0">:</span><span class="re3">24px</span><span class="sy0">;</span> <span class="kw1">height</span><span class="sy0">:</span><span class="re3">24px</span><span class="sy0">;</span> <span class="kw1">overflow</span><span class="sy0">:</span><span class="kw2">hidden</span><span class="sy0">;</span> <span class="br0">&#125;</span>
+<span class="re1">.box</span> <span class="re1">.box-close</span> a <span class="br0">&#123;</span> <span class="kw1">display</span><span class="sy0">:</span><span class="kw2">block</span><span class="sy0">;</span> <span class="kw1">width</span><span class="sy0">:</span><span class="re3">20px</span><span class="sy0">;</span> <span class="kw1">height</span><span class="sy0">:</span><span class="re3">20px</span><span class="sy0">;</span> <span class="kw1">margin</span><span class="sy0">:</span><span class="re3">2px</span> <span class="kw2">auto</span> <span class="nu0">0</span><span class="sy0">;</span> <span class="br0">&#125;</span>
+<span class="re1">.box</span> <span class="re1">.box-body</span> <span class="br0">&#123;</span> <span class="kw1">padding</span><span class="sy0">:</span> <span class="re3">20px</span> <span class="re3">10px</span><span class="sy0">;</span> <span class="br0">&#125;</span>
+<span class="re1">.box</span> <span class="re1">.box-submit</span> <span class="br0">&#123;</span> <span class="kw1">position</span><span class="sy0">:</span><span class="kw2">absolute</span><span class="sy0">;</span> <span class="kw1">right</span><span class="sy0">:</span><span class="re3">60px</span><span class="sy0">;</span> <span class="kw1">bottom</span><span class="sy0">:</span><span class="re3">20px</span><span class="sy0">;</span> <span class="kw1">width</span><span class="sy0">:</span><span class="re3">100px</span><span class="sy0">;</span> <span class="kw1">height</span><span class="sy0">:</span><span class="re3">30px</span><span class="sy0">;</span> <span class="br0">&#125;</span></pre>
+<pre class="code css"><span class="re0">#box-rule</span> <span class="br0">&#123;</span> <span class="kw1">width</span><span class="sy0">:</span><span class="re3">400px</span><span class="sy0">;</span> <span class="kw1">height</span><span class="sy0">:</span><span class="re3">600px</span><span class="sy0">;</span> <span class="kw1">background-image</span><span class="sy0">:</span><span class="kw2">url</span><span class="br0">&#40;</span><span class="co2">images/box-rule.png</span><span class="br0">&#41;</span><span class="sy0">;</span> <span class="br0">&#125;</span>
+<span class="re0">#box-rule</span> <span class="re1">.box-close</span> <span class="br0">&#123;</span> <span class="kw1">right</span><span class="sy0">:</span><span class="re3">-30px</span><span class="sy0">;</span> <span class="kw1">top</span><span class="sy0">:</span><span class="nu0">0</span><span class="sy0">;</span> <span class="kw1">width</span><span class="sy0">:</span><span class="re3">30px</span><span class="sy0">;</span> <span class="kw1">height</span><span class="sy0">:</span><span class="re3">30px</span><span class="sy0">;</span> <span class="br0">&#125;</span>
+<span class="re0">#box-rule</span> <span class="re1">.box-close</span> a <span class="br0">&#123;</span> <span class="kw1">width</span><span class="sy0">:</span><span class="re3">17px</span><span class="sy0">;</span> <span class="kw1">height</span><span class="sy0">:</span><span class="re3">17px</span><span class="sy0">;</span> <span class="kw1">background-image</span><span class="sy0">:</span><span class="kw2">url</span><span class="br0">&#40;</span><span class="co2">images/box-close.png</span><span class="br0">&#41;</span><span class="sy0">;</span> <span class="br0">&#125;</span>
+<span class="re0">#box-rule</span> <span class="re1">.box-submit</span> <span class="br0">&#123;</span> <span class="kw1">right</span><span class="sy0">:</span><span class="re3">60px</span><span class="sy0">;</span> <span class="kw1">bottom</span><span class="sy0">:</span><span class="re3">20px</span><span class="sy0">;</span> <span class="kw1">width</span><span class="sy0">:</span><span class="re3">100px</span><span class="sy0">;</span> <span class="kw1">height</span><span class="sy0">:</span><span class="re3">30px</span><span class="sy0">;</span> <span class="kw1">background-image</span><span class="sy0">:</span><span class="kw2">url</span><span class="br0">&#40;</span><span class="co2">images/box-submit.png</span><span class="br0">&#41;</span><span class="sy0">;</span> <span class="br0">&#125;</span>
+<span class="re0">#box-rule</span> <span class="re1">.box-body</span> <span class="br0">&#123;</span> <span class="kw1">padding</span><span class="sy0">:</span><span class="re3">100px</span> <span class="re3">50px</span> <span class="nu0">0</span><span class="sy0">;</span> <span class="br0">&#125;</span></pre>
+
+</div>
+<!-- EDIT4 SECTION "CSS：" [1227-2111] -->
+<h2 class="sectionedit5" id="进阶用法">进阶用法：</h2>
+<div class="level2">
+
+</div>
+<!-- EDIT5 SECTION "进阶用法：" [2112-2140] -->
+<h3 class="sectionedit6" id="弹出前判断登录_加载内容等操作">弹出前判断登录、加载内容等操作</h3>
+<div class="level3">
+<pre class="code javascript"><span class="kw1">var</span> signupBox <span class="sy0">=</span> $<span class="br0">&#40;</span><span class="st0">'#box-signup'</span><span class="br0">&#41;</span>.<span class="me1">box</span><span class="br0">&#40;</span><span class="br0">&#123;</span>
+	before<span class="sy0">:</span> <span class="kw1">function</span><span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+		<span class="kw1">if</span> <span class="br0">&#40;</span><span class="sy0">!</span>checkLogin<span class="br0">&#40;</span><span class="kw2">false</span><span class="br0">&#41;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+			<span class="kw1">return</span> <span class="kw2">false</span><span class="sy0">;</span>	<span class="co1">// 阻止弹出</span>
+		<span class="br0">&#125;</span><span class="kw1">else</span><span class="br0">&#123;</span>
+			checkLogin<span class="br0">&#40;</span><span class="kw1">function</span><span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+				<span class="co1">// ...</span>
+			<span class="br0">&#125;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+		<span class="br0">&#125;</span>
+	<span class="br0">&#125;</span>
+<span class="br0">&#125;</span><span class="br0">&#41;</span><span class="sy0">;</span></pre>
+
+</div>
+<!-- EDIT6 SECTION "弹出前判断登录、加载内容等操作" [2141-2413] -->
+<h3 class="sectionedit7" id="先定义弹窗_再增加方法参数">先定义弹窗，再增加方法参数</h3>
+<div class="level3">
+<pre class="code javascript"><span class="co1">// 先定义弹窗</span>
+<span class="kw1">var</span> ruleBox <span class="sy0">=</span> $<span class="br0">&#40;</span><span class="st0">'#box-rule'</span><span class="br0">&#41;</span>.<span class="me1">box</span><span class="br0">&#40;</span><span class="br0">&#123;</span>
+	close<span class="sy0">:</span> <span class="kw1">function</span><span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+		<span class="co1">// 清除数据</span>
+		$<span class="br0">&#40;</span><span class="kw1">this</span><span class="br0">&#41;</span>.<span class="me1">removeData</span><span class="br0">&#40;</span><span class="st0">'xxx_id'</span><span class="br0">&#41;</span><span class="sy0">;</span>
+	<span class="br0">&#125;</span>
+<span class="br0">&#125;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="co1">// 之后补充弹窗的before操作函数</span>
+$<span class="br0">&#40;</span><span class="st0">'#rule_btn'</span><span class="br0">&#41;</span>.<span class="me1">click</span><span class="br0">&#40;</span><span class="kw1">function</span><span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+	<span class="co1">// 弹出前填充数据</span>
+	ruleBox.<span class="me1">before</span><span class="br0">&#40;</span><span class="kw1">function</span><span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+		<span class="co1">// 加载数据</span>
+		$<span class="br0">&#40;</span><span class="kw1">this</span><span class="br0">&#41;</span>.<span class="me1">data</span><span class="br0">&#40;</span><span class="st0">'xxx_id'</span><span class="sy0">,</span> <span class="st0">'123'</span><span class="br0">&#41;</span><span class="sy0">;</span>
+		<span class="co1">// 填入数据</span>
+		$<span class="br0">&#40;</span><span class="kw1">this</span><span class="br0">&#41;</span>.<span class="me1">find</span><span class="br0">&#40;</span><span class="st0">'input'</span><span class="br0">&#41;</span>.<span class="me1">val</span><span class="br0">&#40;</span>ruleBox.<span class="me1">data</span><span class="br0">&#40;</span><span class="st0">'xxx_id'</span><span class="br0">&#41;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+	<span class="br0">&#125;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+	<span class="co1">// 弹出</span>
+	ruleBox.<span class="me1">show</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span><span class="br0">&#41;</span><span class="sy0">;</span></pre>
+
+<p>
+注：弹窗支持before、after、close、submit的函数传入<code>ruleBox.before(function(){…})</code>，及直接运行<code>ruleBox.before()</code>
+注：init、before、after、close、submit函数参数内可用<code>this</code>代表弹窗DOM Element
+</p>
+
+</div>
+<!-- EDIT7 SECTION "先定义弹窗，再增加方法参数" [2414-] -->

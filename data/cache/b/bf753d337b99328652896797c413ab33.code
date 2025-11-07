@@ -1,0 +1,14 @@
+{* ***输出导航式栏目（不包括内容式栏目）*** *}
+<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/ul.html"><span class="kw2">ul</span></a> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;clearfix&quot;</span>&gt;</span>
+	{foreach name=mIndexCats_nav item=mIndexCat from=$mIndexCats}
+	{* 仅输出类型为外链的栏目（包括5留言板、7微信、8直达号功能） *}
+	{if $mIndexCat.type gt 4}
+	<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/li.html"><span class="kw2">li</span></a> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;fl&quot;</span>&gt;&lt;<a target="_blank" href="http://december.com/html/4/element/a.html"><span class="kw2">a</span></a> <span class="kw3">href</span><span class="sy0">=</span><span class="st0">&quot;{$mIndexCat.link}&quot;</span>&gt;&lt;<a target="_blank" href="http://december.com/html/4/element/img.html"><span class="kw2">img</span></a> <span class="kw3">src</span><span class="sy0">=</span><span class="st0">&quot;{$mIndexCat.image}&quot;</span> <span class="kw3">alt</span><span class="sy0">=</span><span class="st0">&quot;{$mIndexCat.name}&quot;</span> <span class="sy0">/</span>&gt;&lt;<a target="_blank" href="http://december.com/html/4/element/h3.html"><span class="kw2">h3</span></a> <span class="kw3">class</span><span class="sy0">=</span><span class="st0">&quot;tc&quot;</span>&gt;</span>{$mIndexCat.name}<span class="sc2">&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/h3.html"><span class="kw2">h3</span></a>&gt;&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/a.html"><span class="kw2">a</span></a>&gt;&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/li.html"><span class="kw2">li</span></a>&gt;</span>
+	{/if}
+	{/foreach}
+<span class="sc2">&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/ul.html"><span class="kw2">ul</span></a>&gt;</span>
+&nbsp;
+{* ***输出内容式栏目*** *}
+{* 输出type为1234的栏目展现HTML，且1234每个都须定义 *}
+...
+<span class="sc-1">&lt;!-- 同上方代码段 --&gt;</span>

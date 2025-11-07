@@ -1,0 +1,12 @@
+a:2:{s:7:"current";a:9:{s:4:"date";a:2:{s:7:"created";i:1431068419;s:8:"modified";i:1443409518;}s:7:"creator";s:9:"邱沼懿";s:4:"user";s:1:"e";s:11:"last_change";b:0;s:11:"contributor";a:2:{s:1:"e";s:9:"邱沼懿";s:7:"lucues1";s:6:"xihong";}s:5:"title";s:45:"左侧栏目列表（同级子栏目列表）";s:11:"description";a:2:{s:15:"tableofcontents";a:3:{i:0;a:4:{s:3:"hid";s:40:"左侧栏目列表_同级子栏目列表";s:5:"title";s:45:"左侧栏目列表（同级子栏目列表）";s:4:"type";s:2:"ul";s:5:"level";i:1;}i:1;a:4:{s:3:"hid";s:30:"实现只显示到二级栏目";s:5:"title";s:30:"实现只显示到二级栏目";s:4:"type";s:2:"ul";s:5:"level";i:2;}i:2;a:4:{s:3:"hid";s:27:"实现显示到三级栏目";s:5:"title";s:27:"实现显示到三级栏目";s:4:"type";s:2:"ul";s:5:"level";i:2;}}s:8:"abstract";s:334:"左侧栏目列表（同级子栏目列表）
+
+[点此下载模块：_pagenavs.rar]
+[点此下载模块：_subclass.rar]
+根据模板的设计情况，选择使用二级或三级列表模块。
+subclass里面的文件subclass.js 要在index页面导入
+
+实现只显示到二级栏目
+
+_pagenavs_sub2.html
+
+实现显示到三级栏目";}s:8:"relation";a:2:{s:5:"media";a:2:{s:33:"ued:template:modules:pagenavs.rar";b:1;s:33:"ued:template:modules:subclass.rar";b:1;}s:10:"firstimage";s:0:"";}s:8:"internal";a:2:{s:5:"cache";b:1;s:3:"toc";b:1;}}s:10:"persistent";a:5:{s:4:"date";a:2:{s:7:"created";i:1431068419;s:8:"modified";i:1443409518;}s:7:"creator";s:9:"邱沼懿";s:4:"user";s:1:"e";s:11:"last_change";b:0;s:11:"contributor";a:2:{s:1:"e";s:9:"邱沼懿";s:7:"lucues1";s:6:"xihong";}}}

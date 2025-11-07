@@ -1,0 +1,8 @@
+====== 图片滚动条插件 ======
+
+引用方法
+
+	$("#tt").jscroll();
+
+
+DEMO地址：http://js.alixixi.com/demo/656/

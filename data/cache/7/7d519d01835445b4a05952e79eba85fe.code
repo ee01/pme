@@ -1,0 +1,36 @@
+<span class="br0">&#123;</span>
+	<span class="st0">&quot;nav1&quot;</span><span class="sy0">:</span> <span class="br0">&#123;</span>
+		<span class="st0">&quot;value&quot;</span><span class="sy0">:</span> <span class="br0">&#123;</span><span class="br0">&#125;</span><span class="sy0">,</span>
+		<span class="st0">&quot;description&quot;</span><span class="sy0">:</span> <span class="st0">&quot;快速导航链接&quot;</span><span class="sy0">,</span>
+		<span class="st0">&quot;type&quot;</span><span class="sy0">:</span> <span class="st0">&quot;nav&quot;</span><span class="sy0">,</span>
+		<span class="st0">&quot;config&quot;</span><span class="sy0">:</span> <span class="br0">&#123;</span>
+			<span class="st0">&quot;filter&quot;</span><span class="sy0">:</span> <span class="st0">&quot;ALL&quot;</span><span class="sy0">,</span>
+			<span class="st0">&quot;nav_width&quot;</span><span class="sy0">:</span> <span class="nu0">200</span><span class="sy0">,</span>
+			<span class="st0">&quot;nav_height&quot;</span><span class="sy0">:</span> <span class="nu0">200</span><span class="sy0">,</span>
+			<span class="st0">&quot;width&quot;</span><span class="sy0">:</span> <span class="nu0">200</span><span class="sy0">,</span>
+			<span class="st0">&quot;height&quot;</span><span class="sy0">:</span> <span class="nu0">120</span>
+		<span class="br0">&#125;</span>
+	<span class="br0">&#125;</span>
+<span class="br0">&#125;</span>
+&nbsp;
+__config：__ 
+  <span class="sy0">*</span> filter：筛选栏目类型。默认值：<span class="st0">&quot;ALL&quot;</span>（大写）代表筛选所有栏目。也可填写<span class="st0">&quot;list&quot;</span>仅允许列表型栏目，或者<span class="st0">&quot;list,page&quot;</span>筛选多种类型栏目。
+  <span class="sy0">*</span> nav_width：栏目图片宽度（如有引用栏目图片时填写）
+  <span class="sy0">*</span> nav_height：栏目图片高度（如有引用栏目图片时填写）
+  <span class="sy0">*</span> width：列表数据图片宽度（如有引用列表数据图片时填写）
+  <span class="sy0">*</span> height：列表数据图片高度（如有引用列表数据图片时填写）
+&nbsp;
+如果是filter筛选list型，是图片列表必须定义高宽：
+<span class="sy0">&lt;</span>file javascript index.<span class="me1">json</span><span class="sy0">&gt;</span>
+<span class="br0">&#123;</span>
+	<span class="st0">&quot;list1&quot;</span><span class="sy0">:</span> <span class="br0">&#123;</span>
+		<span class="st0">&quot;value&quot;</span><span class="sy0">:</span> <span class="br0">&#123;</span><span class="br0">&#125;</span><span class="sy0">,</span>
+		<span class="st0">&quot;description&quot;</span><span class="sy0">:</span> <span class="st0">&quot;快速导航链接&quot;</span><span class="sy0">,</span>
+		<span class="st0">&quot;type&quot;</span><span class="sy0">:</span> <span class="st0">&quot;nav&quot;</span><span class="sy0">,</span>
+		<span class="st0">&quot;config&quot;</span><span class="sy0">:</span> <span class="br0">&#123;</span>
+			<span class="st0">&quot;filter&quot;</span><span class="sy0">:</span> <span class="st0">&quot;list&quot;</span><span class="sy0">,</span>
+			<span class="st0">&quot;width&quot;</span><span class="sy0">:</span> <span class="nu0">200</span><span class="sy0">,</span>
+			<span class="st0">&quot;height&quot;</span><span class="sy0">:</span> <span class="nu0">120</span>
+		<span class="br0">&#125;</span>
+	<span class="br0">&#125;</span>
+<span class="br0">&#125;</span>

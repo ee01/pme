@@ -1,0 +1,38 @@
+====== =公共引用资源= ======
+
+====== CSS公共资源 ======
+
+  * [[ued:resource:global|global.css]] 公共CSS样式表
+  * [[ued:resource:css3pack|css3pack.css]] CSS3 特效封装
+  * [[ued:resource:imgautosize|图片自适应总结]]
+
+====== JS公共资源 ======
+
+===== 弹窗类 =====
+
+  * [[ued:resource:box|box]] 自定义弹窗（推荐）
+  * [[ued:resource:dialog|dialog]] 弹出对话框插件
+  * [[ued:resource:mask|mask]] 弹窗遮罩以及按钮Loading
+
+===== 消息提示类 =====
+
+  * [[ued:resource:dialog|dialog]] 弹出对话框插件
+
+===== 图片展示类 =====
+
+  * [[ued:resource:smallslider|smallslider]] 焦点图 图片轮播插件
+  * [[ued:resource:jcarousellite|jquery.jcarousellite.js]] 简单图片横向（纵向）滚动
+  * [[ued:resource:slidesjs|SlidesJS]] 适合既带左右操作又带页码操作的版块/图片切换
+
+===== 提交上传类 =====
+
+  * [[ued:resource:crossajax|crossajax]] 跨域采用POST提交数据
+  * [[ued:resource:uploadify|uploadify]] FLASH多文件选择上传
+
+===== 其他类 =====
+
+  * [[ued:resource:loading|loading]] Loading操作
+  * [[ued:resource:pagination|jquery.pagination.js]] 翻页插件
+  * [[ued:resource:spasticnav|spasticNav.js]] 导航滑动滚动
+  * [[ued:resource:jscroll|jscroll.js]] 滚动条插件
+  * [[ued:resource:killie|killie]] 禁止低版本浏览器

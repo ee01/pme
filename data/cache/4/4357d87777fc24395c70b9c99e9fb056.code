@@ -1,0 +1,6 @@
+$.<span class="me1">preLoadGUI</span><span class="br0">&#40;</span><span class="br0">&#123;</span>load<span class="sy0">:</span> <span class="br0">&#91;</span>
+	<span class="br0">&#91;</span><span class="st0">'images/make-title.png'</span><span class="sy0">,</span> <span class="kw2">true</span><span class="br0">&#93;</span><span class="sy0">,</span>
+	<span class="br0">&#91;</span><span class="st0">'images/flipcard-title.jpg'</span><span class="sy0">,</span> <span class="kw2">true</span><span class="br0">&#93;</span><span class="sy0">,</span>
+	<span class="br0">&#91;</span><span class="st0">'images/people-title.jpg'</span><span class="sy0">,</span> <span class="kw2">true</span><span class="br0">&#93;</span><span class="sy0">,</span>
+	<span class="br0">&#91;</span><span class="st0">'images/top.jpg'</span><span class="sy0">,</span> <span class="kw2">true</span><span class="br0">&#93;</span>
+<span class="br0">&#93;</span><span class="br0">&#125;</span><span class="br0">&#41;</span><span class="sy0">;</span>

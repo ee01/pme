@@ -1,0 +1,151 @@
+====== CSS3特效封装 ======
+
+===== 引入文件 =====
+
+	<link type="text/css" rel="stylesheet" href="http://common.mn.sina.com.cn/public/resource/css/css3pack.css" />
+
+
+===== 旋转（多用于关闭按钮）： =====
+
+class：
+	rotate
+
+===== 浮动放大（多用于提交按钮） =====
+
+class：
+	largen
+
+===== 字内阴影（大字适合） =====
+
+class：
+	innerShadowGrey
+	innerShadowWhite
+
+HTML：
+	<div class="innerShadowGrey"><span>TEST</span></div>
+
+===== 3D翻牌 - 正反互换 =====
+
+==== HTML： ====
+
+横向翻牌：
+<code html>
+<dl class="card3d">
+	<dd class="front"><!-- 正面内容 --></dd>
+	<dd class="back"><!-- 背面内容 --></dd>
+</dl>
+</code>
+纵向翻牌：
+<code html>
+<dl class="card3d card3d-down">
+	<dd class="front"><!-- 正面内容 --></dd>
+	<dd class="back"><!-- 背面内容 --></dd>
+</dl>
+</code>
+注：可用div，仅需class结构对应；
+　　card3d有relative值，front、back有absolute值。
+
+==== CSS： ====
+
+<code css>
+
+/* 牌面大小 */
+.card3d { width:120px; height:120px; }
+/* 翻牌速度 */
+.card3d .front,
+.card3d .back { -webkit-transition-duration:.8s; -moz-transition-duration:.8s; transition-duration:.8s; }
+
+</code>
+
+<code css>
+
+/* 弹窗上翻牌需以下z-index */
+.card3d .front { z-index:310; }
+.card3d .back { z-index:308; }
+.card3d.flipped .front { z-index:308; }
+.card3d.flipped .back { z-index:310; }
+
+</code>
+==== JS： ====
+
+<code javascript>
+
+$('.card3d').click(function() {
+	$(this).toggleClass('flipped');
+});
+
+</code>
+
+如果卡片无背景色透明，加入以下代码兼容低版本chrome的''backface-visibility''无效：
+<code javascript>
+
+(function(){
+	var mth;
+	if((mth = navigator.userAgent.match(/Chrome\/([0-9]+)/i)) && mth[1] < 25){
+		$('head').append('<style type="text/css">.card3d .front {display:block;}.card3d .back {display:none;}.card3d.flipped .front {display:none;}.card3d.flipped .back {display:block;}</style>');
+	}
+})();
+
+</code>
+===== 3D翻牌 - 单面快速旋转 =====
+
+==== HTML： ====
+
+<code html>
+<dl class="card3dfast">
+	<dd class="cardflipped"><!-- 翻转内容 --></dd>
+</dl>
+</code>
+==== CSS： ====
+
+添加fastflip样式即可实现翻转效果
+或使用以下JS来翻转卡片
+
+自定义效果：
+
+<code css>
+
+.card3dfast {
+	-webkit-perspective: 200;
+	perspective: 200;
+	-webkit-perspective-origin: 50% -100%;
+	perspective-origin: 50% -100%;
+}
+	.card3dfast .fastflip {
+		-webkit-transform-style: preserve-3d;
+		-webkit-animation: flipcard 1000ms ease-out;
+		-moz-animation: flipcard 1000ms ease-out;
+		animation: flipcard 1000ms ease-out;
+	}
+
+</code>
+==== JS： ====
+
+<code javascript>
+
+// JS翻转卡片+Callback
+var flipCard = function (selectedCard, callback){
+	$(selectedCard).addClass("fastflip");
+	
+	var style = document.body.style;
+	var time = 0; 
+	//webkit、Firefox下执行动画
+	if(style.webkitAnimation !== undefined || style.MozAnimation !== undefined){
+		time = 1001;
+	}
+	setTimeout(doEndFlip,time);
+	
+	function doEndFlip(){
+		$(selectedCard).removeClass("fastflip");
+		typeof(callback) === 'function' && callback.call($(selectedCard).get(0));
+	}
+};
+
+$('dl').click(function() {
+	flipCard($(".act_cards .selected"),function(){
+		$(this).find("img").show();
+	});
+	return false;
+});
+
+</code>

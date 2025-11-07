@@ -1,0 +1,7 @@
+&lt;!-- 通过Smarty变量覆盖CSS文件中的默认值 --&gt;
+&lt;style&gt;
+	.logo { background-image:url({$header.logo.image}); }
+&lt;/style&gt;
+&lt;header&gt;
+	&lt;div class=&quot;logo&quot;&gt;&lt;a href=&quot;javascript:;&quot;&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;/header&gt;

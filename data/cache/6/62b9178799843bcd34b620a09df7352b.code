@@ -1,0 +1,8 @@
+{foreach name=mIndexCats_list item=mIndexCat from=$mIndexCats}
+{if $mIndexCat.type eq 1 or $mIndexCat.type eq 3}
+<span class="sc-1">&lt;!-- 输出此news.html的列表HTML代码块 --&gt;</span>
+{elseif $mIndexCat.type eq 2}
+<span class="sc-1">&lt;!-- 输出此pro.html的列表HTML代码块 --&gt;</span>
+{elseif $mIndexCat.type eq 4}
+<span class="sc-1">&lt;!-- 输出此about.html的展现HTML代码块 --&gt;</span>
+{/if}

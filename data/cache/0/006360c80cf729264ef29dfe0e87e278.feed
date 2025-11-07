@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- generator="FeedCreator 1.7.2-ppt DokuWiki" -->
+<?xml-stylesheet href="http://pme.eexx.me/lib/exe/css.php?s=feed" type="text/css"?>
+<rdf:RDF
+    xmlns="http://purl.org/rss/1.0/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <channel rdf:about="http://pme.eexx.me/feed.php">
+        <title>百度产品部门 知识库</title>
+        <description></description>
+        <link>http://pme.eexx.me/</link>
+        <image rdf:resource="http://pme.eexx.me/lib/tpl/vector/images/favicon.ico" />
+       <dc:date>2018-05-17T01:27:42+00:00</dc:date>
+        <items>
+            <rdf:Seq>
+                <rdf:li rdf:resource="http://pme.eexx.me/doku.php?id=ued:template:global&amp;rev=1470279640&amp;do=diff"/>
+                <rdf:li rdf:resource="http://pme.eexx.me/doku.php?id=ued:template:mindex&amp;rev=1454531070&amp;do=diff"/>
+                <rdf:li rdf:resource="http://pme.eexx.me/doku.php?id=ued:template:notes&amp;rev=1469521378&amp;do=diff"/>
+                <rdf:li rdf:resource="http://pme.eexx.me/doku.php?id=ued:template:json&amp;rev=1477291081&amp;do=diff"/>
+            </rdf:Seq>
+        </items>
+    </channel>
+    <image rdf:about="http://pme.eexx.me/lib/tpl/vector/images/favicon.ico">
+        <title>百度产品部门 知识库</title>
+        <link>http://pme.eexx.me/</link>
+        <url>http://pme.eexx.me/lib/tpl/vector/images/favicon.ico</url>
+    </image>
+    <item rdf:about="http://pme.eexx.me/doku.php?id=ued:template:global&amp;rev=1470279640&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-08-04T03:00:40+00:00</dc:date>
+        <title>ued:template:global</title>
+        <link>http://pme.eexx.me/doku.php?id=ued:template:global&amp;rev=1470279640&amp;do=diff</link>
+        <description>公共变量
+
+切图过程中打开控制台，刷新页面即可输出出所有数据变量。
+
+--- --- --- --- --- --- --- --- ---
+
+{include}：引入文件
+
+加入文件使用include引用路径,注意起步从“./”开始，即相对于当前目录开始，如：</description>
+    </item>
+    <item rdf:about="http://pme.eexx.me/doku.php?id=ued:template:mindex&amp;rev=1454531070&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-02-03T20:24:30+00:00</dc:date>
+        <title>ued:template:mindex</title>
+        <link>http://pme.eexx.me/doku.php?id=ued:template:mindex&amp;rev=1454531070&amp;do=diff</link>
+        <description>变量语法查询：index.html（手机）
+
+
+
+变量语法查询：index.html（PC）
+
+
+
+如果几乎每个页面都包含①②③，可以将①②③放入_header.html文件中，利用include方式引入到index.html文件中；
+
+	*  ①{$logo} ：网站logo
+	*  ②
+
+②需要文件配合，因为轮滚图的默认图片需要在</description>
+    </item>
+    <item rdf:about="http://pme.eexx.me/doku.php?id=ued:template:notes&amp;rev=1469521378&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-07-26T08:22:58+00:00</dc:date>
+        <title>ued:template:notes</title>
+        <link>http://pme.eexx.me/doku.php?id=ued:template:notes&amp;rev=1469521378&amp;do=diff</link>
+        <description>统一平台模板开发常见问题与注意事项
+
+	*  模板中不要出现任何静态的文字，如2015-01-28。除非是一些more确定之类按钮的名称。如需使用，请在json中定义或使用系统变量，参见：JSON格式与数据变量定义
+	*  HTML文件中请勿包含任何JS代码，将其并入.js文件中调用</description>
+    </item>
+    <item rdf:about="http://pme.eexx.me/doku.php?id=ued:template:json&amp;rev=1477291081&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-10-24T06:38:01+00:00</dc:date>
+        <title>ued:template:json</title>
+        <link>http://pme.eexx.me/doku.php?id=ued:template:json&amp;rev=1477291081&amp;do=diff</link>
+        <description>JSON文件的语法与使用
+
+数据格式
+
+
+{
+	&quot;title&quot;: {
+		&quot;value&quot;: &quot;XXX企业&quot;,
+		&quot;description&quot;: &quot;顶部大标题&quot;,
+		&quot;type&quot;: &quot;text&quot;
+	}
+}
+
+
+每个数据都必须包含value、description和type项。
+
+description描述： 用来描述其在页面的位置，如“顶部轮滚图”“左侧公告”“中部第二个新闻列表”</description>
+    </item>
+</rdf:RDF>

@@ -1,0 +1,16 @@
+====== 导航栏：不固定个数自适宽度 ======
+
+无论后台添加了几个导航（一级栏目），都可以等分的排列在一起。
+
+{{:ued:template:modules:navs.rar|点此下载模块：_navs.rar}}
+
+**预览效果：**
+{{:ued:template:modules:pasted:20150429-143611.png}}
+{{:ued:template:modules:pasted:20150429-143629.png}}
+===== 通过百分比来实现 =====
+
+_navs_with_percent.html
+
+===== 通过table-cell来实现（IE7及以下不支持） =====
+
+_navs_with_tablecell.html

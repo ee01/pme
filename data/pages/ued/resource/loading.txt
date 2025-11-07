@@ -1,0 +1,157 @@
+====== Loading ======
+
+===== 数据载入loading =====
+
+==== HTML ====
+
+<code html>
+<ul>
+	<center><img src="http://minnan.sinaimg.cn/utils/images/loading_large.gif" /></center>
+</ul>
+</code>
+
+==== JS ====
+
+<code javascript>
+
+$.getJSON('http://...?callback=?', function(json) {
+	if (json.err == 0) {
+		var html_data = '';
+		$.each(json.data, function() {
+			html_data += // ...
+		});
+		$('ul').html('').append(html_data);
+	}
+});
+
+</code>
+
+===== 按钮提交loading =====
+
+参见：[[ued:resource:mask|mask(按钮)遮罩插件]]
+
+===== 页面载入loading =====
+
+引入文件：
+
+<code html>
+<body>
+
+<script type="text/javascript" src="http://common.mn.sina.com.cn/public/resource/lib/jquery.core.js"></script>
+<script type="text/javascript" src="http://common.mn.sina.com.cn/public/resource/lib/jquery.loader.js"></script></script>
+</code>
+
+注意：代码写在紧随''<body>''之后，可以一打开页面就显示loading界面！
+
+
+==== 简易用法 ====
+
+=== JS ===
+
+<code javascript>
+
+$.preLoadGUI({load: [
+	['images/make-title.png', true],
+	['images/flipcard-title.jpg', true],
+	['images/people-title.jpg', true],
+	['images/top.jpg', true]
+]});
+
+</code>
+
+==== 自定义Loading图 ====
+
+写在''<body>''之后
+
+=== JS ===
+
+<code html>
+
+<body>
+
+<!-- 开始 Loading... -->
+<script type="text/javascript" src="http://common.mn.sina.com.cn/public/resource/lib/jquery.core.js"></script>
+<script type="text/javascript" src="http://common.mn.sina.com.cn/public/resource/lib/jquery.loader.js"></script>
+<script type="text/javascript">
+// 载入进度
+var loads = [
+	['images/make-title.png', true],
+	['images/flipcard-title.jpg', true],
+	['images/people-title.jpg', true],
+	['images/top.jpg', true]
+];
+$('<div></div>').attr('id', 'preLoadGUIBeta4-1').appendTo('body');	// 阻止原有Loader
+$('<div></div>').attr({'id':'preLoadGUIBeta4-1loader', 'rel':loads.length, 'loaded':0}).appendTo('body');	// 触发callbackEnd
+$('<div></div>').attr('id', 'preLoad').css({
+	width: '100%',
+	height: '100%',
+	backgroundColor: '#BBB',
+	zIndex: 99999999,
+	position: 'fixed',
+	opacity: 1,
+	left: 0,
+	top: 0
+}).appendTo('body');
+$('<div></div>').attr({'id':'preLoader', 'rel':loads.length, 'loaded':0}).appendTo('body').css({
+	left: ($(window).width() - $('#preLoader').width())/2,
+	top: ($(window).height() - $('#preLoader').height())/3
+}).append('<div class="loader"></div>').append('<div class="loader-swf"><object width="100%" height="100%" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,29,0" width="680" height="150">\n\
+													<param name="movie" value="images/bubble.swf">\n\
+													<param name="menu" value="false">\n\
+													<param name="quality" value="high">\n\
+													<param name="wmode" value="transparent">\n\
+													<embed src="images/bubble.swf" width="100%" height="100%" quality="high" wmode="transparent" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash"></embed>\n\
+												</object></div>');
+$.preLoadGUI({
+	load: loads,
+	callbackEach: function(item) {
+		var loaded = parseInt($('#preLoader').attr('loaded')) || 0,
+			rel = parseInt($('#preLoader').attr('rel'));
+		$('#preLoader').attr('loaded', ++loaded);
+		$('#preLoader .loader').height(loaded / rel * $('#preLoader').height());
+	},
+	callbackEnd: function() {
+		$('#preLoad, #preLoader').fadeOut();
+	}
+});
+</script>
+<!-- 结束 Loading... -->
+
+$G{厦门站频道顶部导航共用}
+
+</code>
+
+=== CSS ===
+
+<code css>
+
+#preLoader {
+	position: fixed;
+	top: 10%;
+	left: 40%;
+	width: 142px;
+	height: 500px;
+	background: url(images/loader-bottle.png) 0 bottom no-repeat;
+	z-index: 999999999;
+}
+	#preLoader .loader {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 142px;
+		height: 0;
+		background: url(images/loader-bottle.png) -142px bottom no-repeat;
+	}
+	#preLoader .loader-swf {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 142px;
+		height: 210px;
+	}
+
+</code>
+
+==== Document ====
+
+https://code.google.com/p/jquery-preloader/wiki/HowToUse

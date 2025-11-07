@@ -1,0 +1,38 @@
+====== 现有资料 ======
+
+
+===== 1.轻应用解释文档 =====
+
+http://developer.baidu.com/wiki/index.php?title=docs/lightapp
+
+===== 2.直达号解释文档 =====
+
+http://developer.baidu.com/wiki/index.php?title=docs/direct
+
+3.轻应用接入一点小资料（轻应用接入文档.pdf）上传不上，请到 链接: http://pan.baidu.com/s/1i0naY 密码: 6osn
+
+4.直达号一点小资料（直达号接入指南.pdf）   {{:zhida:直达号接入指南.pdf|}}
+
+5.一个百度的一个签名算法，觉得还可以的，针对有份报告（订单接口文档/用户在线登记预约后线上支付（v1.0.0）.docx）{{:zhida:订单接口文档.rar|}}一份比较坑的报告，真实可靠目前验证还未通过。看过去，其实四份报告是一样的。
+URI参数签名算法
+http://www.cnblogs.com/taoweiji/p/3496697.html
+
+6.github上一个百度自己传上去的一个wiki，我觉得可以参照
+https://github.com/evangelist-baidu/baidu_login_pay
+上面的第5条其中有个参数sign值，传说中的签名就是我从那边模拟过来的。。
+
+7.一个百度账号登陆 DEMO（login_qianbao_pay.zip）  {{:zhida:login_qianbao_pay.zip|}}
+
+8.网上弄下来的php,oauth  demo资料（PHP-SDK-1.0.rar）  {{:zhida:php-sdk-1.0.rar|}}
+其他资料请移步
+http://developer.baidu.com/wiki/index.php?title=docs/oauth/showcase
+
+9.资料就是轻应用里面的能力》文档，一个需要穿墙才能拿到的资料api（API 5.3 - 轻应用文档 - Clouda_files.zip）{{:zhida:api_5.3_-_轻应用文档_-_clouda_files.zip|}}  ，域名 http://cloudajs.org/lightapp/docs/api#h3_13
+
+10.可以js登录的百度。 http://developer.baidu.com/wiki/index.php?title=%E5%B8%AE%E5%8A%A9%E6%96%87%E6%A1%A3%E9%A6%96%E9%A1%B5/%E7%99%BE%E5%BA%A6%E5%B8%90%E5%8F%B7%E8%BF%9E%E6%8E%A5/connect_js_2.0%E6%96%87%E6%A1%A3
+
+11.轻应用的一些接口  http://clouda.baidu.com/blendapi/cloud/api_document#account  已测试。。目测能用
+
+12.好东西 问答服务：http://developer.baidu.com/wiki/index.php?title=%E5%B8%AE%E5%8A%A9%E6%96%87%E6%A1%A3%E9%A6%96%E9%A1%B5/%E7%99%BE%E5%BA%A6%E8%B4%A6%E5%8F%B7%E8%BF%9E%E6%8E%A5/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98FAQ
+
+13。也是好东西  https://github.com/Clouda-team

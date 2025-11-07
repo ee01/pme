@@ -1,0 +1,9 @@
+====== 手机端页面转场效果 ======
+
+首先可以阅读以下这篇文章：
+http://www.th7.cn/web/html-css/201309/13054.shtml
+
+===== 插件代码下载 =====
+
+  * [[http://pme/code/模块/PageSlider 20140721.zip|jQuery版本]]
+  * [[http://pme/code/模块/PageSlider Zepto 20140721.zip|Zepto版本]] //推荐// （[[http://pme/code/模块/Zepto.zip|Zepto框架下载]]）

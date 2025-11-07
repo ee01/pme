@@ -1,0 +1,7 @@
+a:2:{s:7:"current";a:9:{s:4:"date";a:2:{s:7:"created";i:1413439523;s:8:"modified";i:1421395091;}s:7:"creator";s:9:"邱沼懿";s:4:"user";s:1:"e";s:11:"last_change";b:0;s:11:"contributor";a:1:{s:1:"e";s:9:"邱沼懿";}s:5:"title";s:17:"FLASH上传文件";s:11:"description";a:2:{s:15:"tableofcontents";a:4:{i:0;a:4:{s:3:"hid";s:17:"flash上传文件";s:5:"title";s:17:"FLASH上传文件";s:4:"type";s:2:"ul";s:5:"level";i:1;}i:1;a:4:{s:3:"hid";s:12:"引入文件";s:5:"title";s:15:"引入文件：";s:4:"type";s:2:"ul";s:5:"level";i:2;}i:2;a:4:{s:3:"hid";s:2:"js";s:5:"title";s:5:"JS：";s:4:"type";s:2:"ul";s:5:"level";i:2;}i:3;a:4:{s:3:"hid";s:12:"更多参数";s:5:"title";s:12:"更多参数";s:4:"type";s:2:"ul";s:5:"level";i:2;}}s:8:"abstract";s:347:"FLASH上传文件
+
+注意！！ 一定要放到服务器上才能测试效果！
+
+引入文件：
+<script src="http://common.mn.sina.com.cn/public/resource/lib/uploadify/jquery.uploadify.min.js" type="text/javascript"></script>
+<link rel="stylesheet" type="text/css" href="http://common.mn.sina.com.cn/public/resource/lib/uploadify/uploadify.css">";}s:8:"internal";a:2:{s:5:"cache";b:1;s:3:"toc";b:1;}s:8:"relation";a:1:{s:10:"firstimage";s:0:"";}}s:10:"persistent";a:5:{s:4:"date";a:2:{s:7:"created";i:1413439523;s:8:"modified";i:1421395091;}s:7:"creator";s:9:"邱沼懿";s:4:"user";s:1:"e";s:11:"last_change";b:0;s:11:"contributor";a:1:{s:1:"e";s:9:"邱沼懿";}}}

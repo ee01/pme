@@ -1,0 +1,92 @@
+====== 变量语法查询：index.html（PC） ======
+<html><span style="color:red">本页面是用于PC模板的index.html文件Smarty变量</span></html>\\
+<html><span style="color:red">查阅手机模板的index.html请点击：</span></html>[[ued:template:mindex|变量语法查询：index.html（手机）]]
+
+{{:ued:template:index-screenshot.png?nolink&700|}}
+
+①②放入[[ued:template:header|_header.html]]文件中，利用[[ued:template:header#include_引入文件|include]]方式引入到index.html文件中；
+  * ①[[ued:template:header#logo_网站logo|{$logo} ：网站logo]]
+  * ②[[ued:template:header#navs_网站导航栏|{$navs} ：网站导航栏]]
+
+③需要[[#index_pc首页数据_自定义于indexjson文件中|index.json]]文件配合，因为轮滚图的默认图片需要在[[#index_pc首页数据_自定义于indexjson文件中|index.json]]文件中定义，并用[[#index_pc首页数据_自定义于indexjson文件中|{$index.xxx}]]变量引用：
+  * ③[[#轮滚图定义方法|轮滚图定义]]
+
+④⑤⑥⑦⑧⑨⑾使用到的也是[[#index_pc首页数据_自定义于indexjson文件中|index.json]]文件忠的一个类型为list的变量
+
+⑾仅展示了某个栏目下的几篇（重要）文章，可选择使用[[#文章列表定义方法|文章列表]]中的输出__星标文章__模式：\\
+只需要在[[#index_pc首页数据_自定义于indexjson文件中|index.json]]文件定义一个新的[[#typelist|list变量]]（假设list2）中设置''"star_only": 1''，即可将此列表默认值设置为__仅输出星标文章__！
+  * ④⑤⑾[[#文章列表定义方法|文章列表定义]]
+  * ⑥引用列表的[[#typelist|{$index.list1.data[]}]]变量说明（假设[[#index_pc首页数据_自定义于indexjson文件中|index.json]]中定义的变量名为''list1''）
+  * ⑦引用列表的[[#typelist|{$index.list1.image}]]变量说明（假设[[#index_pc首页数据_自定义于indexjson文件中|index.json]]中定义的变量名为''list1''）
+  * ⑧引用列表的[[#typelist|{$index.list1.name}]]变量说明（假设[[#index_pc首页数据_自定义于indexjson文件中|index.json]]中定义的变量名为''list1''）
+  * ⑨引用列表的[[#typelist|{$index.list1.link}]]变量说明（假设[[#index_pc首页数据_自定义于indexjson文件中|index.json]]中定义的变量名为''list1''）
+
+⑩⒀⒁中的LOGO不同于系统[[ued:template:header#logo_网站logo|{$logo}]]变量，因为[[ued:template:header#logo_网站logo|{$logo}]]已用于网站顶部大LOGO图，所以此处2号小LOGO可以在[[#index_pc首页数据_自定义于indexjson文件中|index.json]]文件中新定义个[[ued:template:json#typeimage|类型为image]]格式的变量，以引用
+  * ⑩[[ued:template:json#typeimage|index.json中type:image的变量]]
+  * ⒀[[ued:template:json#typeimage|{$index.qrcode.image}]]变量说明（假设[[ued:template:json|index.json]]中定义的变量名为''qrcode''）
+  * ⒁[[ued:template:json#typeimage|{$index.qrcode.title}]]变量说明（假设[[ued:template:json|index.json]]中定义的变量名为''qrcode''）
+
+
+⒂版权信息可放入[[ued:template:footer|变量语法查询：_footer.html]]文件中，利用[[ued:template:footer#include_引入文件|include]]方式引入到index.html文件中；
+  * ⒂[[ued:template:footer#footprint_底部版权|{$footprint} ：底部版权]]
+
+
+
+以下是详细变量与语法查询：
+
+{{page>ued:template:global#title_页面标题}}
+{{page>ued:template:global#keywords_页面关键词}}
+{{page>ued:template:global#description_页面描述}}
+{{page>ued:template:global#site_url_网站资源域名地址}}
+{{page>ued:template:global#site_another_url_网站另一域名地址}}
+{{page>ued:template:global#favicon_网站图标}}
+{{page>ued:template:global#stylecolor_网站颜色}}
+{{page>ued:template:global#headscript_头部脚本}}
+{{page>ued:template:global#contact_联系方式}}
+
+===== {$index} ：PC首页数据（自定义于index.json文件中） =====
+
+<html><span style="color:red">请先查阅：</span></html>[[ued:template:json|JSON文件的语法规范]]\\
+<html><span style="color:red">手机的index.json查阅：</span></html>[[ued:template:mindex#index_手机_首页数据_自定义于indexjson文件中|【手机】首页数据（自定义于index.json文件中）]]
+
+==== 轮滚图定义方法 ====
+
+需在json文件中先定义一个[[ued:template:json#typeimages|类型type为images]]的数组，\\
+然后在index.html文件中引用！
+
+{{page>ued:template:json#typeimages}}
+
+==== 文章列表定义方法 ====
+
+需在json文件中先定义一个[[ued:template:json#typelist|类型type为list]]的数组，\\
+然后在index.html文件中引用！
+
+=== 列表型栏目数据输出（新闻列表、产品列表） ===
+{{page>ued:template:json#typelist&noheader}}
+=== 单页型栏目数据输出（关于我们） ===
+{{page>ued:template:json#typepage&noheader}}
+
+==== 留言板定义方法 ====
+
+需在json文件中先定义一个[[ued:template:json#typenav|类型type为nav]]的变量，\\
+然后在index.html文件中引用！
+
+<file javascript index.json>
+{
+	"feedback": {
+		"value": {},
+		"description": "留言板",
+		"type": "nav",
+		"config": {
+			"filter": "feedback"
+		}
+	}
+}
+</file>
+
+{{page>ued:template:json#filterfeedback&noheader}}
+
+==== More... ====
+
+
+更多请查阅：《[[ued:template:json|JSON文件的语法与使用]]》

@@ -1,0 +1,42 @@
+a:2:{s:7:"current";a:9:{s:4:"date";a:2:{s:7:"created";i:1398222368;s:8:"modified";i:1441678308;}s:7:"creator";s:9:"邱沼懿";s:4:"user";s:1:"e";s:11:"last_change";b:0;s:11:"contributor";a:4:{s:1:"e";s:9:"邱沼懿";s:6:"test10";s:6:"test10";s:10:"xiaomaoxia";s:12:"小猫小虾";s:6:"caicai";s:9:"luohancai";}s:5:"title";s:17:"百度厦门 Wiki";s:11:"description";a:2:{s:15:"tableofcontents";a:15:{i:0;a:4:{s:3:"hid";s:17:"百度厦门_wiki";s:5:"title";s:17:"百度厦门 Wiki";s:4:"type";s:2:"ul";s:5:"level";i:1;}i:1;a:4:{s:3:"hid";s:15:"会议室安排";s:5:"title";s:15:"会议室安排";s:4:"type";s:2:"ul";s:5:"level";i:2;}i:2;a:4:{s:3:"hid";s:6:"项目";s:5:"title";s:6:"项目";s:4:"type";s:2:"ul";s:5:"level";i:2;}i:3;a:4:{s:3:"hid";s:12:"统一平台";s:5:"title";s:12:"统一平台";s:4:"type";s:2:"ul";s:5:"level";i:3;}i:4;a:4:{s:3:"hid";s:9:"直达号";s:5:"title";s:9:"直达号";s:4:"type";s:2:"ul";s:5:"level";i:3;}i:5;a:4:{s:3:"hid";s:6:"风信";s:5:"title";s:6:"风信";s:4:"type";s:2:"ul";s:5:"level";i:3;}i:6;a:4:{s:3:"hid";s:9:"微餐饮";s:5:"title";s:9:"微餐饮";s:4:"type";s:2:"ul";s:5:"level";i:3;}i:7;a:4:{s:3:"hid";s:9:"微商城";s:5:"title";s:9:"微商城";s:4:"type";s:2:"ul";s:5:"level";i:3;}i:8;a:4:{s:3:"hid";s:12:"程序部门";s:5:"title";s:12:"程序部门";s:4:"type";s:2:"ul";s:5:"level";i:2;}i:9;a:4:{s:3:"hid";s:5:"ux组";s:5:"title";s:5:"UX组";s:4:"type";s:2:"ul";s:5:"level";i:2;}i:10;a:4:{s:3:"hid";s:12:"复用模块";s:5:"title";s:12:"复用模块";s:4:"type";s:2:"ul";s:5:"level";i:3;}i:11;a:4:{s:3:"hid";s:12:"前端规范";s:5:"title";s:12:"前端规范";s:4:"type";s:2:"ul";s:5:"level";i:3;}i:12;a:4:{s:3:"hid";s:12:"设计部门";s:5:"title";s:12:"设计部门";s:4:"type";s:2:"ul";s:5:"level";i:2;}i:13;a:4:{s:3:"hid";s:12:"常用工具";s:5:"title";s:12:"常用工具";s:4:"type";s:2:"ul";s:5:"level";i:2;}i:14;a:4:{s:3:"hid";s:4:"sina";s:5:"title";s:4:"sina";s:4:"type";s:2:"ul";s:5:"level";i:2;}}s:8:"abstract";s:641:"百度厦门 Wiki
+
+欢迎光临小懿的知识库，里面的东西 随便拿～～～
+
+会议室安排
+
+	" ★★★ 进入会议室安排查询 ★★★"
+
+项目
+
+统一平台
+
+	" 统一平台模板切图入门
+ 统一平台模板前端规范 
+ 统一平台模板模块库 
+ 统一平台模板注意事项
+ Quickbar 快捷导航
+ iconfont 图标代码查询"
+
+直达号
+
+	" ==== 进入直达号专页 ===="
+
+风信
+
+	*  首页新版201404
+	*  后台测试需求20140505
+	* 小猫虾小知识
+
+微餐饮
+
+	*  微餐饮预期效果DEMO
+
+微商城
+
+	*  个人中心新版201404
+
+程序部门
+
+	" ==== 进入程序部门专页 ===="
+
+UX组…";}s:8:"relation";a:2:{s:10:"references";a:21:{s:7:"meeting";b:1;s:18:"ued:template:guide";b:1;s:12:"ued:template";b:1;s:20:"ued:template:modules";b:1;s:18:"ued:template:notes";b:1;s:21:"ued:template:quickbar";b:1;s:21:"ued:template:iconfont";b:1;s:5:"zhida";b:1;s:14:"fx:main:201404";b:1;s:16:"fx:main:20140505";b:1;s:20:"fengxin:小猫小虾";b:1;s:16:"fx:food:20140411";b:1;s:14:"fx:shop:201404";b:1;s:2:"it";b:1;s:12:"ued:resource";b:1;s:16:"design:pageslide";b:1;s:8:"ued:html";b:1;s:7:"ued:css";b:1;s:6:"ued:js";b:1;s:19:"design:picasaforpsd";b:1;s:4:"sina";b:1;}s:10:"firstimage";s:0:"";}s:8:"internal";a:2:{s:5:"cache";b:1;s:3:"toc";b:1;}}s:10:"persistent";a:5:{s:4:"date";a:2:{s:7:"created";i:1398222368;s:8:"modified";i:1441678308;}s:7:"creator";s:9:"邱沼懿";s:4:"user";s:1:"e";s:11:"last_change";b:0;s:11:"contributor";a:4:{s:1:"e";s:9:"邱沼懿";s:6:"test10";s:6:"test10";s:10:"xiaomaoxia";s:12:"小猫小虾";s:6:"caicai";s:9:"luohancai";}}}

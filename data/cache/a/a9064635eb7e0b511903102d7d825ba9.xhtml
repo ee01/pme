@@ -1,0 +1,133 @@
+
+<h1 class="sectionedit1" id="引入文件">引入文件</h1>
+<div class="level1">
+
+<p>
+<strong>提示：所有文件专题系统已默认引入，
+如在本地测试，可引入调试！</strong>
+</p>
+
+<script type="text/javascript" src="http://common.mn.sina.com.cn/public/resource/lib/jquery.dfz.js"></script>
+<script type="text/javascript" src="http://i.sso.sina.com.cn/js/ssologin.js"></script>
+<script type="text/javascript" src="http://common.mn.sina.com.cn/public/resource/lib/union_app.js"></script>
+<script type="text/javascript" src="http://i2.sinaimg.cn/cj/dfz/weibo_v2.0-sp1_UPDATE20120221/weibo_v2.0-sp1_UPDATE20120221.js" charset="utf-8"></script>
+<script type="text/javascript" src="http://i.sso.sina.com.cn/js/sinaSSOManager.js"></script>
+<script type="text/javascript" src="http://minnan.sinaimg.cn/mn_2012_v2_DFZ/js/zttop.js"></script>
+<script type="text/javascript" src="http://common.mn.sina.com.cn/public/resource/lib/checkLogin.js"></script>
+
+</div>
+<!-- EDIT1 SECTION "引入文件" [1-904] -->
+<h1 class="sectionedit2" id="登录检测">登录检测</h1>
+<div class="level1">
+
+</div>
+<!-- EDIT2 SECTION "登录检测" [905-932] -->
+<h2 class="sectionedit3" id="callback内执行登录后的操作">callback内执行登录后的操作</h2>
+<div class="level2">
+<pre class="code javascript">checkLogin<span class="br0">&#40;</span><span class="kw1">function</span><span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+	<span class="co1">// 执行callback操作</span>
+<span class="br0">&#125;</span><span class="br0">&#41;</span><span class="sy0">;</span></pre>
+
+<p>
+注：如果未登录则弹出登录弹窗！
+</p>
+
+<p>
+要实现登录弹窗无法关闭（强制登录），可如下写法：
+</p>
+<pre class="code javascript">checkLogin<span class="br0">&#40;</span><span class="kw1">function</span><span class="br0">&#40;</span>json<span class="br0">&#41;</span> <span class="br0">&#123;</span>
+	<span class="co1">// 执行callback操作</span>
+<span class="br0">&#125;</span><span class="sy0">,</span> <span class="kw2">true</span><span class="br0">&#41;</span><span class="sy0">;</span></pre>
+
+<p>
+要自定义未登录操作（不使用登录弹窗），可如下写法：
+</p>
+<pre class="code javascript">checkLogin<span class="br0">&#40;</span><span class="kw1">function</span><span class="br0">&#40;</span>json<span class="br0">&#41;</span> <span class="br0">&#123;</span>
+	<span class="co1">// 已登录，执行操作</span>
+<span class="br0">&#125;</span><span class="sy0">,</span> <span class="kw1">function</span><span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+	<span class="co1">// 未登录操作，弹出提示等</span>
+<span class="br0">&#125;</span><span class="br0">&#41;</span><span class="sy0">;</span></pre>
+
+</div>
+<!-- EDIT3 SECTION "callback内执行登录后的操作" [933-1497] -->
+<h2 class="sectionedit4" id="if判断是否登录">if判断是否登录</h2>
+<div class="level2">
+<pre class="code javascript"><span class="kw1">var</span> isLogin <span class="sy0">=</span> checkLogin<span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw1">if</span> <span class="br0">&#40;</span>isLogin<span class="br0">&#41;</span> <span class="br0">&#123;</span>
+	<span class="co1">//...</span>
+<span class="br0">&#125;</span></pre>
+<ul>
+<li class="level1"><div class="li"> <code>checkLogin()</code> 单纯返回true/false</div>
+</li>
+<li class="level1"><div class="li"> <code>checkLogin(true)</code> 强制登录——弹出无法关闭的登录弹窗，同时返回true/false</div>
+</li>
+<li class="level1"><div class="li"> <code>checkLogin(false)</code> 弹出可关闭的登录弹窗，同时返回true/false</div>
+</li>
+</ul>
+
+<p>
+例如一个页面需要用户强制登录后才允许后续操作：
+</p>
+<pre class="code javascript">$<span class="br0">&#40;</span><span class="kw1">function</span><span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+	<span class="kw1">if</span> <span class="br0">&#40;</span><span class="sy0">!</span>checkLogin<span class="br0">&#40;</span><span class="kw2">true</span><span class="br0">&#41;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+		<span class="kw1">return</span> <span class="kw2">false</span><span class="sy0">;</span>	<span class="co1">// 阻止后续操作</span>
+	<span class="br0">&#125;</span>
+&nbsp;
+	<span class="co1">//...</span>
+<span class="br0">&#125;</span><span class="br0">&#41;</span><span class="sy0">;</span></pre>
+
+</div>
+<!-- EDIT4 SECTION "if判断是否登录" [1498-2037] -->
+<h1 class="sectionedit5" id="获取登录信息">获取登录信息</h1>
+<div class="level1">
+
+<p>
+在callback中使用loginUser和simpleLoginUser变量；
+</p>
+
+<p>
+loginUser和simpleLoginUser是一个全局变量，
+但请确保在先前有运行过checkLogin()，并给出足够的时间获取用户信息，您可以在任何一处使用它们。
+</p>
+
+<p>
+simpleLoginUser：
+</p>
+<ul>
+<li class="level1"><div class="li"> id：微博ID</div>
+</li>
+<li class="level1"><div class="li"> screen_name：微博昵称</div>
+</li>
+<li class="level1"><div class="li"> gender：性别</div>
+</li>
+<li class="level1"><div class="li"> profile_url：个性域名，与 &#039;<a href="http://weibo.com/" class="urlextern" target="_blank" title="http://weibo.com/"  rel="nofollow">http://weibo.com/</a>&#039; + simpleLoginUser.profile_url 组成微博地址</div>
+</li>
+<li class="level1"><div class="li"> profile_image_url：小头像地址 50&times;50</div>
+</li>
+<li class="level1"><div class="li"> avatar_large： 大头像地址 180&times;180</div>
+</li>
+</ul>
+
+<p>
+loginUser：包含simpleLoginUser内容的更丰富的用户信息
+</p>
+
+<p>
+PS：simpleLoginUser信息量不多，可直接用于参数提交。
+</p>
+
+</div>
+<!-- EDIT5 SECTION "获取登录信息" [2038-2738] -->
+<h1 class="sectionedit6" id="调用登录弹窗">调用登录弹窗</h1>
+<div class="level1">
+
+<p>
+<code>DialogLogin(callback, force);</code> 即可直接调用登录弹窗。
+</p>
+
+<p>
+<code>force</code> 参数为true时，弹窗无法关闭！
+</p>
+
+</div>
+<!-- EDIT6 SECTION "调用登录弹窗" [2739-] -->

@@ -1,0 +1,132 @@
+
+<h1 class="sectionedit1" id="统一平台模板模块库">统一平台模板模块库</h1>
+<div class="level1">
+
+<p>
+以下所有模块使用方法：
+</p>
+<ol>
+<li class="level1"><div class="li"> 下载后解压html文件及样式放入模板开发目录</div>
+</li>
+<li class="level1"><div class="li"> 在任意页面使用<a href="/doku.php?id=ued:template:global#include_引入文件" class="wikilink1" title="ued:template:global">include</a>方法引入以下划线开头的html文件</div>
+</li>
+<li class="level1"><div class="li"> 即可！</div>
+</li>
+</ol>
+
+</div>
+<!-- EDIT1 SECTION "统一平台模板模块库" [1-276] -->
+<h2 class="sectionedit2" id="基础模块">基础模块</h2>
+<div class="level2">
+<ul>
+<li class="level1"><div class="li"> <a href="/doku.php?id=ued:template:modules:navs" class="wikilink1" title="ued:template:modules:navs">导航栏，不固定个数自适宽度</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="/doku.php?id=ued:template:modules:pagenavs" class="wikilink1" title="ued:template:modules:pagenavs">左侧栏目列表</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="/doku.php?id=ued:template:modules:links" class="wikilink1" title="ued:template:modules:links">友情链接</a></div>
+</li>
+<li class="level1"><div class="li"> <a href="/doku.php?id=ued:template:modules:pagelinks" class="wikilink1" title="ued:template:modules:pagelinks">列表页翻页</a></div>
+</li>
+</ul>
+
+</div>
+<!-- EDIT2 SECTION "基础模块" [277-536] -->
+<h2 class="sectionedit3" id="图片类模块">图片类模块</h2>
+<div class="level2">
+
+</div>
+<!-- EDIT3 SECTION "图片类模块" [537-565] -->
+<h2 class="sectionedit4" id="地图模块">地图模块</h2>
+<div class="level2">
+
+<p>
+在html代码中放置如下代码即可：
+</p>
+<pre class="code html4strict">{mapExt address='厦门观日路30号' width=&quot;80%&quot; height=&quot;200px&quot;}</pre>
+
+<p>
+参数说明：
+</p>
+<ul>
+<li class="level1"><div class="li"> address：具体地址</div>
+</li>
+<li class="level1"><div class="li"> width：地图宽度</div>
+</li>
+<li class="level1"><div class="li"> height：地图高度</div>
+</li>
+<li class="level1"><div class="li"> scale_size：地图默认缩放大小（精度）</div>
+</li>
+</ul>
+
+</div>
+<!-- EDIT4 SECTION "地图模块" [566-873] -->
+<h2 class="sectionedit5" id="分享模块">分享模块</h2>
+<div class="level2">
+
+<p>
+在html代码中放置如下代码即可：
+</p>
+<pre class="code html4strict">{shareExt shareText=$article.content|unescape:&quot;html&quot;|strip_tags|truncate:140:&quot;…&quot; sharePic=$article.image}</pre>
+
+<p>
+参数说明：
+</p>
+<ul>
+<li class="level1"><div class="li"> shareText：默认分享文案</div>
+</li>
+<li class="level1"><div class="li"> shareDesc：默认分享摘要</div>
+</li>
+<li class="level1"><div class="li"> shareUrl：分享页面的网址（默认当前页）</div>
+</li>
+<li class="level1"><div class="li"> sharePic：默认分享图片</div>
+</li>
+<li class="level1"><div class="li"> viewSize：分享条大小（默认16</div>
+</li>
+<li class="level1"><div class="li"> style：分享条样式：1-直接输出条状分享; 2-输出侧边分享按钮（试用首页）; 3-两者</div>
+</li>
+</ul>
+
+</div>
+<!-- EDIT5 SECTION "分享模块" [874-1407] -->
+<h2 class="sectionedit6" id="关注按钮">关注按钮</h2>
+<div class="level2">
+<pre class="code html4strict"><span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/iframe.html"><span class="kw2">iframe</span></a> <span class="kw3">src</span><span class="sy0">=</span><span class="st0">&quot;http://widget.weibo.com/relationship/followbutton.php?uid=1242837564&amp;btn=red&amp;style=1&amp;language=zh_cn&quot;</span> <span class="kw3">width</span><span class="sy0">=</span><span class="st0">&quot;67&quot;</span> <span class="kw3">height</span><span class="sy0">=</span><span class="st0">&quot;24&quot;</span> <span class="kw3">frameborder</span><span class="sy0">=</span><span class="st0">&quot;0&quot;</span> <span class="kw3">scrolling</span><span class="sy0">=</span><span class="st0">&quot;no&quot;</span> <span class="kw3">marginheight</span><span class="sy0">=</span><span class="st0">&quot;0&quot;</span>&gt;&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/iframe.html"><span class="kw2">iframe</span></a>&gt;</span></pre>
+
+<p>
+<strong>参数说明：</strong>
+</p>
+
+<p>
+<code>uid</code> 要关注的微博ID
+</p>
+
+<p>
+<code>style</code>
+</p>
+<ul>
+<li class="level1"><div class="li"> 1: 简洁按钮</div>
+</li>
+<li class="level1"><div class="li"> 2: 显示粉丝数</div>
+</li>
+<li class="level1"><div class="li"> 3: 显示昵称和粉丝数</div>
+</li>
+<li class="level1"><div class="li"> 4: 展示粉丝</div>
+</li>
+</ul>
+
+<p>
+注：<code>style</code>修改后要相应调整iframe的高宽值
+</p>
+
+<p>
+<code>btn</code>
+</p>
+<ul>
+<li class="level1"><div class="li"> red: 红色</div>
+</li>
+<li class="level1"><div class="li"> light: 银色</div>
+</li>
+</ul>
+
+</div>
+<!-- EDIT6 SECTION "关注按钮" [1408-] -->

@@ -1,0 +1,18 @@
+<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/h2.html"><span class="kw2">h2</span></a>&gt;</span>在这里给我留言噢~<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/span.html"><span class="kw2">span</span></a>&gt;</span>{$index.feedback.en_name}<span class="sc2">&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/span.html"><span class="kw2">span</span></a>&gt;&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/h2.html"><span class="kw2">h2</span></a>&gt;</span>
+<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/form.html"><span class="kw2">form</span></a> <span class="kw3">action</span><span class="sy0">=</span><span class="st0">&quot;{$index.feedback.posturl}&quot;</span>&gt;</span>
+	<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/input.html"><span class="kw2">input</span></a> <span class="kw3">type</span><span class="sy0">=</span><span class="st0">&quot;text&quot;</span> <span class="kw3">name</span><span class="sy0">=</span><span class="st0">&quot;name&quot;</span> <span class="sy0">/</span>&gt;</span>
+	<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/input.html"><span class="kw2">input</span></a> <span class="kw3">type</span><span class="sy0">=</span><span class="st0">&quot;text&quot;</span> <span class="kw3">name</span><span class="sy0">=</span><span class="st0">&quot;telephone&quot;</span> <span class="sy0">/</span>&gt;</span>
+	<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/input.html"><span class="kw2">input</span></a> <span class="kw3">type</span><span class="sy0">=</span><span class="st0">&quot;text&quot;</span> <span class="kw3">name</span><span class="sy0">=</span><span class="st0">&quot;email&quot;</span> <span class="sy0">/</span>&gt;</span>
+	<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/textarea.html"><span class="kw2">textarea</span></a> <span class="kw3">name</span><span class="sy0">=</span><span class="st0">&quot;content&quot;</span> <span class="kw3">rows</span><span class="sy0">=</span><span class="st0">&quot;5&quot;</span>&gt;&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/textarea.html"><span class="kw2">textarea</span></a>&gt;</span>
+	<span class="sc2">&lt;<a target="_blank" href="http://december.com/html/4/element/input.html"><span class="kw2">input</span></a> <span class="kw3">type</span><span class="sy0">=</span><span class="st0">&quot;submit&quot;</span> <span class="sy0">/</span>&gt;</span>
+<span class="sc2">&lt;<span class="sy0">/</span><a target="_blank" href="http://december.com/html/4/element/form.html"><span class="kw2">form</span></a>&gt;</span>
+<span class="sc-1">&lt;!-- 输出：</span>
+<span class="sc-1">&lt;h2&gt;在这里给我留言噢~&lt;span&gt;Feed Back&lt;/span&gt;&lt;/h2&gt;</span>
+<span class="sc-1">&lt;form action=&quot;http://....&quot;&gt;</span>
+<span class="sc-1">	&lt;input type=&quot;text&quot; name=&quot;name&quot; /&gt;</span>
+<span class="sc-1">	&lt;input type=&quot;text&quot; name=&quot;telephone&quot; /&gt;</span>
+<span class="sc-1">	&lt;input type=&quot;text&quot; name=&quot;email&quot; /&gt;</span>
+<span class="sc-1">	&lt;textarea name=&quot;content&quot; rows=&quot;5&quot;&gt;&lt;/textarea&gt;</span>
+<span class="sc-1">	&lt;input type=&quot;submit&quot; /&gt;</span>
+<span class="sc-1">&lt;/form&gt;</span>
+<span class="sc-1">--&gt;</span>

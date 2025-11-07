@@ -1,0 +1,372 @@
+
+<p>
+<a href="http://aliceui.com/css-spec/" class="urlextern" target="_blank" title="http://aliceui.com/css-spec/"  rel="nofollow">CSS 规范</a> 分类: <a href="http://aliceui.com/category/docs/" class="urlextern" target="_blank" title="http://aliceui.com/category/docs/"  rel="nofollow">Alice 文档库</a> <a href="#respond" title="ued:css ↵" class="wikilink1">发表评论↓</a>
+</p>
+
+<h2 class="sectionedit1" id="本规范概述">本规范概述</h2>
+<div class="level2">
+
+<p>
+制定本规范的目的在于使我们的CSS代码更加易于维护和重用，从而提升效率执行本规范时建议的流程 建议使用D(esign)C(oding)D(ebug)V(alidate)R(oundup)，即DCDVR的流程。首先需要规划样式并分为共有样式和页面个性化样式，然后才开始编码，编码的同时进行Debug，Validate和代码片断的总结，而不是在所有模板都完成后才进行这三个步骤。
+</p>
+
+</div>
+<!-- EDIT1 SECTION "本规范概述" [137-600] -->
+<h2 class="sectionedit2" id="一_关于样式库构建规范">一、关于样式库构建规范</h2>
+<div class="level2">
+
+<p>
+详见：<a href="http://aliceui.com/alice-css-guide/" class="urlextern" target="_blank" title="http://aliceui.com/alice-css-guide/"  rel="nofollow">http://aliceui.com/alice-css-guide/</a>
+</p>
+
+</div>
+<!-- EDIT2 SECTION "一、关于样式库构建规范" [601-693] -->
+<h2 class="sectionedit3" id="二_selector_命名规范">二、selector 命名规范：</h2>
+<div class="level2">
+<ul>
+<li class="level1"><div class="li"> 命名除 .fn- / .ui- / .sl- 外，可自定义命名。请慎用 selected current disabled first last success error</div>
+</li>
+<li class="level1"><div class="li"> 一般情况下，如果命名比较通用，比如 current，请限定在相应的上下文环境中。比如其父节点ID为#parent 等比较通用的命名，建议写成 #parent .current{}，而非 .current{}，即使是为了重用，也应该注意。只有在非常明确不会影响到其他组件工作，并且其他人不会写这种命名的情况下，才让它变成全局通用的。</div>
+</li>
+<li class="level1"><div class="li"> 作为JS接口的class或者ID，必须是以 J- 前缀开头的。除 JS 接口命名外，其他命名一律使用小写字母</div>
+</li>
+</ul>
+
+</div>
+<!-- EDIT3 SECTION "二、selector 命名规范：" [694-1396] -->
+<h3 class="sectionedit4" id="alice_组件命名规范">Alice 组件命名规范</h3>
+<div class="level3">
+
+<p>
+<img src="/pme/lib/exe/fetch.php?w=1024&amp;tok=afc3b7&amp;media=http%3A%2F%2Faliceui.com%2Fimages%2Falice-css-guide%2Fdcbzbj8j_35c92sj7fs_b.png" class="media" alt="" width="1024" />
+</p>
+
+</div>
+<!-- EDIT4 SECTION "Alice 组件命名规范" [1397-1519] -->
+<h2 class="sectionedit5" id="三_注释">三、注释：</h2>
+<div class="level2">
+<ul>
+<li class="level1"><div class="li"> 组件注释:</div>
+</li>
+</ul>
+<pre class="code">   /**
+     * @name: 组件名
+     * @overview: 组件介绍
+     * @require: 依赖的样式
+     * @author: 小鱼(sofish@163.com)
+     */</pre>
+<ul>
+<li class="level1"><div class="li"> 块状或行内元素，都请使用 <code>/* comment */</code> 注释，注释文字前后端保持各有一个空格</div>
+</li>
+<li class="level1"><div class="li"> 为了您的体验着想，一目了解的代码，就不要注释了，比如 “display:none; /* 让元素看不见 */” 工作还有很多啊，同学，请为了自己的体力着想。</div>
+</li>
+</ul>
+
+</div>
+<!-- EDIT5 SECTION "三、注释：" [1520-2026] -->
+<h2 class="sectionedit6" id="四_css文件">四、CSS文件</h2>
+<div class="level2">
+<ul>
+<li class="level1"><div class="li"> 文件编码必须使用utf-8（无BOM）</div>
+</li>
+<li class="level1"><div class="li"> 文件一律通过 link 链入 (NOT @import)</div>
+</li>
+<li class="level1"><div class="li"> 当只是单个页面使用时，才写在 &lt;head&gt; 的 &lt;style&gt; 中</div>
+</li>
+</ul>
+
+</div>
+<!-- EDIT6 SECTION "四、CSS文件" [2027-2221] -->
+<h2 class="sectionedit7" id="五_hack_规则">五、Hack 规则</h2>
+<div class="level2">
+<ul>
+<li class="level1"><div class="li"> 一般情况下，不要使用 <abbr title="Internet Explorer">IE</abbr> 条件注释： &lt;!–[if <abbr title="Internet Explorer">IE</abbr>]&gt;&lt;![endif]–&gt;</div>
+</li>
+<li class="level1"><div class="li"> 通用 Hack</div>
+</li>
+</ul>
+<pre class="code">  .all-IE{property:value\9;}
+  :root .IE-9{property:value\0/;}
+  .gte-IE-8{property:value\0;}
+  .lte-IE-7{*property:value;}
+  .IE-7{+property:value;}
+  .IE-6{_property:value;}
+  .not-IE{property//:value;}
+  @-moz-document url-prefix() { .firefox{property:value;} }
+  @media all and (-webkit-min-device-pixel-ratio:0) { .webkit{property:value;} }
+  @media all and (-webkit-min-device-pixel-ratio:10000),not all and (-webkit-min-device-pixel-ratio:0) { .opera{property:value;} }
+  @media screen and (max-device-width: 480px) { .iphone-or-mobile-s-webkit{property:value;} }</pre>
+<ul>
+<li class="level1"><div class="li"> 当然，强烈建议你使用更优雅的hack方式。那就是避免hack。或者在书写上，做点小trick。比如：</div>
+</li>
+</ul>
+<pre class="code">.selector .child{property:value;} /* for ie-6 */
+.selector &gt; .child{property:value;} /* except ie-6 */</pre>
+<ul>
+<li class="level1"><div class="li"> 关于Hack: 在firefox写完，IE有问题？还是其他浏览器也出现了。你知道IE Hack 能解决。我想，你也可能知道，用其他方法也能绕过。建议少用Hack。</div>
+</li>
+</ul>
+
+</div>
+<!-- EDIT7 SECTION "五、Hack 规则" [2222-3374] -->
+<h2 class="sectionedit8" id="六_书写规范">六、书写规范：</h2>
+<div class="level2">
+
+</div>
+
+<h4 id="以如下写法为例">1. 以如下写法为例：</h4>
+<div class="level4">
+
+<p>
+第一种方式：（强烈推荐）
+</p>
+<pre class="code">/* 区域模块-1 */
+.tech, .ued{
+    background:#f60 url(alipay.com/orange.png) no-repeat 0 0;
+}</pre>
+<pre class="code">/* 区域模块-2 */
+.tech{
+    width:950px;
+    margin:0 auto;
+}
+.tech .wd{
+    width:620px;
+    float:left;
+}</pre>
+
+<p>
+建议使用缩进：
+</p>
+<pre class="code">.block {
+    width:950px;
+    margin:0 auto;
+}
+	.block-title{
+	    width:620px;
+	    backcgournd:url();
+	}</pre>
+
+<p>
+第二种方式：（如果让其他人看，请先格式化）
+</p>
+<pre class="code">/* 区域模块-3 */
+.ued{width:100%;padding:30px 50px;}
+.ued .visual{display:inline-block;font:700 normal 12px/1.5 arial;}</pre>
+
+</div>
+
+<h4 id="非常重要_需要你注意的点">2. 非常重要，需要你注意的点:</h4>
+<div class="level4">
+<ul>
+<li class="level1"><div class="li"> 区域模块间用空行分隔</div>
+</li>
+<li class="level2"><div class="li"> 多个选择器写一起时，逗号（,）后紧跟一个空格</div>
+</li>
+<li class="level2"><div class="li"> 避免行内样式，即使是JS，也应该尽量使用class/ID来决定显示，而非行内样式</div>
+</li>
+<li class="level2"><div class="li"> 避免使用低效选择器（所以，别滥用class；当然，不滥用ID我相信你是知道的）详见：<a href="http://code.google.com/speed/page-speed/docs/rendering.html" class="urlextern" target="_blank" title="http://code.google.com/speed/page-speed/docs/rendering.html"  rel="nofollow">http://code.google.com/speed/page-speed/docs/rendering.html</a></div>
+</li>
+<li class="level2"><div class="li"> 尽量使用缩写，比如 font:700 normal 12px/1.5 arial; 一般不要写成  font-style:normal;</div>
+</li>
+</ul>
+
+<p>
+      font-size:12px;
+</p>
+<pre class="code">    line-height:1.5;
+    font-family:arail;通常需要使用缩写规则的:  padding: toprightbottomleft;
+    padding: top-bottomright+left;
+    padding: topleft-rightbottom;
+    padding: top-right-bottom-left;
+    如：padding:1px 2px3px4px;
+    margin: 同上
+    如使用像`red`这样的颜色名，采用小写；16进制写法使用大写；写3位，还是6位，自便：
+    color: red; color;#FFF; color:#ABCABC
+    background: colorimageUrlrepeatattachmentposition;
+    如：background:#ddd url(alipay-wd.png) no-repeatscroll10px20px;
+    border: sizestylecolor;
+    如: border:1px solid#ddd;
+    font: weightvariantstylesize/lineHeightfamily;
+    如 font:700 small-capsitalic12px/1.5 &quot;Courier New&quot;; font-weight统一用 500代替 normal, 用 700代替 bold;
+    list-style: typepositionimage;
+    如：list-style: squareinsideurl(alipay-wd.png);不过，通常我们要使用的是 list-style:none;</pre>
+
+<p>
+* CSS3 书写规范：浏览器私有写法在前，标准写法在后  -moz-box-shadow: 1px2px3px#ddd;
+</p>
+<ol>
+<li class="level1"><div class="li">webkit-box-shadow: 1px2px3px#ddd;</div>
+</li>
+</ol>
+
+<p>
+      box-shadow: 1px2px3px#ddd;
+</p>
+
+</div>
+
+<h5 id="书写顺序">1.书写顺序</h5>
+<div class="level5">
+
+<p>
+ 不强制书写顺序。但我们应该养成良好的习惯，让看代码的人更易理解。易读对于团队协作来说是非常重要的：
+</p>
+<ul>
+<li class="level1"><div class="li"> <strong>1. 框架为先，细节次之</strong> 比如写一个浮动容器的样式，我们应该先让这个容器的框架被渲染出来，让大家看到基本的网站框架。然后再再去渲染容器里面的内容。最终呈现给用户. 通常像 color font padding 之类的，写在后面。</div>
+</li>
+</ul>
+
+<p>
+	.selector{float:left;width:300px;height:200px;font-size:14px;color:#f36;}
+</p>
+<ul>
+<li class="level1"><div class="li"> <strong>2. 有因才有果</strong> 比如想使用”图片替换文字“技术，通常要使用的text-indent。如果我们使用标签的是 span：<span>这个文字将被图片替换</span>我们应该是先将 span 变成”块级元素“（使用 display:block，虽然他永远不是块级元素），再将文字 indent。而不是先 indent 再变成块级的：</div>
+</li>
+</ul>
+
+<p>
+	.thepic{display:block;text-indent:-9999em;}
+</p>
+
+<p>
+又如我们，如果想让一个 span 使用 margin, 那么我们应该这样写:span{display:block;margin-bottom:10px;} 而非 span{margin-bottom:10px;display:block;}。因为没有 display 之前，行内元素是没有 margin 的。
+</p>
+
+</div>
+<!-- EDIT8 SECTION "六、书写规范：" [3375-6970] -->
+<h2 class="sectionedit9" id="七_ie私有特性">七、IE私有特性</h2>
+<div class="level2">
+
+</div>
+
+<h4 id="expression">1. expression</h4>
+<div class="level4">
+
+<p>
+记住一句话：无论什么时候，都不要使用它。用 Javascript 吧。更优雅，更灵活。
+</p>
+
+</div>
+
+<h4 id="filter">2. filter</h4>
+<div class="level4">
+<ul>
+<li class="level1"><div class="li"> 应该尽量避免使用 AlphaImageLoader</div>
+</li>
+<li class="level2"><div class="li"> 可以适当在投影/发光/渐变/去色方面上使用</div>
+</li>
+</ul>
+
+</div>
+
+<h4 id="ie_bug">3. IE bug</h4>
+<div class="level4">
+
+<p>
+常见BUG，详见：<a href="http://sofish.de/1400" class="urlextern" target="_blank" title="http://sofish.de/1400"  rel="nofollow">http://sofish.de/1400</a>
+</p>
+
+</div>
+<!-- EDIT9 SECTION "七、IE私有特性" [6971-7330] -->
+<h2 class="sectionedit10" id="八_如何规划你的_css_文件结构">八、如何规划你的 CSS 文件结构</h2>
+<div class="level2">
+
+</div>
+
+<h4 id="一定要有全局设置">1.一定要有全局设置</h4>
+<div class="level4">
+
+<p>
+全局设置可以避免重复书写同样的东西。比如3人在一个项目中，假设项目中涉及到的链接有 10 种颜色，如果有全局重设，我们就可以统一设置颜色。如果没有，我们可能每个都会为自己所负责部分的链接定义相应的颜色。这样一来就导致多处定义，且定义不统一。以后维护需要到各个地方都改。这是很麻烦的事。另外就是css文件也会因此变大。所以，在写之前，大家应该先分析视觉稿，统一全局设置。
+</p>
+<pre class="code">/* global reset */
+  body{padding:0;margin:0;font.....}
+  a{color:#07f;}
+  a:hover{color:#555;}需要注意的是，一般情况下，不要直接给标签写样式。而应该使用 class。像下面这种写法，并不是很合适:  h1{font-size:30px}
+  h2{font-size:20px}
+  h3{font-size:10px;}如果有另外一个 h2 也要使用 10px 的，而其他的都仍使用 20px 的，那可就不好办了。所以，推荐用这种方法：  /* global classes */
+  .text-size30{font-size:30px;}
+  .text-size20{font-size:20px;}
+  .text-size10{font-size:10px;}&lt;h2 class=&quot;text-size20&quot;&gt;… &lt;h2 class=&quot;text-size10&quot;&gt;…</pre>
+
+</div>
+
+<h4 id="一定要模块化">2.一定要模块化</h4>
+<div class="level4">
+
+<p>
+有两点需要注意的，一是，注意代码重用的模块化；一是，注意 <abbr title="HyperText Markup Language">HTML</abbr> 结构的模块化，而不是分块。
+</p>
+<ul>
+<li class="level1"><div class="li"> <strong>我们是这样重用的</strong>：</div>
+</li>
+</ul>
+<pre class="code">&lt;div id=&quot;module-1&quot; class=&quot;module&quot;&gt;
+        &lt;h3&gt;TITLE&lt;/h3&gt;
+        &lt;p class=&quot;module-item&quot;&gt;
+            some text
+        &lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div id=&quot;module-2&quot; class=&quot;module&quot;&gt;
+        &lt; h3&gt;TITLE&lt;/h3&gt;
+        &lt;p class=&quot;module-item&quot;&gt;
+            some text
+        &lt;/p&gt;
+    &lt;/div&gt;   /* module, reuse style in module scrope*/
+    .module{}
+    .module-status{}
+    .module-item{}
+    .module-status .module-1-item{}
+    /* customize */
+    #module-1 .module-item{}
+    #module-2 .module-item{}</pre>
+<ul>
+<li class="level1"><div class="li"> <strong><abbr title="HyperText Markup Language">HTML</abbr> 的模块化</strong>：我们应该这样写（他们的视觉是一体的，代码也应该是一体的）：</div>
+</li>
+</ul>
+<pre class="code">&lt;div id=&quot;module-1&quot; class=&quot;module&quot;&gt;
+    &lt;h3&gt;TITLE&lt;/h3&gt;
+    &lt;p class=&quot;module-item&quot;&gt;
+        some text
+    &lt;/p&gt;
+    &lt;/div&gt; &lt;!-- #module .module --&gt;而不是这样写：  &lt;h3&gt;TITLE&lt;/h3&gt;
+    &lt;!-- 第一块 --&gt;
+    &lt;div id=&quot;module-1&quot; class=&quot;module&gt;
+        &lt;p class=&quot;module-item&quot;&gt;
+            some text
+        &lt;/p&gt;
+    &lt;/div&gt; &lt;!-- 第二块 --&gt;</pre>
+
+</div>
+<!-- EDIT10 SECTION "八、如何规划你的 CSS 文件结构" [7331-9800] -->
+<h2 class="sectionedit11" id="九_值得注意的事">九、值得注意的事</h2>
+<div class="level2">
+
+</div>
+
+<h4 id="background_color">1.Background Color:</h4>
+<div class="level4">
+<ul>
+<li class="level1"><div class="li"> 一般我们都会写: background:url(path/to/image) no-repeat 0 0;</div>
+</li>
+<li class="level2"><div class="li"> 当元素背景是深色的时候，比如#000，我们通常会选择一种比较浅的颜色来做为文本的颜色，比如#fff，为了避免网速缓慢导致CSS已经 加载，而图片仍未加载完成或图片服务器挂掉时文本不可见，请尽量使用加上CSS定义的背景颜色，如：background:#e8edef url(path/to/image) no-repeat 0 0;=== 2. has Layout ===别用轻易使用hack，IE下很多兼容性问题都是 has Layout 引起的。试着给元素加上:  display: inline-blockheight: (除 auto外任何值)</div>
+</li>
+</ul>
+
+<p>
+    width: (除 auto外任何值)
+</p>
+<pre class="code">  float: (left或 right)
+  position: absolutewriting-mode: tb-rlzoom: (除 normal外任意值)</pre>
+
+</div>
+
+<h4 id="代码测试">3. 代码测试:</h4>
+<div class="level4">
+
+<p>
+一般情况下，我们需要测试通过的是电脑端的A-Grade浏览器：
+</p>
+
+</div>
+<!-- EDIT11 SECTION "九、值得注意的事" [9801-] -->

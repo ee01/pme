@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- generator="FeedCreator 1.7.2-ppt DokuWiki" -->
+<?xml-stylesheet href="https://eexx.me/pme/lib/exe/css.php?s=feed" type="text/css"?>
+<rdf:RDF
+    xmlns="http://purl.org/rss/1.0/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <channel rdf:about="https://eexx.me/pme/feed.php">
+        <title>百度产品部门 知识库</title>
+        <description></description>
+        <link>https://eexx.me/pme/</link>
+        <image rdf:resource="https://eexx.me/pme/lib/tpl/vector/images/favicon.ico" />
+       <dc:date>2022-06-15T10:41:31+00:00</dc:date>
+        <items>
+            <rdf:Seq>
+                <rdf:li rdf:resource="https://eexx.me/pme/doku.php?id=%E7%9B%B4%E8%BE%BE%E5%8F%B7%E5%90%8E%E5%8F%B0%E5%8A%9F%E8%83%BD%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9&amp;rev=1454531070&amp;do=diff"/>
+                <rdf:li rdf:resource="https://eexx.me/pme/doku.php?id=%E7%9B%B4%E8%BE%BE%E5%8F%B7%E6%9C%8D%E5%8A%A1%E7%BB%84%E4%BB%B6%E6%98%BE%E7%A4%BA%E6%96%B9%E6%B3%95&amp;rev=1454531070&amp;do=diff"/>
+                <rdf:li rdf:resource="https://eexx.me/pme/doku.php?id=%E7%9B%B4%E8%BE%BE%E5%8F%B7%E6%9C%8D%E5%8A%A1%E7%BB%84%E4%BB%B6%E6%B5%8B%E8%AF%95%E5%9C%B0%E5%9D%80&amp;rev=1454531070&amp;do=diff"/>
+                <rdf:li rdf:resource="https://eexx.me/pme/doku.php?id=%E7%9B%B4%E8%BE%BE%E5%8F%B7%E6%9C%8D%E5%8A%A1%E7%BB%84%E4%BB%B6%E6%B5%8B%E8%AF%95%E6%B5%81%E7%A8%8B&amp;rev=1454531070&amp;do=diff"/>
+                <rdf:li rdf:resource="https://eexx.me/pme/doku.php?id=%E7%9B%B4%E8%BE%BE%E5%8F%B7%E6%9C%8D%E5%8A%A1%E7%BB%84%E4%BB%B6pc%E7%AB%AF%E6%98%BE%E7%A4%BA%E4%B8%8D%E4%BA%86%E7%9A%84%E5%8E%9F%E5%9B%A0%E5%8F%8A%E6%96%B9%E6%B3%95&amp;rev=1454531070&amp;do=diff"/>
+                <rdf:li rdf:resource="https://eexx.me/pme/doku.php?id=it&amp;rev=1454531070&amp;do=diff"/>
+                <rdf:li rdf:resource="https://eexx.me/pme/doku.php?id=meeting&amp;rev=1454531070&amp;do=diff"/>
+                <rdf:li rdf:resource="https://eexx.me/pme/doku.php?id=navigation&amp;rev=1454531070&amp;do=diff"/>
+                <rdf:li rdf:resource="https://eexx.me/pme/doku.php?id=sidebar&amp;rev=1454531070&amp;do=diff"/>
+                <rdf:li rdf:resource="https://eexx.me/pme/doku.php?id=sina&amp;rev=1454531070&amp;do=diff"/>
+                <rdf:li rdf:resource="https://eexx.me/pme/doku.php?id=start&amp;rev=1454531070&amp;do=diff"/>
+                <rdf:li rdf:resource="https://eexx.me/pme/doku.php?id=zhida&amp;rev=1454531070&amp;do=diff"/>
+            </rdf:Seq>
+        </items>
+    </channel>
+    <image rdf:about="https://eexx.me/pme/lib/tpl/vector/images/favicon.ico">
+        <title>百度产品部门 知识库</title>
+        <link>https://eexx.me/pme/</link>
+        <url>https://eexx.me/pme/lib/tpl/vector/images/favicon.ico</url>
+    </image>
+    <item rdf:about="https://eexx.me/pme/doku.php?id=%E7%9B%B4%E8%BE%BE%E5%8F%B7%E5%90%8E%E5%8F%B0%E5%8A%9F%E8%83%BD%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9&amp;rev=1454531070&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-02-03T20:24:30+00:00</dc:date>
+        <title>直达号后台功能注意事项</title>
+        <link>https://eexx.me/pme/doku.php?id=%E7%9B%B4%E8%BE%BE%E5%8F%B7%E5%90%8E%E5%8F%B0%E5%8A%9F%E8%83%BD%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9&amp;rev=1454531070&amp;do=diff</link>
+        <description>**1、地图推广资源，被限制的行业：**
+
+企事业单位、狗场、4S店、保洁、家政、报关行、侦探、开锁、百度、医院科室、企业内部部门、品牌家电维修、司法鉴定所、丝足会所暂未开通认领。</description>
+    </item>
+    <item rdf:about="https://eexx.me/pme/doku.php?id=%E7%9B%B4%E8%BE%BE%E5%8F%B7%E6%9C%8D%E5%8A%A1%E7%BB%84%E4%BB%B6%E6%98%BE%E7%A4%BA%E6%96%B9%E6%B3%95&amp;rev=1454531070&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-02-03T20:24:30+00:00</dc:date>
+        <title>直达号服务组件显示方法</title>
+        <link>https://eexx.me/pme/doku.php?id=%E7%9B%B4%E8%BE%BE%E5%8F%B7%E6%9C%8D%E5%8A%A1%E7%BB%84%E4%BB%B6%E6%98%BE%E7%A4%BA%E6%96%B9%E6%B3%95&amp;rev=1454531070&amp;do=diff</link>
+        <description>直达号服务组件显示原因
+  
+  
+  服务组件只有在移动端百度的搜索框里@直达词进去的时候才会显示，所以本身
+  在PC端是不显示的要显示，显示方式：    域名+ ?bd_wd=0
+  且服务组件在审核通过前不管PC还是手机打开都是不显示的，添加那段代码后
+  可以显示：域名+?bd_wd=0
+  
+  如     http://m.jjxm.com.cn/?bd_wd=0</description>
+    </item>
+    <item rdf:about="https://eexx.me/pme/doku.php?id=%E7%9B%B4%E8%BE%BE%E5%8F%B7%E6%9C%8D%E5%8A%A1%E7%BB%84%E4%BB%B6%E6%B5%8B%E8%AF%95%E5%9C%B0%E5%9D%80&amp;rev=1454531070&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-02-03T20:24:30+00:00</dc:date>
+        <title>直达号服务组件测试地址</title>
+        <link>https://eexx.me/pme/doku.php?id=%E7%9B%B4%E8%BE%BE%E5%8F%B7%E6%9C%8D%E5%8A%A1%E7%BB%84%E4%BB%B6%E6%B5%8B%E8%AF%95%E5%9C%B0%E5%9D%80&amp;rev=1454531070&amp;do=diff</link>
+        <description>直达号服务组件测试地址
+
+服务组件测试地址:   
+
+&lt;http://m.baidu.com/lightapp/&gt;{appid}?debug=1
+
+把链接中的{appid}换成具体的ID即可。如：
+
+&lt;http://m.baidu.com/lightapp/5977527?debug=1&gt;</description>
+    </item>
+    <item rdf:about="https://eexx.me/pme/doku.php?id=%E7%9B%B4%E8%BE%BE%E5%8F%B7%E6%9C%8D%E5%8A%A1%E7%BB%84%E4%BB%B6%E6%B5%8B%E8%AF%95%E6%B5%81%E7%A8%8B&amp;rev=1454531070&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-02-03T20:24:30+00:00</dc:date>
+        <title>直达号服务组件测试流程</title>
+        <link>https://eexx.me/pme/doku.php?id=%E7%9B%B4%E8%BE%BE%E5%8F%B7%E6%9C%8D%E5%8A%A1%E7%BB%84%E4%BB%B6%E6%B5%8B%E8%AF%95%E6%B5%81%E7%A8%8B&amp;rev=1454531070&amp;do=diff</link>
+        <description>直达号服务组件测试流程
+
+直达号服务组件测试地址：
+
+&lt;http://m.baidu.com/lightapp/&gt;{appid}?debug=1
+
+把{appid}换成直达号的具体ID就可以了
+
+比如：&lt;http://m.baidu.com/lightapp/5977527?debug=1&gt;</description>
+    </item>
+    <item rdf:about="https://eexx.me/pme/doku.php?id=%E7%9B%B4%E8%BE%BE%E5%8F%B7%E6%9C%8D%E5%8A%A1%E7%BB%84%E4%BB%B6pc%E7%AB%AF%E6%98%BE%E7%A4%BA%E4%B8%8D%E4%BA%86%E7%9A%84%E5%8E%9F%E5%9B%A0%E5%8F%8A%E6%96%B9%E6%B3%95&amp;rev=1454531070&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-02-03T20:24:30+00:00</dc:date>
+        <title>直达号服务组件pc端显示不了的原因及方法</title>
+        <link>https://eexx.me/pme/doku.php?id=%E7%9B%B4%E8%BE%BE%E5%8F%B7%E6%9C%8D%E5%8A%A1%E7%BB%84%E4%BB%B6pc%E7%AB%AF%E6%98%BE%E7%A4%BA%E4%B8%8D%E4%BA%86%E7%9A%84%E5%8E%9F%E5%9B%A0%E5%8F%8A%E6%96%B9%E6%B3%95&amp;rev=1454531070&amp;do=diff</link>
+        <description>直达号服务组件PC端显示不了的原因及方法
+     直达号服务组件PC端显示不了的原因:
+     服务组件只有在移动端百度的搜索框里@直达词进去的时候才会显示，所以本身
+     在PC端是不显示的。且服务组件在审核通过前不管PC还是手机打开都是不显示的，
+     添加那段代码后可以显示。添加的代码：?bd_wd=0
+     
+     
+     显示方法：    
+     域名+ ?bd_wd=0
+     比如：http://m.xmdxg.com/?bd_wd=0</description>
+    </item>
+    <item rdf:about="https://eexx.me/pme/doku.php?id=it&amp;rev=1454531070&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-02-03T20:24:30+00:00</dc:date>
+        <title>it</title>
+        <link>https://eexx.me/pme/doku.php?id=it&amp;rev=1454531070&amp;do=diff</link>
+        <description>IT哥
+
+活动报销申请（自助）
+
+为活跃部门气氛，我们鼓励大家私下联谊活动。
+
+只要你有活动聚会建议，带动大家。钱 不是问题~
+
+填写《活动经费报销单》
+
+
+=&gt;
+
+组织活动
+
+
+=&gt;
+
+填写报销单金额发票部分</description>
+    </item>
+    <item rdf:about="https://eexx.me/pme/doku.php?id=meeting&amp;rev=1454531070&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-02-03T20:24:30+00:00</dc:date>
+        <title>meeting</title>
+        <link>https://eexx.me/pme/doku.php?id=meeting&amp;rev=1454531070&amp;do=diff</link>
+        <description>会议室安排
+
+36号楼201
+
+36号楼的会议室已共享网盘供大家查阅（实时最新版本）：
+
+点击查阅会议室
+
+（博学、群贤、至善）
+
+预约接口人：兰晓莲
+
+30号楼107
+
+
+
+下载到本地(此刻版本)
+
+或用iphone扫一扫订阅：
+
+预约接口人：戴艺华、卢余惠、林霜霜</description>
+    </item>
+    <item rdf:about="https://eexx.me/pme/doku.php?id=navigation&amp;rev=1454531070&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-02-03T20:24:30+00:00</dc:date>
+        <title>navigation</title>
+        <link>https://eexx.me/pme/doku.php?id=navigation&amp;rev=1454531070&amp;do=diff</link>
+        <description>=UX组=
+
+复用模块
+
+	*  公共引用资源-JS库CSS包等
+	*  手机端页面转场效果
+
+=项目=
+
+统一平台
+
+	*  平台模板切图规范 （入门教程）
+	*  平台模板Demo与Smarty变量 （可在模板开发中实时预览）
+
+直达号
+
+==== 进入直达号专页 ====</description>
+    </item>
+    <item rdf:about="https://eexx.me/pme/doku.php?id=sidebar&amp;rev=1454531070&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-02-03T20:24:30+00:00</dc:date>
+        <title>sidebar</title>
+        <link>https://eexx.me/pme/doku.php?id=sidebar&amp;rev=1454531070&amp;do=diff</link>
+        <description>百度厦门 Wiki
+
+=项目=
+
+统一平台
+
+	&quot; 统一平台模板切图入门
+ 统一平台模板前端规范 
+ 统一平台模板模块库 
+ 统一平台模板注意事项
+ Quickbar 快捷导航
+ iconfont 图标代码查询&quot;
+
+直达号
+
+	&quot; ==== 进入直达号专页 ====&quot;
+
+风信
+
+	*  首页新版201404
+	*  后台测试需求20140505
+	* 小猫虾小知识
+
+微餐饮
+
+	*  微餐饮预期效果DEMO
+
+微商城
+
+	*  个人中心新版201404
+
+=程序部门=
+
+	&quot; ==== 进入程序部门专页 ====&quot;
+
+=UX组=
+
+前端开发和用户体验设计。HTML5、CSS3等技术...
+
+复用模块
+
+	&quot; 【公共引用资源-JS库CSS包等】
+ 手机端页面转场效果&quot;
+
+前端规范…</description>
+    </item>
+    <item rdf:about="https://eexx.me/pme/doku.php?id=sina&amp;rev=1454531070&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-02-03T20:24:30+00:00</dc:date>
+        <title>sina</title>
+        <link>https://eexx.me/pme/doku.php?id=sina&amp;rev=1454531070&amp;do=diff</link>
+        <description>新浪厦门WIKI
+
+插件库
+
+	*  jquery.cashout.js 登登登 水果机抽奖插件
+	*  jquery.roulette.js 转盘亮灯抽奖插件
+	*  指针转动转盘抽奖
+
+微博类
+
+	*  登录检测 及返回个人信息
+	*  分享按钮（无需加载js库）
+	*  关注按钮（无需加载js库）
+	*  微博热议（微博展示iframe）
+	*  微博调用封装
+
+其他类
+
+	*  minnan.css 闽南共用样式，包括DFZ登陆弹窗样式、mask遮罩样式等
+	*  ip 获取当前IP地址及区域名及网络运营商…</description>
+    </item>
+    <item rdf:about="https://eexx.me/pme/doku.php?id=start&amp;rev=1454531070&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-02-03T20:24:30+00:00</dc:date>
+        <title>start</title>
+        <link>https://eexx.me/pme/doku.php?id=start&amp;rev=1454531070&amp;do=diff</link>
+        <description>百度厦门 Wiki
+
+欢迎光临小懿的知识库，里面的东西 随便拿～～～
+
+会议室安排
+
+	&quot; ★★★ 进入会议室安排查询 ★★★&quot;
+
+项目
+
+统一平台
+
+	&quot; 统一平台模板切图入门
+ 统一平台模板前端规范 
+ 统一平台模板模块库 
+ 统一平台模板注意事项
+ Quickbar 快捷导航
+ iconfont 图标代码查询&quot;
+
+直达号
+
+	&quot; ==== 进入直达号专页 ====&quot;
+
+风信
+
+	*  首页新版201404
+	*  后台测试需求20140505
+	* 小猫虾小知识
+
+微餐饮
+
+	*  微餐饮预期效果DEMO
+
+微商城
+
+	*  个人中心新版201404
+
+程序部门
+
+	&quot; ==== 进入程序部门专页 ====&quot;
+
+UX组…</description>
+    </item>
+    <item rdf:about="https://eexx.me/pme/doku.php?id=zhida&amp;rev=1454531070&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2016-02-03T20:24:30+00:00</dc:date>
+        <title>zhida</title>
+        <link>https://eexx.me/pme/doku.php?id=zhida&amp;rev=1454531070&amp;do=diff</link>
+        <description>直达号
+
+现有的资料
+
+	*  data资料
+
+接入规范
+
+	* fomat移动轻应用接入规范
+	* fomat移动轻应用接入指南
+
+审核流程
+
+	* 轻应用
+	* 直达号
+
+接口说明
+
+	*  oauth接口
+	*  Blend API
+
+目前困境
+
+	* error
+	* error1
+
+小发现
+
+	* 小发现
+	* 小发现1
+	* 小发现2
+	* 小发现3
+
+关于后台订单管理
+
+	* 实现
+
+服务商添加直达号
+
+	* 直达号开通流程
+		* 订单中心接入
+		* 直达号服务组件测试流程
+		* 直达号服务组件PC端显示不了的原因及方法
+		* 直达号后台功能注意事项
+
+账号
+
+相关后台账号密码…</description>
+    </item>
+</rdf:RDF>

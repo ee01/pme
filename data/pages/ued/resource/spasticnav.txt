@@ -1,0 +1,40 @@
+====== 导航栏滑动滚动插件 ======
+
+引入文件：
+
+	<script type="text/javascript" src="http://common.mn.sina.com.cn/public/resource/lib/jquery.spasticNav.js"></script>
+
+HTML:
+
+    <ul id="nav">
+        <li class="selected"><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">More About My Portfolio</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+
+JS：
+
+	$("ul#nav").spasticNav({
+		overlap: 0,
+		color: 'transparent'
+	});
+
+CSS：
+
+	ul li a {
+		position: relative;
+		z-index: 2;
+	}
+	#blob {
+		position: absolute;
+		z-index: 1;
+		top: 0;
+		background: url(images/rank-tab-hover.png) no-repeat;
+	}
+
+
+
+
+DEMO地址：http://sc.chinaz.com/jiaobendemo.aspx?downloadid=13123152544262

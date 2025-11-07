@@ -1,0 +1,106 @@
+<span class="re1">.roulette</span> <span class="br0">&#123;</span>
+	<span class="kw1">position</span><span class="sy0">:</span> <span class="kw2">relative</span><span class="sy0">;</span>
+	<span class="kw1">width</span><span class="sy0">:</span> <span class="re3">541px</span><span class="sy0">;</span>
+	<span class="kw1">height</span><span class="sy0">:</span> <span class="re3">537px</span><span class="sy0">;</span>
+	<span class="kw1">margin-top</span><span class="sy0">:</span> <span class="re3">10px</span><span class="sy0">;</span>
+	<span class="kw1">background</span><span class="sy0">:</span> <span class="kw2">url</span><span class="br0">&#40;</span><span class="co2">images/roulette.png</span><span class="br0">&#41;</span> <span class="kw2">no-repeat</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+	<span class="re1">.roulette</span> <span class="re1">.roulette_start</span> <span class="br0">&#123;</span>
+		<span class="kw1">position</span><span class="sy0">:</span> <span class="kw2">absolute</span><span class="sy0">;</span>
+		<span class="kw1">left</span><span class="sy0">:</span> <span class="re3">163px</span><span class="sy0">;</span>
+		<span class="kw1">top</span><span class="sy0">:</span> <span class="re3">166px</span><span class="sy0">;</span>
+		<span class="kw1">width</span><span class="sy0">:</span> <span class="re3">213px</span><span class="sy0">;</span>
+		<span class="kw1">height</span><span class="sy0">:</span> <span class="re3">211px</span><span class="sy0">;</span>
+		<span class="kw1">background</span><span class="sy0">:</span> <span class="kw2">url</span><span class="br0">&#40;</span><span class="co2">images/roulette_start.png</span><span class="br0">&#41;</span> <span class="kw2">no-repeat</span><span class="sy0">;</span>
+	<span class="br0">&#125;</span>
+	<span class="re1">.roulette</span> <span class="re1">.roulette_start</span><span class="re2">:hover </span><span class="br0">&#123;</span>
+		<span class="kw1">background-position</span><span class="sy0">:</span> <span class="nu0">0</span> <span class="re3">-211px</span><span class="sy0">;</span>
+	<span class="br0">&#125;</span>
+	<span class="re1">.roulette</span> <span class="re1">.prize_6</span> <span class="br0">&#123;</span>
+		<span class="kw1">position</span><span class="sy0">:</span> <span class="kw2">absolute</span><span class="sy0">;</span>
+		<span class="kw1">left</span><span class="sy0">:</span> <span class="re3">11px</span><span class="sy0">;</span>
+		<span class="kw1">top</span><span class="sy0">:</span> <span class="re3">91px</span><span class="sy0">;</span>
+		<span class="kw1">width</span><span class="sy0">:</span> <span class="re3">181px</span><span class="sy0">;</span>
+		<span class="kw1">height</span><span class="sy0">:</span> <span class="re3">177px</span><span class="sy0">;</span>
+		<span class="kw1">background</span><span class="sy0">:</span> <span class="kw2">url</span><span class="br0">&#40;</span>images/roulette_prize_1.png<span class="br0">&#41;</span> <span class="kw2">no-repeat</span><span class="sy0">;</span>
+	<span class="br0">&#125;</span>
+	<span class="re1">.roulette</span> <span class="re1">.prize_6</span><span class="re1">.current</span> <span class="br0">&#123;</span>
+		<span class="kw1">background-position</span><span class="sy0">:</span> <span class="nu0">0</span> <span class="re3">-177px</span><span class="sy0">;</span>
+	<span class="br0">&#125;</span>
+	<span class="re1">.roulette</span> <span class="re1">.prize_1</span> <span class="br0">&#123;</span>
+		<span class="kw1">position</span><span class="sy0">:</span> <span class="kw2">absolute</span><span class="sy0">;</span>
+		<span class="kw1">left</span><span class="sy0">:</span> <span class="re3">91px</span><span class="sy0">;</span>
+		<span class="kw1">top</span><span class="sy0">:</span> <span class="re3">10px</span><span class="sy0">;</span>
+		<span class="kw1">width</span><span class="sy0">:</span> <span class="re3">177px</span><span class="sy0">;</span>
+		<span class="kw1">height</span><span class="sy0">:</span> <span class="re3">184px</span><span class="sy0">;</span>
+		<span class="kw1">background</span><span class="sy0">:</span> <span class="kw2">url</span><span class="br0">&#40;</span>images/roulette_prize_2.png<span class="br0">&#41;</span> <span class="kw2">no-repeat</span><span class="sy0">;</span>
+	<span class="br0">&#125;</span>
+	<span class="re1">.roulette</span> <span class="re1">.prize_1</span><span class="re1">.current</span> <span class="br0">&#123;</span>
+		<span class="kw1">background-position</span><span class="sy0">:</span> <span class="nu0">0</span> <span class="re3">-184px</span><span class="sy0">;</span>
+	<span class="br0">&#125;</span>
+	<span class="re1">.roulette</span> <span class="re1">.prize_-1</span> <span class="br0">&#123;</span>
+		<span class="kw1">position</span><span class="sy0">:</span> <span class="kw2">absolute</span><span class="sy0">;</span>
+		<span class="kw1">left</span><span class="sy0">:</span> <span class="re3">274px</span><span class="sy0">;</span>
+		<span class="kw1">top</span><span class="sy0">:</span> <span class="re3">10px</span><span class="sy0">;</span>
+		<span class="kw1">width</span><span class="sy0">:</span> <span class="re3">178px</span><span class="sy0">;</span>
+		<span class="kw1">height</span><span class="sy0">:</span> <span class="re3">183px</span><span class="sy0">;</span>
+		<span class="kw1">background</span><span class="sy0">:</span> <span class="kw2">url</span><span class="br0">&#40;</span>images/roulette_prize_3.png<span class="br0">&#41;</span> <span class="kw2">no-repeat</span><span class="sy0">;</span>
+	<span class="br0">&#125;</span>
+	<span class="re1">.roulette</span> <span class="re1">.prize_-1</span><span class="re1">.current</span> <span class="br0">&#123;</span>
+		<span class="kw1">background-position</span><span class="sy0">:</span> <span class="nu0">0</span> <span class="re3">-183px</span><span class="sy0">;</span>
+	<span class="br0">&#125;</span>
+	<span class="re1">.roulette</span> <span class="re1">.prize_2</span> <span class="br0">&#123;</span>
+		<span class="kw1">position</span><span class="sy0">:</span> <span class="kw2">absolute</span><span class="sy0">;</span>
+		<span class="kw1">left</span><span class="sy0">:</span> <span class="re3">349px</span><span class="sy0">;</span>
+		<span class="kw1">top</span><span class="sy0">:</span> <span class="re3">91px</span><span class="sy0">;</span>
+		<span class="kw1">width</span><span class="sy0">:</span> <span class="re3">181px</span><span class="sy0">;</span>
+		<span class="kw1">height</span><span class="sy0">:</span> <span class="re3">177px</span><span class="sy0">;</span>
+		<span class="kw1">background</span><span class="sy0">:</span> <span class="kw2">url</span><span class="br0">&#40;</span>images/roulette_prize_4.png<span class="br0">&#41;</span> <span class="kw2">no-repeat</span><span class="sy0">;</span>
+	<span class="br0">&#125;</span>
+	<span class="re1">.roulette</span> <span class="re1">.prize_2</span><span class="re1">.current</span> <span class="br0">&#123;</span>
+		<span class="kw1">background-position</span><span class="sy0">:</span> <span class="nu0">0</span> <span class="re3">-177px</span><span class="sy0">;</span>
+	<span class="br0">&#125;</span>
+	<span class="re1">.roulette</span> <span class="re1">.prize_5</span> <span class="br0">&#123;</span>
+		<span class="kw1">position</span><span class="sy0">:</span> <span class="kw2">absolute</span><span class="sy0">;</span>
+		<span class="kw1">left</span><span class="sy0">:</span> <span class="re3">349px</span><span class="sy0">;</span>
+		<span class="kw1">top</span><span class="sy0">:</span> <span class="re3">275px</span><span class="sy0">;</span>
+		<span class="kw1">width</span><span class="sy0">:</span> <span class="re3">181px</span><span class="sy0">;</span>
+		<span class="kw1">height</span><span class="sy0">:</span> <span class="re3">177px</span><span class="sy0">;</span>
+		<span class="kw1">background</span><span class="sy0">:</span> <span class="kw2">url</span><span class="br0">&#40;</span>images/roulette_prize_5.png<span class="br0">&#41;</span> <span class="kw2">no-repeat</span><span class="sy0">;</span>
+	<span class="br0">&#125;</span>
+	<span class="re1">.roulette</span> <span class="re1">.prize_5</span><span class="re1">.current</span> <span class="br0">&#123;</span>
+		<span class="kw1">background-position</span><span class="sy0">:</span> <span class="nu0">0</span> <span class="re3">-177px</span><span class="sy0">;</span>
+	<span class="br0">&#125;</span>
+	<span class="re1">.roulette</span> .prize_7<span class="br0">&#123;</span>
+		<span class="kw1">position</span><span class="sy0">:</span> <span class="kw2">absolute</span><span class="sy0">;</span>
+		<span class="kw1">left</span><span class="sy0">:</span> <span class="re3">271px</span><span class="sy0">;</span>
+		<span class="kw1">top</span><span class="sy0">:</span> <span class="re3">349px</span><span class="sy0">;</span>
+		<span class="kw1">width</span><span class="sy0">:</span> <span class="re3">178px</span><span class="sy0">;</span>
+		<span class="kw1">height</span><span class="sy0">:</span> <span class="re3">183px</span><span class="sy0">;</span>
+		<span class="kw1">background</span><span class="sy0">:</span> <span class="kw2">url</span><span class="br0">&#40;</span>images/roulette_prize_6.png<span class="br0">&#41;</span> <span class="kw2">no-repeat</span><span class="sy0">;</span>
+	<span class="br0">&#125;</span>
+	<span class="re1">.roulette</span> <span class="re1">.prize_7</span><span class="re1">.current</span> <span class="br0">&#123;</span>
+		<span class="kw1">background-position</span><span class="sy0">:</span> <span class="nu0">0</span> <span class="re3">-183px</span><span class="sy0">;</span>
+	<span class="br0">&#125;</span>
+	<span class="re1">.roulette</span> <span class="re1">.prize_4</span> <span class="br0">&#123;</span>
+		<span class="kw1">position</span><span class="sy0">:</span> <span class="kw2">absolute</span><span class="sy0">;</span>
+		<span class="kw1">left</span><span class="sy0">:</span> <span class="re3">91px</span><span class="sy0">;</span>
+		<span class="kw1">top</span><span class="sy0">:</span> <span class="re3">349px</span><span class="sy0">;</span>
+		<span class="kw1">width</span><span class="sy0">:</span> <span class="re3">178px</span><span class="sy0">;</span>
+		<span class="kw1">height</span><span class="sy0">:</span> <span class="re3">184px</span><span class="sy0">;</span>
+		<span class="kw1">background</span><span class="sy0">:</span> <span class="kw2">url</span><span class="br0">&#40;</span>images/roulette_prize_7.png<span class="br0">&#41;</span> <span class="kw2">no-repeat</span><span class="sy0">;</span>
+	<span class="br0">&#125;</span>
+	<span class="re1">.roulette</span> <span class="re1">.prize_4</span><span class="re1">.current</span> <span class="br0">&#123;</span>
+		<span class="kw1">background-position</span><span class="sy0">:</span> <span class="nu0">0</span> <span class="re3">-184px</span><span class="sy0">;</span>
+	<span class="br0">&#125;</span>
+	<span class="re1">.roulette</span> <span class="re1">.prize_3</span> <span class="br0">&#123;</span>
+		<span class="kw1">position</span><span class="sy0">:</span> <span class="kw2">absolute</span><span class="sy0">;</span>
+		<span class="kw1">left</span><span class="sy0">:</span> <span class="re3">11px</span><span class="sy0">;</span>
+		<span class="kw1">top</span><span class="sy0">:</span> <span class="re3">274px</span><span class="sy0">;</span>
+		<span class="kw1">width</span><span class="sy0">:</span> <span class="re3">181px</span><span class="sy0">;</span>
+		<span class="kw1">height</span><span class="sy0">:</span> <span class="re3">177px</span><span class="sy0">;</span>
+		<span class="kw1">background</span><span class="sy0">:</span> <span class="kw2">url</span><span class="br0">&#40;</span>images/roulette_prize_8.png<span class="br0">&#41;</span> <span class="kw2">no-repeat</span><span class="sy0">;</span>
+	<span class="br0">&#125;</span>
+	<span class="re1">.roulette</span> <span class="re1">.prize_3</span><span class="re1">.current</span> <span class="br0">&#123;</span>
+		<span class="kw1">background-position</span><span class="sy0">:</span> <span class="nu0">0</span> <span class="re3">-177px</span><span class="sy0">;</span>
+	<span class="br0">&#125;</span>

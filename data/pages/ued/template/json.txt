@@ -1,0 +1,888 @@
+====== JSON文件的语法与使用 ======
+
+===== 数据格式 =====
+<file javascript index.json>
+{
+	"title": {
+		"value": "XXX企业",
+		"description": "顶部大标题",
+		"type": "text"
+	}
+}
+</file>
+每个数据都必须包含value、description和type项。
+
+__description描述：__ 用来描述其在页面的位置，如“顶部轮滚图”“左侧公告”“中部第二个新闻列表”
+
+__type类型：__
+  * [[#typetext|text]]：单行文字
+  * [[#typetextarea|textarea]]：多行文本
+  * [[#typeimage|image]]：单张图片
+  * [[#typeimages|images]]：多图，多个image类型的数组
+  * [[#typenav|nav]]：指向栏目数据变量（特别注意：此类型构造的json格式与最终输出smarty变量格式不同）
+  * [[#typenavs|navs]]：指向多个栏目数据
+  * [[#typelist|list]]：指向列表型栏目（[[#typenav|nav]]的扩展）
+  * [[#typepage|page]]：指向单页型栏目（[[#typenav|nav]]的扩展）
+  * [[#typelink|link]]：指向链接型栏目（[[#typenav|nav]]的扩展）
+  * [[ued:template:mindex#底部导航定义方法|quickbar]]：手机底部导航，仅供手机模板调用，具体参见：[[ued:template:mindex#底部导航定义方法|底部导航定义方法]]
+  * [[#typeform|form]]：表单（嵌入） ===ADD===
+
+__value初始化数据：__ 可放入示例数据，切图过程实时预览（不同type类型的value值不同，具体可参见如下实例json）
+
+__config配置：__ 目前只有[[#typelist|type:list]]类型有config配置项
+
+**注：nav、list、page、link四种类型实际是同一种类型，对比如下：**
+
+|                                  ^ nav    ^ list   ^ page  ^ link  ^ navs   ^
+^ filter默认值                        | ALL    | list   | page  | link  | ALL    |
+^ $index.xxx.data                  | 默认空    | 默认20条  | 无     | 无     | 默认空    |
+^ 定义data_limit后\\ $index.xxx.data  | 默认20条  | 默认20条  | 无     | 无     | 默认20条  |
+^ star_only参数                      | 不生效    | 生效     | 无     | 无     | 不生效    |
+^ 定义data_limit后\\ star_only参数      | 生效     | 生效     | 无     | 无     | 生效     |
+^ $index.xxx.content（少用）           | 无      | 无      | 有     | 无     | 无      |
+===== 实例json与数据说明 =====
+查阅完整的json实例，请点击注脚！((
+<file javascript index.json>
+{
+	"announcement_title": {
+		"value": "大喇叭：",
+		"description": "公告标题",
+		"type": "text"
+	},
+	"announcement": {
+		"value": "你看到的都是模板测试数据，需修改请登陆后台进入【页面内容】更新！\r\n第二行公告内容公告内容公告内容公告内容",
+		"description": "网站公告",
+		"type": "textarea"
+	},
+	"logo": {
+		"value": {
+			"title": "XXX企业",
+			"image": "http://www.baidu.com/img/baidu_jgylogo3.gif",
+			"link": "http://www.baidu.com/"
+		},
+		"description": "网站LOGO",
+		"type": "image"
+	}
+	"slidepics": {
+		"value": [{
+			"title": "测试图1",
+			"image": "http://tb2.bdstatic.com/tb/static-common/img/search_logo_big_282cef2.gif",
+			"link": "article/1.html"
+		}, {
+			"title": "测试图2",
+			"image": "http://img0.bdstatic.com/static/common/widget/search_box_search/logo/logo_3b6de4c.png",
+			"link": "article/2.html"
+		}],
+		"description": "大轮滚图",
+		"type": "images"
+	},
+	"list1": {
+		"value": {
+			"id": 1,
+			"total": 4,
+			"star_only": 0
+		},
+		"description": "第一个图文列表",
+		"type": "list"
+	}
+}
+</file>
+
+**数据变量说明：**
+
+  * {$index.announcement_title} 公告标题文案
+  * {$index.announcement} 网站公告
+  * {$index.logo.title} LOGO文案（网站标题）
+  * {$index.logo.image} LOGO图片地址
+  * {$index.logo.link} LOGO链接
+  * {$index.slidepics[0].title} 轮滚图图片标题
+  * {$index.slidepics[0].image} 轮滚图图片地址
+  * {$index.slidepics[0].link} 轮滚图图片链接
+  * {$index.list1.name} 栏目名称
+  * {$index.list1.en_name} 栏目英文名称
+  * {$index.list1.icon} 栏目图标（iconfont技术，可改大小可换色）
+  * {$index.list1.image} 栏目图片
+  * {$index.list1.link} 栏目链接(一般用于“查看更多”按钮)
+  * {$index.list1.description} 栏目描述
+  * **{$index.list1.data[]} 这个特别注意，输出的数据格式与填写的json格式是不一样的**（数组格式，需foreach循环）
+  * {$index.list1.data[0].title} 文章标题
+  * {$index.list1.data[0].image} 文章预览图
+  * {$index.list1.data[0].link} 文章链接
+  * {$index.list1.data[0].description} 文章内容
+  * {$index.list1.data[0].pubdate} 发布时间
+  * {$index.list1.data[0].category.name} 所属栏目名
+  * {$index.list1.data[0].category.en_name} 所属栏目英文名
+  * {$index.list1.data[0].category.icon} 所属栏目图标（iconfont技术，可改大小可换色）
+  * {$index.list1.data[0].category.link} 所属栏目链接
+
+))
+
+==== type:text ====
+
+比如，json文件内容为：
+<file javascript index.json>
+{
+	"announcement_title": {
+		"value": "大喇叭：",
+		"description": "公告标题",
+		"type": "text"
+	}
+}
+</file>
+调用形式：
+<file html index.html>
+<h1>{$index.title}</h1>
+<!-- 输出：<h1>XXX企业</h1> -->
+</file>
+数据变量说明：
+  * {$index.announcement_title} 公告标题文案
+
+==== type:textarea ====
+
+比如，json文件内容为：
+<file javascript index.json>
+{
+	"announcement": {
+		"value": "这里是自动输出的公共内容！\r\n第二行公告内容",
+		"description": "公告内容",
+		"type": "textarea"
+	}
+}
+</file>
+调用形式：
+<file html index.html>
+<p>{$index.announcement}</p>
+<!-- 输出：<p>这里是自动输出的公共内容！<br />第二行公告内容</p> -->
+</file>
+数据变量说明：
+  * {$index.announcement} 网站公告
+
+==== type:image ====
+
+比如，json文件内容为：
+<file javascript index.json>
+{
+	"logo": {
+		"value": {
+			"title": "XXX企业",
+			"image": "images/logo-home.png",
+			"link": "http://www.baidu.com/"
+		},
+		"description": "网站LOGO",
+		"type": "image",
+		"config": {
+			"height": 100
+		}
+	}
+}
+</file>
+config配置中的width和height也可只设置一个，另一个会自适。
+
+调用形式：
+<file html index.html>
+<img src="{$index.logo.image}" alt="{$index.logo.title}">
+<!-- 输出：<img src="images/logo-home.png" alt="XXX企业"> -->
+</file>
+数据变量说明：
+  * {$index.logo.title} LOGO文案（网站标题）
+  * {$index.logo.image} LOGO图片地址
+  * {$index.logo.link} LOGO链接
+
+==== type:images ====
+__config：__ 
+  * width：图片宽度
+  * height：图片高度
+  * forcesize：强制高宽（所有上传图片都会被压缩
+  * limit：图片数量
+
+json文件内容为：
+<file javascript index.json>
+{
+	"slidepics": {
+		"value": [{
+			"title": "测试图1",
+			"image": "http://tb2.bdstatic.com/tb/static-common/img/search_logo_big_282cef2.gif",
+			"link": "http://www.baidu.com"
+		}, {
+			"title": "测试图2",
+			"image": "http://img0.bdstatic.com/static/common/widget/search_box_search/logo/logo_3b6de4c.png",
+			"link": "http://www.baidu.com"
+		}],
+		"description": "大轮滚图",
+		"type": "images",
+		"config": {
+			"width": 950,
+			"height": 500,
+			"forcesize": "true",
+			"limit": 4
+		}
+	}
+}
+</file>
+config配置中limit为可选项。
+<file html index.html>
+<!-- 轮滚图 -->
+<ul class="clearfix">
+	{foreach item=slidepic from=$index.slidepics}
+	<li class="fl"><a href="{$slidepic.link}" target="_blank"><img src="{$slidepic.image}" alt="{$slidepic.title}" /></a></li>
+	{/foreach}
+</ul>
+<!-- 输出：
+<ul class="clearfix">
+	<li class="fl"><a href="http://www.baidu.com" target="_blank"><img src="http://tb2.bdstatic.com/tb/static-common/img/search_logo_big_282cef2.gif" alt="测试图1"></a></li>
+	<li class="fl"><a href="http://www.baidu.com" target="_blank"><img src="http://img0.bdstatic.com/static/common/widget/search_box_search/logo/logo_3b6de4c.png" alt="测试图2"></a></li>
+</ul>
+-->
+</file>
+数据变量说明：
+  * {$index.slidepics[0].title} 轮滚图图片标题
+  * {$index.slidepics[0].image} 轮滚图图片地址
+  * {$index.slidepics[0].link} 轮滚图图片链接
+  * {$index.slidepics[0].description} 轮滚图图片描述（可选，需定义((
+<file javascript index.json>
+{
+	"slidepics": {
+		"value": [{
+			"title": "测试图1",
+			"image": "http://tb2.bdstatic.com/tb/static-common/img/search_logo_big_282cef2.gif",
+			"link": "http://www.baidu.com",
+			"description": "这是图片的一大段描述\r\n可以换行。。。"
+		}, {
+			"title": "测试图2",
+			"image": "http://img0.bdstatic.com/static/common/widget/search_box_search/logo/logo_3b6de4c.png",
+			"link": "http://www.baidu.com",
+			"description": "这是图片的一大段描述\r\n可以换行。。。"
+		}],
+		"description": "大轮滚图",
+		"type": "images",
+		"config": {
+			"width": 950,
+			"height": 500,
+			"limit": 4
+		}
+	}
+}
+</file>
+))）
+
+==== type:nav ====
+
+<html><span style="color:red">此类型的自定义变量与以上不同，value值留空，会自动填充网站数据！</span></html>
+
+<file javascript index.json>
+{
+	"nav1": {
+		"value": {},
+		"description": "快速导航链接",
+		"type": "nav",
+		"config": {
+			"filter": "ALL",
+			"nav_width": 200,
+			"nav_height": 200,
+			"width": 200,
+			"height": 120
+		}
+	}
+}
+</file>
+
+__config：__ 
+  * filter：筛选栏目类型。默认值："ALL"（大写）代表筛选所有栏目。也可填写"list"仅允许列表型栏目，或者"list,page"筛选多种类型栏目。详见：[#filter参数|filter参数]
+  * nav_width：栏目图片宽度（如有引用栏目图片时填写）
+  * nav_height：栏目图片高度（如有引用栏目图片时填写）
+  * data_limit：限制每个栏目列表数据输出的个数（默认0，不输出任何列表数据）
+  * width：列表数据图片宽度，data_limit有值时生效（如有引用列表数据图片时填写）
+  * height：列表数据图片高度，data_limit有值时生效（如有引用列表数据图片时填写）
+  * star_only：是否默认输出星标(推荐)文章，data_limit有值时生效（可用于“热门产品”等栏目）
+  * mustchild：true时筛选出只包含子栏目的栏目供客服选择（true时用于侧边子导航，默认值false）
+  * showchilddata：true时childmenu也同时输出data值
+
+如果是filter筛选list型，是图片列表必须定义高宽：
+<file javascript index.json>
+{
+	"list1": {
+		"value": {},
+		"description": "快速导航链接",
+		"type": "nav",
+		"config": {
+			"filter": "list",
+			"width": 200,
+			"height": 120
+		}
+	}
+}
+</file>
+如果是有引用栏目图片，必须定义栏目图高宽：
+<file javascript index.json>
+{
+	"page1": {
+		"value": {},
+		"description": "左上角单页内容展示",
+		"type": "nav",
+		"config": {
+			"filter": "page",
+			"nav_width": 200,
+			"nav_height": 120
+		}
+	}
+}
+</file>
+
+=== filter参数 ===
+
+== filter:ALL ==
+客服可以选择任何类型的栏目。
+
+数据变量说明：
+  * {$index.nav1.name} 栏目名称
+  * {$index.nav1.en_name} 栏目英文名称
+  * {$index.nav1.icon} 栏目图标（iconfont技术，可改大小可换色）
+  * {$index.nav1.image} 栏目图片
+  * {$index.nav1.link} 栏目链接(一般用于“查看更多”按钮)
+  * {$index.nav1.description} 栏目描述
+  * {$index.nav1.type} 栏目类型
+
+== filter:list ==
+客服只能选择列表类型的栏目（1文字列表、2图片列表、3图文列表）。
+
+数据变量说明：
+  * {$index.list1.name} 栏目名称
+  * {$index.list1.en_name} 栏目英文名称
+  * {$index.list1.icon} 栏目图标（iconfont技术，可改大小可换色）
+  * {$index.list1.image} 栏目图片
+  * {$index.list1.link} 栏目链接(一般用于“查看更多”按钮)
+  * {$index.list1.description} 栏目描述
+  * **{$index.list1.data[]} 栏目下文章数据**（数组格式，需foreach循环）
+  * {$index.list1.childmenu[]} 子导航，结构类似导航
+  * {$index.list1.type} 栏目类型
+
+== filter:page ==
+客服只能选择单页类型的栏目。
+
+数据变量说明：
+  * {$index.page1.name} 栏目名称
+  * {$index.page1.en_name} 栏目英文名称
+  * {$index.page1.icon} 栏目图标（iconfont技术，可改大小可换色）
+  * {$index.page1.image} 栏目图片
+  * {$index.page1.link} 栏目链接(一般用于“查看更多”按钮)
+  * {$index.page1.description} 栏目描述
+  * **{$index.page1.content} 栏目单页内容HTML数据**
+  * {$index.page1.childmenu[]} 子导航，结构类似导航（数组格式，需foreach循环）
+  * {$index.page1.type} 栏目类型
+
+== filter:link ==
+客服只能选择链接类型的栏目。（5功能栏目、6链接、7、8）
+
+数据变量说明：
+  * {$index.link1.name} 栏目名称
+  * {$index.link1.en_name} 栏目英文名称
+  * {$index.link1.icon} 栏目图标（iconfont技术，可改大小可换色）
+  * {$index.link1.image} 栏目图片
+  * {$index.link1.link} 栏目链接(一般用于“查看更多”按钮)
+  * {$index.link1.description} 栏目描述
+  * **{$index.link1.content} 栏目单页内容HTML数据**
+  * {$index.link1.type} 栏目类型
+
+== filter:feedback ==
+客服只能选择留言板栏目。
+
+数据变量说明：
+  * {$index.feedback.name} 栏目名称
+  * {$index.feedback.en_name} 栏目英文名称
+  * {$index.feedback.icon} 栏目图标（iconfont技术，可改大小可换色）
+  * {$index.feedback.image} 栏目图片
+  * {$index.feedback.link} 栏目链接(一般用于“查看更多”按钮)
+  * {$index.feedback.description} 栏目描述
+  * **{$index.feedback.posturl} 留言板form表单的action值**
+  * {$index.feedback.type} 栏目类型
+
+调用形式：
+<file html index.html>
+<h2>在这里给我留言噢~<span>{$index.feedback.en_name}</span></h2>
+<form action="{$index.feedback.posturl}">
+	<p><input type="text" name="name" /></p>
+	<p><input type="text" name="telephone" /></p>
+	<p><input type="text" name="email" /></p>
+	<p><textarea name="content" rows="5"></textarea></p>
+	<p><input type="submit" /></p>
+</form>
+<!-- 输出：
+<h2>在这里给我留言噢~<span>Feed Back</span></h2>
+<form action="http://....">
+	<p><input type="text" name="name" /></p>
+	<p><input type="text" name="telephone" /></p>
+	<p><input type="text" name="email" /></p>
+	<p><textarea name="content" rows="5"></textarea></p>
+	<p><input type="submit" /></p>
+</form>
+-->
+</file>
+**注意：input的name值必须为以下字段**
+  * name：姓名
+  * telephone：电话
+  * email：邮件地址
+  * content：内容
+
+== filter:list,page ==
+客服只能选择列表或者单页类型的栏目。（也可以英文逗号分割list,page,link任意组合）
+
+数据变量说明：
+  * {$index.leftnavs.name} 栏目名称
+  * {$index.leftnavs.en_name} 栏目英文名称
+  * {$index.leftnavs.icon} 栏目图标（iconfont技术，可改大小可换色）
+  * {$index.leftnavs.image} 栏目图片
+  * {$index.leftnavs.link} 栏目链接(一般用于“查看更多”按钮)
+  * {$index.leftnavs.description} 栏目描述
+  * {$index.leftnavs.childmenu[]} 子导航，结构类似导航（数组格式，需foreach循环）
+  * {$index.leftnavs.type} 栏目类型
+==== type:navs ====
+
+多个[#typenav|type:nav]的集合，类似images与image类型变量。
+
+<file javascript index.json>
+{
+	"second_navs": {
+		"value": {},
+		"description": "第二导航（底部）",
+		"type": "navs",
+		"config": {
+			"limit": 8
+		}
+	}
+}
+</file>
+
+__config：__ 
+  * filter：筛选栏目类型。默认值："ALL"（大写）代表筛选所有栏目。也可填写"list"仅允许列表型栏目，或者"list,page"筛选多种类型栏目。
+  * limit：限制输出[#typenav|type:navs]的个数
+  * nav_width：栏目图片宽度（如有引用栏目图片时填写）
+  * nav_height：栏目图片高度（如有引用栏目图片时填写）
+  * data_limit：限制每个栏目列表数据输出的个数（默认0，不输出任何列表数据）
+  * width：每个栏目列表数据图片宽度，data_limit有值时生效（如有引用列表数据图片时填写）
+  * height：每个栏目列表数据图片高度，data_limit有值时生效（如有引用列表数据图片时填写）
+  * star_only：是否默认输出星标(推荐)文章，data_limit有值时生效（可用于“热门产品”等栏目）
+  * mustchild：true时筛选出只包含子栏目的栏目供客服选择（默认false，用于侧边子导航）
+  * showchilddata：true时childmenu也同时输出data值
+
+调用形式：
+<file html _footer.html>
+<footer>
+	<!-- 第二导航 -->
+	<nav>
+		<ul class="clearfix">
+			{foreach item=nav from=$index.second_navs}
+			<li class="{if $nav.current}current{/if}"><a href="{$nav.link}">{$nav.name}</a></li>
+			{/foreach}
+		</ul>
+	</nav>
+</footer>
+<!-- 输出：
+<footer>
+	<nav>
+		<ul class="clearfix">
+			<li><a href="list-text.html">新闻动态</a></li>
+			<li class="current"><a href="list-imagetext.html">产品中心</a></li>
+			<li><a href="list-text.html">产品动态</a></li>
+			<li><a href="list-page.html">公司简介</a></li>
+		</ul>
+	</nav>
+</footer>
+-->
+</file>
+
+
+==== type:list ====
+
+此类型变量全等于 [[#typenav|type:nav]] 配置config的 ''"filter": "list"''((
+	"list1": {
+		"value": {},
+		"description": "右侧热门新闻",
+		"type": "nav",
+		"config": {
+			"filter": "list"
+		}
+	}
+)) 。
+
+比如，json文件内容为：
+<file javascript index.json>
+{
+	"list1": {
+		"value": {},
+		"description": "第一个文字列表",
+		"type": "list",
+		"config": {
+			"width": 200,
+			"height": 120,
+			"star_only": true
+		}
+	}
+}
+</file>
+
+__config：__ 
+  * filter：筛选栏目类型。默认值："list"。此参数说明具体参见：[#typenav|type:nav]的config配置
+  * data_limit：限制每个栏目列表数据输出的个数（默认20，可以不填写，用@index判断break）
+  * width：列表数据图片宽度（如有引用列表数据图片时填写）
+  * height：列表数据图片高度（如有引用列表数据图片时填写）
+  * star_only：是否默认输出星标(推荐)文章，可用于“热门产品”等栏目
+  * nav_width：栏目图片宽度（如有引用栏目图片时填写）
+  * nav_height：栏目图片高度（如有引用栏目图片时填写）
+  * mustchild：true时筛选出只包含子栏目的栏目供客服选择（默认false，用于侧边子导航）
+  * showchilddata：true时childmenu也同时输出data值
+
+调用形式：
+<file html index.html>
+<h2>{$index.list1.name}<span>{$index.list1.en_name}</span></h2>
+<ul class="clearfix">
+	{foreach item=article from=$index.list1.data}
+	<li><img src="{$article.image}" alt="{$article.title|strip_tags}" /><a class="ellipsis" href="{$article.link}" target="_blank">{$article.title}</a></li>
+	{if $article@index+1 == 5}{break}{/if}
+	{/foreach}
+</ul>
+<!-- 输出：
+<h2>产品中心<span>Products</span></h2>
+<ul class="clearfix">
+	<li><img src="images/pro1.jpg" alt="这是一篇测试文章" /><a class="ellipsis" href="content-news.html" target="_blank">这是一篇测试文章</a></li>
+	<li><img src="images/pro2.jpg" alt="这是一篇测试文章" /><a class="ellipsis" href="content-news.html" target="_blank">这是一篇测试文章</a></li>
+	<li><img src="images/pro3.jpg" alt="这是一篇测试文章" /><a class="ellipsis" href="content-news.html" target="_blank">这是一篇测试文章</a></li>
+	<li><img src="images/pro4.jpg" alt="这是一篇测试文章" /><a class="ellipsis" href="content-news.html" target="_blank">这是一篇测试文章</a></li>
+	<li><img src="images/pro5.jpg" alt="这是一篇测试文章" /><a class="ellipsis" href="content-news.html" target="_blank">这是一篇测试文章</a></li>
+</ul>
+-->
+</file>
+数据变量说明（**这个特别注意，输出的数据格式与填写的json格式是不一样的**）：\\
+（以下参考为filter筛选出list的栏目数据变量格式）
+  * {$index.list1.name} 栏目名称
+  * {$index.list1.en_name} 栏目英文名称
+  * {$index.list1.icon} 栏目图标（iconfont技术，可改大小可换色）
+  * {$index.list1.image} 栏目图片
+  * {$index.list1.link} 栏目链接(一般用于“查看更多”按钮)
+  * {$index.list1.description} 栏目描述
+  * {$index.list1.data[]} 栏目下文章数据（数组格式，需foreach循环）
+  * {$index.list1.data[0].title} 文章标题
+  * {$index.list1.data[0].image} 文章预览图
+  * {$index.list1.data[0].link} 文章链接
+  * {$index.list1.data[0].description} 文章内容
+  * {$index.list1.data[0].pubdate} 发布时间
+  * {$index.list1.data[0].pubtimestamp} 发布时间戳
+  * {$index.list1.data[0].category.name} 所属栏目名
+  * {$index.list1.data[0].category.en_name} 所属栏目英文名
+  * {$index.list1.data[0].category.icon} 所属栏目图标（iconfont技术，可改大小可换色）
+  * {$index.list1.data[0].category.link} 所属栏目链接
+  * {$index.list1.childmenu[]} 子导航，结构类似导航（数组格式，需foreach循环）
+  * {$index.list1.childmenu[0].name}
+  * {$index.list1.childmenu[0].en_name}
+  * {$index.list1.childmenu[0].icon}
+  * {$index.list1.childmenu[0].image}
+  * {$index.list1.childmenu[0].link}
+  * {$index.list1.childmenu[0].description}
+  * {$index.list1.childmenu[0].data} （这个值需要配置config的''"showchilddata": true''((
+	"list1": {
+		"value": {},
+		"description": "右侧热门新闻",
+		"type": "list",
+		"config": {
+			"showchilddata": true
+		}
+	}
+))）
+  * {$index.list1.type} 栏目类型：1-文字列表，2-图片列表，3-图文混排，4-内容单页，5-功能，6-外链，7-微信功能，8-直达号功能
+
+
+==== type:page ====
+
+此类型变量全等于 [[#typenav|type:nav]] 配置config的 ''"filter": "page"''((
+	"page1": {
+		"value": {},
+		"description": "关于我们",
+		"type": "nav",
+		"config": {
+			"filter": "page"
+		}
+	}
+)) 。
+
+比如，json文件内容为：
+<file javascript index.json>
+{
+	"page1": {
+		"value": {},
+		"description": "关于我们版块",
+		"type": "page"
+	}
+}
+</file>
+
+__config：__ 
+  * filter：筛选栏目类型。默认值："ALL"（大写）代表筛选所有栏目。也可填写"list"仅允许列表型栏目，或者"list,page"筛选多种类型栏目。
+  * nav_width：栏目图片宽度（如有引用栏目图片时填写）
+  * nav_height：栏目图片高度（如有引用栏目图片时填写）
+
+调用形式：
+<file html index.html>
+<h2>{$index.page1.name}<span>{$index.page1.en_name}</span></h2>
+<p>{$index.page1.description}</p>
+<a href="{$index.page1.link}">More</a>
+<!-- 输出：
+<h2>关于我们<span>About Us</span></h2>
+<p>这是栏目的一段描述...</p>
+<a href="list-page.html">More</a>
+-->
+</file>
+数据变量说明（**这个特别注意，输出的数据格式与填写的json格式是不一样的**）：\\
+（以下参考为filter筛选出list的栏目数据变量格式）
+  * {$index.page1.name} 栏目名称
+  * {$index.page1.en_name} 栏目英文名称
+  * {$index.page1.icon} 栏目图标（iconfont技术，可改大小可换色）
+  * {$index.page1.image} 栏目图片
+  * {$index.page1.link} 栏目链接(一般用于“查看更多”按钮)
+  * {$index.page1.description} 栏目描述
+  * {$index.page1.content} 栏目单页内容HTML数据
+  * {$index.page1.childmenu[]} 子导航，结构类似导航（数组格式，需foreach循环）
+  * {$index.page1.childmenu[0].name}
+  * {$index.page1.childmenu[0].en_name}
+  * {$index.page1.childmenu[0].icon}
+  * {$index.page1.childmenu[0].image}
+  * {$index.page1.childmenu[0].link}
+  * {$index.page1.childmenu[0].description}
+  * {$index.page1.type} 栏目类型（恒等于3，因为此变量只能输出单页内容形栏目）
+
+
+==== type:link ====
+
+只能选择链接型栏目，如留言板、微信直达号、外部链接等。
+
+此类型变量全等于 [[#typenav|type:nav]] 配置config的 ''"filter": "link"''((
+	"link1": {
+		"value": {},
+		"description": "意见反馈",
+		"type": "nav",
+		"config": {
+			"filter": "link"
+		}
+	}
+)) 。
+
+json文件内容为：
+<file javascript index.json>
+{
+	"link2": {
+		"value": {},
+		"description": "意见反馈",
+		"type": "link"
+	}
+}
+</file>
+
+==== type:quickbar ====
+
+手机底部导航，仅供手机模板调用，具体参见：[[ued:template:mindex#底部导航定义方法|底部导航定义方法]]
+
+<html><span style="color:red">推荐使用config.ini来配置Quickbar！</span></html>参见：[[ued:template:config#config_模板配置部分|配置文件修改QuickBar=#AAA,#CCC,#FFF]]
+
+网站的底部导航，因其在每个页面都存在，建议定义与单独html文件后用[[ued:template:footer#include_引入文件|include]]方式引入到index.html文件中。\\
+既可以放入[[ued:template:footer|变量语法查询：_footer.html]]文件中，也可以放入一个新建的[[ued:template:includes|_bottomnav.html]]文件中。
+
+**数据变量说明：**
+
+json定义一个type为''quickbar''的变量，value内元素的键值说明：
+  * name 导航名称
+  * icon 导航按钮图标，值放入iconfont的图标对应编码。
+  * image 导航按钮图标（如无icon值，则调此图），可使用相对路径''images/icon_01.png''
+  * data 导航按钮数据 type:tel|sms时为电话号码；type:link时为url；type:share时为空；type:im时为''客服账号ID@im类型''
+  * type [[#导航类型说明|导航类型]] tel:电话、sms:短信、im:咨询、link:外链、share:分享
+  * enable 是否启用 1-启用
+  * childmenu 仅type:link类型有子菜单
+
+输出调用变量：
+  * name
+  * icon
+  * image
+  * **link** 直接放置于a标签的''href''属性中
+  * type
+  * childmenu
+
+==  导航类型说明 ==
+__tel__\\
+ data格式：''热线电话:0592-2323232|售后电话：13088888888''\\
+ 生成link：''"tel://0592-2323232"''（首个电话的号码点击链接）
+
+__sms__\\
+ data格式：''13489990000''\\
+ 生成link：''"sms://13489990000"''（调用系统短信的点击链接）
+
+__im__\\
+ data格式：''小E:156568451@QQ|客服-XX:10000@QQ''\\
+ 生成link：''"http://wpd.b.qq.com/cgi/get_m_sign.php?uin=156568451"''（首个咨询的点击链接，调用对应app或跳转到咨询页）
+
+__map__\\
+ data格式：''厦门市思明区观日路30号|118.189598,24.491176''\\
+ 生成link：''"http://api.map.baidu.com/geocoder?address=厦门市思明区观日路30号&output=html"''（地图跳转链接）
+
+__share__\\
+ data格式：''qzone,tqq,tsina,ibaidu''\\
+ 生成link：''"javascript:void(0);"''（无效果链接，所以分享的点击按钮要自己调用js去写分享效果）
+
+__follow__\\
+ data格式：''http://s.jiathis.com/qrcode.php?url=http://weixin.qq.com/r/Pt5PV97EWYMmrZo094ss''（图片地址）\\
+ 生成link：''"javascript:void(0);"''（无效果链接，所以扫码关注的点击或hover按钮要自己调用js去写二维码出现效果）
+
+__link__\\
+ data格式：''http://www.baidu.com''\\
+ 生成link：''"http://www.baidu.com"''（就是data填入的链接地址）
+
+必须在json文件中定义：
+<file javascript global.json>
+{
+	"bottomnavs": {
+		"value": [{
+			"name": "电话",
+			"icon": "&#xe602;",
+			"image": "http://..../a.png",
+			"data": "0592-2323232",
+			"type": "tel",
+			"enable": 1
+		}, {
+			"name": "短信",
+			"icon": "&#xe604;",
+			"image": "http://..../a.png",
+			"data": "热线电话:0592-2323232|售后电话:13088888888",
+			"type": "sms",
+			"enable": 1
+		}, {
+			"name": "咨询",
+			"icon": "&#xe606;",
+			"image": "http://..../a.png",
+			"data": "小E:156568451@QQ|客服-XX:10000@QQ",
+			"type": "im",
+			"enable": 1
+		}, {
+			"name": "导航B",
+			"icon": "&#xe607;",
+			"image": "http://..../a.png",
+			"data": "http://...",
+			"childmenu": [{
+				"name": "导航B1",
+				"icon": "&#xe607;",
+				"image": "http://..../a.png",
+				"data": "http://...",
+				"type": "link",
+				"enable": 1
+			},
+			{
+				"name": "导航B2",
+				"icon": "&#xe607;",
+				"image": "http://..../a.png",
+				"data": "http://...",
+				"type": "link",
+				"enable": 1
+			}],
+			"type": "link",
+			"enable": 1
+		}, {
+			"name": "地图",
+			"icon": "&#xe605;",
+			"image": "http://..../a.png",
+			"data": "厦门市思明区观日路30号|118.189598,24.491176",
+			"type": "map",
+			"enable": 1
+		}, {
+			"name": "分享",
+			"icon": "&#xe600;",
+			"image": "http://..../a.png",
+			"data": "",
+			"type": "share",
+			"enable": 1
+		}, {
+			"name": "关注微信",
+			"icon": "&#xe61b;",
+			"image": "http://..../a.png",
+			"data": "http://s.jiathis.com/qrcode.php?url=http://weixin.qq.com/r/Pt5PV97EWYMmrZo094ss",
+			"type": "follow",
+			"enable": 1
+		}],
+		"description": "底部导航",
+		"type": "quickbar"
+	}
+}
+</file>
+
+可调用变量说明：
+  * {$global.bottomnavs[0].name} 导航名称
+  * {$global.bottomnavs[0].icon} 图标iconfont编码
+  * {$global.bottomnavs[0].image} 图标地址
+  * {$global.bottomnavs[0].data} 导航数据。tel、sms为电话号码；im、link为链接地址；share暂无数据
+  * **{$global.bottomnavs[0].link} 输出供导航图标a标签的href属性使用（与json内容不同）**
+  * {$global.bottomnavs[0].type} 底部导航类型：tel|sms|im|link|share
+  * {$global.bottomnavs[0].enable} 是否启用，1为启用
+
+调用形式：
+<file html _footer.html>
+<ul class="clearfix">
+	{foreach item=bottomnav from=$global.bottomnavs}
+		<li class="{$bottomnav.type}"><a href="{$bottomnav.link}" target="_blank"><img src="{$bottomnav.image}" alt="{$bottomnav.name}" /></a>
+		{if $bottomnav.childmenu}
+			<ul class="clearfix">
+				{foreach item=bottomnav_child from=$bottomnav.childmenu}
+				<li class="{$bottomnav_child.type}"><a href="{$bottomnav_child.link}" target="_blank"><img src="{$bottomnav_child.image}" alt="{$bottomnav_child.name}" /></a></li>
+				{/foreach}
+			</ul>
+		{/if}
+		</li>
+	{/foreach}
+</ul>
+<!-- 输出：
+<ul class="clearfix">
+	<li class="tel"><a href="tel://0592-2323232" target="_blank"><img src="http://..../a.png" alt="电话"></a></li>
+	<li class="sms"><a href="sms://13489990000" target="_blank"><img src="http://..../a.png" alt="短信"></a></li>
+	<li class="im"><a href="javascript:void(0);" target="_blank"><img src="http://..../a.png" alt="咨询"></a></li>
+	<li class="link"><a href="javascript:void(0);" target="_blank"><img src="http://..../a.png" alt="导航B"></a>
+		<ul class="clearfix">
+			<li class="link"><a href="http://..." target="_blank"><img src="http://..../a.png" alt="导航B1"></a></li>
+			<li class="link"><a href="http://..." target="_blank"><img src="http://..../a.png" alt="导航B2"></a></li>
+		</ul>
+	</li>
+	<li class="share"><a href="javascript:void(0);" target="_blank"><img src="http://..../a.png" alt="分享"></a></li>
+</ul>
+-->
+</file>
+
+高级调用：
+<file html _footer.html>
+{* 筑造底部导航的a标签 *}
+{function name="buildA" bottomnav=''}
+	{if $bottomnav.type == "tel"}<a href="tel://{$bottomnav.data}" target="_blank"><img src="{$bottomnav.image}" alt="{$bottomnav.name}" /></a>
+	{elseif $bottomnav.type == "sms"}<a href="sms://{$bottomnav.data}" target="_blank"><img src="{$bottomnav.image}" alt="{$bottomnav.name}" /></a>
+	{elseif $bottomnav.type == "share" or $bottomnav.type == "im"}<a href="javascript:void(0);" target="_blank"><img src="{$bottomnav.image}" alt="{$bottomnav.name}" /></a>
+	{else}<a href="{$bottomnav.data}" target="_blank"><img src="{$bottomnav.image}" alt="{$bottomnav.name}" /></a>{/if}
+{/function}
+
+<ul class="clearfix">
+	{foreach item=bottomnav from=$global.bottomnavs}
+		<li class="{$bottomnav.type}">{buildA bottomnav=$bottomnav}
+		{if $bottomnav.childmenu}
+			<ul class="clearfix">
+				{foreach item=bottomnav_child from=$bottomnav.childmenu}
+				<li class="{$bottomnav_child.type}">{buildA bottomnav=$bottomnav_child}</li>
+				{/foreach}
+			</ul>
+		{/if}
+		</li>
+	{/foreach}
+</ul>
+<!-- 输出结果同上 -->
+</file>
+
+
+
+
+====  ====
+
+\\
+
+\\
+
+\\
+
+\\

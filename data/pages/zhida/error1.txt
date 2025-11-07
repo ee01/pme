@@ -1,0 +1,95 @@
+====== Blend API ======
+这个域名：http://clouda.baidu.com/blendapi/introduction/introduce 的内容
+===== 账号还是其他调用操作都是报错 =====
+  其中一部分代码情况
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title></title>
+		<script name="baidu-tc-cerfication" type="text/javascript" charset="utf-8" data-appid="3798147" src="http://apps.bdimg.com/blend/loader.js"></script>
+		<script type="text/javascript" src="jquery.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+			//生成module，百度可生成
+				blend.lightInit({
+					ak:"u7wpBCazLrhquiQKDmyS3pDg",
+					module:["account"]
+				});
+				
+				//具体方案
+				Blend.mbaas.account.login({
+				    redirect_uri:"http://my.fengxin2.com/",
+					onsuccess: function(data){
+						$("#api",dom).val(JSON.stringify(data));
+						Tips.show(dom,{text:"调用成功"})
+					},
+					onfail: function(data){
+						$("#api",dom).val(JSON.stringify(data));
+						Tips.show(dom,{text:"调用失败"})
+					},
+				});
+			});	
+		</script>
+	</head>
+	<body>
+		
+	</body>
+</html>
+===== 错误提示 =====
+<code>
+Uncaught SecurityError: Failed to set the 'domain' property on 'Document': 'weimob.com' is not a suffix of 'my.fengxin2.com'. project.js:1
+GET http://bbs.52jscn.com/tpl/static/images/weixin.jpg 404 (Not Found) 
+</code>
+==== 调用数据看着应该都加载了，在该页面就是没办法成功调用 ====
+
+===== 待解决方案 =====
+
+
+
+只能在手机百度上能用，用uc测试的话uc会叫你下载手机百度
+
+手机百度上使用线上测试地址：http://test56.xm12t.cn/hehe/c.html
+
+拍照实现代码
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title></title>
+		<script name="baidu-tc-cerfication" type="text/javascript" charset="utf-8" data-appid="3798147" src="http://apps.bdimg.com/blend/loader.js"></script>
+	   <script type="text/javascript" src="jquery.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+                             //生成module，百度可生成
+			        blend.lightInit({
+					ak:"u7wpBCazLrhquiQKDmyS3pDg",
+					module:["activity"]
+					});
+					var intent_cal  =  {
+					action: "android.intent.action.EDIT",
+					type: "vnd.android.cursor.item/event",
+					title: "Some title",
+					description: "Some description",
+					beginTime: 1384676947757,
+					endTime: 1384680547757
+				};
+	                         //具体方案
+				Blend.device.activity.start({
+					onsuccess: function(data){
+						$("#api",dom).val(JSON.stringify(data));
+						Tips.show(dom,{text:"调用成功"})
+					},
+					onfail: function(data){
+						$("#api",dom).val(JSON.stringify(data));
+						Tips.show(dom,{text:"调用失败"})
+					},
+					intent:intent_cal
+				});
+			});	
+		</script>
+	</head>
+	<body>
+		
+	</body>
+</html>
+==== 解决方案 ====

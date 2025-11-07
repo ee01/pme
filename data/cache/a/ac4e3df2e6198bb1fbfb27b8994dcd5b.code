@@ -1,0 +1,24 @@
+<span class="co1">// JS翻转卡片+Callback</span>
+<span class="kw1">var</span> flipCard <span class="sy0">=</span> <span class="kw1">function</span> <span class="br0">&#40;</span>selectedCard<span class="sy0">,</span> callback<span class="br0">&#41;</span><span class="br0">&#123;</span>
+	$<span class="br0">&#40;</span>selectedCard<span class="br0">&#41;</span>.<span class="me1">addClass</span><span class="br0">&#40;</span><span class="st0">&quot;fastflip&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+&nbsp;
+	<span class="kw1">var</span> style <span class="sy0">=</span> document.<span class="me1">body</span>.<span class="me1">style</span><span class="sy0">;</span>
+	<span class="kw1">var</span> time <span class="sy0">=</span> <span class="nu0">0</span><span class="sy0">;</span> 
+	<span class="co1">//webkit、Firefox下执行动画</span>
+	<span class="kw1">if</span><span class="br0">&#40;</span>style.<span class="me1">webkitAnimation</span> <span class="sy0">!==</span> <span class="kw2">undefined</span> <span class="sy0">||</span> style.<span class="me1">MozAnimation</span> <span class="sy0">!==</span> <span class="kw2">undefined</span><span class="br0">&#41;</span><span class="br0">&#123;</span>
+		time <span class="sy0">=</span> <span class="nu0">1001</span><span class="sy0">;</span>
+	<span class="br0">&#125;</span>
+	setTimeout<span class="br0">&#40;</span>doEndFlip<span class="sy0">,</span>time<span class="br0">&#41;</span><span class="sy0">;</span>
+&nbsp;
+	<span class="kw1">function</span> doEndFlip<span class="br0">&#40;</span><span class="br0">&#41;</span><span class="br0">&#123;</span>
+		$<span class="br0">&#40;</span>selectedCard<span class="br0">&#41;</span>.<span class="me1">removeClass</span><span class="br0">&#40;</span><span class="st0">&quot;fastflip&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+		<span class="kw1">typeof</span><span class="br0">&#40;</span>callback<span class="br0">&#41;</span> <span class="sy0">===</span> <span class="st0">'function'</span> <span class="sy0">&amp;&amp;</span> callback.<span class="me1">call</span><span class="br0">&#40;</span>$<span class="br0">&#40;</span>selectedCard<span class="br0">&#41;</span>.<span class="kw1">get</span><span class="br0">&#40;</span><span class="nu0">0</span><span class="br0">&#41;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+	<span class="br0">&#125;</span>
+<span class="br0">&#125;</span><span class="sy0">;</span>
+&nbsp;
+$<span class="br0">&#40;</span><span class="st0">'dl'</span><span class="br0">&#41;</span>.<span class="me1">click</span><span class="br0">&#40;</span><span class="kw1">function</span><span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+	flipCard<span class="br0">&#40;</span>$<span class="br0">&#40;</span><span class="st0">&quot;.act_cards .selected&quot;</span><span class="br0">&#41;</span><span class="sy0">,</span><span class="kw1">function</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="br0">&#123;</span>
+		$<span class="br0">&#40;</span><span class="kw1">this</span><span class="br0">&#41;</span>.<span class="me1">find</span><span class="br0">&#40;</span><span class="st0">&quot;img&quot;</span><span class="br0">&#41;</span>.<span class="me1">show</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+	<span class="br0">&#125;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+	<span class="kw1">return</span> <span class="kw2">false</span><span class="sy0">;</span>
+<span class="br0">&#125;</span><span class="br0">&#41;</span><span class="sy0">;</span>

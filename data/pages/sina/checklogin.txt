@@ -1,0 +1,106 @@
+====== 引入文件 ======
+
+**提示：所有文件专题系统已默认引入，
+如在本地测试，可引入调试！**
+
+<HTML>
+<script type="text/javascript" src="http://common.mn.sina.com.cn/public/resource/lib/jquery.dfz.js"></script>
+<script type="text/javascript" src="http://i.sso.sina.com.cn/js/ssologin.js"></script>
+<script type="text/javascript" src="http://common.mn.sina.com.cn/public/resource/lib/union_app.js"></script>
+<script type="text/javascript" src="http://i2.sinaimg.cn/cj/dfz/weibo_v2.0-sp1_UPDATE20120221/weibo_v2.0-sp1_UPDATE20120221.js" charset="utf-8"></script>
+<script type="text/javascript" src="http://i.sso.sina.com.cn/js/sinaSSOManager.js"></script>
+<script type="text/javascript" src="http://minnan.sinaimg.cn/mn_2012_v2_DFZ/js/zttop.js"></script>
+<script type="text/javascript" src="http://common.mn.sina.com.cn/public/resource/lib/checkLogin.js"></script>
+</HTML>
+
+
+====== 登录检测 ======
+
+===== callback内执行登录后的操作 =====
+
+<code javascript>
+
+checkLogin(function() {
+	// 执行callback操作
+});
+
+</code>
+
+注：如果未登录则弹出登录弹窗！
+
+要实现登录弹窗无法关闭（强制登录），可如下写法：
+
+<code javascript>
+
+checkLogin(function(json) {
+	// 执行callback操作
+}, true);
+
+</code>
+
+要自定义未登录操作（不使用登录弹窗），可如下写法：
+
+<code javascript>
+
+checkLogin(function(json) {
+	// 已登录，执行操作
+}, function() {
+	// 未登录操作，弹出提示等
+});
+
+</code>
+
+===== if判断是否登录 =====
+
+<code javascript>
+
+var isLogin = checkLogin();
+if (isLogin) {
+	//...
+}
+
+</code>
+
+  * ''checkLogin()'' 单纯返回true/false
+  * ''checkLogin(true)'' 强制登录——弹出无法关闭的登录弹窗，同时返回true/false
+  * ''checkLogin(false)'' 弹出可关闭的登录弹窗，同时返回true/false
+
+例如一个页面需要用户强制登录后才允许后续操作：
+
+<code javascript>
+
+$(function() {
+	if (!checkLogin(true)) {
+		return false;	// 阻止后续操作
+	}
+	
+	//...
+});
+
+</code>
+
+
+====== 获取登录信息 ======
+
+在callback中使用loginUser和simpleLoginUser变量；
+
+loginUser和simpleLoginUser是一个全局变量，
+但请确保在先前有运行过checkLogin()，并给出足够的时间获取用户信息，您可以在任何一处使用它们。
+
+simpleLoginUser：
+  * id：微博ID
+  * screen_name：微博昵称
+  * gender：性别
+  * profile_url：个性域名，与 'http://weibo.com/' + simpleLoginUser.profile_url 组成微博地址
+  * profile_image_url：小头像地址 50x50
+  * avatar_large： 大头像地址 180x180
+
+loginUser：包含simpleLoginUser内容的更丰富的用户信息
+
+PS：simpleLoginUser信息量不多，可直接用于参数提交。
+
+====== 调用登录弹窗 ======
+
+''DialogLogin(callback, force);'' 即可直接调用登录弹窗。
+
+''force'' 参数为true时，弹窗无法关闭！
